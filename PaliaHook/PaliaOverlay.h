@@ -30,6 +30,7 @@ enum class ECreatureKind
 	Unknown,
 	Chapaa,
 	Cearnuk,
+	TreeClimber,
 	MAX
 };
 
@@ -79,6 +80,7 @@ enum class EGatherableSize
 	Small,
 	Medium,
 	Large,
+	Bush,
 	MAX
 };
 
@@ -88,6 +90,7 @@ enum class ETreeType
 	Flow,
 	Heartwood,
 	Sapwood,
+	Bush,
 	MAX
 };
 
@@ -131,6 +134,8 @@ enum class EForageableType
 	SweetLeaves,
 	WaterFlower,
 	Garlic,
+	Ginger,
+	GreenOnion,
 	MAX
 };
 
@@ -230,23 +235,64 @@ public:
 		{"BP_Mining_Copper_Medium_C", "Copper (M)"},
 		{"BP_Mining_Copper_Large_C", "Copper (L)"},
 
+		{"BP_Mining_Copper_Small_SingleHarvest_C", "Copper (S)"},
+		{"BP_Mining_Copper_Medium_SingleHarvest_C", "Copper (M)"},
+		{"BP_Mining_Copper_Large_SingleHarvest_C", "Copper (L)"},
+
+		{"BP_Mining_Copper_Small_MultiHarvest_C", "Copper (S)"},
+		{"BP_Mining_Copper_Medium_MultiHarvest_C", "Copper (M)"},
+		{"BP_Mining_Copper_Large_MultiHarvest_C", "Copper (L)"},
+
 		{"BP_Mining_Stone_Small_C", "Stone (S)"},
 		{"BP_Mining_Stone_Medium_C", "Stone (M)"},
 		{"BP_Mining_Stone_Large_C", "Stone (L)"},
+
+		{"BP_Mining_Stone_Small_SingleHarvest_C", "Stone (S)"},
+		{"BP_Mining_Stone_Medium_SingleHarvest_C", "Stone (M)"},
+		{"BP_Mining_Stone_Large_SingleHarvest_C", "Stone (L)"},
+
+		{"BP_Mining_Stone_Small_MultiHarvest_C", "Stone (S)"},
+		{"BP_Mining_Stone_Medium_MultiHarvest_C", "Stone (M)"},
+		{"BP_Mining_Stone_Large_MultiHarvest_C", "Stone (L)"},
 
 		{"BP_Mining_Iron_Small_C", "Iron (S)"},
 		{"BP_Mining_Iron_Medium_C", "Iron (M)"},
 		{"BP_Mining_Iron_Large_C", "Iron (L)"},
 
+		{"BP_Mining_Iron_Small_SingleHarvest_C", "Iron (S)"},
+		{"BP_Mining_Iron_Medium_SingleHarvest_C", "Iron (M)"},
+		{"BP_Mining_Iron_Large_SingleHarvest_C", "Iron (L)"},
+
+		{"BP_Mining_Iron_Small_MultiHarvest_C", "Iron (S)"},
+		{"BP_Mining_Iron_Medium_MultiHarvest_C", "Iron (M)"},
+		{"BP_Mining_Iron_Large_MultiHarvest_C", "Iron (L)"},
+
 		{"BP_Mining_Clay_C", "Clay"},
 		{"BP_Mining_Silver_C", "Silver"},
 		{"BP_Mining_Gold_C", "Gold"},
+
+		{"BP_Mining_Clay_SingleHarvest_C", "Clay"},
+		{"BP_Mining_Silver_SingleHarvest_C", "Silver"},
+		{"BP_Mining_Gold_SingleHarvest_C", "Gold"},
+
+		{"BP_Mining_Clay_MultiHarvest_C", "Clay"},
+		{"BP_Mining_Silver_MultiHarvest_C", "Silver"},
+		{"BP_Mining_Gold_MultiHarvest_C", "Gold"},
 
 		{"BP_Mining_Palium_C", "Palium"},
 		{"BP_Mining_Palium_Small_C", "Palium (S)"},
 		{"BP_Mining_Palium_Medium_C", "Palium (M)"},
 		{"BP_Mining_Palium_Large_C", "Palium (L)"},
 
+		{"BP_Mining_Palium_SingleHarvest_C", "Palium"},
+		{"BP_Mining_Palium_Small_SingleHarvest_C", "Palium (S)"},
+		{"BP_Mining_Palium_Medium_SingleHarvest_C", "Palium (M)"},
+		{"BP_Mining_Palium_Large_SingleHarvest_C", "Palium (L)"},
+
+		{"BP_Mining_Palium_MultiHarvest_C", "Palium"},
+		{"BP_Mining_Palium_Small_MultiHarvest_C", "Palium (S)"},
+		{"BP_Mining_Palium_Medium_MultiHarvest_C", "Palium (M)"},
+		{"BP_Mining_Palium_Large_MultiHarvest_C", "Palium (L)"},
 
 		// Creatures
 		{"BP_ValeriaHuntingCreature_Cearnuk_T1_C", "Sernuk"},
@@ -260,6 +306,10 @@ public:
 
 		{"BP_ValeriaHuntingCreature_ChapaaChase_Base_C", "Chapaa Chase (Base)"},
 		{"BP_ValeriaHuntingCreature_ChapaaChase_Fast_C", "Chapaa Chase (Fast)"},
+
+		{"BP_ValeriaHuntingCreature_TreeClimber_T1_C", "Muujin"},
+		{"BP_ValeriaHuntingCreature_TreeClimber_T2_C", "Banded Muujin"},
+		{"BP_ValeriaHuntingCreature_TreeClimber_T3_C", "Bluebristle Muujin"},
 
 		// TODO: Provide names that are the same as their drops ingame
 
@@ -387,12 +437,16 @@ public:
 		{ "BP_WaterFlower_C", "Crystal Lake Lotus" },
 		{ "BP_WildGarlic+_C", "Wild Garlic *" },
 		{ "BP_WildGarlic_C", "Wild Garlic" },
+		{ "BP_Gatherable_Ginger+_C", "Wild Ginger *" },
+		{ "BP_Gatherable_Ginger_C", "Wild Ginger" },
+		{ "BP_Gatherable_GreenOnion+_C", "Wild Green Onion *" },
+		{ "BP_Gatherable_GreenOnion_C", "Wild Green Onion" },
 
 		// Fishing Nodes
 		{ "BP_WaterPlane_Fishing_OceanAZ1_SQ_C", "Coast" },
 		{ "BP_WaterPlane_Fishing_PondVillage_SQ_C", "Pond" },
 		{ "BP_WaterPlane_Fishing_LakeVillage_SQ_C", "Lake" },
-		{ "BP_WaterPlane_Fishing_RiverVillage_SQ_C", "Kalima River" },
+		{ "BP_WaterPlane_Fishing_RiverVillage_SQ_C", "Kilima River" },
 		{ "BP_WaterPlane_Fishing_RiverAZ1_SQ_C", "Bahari River" },
 		{ "BP_WaterPlane_Fishing_AZ1_Cave_SQ_C", "Cave" },
 
@@ -510,7 +564,7 @@ public:
 		{ "BP_Villager_Mayor_C", "Kenli" },
 		{ "BP_Villager_Jel_C", "Jel" },
 		{ "BP_VillagerTheHunter_C", "Hassian" },
-		{ "BP_VillagerTheWatcher_C", "BP_VillagerTheWatcher_C" }, // who dis?
+		{ "BP_VillagerTheWatcher_C", "Subira" },
 
 		// Loot
 		{ "BP_Hunting_LootBag_C", "Loot - Animal"},
@@ -529,9 +583,10 @@ public:
 
 	// Search map for assigning gatherable size
 	std::map<EGatherableSize, std::vector<std::string>> GATHERABLE_SIZE_MAPPINGS = {
-		{EGatherableSize::Small, {"_Small_", "_Sapling_", "_Bush_"}},
+		{EGatherableSize::Small, {"_Small_", "_Sapling_"}},
 		{EGatherableSize::Medium, {"_Medium_"}},
-		{EGatherableSize::Large, {"_Large_", "_Large2_"}}
+		{EGatherableSize::Large, {"_Large_", "_Large2_"}},
+		{EGatherableSize::Bush, {"_Bush_"}},
 	};
 
 	// Search map for assigning tree type
@@ -539,7 +594,8 @@ public:
 	std::map<ETreeType, std::vector<std::string>> TREE_TYPE_MAPPINGS = {
 		{ETreeType::Flow, {"_CoOp_"}},
 		{ETreeType::Heartwood, {"_Pine_"}},
-		{ETreeType::Sapwood, {"_Juniper_", "_Oak_", "_Birch_", "_Bush_"}}
+		{ETreeType::Sapwood, {"_Juniper_", "_Oak_", "_Birch_"}},
+		{ETreeType::Bush, {"_Bush_"}}
 	};
 
 	// Search map for assigning gatherable flags
@@ -570,13 +626,16 @@ public:
 		{EForageableType::Sundrop, {"_SundropLillies"}},
 		{EForageableType::SweetLeaves, {"_SweetLeaves"}},
 		{EForageableType::WaterFlower, {"_WaterFlower"}},
-		{EForageableType::Garlic, {"_WildGarlic"}}
+		{EForageableType::Garlic, {"_WildGarlic"}},
+		{EForageableType::Ginger, {"_Ginger"}},
+		{EForageableType::GreenOnion, {"_GreenOnion"}}
 	};
 
 	// Search map for assigning creature kind type
 	std::map<ECreatureKind, std::vector<std::string>> CREATURE_KIND_MAPPINGS = {
 		{ECreatureKind::Chapaa, {"_Chapaa"}},
-		{ECreatureKind::Cearnuk, {"_Cearnuk_"}}
+		{ECreatureKind::Cearnuk, {"_Cearnuk_"}},
+		{ECreatureKind::TreeClimber, {"_TreeClimber"}}
 	};
 
 	// Search map for assiging creature quality type
@@ -645,14 +704,16 @@ public:
 		(int)EForageableType::MushroomRed
 	};
 
-	int ForageableUncommon[7] = {
+	int ForageableUncommon[9] = {
 		(int)EForageableType::Coral,
 		(int)EForageableType::PoisonFlower,
 		(int)EForageableType::WaterFlower,
 		(int)EForageableType::EmeraldCarpet,
 		(int)EForageableType::SpicedSprouts,
 		(int)EForageableType::SweetLeaves,
-		(int)EForageableType::Garlic
+		(int)EForageableType::Garlic,
+		(int)EForageableType::Ginger,
+		(int)EForageableType::GreenOnion
 	};
 
 	int ForageableRare[3] = {
@@ -695,6 +756,7 @@ public:
 		IM_COL32(0x67, 0x00, 0xEA, 0xFF),
 		IM_COL32(0x00, 0xFF, 0x00, 0xFF),
 		IM_COL32(0x00, 0xFF, 0x00, 0xFF),
+		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 	};
 
 	bool Fish[(int)EFishType::MAX] = {};

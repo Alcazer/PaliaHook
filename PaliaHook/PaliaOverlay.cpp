@@ -203,7 +203,7 @@ void PaliaOverlay::ProcessActors(int step) {
 		break;
 	case EType::Ore:
 		if (AnyTrue2D(Ores)) {
-			STATIC_CLASS("BP_ValeriaGatherableLoot_Mining_C");
+			STATIC_CLASS("BP_ValeriaGatherableLoot_Mining_Base_C");
 		}
 		break;
 	case EType::Bug:
@@ -728,6 +728,15 @@ void PaliaOverlay::DrawOverlay()
 					ImGui::Text("Color");
 					ImGui::TableNextRow();
 					ImGui::TableNextColumn();
+					ImGui::Text("Bush");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##BushSm", &Trees[(int)ETreeType::Bush][(int)EGatherableSize::Bush]);
+					ImGui::TableNextColumn();
+					ImGui::TableNextColumn();
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##Bush", &TreeColors[(int)ETreeType::Bush]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
 					if (ImGui::SmallButton("Sapwood")) {
 						Trees[(int)ETreeType::Sapwood][(int)EGatherableSize::Large] =
 							Trees[(int)ETreeType::Sapwood][(int)EGatherableSize::Medium] =
@@ -944,6 +953,33 @@ void PaliaOverlay::DrawOverlay()
 					ImGui::Checkbox("##MinigameChapaa", &Animals[(int)ECreatureKind::Chapaa][(int)ECreatureQuality::Chase]);
 					ImGui::TableNextColumn();
 					ImGui::ColorPicker("##MinigameChapaa", &AnimalColors[(int)ECreatureKind::Chapaa][(int)ECreatureQuality::Chase]);
+					ImGui::TableNextRow(ImGuiTableRowFlags_Headers);
+					ImGui::TableNextColumn();
+					ImGui::TableNextColumn();
+					ImGui::Text("Show");
+					ImGui::TableNextColumn();
+					ImGui::Text("Color");
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Muujin");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##Muujin", &Animals[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier1]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##Muujin", &AnimalColors[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier1]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Banded Muujin");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##BandedMuujin", &Animals[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier2]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##BandedMuujin", &AnimalColors[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier2]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Bluebristle Muujin");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##BluebristleMuujin", &Animals[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier3]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##BluebristleMuujin", &AnimalColors[(int)ECreatureKind::TreeClimber][(int)ECreatureQuality::Tier3]);
 				}
 				ImGui::EndTable();
 			}
@@ -1185,6 +1221,24 @@ void PaliaOverlay::DrawOverlay()
 					ImGui::Checkbox("##GarlicP", &Forageables[(int)EForageableType::Garlic][1]);
 					ImGui::TableNextColumn();
 					ImGui::ColorPicker("##Garlic", &ForageableColors[(int)EForageableType::Garlic]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Wild Ginger");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##Ginger", &Forageables[(int)EForageableType::Ginger][0]);
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##GingerP", &Forageables[(int)EForageableType::Ginger][1]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##Ginger", &ForageableColors[(int)EForageableType::Ginger]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Wild Green Onion");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##GreenOnion", &Forageables[(int)EForageableType::GreenOnion][0]);
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##GreenOnionP", &Forageables[(int)EForageableType::GreenOnion][1]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##GreenOnion", &ForageableColors[(int)EForageableType::GreenOnion]);
 				}
 				ImGui::EndTable();
 			}
