@@ -33,7 +33,7 @@ namespace Offsets
 {
 	constexpr int32 GObjects          = 0x081C5BD0;
 	constexpr int32 AppendString      = 0x02AB4CF0;
-	constexpr int32 GNames            = 0x00000000;
+	constexpr int32 GNames            = 0x081261C0;
 	constexpr int32 GWorld            = 0x0831EE90;
 	constexpr int32 ProcessEvent      = 0x02C51D20;
 	constexpr int32 ProcessEventIdx   = 0x0000004C;
