@@ -443,7 +443,9 @@ static void DrawHUD(const AHUD* HUD) {
 			Overlay->ProcessActors(Overlay->ActorStep);
 		}
 
-		FVector PawnLocation = PlayerController->K2_GetPawn()->K2_GetActorLocation();
+		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
+		if (!PlayerGetPawn) return;
+		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
 
 		for (FEntry& Entry : Overlay->CachedActors) {
 			FVector ActorPosition = Entry.WorldPosition;
