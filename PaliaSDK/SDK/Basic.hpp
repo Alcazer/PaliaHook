@@ -19,7 +19,7 @@
 
 namespace SDK
 {
-
+void InitGObjects();
 using namespace UC;
 
 #include "../NameCollisions.inl"
@@ -33,7 +33,7 @@ namespace Offsets
 {
 	constexpr int32 GObjects          = 0x08966980;
 	constexpr int32 AppendString      = 0x00CF90A0;
-	constexpr int32 GNames            = 0x00000000;
+	constexpr int32 GNames            = 0x088BFFC0;
 	constexpr int32 GWorld            = 0x08AD73B8;
 	constexpr int32 ProcessEvent      = 0x00ED2A50;
 	constexpr int32 ProcessEventIdx   = 0x0000004D;

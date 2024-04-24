@@ -19,7 +19,7 @@ namespace SDK
 class UObject
 {
 public:
-	static inline class TUObjectArrayWrapper      GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	static inline class TUObjectArray*            GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	EObjectFlags                                  Flags;                                             // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
@@ -27,7 +27,13 @@ public:
 	class UClass*                                 Class;                                             // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FName                                   Name;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UObject*                                Outer;                                             // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
-
+	bool IsValidLowLevel() {
+		if (this == nullptr)
+			return false;
+		if (!Class)
+			return false;
+		return GObjects->GetByIndex(Index) == this;
+	}
 public:
 	static class UObject* FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType = EClassCastFlags::None);
 	static class UObject* FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType = EClassCastFlags::None);
