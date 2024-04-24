@@ -44,24 +44,89 @@ enum class ERecomputeUVsToolOrientationMode : uint32
 };
 
 // Enum ModelingOperators.ERecomputeUVsPropertiesLayoutType
-// NumValues: 0x0005
+// NumValues: 0x0006
 enum class ERecomputeUVsPropertiesLayoutType : uint32
 {
 	None                                     = 0,
 	Repack                                   = 1,
-	NormalizeToBounds                        = 2,
-	NormalizeToWorld                         = 3,
-	ERecomputeUVsPropertiesLayoutType_MAX    = 4,
+	NormalizeToExistingBounds                = 2,
+	NormalizeToBounds                        = 3,
+	NormalizeToWorld                         = 4,
+	ERecomputeUVsPropertiesLayoutType_MAX    = 5,
+};
+
+// Enum ModelingOperators.EFlattenCurveMethod
+// NumValues: 0x0006
+enum class EFlattenCurveMethod : uint8
+{
+	DoNotFlatten                             = 0,
+	ToBestFitPlane                           = 1,
+	AlongX                                   = 2,
+	AlongY                                   = 3,
+	AlongZ                                   = 4,
+	EFlattenCurveMethod_MAX                  = 5,
+};
+
+// Enum ModelingOperators.ECombineCurvesMethod
+// NumValues: 0x0006
+enum class ECombineCurvesMethod : uint8
+{
+	LeaveSeparate                            = 0,
+	Union                                    = 1,
+	Intersect                                = 2,
+	Difference                               = 3,
+	ExclusiveOr                              = 4,
+	ECombineCurvesMethod_MAX                 = 5,
+};
+
+// Enum ModelingOperators.EOffsetClosedCurvesMethod
+// NumValues: 0x0004
+enum class EOffsetClosedCurvesMethod : uint8
+{
+	DoNotOffset                              = 0,
+	OffsetOuterSide                          = 1,
+	OffsetBothSides                          = 2,
+	EOffsetClosedCurvesMethod_MAX            = 3,
+};
+
+// Enum ModelingOperators.EOffsetOpenCurvesMethod
+// NumValues: 0x0003
+enum class EOffsetOpenCurvesMethod : uint8
+{
+	TreatAsClosed                            = 0,
+	Offset                                   = 1,
+	EOffsetOpenCurvesMethod_MAX              = 2,
+};
+
+// Enum ModelingOperators.EOffsetJoinMethod
+// NumValues: 0x0004
+enum class EOffsetJoinMethod : uint8
+{
+	Square                                   = 0,
+	Miter                                    = 1,
+	Round                                    = 2,
+	EOffsetJoinMethod_MAX                    = 3,
+};
+
+// Enum ModelingOperators.EOpenCurveEndShapes
+// NumValues: 0x0004
+enum class EOpenCurveEndShapes : uint8
+{
+	Square                                   = 0,
+	Round                                    = 1,
+	Butt                                     = 2,
+	EOpenCurveEndShapes_MAX                  = 3,
 };
 
 // Enum ModelingOperators.EUVLayoutType
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EUVLayoutType : uint32
 {
 	Transform                                = 0,
 	Stack                                    = 1,
 	Repack                                   = 2,
-	EUVLayoutType_MAX                        = 3,
+	Normalize                                = 3,
+	EUVLayoutType_MAX                        = 4,
 };
 
 // Enum ModelingOperators.ENormalCalculationMethod

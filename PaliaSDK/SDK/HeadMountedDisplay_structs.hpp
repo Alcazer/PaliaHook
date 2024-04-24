@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "InputCore_structs.hpp"
 
 
 namespace SDK
@@ -87,13 +87,14 @@ enum class ESpectatorScreenMode : uint8
 };
 
 // Enum HeadMountedDisplay.EXRTrackedDeviceType
-// NumValues: 0x0007
+// NumValues: 0x0008
 enum class EXRTrackedDeviceType : uint8
 {
 	HeadMountedDisplay                       = 0,
 	Controller                               = 1,
 	TrackingReference                        = 2,
-	Other                                    = 3,
+	Tracker                                  = 3,
+	Other                                    = 4,
 	Invalid                                  = 254,
 	Any                                      = 255,
 	EXRTrackedDeviceType_MAX                 = 256,
@@ -168,13 +169,13 @@ struct FXRHMDData final
 {
 public:
 	bool                                          bValid;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3680[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1328[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DeviceName;                                        // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ApplicationInstanceID;                             // 0x000C(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETrackingStatus                               TrackingStatus;                                    // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3681[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1329[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3682[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132A[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  Rotation;                                          // 0x0040(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FXRHMDData) == 0x000010, "Wrong alignment on FXRHMDData");
@@ -187,32 +188,35 @@ static_assert(offsetof(FXRHMDData, Position) == 0x000020, "Member 'FXRHMDData::P
 static_assert(offsetof(FXRHMDData, Rotation) == 0x000040, "Member 'FXRHMDData::Rotation' has a wrong offset!");
 
 // ScriptStruct HeadMountedDisplay.XRMotionControllerData
-// 0x00E0 (0x00E0 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct FXRMotionControllerData final 
 {
 public:
 	bool                                          bValid;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3683[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132B[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   DeviceName;                                        // 0x0004(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ApplicationInstanceID;                             // 0x000C(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EXRVisualType                                 DeviceVisualType;                                  // 0x001C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControllerHand                               HandIndex;                                         // 0x001D(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETrackingStatus                               TrackingStatus;                                    // 0x001E(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3684[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132C[0x1];                                     // 0x001F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                GripPosition;                                      // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3685[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132D[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  GripRotation;                                      // 0x0040(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                AimPosition;                                       // 0x0060(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3686[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_132E[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  AimRotation;                                       // 0x0080(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FVector>                        HandKeyPositions;                                  // 0x00A0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FQuat>                          HandKeyRotations;                                  // 0x00B0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<float>                                 HandKeyRadii;                                      // 0x00C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bIsGrasped;                                        // 0x00D0(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3687[0xF];                                     // 0x00D1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector                                PalmPosition;                                      // 0x00A0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_132F[0x8];                                     // 0x00B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  PalmRotation;                                      // 0x00C0(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        HandKeyPositions;                                  // 0x00E0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FQuat>                          HandKeyRotations;                                  // 0x00F0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<float>                                 HandKeyRadii;                                      // 0x0100(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bIsGrasped;                                        // 0x0110(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1330[0xF];                                     // 0x0111(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FXRMotionControllerData) == 0x000010, "Wrong alignment on FXRMotionControllerData");
-static_assert(sizeof(FXRMotionControllerData) == 0x0000E0, "Wrong size on FXRMotionControllerData");
+static_assert(sizeof(FXRMotionControllerData) == 0x000120, "Wrong size on FXRMotionControllerData");
 static_assert(offsetof(FXRMotionControllerData, bValid) == 0x000000, "Member 'FXRMotionControllerData::bValid' has a wrong offset!");
 static_assert(offsetof(FXRMotionControllerData, DeviceName) == 0x000004, "Member 'FXRMotionControllerData::DeviceName' has a wrong offset!");
 static_assert(offsetof(FXRMotionControllerData, ApplicationInstanceID) == 0x00000C, "Member 'FXRMotionControllerData::ApplicationInstanceID' has a wrong offset!");
@@ -223,10 +227,12 @@ static_assert(offsetof(FXRMotionControllerData, GripPosition) == 0x000020, "Memb
 static_assert(offsetof(FXRMotionControllerData, GripRotation) == 0x000040, "Member 'FXRMotionControllerData::GripRotation' has a wrong offset!");
 static_assert(offsetof(FXRMotionControllerData, AimPosition) == 0x000060, "Member 'FXRMotionControllerData::AimPosition' has a wrong offset!");
 static_assert(offsetof(FXRMotionControllerData, AimRotation) == 0x000080, "Member 'FXRMotionControllerData::AimRotation' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyPositions) == 0x0000A0, "Member 'FXRMotionControllerData::HandKeyPositions' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyRotations) == 0x0000B0, "Member 'FXRMotionControllerData::HandKeyRotations' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, HandKeyRadii) == 0x0000C0, "Member 'FXRMotionControllerData::HandKeyRadii' has a wrong offset!");
-static_assert(offsetof(FXRMotionControllerData, bIsGrasped) == 0x0000D0, "Member 'FXRMotionControllerData::bIsGrasped' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, PalmPosition) == 0x0000A0, "Member 'FXRMotionControllerData::PalmPosition' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, PalmRotation) == 0x0000C0, "Member 'FXRMotionControllerData::PalmRotation' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, HandKeyPositions) == 0x0000E0, "Member 'FXRMotionControllerData::HandKeyPositions' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, HandKeyRotations) == 0x0000F0, "Member 'FXRMotionControllerData::HandKeyRotations' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, HandKeyRadii) == 0x000100, "Member 'FXRMotionControllerData::HandKeyRadii' has a wrong offset!");
+static_assert(offsetof(FXRMotionControllerData, bIsGrasped) == 0x000110, "Member 'FXRMotionControllerData::bIsGrasped' has a wrong offset!");
 
 // ScriptStruct HeadMountedDisplay.XRGestureConfig
 // 0x0006 (0x0006 - 0x0000)

@@ -40,11 +40,11 @@ static_assert(sizeof(USlateWidgetStyleAsset) == 0x000030, "Wrong size on USlateW
 static_assert(offsetof(USlateWidgetStyleAsset, CustomStyle) == 0x000028, "Member 'USlateWidgetStyleAsset::CustomStyle' has a wrong offset!");
 
 // Class SlateCore.FontBulkData
-// 0x0048 (0x0070 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UFontBulkData final  : public UObject
 {
 public:
-	uint8                                         Pad_35D5[0x48];                                    // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1143[0x50];                                    // 0x0028(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -57,7 +57,7 @@ public:
 	}
 };
 static_assert(alignof(UFontBulkData) == 0x000008, "Wrong alignment on UFontBulkData");
-static_assert(sizeof(UFontBulkData) == 0x000070, "Wrong size on UFontBulkData");
+static_assert(sizeof(UFontBulkData) == 0x000078, "Wrong size on UFontBulkData");
 
 // Class SlateCore.FontFaceInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -115,7 +115,7 @@ static_assert(sizeof(USlateTypes) == 0x000028, "Wrong size on USlateTypes");
 class USlateWidgetStyleContainerBase : public UObject
 {
 public:
-	uint8                                         Pad_35D6[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1144[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -14,46 +14,46 @@
 namespace SDK::Params
 {
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_0
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_0
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0 final 
+struct Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0 final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_1
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_1
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1 final 
+struct Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1 final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_2
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_2
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2 final 
+struct Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2 final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.ExecuteUbergraph_Seq_CharSelect_010 (Director BP)
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.ExecuteUbergraph_Seq_CharSelect_010 (Director BP)
 // 0x0030 (0x0030 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_ final 
+struct Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_ final 
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_26EE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5EBC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -61,48 +61,48 @@ public:
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_1;              // 0x0024(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_2;              // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_) == 0x000030, "Wrong size on Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, EntryPoint) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2) == 0x000008, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1) == 0x000010, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA) == 0x000018, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue) == 0x000020, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue_1) == 0x000024, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue_2) == 0x000028, "Member 'Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue_2' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_) == 0x000030, "Wrong size on Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, EntryPoint) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2) == 0x000008, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1) == 0x000010, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, K2Node_CustomEvent_BP_vfx_charCreate_EssenceA) == 0x000018, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::K2Node_CustomEvent_BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue) == 0x000020, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue_1) == 0x000024, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue_2) == 0x000028, "Member 'Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue_2' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_ final 
+struct Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_ final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0 final 
+struct Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0 final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1 final 
+struct Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1 final 
 {
 public:
 	class ABP_vfx_charCreate_EssenceA_C*          BP_vfx_charCreate_EssenceA;                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1) == 0x000008, "Wrong alignment on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1");
-static_assert(sizeof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1) == 0x000008, "Wrong size on Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1");
-static_assert(offsetof(Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1::BP_vfx_charCreate_EssenceA' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1) == 0x000008, "Wrong alignment on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1");
+static_assert(sizeof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1) == 0x000008, "Wrong size on Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1");
+static_assert(offsetof(Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1, BP_vfx_charCreate_EssenceA) == 0x000000, "Member 'Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1::BP_vfx_charCreate_EssenceA' has a wrong offset!");
 
 }
 

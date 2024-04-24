@@ -40,38 +40,38 @@ struct Ak_EquippedEffect_C_Received_Notify final
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43A6[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEquipmentComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43A7[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEquipmentItem                         CallFunc_GetEquippedItem_ReturnValue;              // 0x0058(0x0058)()
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CF2[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEquipmentComponent*                    CallFunc_GetComponentByClass_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4CF3[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEquipmentItem                         CallFunc_GetEquippedItem_ReturnValue;              // 0x0060(0x0050)()
 	class AActor*                                 CallFunc_Array_Get_Item;                           // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_EquipViewActor_C*                   K2Node_DynamicCast_AsBP_Equip_View_Actor;          // 0x00C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43A8[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF4[0x3];                                     // 0x00C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43A9[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF5[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43AA[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF6[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x00F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43AB[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF7[0x3];                                     // 0x0101(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43AC[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF8[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          CallFunc_Map_Find_Value;                           // 0x0110(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43AD[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CF9[0x7];                                     // 0x0119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkEventSpawnAttached_Ak;                  // 0x0120(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventSpawnAttached_Id;                  // 0x0128(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43AE[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4CFA[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkEventLocationWithActor_AkComponent;     // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventLocationWithActor_Playing_ID;      // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -80,12 +80,12 @@ static_assert(sizeof(Ak_EquippedEffect_C_Received_Notify) == 0x000140, "Wrong si
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, MeshComp) == 0x000000, "Member 'Ak_EquippedEffect_C_Received_Notify::MeshComp' has a wrong offset!");
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, Animation) == 0x000008, "Member 'Ak_EquippedEffect_C_Received_Notify::Animation' has a wrong offset!");
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, EventReference) == 0x000010, "Member 'Ak_EquippedEffect_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, ReturnValue) == 0x000038, "Member 'Ak_EquippedEffect_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, Temp_int_Array_Index_Variable) == 0x00003C, "Member 'Ak_EquippedEffect_C_Received_Notify::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000040, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000050, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetEquippedItem_ReturnValue) == 0x000058, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetEquippedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, ReturnValue) == 0x000040, "Member 'Ak_EquippedEffect_C_Received_Notify::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, Temp_int_Array_Index_Variable) == 0x000044, "Member 'Ak_EquippedEffect_C_Received_Notify::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000050, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetEquippedItem_ReturnValue) == 0x000060, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetEquippedItem_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_Array_Get_Item) == 0x0000B0, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_Array_Get_Item' has a wrong offset!");
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, CallFunc_GetOwner_ReturnValue_1) == 0x0000B8, "Member 'Ak_EquippedEffect_C_Received_Notify::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
 static_assert(offsetof(Ak_EquippedEffect_C_Received_Notify, K2Node_DynamicCast_AsBP_Equip_View_Actor) == 0x0000C0, "Member 'Ak_EquippedEffect_C_Received_Notify::K2Node_DynamicCast_AsBP_Equip_View_Actor' has a wrong offset!");

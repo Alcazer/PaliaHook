@@ -56,7 +56,7 @@ struct MAP_CharacterRender_C_GetCameraActorForCosmeticAsset final
 public:
 	class UVAL_CharacterCustomizationItemBase*    Item;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EVAL_CharacterBodyType                        BodyType;                                          // 0x0008(0x0001)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5778[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5EC9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(MAP_CharacterRender_C_GetCameraActorForCosmeticAsset) == 0x000008, "Wrong alignment on MAP_CharacterRender_C_GetCameraActorForCosmeticAsset");

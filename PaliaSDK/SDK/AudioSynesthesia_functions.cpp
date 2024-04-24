@@ -79,60 +79,6 @@ void UConstantQNRT::GetNormalizedChannelConstantQAtTime(float InSeconds, int32 I
 }
 
 
-// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// float                                   InSampleRate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           OutCenterFrequencies                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void USynesthesiaSpectrumAnalyzer::GetCenterFrequencies(float InSampleRate, TArray<float>* OutCenterFrequencies)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynesthesiaSpectrumAnalyzer", "GetCenterFrequencies");
-
-	Params::SynesthesiaSpectrumAnalyzer_GetCenterFrequencies Parms{};
-
-	Parms.InSampleRate = InSampleRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutCenterFrequencies != nullptr)
-		*OutCenterFrequencies = std::move(Parms.OutCenterFrequencies);
-}
-
-
-// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-const int32 USynesthesiaSpectrumAnalyzer::GetNumCenterFrequencies() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SynesthesiaSpectrumAnalyzer", "GetNumCenterFrequencies");
-
-	Params::SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -324,6 +270,60 @@ void UOnsetNRT::GetNormalizedChannelOnsetsBetweenTimes(float InStartSeconds, flo
 
 	if (OutOnsetStrengths != nullptr)
 		*OutOnsetStrengths = std::move(Parms.OutOnsetStrengths);
+}
+
+
+// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// float                                   InSampleRate                                           (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           OutCenterFrequencies                                   (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void USynesthesiaSpectrumAnalyzer::GetCenterFrequencies(float InSampleRate, TArray<float>* OutCenterFrequencies)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynesthesiaSpectrumAnalyzer", "GetCenterFrequencies");
+
+	Params::SynesthesiaSpectrumAnalyzer_GetCenterFrequencies Parms{};
+
+	Parms.InSampleRate = InSampleRate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutCenterFrequencies != nullptr)
+		*OutCenterFrequencies = std::move(Parms.OutCenterFrequencies);
+}
+
+
+// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const int32                             ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+const int32 USynesthesiaSpectrumAnalyzer::GetNumCenterFrequencies() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SynesthesiaSpectrumAnalyzer", "GetNumCenterFrequencies");
+
+	Params::SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

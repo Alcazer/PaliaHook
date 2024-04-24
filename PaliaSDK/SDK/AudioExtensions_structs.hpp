@@ -15,7 +15,7 @@ namespace SDK
 {
 
 // Enum AudioExtensions.EAudioParameterType
-// NumValues: 0x000E
+// NumValues: 0x000F
 enum class EAudioParameterType : uint8
 {
 	None                                     = 0,
@@ -30,19 +30,21 @@ enum class EAudioParameterType : uint8
 	FloatArray                               = 9,
 	StringArray                              = 10,
 	ObjectArray                              = 11,
-	COUNT                                    = 12,
-	EAudioParameterType_MAX                  = 13,
+	Trigger                                  = 12,
+	COUNT                                    = 13,
+	EAudioParameterType_MAX                  = 14,
 };
 
-// Enum AudioExtensions.EPcmBitDepthConversion
-// NumValues: 0x0004
-enum class EPcmBitDepthConversion : uint8
+// ScriptStruct AudioExtensions.SoundGeneratorOutput
+// 0x0008 (0x0008 - 0x0000)
+struct FSoundGeneratorOutput
 {
-	SameAsSource                             = 0,
-	Int16                                    = 1,
-	Float32                                  = 2,
-	EPcmBitDepthConversion_MAX               = 3,
+public:
+	class FName                                   Name;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
+static_assert(alignof(FSoundGeneratorOutput) == 0x000004, "Wrong alignment on FSoundGeneratorOutput");
+static_assert(sizeof(FSoundGeneratorOutput) == 0x000008, "Wrong size on FSoundGeneratorOutput");
+static_assert(offsetof(FSoundGeneratorOutput, Name) == 0x000000, "Member 'FSoundGeneratorOutput::Name' has a wrong offset!");
 
 // ScriptStruct AudioExtensions.AudioParameter
 // 0x00A0 (0x00A0 - 0x0000)
@@ -52,9 +54,9 @@ public:
 	class FName                                   ParamName;                                         // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FloatParam;                                        // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          BoolParam;                                         // 0x000C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E11[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1241[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         IntParam;                                          // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E12[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1242[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                ObjectParam;                                       // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 StringParam;                                       // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<float>                                 ArrayFloatParam;                                   // 0x0030(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
@@ -63,9 +65,9 @@ public:
 	TArray<class UObject*>                        ArrayObjectParam;                                  // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class FString>                         ArrayStringParam;                                  // 0x0070(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	EAudioParameterType                           ParamType;                                         // 0x0080(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E13[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1243[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   TypeName;                                          // 0x0084(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E14[0x14];                                    // 0x008C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1244[0x14];                                    // 0x008C(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAudioParameter) == 0x000008, "Wrong alignment on FAudioParameter");
 static_assert(sizeof(FAudioParameter) == 0x0000A0, "Wrong size on FAudioParameter");

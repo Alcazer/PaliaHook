@@ -967,6 +967,42 @@ ERedirectsPlatform US6PlatformUtils::GetPlatformTypeFromString(const class FStri
 }
 
 
+// Function S6Core.S6PlatformUtils.GetSonyPlayerIdsAtLocalUserIndex
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// int32                                   LocalUserIndex                                         (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   OutAccountId                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   OutUserId                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool US6PlatformUtils::GetSonyPlayerIdsAtLocalUserIndex(int32 LocalUserIndex, int64* OutAccountId, int64* OutUserId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("S6PlatformUtils", "GetSonyPlayerIdsAtLocalUserIndex");
+
+	Params::S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex Parms{};
+
+	Parms.LocalUserIndex = LocalUserIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutAccountId != nullptr)
+		*OutAccountId = Parms.OutAccountId;
+
+	if (OutUserId != nullptr)
+		*OutUserId = Parms.OutUserId;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function S6Core.S6PlatformUtils.IsConsole
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:

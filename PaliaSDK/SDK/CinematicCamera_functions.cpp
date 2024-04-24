@@ -17,6 +17,31 @@
 namespace SDK
 {
 
+// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class USplineComponent*                 ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CameraRig_Rail", "GetRailSplineComponent");
+
+	Params::CameraRig_Rail_GetRailSplineComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function CinematicCamera.CineCameraActor.GetCineCameraComponent
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -43,7 +68,7 @@ class UCineCameraComponent* ACineCameraActor::GetCineCameraComponent() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetFilmbackPresetsCopy
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TArray<struct FNamedFilmbackPreset>     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -68,7 +93,7 @@ TArray<struct FNamedFilmbackPreset> UCineCameraComponent::GetFilmbackPresetsCopy
 
 
 // Function CinematicCamera.CineCameraComponent.GetLensPresetsCopy
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TArray<struct FNamedLensPreset>         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -93,7 +118,7 @@ TArray<struct FNamedLensPreset> UCineCameraComponent::GetLensPresetsCopy()
 
 
 // Function CinematicCamera.CineCameraComponent.SetCropPresetByName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -118,7 +143,7 @@ void UCineCameraComponent::SetCropPresetByName(const class FString& InPresetName
 
 
 // Function CinematicCamera.CineCameraComponent.SetCropSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FPlateCropSettings               NewCropSettings                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -143,7 +168,7 @@ void UCineCameraComponent::SetCropSettings(struct FPlateCropSettings& NewCropSet
 
 
 // Function CinematicCamera.CineCameraComponent.SetCurrentAperture
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   NewCurrentAperture                                     (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -168,7 +193,7 @@ void UCineCameraComponent::SetCurrentAperture(float NewCurrentAperture)
 
 
 // Function CinematicCamera.CineCameraComponent.SetCurrentFocalLength
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   InFocalLength                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -192,8 +217,33 @@ void UCineCameraComponent::SetCurrentFocalLength(float InFocalLength)
 }
 
 
+// Function CinematicCamera.CineCameraComponent.SetCustomNearClippingPlane
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewCustomNearClippingPlane                             (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UCineCameraComponent::SetCustomNearClippingPlane(float NewCustomNearClippingPlane)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CineCameraComponent", "SetCustomNearClippingPlane");
+
+	Params::CineCameraComponent_SetCustomNearClippingPlane Parms{};
+
+	Parms.NewCustomNearClippingPlane = NewCustomNearClippingPlane;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function CinematicCamera.CineCameraComponent.SetFilmback
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FCameraFilmbackSettings          NewFilmback                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -218,7 +268,7 @@ void UCineCameraComponent::SetFilmback(struct FCameraFilmbackSettings& NewFilmba
 
 
 // Function CinematicCamera.CineCameraComponent.SetFilmbackPresetByName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -243,7 +293,7 @@ void UCineCameraComponent::SetFilmbackPresetByName(const class FString& InPreset
 
 
 // Function CinematicCamera.CineCameraComponent.SetFocusSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FCameraFocusSettings             NewFocusSettings                                       (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -268,7 +318,7 @@ void UCineCameraComponent::SetFocusSettings(struct FCameraFocusSettings& NewFocu
 
 
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           InPresetName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -293,7 +343,7 @@ void UCineCameraComponent::SetLensPresetByName(const class FString& InPresetName
 
 
 // Function CinematicCamera.CineCameraComponent.SetLensSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FCameraLensSettings              NewLensSettings                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -318,7 +368,7 @@ void UCineCameraComponent::SetLensSettings(struct FCameraLensSettings& NewLensSe
 
 
 // Function CinematicCamera.CineCameraComponent.GetCropPresetName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -343,7 +393,7 @@ class FString UCineCameraComponent::GetCropPresetName() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetDefaultFilmbackPresetName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -368,7 +418,7 @@ class FString UCineCameraComponent::GetDefaultFilmbackPresetName() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetFilmbackPresetName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -393,7 +443,7 @@ class FString UCineCameraComponent::GetFilmbackPresetName() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetHorizontalFieldOfView
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -418,7 +468,7 @@ float UCineCameraComponent::GetHorizontalFieldOfView() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetLensPresetName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -443,7 +493,7 @@ class FString UCineCameraComponent::GetLensPresetName() const
 
 
 // Function CinematicCamera.CineCameraComponent.GetVerticalFieldOfView
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -493,7 +543,7 @@ class UCineCameraSettings* UCineCameraSettings::GetCineCameraSettings()
 
 
 // Function CinematicCamera.CineCameraSettings.GetCropPresetByName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FString                           PresetName                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FPlateCropSettings               CropSettings                                           (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -525,7 +575,7 @@ bool UCineCameraSettings::GetCropPresetByName(class FString& PresetName, struct 
 
 
 // Function CinematicCamera.CineCameraSettings.GetFilmbackPresetByName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FString                           PresetName                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FCameraFilmbackSettings          FilmbackSettings                                       (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -557,7 +607,7 @@ bool UCineCameraSettings::GetFilmbackPresetByName(class FString& PresetName, str
 
 
 // Function CinematicCamera.CineCameraSettings.GetLensPresetByName
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class FString                           PresetName                                             (ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FCameraLensSettings              LensSettings                                           (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -851,31 +901,6 @@ TArray<class FString> UCineCameraSettings::GetLensPresetNames() const
 		Func = Class->GetFunction("CineCameraSettings", "GetLensPresetNames");
 
 	Params::CineCameraSettings_GetLensPresetNames Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class USplineComponent*                 ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class USplineComponent* ACameraRig_Rail::GetRailSplineComponent()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CameraRig_Rail", "GetRailSplineComponent");
-
-	Params::CameraRig_Rail_GetRailSplineComponent Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

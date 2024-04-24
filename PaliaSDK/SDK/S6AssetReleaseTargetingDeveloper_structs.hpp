@@ -22,7 +22,7 @@ struct FS6AssetReleaseTargetingInfo final
 {
 public:
 	bool                                          bIsDeveloperOnly;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E48[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32DA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class FName>                             RequiredWIPRuntimeFeatureFlags;                    // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FS6ReleaseVersionSpecification         ReleaseVersionSpec;                                // 0x0058(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

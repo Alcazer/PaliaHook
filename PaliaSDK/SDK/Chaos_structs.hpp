@@ -16,6 +16,16 @@
 namespace SDK
 {
 
+// Enum Chaos.ChaosDeformableSimSpace
+// NumValues: 0x0004
+enum class EChaosDeformableSimSpace : uint8
+{
+	World                                    = 0,
+	ComponentXf                              = 1,
+	bone                                     = 2,
+	ChaosDeformableSimSpace_MAX              = 3,
+};
+
 // Enum Chaos.ESetMaskConditionType
 // NumValues: 0x0005
 enum class ESetMaskConditionType : uint8
@@ -218,6 +228,53 @@ enum class EConvexOverlapRemoval : uint8
 	EConvexOverlapRemoval_MAX                = 4,
 };
 
+// Enum Chaos.EGenerateConvexMethod
+// NumValues: 0x0004
+enum class EGenerateConvexMethod : uint8
+{
+	ExternalCollision                        = 0,
+	ComputedFromGeometry                     = 1,
+	IntersectExternalWithComputed            = 2,
+	EGenerateConvexMethod_MAX                = 3,
+};
+
+// Enum Chaos.EAllowConvexMergeMethod
+// NumValues: 0x0003
+enum class EAllowConvexMergeMethod : uint8
+{
+	ByProximity                              = 0,
+	Any                                      = 1,
+	EAllowConvexMergeMethod_MAX              = 2,
+};
+
+// Enum Chaos.EProximityMethod
+// NumValues: 0x0003
+enum class EProximityMethod : uint8
+{
+	Precise                                  = 0,
+	ConvexHull                               = 1,
+	EProximityMethod_MAX                     = 2,
+};
+
+// Enum Chaos.EProximityContactMethod
+// NumValues: 0x0004
+enum class EProximityContactMethod : uint8
+{
+	MinOverlapInProjectionToMajorAxes        = 0,
+	ConvexHullSharpContact                   = 1,
+	ConvexHullAreaContact                    = 2,
+	EProximityContactMethod_MAX              = 3,
+};
+
+// Enum Chaos.EConnectionContactMethod
+// NumValues: 0x0003
+enum class EConnectionContactMethod : uint8
+{
+	None                                     = 0,
+	ConvexHullContactArea                    = 1,
+	EConnectionContactMethod_MAX             = 2,
+};
+
 // Enum Chaos.ECollisionTypeEnum
 // NumValues: 0x0003
 enum class ECollisionTypeEnum : uint8
@@ -291,6 +348,15 @@ enum class EEmissionPatternTypeEnum : uint8
 	Chaos_Max                                = 2,
 };
 
+// Enum Chaos.EDamageModelTypeEnum
+// NumValues: 0x0003
+enum class EDamageModelTypeEnum : uint8
+{
+	Chaos_Damage_Model_UserDefined_Damage_Threshold = 0,
+	Chaos_Damage_Model_Material_Strength_And_Connectivity_DamageThreshold = 1,
+	Chaos_Max                                = 2,
+};
+
 // Enum Chaos.EChaosSolverTickMode
 // NumValues: 0x0005
 enum class EChaosSolverTickMode : uint8
@@ -349,15 +415,15 @@ enum class EGeometryCollectionCacheType : uint8
 	EGeometryCollectionCacheType_MAX         = 4,
 };
 
-// ScriptStruct Chaos.ManagedArrayCollection
-// 0x00B0 (0x00B0 - 0x0000)
-struct alignas(0x08) FManagedArrayCollection final 
+// ScriptStruct Chaos.ClosestPhysicsObjectResult
+// 0x0028 (0x0028 - 0x0000)
+struct alignas(0x08) FClosestPhysicsObjectResult final 
 {
 public:
-	uint8                                         Pad_3AC6[0xB0];                                    // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB2[0x28];                                    // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FManagedArrayCollection) == 0x000008, "Wrong alignment on FManagedArrayCollection");
-static_assert(sizeof(FManagedArrayCollection) == 0x0000B0, "Wrong size on FManagedArrayCollection");
+static_assert(alignof(FClosestPhysicsObjectResult) == 0x000008, "Wrong alignment on FClosestPhysicsObjectResult");
+static_assert(sizeof(FClosestPhysicsObjectResult) == 0x000028, "Wrong size on FClosestPhysicsObjectResult");
 
 // ScriptStruct Chaos.SolverCollisionFilterSettings
 // 0x0010 (0x0010 - 0x0000)
@@ -365,7 +431,7 @@ struct FSolverCollisionFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AC7[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinImpulse;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -383,7 +449,7 @@ struct FSolverBreakingFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AC8[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB4[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -401,7 +467,7 @@ struct FSolverTrailingFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AC9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinSpeed;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -428,18 +494,18 @@ public:
 	float                                         ClusterConnectionFactor;                           // 0x001C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EClusterUnionMethod                           ClusterUnionConnectionType;                        // 0x0020(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bGenerateCollisionData;                            // 0x0021(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACA[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB6[0x2];                                     // 0x0022(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverCollisionFilterSettings         CollisionFilterSettings;                           // 0x0024(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bGenerateBreakData;                                // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACB[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB7[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverBreakingFilterSettings          BreakingFilterSettings;                            // 0x0038(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bGenerateTrailingData;                             // 0x0048(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACC[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB8[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSolverTrailingFilterSettings          TrailingFilterSettings;                            // 0x004C(0x0010)(Edit, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         Iterations;                                        // 0x005C(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         PushOutIterations;                                 // 0x0060(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bGenerateContactGraph;                             // 0x0064(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3ACD[0x3];                                     // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DB9[0x3];                                     // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FChaosSolverConfiguration) == 0x000004, "Wrong alignment on FChaosSolverConfiguration");
 static_assert(sizeof(FChaosSolverConfiguration) == 0x000068, "Wrong size on FChaosSolverConfiguration");
@@ -461,6 +527,16 @@ static_assert(offsetof(FChaosSolverConfiguration, TrailingFilterSettings) == 0x0
 static_assert(offsetof(FChaosSolverConfiguration, Iterations) == 0x00005C, "Member 'FChaosSolverConfiguration::Iterations' has a wrong offset!");
 static_assert(offsetof(FChaosSolverConfiguration, PushOutIterations) == 0x000060, "Member 'FChaosSolverConfiguration::PushOutIterations' has a wrong offset!");
 static_assert(offsetof(FChaosSolverConfiguration, bGenerateContactGraph) == 0x000064, "Member 'FChaosSolverConfiguration::bGenerateContactGraph' has a wrong offset!");
+
+// ScriptStruct Chaos.ManagedArrayCollection
+// 0x00B0 (0x00B0 - 0x0000)
+struct alignas(0x08) FManagedArrayCollection final 
+{
+public:
+	uint8                                         Pad_3DBA[0xB0];                                    // 0x0000(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FManagedArrayCollection) == 0x000008, "Wrong alignment on FManagedArrayCollection");
+static_assert(sizeof(FManagedArrayCollection) == 0x0000B0, "Wrong size on FManagedArrayCollection");
 
 // ScriptStruct Chaos.SolverCollisionData
 // 0x00C0 (0x00C0 - 0x0000)
@@ -508,7 +584,7 @@ public:
 	float                                         Mass;                                              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ParticleIndex;                                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ParticleIndexMesh;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACE[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DBB[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSolverBreakingData) == 0x000008, "Wrong alignment on FSolverBreakingData");
 static_assert(sizeof(FSolverBreakingData) == 0x000058, "Wrong size on FSolverBreakingData");
@@ -530,7 +606,7 @@ public:
 	float                                         Mass;                                              // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ParticleIndex;                                     // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ParticleIndexMesh;                                 // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3ACF[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DBC[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSolverTrailingData) == 0x000008, "Wrong alignment on FSolverTrailingData");
 static_assert(sizeof(FSolverTrailingData) == 0x000058, "Wrong size on FSolverTrailingData");
@@ -554,7 +630,7 @@ public:
 	TArray<struct FSolverBreakingData>            Breakings;                                         // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 	TSet<struct FSolverTrailingData>              Trailings;                                         // 0x0060(0x0050)(NativeAccessSpecifierPublic)
 	float                                         Timestamp;                                         // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AD0[0x4];                                     // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DBD[0x4];                                     // 0x00B4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRecordedFrame) == 0x000008, "Wrong alignment on FRecordedFrame");
 static_assert(sizeof(FRecordedFrame) == 0x0000B8, "Wrong size on FRecordedFrame");
@@ -584,7 +660,7 @@ struct FSolverRemovalFilterSettings final
 {
 public:
 	bool                                          FilterEnabled;                                     // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AD1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DBE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinMass;                                           // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinVolume;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };

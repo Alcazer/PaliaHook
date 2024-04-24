@@ -17,6 +17,251 @@
 namespace SDK
 {
 
+// DelegateFunction AudioWidgets.AudioMeter.GetMeterChannelInfo__DelegateSignature
+// (Public, Delegate)
+// Parameters:
+// TArray<struct FMeterChannelInfo>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMeterChannelInfo> UAudioMeter::GetMeterChannelInfo__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "GetMeterChannelInfo__DelegateSignature");
+
+	Params::AudioMeter_GetMeterChannelInfo__DelegateSignature Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetBackgroundColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetBackgroundColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetBackgroundColor");
+
+	Params::AudioMeter_SetBackgroundColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterBackgroundColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterBackgroundColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterBackgroundColor");
+
+	Params::AudioMeter_SetMeterBackgroundColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterChannelInfo
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FMeterChannelInfo>        InMeterChannelInfo                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterChannelInfo(TArray<struct FMeterChannelInfo>& InMeterChannelInfo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterChannelInfo");
+
+	Params::AudioMeter_SetMeterChannelInfo Parms{};
+
+	Parms.InMeterChannelInfo = std::move(InMeterChannelInfo);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterClippingColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterClippingColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterClippingColor");
+
+	Params::AudioMeter_SetMeterClippingColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterPeakColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterPeakColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterPeakColor");
+
+	Params::AudioMeter_SetMeterPeakColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterScaleColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterScaleColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterScaleColor");
+
+	Params::AudioMeter_SetMeterScaleColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterScaleLabelColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterScaleLabelColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterScaleLabelColor");
+
+	Params::AudioMeter_SetMeterScaleLabelColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.SetMeterValueColor
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAudioMeter::SetMeterValueColor(const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "SetMeterValueColor");
+
+	Params::AudioMeter_SetMeterValueColor Parms{};
+
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AudioWidgets.AudioMeter.GetMeterChannelInfo
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FMeterChannelInfo>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMeterChannelInfo> UAudioMeter::GetMeterChannelInfo() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AudioMeter", "GetMeterChannelInfo");
+
+	Params::AudioMeter_GetMeterChannelInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AudioWidgets.AudioRadialSlider.GetOutputValue
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -395,251 +640,6 @@ void UAudioRadialSlider::SetWidgetLayout(EAudioRadialSliderLayout InLayout)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// DelegateFunction AudioWidgets.AudioMeter.GetMeterChannelInfo__DelegateSignature
-// (Public, Delegate)
-// Parameters:
-// TArray<struct FMeterChannelInfo>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMeterChannelInfo> UAudioMeter::GetMeterChannelInfo__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "GetMeterChannelInfo__DelegateSignature");
-
-	Params::AudioMeter_GetMeterChannelInfo__DelegateSignature Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetBackgroundColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetBackgroundColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetBackgroundColor");
-
-	Params::AudioMeter_SetBackgroundColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterBackgroundColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterBackgroundColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterBackgroundColor");
-
-	Params::AudioMeter_SetMeterBackgroundColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterChannelInfo
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<struct FMeterChannelInfo>        InMeterChannelInfo                                     (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterChannelInfo(TArray<struct FMeterChannelInfo>& InMeterChannelInfo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterChannelInfo");
-
-	Params::AudioMeter_SetMeterChannelInfo Parms{};
-
-	Parms.InMeterChannelInfo = std::move(InMeterChannelInfo);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterClippingColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterClippingColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterClippingColor");
-
-	Params::AudioMeter_SetMeterClippingColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterPeakColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterPeakColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterPeakColor");
-
-	Params::AudioMeter_SetMeterPeakColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterScaleColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterScaleColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterScaleColor");
-
-	Params::AudioMeter_SetMeterScaleColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterScaleLabelColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterScaleLabelColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterScaleLabelColor");
-
-	Params::AudioMeter_SetMeterScaleLabelColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.SetMeterValueColor
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAudioMeter::SetMeterValueColor(const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "SetMeterValueColor");
-
-	Params::AudioMeter_SetMeterValueColor Parms{};
-
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AudioWidgets.AudioMeter.GetMeterChannelInfo
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<struct FMeterChannelInfo>        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMeterChannelInfo> UAudioMeter::GetMeterChannelInfo() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AudioMeter", "GetMeterChannelInfo");
-
-	Params::AudioMeter_GetMeterChannelInfo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 

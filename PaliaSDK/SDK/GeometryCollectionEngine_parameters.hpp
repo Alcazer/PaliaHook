@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "GeometryCollectionEngine_structs.hpp"
+#include "Chaos_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ChaosSolverEngine_structs.hpp"
-#include "Chaos_structs.hpp"
 
 
 namespace SDK::Params
@@ -159,7 +159,7 @@ struct ChaosDestructionListener_SortBreakingEvents final
 public:
 	TArray<struct FChaosBreakingEventData>        BreakingEvents;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	EChaosBreakingSortMethod                      SortMethod;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3825[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ChaosDestructionListener_SortBreakingEvents) == 0x000008, "Wrong alignment on ChaosDestructionListener_SortBreakingEvents");
 static_assert(sizeof(ChaosDestructionListener_SortBreakingEvents) == 0x000018, "Wrong size on ChaosDestructionListener_SortBreakingEvents");
@@ -173,7 +173,7 @@ struct ChaosDestructionListener_SortCollisionEvents final
 public:
 	TArray<struct FChaosCollisionEventData>       CollisionEvents;                                   // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	EChaosCollisionSortMethod                     SortMethod;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3826[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C5[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ChaosDestructionListener_SortCollisionEvents) == 0x000008, "Wrong alignment on ChaosDestructionListener_SortCollisionEvents");
 static_assert(sizeof(ChaosDestructionListener_SortCollisionEvents) == 0x000018, "Wrong size on ChaosDestructionListener_SortCollisionEvents");
@@ -187,7 +187,7 @@ struct ChaosDestructionListener_SortRemovalEvents final
 public:
 	TArray<struct FChaosRemovalEventData>         RemovalEvents;                                     // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	EChaosRemovalSortMethod                       SortMethod;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3827[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C6[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ChaosDestructionListener_SortRemovalEvents) == 0x000008, "Wrong alignment on ChaosDestructionListener_SortRemovalEvents");
 static_assert(sizeof(ChaosDestructionListener_SortRemovalEvents) == 0x000018, "Wrong size on ChaosDestructionListener_SortRemovalEvents");
@@ -201,7 +201,7 @@ struct ChaosDestructionListener_SortTrailingEvents final
 public:
 	TArray<struct FChaosTrailingEventData>        TrailingEvents;                                    // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	EChaosTrailingSortMethod                      SortMethod;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3828[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C7[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ChaosDestructionListener_SortTrailingEvents) == 0x000008, "Wrong alignment on ChaosDestructionListener_SortTrailingEvents");
 static_assert(sizeof(ChaosDestructionListener_SortTrailingEvents) == 0x000018, "Wrong size on ChaosDestructionListener_SortTrailingEvents");
@@ -228,7 +228,7 @@ public:
 	struct FVector                                End;                                               // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FHitResult                             OutHit;                                            // 0x0030(0x00E8)(Parm, OutParm, IsPlainOldData, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0118(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3829[0x7];                                     // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14C8[0x7];                                     // 0x0119(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryCollectionActor_RaycastSingle) == 0x000008, "Wrong alignment on GeometryCollectionActor_RaycastSingle");
 static_assert(sizeof(GeometryCollectionActor_RaycastSingle) == 0x000120, "Wrong size on GeometryCollectionActor_RaycastSingle");
@@ -243,7 +243,7 @@ struct GeometryCollectionComponent_ApplyAngularVelocity final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14DD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AngularVelocity;                                   // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_ApplyAngularVelocity) == 0x000008, "Wrong alignment on GeometryCollectionComponent_ApplyAngularVelocity");
@@ -257,7 +257,7 @@ struct GeometryCollectionComponent_ApplyBreakingAngularVelocity final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14DE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AngularVelocity;                                   // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_ApplyBreakingAngularVelocity) == 0x000008, "Wrong alignment on GeometryCollectionComponent_ApplyBreakingAngularVelocity");
@@ -271,7 +271,7 @@ struct GeometryCollectionComponent_ApplyBreakingLinearVelocity final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14DF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LinearVelocity;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_ApplyBreakingLinearVelocity) == 0x000008, "Wrong alignment on GeometryCollectionComponent_ApplyBreakingLinearVelocity");
@@ -285,7 +285,7 @@ struct GeometryCollectionComponent_ApplyExternalStrain final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14E0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Location;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PropagationDepth;                                  // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -307,7 +307,7 @@ struct GeometryCollectionComponent_ApplyInternalStrain final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14E1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Location;                                          // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PropagationDepth;                                  // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -329,7 +329,7 @@ struct GeometryCollectionComponent_ApplyKinematicField final
 {
 public:
 	float                                         Radius;                                            // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_383F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14E2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_ApplyKinematicField) == 0x000008, "Wrong alignment on GeometryCollectionComponent_ApplyKinematicField");
@@ -343,7 +343,7 @@ struct GeometryCollectionComponent_ApplyLinearVelocity final
 {
 public:
 	int32                                         ItemIndex;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3840[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14E3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LinearVelocity;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_ApplyLinearVelocity) == 0x000008, "Wrong alignment on GeometryCollectionComponent_ApplyLinearVelocity");
@@ -358,7 +358,7 @@ struct GeometryCollectionComponent_ApplyPhysicsField final
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryCollectionPhysicsTypeEnum            Target;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3841[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14E4[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaData*                   MetaData;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Field;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -379,6 +379,17 @@ public:
 static_assert(alignof(GeometryCollectionComponent_CrumbleCluster) == 0x000004, "Wrong alignment on GeometryCollectionComponent_CrumbleCluster");
 static_assert(sizeof(GeometryCollectionComponent_CrumbleCluster) == 0x000004, "Wrong size on GeometryCollectionComponent_CrumbleCluster");
 static_assert(offsetof(GeometryCollectionComponent_CrumbleCluster, ItemIndex) == 0x000000, "Member 'GeometryCollectionComponent_CrumbleCluster::ItemIndex' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetDebugInfo
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryCollectionComponent_GetDebugInfo final 
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetDebugInfo) == 0x000008, "Wrong alignment on GeometryCollectionComponent_GetDebugInfo");
+static_assert(sizeof(GeometryCollectionComponent_GetDebugInfo) == 0x000010, "Wrong size on GeometryCollectionComponent_GetDebugInfo");
+static_assert(offsetof(GeometryCollectionComponent_GetDebugInfo, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetDebugInfo::ReturnValue' has a wrong offset!");
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLevel
 // 0x0008 (0x0008 - 0x0000)
@@ -441,6 +452,103 @@ static_assert(alignof(GeometryCollectionComponent_ReceivePhysicsCollision) == 0x
 static_assert(sizeof(GeometryCollectionComponent_ReceivePhysicsCollision) == 0x0000C0, "Wrong size on GeometryCollectionComponent_ReceivePhysicsCollision");
 static_assert(offsetof(GeometryCollectionComponent_ReceivePhysicsCollision, CollisionInfo) == 0x000000, "Member 'GeometryCollectionComponent_ReceivePhysicsCollision::CollisionInfo' has a wrong offset!");
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAbandonedParticleCollisionProfileName
+// 0x0008 (0x0008 - 0x0000)
+struct GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName final 
+{
+public:
+	class FName                                   CollisionProfile;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName) == 0x000004, "Wrong alignment on GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName");
+static_assert(sizeof(GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName) == 0x000008, "Wrong size on GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName");
+static_assert(offsetof(GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName, CollisionProfile) == 0x000000, "Member 'GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName::CollisionProfile' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByBox
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryCollectionComponent_SetAnchoredByBox final 
+{
+public:
+	struct FBox                                   WorldSpaceBox;                                     // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bAnchored;                                         // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E5[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLevel;                                          // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetAnchoredByBox) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetAnchoredByBox");
+static_assert(sizeof(GeometryCollectionComponent_SetAnchoredByBox) == 0x000040, "Wrong size on GeometryCollectionComponent_SetAnchoredByBox");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByBox, WorldSpaceBox) == 0x000000, "Member 'GeometryCollectionComponent_SetAnchoredByBox::WorldSpaceBox' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByBox, bAnchored) == 0x000038, "Member 'GeometryCollectionComponent_SetAnchoredByBox::bAnchored' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByBox, MaxLevel) == 0x00003C, "Member 'GeometryCollectionComponent_SetAnchoredByBox::MaxLevel' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct GeometryCollectionComponent_SetAnchoredByIndex final 
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAnchored;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E6[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryCollectionComponent_SetAnchoredByIndex) == 0x000004, "Wrong alignment on GeometryCollectionComponent_SetAnchoredByIndex");
+static_assert(sizeof(GeometryCollectionComponent_SetAnchoredByIndex) == 0x000008, "Wrong size on GeometryCollectionComponent_SetAnchoredByIndex");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByIndex, Param_Index) == 0x000000, "Member 'GeometryCollectionComponent_SetAnchoredByIndex::Param_Index' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByIndex, bAnchored) == 0x000004, "Member 'GeometryCollectionComponent_SetAnchoredByIndex::bAnchored' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByTransformedBox
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryCollectionComponent_SetAnchoredByTransformedBox final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E7[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAnchored;                                         // 0x00A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E8[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxLevel;                                          // 0x00A4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14E9[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryCollectionComponent_SetAnchoredByTransformedBox) == 0x000010, "Wrong alignment on GeometryCollectionComponent_SetAnchoredByTransformedBox");
+static_assert(sizeof(GeometryCollectionComponent_SetAnchoredByTransformedBox) == 0x0000B0, "Wrong size on GeometryCollectionComponent_SetAnchoredByTransformedBox");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByTransformedBox, Box) == 0x000000, "Member 'GeometryCollectionComponent_SetAnchoredByTransformedBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByTransformedBox, Transform) == 0x000040, "Member 'GeometryCollectionComponent_SetAnchoredByTransformedBox::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByTransformedBox, bAnchored) == 0x0000A0, "Member 'GeometryCollectionComponent_SetAnchoredByTransformedBox::bAnchored' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetAnchoredByTransformedBox, MaxLevel) == 0x0000A4, "Member 'GeometryCollectionComponent_SetAnchoredByTransformedBox::MaxLevel' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetDamageThreshold
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryCollectionComponent_SetDamageThreshold final 
+{
+public:
+	TArray<float>                                 InDamageThreshold;                                 // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetDamageThreshold) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetDamageThreshold");
+static_assert(sizeof(GeometryCollectionComponent_SetDamageThreshold) == 0x000010, "Wrong size on GeometryCollectionComponent_SetDamageThreshold");
+static_assert(offsetof(GeometryCollectionComponent_SetDamageThreshold, InDamageThreshold) == 0x000000, "Member 'GeometryCollectionComponent_SetDamageThreshold::InDamageThreshold' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetEnableDamageFromCollision
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollectionComponent_SetEnableDamageFromCollision final 
+{
+public:
+	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetEnableDamageFromCollision) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetEnableDamageFromCollision");
+static_assert(sizeof(GeometryCollectionComponent_SetEnableDamageFromCollision) == 0x000001, "Wrong size on GeometryCollectionComponent_SetEnableDamageFromCollision");
+static_assert(offsetof(GeometryCollectionComponent_SetEnableDamageFromCollision, bValue) == 0x000000, "Member 'GeometryCollectionComponent_SetEnableDamageFromCollision::bValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetLocalRestTransforms
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryCollectionComponent_SetLocalRestTransforms final 
+{
+public:
+	TArray<struct FTransform>                     Transforms;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bOnlyLeaves;                                       // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14EA[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryCollectionComponent_SetLocalRestTransforms) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetLocalRestTransforms");
+static_assert(sizeof(GeometryCollectionComponent_SetLocalRestTransforms) == 0x000018, "Wrong size on GeometryCollectionComponent_SetLocalRestTransforms");
+static_assert(offsetof(GeometryCollectionComponent_SetLocalRestTransforms, Transforms) == 0x000000, "Member 'GeometryCollectionComponent_SetLocalRestTransforms::Transforms' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetLocalRestTransforms, bOnlyLeaves) == 0x000010, "Member 'GeometryCollectionComponent_SetLocalRestTransforms::bOnlyLeaves' has a wrong offset!");
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks
 // 0x0001 (0x0001 - 0x0000)
 struct GeometryCollectionComponent_SetNotifyBreaks final 
@@ -453,15 +561,63 @@ static_assert(sizeof(GeometryCollectionComponent_SetNotifyBreaks) == 0x000001, "
 static_assert(offsetof(GeometryCollectionComponent_SetNotifyBreaks, bNewNotifyBreaks) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyBreaks::bNewNotifyBreaks' has a wrong offset!");
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyCrumblings
-// 0x0001 (0x0001 - 0x0000)
+// 0x0002 (0x0002 - 0x0000)
 struct GeometryCollectionComponent_SetNotifyCrumblings final 
 {
 public:
 	bool                                          bNewNotifyCrumblings;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bNewCrumblingEventIncludesChildren;                // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryCollectionComponent_SetNotifyCrumblings) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetNotifyCrumblings");
-static_assert(sizeof(GeometryCollectionComponent_SetNotifyCrumblings) == 0x000001, "Wrong size on GeometryCollectionComponent_SetNotifyCrumblings");
+static_assert(sizeof(GeometryCollectionComponent_SetNotifyCrumblings) == 0x000002, "Wrong size on GeometryCollectionComponent_SetNotifyCrumblings");
 static_assert(offsetof(GeometryCollectionComponent_SetNotifyCrumblings, bNewNotifyCrumblings) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyCrumblings::bNewNotifyCrumblings' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyCrumblings, bNewCrumblingEventIncludesChildren) == 0x000001, "Member 'GeometryCollectionComponent_SetNotifyCrumblings::bNewCrumblingEventIncludesChildren' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalBreaks
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollectionComponent_SetNotifyGlobalBreaks final 
+{
+public:
+	bool                                          bNewNotifyGlobalBreaks;                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetNotifyGlobalBreaks) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetNotifyGlobalBreaks");
+static_assert(sizeof(GeometryCollectionComponent_SetNotifyGlobalBreaks) == 0x000001, "Wrong size on GeometryCollectionComponent_SetNotifyGlobalBreaks");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyGlobalBreaks, bNewNotifyGlobalBreaks) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyGlobalBreaks::bNewNotifyGlobalBreaks' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCollision
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollectionComponent_SetNotifyGlobalCollision final 
+{
+public:
+	bool                                          bNewNotifyGlobalCollisions;                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetNotifyGlobalCollision) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetNotifyGlobalCollision");
+static_assert(sizeof(GeometryCollectionComponent_SetNotifyGlobalCollision) == 0x000001, "Wrong size on GeometryCollectionComponent_SetNotifyGlobalCollision");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyGlobalCollision, bNewNotifyGlobalCollisions) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyGlobalCollision::bNewNotifyGlobalCollisions' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCrumblings
+// 0x0002 (0x0002 - 0x0000)
+struct GeometryCollectionComponent_SetNotifyGlobalCrumblings final 
+{
+public:
+	bool                                          bNewNotifyGlobalCrumblings;                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGlobalNewCrumblingEventIncludesChildren;          // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetNotifyGlobalCrumblings) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetNotifyGlobalCrumblings");
+static_assert(sizeof(GeometryCollectionComponent_SetNotifyGlobalCrumblings) == 0x000002, "Wrong size on GeometryCollectionComponent_SetNotifyGlobalCrumblings");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyGlobalCrumblings, bNewNotifyGlobalCrumblings) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyGlobalCrumblings::bNewNotifyGlobalCrumblings' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyGlobalCrumblings, bGlobalNewCrumblingEventIncludesChildren) == 0x000001, "Member 'GeometryCollectionComponent_SetNotifyGlobalCrumblings::bGlobalNewCrumblingEventIncludesChildren' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalRemovals
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollectionComponent_SetNotifyGlobalRemovals final 
+{
+public:
+	bool                                          bNewNotifyGlobalRemovals;                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetNotifyGlobalRemovals) == 0x000001, "Wrong alignment on GeometryCollectionComponent_SetNotifyGlobalRemovals");
+static_assert(sizeof(GeometryCollectionComponent_SetNotifyGlobalRemovals) == 0x000001, "Wrong size on GeometryCollectionComponent_SetNotifyGlobalRemovals");
+static_assert(offsetof(GeometryCollectionComponent_SetNotifyGlobalRemovals, bNewNotifyGlobalRemovals) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyGlobalRemovals::bNewNotifyGlobalRemovals' has a wrong offset!");
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyRemovals
 // 0x0001 (0x0001 - 0x0000)
@@ -474,16 +630,142 @@ static_assert(alignof(GeometryCollectionComponent_SetNotifyRemovals) == 0x000001
 static_assert(sizeof(GeometryCollectionComponent_SetNotifyRemovals) == 0x000001, "Wrong size on GeometryCollectionComponent_SetNotifyRemovals");
 static_assert(offsetof(GeometryCollectionComponent_SetNotifyRemovals, bNewNotifyRemovals) == 0x000000, "Member 'GeometryCollectionComponent_SetNotifyRemovals::bNewNotifyRemovals' has a wrong offset!");
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetPerLevelCollisionProfileNames
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryCollectionComponent_SetPerLevelCollisionProfileNames final 
+{
+public:
+	TArray<class FName>                           ProfileNames;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetPerLevelCollisionProfileNames) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetPerLevelCollisionProfileNames");
+static_assert(sizeof(GeometryCollectionComponent_SetPerLevelCollisionProfileNames) == 0x000010, "Wrong size on GeometryCollectionComponent_SetPerLevelCollisionProfileNames");
+static_assert(offsetof(GeometryCollectionComponent_SetPerLevelCollisionProfileNames, ProfileNames) == 0x000000, "Member 'GeometryCollectionComponent_SetPerLevelCollisionProfileNames::ProfileNames' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetPerParticleCollisionProfileName
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryCollectionComponent_SetPerParticleCollisionProfileName final 
+{
+public:
+	TArray<int32>                                 BoneIds;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	class FName                                   ProfileName;                                       // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_SetPerParticleCollisionProfileName) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetPerParticleCollisionProfileName");
+static_assert(sizeof(GeometryCollectionComponent_SetPerParticleCollisionProfileName) == 0x000018, "Wrong size on GeometryCollectionComponent_SetPerParticleCollisionProfileName");
+static_assert(offsetof(GeometryCollectionComponent_SetPerParticleCollisionProfileName, BoneIds) == 0x000000, "Member 'GeometryCollectionComponent_SetPerParticleCollisionProfileName::BoneIds' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetPerParticleCollisionProfileName, ProfileName) == 0x000010, "Member 'GeometryCollectionComponent_SetPerParticleCollisionProfileName::ProfileName' has a wrong offset!");
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetRestCollection
-// 0x0008 (0x0008 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct GeometryCollectionComponent_SetRestCollection final 
 {
 public:
 	class UGeometryCollection*                    RestCollectionIn;                                  // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bApplyAssetDefaults;                               // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_14EB[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryCollectionComponent_SetRestCollection) == 0x000008, "Wrong alignment on GeometryCollectionComponent_SetRestCollection");
-static_assert(sizeof(GeometryCollectionComponent_SetRestCollection) == 0x000008, "Wrong size on GeometryCollectionComponent_SetRestCollection");
+static_assert(sizeof(GeometryCollectionComponent_SetRestCollection) == 0x000010, "Wrong size on GeometryCollectionComponent_SetRestCollection");
 static_assert(offsetof(GeometryCollectionComponent_SetRestCollection, RestCollectionIn) == 0x000000, "Member 'GeometryCollectionComponent_SetRestCollection::RestCollectionIn' has a wrong offset!");
+static_assert(offsetof(GeometryCollectionComponent_SetRestCollection, bApplyAssetDefaults) == 0x000008, "Member 'GeometryCollectionComponent_SetRestCollection::bApplyAssetDefaults' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetDamageThreshold
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryCollectionComponent_GetDamageThreshold final 
+{
+public:
+	TArray<float>                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetDamageThreshold) == 0x000008, "Wrong alignment on GeometryCollectionComponent_GetDamageThreshold");
+static_assert(sizeof(GeometryCollectionComponent_GetDamageThreshold) == 0x000010, "Wrong size on GeometryCollectionComponent_GetDamageThreshold");
+static_assert(offsetof(GeometryCollectionComponent_GetDamageThreshold, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetDamageThreshold::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLocalRestTransforms
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryCollectionComponent_GetInitialLocalRestTransforms final 
+{
+public:
+	TArray<struct FTransform>                     ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetInitialLocalRestTransforms) == 0x000008, "Wrong alignment on GeometryCollectionComponent_GetInitialLocalRestTransforms");
+static_assert(sizeof(GeometryCollectionComponent_GetInitialLocalRestTransforms) == 0x000010, "Wrong size on GeometryCollectionComponent_GetInitialLocalRestTransforms");
+static_assert(offsetof(GeometryCollectionComponent_GetInitialLocalRestTransforms, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetInitialLocalRestTransforms::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetLocalBounds
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryCollectionComponent_GetLocalBounds final 
+{
+public:
+	struct FBox                                   ReturnValue;                                       // 0x0000(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetLocalBounds) == 0x000008, "Wrong alignment on GeometryCollectionComponent_GetLocalBounds");
+static_assert(sizeof(GeometryCollectionComponent_GetLocalBounds) == 0x000038, "Wrong size on GeometryCollectionComponent_GetLocalBounds");
+static_assert(offsetof(GeometryCollectionComponent_GetLocalBounds, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetLocalBounds::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootCurrentTransform
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryCollectionComponent_GetRootCurrentTransform final 
+{
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetRootCurrentTransform) == 0x000010, "Wrong alignment on GeometryCollectionComponent_GetRootCurrentTransform");
+static_assert(sizeof(GeometryCollectionComponent_GetRootCurrentTransform) == 0x000060, "Wrong size on GeometryCollectionComponent_GetRootCurrentTransform");
+static_assert(offsetof(GeometryCollectionComponent_GetRootCurrentTransform, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetRootCurrentTransform::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootIndex
+// 0x0004 (0x0004 - 0x0000)
+struct GeometryCollectionComponent_GetRootIndex final 
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetRootIndex) == 0x000004, "Wrong alignment on GeometryCollectionComponent_GetRootIndex");
+static_assert(sizeof(GeometryCollectionComponent_GetRootIndex) == 0x000004, "Wrong size on GeometryCollectionComponent_GetRootIndex");
+static_assert(offsetof(GeometryCollectionComponent_GetRootIndex, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetRootIndex::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootInitialTransform
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryCollectionComponent_GetRootInitialTransform final 
+{
+public:
+	struct FTransform                             ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_GetRootInitialTransform) == 0x000010, "Wrong alignment on GeometryCollectionComponent_GetRootInitialTransform");
+static_assert(sizeof(GeometryCollectionComponent_GetRootInitialTransform) == 0x000060, "Wrong size on GeometryCollectionComponent_GetRootInitialTransform");
+static_assert(offsetof(GeometryCollectionComponent_GetRootInitialTransform, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_GetRootInitialTransform::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.IsRootBroken
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollectionComponent_IsRootBroken final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollectionComponent_IsRootBroken) == 0x000001, "Wrong alignment on GeometryCollectionComponent_IsRootBroken");
+static_assert(sizeof(GeometryCollectionComponent_IsRootBroken) == 0x000001, "Wrong size on GeometryCollectionComponent_IsRootBroken");
+static_assert(offsetof(GeometryCollectionComponent_IsRootBroken, ReturnValue) == 0x000000, "Member 'GeometryCollectionComponent_IsRootBroken::ReturnValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollection.SetConvertVertexColorsToSRGB
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollection_SetConvertVertexColorsToSRGB final 
+{
+public:
+	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollection_SetConvertVertexColorsToSRGB) == 0x000001, "Wrong alignment on GeometryCollection_SetConvertVertexColorsToSRGB");
+static_assert(sizeof(GeometryCollection_SetConvertVertexColorsToSRGB) == 0x000001, "Wrong size on GeometryCollection_SetConvertVertexColorsToSRGB");
+static_assert(offsetof(GeometryCollection_SetConvertVertexColorsToSRGB, bValue) == 0x000000, "Member 'GeometryCollection_SetConvertVertexColorsToSRGB::bValue' has a wrong offset!");
+
+// Function GeometryCollectionEngine.GeometryCollection.SetEnableNanite
+// 0x0001 (0x0001 - 0x0000)
+struct GeometryCollection_SetEnableNanite final 
+{
+public:
+	bool                                          bValue;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryCollection_SetEnableNanite) == 0x000001, "Wrong alignment on GeometryCollection_SetEnableNanite");
+static_assert(sizeof(GeometryCollection_SetEnableNanite) == 0x000001, "Wrong size on GeometryCollection_SetEnableNanite");
+static_assert(offsetof(GeometryCollection_SetEnableNanite, bValue) == 0x000000, "Member 'GeometryCollection_SetEnableNanite::bValue' has a wrong offset!");
 
 }
 

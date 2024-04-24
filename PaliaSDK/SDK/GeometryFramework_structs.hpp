@@ -15,13 +15,14 @@ namespace SDK
 {
 
 // Enum GeometryFramework.EDynamicMeshComponentTangentsMode
-// NumValues: 0x0004
+// NumValues: 0x0005
 enum class EDynamicMeshComponentTangentsMode : uint8
 {
 	NoTangents                               = 0,
 	AutoCalculated                           = 1,
 	ExternallyProvided                       = 2,
-	EDynamicMeshComponentTangentsMode_MAX    = 3,
+	Default                                  = 255,
+	EDynamicMeshComponentTangentsMode_MAX    = 256,
 };
 
 // Enum GeometryFramework.EDynamicMeshComponentColorOverrideMode
@@ -33,6 +34,16 @@ enum class EDynamicMeshComponentColorOverrideMode : uint8
 	Polygroups                               = 2,
 	Constant                                 = 3,
 	EDynamicMeshComponentColorOverrideMode_MAX = 4,
+};
+
+// Enum GeometryFramework.EDynamicMeshVertexColorTransformMode
+// NumValues: 0x0004
+enum class EDynamicMeshVertexColorTransformMode : uint8
+{
+	NoTransform                              = 0,
+	LinearToSRGB                             = 1,
+	SRGBToLinear                             = 2,
+	EDynamicMeshVertexColorTransformMode_MAX = 3,
 };
 
 // Enum GeometryFramework.EDynamicMeshComponentRenderUpdateMode
@@ -80,7 +91,7 @@ public:
 	EDynamicMeshChangeType                        Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EDynamicMeshAttributeChangeFlags              Flags;                                             // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsRevertChange;                                   // 0x0002(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D95[0x1D];                                    // 0x0003(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2FA4[0x1D];                                    // 0x0003(0x001D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FDynamicMeshChangeInfo) == 0x000008, "Wrong alignment on FDynamicMeshChangeInfo");
 static_assert(sizeof(FDynamicMeshChangeInfo) == 0x000020, "Wrong size on FDynamicMeshChangeInfo");

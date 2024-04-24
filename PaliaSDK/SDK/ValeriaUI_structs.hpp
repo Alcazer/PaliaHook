@@ -211,16 +211,6 @@ enum class EItemEmptyDisplayType : uint8
 	EItemEmptyDisplayType_MAX                = 3,
 };
 
-// Enum ValeriaUI.EVALUI_PhotoCameraScreenLookMode
-// NumValues: 0x0004
-enum class EVALUI_PhotoCameraScreenLookMode : uint8
-{
-	None                                     = 0,
-	PanRotate                                = 1,
-	MouseLook                                = 2,
-	EVALUI_MAX                               = 3,
-};
-
 // Enum ValeriaUI.EVALUI_PremiumCurrencyPurchaseState
 // NumValues: 0x0006
 enum class EVALUI_PremiumCurrencyPurchaseState : uint8
@@ -287,26 +277,6 @@ enum class EVALUI_TooltipType : uint8
 	EVALUI_MAX                               = 2,
 };
 
-// ScriptStruct ValeriaUI.VALUI_RadioSliderPaginationSettings
-// 0x0098 (0x0098 - 0x0000)
-struct FVALUI_RadioSliderPaginationSettings final 
-{
-public:
-	bool                                          bShouldPaginate;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A1[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ExtraPreviewPadding;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PageElementCount;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AnimationTime;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRuntimeFloatCurve                     AnimationCurve;                                    // 0x0010(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVALUI_RadioSliderPaginationSettings) == 0x000008, "Wrong alignment on FVALUI_RadioSliderPaginationSettings");
-static_assert(sizeof(FVALUI_RadioSliderPaginationSettings) == 0x000098, "Wrong size on FVALUI_RadioSliderPaginationSettings");
-static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, bShouldPaginate) == 0x000000, "Member 'FVALUI_RadioSliderPaginationSettings::bShouldPaginate' has a wrong offset!");
-static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, ExtraPreviewPadding) == 0x000004, "Member 'FVALUI_RadioSliderPaginationSettings::ExtraPreviewPadding' has a wrong offset!");
-static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, PageElementCount) == 0x000008, "Member 'FVALUI_RadioSliderPaginationSettings::PageElementCount' has a wrong offset!");
-static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, AnimationTime) == 0x00000C, "Member 'FVALUI_RadioSliderPaginationSettings::AnimationTime' has a wrong offset!");
-static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, AnimationCurve) == 0x000010, "Member 'FVALUI_RadioSliderPaginationSettings::AnimationCurve' has a wrong offset!");
-
 // ScriptStruct ValeriaUI.VALUI_PremiumStorefrontVariant
 // 0x00D8 (0x00D8 - 0x0000)
 struct FVALUI_PremiumStorefrontVariant final 
@@ -317,11 +287,11 @@ public:
 	int32                                         DiscountedPrice;                                   // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BasePrice;                                         // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Owned;                                             // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A2[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C30[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<TSoftObjectPtr<class UVAL_CharacterCustomizationItemBase>> Items;                                             // 0x0030(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
 	TSet<struct FGuid>                            ItemIds;                                           // 0x0080(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
 	EVALUI_ModelUIType                            UIType;                                            // 0x00D0(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A3[0x7];                                     // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C31[0x7];                                     // 0x00D1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVALUI_PremiumStorefrontVariant) == 0x000008, "Wrong alignment on FVALUI_PremiumStorefrontVariant");
 static_assert(sizeof(FVALUI_PremiumStorefrontVariant) == 0x0000D8, "Wrong size on FVALUI_PremiumStorefrontVariant");
@@ -344,11 +314,11 @@ public:
 	int32                                         DiscountedPrice;                                   // 0x0020(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BasePrice;                                         // 0x0024(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Owned;                                             // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A4[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C32[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 AssetURL;                                          // 0x0030(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVALUI_PremiumStorefrontVariant> Variants;                                          // 0x0040(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	EVALUI_ModelUIType                            UIType;                                            // 0x0050(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A5[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C33[0x3];                                     // 0x0051(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Discount;                                          // 0x0054(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FVALUI_PremiumStorefrontWidgetModel) == 0x000008, "Wrong alignment on FVALUI_PremiumStorefrontWidgetModel");
@@ -369,7 +339,7 @@ struct FVALUI_PurchaseReward final
 {
 public:
 	int32                                         CoinAmount;                                        // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C34[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<struct FGuid>                            RewardIds;                                         // 0x0008(0x0050)(BlueprintVisible, NativeAccessSpecifierPublic)
 	TSet<TSoftObjectPtr<class UVAL_CharacterCustomizationItemBase>> RewardItems;                                       // 0x0058(0x0050)(BlueprintVisible, UObjectWrapper, NativeAccessSpecifierPublic)
 };
@@ -426,7 +396,7 @@ struct FVALUI_CharacterNameValidityResponse final
 {
 public:
 	EVAL_CharacterNameType                        CharacterNameType;                                 // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C35[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FText>                           ErrorMessages;                                     // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FVALUI_CharacterNameValidityResponse) == 0x000008, "Wrong alignment on FVALUI_CharacterNameValidityResponse");
@@ -440,11 +410,11 @@ struct FVALUI_CharCustomization_UpdateLoadoutContextPayload final
 {
 public:
 	EVALUI_CharCustomization_UpdateLoadoutContext UpdateType;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C36[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<class FName>                             LoadoutSlotsModified;                              // 0x0008(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	class UObject*                                TileItemSelected;                                  // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVAL_ApplyCustomizationToActorContext         ApplyCustomizationContext;                         // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34A9[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C37[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVALUI_CharCustomization_UpdateLoadoutContextPayload) == 0x000008, "Wrong alignment on FVALUI_CharCustomization_UpdateLoadoutContextPayload");
 static_assert(sizeof(FVALUI_CharCustomization_UpdateLoadoutContextPayload) == 0x000068, "Wrong size on FVALUI_CharCustomization_UpdateLoadoutContextPayload");
@@ -453,31 +423,27 @@ static_assert(offsetof(FVALUI_CharCustomization_UpdateLoadoutContextPayload, Loa
 static_assert(offsetof(FVALUI_CharCustomization_UpdateLoadoutContextPayload, TileItemSelected) == 0x000058, "Member 'FVALUI_CharCustomization_UpdateLoadoutContextPayload::TileItemSelected' has a wrong offset!");
 static_assert(offsetof(FVALUI_CharCustomization_UpdateLoadoutContextPayload, ApplyCustomizationContext) == 0x000060, "Member 'FVALUI_CharCustomization_UpdateLoadoutContextPayload::ApplyCustomizationContext' has a wrong offset!");
 
-// ScriptStruct ValeriaUI.CrafterUIState
-// 0x0008 (0x0008 - 0x0000)
-struct FCrafterUIState final 
+// ScriptStruct ValeriaUI.VALUI_SocialTrackingData
+// 0x0014 (0x0014 - 0x0000)
+struct FVALUI_SocialTrackingData final 
 {
 public:
-	int32                                         SelectedRecipeId;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SelectedRecipeListTab;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FriendRequestCount;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PartyRequestCount;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ServerSyncRequestCount;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ItemRequestsCount;                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FriendsOnlineCount;                                // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(FCrafterUIState) == 0x000004, "Wrong alignment on FCrafterUIState");
-static_assert(sizeof(FCrafterUIState) == 0x000008, "Wrong size on FCrafterUIState");
-static_assert(offsetof(FCrafterUIState, SelectedRecipeId) == 0x000000, "Member 'FCrafterUIState::SelectedRecipeId' has a wrong offset!");
-static_assert(offsetof(FCrafterUIState, SelectedRecipeListTab) == 0x000004, "Member 'FCrafterUIState::SelectedRecipeListTab' has a wrong offset!");
-
-// ScriptStruct ValeriaUI.VALUI_PaliaPassHUDState
-// 0x0001 (0x0001 - 0x0000)
-struct FVALUI_PaliaPassHUDState final 
-{
-public:
-	uint8                                         Pad_34AA[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FVALUI_PaliaPassHUDState) == 0x000001, "Wrong alignment on FVALUI_PaliaPassHUDState");
-static_assert(sizeof(FVALUI_PaliaPassHUDState) == 0x000001, "Wrong size on FVALUI_PaliaPassHUDState");
+static_assert(alignof(FVALUI_SocialTrackingData) == 0x000004, "Wrong alignment on FVALUI_SocialTrackingData");
+static_assert(sizeof(FVALUI_SocialTrackingData) == 0x000014, "Wrong size on FVALUI_SocialTrackingData");
+static_assert(offsetof(FVALUI_SocialTrackingData, FriendRequestCount) == 0x000000, "Member 'FVALUI_SocialTrackingData::FriendRequestCount' has a wrong offset!");
+static_assert(offsetof(FVALUI_SocialTrackingData, PartyRequestCount) == 0x000004, "Member 'FVALUI_SocialTrackingData::PartyRequestCount' has a wrong offset!");
+static_assert(offsetof(FVALUI_SocialTrackingData, ServerSyncRequestCount) == 0x000008, "Member 'FVALUI_SocialTrackingData::ServerSyncRequestCount' has a wrong offset!");
+static_assert(offsetof(FVALUI_SocialTrackingData, ItemRequestsCount) == 0x00000C, "Member 'FVALUI_SocialTrackingData::ItemRequestsCount' has a wrong offset!");
+static_assert(offsetof(FVALUI_SocialTrackingData, FriendsOnlineCount) == 0x000010, "Member 'FVALUI_SocialTrackingData::FriendsOnlineCount' has a wrong offset!");
 
 // ScriptStruct ValeriaUI.VALUI_ChatChannel
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct FVALUI_ChatChannel final 
 {
 public:
@@ -485,22 +451,22 @@ public:
 	struct FLinearColor                           ChannelColor;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisabled;                                         // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplayed;                                        // 0x0039(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34AB[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UTexture2D>              Icon;                                              // 0x0040(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ShortName;                                         // 0x0070(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   LongName;                                          // 0x0088(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class FText                                   MessagePrefix;                                     // 0x00A0(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C38[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              Icon;                                              // 0x0040(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ShortName;                                         // 0x0068(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   LongName;                                          // 0x0080(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class FText                                   MessagePrefix;                                     // 0x0098(0x0018)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FVALUI_ChatChannel) == 0x000008, "Wrong alignment on FVALUI_ChatChannel");
-static_assert(sizeof(FVALUI_ChatChannel) == 0x0000B8, "Wrong size on FVALUI_ChatChannel");
+static_assert(sizeof(FVALUI_ChatChannel) == 0x0000B0, "Wrong size on FVALUI_ChatChannel");
 static_assert(offsetof(FVALUI_ChatChannel, MessageTarget) == 0x000000, "Member 'FVALUI_ChatChannel::MessageTarget' has a wrong offset!");
 static_assert(offsetof(FVALUI_ChatChannel, ChannelColor) == 0x000028, "Member 'FVALUI_ChatChannel::ChannelColor' has a wrong offset!");
 static_assert(offsetof(FVALUI_ChatChannel, bDisabled) == 0x000038, "Member 'FVALUI_ChatChannel::bDisabled' has a wrong offset!");
 static_assert(offsetof(FVALUI_ChatChannel, bDisplayed) == 0x000039, "Member 'FVALUI_ChatChannel::bDisplayed' has a wrong offset!");
 static_assert(offsetof(FVALUI_ChatChannel, Icon) == 0x000040, "Member 'FVALUI_ChatChannel::Icon' has a wrong offset!");
-static_assert(offsetof(FVALUI_ChatChannel, ShortName) == 0x000070, "Member 'FVALUI_ChatChannel::ShortName' has a wrong offset!");
-static_assert(offsetof(FVALUI_ChatChannel, LongName) == 0x000088, "Member 'FVALUI_ChatChannel::LongName' has a wrong offset!");
-static_assert(offsetof(FVALUI_ChatChannel, MessagePrefix) == 0x0000A0, "Member 'FVALUI_ChatChannel::MessagePrefix' has a wrong offset!");
+static_assert(offsetof(FVALUI_ChatChannel, ShortName) == 0x000068, "Member 'FVALUI_ChatChannel::ShortName' has a wrong offset!");
+static_assert(offsetof(FVALUI_ChatChannel, LongName) == 0x000080, "Member 'FVALUI_ChatChannel::LongName' has a wrong offset!");
+static_assert(offsetof(FVALUI_ChatChannel, MessagePrefix) == 0x000098, "Member 'FVALUI_ChatChannel::MessagePrefix' has a wrong offset!");
 
 // ScriptStruct ValeriaUI.VALUI_NotificationQueueEntry
 // 0x0018 (0x0018 - 0x0000)
@@ -515,48 +481,6 @@ static_assert(sizeof(FVALUI_NotificationQueueEntry) == 0x000018, "Wrong size on 
 static_assert(offsetof(FVALUI_NotificationQueueEntry, NotificationId) == 0x000000, "Member 'FVALUI_NotificationQueueEntry::NotificationId' has a wrong offset!");
 static_assert(offsetof(FVALUI_NotificationQueueEntry, NotificationWidget) == 0x000010, "Member 'FVALUI_NotificationQueueEntry::NotificationWidget' has a wrong offset!");
 
-// ScriptStruct ValeriaUI.VALUI_InstantiatedTabButtonInfo
-// 0x0070 (0x0070 - 0x0000)
-struct FVALUI_InstantiatedTabButtonInfo final 
-{
-public:
-	class FText                                   DisplayName;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class UButton*                                Button;                                            // 0x0018(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0020(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              IconSize;                                          // 0x0050(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                AssociatedContent;                                 // 0x0060(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UVALUI_Functor_Button_OnClicked*        Functor_OnClicked;                                 // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVALUI_InstantiatedTabButtonInfo) == 0x000008, "Wrong alignment on FVALUI_InstantiatedTabButtonInfo");
-static_assert(sizeof(FVALUI_InstantiatedTabButtonInfo) == 0x000070, "Wrong size on FVALUI_InstantiatedTabButtonInfo");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, DisplayName) == 0x000000, "Member 'FVALUI_InstantiatedTabButtonInfo::DisplayName' has a wrong offset!");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, Button) == 0x000018, "Member 'FVALUI_InstantiatedTabButtonInfo::Button' has a wrong offset!");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, IconTexture) == 0x000020, "Member 'FVALUI_InstantiatedTabButtonInfo::IconTexture' has a wrong offset!");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, IconSize) == 0x000050, "Member 'FVALUI_InstantiatedTabButtonInfo::IconSize' has a wrong offset!");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, AssociatedContent) == 0x000060, "Member 'FVALUI_InstantiatedTabButtonInfo::AssociatedContent' has a wrong offset!");
-static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, Functor_OnClicked) == 0x000068, "Member 'FVALUI_InstantiatedTabButtonInfo::Functor_OnClicked' has a wrong offset!");
-
-// ScriptStruct ValeriaUI.VALUI_TabButtonPreregistrationInfo
-// 0x0070 (0x0070 - 0x0000)
-struct FVALUI_TabButtonPreregistrationInfo final 
-{
-public:
-	class FName                                   TabName;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   TabDisplayName;                                    // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0020(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              IconFixedSize;                                     // 0x0050(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UButton*                                TemplateButton;                                    // 0x0060(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                AssociatedContent;                                 // 0x0068(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVALUI_TabButtonPreregistrationInfo) == 0x000008, "Wrong alignment on FVALUI_TabButtonPreregistrationInfo");
-static_assert(sizeof(FVALUI_TabButtonPreregistrationInfo) == 0x000070, "Wrong size on FVALUI_TabButtonPreregistrationInfo");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TabName) == 0x000000, "Member 'FVALUI_TabButtonPreregistrationInfo::TabName' has a wrong offset!");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TabDisplayName) == 0x000008, "Member 'FVALUI_TabButtonPreregistrationInfo::TabDisplayName' has a wrong offset!");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, IconTexture) == 0x000020, "Member 'FVALUI_TabButtonPreregistrationInfo::IconTexture' has a wrong offset!");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, IconFixedSize) == 0x000050, "Member 'FVALUI_TabButtonPreregistrationInfo::IconFixedSize' has a wrong offset!");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TemplateButton) == 0x000060, "Member 'FVALUI_TabButtonPreregistrationInfo::TemplateButton' has a wrong offset!");
-static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, AssociatedContent) == 0x000068, "Member 'FVALUI_TabButtonPreregistrationInfo::AssociatedContent' has a wrong offset!");
-
 // ScriptStruct ValeriaUI.MailGrantedQuest
 // 0x0020 (0x0020 - 0x0000)
 struct FMailGrantedQuest final 
@@ -564,61 +488,136 @@ struct FMailGrantedQuest final
 public:
 	class FText                                   QuestName;                                         // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	int32                                         QuestConfigId;                                     // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34AC[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C39[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMailGrantedQuest) == 0x000008, "Wrong alignment on FMailGrantedQuest");
 static_assert(sizeof(FMailGrantedQuest) == 0x000020, "Wrong size on FMailGrantedQuest");
 static_assert(offsetof(FMailGrantedQuest, QuestName) == 0x000000, "Member 'FMailGrantedQuest::QuestName' has a wrong offset!");
 static_assert(offsetof(FMailGrantedQuest, QuestConfigId) == 0x000018, "Member 'FMailGrantedQuest::QuestConfigId' has a wrong offset!");
 
+// ScriptStruct ValeriaUI.CrafterUIState
+// 0x0008 (0x0008 - 0x0000)
+struct FCrafterUIState final 
+{
+public:
+	int32                                         SelectedRecipeId;                                  // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SelectedRecipeListTab;                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCrafterUIState) == 0x000004, "Wrong alignment on FCrafterUIState");
+static_assert(sizeof(FCrafterUIState) == 0x000008, "Wrong size on FCrafterUIState");
+static_assert(offsetof(FCrafterUIState, SelectedRecipeId) == 0x000000, "Member 'FCrafterUIState::SelectedRecipeId' has a wrong offset!");
+static_assert(offsetof(FCrafterUIState, SelectedRecipeListTab) == 0x000004, "Member 'FCrafterUIState::SelectedRecipeListTab' has a wrong offset!");
+
+// ScriptStruct ValeriaUI.VALUI_RadioSliderPaginationSettings
+// 0x0098 (0x0098 - 0x0000)
+struct FVALUI_RadioSliderPaginationSettings final 
+{
+public:
+	bool                                          bShouldPaginate;                                   // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C3A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ExtraPreviewPadding;                               // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PageElementCount;                                  // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AnimationTime;                                     // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRuntimeFloatCurve                     AnimationCurve;                                    // 0x0010(0x0088)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVALUI_RadioSliderPaginationSettings) == 0x000008, "Wrong alignment on FVALUI_RadioSliderPaginationSettings");
+static_assert(sizeof(FVALUI_RadioSliderPaginationSettings) == 0x000098, "Wrong size on FVALUI_RadioSliderPaginationSettings");
+static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, bShouldPaginate) == 0x000000, "Member 'FVALUI_RadioSliderPaginationSettings::bShouldPaginate' has a wrong offset!");
+static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, ExtraPreviewPadding) == 0x000004, "Member 'FVALUI_RadioSliderPaginationSettings::ExtraPreviewPadding' has a wrong offset!");
+static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, PageElementCount) == 0x000008, "Member 'FVALUI_RadioSliderPaginationSettings::PageElementCount' has a wrong offset!");
+static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, AnimationTime) == 0x00000C, "Member 'FVALUI_RadioSliderPaginationSettings::AnimationTime' has a wrong offset!");
+static_assert(offsetof(FVALUI_RadioSliderPaginationSettings, AnimationCurve) == 0x000010, "Member 'FVALUI_RadioSliderPaginationSettings::AnimationCurve' has a wrong offset!");
+
+// ScriptStruct ValeriaUI.VALUI_InstantiatedTabButtonInfo
+// 0x0068 (0x0068 - 0x0000)
+struct FVALUI_InstantiatedTabButtonInfo final 
+{
+public:
+	class FText                                   DisplayName;                                       // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class UButton*                                Button;                                            // 0x0018(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0020(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              IconSize;                                          // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidget*                                AssociatedContent;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_Functor_Button_OnClicked*        Functor_OnClicked;                                 // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVALUI_InstantiatedTabButtonInfo) == 0x000008, "Wrong alignment on FVALUI_InstantiatedTabButtonInfo");
+static_assert(sizeof(FVALUI_InstantiatedTabButtonInfo) == 0x000068, "Wrong size on FVALUI_InstantiatedTabButtonInfo");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, DisplayName) == 0x000000, "Member 'FVALUI_InstantiatedTabButtonInfo::DisplayName' has a wrong offset!");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, Button) == 0x000018, "Member 'FVALUI_InstantiatedTabButtonInfo::Button' has a wrong offset!");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, IconTexture) == 0x000020, "Member 'FVALUI_InstantiatedTabButtonInfo::IconTexture' has a wrong offset!");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, IconSize) == 0x000048, "Member 'FVALUI_InstantiatedTabButtonInfo::IconSize' has a wrong offset!");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, AssociatedContent) == 0x000058, "Member 'FVALUI_InstantiatedTabButtonInfo::AssociatedContent' has a wrong offset!");
+static_assert(offsetof(FVALUI_InstantiatedTabButtonInfo, Functor_OnClicked) == 0x000060, "Member 'FVALUI_InstantiatedTabButtonInfo::Functor_OnClicked' has a wrong offset!");
+
+// ScriptStruct ValeriaUI.VALUI_TabButtonPreregistrationInfo
+// 0x0068 (0x0068 - 0x0000)
+struct FVALUI_TabButtonPreregistrationInfo final 
+{
+public:
+	class FName                                   TabName;                                           // 0x0000(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   TabDisplayName;                                    // 0x0008(0x0018)(Edit, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0020(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              IconFixedSize;                                     // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UButton*                                TemplateButton;                                    // 0x0058(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidget*                                AssociatedContent;                                 // 0x0060(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVALUI_TabButtonPreregistrationInfo) == 0x000008, "Wrong alignment on FVALUI_TabButtonPreregistrationInfo");
+static_assert(sizeof(FVALUI_TabButtonPreregistrationInfo) == 0x000068, "Wrong size on FVALUI_TabButtonPreregistrationInfo");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TabName) == 0x000000, "Member 'FVALUI_TabButtonPreregistrationInfo::TabName' has a wrong offset!");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TabDisplayName) == 0x000008, "Member 'FVALUI_TabButtonPreregistrationInfo::TabDisplayName' has a wrong offset!");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, IconTexture) == 0x000020, "Member 'FVALUI_TabButtonPreregistrationInfo::IconTexture' has a wrong offset!");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, IconFixedSize) == 0x000048, "Member 'FVALUI_TabButtonPreregistrationInfo::IconFixedSize' has a wrong offset!");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, TemplateButton) == 0x000058, "Member 'FVALUI_TabButtonPreregistrationInfo::TemplateButton' has a wrong offset!");
+static_assert(offsetof(FVALUI_TabButtonPreregistrationInfo, AssociatedContent) == 0x000060, "Member 'FVALUI_TabButtonPreregistrationInfo::AssociatedContent' has a wrong offset!");
+
 // ScriptStruct ValeriaUI.MailMessageWidgetData
-// 0x0148 (0x0148 - 0x0000)
+// 0x0130 (0x0130 - 0x0000)
 struct FMailMessageWidgetData final 
 {
 public:
 	class FText                                   SenderName;                                        // 0x0000(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              SenderIcon;                                        // 0x0018(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              SealIcon;                                          // 0x0048(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              StampIcon;                                         // 0x0078(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SenderFriendshipLevel;                             // 0x00A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SenderRomanceLevel;                                // 0x00AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bUseCustomHeader;                                  // 0x00B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34AD[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CustomHeader;                                      // 0x00B8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	class FText                                   MessageBody;                                       // 0x00D0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	int64                                         Timestamp;                                         // 0x00E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsVillagerMail;                                   // 0x00F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34AE[0x3];                                     // 0x00F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         VillagerMailId;                                    // 0x00F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PlayerMailId;                                      // 0x00F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EMailboxViewerFilter                          MailStatus;                                        // 0x0108(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34AF[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FSingleQuestReward>             Rewards;                                           // 0x0110(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<bool>                                  WasRewardCollected;                                // 0x0120(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	TArray<struct FMailGrantedQuest>              Quests;                                            // 0x0130(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
-	bool                                          bIsHidden;                                         // 0x0140(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B0[0x7];                                     // 0x0141(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              SenderIcon;                                        // 0x0018(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              SealIcon;                                          // 0x0040(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              StampIcon;                                         // 0x0068(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SenderFriendshipLevel;                             // 0x0090(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         SenderRomanceLevel;                                // 0x0094(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseCustomHeader;                                  // 0x0098(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C3B[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CustomHeader;                                      // 0x00A0(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	class FText                                   MessageBody;                                       // 0x00B8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	int64                                         Timestamp;                                         // 0x00D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsVillagerMail;                                   // 0x00D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C3C[0x3];                                     // 0x00D9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         VillagerMailId;                                    // 0x00DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PlayerMailId;                                      // 0x00E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EMailboxViewerFilter                          MailStatus;                                        // 0x00F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C3D[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FSingleQuestReward>             Rewards;                                           // 0x00F8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<bool>                                  WasRewardCollected;                                // 0x0108(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	TArray<struct FMailGrantedQuest>              Quests;                                            // 0x0118(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPublic)
+	bool                                          bIsHidden;                                         // 0x0128(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C3E[0x7];                                     // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMailMessageWidgetData) == 0x000008, "Wrong alignment on FMailMessageWidgetData");
-static_assert(sizeof(FMailMessageWidgetData) == 0x000148, "Wrong size on FMailMessageWidgetData");
+static_assert(sizeof(FMailMessageWidgetData) == 0x000130, "Wrong size on FMailMessageWidgetData");
 static_assert(offsetof(FMailMessageWidgetData, SenderName) == 0x000000, "Member 'FMailMessageWidgetData::SenderName' has a wrong offset!");
 static_assert(offsetof(FMailMessageWidgetData, SenderIcon) == 0x000018, "Member 'FMailMessageWidgetData::SenderIcon' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, SealIcon) == 0x000048, "Member 'FMailMessageWidgetData::SealIcon' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, StampIcon) == 0x000078, "Member 'FMailMessageWidgetData::StampIcon' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, SenderFriendshipLevel) == 0x0000A8, "Member 'FMailMessageWidgetData::SenderFriendshipLevel' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, SenderRomanceLevel) == 0x0000AC, "Member 'FMailMessageWidgetData::SenderRomanceLevel' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, bUseCustomHeader) == 0x0000B0, "Member 'FMailMessageWidgetData::bUseCustomHeader' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, CustomHeader) == 0x0000B8, "Member 'FMailMessageWidgetData::CustomHeader' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, MessageBody) == 0x0000D0, "Member 'FMailMessageWidgetData::MessageBody' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, Timestamp) == 0x0000E8, "Member 'FMailMessageWidgetData::Timestamp' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, bIsVillagerMail) == 0x0000F0, "Member 'FMailMessageWidgetData::bIsVillagerMail' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, VillagerMailId) == 0x0000F4, "Member 'FMailMessageWidgetData::VillagerMailId' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, PlayerMailId) == 0x0000F8, "Member 'FMailMessageWidgetData::PlayerMailId' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, MailStatus) == 0x000108, "Member 'FMailMessageWidgetData::MailStatus' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, Rewards) == 0x000110, "Member 'FMailMessageWidgetData::Rewards' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, WasRewardCollected) == 0x000120, "Member 'FMailMessageWidgetData::WasRewardCollected' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, Quests) == 0x000130, "Member 'FMailMessageWidgetData::Quests' has a wrong offset!");
-static_assert(offsetof(FMailMessageWidgetData, bIsHidden) == 0x000140, "Member 'FMailMessageWidgetData::bIsHidden' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, SealIcon) == 0x000040, "Member 'FMailMessageWidgetData::SealIcon' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, StampIcon) == 0x000068, "Member 'FMailMessageWidgetData::StampIcon' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, SenderFriendshipLevel) == 0x000090, "Member 'FMailMessageWidgetData::SenderFriendshipLevel' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, SenderRomanceLevel) == 0x000094, "Member 'FMailMessageWidgetData::SenderRomanceLevel' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, bUseCustomHeader) == 0x000098, "Member 'FMailMessageWidgetData::bUseCustomHeader' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, CustomHeader) == 0x0000A0, "Member 'FMailMessageWidgetData::CustomHeader' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, MessageBody) == 0x0000B8, "Member 'FMailMessageWidgetData::MessageBody' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, Timestamp) == 0x0000D0, "Member 'FMailMessageWidgetData::Timestamp' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, bIsVillagerMail) == 0x0000D8, "Member 'FMailMessageWidgetData::bIsVillagerMail' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, VillagerMailId) == 0x0000DC, "Member 'FMailMessageWidgetData::VillagerMailId' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, PlayerMailId) == 0x0000E0, "Member 'FMailMessageWidgetData::PlayerMailId' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, MailStatus) == 0x0000F0, "Member 'FMailMessageWidgetData::MailStatus' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, Rewards) == 0x0000F8, "Member 'FMailMessageWidgetData::Rewards' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, WasRewardCollected) == 0x000108, "Member 'FMailMessageWidgetData::WasRewardCollected' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, Quests) == 0x000118, "Member 'FMailMessageWidgetData::Quests' has a wrong offset!");
+static_assert(offsetof(FMailMessageWidgetData, bIsHidden) == 0x000128, "Member 'FMailMessageWidgetData::bIsHidden' has a wrong offset!");
 
 // ScriptStruct ValeriaUI.VALUI_CharCustomization_LoadoutSlotData
 // 0x0038 (0x0038 - 0x0000)
@@ -630,7 +629,7 @@ public:
 	TArray<class UObject*>                        ItemObjects;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, NativeAccessSpecifierPublic)
 	TArray<TSoftObjectPtr<class UVAL_CharacterCustomizationItemBase>> ItemBaseObjects;                                   // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bShouldRefreshAllTileViewsWhenVariantChanged;      // 0x0030(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B1[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C3F[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVALUI_CharCustomization_LoadoutSlotData) == 0x000008, "Wrong alignment on FVALUI_CharCustomization_LoadoutSlotData");
 static_assert(sizeof(FVALUI_CharCustomization_LoadoutSlotData) == 0x000038, "Wrong size on FVALUI_CharCustomization_LoadoutSlotData");
@@ -679,7 +678,7 @@ struct FVALUI_ChatMessageFetchFilter final
 public:
 	TSet<EChatMessageType>                        Types;                                             // 0x0000(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	int32                                         MessageCount;                                      // 0x0050(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B2[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C40[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FVALUI_ChatMessageFetchFilter) == 0x000008, "Wrong alignment on FVALUI_ChatMessageFetchFilter");
 static_assert(sizeof(FVALUI_ChatMessageFetchFilter) == 0x000058, "Wrong size on FVALUI_ChatMessageFetchFilter");
@@ -719,7 +718,7 @@ public:
 	bool                                          bEmoteWheelOpened;                                 // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bVillagerStoreOpened;                              // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDialogueOpened;                                   // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B3[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C41[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumRequestingRightElementsBeHidden;                // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FVALUI_MainHUDState) == 0x000004, "Wrong alignment on FVALUI_MainHUDState");
@@ -732,24 +731,15 @@ static_assert(offsetof(FVALUI_MainHUDState, bVillagerStoreOpened) == 0x000004, "
 static_assert(offsetof(FVALUI_MainHUDState, bDialogueOpened) == 0x000005, "Member 'FVALUI_MainHUDState::bDialogueOpened' has a wrong offset!");
 static_assert(offsetof(FVALUI_MainHUDState, NumRequestingRightElementsBeHidden) == 0x000008, "Member 'FVALUI_MainHUDState::NumRequestingRightElementsBeHidden' has a wrong offset!");
 
-// ScriptStruct ValeriaUI.VALUI_SocialTrackingData
-// 0x0014 (0x0014 - 0x0000)
-struct FVALUI_SocialTrackingData final 
+// ScriptStruct ValeriaUI.VALUI_PaliaPassHUDState
+// 0x0001 (0x0001 - 0x0000)
+struct FVALUI_PaliaPassHUDState final 
 {
 public:
-	int32                                         FriendRequestCount;                                // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         PartyRequestCount;                                 // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ServerSyncRequestCount;                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ItemRequestsCount;                                 // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FriendsOnlineCount;                                // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C42[0x1];                                     // 0x0000(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FVALUI_SocialTrackingData) == 0x000004, "Wrong alignment on FVALUI_SocialTrackingData");
-static_assert(sizeof(FVALUI_SocialTrackingData) == 0x000014, "Wrong size on FVALUI_SocialTrackingData");
-static_assert(offsetof(FVALUI_SocialTrackingData, FriendRequestCount) == 0x000000, "Member 'FVALUI_SocialTrackingData::FriendRequestCount' has a wrong offset!");
-static_assert(offsetof(FVALUI_SocialTrackingData, PartyRequestCount) == 0x000004, "Member 'FVALUI_SocialTrackingData::PartyRequestCount' has a wrong offset!");
-static_assert(offsetof(FVALUI_SocialTrackingData, ServerSyncRequestCount) == 0x000008, "Member 'FVALUI_SocialTrackingData::ServerSyncRequestCount' has a wrong offset!");
-static_assert(offsetof(FVALUI_SocialTrackingData, ItemRequestsCount) == 0x00000C, "Member 'FVALUI_SocialTrackingData::ItemRequestsCount' has a wrong offset!");
-static_assert(offsetof(FVALUI_SocialTrackingData, FriendsOnlineCount) == 0x000010, "Member 'FVALUI_SocialTrackingData::FriendsOnlineCount' has a wrong offset!");
+static_assert(alignof(FVALUI_PaliaPassHUDState) == 0x000001, "Wrong alignment on FVALUI_PaliaPassHUDState");
+static_assert(sizeof(FVALUI_PaliaPassHUDState) == 0x000001, "Wrong size on FVALUI_PaliaPassHUDState");
 
 // ScriptStruct ValeriaUI.VALUI_PremiumCurrencyBundle
 // 0x0078 (0x0078 - 0x0000)
@@ -760,7 +750,7 @@ public:
 	int32                                         BundleAmount;                                      // 0x0010(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BonusAmount;                                       // 0x0014(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         BundlePrice;                                       // 0x0018(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B4[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C43[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CurrencyCode;                                      // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   TaxMessage;                                        // 0x0030(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   DisplayPriceText;                                  // 0x0048(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)

@@ -49,7 +49,7 @@ public:
 	struct FQuat                                  Rotation;                                          // 0x0020(0x0020)(ConstParm, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionAlpha;                                     // 0x0040(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationAlpha;                                     // 0x0044(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A4[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_383C[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(IKRigComponent_SetIKRigGoalPositionAndRotation) == 0x000010, "Wrong alignment on IKRigComponent_SetIKRigGoalPositionAndRotation");
 static_assert(sizeof(IKRigComponent_SetIKRigGoalPositionAndRotation) == 0x000050, "Wrong size on IKRigComponent_SetIKRigGoalPositionAndRotation");
@@ -65,11 +65,11 @@ struct IKRigComponent_SetIKRigGoalTransform final
 {
 public:
 	class FName                                   GoalName;                                          // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A5[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_383D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(ConstParm, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         PositionAlpha;                                     // 0x0070(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationAlpha;                                     // 0x0074(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24A6[0x8];                                     // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_383E[0x8];                                     // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(IKRigComponent_SetIKRigGoalTransform) == 0x000010, "Wrong alignment on IKRigComponent_SetIKRigGoalTransform");
 static_assert(sizeof(IKRigComponent_SetIKRigGoalTransform) == 0x000080, "Wrong size on IKRigComponent_SetIKRigGoalTransform");
@@ -79,48 +79,48 @@ static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, PositionAlpha) == 0
 static_assert(offsetof(IKRigComponent_SetIKRigGoalTransform, RotationAlpha) == 0x000074, "Member 'IKRigComponent_SetIKRigGoalTransform::RotationAlpha' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.GetChainSettingsFromRetargetAsset
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct IKRetargeter_GetChainSettingsFromRetargetAsset final 
 {
 public:
 	class UIKRetargeter*                          RetargetAsset;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   TargetChainName;                                   // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   OptionalProfileName;                               // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0018(0x00A0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0018(0x00A8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(IKRetargeter_GetChainSettingsFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetChainSettingsFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetAsset) == 0x0000B8, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetAsset");
+static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetAsset) == 0x0000C0, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetAsset");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::RetargetAsset' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, TargetChainName) == 0x000008, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::TargetChainName' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, OptionalProfileName) == 0x000010, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::OptionalProfileName' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetAsset, ReturnValue) == 0x000018, "Member 'IKRetargeter_GetChainSettingsFromRetargetAsset::ReturnValue' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.GetChainSettingsFromRetargetProfile
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct IKRetargeter_GetChainSettingsFromRetargetProfile final 
 {
 public:
 	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class FName                                   TargetChainName;                                   // 0x0108(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0110(0x00A0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0110(0x00A8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(IKRetargeter_GetChainSettingsFromRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_GetChainSettingsFromRetargetProfile");
-static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetProfile) == 0x0001B0, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetProfile");
+static_assert(sizeof(IKRetargeter_GetChainSettingsFromRetargetProfile) == 0x0001B8, "Wrong size on IKRetargeter_GetChainSettingsFromRetargetProfile");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::RetargetProfile' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, TargetChainName) == 0x000108, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::TargetChainName' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainSettingsFromRetargetProfile, ReturnValue) == 0x000110, "Member 'IKRetargeter_GetChainSettingsFromRetargetProfile::ReturnValue' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.GetChainUsingGoalFromRetargetAsset
-// 0x00B0 (0x00B0 - 0x0000)
+// 0x00B8 (0x00B8 - 0x0000)
 struct IKRetargeter_GetChainUsingGoalFromRetargetAsset final 
 {
 public:
 	class UIKRetargeter*                          RetargetAsset;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   IKGoalName;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   ReturnValue;                                       // 0x0010(0x00A0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   ReturnValue;                                       // 0x0010(0x00A8)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(IKRetargeter_GetChainUsingGoalFromRetargetAsset) == 0x000008, "Wrong alignment on IKRetargeter_GetChainUsingGoalFromRetargetAsset");
-static_assert(sizeof(IKRetargeter_GetChainUsingGoalFromRetargetAsset) == 0x0000B0, "Wrong size on IKRetargeter_GetChainUsingGoalFromRetargetAsset");
+static_assert(sizeof(IKRetargeter_GetChainUsingGoalFromRetargetAsset) == 0x0000B8, "Wrong size on IKRetargeter_GetChainUsingGoalFromRetargetAsset");
 static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, RetargetAsset) == 0x000000, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::RetargetAsset' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, IKGoalName) == 0x000008, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::IKGoalName' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_GetChainUsingGoalFromRetargetAsset, ReturnValue) == 0x000010, "Member 'IKRetargeter_GetChainUsingGoalFromRetargetAsset::ReturnValue' has a wrong offset!");
@@ -197,34 +197,34 @@ static_assert(offsetof(IKRetargeter_SetChainFKSettingsInRetargetProfile, FKSetti
 static_assert(offsetof(IKRetargeter_SetChainFKSettingsInRetargetProfile, TargetChainName) == 0x000120, "Member 'IKRetargeter_SetChainFKSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.SetChainIKSettingsInRetargetProfile
-// 0x0180 (0x0180 - 0x0000)
+// 0x0188 (0x0188 - 0x0000)
 struct IKRetargeter_SetChainIKSettingsInRetargetProfile final 
 {
 public:
 	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainIKSettings                 IKSettings;                                        // 0x0108(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x0178(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTargetChainIKSettings                 IKSettings;                                        // 0x0108(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x0180(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(IKRetargeter_SetChainIKSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainIKSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainIKSettingsInRetargetProfile) == 0x000180, "Wrong size on IKRetargeter_SetChainIKSettingsInRetargetProfile");
+static_assert(sizeof(IKRetargeter_SetChainIKSettingsInRetargetProfile) == 0x000188, "Wrong size on IKRetargeter_SetChainIKSettingsInRetargetProfile");
 static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, IKSettings) == 0x000108, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::IKSettings' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, TargetChainName) == 0x000178, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+static_assert(offsetof(IKRetargeter_SetChainIKSettingsInRetargetProfile, TargetChainName) == 0x000180, "Member 'IKRetargeter_SetChainIKSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.SetChainSettingsInRetargetProfile
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x01B8 (0x01B8 - 0x0000)
 struct IKRetargeter_SetChainSettingsInRetargetProfile final 
 {
 public:
 	struct FRetargetProfile                       RetargetProfile;                                   // 0x0000(0x0108)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FTargetChainSettings                   Param_ChainSettings;                               // 0x0108(0x00A0)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	class FName                                   TargetChainName;                                   // 0x01A8(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTargetChainSettings                   Param_ChainSettings;                               // 0x0108(0x00A8)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class FName                                   TargetChainName;                                   // 0x01B0(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(IKRetargeter_SetChainSettingsInRetargetProfile) == 0x000008, "Wrong alignment on IKRetargeter_SetChainSettingsInRetargetProfile");
-static_assert(sizeof(IKRetargeter_SetChainSettingsInRetargetProfile) == 0x0001B0, "Wrong size on IKRetargeter_SetChainSettingsInRetargetProfile");
+static_assert(sizeof(IKRetargeter_SetChainSettingsInRetargetProfile) == 0x0001B8, "Wrong size on IKRetargeter_SetChainSettingsInRetargetProfile");
 static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, RetargetProfile) == 0x000000, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::RetargetProfile' has a wrong offset!");
 static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, Param_ChainSettings) == 0x000108, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::Param_ChainSettings' has a wrong offset!");
-static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, TargetChainName) == 0x0001A8, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
+static_assert(offsetof(IKRetargeter_SetChainSettingsInRetargetProfile, TargetChainName) == 0x0001B0, "Member 'IKRetargeter_SetChainSettingsInRetargetProfile::TargetChainName' has a wrong offset!");
 
 // Function IKRig.IKRetargeter.SetChainSpeedPlantSettingsInRetargetProfile
 // 0x0128 (0x0128 - 0x0000)

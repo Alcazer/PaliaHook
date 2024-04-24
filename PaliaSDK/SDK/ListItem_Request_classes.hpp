@@ -18,11 +18,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ListItem_Request.ListItem_Request_C
-// 0x00D8 (0x0100 - 0x0028)
+// 0x00D0 (0x00F8 - 0x0028)
 class UListItem_Request_C final  : public UObject
 {
 public:
-	struct FInventoryRequest                      InventoryRequest;                                  // 0x0028(0x00D8)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
+	struct FInventoryRequest                      InventoryRequest;                                  // 0x0028(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, ExposeOnSpawn)
 
 public:
 	static class UClass* StaticClass()
@@ -35,7 +35,7 @@ public:
 	}
 };
 static_assert(alignof(UListItem_Request_C) == 0x000008, "Wrong alignment on UListItem_Request_C");
-static_assert(sizeof(UListItem_Request_C) == 0x000100, "Wrong size on UListItem_Request_C");
+static_assert(sizeof(UListItem_Request_C) == 0x0000F8, "Wrong size on UListItem_Request_C");
 static_assert(offsetof(UListItem_Request_C, InventoryRequest) == 0x000028, "Member 'UListItem_Request_C::InventoryRequest' has a wrong offset!");
 
 }

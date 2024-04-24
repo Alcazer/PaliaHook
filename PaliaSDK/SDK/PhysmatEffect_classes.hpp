@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Struct_Physmat_structs.hpp"
-#include "Engine_classes.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Engine_classes.hpp"
 
 
 namespace SDK
@@ -26,7 +26,7 @@ public:
 	TMap<EPhysicalSurface, struct FStruct_Physmat> SurfaceEffectMap;                                  // 0x0030(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference)
 
 public:
-	bool GetSurfaceEffect(class UPhysicalMaterial* PhysMat, struct FStruct_Physmat* Value, EPhysicalSurface Temp_byte_Variable, const struct FStruct_Physmat& CallFunc_Map_Find_Value, bool CallFunc_Map_Find_ReturnValue, const struct FStruct_Physmat& CallFunc_Map_Find_Value_1, bool CallFunc_Map_Find_ReturnValue_1);
+	bool GetSurfaceEffect(class UPhysicalMaterial* PhysMat, struct FStruct_Physmat* Value, EPhysicalSurface Temp_byte_Variable, const struct FStruct_Physmat& CallFunc_Map_Find_Value, bool CallFunc_Map_Find_ReturnValue, const struct FStruct_Physmat& CallFunc_Map_Find_Value_1, bool CallFunc_Map_Find_ReturnValue_1, bool CallFunc_IsValid_ReturnValue, bool CallFunc_BooleanAND_ReturnValue);
 
 public:
 	static class UClass* StaticClass()

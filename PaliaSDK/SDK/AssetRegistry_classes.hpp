@@ -22,6 +22,7 @@ class UAssetRegistryHelpers final  : public UObject
 {
 public:
 	static struct FAssetData CreateAssetData(class UObject* InAsset, bool bAllowBlueprintClass);
+	static class UClass* FindAssetNativeClass(struct FAssetData& AssetData);
 	static class UObject* GetAsset(struct FAssetData& InAssetData);
 	static TScriptInterface<class IAssetRegistry> GetAssetRegistry();
 	static void GetBlueprintAssets(struct FARFilter& InFilter, TArray<struct FAssetData>* OutAssetData);
@@ -77,7 +78,7 @@ public:
 	bool IsLoadingAssets() const;
 	bool IsSearchAllAssets() const;
 	bool IsSearchAsync() const;
-	struct FAssetData K2_GetAssetByObjectPath(struct FSoftObjectPath& ObjectPath, bool bIncludeOnlyOnDiskAssets) const;
+	struct FAssetData K2_GetAssetByObjectPath(struct FSoftObjectPath& ObjectPath, bool bIncludeOnlyOnDiskAssets, bool bSkipARFilteredAssets) const;
 	bool K2_GetDependencies(class FName PackageName, struct FAssetRegistryDependencyOptions& DependencyOptions, TArray<class FName>* OutDependencies) const;
 	bool K2_GetReferencers(class FName PackageName, struct FAssetRegistryDependencyOptions& ReferenceOptions, TArray<class FName>* OutReferencers) const;
 	void RunAssetsThroughFilter(TArray<struct FAssetData>& AssetDataList, struct FARFilter& Filter) const;
@@ -97,11 +98,11 @@ static_assert(alignof(IAssetRegistry) == 0x000008, "Wrong alignment on IAssetReg
 static_assert(sizeof(IAssetRegistry) == 0x000028, "Wrong size on IAssetRegistry");
 
 // Class AssetRegistry.AssetRegistryImpl
-// 0x0998 (0x09C0 - 0x0028)
+// 0x0D50 (0x0D78 - 0x0028)
 class UAssetRegistryImpl final  : public UObject
 {
 public:
-	uint8                                         Pad_396A[0x998];                                   // 0x0028(0x0998)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_12B5[0xD50];                                   // 0x0028(0x0D50)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -114,7 +115,7 @@ public:
 	}
 };
 static_assert(alignof(UAssetRegistryImpl) == 0x000008, "Wrong alignment on UAssetRegistryImpl");
-static_assert(sizeof(UAssetRegistryImpl) == 0x0009C0, "Wrong size on UAssetRegistryImpl");
+static_assert(sizeof(UAssetRegistryImpl) == 0x000D78, "Wrong size on UAssetRegistryImpl");
 
 }
 

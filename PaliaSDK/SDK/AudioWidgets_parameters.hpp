@@ -18,6 +18,116 @@
 namespace SDK::Params
 {
 
+// DelegateFunction AudioWidgets.AudioMeter.GetMeterChannelInfo__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_GetMeterChannelInfo__DelegateSignature final 
+{
+public:
+	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_GetMeterChannelInfo__DelegateSignature) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo__DelegateSignature");
+static_assert(sizeof(AudioMeter_GetMeterChannelInfo__DelegateSignature) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo__DelegateSignature");
+static_assert(offsetof(AudioMeter_GetMeterChannelInfo__DelegateSignature, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo__DelegateSignature::ReturnValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetBackgroundColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetBackgroundColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetBackgroundColor");
+static_assert(sizeof(AudioMeter_SetBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetBackgroundColor");
+static_assert(offsetof(AudioMeter_SetBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetBackgroundColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterBackgroundColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterBackgroundColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterBackgroundColor");
+static_assert(sizeof(AudioMeter_SetMeterBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetMeterBackgroundColor");
+static_assert(offsetof(AudioMeter_SetMeterBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterBackgroundColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterChannelInfo
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterChannelInfo final 
+{
+public:
+	TArray<struct FMeterChannelInfo>              InMeterChannelInfo;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_SetMeterChannelInfo");
+static_assert(sizeof(AudioMeter_SetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_SetMeterChannelInfo");
+static_assert(offsetof(AudioMeter_SetMeterChannelInfo, InMeterChannelInfo) == 0x000000, "Member 'AudioMeter_SetMeterChannelInfo::InMeterChannelInfo' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterClippingColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterClippingColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterClippingColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterClippingColor");
+static_assert(sizeof(AudioMeter_SetMeterClippingColor) == 0x000010, "Wrong size on AudioMeter_SetMeterClippingColor");
+static_assert(offsetof(AudioMeter_SetMeterClippingColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterClippingColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterPeakColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterPeakColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterPeakColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterPeakColor");
+static_assert(sizeof(AudioMeter_SetMeterPeakColor) == 0x000010, "Wrong size on AudioMeter_SetMeterPeakColor");
+static_assert(offsetof(AudioMeter_SetMeterPeakColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterPeakColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterScaleColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterScaleColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterScaleColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleColor");
+static_assert(sizeof(AudioMeter_SetMeterScaleColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleColor");
+static_assert(offsetof(AudioMeter_SetMeterScaleColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterScaleLabelColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterScaleLabelColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterScaleLabelColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleLabelColor");
+static_assert(sizeof(AudioMeter_SetMeterScaleLabelColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleLabelColor");
+static_assert(offsetof(AudioMeter_SetMeterScaleLabelColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleLabelColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.SetMeterValueColor
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_SetMeterValueColor final 
+{
+public:
+	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_SetMeterValueColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterValueColor");
+static_assert(sizeof(AudioMeter_SetMeterValueColor) == 0x000010, "Wrong size on AudioMeter_SetMeterValueColor");
+static_assert(offsetof(AudioMeter_SetMeterValueColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterValueColor::InValue' has a wrong offset!");
+
+// Function AudioWidgets.AudioMeter.GetMeterChannelInfo
+// 0x0010 (0x0010 - 0x0000)
+struct AudioMeter_GetMeterChannelInfo final 
+{
+public:
+	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(AudioMeter_GetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo");
+static_assert(sizeof(AudioMeter_GetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo");
+static_assert(offsetof(AudioMeter_GetMeterChannelInfo, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo::ReturnValue' has a wrong offset!");
+
 // Function AudioWidgets.AudioRadialSlider.GetOutputValue
 // 0x0008 (0x0008 - 0x0000)
 struct AudioRadialSlider_GetOutputValue final 
@@ -186,116 +296,6 @@ public:
 static_assert(alignof(AudioRadialSlider_SetWidgetLayout) == 0x000001, "Wrong alignment on AudioRadialSlider_SetWidgetLayout");
 static_assert(sizeof(AudioRadialSlider_SetWidgetLayout) == 0x000001, "Wrong size on AudioRadialSlider_SetWidgetLayout");
 static_assert(offsetof(AudioRadialSlider_SetWidgetLayout, InLayout) == 0x000000, "Member 'AudioRadialSlider_SetWidgetLayout::InLayout' has a wrong offset!");
-
-// DelegateFunction AudioWidgets.AudioMeter.GetMeterChannelInfo__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_GetMeterChannelInfo__DelegateSignature final 
-{
-public:
-	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_GetMeterChannelInfo__DelegateSignature) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo__DelegateSignature");
-static_assert(sizeof(AudioMeter_GetMeterChannelInfo__DelegateSignature) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo__DelegateSignature");
-static_assert(offsetof(AudioMeter_GetMeterChannelInfo__DelegateSignature, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo__DelegateSignature::ReturnValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetBackgroundColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetBackgroundColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetBackgroundColor");
-static_assert(sizeof(AudioMeter_SetBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetBackgroundColor");
-static_assert(offsetof(AudioMeter_SetBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetBackgroundColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterBackgroundColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterBackgroundColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterBackgroundColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterBackgroundColor");
-static_assert(sizeof(AudioMeter_SetMeterBackgroundColor) == 0x000010, "Wrong size on AudioMeter_SetMeterBackgroundColor");
-static_assert(offsetof(AudioMeter_SetMeterBackgroundColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterBackgroundColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterChannelInfo
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterChannelInfo final 
-{
-public:
-	TArray<struct FMeterChannelInfo>              InMeterChannelInfo;                                // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_SetMeterChannelInfo");
-static_assert(sizeof(AudioMeter_SetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_SetMeterChannelInfo");
-static_assert(offsetof(AudioMeter_SetMeterChannelInfo, InMeterChannelInfo) == 0x000000, "Member 'AudioMeter_SetMeterChannelInfo::InMeterChannelInfo' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterClippingColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterClippingColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterClippingColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterClippingColor");
-static_assert(sizeof(AudioMeter_SetMeterClippingColor) == 0x000010, "Wrong size on AudioMeter_SetMeterClippingColor");
-static_assert(offsetof(AudioMeter_SetMeterClippingColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterClippingColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterPeakColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterPeakColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterPeakColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterPeakColor");
-static_assert(sizeof(AudioMeter_SetMeterPeakColor) == 0x000010, "Wrong size on AudioMeter_SetMeterPeakColor");
-static_assert(offsetof(AudioMeter_SetMeterPeakColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterPeakColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterScaleColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterScaleColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterScaleColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleColor");
-static_assert(sizeof(AudioMeter_SetMeterScaleColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleColor");
-static_assert(offsetof(AudioMeter_SetMeterScaleColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterScaleLabelColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterScaleLabelColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterScaleLabelColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterScaleLabelColor");
-static_assert(sizeof(AudioMeter_SetMeterScaleLabelColor) == 0x000010, "Wrong size on AudioMeter_SetMeterScaleLabelColor");
-static_assert(offsetof(AudioMeter_SetMeterScaleLabelColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterScaleLabelColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.SetMeterValueColor
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_SetMeterValueColor final 
-{
-public:
-	struct FLinearColor                           InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_SetMeterValueColor) == 0x000004, "Wrong alignment on AudioMeter_SetMeterValueColor");
-static_assert(sizeof(AudioMeter_SetMeterValueColor) == 0x000010, "Wrong size on AudioMeter_SetMeterValueColor");
-static_assert(offsetof(AudioMeter_SetMeterValueColor, InValue) == 0x000000, "Member 'AudioMeter_SetMeterValueColor::InValue' has a wrong offset!");
-
-// Function AudioWidgets.AudioMeter.GetMeterChannelInfo
-// 0x0010 (0x0010 - 0x0000)
-struct AudioMeter_GetMeterChannelInfo final 
-{
-public:
-	TArray<struct FMeterChannelInfo>              ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(AudioMeter_GetMeterChannelInfo) == 0x000008, "Wrong alignment on AudioMeter_GetMeterChannelInfo");
-static_assert(sizeof(AudioMeter_GetMeterChannelInfo) == 0x000010, "Wrong size on AudioMeter_GetMeterChannelInfo");
-static_assert(offsetof(AudioMeter_GetMeterChannelInfo, ReturnValue) == 0x000000, "Member 'AudioMeter_GetMeterChannelInfo::ReturnValue' has a wrong offset!");
 
 // Function AudioWidgets.AudioSliderBase.GetLinValue
 // 0x0008 (0x0008 - 0x0000)

@@ -44,31 +44,6 @@ static_assert(offsetof(ConstantQNRT_GetNormalizedChannelConstantQAtTime, InSecon
 static_assert(offsetof(ConstantQNRT_GetNormalizedChannelConstantQAtTime, InChannel) == 0x000004, "Member 'ConstantQNRT_GetNormalizedChannelConstantQAtTime::InChannel' has a wrong offset!");
 static_assert(offsetof(ConstantQNRT_GetNormalizedChannelConstantQAtTime, OutConstantQ) == 0x000008, "Member 'ConstantQNRT_GetNormalizedChannelConstantQAtTime::OutConstantQ' has a wrong offset!");
 
-// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
-// 0x0018 (0x0018 - 0x0000)
-struct SynesthesiaSpectrumAnalyzer_GetCenterFrequencies final 
-{
-public:
-	float                                         InSampleRate;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 OutCenterFrequencies;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies) == 0x000008, "Wrong alignment on SynesthesiaSpectrumAnalyzer_GetCenterFrequencies");
-static_assert(sizeof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies) == 0x000018, "Wrong size on SynesthesiaSpectrumAnalyzer_GetCenterFrequencies");
-static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies, InSampleRate) == 0x000000, "Member 'SynesthesiaSpectrumAnalyzer_GetCenterFrequencies::InSampleRate' has a wrong offset!");
-static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies, OutCenterFrequencies) == 0x000008, "Member 'SynesthesiaSpectrumAnalyzer_GetCenterFrequencies::OutCenterFrequencies' has a wrong offset!");
-
-// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
-// 0x0004 (0x0004 - 0x0000)
-struct SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies final 
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies) == 0x000004, "Wrong alignment on SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies");
-static_assert(sizeof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies) == 0x000004, "Wrong size on SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies");
-static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies, ReturnValue) == 0x000000, "Member 'SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies::ReturnValue' has a wrong offset!");
-
 // Function AudioSynesthesia.LoudnessNRT.GetChannelLoudnessAtTime
 // 0x000C (0x000C - 0x0000)
 struct LoudnessNRT_GetChannelLoudnessAtTime final 
@@ -133,7 +108,7 @@ public:
 	float                                         InStartSeconds;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InEndSeconds;                                      // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InChannel;                                         // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2702[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 OutOnsetTimestamps;                                // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 OutOnsetStrengths;                                 // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -153,7 +128,7 @@ public:
 	float                                         InStartSeconds;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InEndSeconds;                                      // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InChannel;                                         // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2703[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<float>                                 OutOnsetTimestamps;                                // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<float>                                 OutOnsetStrengths;                                 // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -164,6 +139,31 @@ static_assert(offsetof(OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes, InEndSec
 static_assert(offsetof(OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes, InChannel) == 0x000008, "Member 'OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes::InChannel' has a wrong offset!");
 static_assert(offsetof(OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes, OutOnsetTimestamps) == 0x000010, "Member 'OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes::OutOnsetTimestamps' has a wrong offset!");
 static_assert(offsetof(OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes, OutOnsetStrengths) == 0x000020, "Member 'OnsetNRT_GetNormalizedChannelOnsetsBetweenTimes::OutOnsetStrengths' has a wrong offset!");
+
+// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetCenterFrequencies
+// 0x0018 (0x0018 - 0x0000)
+struct SynesthesiaSpectrumAnalyzer_GetCenterFrequencies final 
+{
+public:
+	float                                         InSampleRate;                                      // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CEB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 OutCenterFrequencies;                              // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies) == 0x000008, "Wrong alignment on SynesthesiaSpectrumAnalyzer_GetCenterFrequencies");
+static_assert(sizeof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies) == 0x000018, "Wrong size on SynesthesiaSpectrumAnalyzer_GetCenterFrequencies");
+static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies, InSampleRate) == 0x000000, "Member 'SynesthesiaSpectrumAnalyzer_GetCenterFrequencies::InSampleRate' has a wrong offset!");
+static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetCenterFrequencies, OutCenterFrequencies) == 0x000008, "Member 'SynesthesiaSpectrumAnalyzer_GetCenterFrequencies::OutCenterFrequencies' has a wrong offset!");
+
+// Function AudioSynesthesia.SynesthesiaSpectrumAnalyzer.GetNumCenterFrequencies
+// 0x0004 (0x0004 - 0x0000)
+struct SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies final 
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies) == 0x000004, "Wrong alignment on SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies");
+static_assert(sizeof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies) == 0x000004, "Wrong size on SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies");
+static_assert(offsetof(SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies, ReturnValue) == 0x000000, "Member 'SynesthesiaSpectrumAnalyzer_GetNumCenterFrequencies::ReturnValue' has a wrong offset!");
 
 }
 

@@ -28,8 +28,10 @@ namespace SDK
 // bool                                    CallFunc_Map_Find_ReturnValue                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FStruct_Physmat                  CallFunc_Map_Find_Value_1                              (ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 // bool                                    CallFunc_Map_Find_ReturnValue_1                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UPhysmatEffect_C::GetSurfaceEffect(class UPhysicalMaterial* PhysMat, struct FStruct_Physmat* Value, EPhysicalSurface Temp_byte_Variable, const struct FStruct_Physmat& CallFunc_Map_Find_Value, bool CallFunc_Map_Find_ReturnValue, const struct FStruct_Physmat& CallFunc_Map_Find_Value_1, bool CallFunc_Map_Find_ReturnValue_1)
+bool UPhysmatEffect_C::GetSurfaceEffect(class UPhysicalMaterial* PhysMat, struct FStruct_Physmat* Value, EPhysicalSurface Temp_byte_Variable, const struct FStruct_Physmat& CallFunc_Map_Find_Value, bool CallFunc_Map_Find_ReturnValue, const struct FStruct_Physmat& CallFunc_Map_Find_Value_1, bool CallFunc_Map_Find_ReturnValue_1, bool CallFunc_IsValid_ReturnValue, bool CallFunc_BooleanAND_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
@@ -44,6 +46,8 @@ bool UPhysmatEffect_C::GetSurfaceEffect(class UPhysicalMaterial* PhysMat, struct
 	Parms.CallFunc_Map_Find_ReturnValue = CallFunc_Map_Find_ReturnValue;
 	Parms.CallFunc_Map_Find_Value_1 = std::move(CallFunc_Map_Find_Value_1);
 	Parms.CallFunc_Map_Find_ReturnValue_1 = CallFunc_Map_Find_ReturnValue_1;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_classes.hpp"
 #include "BuildPatchServices_structs.hpp"
+#include "CoreUObject_classes.hpp"
 
 
 namespace SDK
@@ -24,8 +24,8 @@ class UBuildPatchManifest final  : public UObject
 public:
 	uint8                                         ManifestFileVersion;                               // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsFileData;                                       // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_36C7[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        AppId;                                             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_11E1[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        AppID;                                             // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AppName;                                           // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BuildVersion;                                      // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 LaunchExe;                                         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -52,7 +52,7 @@ static_assert(alignof(UBuildPatchManifest) == 0x000008, "Wrong alignment on UBui
 static_assert(sizeof(UBuildPatchManifest) == 0x000120, "Wrong size on UBuildPatchManifest");
 static_assert(offsetof(UBuildPatchManifest, ManifestFileVersion) == 0x000028, "Member 'UBuildPatchManifest::ManifestFileVersion' has a wrong offset!");
 static_assert(offsetof(UBuildPatchManifest, bIsFileData) == 0x000029, "Member 'UBuildPatchManifest::bIsFileData' has a wrong offset!");
-static_assert(offsetof(UBuildPatchManifest, AppId) == 0x00002C, "Member 'UBuildPatchManifest::AppId' has a wrong offset!");
+static_assert(offsetof(UBuildPatchManifest, AppID) == 0x00002C, "Member 'UBuildPatchManifest::AppID' has a wrong offset!");
 static_assert(offsetof(UBuildPatchManifest, AppName) == 0x000030, "Member 'UBuildPatchManifest::AppName' has a wrong offset!");
 static_assert(offsetof(UBuildPatchManifest, BuildVersion) == 0x000040, "Member 'UBuildPatchManifest::BuildVersion' has a wrong offset!");
 static_assert(offsetof(UBuildPatchManifest, LaunchExe) == 0x000050, "Member 'UBuildPatchManifest::LaunchExe' has a wrong offset!");

@@ -11,12 +11,29 @@
 #include "Basic.hpp"
 
 #include "AudioAnalyzer_classes.hpp"
-#include "Engine_structs.hpp"
 #include "AudioSynesthesia_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
+
+// Class AudioSynesthesia.AudioSynesthesiaSettings
+// 0x0000 (0x0028 - 0x0028)
+class UAudioSynesthesiaSettings : public UAudioAnalyzerSettings
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AudioSynesthesiaSettings">();
+	}
+	static class UAudioSynesthesiaSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSynesthesiaSettings>();
+	}
+};
+static_assert(alignof(UAudioSynesthesiaSettings) == 0x000008, "Wrong alignment on UAudioSynesthesiaSettings");
+static_assert(sizeof(UAudioSynesthesiaSettings) == 0x000028, "Wrong size on UAudioSynesthesiaSettings");
 
 // Class AudioSynesthesia.AudioSynesthesiaNRTSettings
 // 0x0000 (0x0028 - 0x0028)
@@ -35,6 +52,23 @@ public:
 static_assert(alignof(UAudioSynesthesiaNRTSettings) == 0x000008, "Wrong alignment on UAudioSynesthesiaNRTSettings");
 static_assert(sizeof(UAudioSynesthesiaNRTSettings) == 0x000028, "Wrong size on UAudioSynesthesiaNRTSettings");
 
+// Class AudioSynesthesia.AudioSynesthesiaNRT
+// 0x0000 (0x0078 - 0x0078)
+class UAudioSynesthesiaNRT : public UAudioAnalyzerNRT
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AudioSynesthesiaNRT">();
+	}
+	static class UAudioSynesthesiaNRT* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
+	}
+};
+static_assert(alignof(UAudioSynesthesiaNRT) == 0x000008, "Wrong alignment on UAudioSynesthesiaNRT");
+static_assert(sizeof(UAudioSynesthesiaNRT) == 0x000078, "Wrong size on UAudioSynesthesiaNRT");
+
 // Class AudioSynesthesia.ConstantQNRTSettings
 // 0x0020 (0x0048 - 0x0028)
 class UConstantQNRTSettings final  : public UAudioSynesthesiaNRTSettings
@@ -50,7 +84,7 @@ public:
 	EAudioSpectrumType                            SpectrumType;                                      // 0x003B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BandWidthStretch;                                  // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EConstantQNormalizationEnum                   CQTNormalization;                                  // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F4[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDC[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NoiseFloorDb;                                      // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -77,40 +111,6 @@ static_assert(offsetof(UConstantQNRTSettings, BandWidthStretch) == 0x00003C, "Me
 static_assert(offsetof(UConstantQNRTSettings, CQTNormalization) == 0x000040, "Member 'UConstantQNRTSettings::CQTNormalization' has a wrong offset!");
 static_assert(offsetof(UConstantQNRTSettings, NoiseFloorDb) == 0x000044, "Member 'UConstantQNRTSettings::NoiseFloorDb' has a wrong offset!");
 
-// Class AudioSynesthesia.AudioSynesthesiaSettings
-// 0x0000 (0x0028 - 0x0028)
-class UAudioSynesthesiaSettings : public UAudioAnalyzerSettings
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AudioSynesthesiaSettings">();
-	}
-	static class UAudioSynesthesiaSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSynesthesiaSettings>();
-	}
-};
-static_assert(alignof(UAudioSynesthesiaSettings) == 0x000008, "Wrong alignment on UAudioSynesthesiaSettings");
-static_assert(sizeof(UAudioSynesthesiaSettings) == 0x000028, "Wrong size on UAudioSynesthesiaSettings");
-
-// Class AudioSynesthesia.AudioSynesthesiaNRT
-// 0x0000 (0x0078 - 0x0078)
-class UAudioSynesthesiaNRT : public UAudioAnalyzerNRT
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AudioSynesthesiaNRT">();
-	}
-	static class UAudioSynesthesiaNRT* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAudioSynesthesiaNRT>();
-	}
-};
-static_assert(alignof(UAudioSynesthesiaNRT) == 0x000008, "Wrong alignment on UAudioSynesthesiaNRT");
-static_assert(sizeof(UAudioSynesthesiaNRT) == 0x000078, "Wrong size on UAudioSynesthesiaNRT");
-
 // Class AudioSynesthesia.ConstantQNRT
 // 0x0008 (0x0080 - 0x0078)
 class UConstantQNRT final  : public UAudioSynesthesiaNRT
@@ -136,67 +136,6 @@ static_assert(alignof(UConstantQNRT) == 0x000008, "Wrong alignment on UConstantQ
 static_assert(sizeof(UConstantQNRT) == 0x000080, "Wrong size on UConstantQNRT");
 static_assert(offsetof(UConstantQNRT, Settings) == 0x000078, "Member 'UConstantQNRT::Settings' has a wrong offset!");
 
-// Class AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
-// 0x0008 (0x0030 - 0x0028)
-class USynesthesiaSpectrumAnalysisSettings final  : public UAudioSynesthesiaSettings
-{
-public:
-	float                                         AnalysisPeriod;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFFTSize                                      FFTSize;                                           // 0x002C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAudioSpectrumType                            SpectrumType;                                      // 0x002D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFFTWindowType                                WindowType;                                        // 0x002E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDownmixToMono;                                    // 0x002F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SynesthesiaSpectrumAnalysisSettings">();
-	}
-	static class USynesthesiaSpectrumAnalysisSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USynesthesiaSpectrumAnalysisSettings>();
-	}
-};
-static_assert(alignof(USynesthesiaSpectrumAnalysisSettings) == 0x000008, "Wrong alignment on USynesthesiaSpectrumAnalysisSettings");
-static_assert(sizeof(USynesthesiaSpectrumAnalysisSettings) == 0x000030, "Wrong size on USynesthesiaSpectrumAnalysisSettings");
-static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, AnalysisPeriod) == 0x000028, "Member 'USynesthesiaSpectrumAnalysisSettings::AnalysisPeriod' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, FFTSize) == 0x00002C, "Member 'USynesthesiaSpectrumAnalysisSettings::FFTSize' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, SpectrumType) == 0x00002D, "Member 'USynesthesiaSpectrumAnalysisSettings::SpectrumType' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, WindowType) == 0x00002E, "Member 'USynesthesiaSpectrumAnalysisSettings::WindowType' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, bDownmixToMono) == 0x00002F, "Member 'USynesthesiaSpectrumAnalysisSettings::bDownmixToMono' has a wrong offset!");
-
-// Class AudioSynesthesia.SynesthesiaSpectrumAnalyzer
-// 0x0058 (0x00E8 - 0x0090)
-class USynesthesiaSpectrumAnalyzer final  : public UAudioAnalyzer
-{
-public:
-	class USynesthesiaSpectrumAnalysisSettings*   Settings;                                          // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnSpectrumResults;                                 // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F5[0x18];                                    // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnLatestSpectrumResults;                           // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F6[0x18];                                    // 0x00D0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void GetCenterFrequencies(float InSampleRate, TArray<float>* OutCenterFrequencies);
-
-	const int32 GetNumCenterFrequencies() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SynesthesiaSpectrumAnalyzer">();
-	}
-	static class USynesthesiaSpectrumAnalyzer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USynesthesiaSpectrumAnalyzer>();
-	}
-};
-static_assert(alignof(USynesthesiaSpectrumAnalyzer) == 0x000008, "Wrong alignment on USynesthesiaSpectrumAnalyzer");
-static_assert(sizeof(USynesthesiaSpectrumAnalyzer) == 0x0000E8, "Wrong size on USynesthesiaSpectrumAnalyzer");
-static_assert(offsetof(USynesthesiaSpectrumAnalyzer, Settings) == 0x000090, "Member 'USynesthesiaSpectrumAnalyzer::Settings' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalyzer, OnSpectrumResults) == 0x000098, "Member 'USynesthesiaSpectrumAnalyzer::OnSpectrumResults' has a wrong offset!");
-static_assert(offsetof(USynesthesiaSpectrumAnalyzer, OnLatestSpectrumResults) == 0x0000C0, "Member 'USynesthesiaSpectrumAnalyzer::OnLatestSpectrumResults' has a wrong offset!");
-
 // Class AudioSynesthesia.LoudnessSettings
 // 0x0018 (0x0040 - 0x0028)
 class ULoudnessSettings final  : public UAudioSynesthesiaSettings
@@ -206,7 +145,7 @@ public:
 	float                                         MinimumFrequency;                                  // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaximumFrequency;                                  // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ELoudnessCurveTypeEnum                        CurveType;                                         // 0x0034(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F8[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDD[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NoiseFloorDb;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ExpectedMaxLoudness;                               // 0x003C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -267,9 +206,9 @@ public:
 	float                                         MinimumFrequency;                                  // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaximumFrequency;                                  // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ELoudnessNRTCurveTypeEnum                     CurveType;                                         // 0x0034(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26F9[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDE[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         NoiseFloorDb;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FA[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CDF[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -323,7 +262,7 @@ class UMeterSettings final  : public UAudioSynesthesiaSettings
 public:
 	float                                         AnalysisPeriod;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMeterPeakType                                PeakMode;                                          // 0x002C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FB[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE0[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         MeterAttackTime;                                   // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MeterReleaseTime;                                  // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PeakHoldTime;                                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -355,13 +294,13 @@ class UMeterAnalyzer final  : public UAudioAnalyzer
 public:
 	class UMeterSettings*                         Settings;                                          // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnOverallMeterResults;                             // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FC[0x18];                                    // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE1[0x18];                                    // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPerChannelMeterResults;                          // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FD[0x18];                                    // 0x00D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE2[0x18];                                    // 0x00D0(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLatestOverallMeterResults;                       // 0x00E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FE[0x18];                                    // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE3[0x18];                                    // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLatestPerChannelMeterResults;                    // 0x0110(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26FF[0x18];                                    // 0x0120(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE4[0x18];                                    // 0x0120(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -387,12 +326,12 @@ class UOnsetNRTSettings final  : public UAudioSynesthesiaNRTSettings
 {
 public:
 	bool                                          bDownmixToMono;                                    // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2700[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         GranularityInSeconds;                              // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Sensitivity;                                       // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinimumFrequency;                                  // 0x0034(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaximumFrequency;                                  // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2701[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3CE6[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -436,6 +375,67 @@ public:
 static_assert(alignof(UOnsetNRT) == 0x000008, "Wrong alignment on UOnsetNRT");
 static_assert(sizeof(UOnsetNRT) == 0x000080, "Wrong size on UOnsetNRT");
 static_assert(offsetof(UOnsetNRT, Settings) == 0x000078, "Member 'UOnsetNRT::Settings' has a wrong offset!");
+
+// Class AudioSynesthesia.SynesthesiaSpectrumAnalysisSettings
+// 0x0008 (0x0030 - 0x0028)
+class USynesthesiaSpectrumAnalysisSettings final  : public UAudioSynesthesiaSettings
+{
+public:
+	float                                         AnalysisPeriod;                                    // 0x0028(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFFTSize                                      FFTSize;                                           // 0x002C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAudioSpectrumType                            SpectrumType;                                      // 0x002D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFFTWindowType                                WindowType;                                        // 0x002E(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDownmixToMono;                                    // 0x002F(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SynesthesiaSpectrumAnalysisSettings">();
+	}
+	static class USynesthesiaSpectrumAnalysisSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USynesthesiaSpectrumAnalysisSettings>();
+	}
+};
+static_assert(alignof(USynesthesiaSpectrumAnalysisSettings) == 0x000008, "Wrong alignment on USynesthesiaSpectrumAnalysisSettings");
+static_assert(sizeof(USynesthesiaSpectrumAnalysisSettings) == 0x000030, "Wrong size on USynesthesiaSpectrumAnalysisSettings");
+static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, AnalysisPeriod) == 0x000028, "Member 'USynesthesiaSpectrumAnalysisSettings::AnalysisPeriod' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, FFTSize) == 0x00002C, "Member 'USynesthesiaSpectrumAnalysisSettings::FFTSize' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, SpectrumType) == 0x00002D, "Member 'USynesthesiaSpectrumAnalysisSettings::SpectrumType' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, WindowType) == 0x00002E, "Member 'USynesthesiaSpectrumAnalysisSettings::WindowType' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalysisSettings, bDownmixToMono) == 0x00002F, "Member 'USynesthesiaSpectrumAnalysisSettings::bDownmixToMono' has a wrong offset!");
+
+// Class AudioSynesthesia.SynesthesiaSpectrumAnalyzer
+// 0x0058 (0x00E8 - 0x0090)
+class USynesthesiaSpectrumAnalyzer final  : public UAudioAnalyzer
+{
+public:
+	class USynesthesiaSpectrumAnalysisSettings*   Settings;                                          // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnSpectrumResults;                                 // 0x0098(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CE9[0x18];                                    // 0x00A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnLatestSpectrumResults;                           // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3CEA[0x18];                                    // 0x00D0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void GetCenterFrequencies(float InSampleRate, TArray<float>* OutCenterFrequencies);
+
+	const int32 GetNumCenterFrequencies() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SynesthesiaSpectrumAnalyzer">();
+	}
+	static class USynesthesiaSpectrumAnalyzer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USynesthesiaSpectrumAnalyzer>();
+	}
+};
+static_assert(alignof(USynesthesiaSpectrumAnalyzer) == 0x000008, "Wrong alignment on USynesthesiaSpectrumAnalyzer");
+static_assert(sizeof(USynesthesiaSpectrumAnalyzer) == 0x0000E8, "Wrong size on USynesthesiaSpectrumAnalyzer");
+static_assert(offsetof(USynesthesiaSpectrumAnalyzer, Settings) == 0x000090, "Member 'USynesthesiaSpectrumAnalyzer::Settings' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalyzer, OnSpectrumResults) == 0x000098, "Member 'USynesthesiaSpectrumAnalyzer::OnSpectrumResults' has a wrong offset!");
+static_assert(offsetof(USynesthesiaSpectrumAnalyzer, OnLatestSpectrumResults) == 0x0000C0, "Member 'USynesthesiaSpectrumAnalyzer::OnLatestSpectrumResults' has a wrong offset!");
 
 }
 

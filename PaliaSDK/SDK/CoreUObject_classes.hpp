@@ -19,7 +19,7 @@ namespace SDK
 class UObject
 {
 public:
-	static inline class TUObjectArray*     GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	static inline class TUObjectArrayWrapper      GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	EObjectFlags                                  Flags;                                             // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
@@ -28,14 +28,6 @@ public:
 	class FName                                   Name;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UObject*                                Outer;                                             // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
-	bool IsValidLowLevel() {
-		if (this == nullptr)
-			return false;
-		if (!Class)
-			return false;
-
-		return GObjects->GetByIndex(Index) == this;
-	}
 public:
 	static class UObject* FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType = EClassCastFlags::None);
 	static class UObject* FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType = EClassCastFlags::None);
@@ -93,46 +85,6 @@ static_assert(offsetof(UObject, Class) == 0x000010, "Member 'UObject::Class' has
 static_assert(offsetof(UObject, Name) == 0x000018, "Member 'UObject::Name' has a wrong offset!");
 static_assert(offsetof(UObject, Outer) == 0x000020, "Member 'UObject::Outer' has a wrong offset!");
 
-// Class CoreUObject.PropertyWrapper
-// 0x0008 (0x0030 - 0x0028)
-class UPropertyWrapper : public UObject
-{
-public:
-	uint8                                         Pad_32[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"PropertyWrapper">();
-	}
-	static class UPropertyWrapper* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPropertyWrapper>();
-	}
-};
-static_assert(alignof(UPropertyWrapper) == 0x000008, "Wrong alignment on UPropertyWrapper");
-static_assert(sizeof(UPropertyWrapper) == 0x000030, "Wrong size on UPropertyWrapper");
-
-// Class CoreUObject.Package
-// 0x0068 (0x0090 - 0x0028)
-class UPackage final  : public UObject
-{
-public:
-	uint8                                         Pad_33[0x68];                                      // 0x0028(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Package">();
-	}
-	static class UPackage* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UPackage>();
-	}
-};
-static_assert(alignof(UPackage) == 0x000008, "Wrong alignment on UPackage");
-static_assert(sizeof(UPackage) == 0x000090, "Wrong size on UPackage");
-
 // Class CoreUObject.Field
 // 0x0008 (0x0030 - 0x0028)
 class UField : public UObject
@@ -154,112 +106,58 @@ static_assert(alignof(UField) == 0x000008, "Wrong alignment on UField");
 static_assert(sizeof(UField) == 0x000030, "Wrong size on UField");
 static_assert(offsetof(UField, Next) == 0x000028, "Member 'UField::Next' has a wrong offset!");
 
-// Class CoreUObject.Property
-// 0x0040 (0x0070 - 0x0030)
-class UProperty : public UField
+// Class CoreUObject.GCObjectReferencer
+// 0x0010 (0x0038 - 0x0028)
+class UGCObjectReferencer final  : public UObject
 {
 public:
-	uint8                                         Pad_34[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_33[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"Property">();
+		return StaticClassImpl<"GCObjectReferencer">();
 	}
-	static class UProperty* GetDefaultObj()
+	static class UGCObjectReferencer* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UProperty>();
+		return GetDefaultObjImpl<UGCObjectReferencer>();
 	}
 };
-static_assert(alignof(UProperty) == 0x000008, "Wrong alignment on UProperty");
-static_assert(sizeof(UProperty) == 0x000070, "Wrong size on UProperty");
+static_assert(alignof(UGCObjectReferencer) == 0x000008, "Wrong alignment on UGCObjectReferencer");
+static_assert(sizeof(UGCObjectReferencer) == 0x000038, "Wrong size on UGCObjectReferencer");
 
-// Class CoreUObject.ObjectPropertyBase
-// 0x0008 (0x0078 - 0x0070)
-class UObjectPropertyBase : public UProperty
+// Class CoreUObject.TextBuffer
+// 0x0028 (0x0050 - 0x0028)
+class UTextBuffer final  : public UObject
 {
 public:
-	uint8                                         Pad_35[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_34[0x28];                                      // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"ObjectPropertyBase">();
+		return StaticClassImpl<"TextBuffer">();
 	}
-	static class UObjectPropertyBase* GetDefaultObj()
+	static class UTextBuffer* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UObjectPropertyBase>();
+		return GetDefaultObjImpl<UTextBuffer>();
 	}
 };
-static_assert(alignof(UObjectPropertyBase) == 0x000008, "Wrong alignment on UObjectPropertyBase");
-static_assert(sizeof(UObjectPropertyBase) == 0x000078, "Wrong size on UObjectPropertyBase");
-
-// Class CoreUObject.SoftObjectProperty
-// 0x0000 (0x0078 - 0x0078)
-class USoftObjectProperty : public UObjectPropertyBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SoftObjectProperty">();
-	}
-	static class USoftObjectProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USoftObjectProperty>();
-	}
-};
-static_assert(alignof(USoftObjectProperty) == 0x000008, "Wrong alignment on USoftObjectProperty");
-static_assert(sizeof(USoftObjectProperty) == 0x000078, "Wrong size on USoftObjectProperty");
-
-// Class CoreUObject.SoftClassProperty
-// 0x0008 (0x0080 - 0x0078)
-class USoftClassProperty final  : public USoftObjectProperty
-{
-public:
-	uint8                                         Pad_36[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"SoftClassProperty">();
-	}
-	static class USoftClassProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<USoftClassProperty>();
-	}
-};
-static_assert(alignof(USoftClassProperty) == 0x000008, "Wrong alignment on USoftClassProperty");
-static_assert(sizeof(USoftClassProperty) == 0x000080, "Wrong size on USoftClassProperty");
-
-// Class CoreUObject.WeakObjectProperty
-// 0x0000 (0x0078 - 0x0078)
-class UWeakObjectProperty final  : public UObjectPropertyBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WeakObjectProperty">();
-	}
-	static class UWeakObjectProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWeakObjectProperty>();
-	}
-};
-static_assert(alignof(UWeakObjectProperty) == 0x000008, "Wrong alignment on UWeakObjectProperty");
-static_assert(sizeof(UWeakObjectProperty) == 0x000078, "Wrong size on UWeakObjectProperty");
+static_assert(alignof(UTextBuffer) == 0x000008, "Wrong alignment on UTextBuffer");
+static_assert(sizeof(UTextBuffer) == 0x000050, "Wrong size on UTextBuffer");
 
 // Class CoreUObject.Struct
 // 0x0080 (0x00B0 - 0x0030)
 class UStruct : public UField
 {
 public:
-	uint8                                         Pad_37[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_35[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStruct*                                Super;                                             // 0x0040(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UField*                                 Children;                                          // 0x0048(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FField*                                 ChildProperties;                                   // 0x0050(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         Size;                                              // 0x0058(0x0004)(NOT AUTO-GENERATED PROPERTY)
 	int32                                         MinAlignemnt;                                      // 0x005C(0x0004)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_38[0x50];                                      // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_36[0x50];                                      // 0x0060(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -279,87 +177,56 @@ static_assert(offsetof(UStruct, ChildProperties) == 0x000050, "Member 'UStruct::
 static_assert(offsetof(UStruct, Size) == 0x000058, "Member 'UStruct::Size' has a wrong offset!");
 static_assert(offsetof(UStruct, MinAlignemnt) == 0x00005C, "Member 'UStruct::MinAlignemnt' has a wrong offset!");
 
-// Class CoreUObject.ObjectProperty
-// 0x0000 (0x0078 - 0x0078)
-class UObjectProperty : public UObjectPropertyBase
+// Class CoreUObject.ScriptStruct
+// 0x0010 (0x00C0 - 0x00B0)
+class UScriptStruct : public UStruct
 {
 public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ObjectProperty">();
-	}
-	static class UObjectProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UObjectProperty>();
-	}
-};
-static_assert(alignof(UObjectProperty) == 0x000008, "Wrong alignment on UObjectProperty");
-static_assert(sizeof(UObjectProperty) == 0x000078, "Wrong size on UObjectProperty");
-
-// Class CoreUObject.Interface
-// 0x0000 (0x0028 - 0x0028)
-class IInterface : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"Interface">();
-	}
-	static class IInterface* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<IInterface>();
-	}
-};
-static_assert(alignof(IInterface) == 0x000008, "Wrong alignment on IInterface");
-static_assert(sizeof(IInterface) == 0x000028, "Wrong size on IInterface");
-
-// Class CoreUObject.NameProperty
-// 0x0000 (0x0070 - 0x0070)
-class UNameProperty final  : public UProperty
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"NameProperty">();
-	}
-	static class UNameProperty* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UNameProperty>();
-	}
-};
-static_assert(alignof(UNameProperty) == 0x000008, "Wrong alignment on UNameProperty");
-static_assert(sizeof(UNameProperty) == 0x000070, "Wrong size on UNameProperty");
-
-// Class CoreUObject.LinkerPlaceholderExportObject
-// 0x00D0 (0x00F8 - 0x0028)
-class ULinkerPlaceholderExportObject final  : public UObject
-{
-public:
-	uint8                                         Pad_39[0xD0];                                      // 0x0028(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LinkerPlaceholderExportObject">();
+		return StaticClassImpl<"ScriptStruct">();
 	}
-	static class ULinkerPlaceholderExportObject* GetDefaultObj()
+	static class UScriptStruct* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULinkerPlaceholderExportObject>();
+		return GetDefaultObjImpl<UScriptStruct>();
 	}
 };
-static_assert(alignof(ULinkerPlaceholderExportObject) == 0x000008, "Wrong alignment on ULinkerPlaceholderExportObject");
-static_assert(sizeof(ULinkerPlaceholderExportObject) == 0x0000F8, "Wrong size on ULinkerPlaceholderExportObject");
+static_assert(alignof(UScriptStruct) == 0x000008, "Wrong alignment on UScriptStruct");
+static_assert(sizeof(UScriptStruct) == 0x0000C0, "Wrong size on UScriptStruct");
+
+// Class CoreUObject.Package
+// 0x0068 (0x0090 - 0x0028)
+class UPackage final  : public UObject
+{
+public:
+	uint8                                         Pad_38[0x68];                                      // 0x0028(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Package">();
+	}
+	static class UPackage* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPackage>();
+	}
+};
+static_assert(alignof(UPackage) == 0x000008, "Wrong alignment on UPackage");
+static_assert(sizeof(UPackage) == 0x000090, "Wrong size on UPackage");
 
 // Class CoreUObject.Class
-// 0x0180 (0x0230 - 0x00B0)
+// 0x0150 (0x0200 - 0x00B0)
 class UClass : public UStruct
 {
 public:
-	uint8                                         Pad_3A[0x28];                                      // 0x00B0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39[0x28];                                      // 0x00B0(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
 	enum class EClassCastFlags                    CastFlags;                                         // 0x00D8(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_3B[0x30];                                      // 0x00E0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A[0x30];                                      // 0x00E0(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                DefaultObject;                                     // 0x0110(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_3C[0x118];                                     // 0x0118(0x0118)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3B[0xE8];                                      // 0x0118(0x00E8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	class UFunction* GetFunction(const std::string& ClassName, const std::string& FuncName) const;
@@ -375,69 +242,9 @@ public:
 	}
 };
 static_assert(alignof(UClass) == 0x000008, "Wrong alignment on UClass");
-static_assert(sizeof(UClass) == 0x000230, "Wrong size on UClass");
+static_assert(sizeof(UClass) == 0x000200, "Wrong size on UClass");
 static_assert(offsetof(UClass, CastFlags) == 0x0000D8, "Member 'UClass::CastFlags' has a wrong offset!");
 static_assert(offsetof(UClass, DefaultObject) == 0x000110, "Member 'UClass::DefaultObject' has a wrong offset!");
-
-// Class CoreUObject.GCObjectReferencer
-// 0x0048 (0x0070 - 0x0028)
-class UGCObjectReferencer final  : public UObject
-{
-public:
-	uint8                                         Pad_3D[0x48];                                      // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GCObjectReferencer">();
-	}
-	static class UGCObjectReferencer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGCObjectReferencer>();
-	}
-};
-static_assert(alignof(UGCObjectReferencer) == 0x000008, "Wrong alignment on UGCObjectReferencer");
-static_assert(sizeof(UGCObjectReferencer) == 0x000070, "Wrong size on UGCObjectReferencer");
-
-// Class CoreUObject.TextBuffer
-// 0x0028 (0x0050 - 0x0028)
-class UTextBuffer final  : public UObject
-{
-public:
-	uint8                                         Pad_3E[0x28];                                      // 0x0028(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"TextBuffer">();
-	}
-	static class UTextBuffer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UTextBuffer>();
-	}
-};
-static_assert(alignof(UTextBuffer) == 0x000008, "Wrong alignment on UTextBuffer");
-static_assert(sizeof(UTextBuffer) == 0x000050, "Wrong size on UTextBuffer");
-
-// Class CoreUObject.ScriptStruct
-// 0x0010 (0x00C0 - 0x00B0)
-class UScriptStruct : public UStruct
-{
-public:
-	uint8                                         Pad_3F[0x10];                                      // 0x00B0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"ScriptStruct">();
-	}
-	static class UScriptStruct* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UScriptStruct>();
-	}
-};
-static_assert(alignof(UScriptStruct) == 0x000008, "Wrong alignment on UScriptStruct");
-static_assert(sizeof(UScriptStruct) == 0x0000C0, "Wrong size on UScriptStruct");
 
 // Class CoreUObject.Function
 // 0x0030 (0x00E0 - 0x00B0)
@@ -447,7 +254,7 @@ public:
 	using FNativeFuncPtr = void (*)(void* Context, void* TheStack, void* Result);                    // 0x0000(0x0000)(NOT AUTO-GENERATED PROPERTY)
 
 	uint32                                        FunctionFlags;                                     // 0x00B0(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_40[0x20];                                      // 0x00B8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3C[0x20];                                      // 0x00B8(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	FNativeFuncPtr                                ExecFunction;                                      // 0x00D8(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 public:
@@ -487,7 +294,7 @@ static_assert(sizeof(UDelegateFunction) == 0x0000E0, "Wrong size on UDelegateFun
 class USparseDelegateFunction final  : public UDelegateFunction
 {
 public:
-	uint8                                         Pad_41[0x10];                                      // 0x00E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D[0x10];                                      // 0x00E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -503,11 +310,11 @@ static_assert(alignof(USparseDelegateFunction) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(USparseDelegateFunction) == 0x0000F0, "Wrong size on USparseDelegateFunction");
 
 // Class CoreUObject.DynamicClass
-// 0x0080 (0x02B0 - 0x0230)
+// 0x0080 (0x0280 - 0x0200)
 class UDynamicClass final  : public UClass
 {
 public:
-	uint8                                         Pad_42[0x80];                                      // 0x0230(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E[0x80];                                      // 0x0200(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -520,14 +327,14 @@ public:
 	}
 };
 static_assert(alignof(UDynamicClass) == 0x000008, "Wrong alignment on UDynamicClass");
-static_assert(sizeof(UDynamicClass) == 0x0002B0, "Wrong size on UDynamicClass");
+static_assert(sizeof(UDynamicClass) == 0x000280, "Wrong size on UDynamicClass");
 
 // Class CoreUObject.PackageMap
 // 0x00B8 (0x00E0 - 0x0028)
 class UPackageMap : public UObject
 {
 public:
-	uint8                                         Pad_43[0xB8];                                      // 0x0028(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3F[0xB8];                                      // 0x0028(0x00B8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -547,9 +354,9 @@ static_assert(sizeof(UPackageMap) == 0x0000E0, "Wrong size on UPackageMap");
 class UEnum : public UField
 {
 public:
-	uint8                                         Pad_44[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40[0x10];                                      // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	class TArray<class TPair<class FName, int64>> Names;                                             // 0x0040(0x0010)(NOT AUTO-GENERATED PROPERTY)
-	uint8                                         Pad_45[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41[0x18];                                      // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -565,12 +372,49 @@ static_assert(alignof(UEnum) == 0x000008, "Wrong alignment on UEnum");
 static_assert(sizeof(UEnum) == 0x000068, "Wrong size on UEnum");
 static_assert(offsetof(UEnum, Names) == 0x000040, "Member 'UEnum::Names' has a wrong offset!");
 
+// Class CoreUObject.ObjectReachabilityStressData
+// 0x0010 (0x0038 - 0x0028)
+class UObjectReachabilityStressData final  : public UObject
+{
+public:
+	uint8                                         Pad_42[0x10];                                      // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ObjectReachabilityStressData">();
+	}
+	static class UObjectReachabilityStressData* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectReachabilityStressData>();
+	}
+};
+static_assert(alignof(UObjectReachabilityStressData) == 0x000008, "Wrong alignment on UObjectReachabilityStressData");
+static_assert(sizeof(UObjectReachabilityStressData) == 0x000038, "Wrong size on UObjectReachabilityStressData");
+
+// Class CoreUObject.Interface
+// 0x0000 (0x0028 - 0x0028)
+class IInterface : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Interface">();
+	}
+	static class IInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<IInterface>();
+	}
+};
+static_assert(alignof(IInterface) == 0x000008, "Wrong alignment on IInterface");
+static_assert(sizeof(IInterface) == 0x000028, "Wrong size on IInterface");
+
 // Class CoreUObject.LinkerPlaceholderClass
-// 0x01C0 (0x03F0 - 0x0230)
+// 0x01C0 (0x03C0 - 0x0200)
 class ULinkerPlaceholderClass final  : public UClass
 {
 public:
-	uint8                                         Pad_46[0x1C0];                                     // 0x0230(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_43[0x1C0];                                     // 0x0200(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -583,14 +427,34 @@ public:
 	}
 };
 static_assert(alignof(ULinkerPlaceholderClass) == 0x000008, "Wrong alignment on ULinkerPlaceholderClass");
-static_assert(sizeof(ULinkerPlaceholderClass) == 0x0003F0, "Wrong size on ULinkerPlaceholderClass");
+static_assert(sizeof(ULinkerPlaceholderClass) == 0x0003C0, "Wrong size on ULinkerPlaceholderClass");
+
+// Class CoreUObject.LinkerPlaceholderExportObject
+// 0x00D0 (0x00F8 - 0x0028)
+class ULinkerPlaceholderExportObject final  : public UObject
+{
+public:
+	uint8                                         Pad_44[0xD0];                                      // 0x0028(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LinkerPlaceholderExportObject">();
+	}
+	static class ULinkerPlaceholderExportObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULinkerPlaceholderExportObject>();
+	}
+};
+static_assert(alignof(ULinkerPlaceholderExportObject) == 0x000008, "Wrong alignment on ULinkerPlaceholderExportObject");
+static_assert(sizeof(ULinkerPlaceholderExportObject) == 0x0000F8, "Wrong size on ULinkerPlaceholderExportObject");
 
 // Class CoreUObject.LinkerPlaceholderFunction
 // 0x01C0 (0x02A0 - 0x00E0)
 class ULinkerPlaceholderFunction final  : public UFunction
 {
 public:
-	uint8                                         Pad_47[0x1C0];                                     // 0x00E0(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45[0x1C0];                                     // 0x00E0(0x01C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -610,7 +474,7 @@ static_assert(sizeof(ULinkerPlaceholderFunction) == 0x0002A0, "Wrong size on ULi
 class UMetaData final  : public UObject
 {
 public:
-	uint8                                         Pad_48[0xA0];                                      // 0x0028(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46[0xA0];                                      // 0x0028(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -630,7 +494,7 @@ static_assert(sizeof(UMetaData) == 0x0000C8, "Wrong size on UMetaData");
 class UObjectRedirector final  : public UObject
 {
 public:
-	uint8                                         Pad_49[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -645,12 +509,32 @@ public:
 static_assert(alignof(UObjectRedirector) == 0x000008, "Wrong alignment on UObjectRedirector");
 static_assert(sizeof(UObjectRedirector) == 0x000030, "Wrong size on UObjectRedirector");
 
+// Class CoreUObject.Property
+// 0x0040 (0x0070 - 0x0030)
+class UProperty : public UField
+{
+public:
+	uint8                                         Pad_48[0x40];                                      // 0x0030(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"Property">();
+	}
+	static class UProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UProperty>();
+	}
+};
+static_assert(alignof(UProperty) == 0x000008, "Wrong alignment on UProperty");
+static_assert(sizeof(UProperty) == 0x000070, "Wrong size on UProperty");
+
 // Class CoreUObject.EnumProperty
 // 0x0010 (0x0080 - 0x0070)
 class UEnumProperty final  : public UProperty
 {
 public:
-	uint8                                         Pad_4A[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49[0x10];                                      // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -670,7 +554,7 @@ static_assert(sizeof(UEnumProperty) == 0x000080, "Wrong size on UEnumProperty");
 class UArrayProperty final  : public UProperty
 {
 public:
-	uint8                                         Pad_4B[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -684,6 +568,26 @@ public:
 };
 static_assert(alignof(UArrayProperty) == 0x000008, "Wrong alignment on UArrayProperty");
 static_assert(sizeof(UArrayProperty) == 0x000078, "Wrong size on UArrayProperty");
+
+// Class CoreUObject.ObjectPropertyBase
+// 0x0008 (0x0078 - 0x0070)
+class UObjectPropertyBase : public UProperty
+{
+public:
+	uint8                                         Pad_4B[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ObjectPropertyBase">();
+	}
+	static class UObjectPropertyBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectPropertyBase>();
+	}
+};
+static_assert(alignof(UObjectPropertyBase) == 0x000008, "Wrong alignment on UObjectPropertyBase");
+static_assert(sizeof(UObjectPropertyBase) == 0x000078, "Wrong size on UObjectPropertyBase");
 
 // Class CoreUObject.BoolProperty
 // 0x0008 (0x0078 - 0x0070)
@@ -741,6 +645,23 @@ public:
 };
 static_assert(alignof(UByteProperty) == 0x000008, "Wrong alignment on UByteProperty");
 static_assert(sizeof(UByteProperty) == 0x000078, "Wrong size on UByteProperty");
+
+// Class CoreUObject.ObjectProperty
+// 0x0000 (0x0078 - 0x0078)
+class UObjectProperty : public UObjectPropertyBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"ObjectProperty">();
+	}
+	static class UObjectProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UObjectProperty>();
+	}
+};
+static_assert(alignof(UObjectProperty) == 0x000008, "Wrong alignment on UObjectProperty");
+static_assert(sizeof(UObjectProperty) == 0x000078, "Wrong size on UObjectProperty");
 
 // Class CoreUObject.ClassProperty
 // 0x0008 (0x0080 - 0x0078)
@@ -995,6 +916,23 @@ public:
 static_assert(alignof(UMulticastSparseDelegateProperty) == 0x000008, "Wrong alignment on UMulticastSparseDelegateProperty");
 static_assert(sizeof(UMulticastSparseDelegateProperty) == 0x000078, "Wrong size on UMulticastSparseDelegateProperty");
 
+// Class CoreUObject.NameProperty
+// 0x0000 (0x0070 - 0x0070)
+class UNameProperty final  : public UProperty
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"NameProperty">();
+	}
+	static class UNameProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UNameProperty>();
+	}
+};
+static_assert(alignof(UNameProperty) == 0x000008, "Wrong alignment on UNameProperty");
+static_assert(sizeof(UNameProperty) == 0x000070, "Wrong size on UNameProperty");
+
 // Class CoreUObject.SetProperty
 // 0x0020 (0x0090 - 0x0070)
 class USetProperty final  : public UProperty
@@ -1014,6 +952,43 @@ public:
 };
 static_assert(alignof(USetProperty) == 0x000008, "Wrong alignment on USetProperty");
 static_assert(sizeof(USetProperty) == 0x000090, "Wrong size on USetProperty");
+
+// Class CoreUObject.SoftObjectProperty
+// 0x0000 (0x0078 - 0x0078)
+class USoftObjectProperty : public UObjectPropertyBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SoftObjectProperty">();
+	}
+	static class USoftObjectProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USoftObjectProperty>();
+	}
+};
+static_assert(alignof(USoftObjectProperty) == 0x000008, "Wrong alignment on USoftObjectProperty");
+static_assert(sizeof(USoftObjectProperty) == 0x000078, "Wrong size on USoftObjectProperty");
+
+// Class CoreUObject.SoftClassProperty
+// 0x0008 (0x0080 - 0x0078)
+class USoftClassProperty final  : public USoftObjectProperty
+{
+public:
+	uint8                                         Pad_54[0x8];                                       // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"SoftClassProperty">();
+	}
+	static class USoftClassProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<USoftClassProperty>();
+	}
+};
+static_assert(alignof(USoftClassProperty) == 0x000008, "Wrong alignment on USoftClassProperty");
+static_assert(sizeof(USoftClassProperty) == 0x000080, "Wrong size on USoftClassProperty");
 
 // Class CoreUObject.StrProperty
 // 0x0000 (0x0070 - 0x0070)
@@ -1037,7 +1012,7 @@ static_assert(sizeof(UStrProperty) == 0x000070, "Wrong size on UStrProperty");
 class UStructProperty final  : public UProperty
 {
 public:
-	uint8                                         Pad_54[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55[0x8];                                       // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1103,6 +1078,23 @@ public:
 static_assert(alignof(UUInt64Property) == 0x000008, "Wrong alignment on UUInt64Property");
 static_assert(sizeof(UUInt64Property) == 0x000070, "Wrong size on UUInt64Property");
 
+// Class CoreUObject.WeakObjectProperty
+// 0x0000 (0x0078 - 0x0078)
+class UWeakObjectProperty final  : public UObjectPropertyBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WeakObjectProperty">();
+	}
+	static class UWeakObjectProperty* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWeakObjectProperty>();
+	}
+};
+static_assert(alignof(UWeakObjectProperty) == 0x000008, "Wrong alignment on UWeakObjectProperty");
+static_assert(sizeof(UWeakObjectProperty) == 0x000078, "Wrong size on UWeakObjectProperty");
+
 // Class CoreUObject.TextProperty
 // 0x0000 (0x0070 - 0x0070)
 class UTextProperty final  : public UProperty
@@ -1119,6 +1111,26 @@ public:
 };
 static_assert(alignof(UTextProperty) == 0x000008, "Wrong alignment on UTextProperty");
 static_assert(sizeof(UTextProperty) == 0x000070, "Wrong size on UTextProperty");
+
+// Class CoreUObject.PropertyWrapper
+// 0x0008 (0x0030 - 0x0028)
+class UPropertyWrapper : public UObject
+{
+public:
+	uint8                                         Pad_56[0x8];                                       // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"PropertyWrapper">();
+	}
+	static class UPropertyWrapper* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UPropertyWrapper>();
+	}
+};
+static_assert(alignof(UPropertyWrapper) == 0x000008, "Wrong alignment on UPropertyWrapper");
+static_assert(sizeof(UPropertyWrapper) == 0x000030, "Wrong size on UPropertyWrapper");
 
 // Class CoreUObject.MulticastDelegatePropertyWrapper
 // 0x0000 (0x0030 - 0x0030)

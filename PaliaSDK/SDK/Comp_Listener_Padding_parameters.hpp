@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "E_ListenerPushDirection_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "S6Core_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "Palia_structs.hpp"
+#include "E_ListenerPushDirection_structs.hpp"
+#include "S6Core_structs.hpp"
 
 
 namespace SDK::Params
@@ -39,15 +39,15 @@ struct Comp_Listener_Padding_C_DoesEncompassPaddingBox final
 public:
 	class UPrimitiveComponent*                    Primitive;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          EncompassesPoints;                                 // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B6B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42F9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        Points;                                            // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Int;                                               // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Encompasses;                                       // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B6C[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FA[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B6D[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FB[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -68,15 +68,15 @@ public:
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x0188(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B6E[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FC[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Array_Get_Item;                           // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B6F[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FD[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x01C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x01DD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B70[0x2];                                     // 0x01DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FE[0x2];                                     // 0x01DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_LessEqual_DoubleDouble_A_ImplicitCast;    // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Listener_Padding_C_DoesEncompassPaddingBox) == 0x000008, "Wrong alignment on Comp_Listener_Padding_C_DoesEncompassPaddingBox");
@@ -124,15 +124,15 @@ struct Comp_Listener_Padding_C_DoesEncompassPaddingVolume final
 public:
 	class AValeriaSpatialAudioVolume*             ValSpat;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          EncompassesPoints;                                 // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B71[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_42FF[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVector>                        Points;                                            // 0x0010(0x0010)(Edit, BlueprintVisible)
 	int32                                         Int;                                               // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Encompasses;                                       // 0x0024(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0025(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B72[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4300[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B73[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4301[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -153,7 +153,7 @@ public:
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_5;           // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVector>                        K2Node_MakeArray_Array;                            // 0x0188(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0198(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B74[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4302[0x4];                                     // 0x019C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Array_Get_Item;                           // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesEncompassPoint_ReturnValue;           // 0x01B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -195,16 +195,16 @@ static_assert(offsetof(Comp_Listener_Padding_C_DoesEncompassPaddingVolume, CallF
 static_assert(offsetof(Comp_Listener_Padding_C_DoesEncompassPaddingVolume, CallFunc_BooleanAND_ReturnValue) == 0x0001BA, "Member 'Comp_Listener_Padding_C_DoesEncompassPaddingVolume::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 // Function Comp_Listener_Padding.Comp_Listener_Padding_C.ExecuteUbergraph_Comp_Listener_Padding
-// 0x0740 (0x0740 - 0x0000)
+// 0x0700 (0x0700 - 0x0000)
 struct Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding final 
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B75[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4303[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character;            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B76[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4304[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_GetWorldDeltaSeconds_ReturnValue;         // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetViewTarget_ReturnValue;                // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -213,55 +213,55 @@ public:
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B77[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4305[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0058(0x0010)(ConstParm, ReferenceParm)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B78[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4306[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B79[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4307[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EDrawDebugTrace                               Temp_byte_Variable;                                // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7A[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4308[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetViewTarget_ReturnValue_1;              // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7B[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4309[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AHousingPlotActor*                      K2Node_DynamicCast_AsHousing_Plot_Actor;           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7C[0x6];                                     // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430A[0x6];                                     // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCameraComponent*                       CallFunc_GetComponentByClass_ReturnValue_1;        // 0x00A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x00AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_IsClosed_Variable;                       // 0x00AB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7D[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430B[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EDrawDebugTrace                               Temp_byte_Variable_1;                              // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x00B6(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue_1;          // 0x00B7(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7E[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430C[0x4];                                     // 0x00BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character_1;          // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B7F[0x2];                                     // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430D[0x2];                                     // 0x00EA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetComponentTickInterval_ReturnValue;     // 0x00EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EDrawDebugTrace                               K2Node_Select_Default;                             // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x00F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x00F2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B80[0x5];                                     // 0x00F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430E[0x5];                                     // 0x00F3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x00F8(0x0010)(ConstParm, ReferenceParm)
 	bool                                          K2Node_CustomEvent_On;                             // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B81[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_430F[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FHitResult>                     CallFunc_SphereTraceMultiForObjects_OutHits;       // 0x0110(0x0010)(ReferenceParm, ContainsInstancedReference)
 	bool                                          CallFunc_SphereTraceMultiForObjects_ReturnValue;   // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B82[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4310[0x7];                                     // 0x0121(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x0128(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0214(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -269,63 +269,63 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x0216(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0217(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_3;                              // 0x0218(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B83[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4311[0x7];                                     // 0x0219(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0220(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_4;                              // 0x0280(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_5;                              // 0x0281(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B84[0x6];                                     // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4312[0x6];                                     // 0x0282(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_GetAttachParent_ReturnValue;              // 0x0288(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UFishingViewComponent*                  CallFunc_GetComponentByClass_ReturnValue_2;        // 0x0290(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x02B0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCharacterStateMachineComponent*        CallFunc_GetCSM_ReturnValue;                       // 0x0310(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_6;                              // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B85[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4313[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharacterStateMachineComponent*        K2Node_CustomEvent_csm;                            // 0x0320(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FCharacterStateChangeParams            K2Node_CustomEvent_params;                         // 0x0328(0x01A8)(ContainsInstancedReference)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x04D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x04D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B86[0x7];                                     // 0x04D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character_2;          // 0x04E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInHousingEditMode_ReturnValue;          // 0x04E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x04EA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B87[0x5];                                     // 0x04EB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class AController*                            CallFunc_GetController_ReturnValue;                // 0x04F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller;            // 0x04F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x0501(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B88[0x6];                                     // 0x0502(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFishingViewComponent*                  K2Node_CustomEvent_FishingView;                    // 0x0508(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FFishingMiniGameViewState              K2Node_CustomEvent_ViewState;                      // 0x0510(0x0130)()
-	class UFishingComponent*                      K2Node_CustomEvent_Source;                         // 0x0640(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERedirectsPlatform                            Temp_byte_Variable_2;                              // 0x064A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B89[0x5];                                     // 0x064B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutLocation; // 0x0650(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutFrontDir; // 0x0668(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutRightDir; // 0x0680(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0698(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UFishingViewComponent* FishingView, const struct FFishingMiniGameViewState& ViewState, class UFishingComponent* Source)> K2Node_CreateDelegate_OutputDelegate;              // 0x06B0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x06C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAkRoomComponent*>               CallFunc_GetAudioRoomComponents_ReturnValue;       // 0x06D8(0x0010)(ReferenceParm, ContainsInstancedReference)
-	class UAkRoomComponent*                       CallFunc_Array_Get_Item_1;                         // 0x06E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x06F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	ERedirectsPlatform                            CallFunc_GetPlatformType_ReturnValue;              // 0x0700(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_Select_Default_1;                           // 0x0701(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8A[0x6];                                     // 0x0702(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_GetAttachParent_ReturnValue_1;            // 0x0708(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x0710(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8B[0x7];                                     // 0x0711(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class USpringArmComponent*                    K2Node_DynamicCast_AsSpring_Arm_Component;         // 0x0718(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0720(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8C[0x3];                                     // 0x0721(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UCharacterStateMachineComponent* Csm, const struct FCharacterStateChangeParams& Params)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0724(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast; // 0x0734(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FCharacterStateChangeParams            K2Node_CustomEvent_params;                         // 0x0328(0x0178)(ContainsInstancedReference)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4314[0x7];                                     // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character_2;          // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInHousingEditMode_ReturnValue;          // 0x04B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x04BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4315[0x5];                                     // 0x04BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class AController*                            CallFunc_GetController_ReturnValue;                // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APlayerController*                      K2Node_DynamicCast_AsPlayer_Controller;            // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x04D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4316[0x6];                                     // 0x04D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFishingViewComponent*                  K2Node_CustomEvent_FishingView;                    // 0x04D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FFishingMiniGameViewState              K2Node_CustomEvent_ViewState;                      // 0x04E0(0x0120)()
+	class UFishingComponent*                      K2Node_CustomEvent_Source;                         // 0x0600(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0609(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERedirectsPlatform                            Temp_byte_Variable_2;                              // 0x060A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4317[0x5];                                     // 0x060B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutLocation; // 0x0610(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutFrontDir; // 0x0628(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutRightDir; // 0x0640(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0658(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UFishingViewComponent* FishingView, const struct FFishingMiniGameViewState& ViewState, class UFishingComponent* Source)> K2Node_CreateDelegate_OutputDelegate;              // 0x0670(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0680(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAkRoomComponent*>               CallFunc_GetAudioRoomComponents_ReturnValue;       // 0x0698(0x0010)(ReferenceParm, ContainsInstancedReference)
+	class UAkRoomComponent*                       CallFunc_Array_Get_Item_1;                         // 0x06A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x06B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	ERedirectsPlatform                            CallFunc_GetPlatformType_ReturnValue;              // 0x06C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_Select_Default_1;                           // 0x06C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4318[0x6];                                     // 0x06C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_GetAttachParent_ReturnValue_1;            // 0x06C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_3;                // 0x06D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4319[0x7];                                     // 0x06D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class USpringArmComponent*                    K2Node_DynamicCast_AsSpring_Arm_Component;         // 0x06D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x06E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_431A[0x3];                                     // 0x06E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UCharacterStateMachineComponent* Csm, const struct FCharacterStateChangeParams& Params)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x06E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast; // 0x06F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding) == 0x000010, "Wrong alignment on Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding");
-static_assert(sizeof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding) == 0x000740, "Wrong size on Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding");
+static_assert(sizeof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding) == 0x000700, "Wrong size on Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding");
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, EntryPoint) == 0x000000, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::EntryPoint' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetOwner_ReturnValue) == 0x000008, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsValeria_Character) == 0x000010, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsValeria_Character' has a wrong offset!");
@@ -393,39 +393,39 @@ static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Pa
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_6) == 0x000318, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_6' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_csm) == 0x000320, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_csm' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_params) == 0x000328, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_params' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetOwner_ReturnValue_2) == 0x0004D0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_7) == 0x0004D8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsValeria_Character_2) == 0x0004E0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsValeria_Character_2' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_3) == 0x0004E8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_IsInHousingEditMode_ReturnValue) == 0x0004E9, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_IsInHousingEditMode_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_IsLocallyControlled_ReturnValue) == 0x0004EA, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetController_ReturnValue) == 0x0004F0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsPlayer_Controller) == 0x0004F8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsPlayer_Controller' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_4) == 0x000500, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_8) == 0x000501, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_FishingView) == 0x000508, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_FishingView' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_ViewState) == 0x000510, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_ViewState' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_Source) == 0x000640, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_Source' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_9) == 0x000648, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000649, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_byte_Variable_2) == 0x00064A, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_byte_Variable_2' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutLocation) == 0x000650, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutLocation' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutFrontDir) == 0x000668, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutFrontDir' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutRightDir) == 0x000680, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutRightDir' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000698, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CreateDelegate_OutputDelegate) == 0x0006B0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Add_VectorVector_ReturnValue) == 0x0006C0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetAudioRoomComponents_ReturnValue) == 0x0006D8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetAudioRoomComponents_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Array_Get_Item_1) == 0x0006E8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetDisplayName_ReturnValue) == 0x0006F0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetPlatformType_ReturnValue) == 0x000700, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetPlatformType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_Select_Default_1) == 0x000701, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetAttachParent_ReturnValue_1) == 0x000708, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetAttachParent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Not_PreBool_ReturnValue_3) == 0x000710, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsSpring_Arm_Component) == 0x000718, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsSpring_Arm_Component' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_5) == 0x000720, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CreateDelegate_OutputDelegate_1) == 0x000724, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast) == 0x000734, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetOwner_ReturnValue_2) == 0x0004A0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetOwner_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_7) == 0x0004A8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsValeria_Character_2) == 0x0004B0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsValeria_Character_2' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_3) == 0x0004B8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_IsInHousingEditMode_ReturnValue) == 0x0004B9, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_IsInHousingEditMode_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_IsLocallyControlled_ReturnValue) == 0x0004BA, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetController_ReturnValue) == 0x0004C0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsPlayer_Controller) == 0x0004C8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsPlayer_Controller' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_4) == 0x0004D0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_8) == 0x0004D1, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_FishingView) == 0x0004D8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_FishingView' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_ViewState) == 0x0004E0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_ViewState' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CustomEvent_Source) == 0x000600, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CustomEvent_Source' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_bool_Variable_9) == 0x000608, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000609, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, Temp_byte_Variable_2) == 0x00060A, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::Temp_byte_Variable_2' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutLocation) == 0x000610, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutLocation' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutFrontDir) == 0x000628, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutFrontDir' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetValeriaAudioListenerPosition_OutRightDir) == 0x000640, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetValeriaAudioListenerPosition_OutRightDir' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Multiply_VectorFloat_ReturnValue) == 0x000658, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Multiply_VectorFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CreateDelegate_OutputDelegate) == 0x000670, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Add_VectorVector_ReturnValue) == 0x000680, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetAudioRoomComponents_ReturnValue) == 0x000698, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetAudioRoomComponents_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Array_Get_Item_1) == 0x0006A8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetDisplayName_ReturnValue) == 0x0006B0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetPlatformType_ReturnValue) == 0x0006C0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetPlatformType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_Select_Default_1) == 0x0006C1, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_GetAttachParent_ReturnValue_1) == 0x0006C8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_GetAttachParent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_Not_PreBool_ReturnValue_3) == 0x0006D0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_Not_PreBool_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_AsSpring_Arm_Component) == 0x0006D8, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_AsSpring_Arm_Component' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_DynamicCast_bSuccess_5) == 0x0006E0, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, K2Node_CreateDelegate_OutputDelegate_1) == 0x0006E4, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding, CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast) == 0x0006F4, "Member 'Comp_Listener_Padding_C_ExecuteUbergraph_Comp_Listener_Padding::CallFunc_SphereTraceMultiForObjects_Radius_ImplicitCast' has a wrong offset!");
 
 // Function Comp_Listener_Padding.Comp_Listener_Padding_C.FindNewPosition
 // 0x0570 (0x0570 - 0x0000)
@@ -435,7 +435,7 @@ public:
 	TArray<struct FHitResult>                     Hit;                                               // 0x0000(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	struct FVector                                NewLocation;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsOverlapping;                                     // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8D[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_431B[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    HitComponent;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 HitActor;                                          // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                ImpactNormal;                                      // 0x0040(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -443,14 +443,14 @@ public:
 	struct FVector                                CurrentLoc;                                        // 0x0070(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AValeriaSpatialAudioVolume*             HitVolume;                                         // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          ResetLocal;                                        // 0x0090(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8E[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_431C[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Loc;                                               // 0x0098(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Prio;                                              // 0x00B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x00B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesEncompassPaddingBox_EncompassesPoints; // 0x00BA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B8F[0x5];                                     // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_431D[0x5];                                     // 0x00BB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Vector_GetAbs_ReturnValue;                // 0x00C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_GetMaxElement_ReturnValue;                // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -462,15 +462,15 @@ public:
 	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue;         // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B90[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_431E[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0168(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B91[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_431F[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x0188(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0270(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0274(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0275(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B92[0x2];                                     // 0x0276(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4320[0x2];                                     // 0x0276(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x0278(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -485,39 +485,39 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x030C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B93[0x4];                                     // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4321[0x4];                                     // 0x0314(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0330(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0349(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B94[0x6];                                     // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4322[0x6];                                     // 0x034A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0350(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0368(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable;                              // 0x0380(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0390(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x03A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesEncompassPaddingVolume_EncompassesPoints; // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B95[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4323[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody; // 0x03B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue;   // 0x03D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x03D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B96[0x3];                                     // 0x03D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4324[0x3];                                     // 0x03D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetClosestPointOnCollision_OutPointOnBody_1; // 0x03D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetClosestPointOnCollision_ReturnValue_1; // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue_1;    // 0x03F4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B97[0x3];                                     // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4325[0x3];                                     // 0x03F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           Temp_struct_Variable_1;                            // 0x03F8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Temp_struct_Variable_2;                            // 0x0408(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_ListenerPushDirection                       Temp_byte_Variable;                                // 0x0418(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesEncompassPoint_ReturnValue;           // 0x0419(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B98[0x6];                                     // 0x041A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4326[0x6];                                     // 0x041A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_2;    // 0x0420(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_3;    // 0x0438(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 Temp_string_Variable;                              // 0x0450(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Temp_string_Variable_1;                            // 0x0460(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 Temp_string_Variable_2;                            // 0x0470(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	E_ListenerPushDirection                       Temp_byte_Variable_1;                              // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B99[0x7];                                     // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4327[0x7];                                     // 0x0481(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_Select_Default;                             // 0x0488(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FLinearColor                           K2Node_Select_Default_1;                           // 0x0498(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x04A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -529,11 +529,11 @@ public:
 	struct FVector                                CallFunc_Multiply_VectorFloat_ReturnValue_1;       // 0x0518(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AValeriaSpatialAudioVolume*             K2Node_DynamicCast_AsValeria_Spatial_Audio_Volume; // 0x0530(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0538(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9A[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4328[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_3;           // 0x0540(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x0559(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9B[0x6];                                     // 0x055A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4329[0x6];                                     // 0x055A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast;   // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1; // 0x0568(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -630,20 +630,20 @@ static_assert(offsetof(Comp_Listener_Padding_C_FindNewPosition, CallFunc_EqualEq
 static_assert(offsetof(Comp_Listener_Padding_C_FindNewPosition, CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1) == 0x000568, "Member 'Comp_Listener_Padding_C_FindNewPosition::CallFunc_EqualEqual_DoubleDouble_A_ImplicitCast_1' has a wrong offset!");
 
 // Function Comp_Listener_Padding.Comp_Listener_Padding_C.FishingViewWasUpdated
-// 0x0150 (0x0150 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct Comp_Listener_Padding_C_FishingViewWasUpdated final 
 {
 public:
 	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9C[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFishingMiniGameViewState              ViewState;                                         // 0x0010(0x0130)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UFishingComponent*                      Source;                                            // 0x0140(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_432A[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFishingMiniGameViewState              ViewState;                                         // 0x0010(0x0120)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UFishingComponent*                      Source;                                            // 0x0130(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Listener_Padding_C_FishingViewWasUpdated) == 0x000010, "Wrong alignment on Comp_Listener_Padding_C_FishingViewWasUpdated");
-static_assert(sizeof(Comp_Listener_Padding_C_FishingViewWasUpdated) == 0x000150, "Wrong size on Comp_Listener_Padding_C_FishingViewWasUpdated");
+static_assert(sizeof(Comp_Listener_Padding_C_FishingViewWasUpdated) == 0x000140, "Wrong size on Comp_Listener_Padding_C_FishingViewWasUpdated");
 static_assert(offsetof(Comp_Listener_Padding_C_FishingViewWasUpdated, FishingView) == 0x000000, "Member 'Comp_Listener_Padding_C_FishingViewWasUpdated::FishingView' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_FishingViewWasUpdated, ViewState) == 0x000010, "Member 'Comp_Listener_Padding_C_FishingViewWasUpdated::ViewState' has a wrong offset!");
-static_assert(offsetof(Comp_Listener_Padding_C_FishingViewWasUpdated, Source) == 0x000140, "Member 'Comp_Listener_Padding_C_FishingViewWasUpdated::Source' has a wrong offset!");
+static_assert(offsetof(Comp_Listener_Padding_C_FishingViewWasUpdated, Source) == 0x000130, "Member 'Comp_Listener_Padding_C_FishingViewWasUpdated::Source' has a wrong offset!");
 
 // Function Comp_Listener_Padding.Comp_Listener_Padding_C.GatherHitResults
 // 0x0310 (0x0310 - 0x0000)
@@ -656,7 +656,7 @@ public:
 	struct FHitResult                             HitResult;                                         // 0x00F8(0x00E8)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	class AValeriaSpatialAudioVolume*             K2Node_DynamicCast_AsValeria_Spatial_Audio_Volume; // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9D[0x7];                                     // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_432B[0x7];                                     // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AAkAcousticPortal*                      K2Node_DynamicCast_AsAk_Acoustic_Portal;           // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ShouldPushFunc_Should;                    // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -664,7 +664,7 @@ public:
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x01FB(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01FD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9E[0x2];                                     // 0x01FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_432C[0x2];                                     // 0x01FE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0204(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -679,18 +679,18 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0294(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9F[0x4];                                     // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_432D[0x4];                                     // 0x029C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA0[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_432E[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxComponent*                          K2Node_DynamicCast_AsBox_Collision;                // 0x02D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA1[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_432F[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_GetChildComponent_ReturnValue;            // 0x02E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAkPortalComponent*                     K2Node_DynamicCast_AsAk_Portal_Component;          // 0x02F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA2[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4330[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkRoomComponent*                       K2Node_DynamicCast_AsAk_Room_Component;            // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAkAcousticPortalState                        CallFunc_GetCurrentState_ReturnValue_1;            // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -763,15 +763,15 @@ static_assert(sizeof(Comp_Listener_Padding_C_IsReelingFish) == 0x000001, "Wrong 
 static_assert(offsetof(Comp_Listener_Padding_C_IsReelingFish, IsReeling) == 0x000000, "Member 'Comp_Listener_Padding_C_IsReelingFish::IsReeling' has a wrong offset!");
 
 // Function Comp_Listener_Padding.Comp_Listener_Padding_C.OnCharacterStateChange
-// 0x01B0 (0x01B0 - 0x0000)
+// 0x0180 (0x0180 - 0x0000)
 struct Comp_Listener_Padding_C_OnCharacterStateChange final 
 {
 public:
 	class UCharacterStateMachineComponent*        Csm;                                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FCharacterStateChangeParams            Params_0;                                          // 0x0008(0x01A8)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
+	struct FCharacterStateChangeParams            Params_0;                                          // 0x0008(0x0178)(BlueprintVisible, BlueprintReadOnly, Parm, ContainsInstancedReference)
 };
 static_assert(alignof(Comp_Listener_Padding_C_OnCharacterStateChange) == 0x000008, "Wrong alignment on Comp_Listener_Padding_C_OnCharacterStateChange");
-static_assert(sizeof(Comp_Listener_Padding_C_OnCharacterStateChange) == 0x0001B0, "Wrong size on Comp_Listener_Padding_C_OnCharacterStateChange");
+static_assert(sizeof(Comp_Listener_Padding_C_OnCharacterStateChange) == 0x000180, "Wrong size on Comp_Listener_Padding_C_OnCharacterStateChange");
 static_assert(offsetof(Comp_Listener_Padding_C_OnCharacterStateChange, Csm) == 0x000000, "Member 'Comp_Listener_Padding_C_OnCharacterStateChange::Csm' has a wrong offset!");
 static_assert(offsetof(Comp_Listener_Padding_C_OnCharacterStateChange, Params_0) == 0x000008, "Member 'Comp_Listener_Padding_C_OnCharacterStateChange::Params_0' has a wrong offset!");
 
@@ -794,7 +794,7 @@ public:
 	struct FVector                                NewPosition;                                       // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               NewRotation;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UsePlayerCameraRot;                                // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA3[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4331[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x0038(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };
 static_assert(alignof(Comp_Listener_Padding_C_SetPosition) == 0x000008, "Wrong alignment on Comp_Listener_Padding_C_SetPosition");
@@ -812,7 +812,7 @@ public:
 	class UAkRoomComponent*                       Room;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Should;                                            // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA4[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4332[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0010(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Listener_Padding_C_ShouldPushFunc) == 0x000008, "Wrong alignment on Comp_Listener_Padding_C_ShouldPushFunc");
@@ -830,7 +830,7 @@ public:
 	struct FTransform                             From;                                              // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             To;                                                // 0x0060(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Speed;                                             // 0x00C0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA5[0x8];                                     // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4333[0x8];                                     // 0x00C8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_TLerp_ReturnValue;                        // 0x00D0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0130(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
@@ -854,11 +854,11 @@ struct Comp_Listener_Padding_C_UpdateListenerPosition final
 {
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA6[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4334[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetViewTarget_ReturnValue;                // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaVillagerCharacter*              K2Node_DynamicCast_AsValeria_Villager_Character;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4335[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue;       // 0x0020(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UCameraComponent*                       CallFunc_GetComponentByClass_ReturnValue;          // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -869,10 +869,10 @@ public:
 	struct FRotator                               CallFunc_BreakTransform_Rotation_1;                // 0x0148(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale_1;                   // 0x0160(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA8[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4336[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_GetAttachParent_ReturnValue;              // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0188(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BA9[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4337[0x7];                                     // 0x0189(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               CallFunc_K2_GetComponentRotation_ReturnValue;      // 0x0190(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class ASubgameCutawayScene*                   CallFunc_GetPlayingSubgameCutawayScene_ReturnValue; // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_FindNewPosition_NewLocation;              // 0x01B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -880,12 +880,12 @@ public:
 	struct FTransform                             CallFunc_MakeTransform_ReturnValue;                // 0x01E0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BAA[0x7];                                     // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4338[0x7];                                     // 0x0259(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_K2_GetComponentToWorld_ReturnValue_2;     // 0x0260(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BAB[0x5];                                     // 0x02C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4339[0x5];                                     // 0x02C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_FindNewPosition_NewLocation_1;            // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

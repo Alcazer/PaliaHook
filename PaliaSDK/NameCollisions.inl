@@ -9,46 +9,32 @@
 // FORWARD DECLARATIONS
 
 
-namespace ABP_Bow { struct FAnimBlueprintGeneratedConstantData; }
+namespace ButtonStyle_Icon_04_CM { class UButtonStyle_Icon_04_CM_C; }
+
+namespace ABP_Kenyatta_PostProcess { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace GameplayAbilities { struct FServerAbilityRPCBatch; }
 
 namespace Palia { struct FDebugCheat; }
 
+namespace ABP_Bobber_Standard { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Jina { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace WBP_TextButton_CM_0 { class UWBP_TextButton_CM_C; }
+
+namespace WBP_TextButton_CM { class UWBP_TextButton_CM_C; }
+
 namespace ABP_Female_Hair_BuzzNatural01 { struct FAnimBlueprintGeneratedConstantData; }
+
+namespace ABP_Bow { struct FAnimBlueprintGeneratedConstantData; }
 
 namespace ButtonStyle_Icon_04_CM_0 { class UButtonStyle_Icon_04_CM_C; }
 
 namespace ABP_Female_Hair_Bob01 { struct FAnimBlueprintGeneratedConstantData; }
 
-namespace ButtonStyle_Icon_04_CM { class UButtonStyle_Icon_04_CM_C; }
-
-namespace ABP_Kenyatta_PostProcess { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Bobber_Standard { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Jina { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace ABP_Jina_Head { struct FAnimBlueprintGeneratedConstantData; }
-
-namespace WBP_TextButton_CM { class UWBP_TextButton_CM_C; }
-
-namespace WBP_TextButton_CM_0 { class UWBP_TextButton_CM_C; }
-
-
-namespace ABP_Female_Torso_Commoner01
-{
-	struct FAnimBlueprintGeneratedMutableData;
-	struct FAnimBlueprintGeneratedConstantData;
-}
 
 namespace ABP_FishingRod
-{
-	struct FAnimBlueprintGeneratedConstantData;
-	struct FAnimBlueprintGeneratedMutableData;
-}
-
-namespace ABP_PC_Female
 {
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
@@ -56,8 +42,8 @@ namespace ABP_PC_Female
 
 namespace ABP_Valerian
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
 }
 
 namespace ABP_Female_Legs_Commoner01
@@ -68,11 +54,23 @@ namespace ABP_Female_Legs_Commoner01
 
 namespace ABP_Jina_PostProcess
 {
+	struct FAnimBlueprintGeneratedConstantData;
+	struct FAnimBlueprintGeneratedMutableData;
+}
+
+namespace ABP_Female_Torso_Commoner01
+{
 	struct FAnimBlueprintGeneratedMutableData;
 	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace ABP_Female_Hair_Medium
+namespace ThirdPerson_AnimBP
+{
+	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
+}
+
+namespace ABP_PC_Female
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
@@ -80,11 +78,11 @@ namespace ABP_Female_Hair_Medium
 
 namespace ABP_Base_Head
 {
-	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;
+	struct FAnimBlueprintGeneratedConstantData;
 }
 
-namespace ThirdPerson_AnimBP
+namespace ABP_Female_Hair_Medium
 {
 	struct FAnimBlueprintGeneratedConstantData;
 	struct FAnimBlueprintGeneratedMutableData;

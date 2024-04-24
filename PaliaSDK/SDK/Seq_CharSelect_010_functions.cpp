@@ -17,19 +17,19 @@
 namespace SDK
 {
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_0
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_0
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_0(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::BP_vfx_charCreate_EssenceA_Event_0(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "BP_vfx_charCreate_EssenceA_Event_0");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "BP_vfx_charCreate_EssenceA_Event_0");
 
-	Params::Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_0 Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_0 Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -37,19 +37,19 @@ void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_0(cla
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_1
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_1
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_1(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::BP_vfx_charCreate_EssenceA_Event_1(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "BP_vfx_charCreate_EssenceA_Event_1");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "BP_vfx_charCreate_EssenceA_Event_1");
 
-	Params::Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_1 Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_1 Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -57,19 +57,19 @@ void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_1(cla
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.BP_vfx_charCreate_EssenceA_Event_2
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.BP_vfx_charCreate_EssenceA_Event_2
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_2(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::BP_vfx_charCreate_EssenceA_Event_2(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "BP_vfx_charCreate_EssenceA_Event_2");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "BP_vfx_charCreate_EssenceA_Event_2");
 
-	Params::Seq_CharSelect_010__Director_BP__C_BP_vfx_charCreate_EssenceA_Event_2 Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_BP_vfx_charCreate_EssenceA_Event_2 Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -77,7 +77,7 @@ void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_2(cla
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.ExecuteUbergraph_Seq_CharSelect_010 (Director BP)
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.ExecuteUbergraph_Seq_CharSelect_010 (Director BP)
 // (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -88,14 +88,14 @@ void USeq_CharSelect_010__Director_BP__C::BP_vfx_charCreate_EssenceA_Event_2(cla
 // int32                                   CallFunc_AkEventGlobal_ReturnValue_1                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_AkEventGlobal_ReturnValue_2                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::ExecuteUbergraph_Seq_CharSelect_010__Director_BP_(int32 EntryPoint, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA, int32 CallFunc_AkEventGlobal_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue_1, int32 CallFunc_AkEventGlobal_ReturnValue_2)
+void USeq_CharSelect_010_DirectorBP_C::ExecuteUbergraph_Seq_CharSelect_010__Director_BP_(int32 EntryPoint, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1, class ABP_vfx_charCreate_EssenceA_C* K2Node_CustomEvent_BP_vfx_charCreate_EssenceA, int32 CallFunc_AkEventGlobal_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue_1, int32 CallFunc_AkEventGlobal_ReturnValue_2)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "ExecuteUbergraph_Seq_CharSelect_010 (Director BP)");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "ExecuteUbergraph_Seq_CharSelect_010 (Director BP)");
 
-	Params::Seq_CharSelect_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_ Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Director_BP_ Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 	Parms.K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2 = K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2;
@@ -109,19 +109,19 @@ void USeq_CharSelect_010__Director_BP__C::ExecuteUbergraph_Seq_CharSelect_010__D
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)");
 
-	Params::Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_ Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP_ Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -129,19 +129,19 @@ void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelec
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_0");
 
-	Params::Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0 Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__0 Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -149,19 +149,19 @@ void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelec
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class ABP_vfx_charCreate_EssenceA_C*    BP_vfx_charCreate_EssenceA                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
+void USeq_CharSelect_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1(class ABP_vfx_charCreate_EssenceA_C* BP_vfx_charCreate_EssenceA)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_1");
 
-	Params::Seq_CharSelect_010__Director_BP__C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1 Parms{};
+	Params::Seq_CharSelect_010_DirectorBP_C_SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__1 Parms{};
 
 	Parms.BP_vfx_charCreate_EssenceA = BP_vfx_charCreate_EssenceA;
 
@@ -169,57 +169,57 @@ void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelec
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_2
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_2
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__2()
+void USeq_CharSelect_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__2()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_2");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_2");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_3
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_3
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__3()
+void USeq_CharSelect_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_010__Director_BP__3()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_3");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_010 (Director BP)_3");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.StartAudio
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.StartAudio
 // (BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_010__Director_BP__C::StartAudio()
+void USeq_CharSelect_010_DirectorBP_C::StartAudio()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "StartAudio");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "StartAudio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Seq_CharSelect_010.Seq_CharSelect_010 (Director BP)_C.StartMagicSFX
+// Function Seq_CharSelect_010.Seq_CharSelect_010_DirectorBP_C.StartMagicSFX
 // (BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_010__Director_BP__C::StartMagicSFX()
+void USeq_CharSelect_010_DirectorBP_C::StartMagicSFX()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_010 (Director BP)_C", "StartMagicSFX");
+		Func = Class->GetFunction("Seq_CharSelect_010_DirectorBP_C", "StartMagicSFX");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

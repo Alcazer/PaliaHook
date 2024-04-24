@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function NavigationSystem.NavigationPath.EnableDebugDrawing
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // bool                                    bShouldDrawDebugData                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLinearColor                     PathColor                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ void UNavigationPath::EnableDebugDrawing(bool bShouldDrawDebugData, const struct
 
 
 // Function NavigationSystem.NavigationPath.EnableRecalculationOnInvalidation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ENavigationOptionFlag                   DoRecalculation                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -70,7 +70,7 @@ void UNavigationPath::EnableRecalculationOnInvalidation(ENavigationOptionFlag Do
 
 
 // Function NavigationSystem.NavigationPath.GetDebugString
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -95,11 +95,11 @@ class FString UNavigationPath::GetDebugString() const
 
 
 // Function NavigationSystem.NavigationPath.GetPathCost
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UNavigationPath::GetPathCost() const
+double UNavigationPath::GetPathCost() const
 {
 	static class UFunction* Func = nullptr;
 
@@ -120,11 +120,11 @@ float UNavigationPath::GetPathCost() const
 
 
 // Function NavigationSystem.NavigationPath.GetPathLength
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UNavigationPath::GetPathLength() const
+double UNavigationPath::GetPathLength() const
 {
 	static class UFunction* Func = nullptr;
 
@@ -145,7 +145,7 @@ float UNavigationPath::GetPathLength() const
 
 
 // Function NavigationSystem.NavigationPath.IsPartial
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -170,7 +170,7 @@ bool UNavigationPath::IsPartial() const
 
 
 // Function NavigationSystem.NavigationPath.IsStringPulled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -195,7 +195,7 @@ bool UNavigationPath::IsStringPulled() const
 
 
 // Function NavigationSystem.NavigationPath.IsValid
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -220,7 +220,7 @@ bool UNavigationPath::IsValid() const
 
 
 // Function NavigationSystem.NavigationSystemV1.FindPathToActorSynchronously
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathStart                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -258,7 +258,7 @@ class UNavigationPath* UNavigationSystemV1::FindPathToActorSynchronously(class U
 
 
 // Function NavigationSystem.NavigationSystemV1.FindPathToLocationSynchronously
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathStart                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -294,7 +294,7 @@ class UNavigationPath* UNavigationSystemV1::FindPathToLocationSynchronously(clas
 
 
 // Function NavigationSystem.NavigationSystemV1.GetNavigationSystem
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNavigationSystemV1*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -322,17 +322,17 @@ class UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(class UObjec
 
 
 // Function NavigationSystem.NavigationSystemV1.GetPathCost
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathStart                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathEnd                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   PathCost                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  PathCost                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class ANavigationData*                  NavData                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavigationQueryFilter>FilterClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ENavigationQueryResult                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-ENavigationQueryResult UNavigationSystemV1::GetPathCost(class UObject* WorldContextObject, struct FVector& PathStart, struct FVector& PathEnd, float* PathCost, class ANavigationData* NavData, TSubclassOf<class UNavigationQueryFilter> FilterClass)
+ENavigationQueryResult UNavigationSystemV1::GetPathCost(class UObject* WorldContextObject, struct FVector& PathStart, struct FVector& PathEnd, double* PathCost, class ANavigationData* NavData, TSubclassOf<class UNavigationQueryFilter> FilterClass)
 {
 	static class UFunction* Func = nullptr;
 
@@ -362,17 +362,17 @@ ENavigationQueryResult UNavigationSystemV1::GetPathCost(class UObject* WorldCont
 
 
 // Function NavigationSystem.NavigationSystemV1.GetPathLength
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathStart                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          PathEnd                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   PathLength                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  PathLength                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class ANavigationData*                  NavData                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavigationQueryFilter>FilterClass                                            (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // ENavigationQueryResult                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-ENavigationQueryResult UNavigationSystemV1::GetPathLength(class UObject* WorldContextObject, struct FVector& PathStart, struct FVector& PathEnd, float* PathLength, class ANavigationData* NavData, TSubclassOf<class UNavigationQueryFilter> FilterClass)
+ENavigationQueryResult UNavigationSystemV1::GetPathLength(class UObject* WorldContextObject, struct FVector& PathStart, struct FVector& PathEnd, double* PathLength, class ANavigationData* NavData, TSubclassOf<class UNavigationQueryFilter> FilterClass)
 {
 	static class UFunction* Func = nullptr;
 
@@ -402,7 +402,7 @@ ENavigationQueryResult UNavigationSystemV1::GetPathLength(class UObject* WorldCo
 
 
 // Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuilt
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -430,7 +430,7 @@ bool UNavigationSystemV1::IsNavigationBeingBuilt(class UObject* WorldContextObje
 
 
 // Function NavigationSystem.NavigationSystemV1.IsNavigationBeingBuiltOrLocked
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -458,7 +458,7 @@ bool UNavigationSystemV1::IsNavigationBeingBuiltOrLocked(class UObject* WorldCon
 
 
 // Function NavigationSystem.NavigationSystemV1.K2_GetRandomLocationInNavigableRadius
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -498,7 +498,7 @@ bool UNavigationSystemV1::K2_GetRandomLocationInNavigableRadius(class UObject* W
 
 
 // Function NavigationSystem.NavigationSystemV1.K2_GetRandomPointInNavigableRadius
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -538,7 +538,7 @@ bool UNavigationSystemV1::K2_GetRandomPointInNavigableRadius(class UObject* Worl
 
 
 // Function NavigationSystem.NavigationSystemV1.K2_GetRandomReachablePointInRadius
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Origin                                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -578,7 +578,7 @@ bool UNavigationSystemV1::K2_GetRandomReachablePointInRadius(class UObject* Worl
 
 
 // Function NavigationSystem.NavigationSystemV1.K2_ProjectPointToNavigation
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Point                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -618,7 +618,7 @@ bool UNavigationSystemV1::K2_ProjectPointToNavigation(class UObject* WorldContex
 
 
 // Function NavigationSystem.NavigationSystemV1.NavigationRaycast
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          RayStart                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -658,7 +658,7 @@ bool UNavigationSystemV1::NavigationRaycast(class UObject* WorldContextObject, s
 
 
 // Function NavigationSystem.NavigationSystemV1.K2_ReplaceAreaInOctreeData
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          Object                                                 (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavArea>             OldArea                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -690,7 +690,7 @@ bool UNavigationSystemV1::K2_ReplaceAreaInOctreeData(class UObject* Object, TSub
 
 
 // Function NavigationSystem.NavigationSystemV1.OnNavigationBoundsUpdated
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class ANavMeshBoundsVolume*             NavVolume                                              (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -715,7 +715,7 @@ void UNavigationSystemV1::OnNavigationBoundsUpdated(class ANavMeshBoundsVolume* 
 
 
 // Function NavigationSystem.NavigationSystemV1.RegisterNavigationInvoker
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Invoker                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   TileGenerationRadius                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -744,7 +744,7 @@ void UNavigationSystemV1::RegisterNavigationInvoker(class AActor* Invoker, float
 
 
 // Function NavigationSystem.NavigationSystemV1.ResetMaxSimultaneousTileGenerationJobsCount
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UNavigationSystemV1::ResetMaxSimultaneousTileGenerationJobsCount()
 {
@@ -763,7 +763,7 @@ void UNavigationSystemV1::ResetMaxSimultaneousTileGenerationJobsCount()
 
 
 // Function NavigationSystem.NavigationSystemV1.SetGeometryGatheringMode
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // ENavDataGatheringModeConfig             NewMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -788,7 +788,7 @@ void UNavigationSystemV1::SetGeometryGatheringMode(ENavDataGatheringModeConfig N
 
 
 // Function NavigationSystem.NavigationSystemV1.SetMaxSimultaneousTileGenerationJobsCount
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   MaxNumberOfJobs                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -813,7 +813,7 @@ void UNavigationSystemV1::SetMaxSimultaneousTileGenerationJobsCount(int32 MaxNum
 
 
 // Function NavigationSystem.NavigationSystemV1.UnregisterNavigationInvoker
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AActor*                           Invoker                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -838,7 +838,7 @@ void UNavigationSystemV1::UnregisterNavigationInvoker(class AActor* Invoker)
 
 
 // Function NavigationSystem.NavRelevantComponent.SetNavigationRelevancy
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bRelevant                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -863,7 +863,7 @@ void UNavRelevantComponent::SetNavigationRelevancy(bool bRelevant)
 
 
 // Function NavigationSystem.RecastNavMesh.K2_ReplaceAreaInTileBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FBox                             Bounds                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // TSubclassOf<class UNavArea>             OldArea                                                (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -897,7 +897,7 @@ bool ARecastNavMesh::K2_ReplaceAreaInTileBounds(const struct FBox& Bounds, TSubc
 
 
 // Function NavigationSystem.NavModifierComponent.SetAreaClass
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UNavArea>             NewAreaClass                                           (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -922,7 +922,7 @@ void UNavModifierComponent::SetAreaClass(TSubclassOf<class UNavArea> NewAreaClas
 
 
 // Function NavigationSystem.NavModifierVolume.SetAreaClass
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // TSubclassOf<class UNavArea>             NewAreaClass                                           (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

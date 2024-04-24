@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "GeometryScriptingCore_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "GeometryScriptingCore_structs.hpp"
 #include "Engine_classes.hpp"
 
 
@@ -38,64 +38,6 @@ public:
 static_assert(alignof(UGeometryScriptDebug) == 0x000008, "Wrong alignment on UGeometryScriptDebug");
 static_assert(sizeof(UGeometryScriptDebug) == 0x000038, "Wrong size on UGeometryScriptDebug");
 static_assert(offsetof(UGeometryScriptDebug, Messages) == 0x000028, "Member 'UGeometryScriptDebug::Messages' has a wrong offset!");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSelectionFunctions final  : public UBlueprintFunctionLibrary
-{
-public:
-	static void CombineMeshSelections(const struct FGeometryScriptMeshSelection& SelectionA, const struct FGeometryScriptMeshSelection& SelectionB, struct FGeometryScriptMeshSelection* ResultSelection, EGeometryScriptCombineSelectionMode CombineMode);
-	static class UDynamicMesh* ConvertIndexArrayToMeshSelection(class UDynamicMesh* TargetMesh, TArray<int32>& IndexArray, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
-	static class UDynamicMesh* ConvertIndexListToMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptIndexList& IndexList, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
-	static class UDynamicMesh* ConvertIndexSetToMeshSelection(class UDynamicMesh* TargetMesh, TSet<int32>& IndexSet, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
-	static class UDynamicMesh* ConvertMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& FromSelection, struct FGeometryScriptMeshSelection* ToSelection, EGeometryScriptMeshSelectionType NewType, bool bAllowPartialInclusion);
-	static class UDynamicMesh* ConvertMeshSelectionToIndexArray(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, TArray<int32>* IndexArray, EGeometryScriptMeshSelectionType* SelectionType);
-	static class UDynamicMesh* ConvertMeshSelectionToIndexList(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptIndexList* IndexList, EGeometryScriptIndexType* ResultListType, EGeometryScriptIndexType ConvertToType);
-	static class UDynamicMesh* CreateSelectAllMeshSelection(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, EGeometryScriptMeshSelectionType SelectionType);
-	static void DebugPrintMeshSelection(const struct FGeometryScriptMeshSelection& Selection, bool bDisable);
-	static class UDynamicMesh* ExpandContractMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, int32 Iterations, bool bContract, bool bOnlyExpandToFaceNeighbours);
-	static class UDynamicMesh* ExpandMeshSelectionToConnected(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, EGeometryScriptTopologyConnectionType ConnectionType);
-	static void GetMeshSelectionInfo(const struct FGeometryScriptMeshSelection& Selection, EGeometryScriptMeshSelectionType* SelectionType, int32* NumSelected);
-	static class UDynamicMesh* InvertMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, bool bOnlyToConnected);
-	static class UDynamicMesh* SelectMeshElementsByNormalAngle(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& Normal, double MaxAngleDeg, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
-	static class UDynamicMesh* SelectMeshElementsInBox(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FBox& Box, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
-	static class UDynamicMesh* SelectMeshElementsInsideMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* SelectionMesh, struct FGeometryScriptMeshSelection* Selection, const struct FTransform& SelectionMeshTransform, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, double ShellDistance, double WindingThreshold, int32 MinNumTrianglePoints);
-	static class UDynamicMesh* SelectMeshElementsInSphere(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& SphereOrigin, double SphereRadius, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
-	static class UDynamicMesh* SelectMeshElementsWithPlane(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& PlaneOrigin, const struct FVector& PlaneNormal, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshSelectionFunctions">();
-	}
-	static class UGeometryScriptLibrary_MeshSelectionFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshSelectionFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSelectionFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshSelectionFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSelectionFunctions");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSelectionQueryFunctions final  : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* GetMeshSelectionBoundaryLoops(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, TArray<struct FGeometryScriptIndexList>* IndexLoops, TArray<struct FGeometryScriptPolyPath>* PathLoops, int32* NumLoops, bool* bFoundErrors, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* GetMeshSelectionBoundingBox(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FBox* SelectionBounds, bool* bIsEmpty, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshSelectionQueryFunctions">();
-	}
-	static class UGeometryScriptLibrary_MeshSelectionQueryFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionQueryFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshSelectionQueryFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSelectionQueryFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshSelectionQueryFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSelectionQueryFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -238,6 +180,7 @@ class UGeometryScriptLibrary_MeshBakeFunctions final  : public UBlueprintFunctio
 {
 public:
 	static TArray<class UTexture2D*> BakeTexture(class UDynamicMesh* TargetMesh, const struct FTransform& TargetTransform, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, class UDynamicMesh* SourceMesh, const struct FTransform& SourceTransform, const struct FGeometryScriptBakeSourceMeshOptions& SourceOptions, TArray<struct FGeometryScriptBakeTypeOptions>& BakeTypes, const struct FGeometryScriptBakeTextureOptions& BakeOptions, class UGeometryScriptDebug* Debug);
+	static struct FGeometryScriptRenderCaptureTextures BakeTextureFromRenderCaptures(class UDynamicMesh* TargetMesh, const struct FTransform& TargetLocalToWorld, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, TArray<class AActor*>& SourceActors, const struct FGeometryScriptBakeRenderCaptureOptions& BakeOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* BakeVertex(class UDynamicMesh* TargetMesh, const struct FTransform& TargetTransform, const struct FGeometryScriptBakeTargetMeshOptions& TargetOptions, class UDynamicMesh* SourceMesh, const struct FTransform& SourceTransform, const struct FGeometryScriptBakeSourceMeshOptions& SourceOptions, const struct FGeometryScriptBakeOutputType& BakeTypes, const struct FGeometryScriptBakeVertexOptions& BakeOptions, class UGeometryScriptDebug* Debug);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeAmbientOcclusion(int32 OcclusionRays, float MaxDistance, float SpreadAngle, float BiasAngle);
 	static struct FGeometryScriptBakeTypeOptions MakeBakeTypeBentNormal(int32 OcclusionRays, float MaxDistance, float SpreadAngle);
@@ -283,6 +226,7 @@ public:
 	static class UDynamicMesh* DeleteVertexFromMesh(class UDynamicMesh* TargetMesh, int32 VertexID, bool* bWasVertexDeleted, bool bDeferChangeNotifications);
 	static class UDynamicMesh* DeleteVerticesFromMesh(class UDynamicMesh* TargetMesh, const struct FGeometryScriptIndexList& VertexList, int32* NumDeleted, bool bDeferChangeNotifications);
 	static class UDynamicMesh* DiscardMeshAttributes(class UDynamicMesh* TargetMesh, bool bDeferChangeNotifications);
+	static class UDynamicMesh* SetAllMeshVertexPositions(class UDynamicMesh* TargetMesh, const struct FGeometryScriptVectorList& PositionList, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetVertexPosition(class UDynamicMesh* TargetMesh, int32 VertexID, const struct FVector& NewPosition, bool* bIsValidVertex, bool bDeferChangeNotifications);
 
 public:
@@ -297,6 +241,41 @@ public:
 };
 static_assert(alignof(UGeometryScriptLibrary_MeshBasicEditFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshBasicEditFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshBasicEditFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshBasicEditFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshBoneWeightFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ComputeSmoothBoneWeights(class UDynamicMesh* TargetMesh, class USkeleton* Skeleton, const struct FGeometryScriptSmoothBoneWeightsOptions& Options, const struct FGeometryScriptBoneWeightProfile& Profile, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* CopyBonesFromMesh(class UDynamicMesh* SourceMesh, class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* DiscardBonesFromMesh(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetAllBonesInfo(class UDynamicMesh* TargetMesh, TArray<struct FGeometryScriptBoneInfo>* BonesInfo, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetBoneChildren(class UDynamicMesh* TargetMesh, class FName BoneName, bool bRecursive, bool* bIsValidBoneName, TArray<struct FGeometryScriptBoneInfo>* ChildrenInfo, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetBoneIndex(class UDynamicMesh* TargetMesh, class FName BoneName, bool* bIsValidBoneName, int32* BoneIndex, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetBoneInfo(class UDynamicMesh* TargetMesh, class FName BoneName, bool* bIsValidBoneName, struct FGeometryScriptBoneInfo* BoneInfo, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetLargestVertexBoneWeight(class UDynamicMesh* TargetMesh, int32 VertexID, struct FGeometryScriptBoneWeight* BoneWeight, bool* bHasValidBoneWeights, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* GetMaxBoneWeightIndex(class UDynamicMesh* TargetMesh, bool* bHasBoneWeights, int32* MaxBoneIndex, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* GetRootBoneName(class UDynamicMesh* TargetMesh, class FName* BoneName, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetVertexBoneWeights(class UDynamicMesh* TargetMesh, int32 VertexID, TArray<struct FGeometryScriptBoneWeight>* BoneWeights, bool* bHasValidBoneWeights, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* MeshCreateBoneWeights(class UDynamicMesh* TargetMesh, bool* bProfileExisted, bool bReplaceExistingProfile, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* MeshHasBoneWeights(class UDynamicMesh* TargetMesh, bool* bHasBoneWeights, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* SetAllVertexBoneWeights(class UDynamicMesh* TargetMesh, TArray<struct FGeometryScriptBoneWeight>& BoneWeights, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* SetVertexBoneWeights(class UDynamicMesh* TargetMesh, int32 VertexID, TArray<struct FGeometryScriptBoneWeight>& BoneWeights, bool* bIsValidVertexID, const struct FGeometryScriptBoneWeightProfile& Profile);
+	static class UDynamicMesh* TransferBoneWeightsFromMesh(class UDynamicMesh* SourceMesh, class UDynamicMesh* TargetMesh, const struct FGeometryScriptTransferBoneWeightsOptions& Options, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshBoneWeightFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshBoneWeightFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshBoneWeightFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshBoneWeightFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshBoneWeightFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshBoneWeightFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshBoneWeightFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshBooleanFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -396,6 +375,28 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshDeformFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshDeformFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshDeformFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshDeformFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshGeodesicFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* CreateSurfacePath(class UDynamicMesh* TargetMesh, const struct FVector& Direction, int32 StartTriangleID, const struct FVector& StartBaryCoords, float MaxPathLength, struct FGeometryScriptPolyPath* SurfacePath, bool* bFoundErrors, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetShortestSurfacePath(class UDynamicMesh* TargetMesh, int32 StartTriangleID, const struct FVector& StartBaryCoords, int32 EndTriangleID, const struct FVector& EndBaryCoords, struct FGeometryScriptPolyPath* ShortestPath, bool* bFoundErrors, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetShortestVertexPath(class UDynamicMesh* TargetMesh, int32 StartVertexID, int32 EndVertexID, struct FGeometryScriptIndexList* VertexIDList, bool* bFoundErrors, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshGeodesicFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshGeodesicFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshGeodesicFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshGeodesicFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshGeodesicFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshGeodesicFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshGeodesicFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshMaterialFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshMaterialFunctions final  : public UBlueprintFunctionLibrary
@@ -459,6 +460,27 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshModelingFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshModelingFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshModelingFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshModelingFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshVoxelFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ApplyMeshMorphology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMorphologyOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplyMeshSolidify(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSolidifyOptions& Options, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshVoxelFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshVoxelFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshVoxelFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshVoxelFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshVoxelFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshNormalsFunctions final  : public UBlueprintFunctionLibrary
@@ -467,12 +489,19 @@ public:
 	static class UDynamicMesh* AutoRepairNormals(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputeSplitNormals(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSplitNormalsOptions& SplitOptions, const struct FGeometryScriptCalculateNormalsOptions& CalculateOptions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ComputeTangents(class UDynamicMesh* TargetMesh, const struct FGeometryScriptTangentsOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* DiscardTangents(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* FlipNormals(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetMeshHasTangents(class UDynamicMesh* TargetMesh, bool* bHasTangents, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* GetMeshPerVertexNormals(class UDynamicMesh* TargetMesh, struct FGeometryScriptVectorList* NormalList, bool* bIsValidNormalSet, bool* bHasVertexIDGaps, bool bAverageSplitVertexValues);
-	static class UDynamicMesh* RecomputeNormals(class UDynamicMesh* TargetMesh, const struct FGeometryScriptCalculateNormalsOptions& CalculateOptions, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetMeshPerVertexTangents(class UDynamicMesh* TargetMesh, struct FGeometryScriptVectorList* TangentXList, struct FGeometryScriptVectorList* TangentYList, bool* bIsValidTangentSet, bool* bHasVertexIDGaps, bool bAverageSplitVertexValues);
+	static class UDynamicMesh* RecomputeNormals(class UDynamicMesh* TargetMesh, const struct FGeometryScriptCalculateNormalsOptions& CalculateOptions, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RecomputeNormalsForMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FGeometryScriptCalculateNormalsOptions& CalculateOptions, bool bDeferChangeNotifications, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshPerVertexNormals(class UDynamicMesh* TargetMesh, const struct FGeometryScriptVectorList& VertexNormalList, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* SetMeshPerVertexTangents(class UDynamicMesh* TargetMesh, const struct FGeometryScriptVectorList& TangentXList, const struct FGeometryScriptVectorList& TangentYList, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetMeshTriangleNormals(class UDynamicMesh* TargetMesh, int32 TriangleID, const struct FGeometryScriptTriangle& Normals, bool* bIsValidTriangle, bool bDeferChangeNotifications);
 	static class UDynamicMesh* SetPerFaceNormals(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* SetPerVertexNormals(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* UpdateVertexNormal(class UDynamicMesh* TargetMesh, int32 VertexID, bool bUpdateNormal, const struct FVector& NewNormal, bool bUpdateTangents, const struct FVector& NewTangentX, const struct FVector& NewTangentY, bool* bIsValidVertex, bool bMergeSplitValues, bool bDeferChangeNotifications);
 
 public:
 	static class UClass* StaticClass()
@@ -520,18 +549,45 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshPolygroupFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshPolygroupFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshPolygroupFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshPolygroupFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSimplifyFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ApplySimplifyToPlanar(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPlanarSimplifyOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToPolygroupTopology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPolygroupSimplifyOptions& Options, const struct FGeometryScriptGroupLayer& GroupLayer, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToTolerance(class UDynamicMesh* TargetMesh, float Tolerance, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToTriangleCount(class UDynamicMesh* TargetMesh, int32 TriangleCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySimplifyToVertexCount(class UDynamicMesh* TargetMesh, int32 VertexCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSimplifyFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshSimplifyFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSimplifyFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSimplifyFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSimplifyFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSimplifyFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSimplifyFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshPrimitiveFunctions final  : public UBlueprintFunctionLibrary
 {
 public:
+	static class UDynamicMesh* AppendBoundingBox(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FBox& Box, int32 StepsX, int32 StepsY, int32 StepsZ, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendBox(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float DimensionX, float DimensionY, float DimensionZ, int32 StepsX, int32 StepsY, int32 StepsZ, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendCapsule(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float Radius, float LineLength, int32 HemisphereSteps, int32 CircleSteps, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendCone(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float BaseRadius, float TopRadius, float Height, int32 RadialSteps, int32 HeightSteps, bool bCapped, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendCurvedStairs(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float StepWidth, float StepHeight, float InnerRadius, float CurveAngle, int32 NumSteps, bool bFloating, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendCylinder(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float Radius, float Height, int32 RadialSteps, int32 HeightSteps, bool bCapped, EGeometryScriptPrimitiveOriginMode Origin, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendDelaunayTriangulation2D(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, TArray<struct FVector2D>& VertexPositions, TArray<struct FIntPoint>& ConstrainedEdges, const struct FGeometryScriptConstrainedDelaunayTriangulationOptions& TriangulationOptions, TArray<int32>* PositionsToVertexIDs, bool* bHasDuplicateVertices, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendDisc(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float Radius, int32 AngleSteps, int32 SpokeSteps, float StartAngle, float EndAngle, float HoleRadius, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendLinearStairs(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float StepWidth, float StepHeight, float StepDepth, int32 NumSteps, bool bFloating, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* AppendPolygonListTriangulation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptPolygonsTriangulationOptions& TriangulationOptions, bool* bTriangulationError, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendRectangle_Compatibility_5_0(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float DimensionX, float DimensionY, int32 StepsWidth, int32 StepsHeight, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendRectangleXY(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, float DimensionX, float DimensionY, int32 StepsWidth, int32 StepsHeight, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AppendRevolvePath(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPrimitiveOptions& PrimitiveOptions, const struct FTransform& Transform, TArray<struct FVector2D>& PathVertices, const struct FGeometryScriptRevolveOptions& RevolveOptions, int32 Steps, bool bCapped, class UGeometryScriptDebug* Debug);
@@ -567,6 +623,8 @@ static_assert(sizeof(UGeometryScriptLibrary_MeshPrimitiveFunctions) == 0x000028,
 class UGeometryScriptLibrary_MeshQueryFunctions final  : public UBlueprintFunctionLibrary
 {
 public:
+	static class UDynamicMesh* ComputeTriangleBarycentricCoords(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bIsValidTriangle, const struct FVector& Point, struct FVector* Vertex1, struct FVector* Vertex2, struct FVector* Vertex3, struct FVector* BarycentricCoords);
+	static class UDynamicMesh* GetAllSplitUVsAtVertex(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 VertexID, TArray<int32>* ElementIDs, TArray<struct FVector2D>* ElementUVs, bool* bHaveValidUVs);
 	static class UDynamicMesh* GetAllTriangleIDs(class UDynamicMesh* TargetMesh, struct FGeometryScriptIndexList* TriangleIDList, bool* bHasTriangleIDGaps);
 	static class UDynamicMesh* GetAllTriangleIndices(class UDynamicMesh* TargetMesh, struct FGeometryScriptTriangleList* TriangleList, bool bSkipGaps, bool* bHasTriangleIDGaps);
 	static class UDynamicMesh* GetAllVertexIDs(class UDynamicMesh* TargetMesh, struct FGeometryScriptIndexList* VertexIDList, bool* bHasVertexIDGaps);
@@ -574,13 +632,21 @@ public:
 	static bool GetHasMaterialIDs(class UDynamicMesh* TargetMesh);
 	static bool GetHasPolygroups(class UDynamicMesh* TargetMesh);
 	static bool GetHasTriangleIDGaps(class UDynamicMesh* TargetMesh);
+	static bool GetHasTriangleNormals(class UDynamicMesh* TargetMesh);
+	static bool GetHasVertexColors(class UDynamicMesh* TargetMesh);
 	static bool GetHasVertexIDGaps(class UDynamicMesh* TargetMesh);
+	static class UDynamicMesh* GetInterpolatedTriangleNormal(class UDynamicMesh* TargetMesh, int32 TriangleID, const struct FVector& BarycentricCoords, bool* bTriHasValidNormals, struct FVector* InterpolatedNormal);
+	static class UDynamicMesh* GetInterpolatedTriangleNormalTangents(class UDynamicMesh* TargetMesh, int32 TriangleID, const struct FVector& BarycentricCoords, bool* bTriHasValidElements, struct FVector* InterpolatedNormal, struct FVector* InterpolatedTangent, struct FVector* InterpolatedBiTangent);
+	static class UDynamicMesh* GetInterpolatedTrianglePosition(class UDynamicMesh* TargetMesh, int32 TriangleID, const struct FVector& BarycentricCoords, bool* bIsValidTriangle, struct FVector* InterpolatedPosition);
+	static class UDynamicMesh* GetInterpolatedTriangleUV(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, const struct FVector& BarycentricCoords, bool* bTriHasValidUVs, struct FVector2D* InterpolatedUV);
+	static class UDynamicMesh* GetInterpolatedTriangleVertexColor(class UDynamicMesh* TargetMesh, int32 TriangleID, const struct FVector& BarycentricCoords, const struct FLinearColor& DefaultColor, bool* bTriHasValidVertexColors, struct FLinearColor* InterpolatedColor);
 	static bool GetIsClosedMesh(class UDynamicMesh* TargetMesh);
 	static bool GetIsDenseMesh(class UDynamicMesh* TargetMesh);
 	static struct FBox GetMeshBoundingBox(class UDynamicMesh* TargetMesh);
 	static bool GetMeshHasAttributeSet(class UDynamicMesh* TargetMesh);
 	static class FString GetMeshInfoString(class UDynamicMesh* TargetMesh);
 	static void GetMeshVolumeArea(class UDynamicMesh* TargetMesh, float* SurfaceArea, float* Volume);
+	static void GetMeshVolumeAreaCenter(class UDynamicMesh* TargetMesh, float* SurfaceArea, float* Volume, struct FVector* CenterOfMass);
 	static int32 GetNumConnectedComponents(class UDynamicMesh* TargetMesh);
 	static int32 GetNumExtendedPolygroupLayers(class UDynamicMesh* TargetMesh);
 	static int32 GetNumOpenBorderEdges(class UDynamicMesh* TargetMesh);
@@ -590,9 +656,14 @@ public:
 	static int32 GetNumVertexIDs(class UDynamicMesh* TargetMesh);
 	static struct FVector GetTriangleFaceNormal(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bIsValidTriangle);
 	static struct FIntVector GetTriangleIndices(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bIsValidTriangle);
+	static class UDynamicMesh* GetTriangleNormals(class UDynamicMesh* TargetMesh, int32 TriangleID, struct FVector* Normal1, struct FVector* Normal2, struct FVector* Normal3, bool* bTriHasValidNormals);
+	static class UDynamicMesh* GetTriangleNormalTangents(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bTriHasValidElements, struct FGeometryScriptTriangle* Normals, struct FGeometryScriptTriangle* Tangents, struct FGeometryScriptTriangle* BiTangents);
 	static void GetTrianglePositions(class UDynamicMesh* TargetMesh, int32 TriangleID, bool* bIsValidTriangle, struct FVector* Vertex1, struct FVector* Vertex2, struct FVector* Vertex3);
 	static void GetTriangleUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, int32 TriangleID, struct FVector2D* UV1, struct FVector2D* UV2, struct FVector2D* UV3, bool* bHaveValidUVs);
+	static class UDynamicMesh* GetTriangleVertexColors(class UDynamicMesh* TargetMesh, int32 TriangleID, struct FLinearColor* Color1, struct FLinearColor* Color2, struct FLinearColor* Color3, bool* bTriHasValidVertexColors);
 	static struct FBox2D GetUVSetBoundingBox(class UDynamicMesh* TargetMesh, int32 UvSetIndex, bool* bIsValidUVSet, bool* bUVSetIsEmpty);
+	static class UDynamicMesh* GetVertexConnectedTriangles(class UDynamicMesh* TargetMesh, int32 VertexID, TArray<int32>* Triangles);
+	static class UDynamicMesh* GetVertexConnectedVertices(class UDynamicMesh* TargetMesh, int32 VertexID, TArray<int32>* Vertices);
 	static int32 GetVertexCount(class UDynamicMesh* TargetMesh);
 	static struct FVector GetVertexPosition(class UDynamicMesh* TargetMesh, int32 VertexID, bool* bIsValidVertex);
 	static bool IsValidTriangleID(class UDynamicMesh* TargetMesh, int32 TriangleID);
@@ -658,106 +729,6 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshRepairFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshRepairFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshRepairFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshRepairFunctions");
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSimplifyFunctions final  : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* ApplySimplifyToPlanar(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPlanarSimplifyOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToPolygroupTopology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPolygroupSimplifyOptions& Options, const struct FGeometryScriptGroupLayer& GroupLayer, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToTolerance(class UDynamicMesh* TargetMesh, float Tolerance, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToTriangleCount(class UDynamicMesh* TargetMesh, int32 TriangleCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySimplifyToVertexCount(class UDynamicMesh* TargetMesh, int32 VertexCount, const struct FGeometryScriptSimplifyMeshOptions& Options, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshSimplifyFunctions">();
-	}
-	static class UGeometryScriptLibrary_MeshSimplifyFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSimplifyFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshSimplifyFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSimplifyFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshSimplifyFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSimplifyFunctions");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSpatial final  : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* BuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH* OutputBVH, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* FindNearestPointOnMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptTrianglePoint* NearestResult, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* FindNearestRayIntersectionWithMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& RayOrigin, const struct FVector& RayDirection, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptRayHitResult* HitResult, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* IsBVHValidForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& TestBVH, bool* bIsValid, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* IsPointInsideMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, bool* bIsInside, EGeometryScriptContainmentOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RebuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& UpdateBVH, bool bOnlyIfInvalid, class UGeometryScriptDebug* Debug);
-	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& Param_ResetBVH);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshSpatial">();
-	}
-	static class UGeometryScriptLibrary_MeshSpatial* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSpatial>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshSpatial) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSpatial");
-static_assert(sizeof(UGeometryScriptLibrary_MeshSpatial) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSpatial");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshSubdivideFunctions final  : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* ApplyPNTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPNTessellateOptions& Options, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplyRecursivePNTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPNTessellateOptions& Options, int32 NumIterations, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplySelectiveTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FGeometryScriptSelectiveTessellateOptions& Options, int32 TessellationLevel, ESelectiveTessellatePatternType PatternType, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplyUniformTessellation(class UDynamicMesh* TargetMesh, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshSubdivideFunctions">();
-	}
-	static class UGeometryScriptLibrary_MeshSubdivideFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSubdivideFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshSubdivideFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSubdivideFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshSubdivideFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSubdivideFunctions");
-
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions
-// 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshTransformFunctions final  : public UBlueprintFunctionLibrary
-{
-public:
-	static class UDynamicMesh* RotateMesh(class UDynamicMesh* TargetMesh, const struct FRotator& Rotation, const struct FVector& RotationOrigin, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* RotateMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FRotator& Rotation, const struct FVector& RotationOrigin, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ScaleMesh(class UDynamicMesh* TargetMesh, const struct FVector& Scale, const struct FVector& ScaleOrigin, bool bFixOrientationForNegativeScale, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ScaleMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FVector& Scale, const struct FVector& ScaleOrigin, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* TransformMesh(class UDynamicMesh* TargetMesh, const struct FTransform& Transform, bool bFixOrientationForNegativeScale, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* TransformMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FTransform& Transform, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* TranslateMesh(class UDynamicMesh* TargetMesh, const struct FVector& Translation, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* TranslateMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FVector& Translation, class UGeometryScriptDebug* Debug);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshTransformFunctions">();
-	}
-	static class UGeometryScriptLibrary_MeshTransformFunctions* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshTransformFunctions>();
-	}
-};
-static_assert(alignof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshTransformFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshTransformFunctions");
-
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshUVFunctions final  : public UBlueprintFunctionLibrary
@@ -765,6 +736,7 @@ class UGeometryScriptLibrary_MeshUVFunctions final  : public UBlueprintFunctionL
 public:
 	static class UDynamicMesh* AutoGeneratePatchBuilderMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptPatchBuilderOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* AutoGenerateXAtlasMeshUVs(class UDynamicMesh* TargetMesh, int32 UvSetIndex, const struct FGeometryScriptXAtlasOptions& Options, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ComputeMeshLocalUVParam(class UDynamicMesh* TargetMesh, const struct FVector& CenterPoint, int32 CenterPointTriangleID, TArray<int32>* VertexIDs, TArray<struct FVector2D>* VertexUVs, double Radius, bool bUseInterpolatedNormal, const struct FVector& TangentYDirection, double UVRotationDeg, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshToMeshUVLayer(class UDynamicMesh* CopyFromUVMesh, int32 ToUVSetIndex, class UDynamicMesh*& CopyToMesh, class UDynamicMesh** CopyToMeshOut, bool* bFoundTopologyErrors, bool* bIsValidUVSet, bool bOnlyUVPositions, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyMeshUVLayerToMesh(class UDynamicMesh* CopyFromMesh, int32 UvSetIndex, class UDynamicMesh*& CopyToUVMesh, class UDynamicMesh** CopyToUVMeshOut, bool* bInvalidTopology, bool* bIsValidUVSet, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* CopyUVSet(class UDynamicMesh* TargetMesh, int32 FromUVSet, int32 ToUVSet, class UGeometryScriptDebug* Debug);
@@ -794,11 +766,169 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshUVFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshUVFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshUVFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshUVFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSamplingFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ComputeNonUniformPointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, const struct FGeometryScriptNonUniformPointSamplingOptions& NonUniformOptions, TArray<struct FTransform>* Samples, TArray<double>* SampleRadii, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ComputePointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, TArray<struct FTransform>* Samples, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ComputeVertexWeightedPointSampling(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshPointSamplingOptions& Options, const struct FGeometryScriptNonUniformPointSamplingOptions& NonUniformOptions, const struct FGeometryScriptScalarList& VertexWeights, TArray<struct FTransform>* Samples, TArray<double>* SampleRadii, struct FGeometryScriptIndexList* TriangleIDs, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSamplingFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshSamplingFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSamplingFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSamplingFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSamplingFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSamplingFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSamplingFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSelectionFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static void CombineMeshSelections(const struct FGeometryScriptMeshSelection& SelectionA, const struct FGeometryScriptMeshSelection& SelectionB, struct FGeometryScriptMeshSelection* ResultSelection, EGeometryScriptCombineSelectionMode CombineMode);
+	static class UDynamicMesh* ConvertIndexArrayToMeshSelection(class UDynamicMesh* TargetMesh, TArray<int32>& IndexArray, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
+	static class UDynamicMesh* ConvertIndexListToMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptIndexList& IndexList, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
+	static class UDynamicMesh* ConvertIndexSetToMeshSelection(class UDynamicMesh* TargetMesh, TSet<int32>& IndexSet, EGeometryScriptMeshSelectionType SelectionType, struct FGeometryScriptMeshSelection* Selection);
+	static class UDynamicMesh* ConvertMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& FromSelection, struct FGeometryScriptMeshSelection* ToSelection, EGeometryScriptMeshSelectionType NewType, bool bAllowPartialInclusion);
+	static class UDynamicMesh* ConvertMeshSelectionToIndexArray(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, TArray<int32>* IndexArray, EGeometryScriptMeshSelectionType* SelectionType);
+	static class UDynamicMesh* ConvertMeshSelectionToIndexList(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptIndexList* IndexList, EGeometryScriptIndexType* ResultListType, EGeometryScriptIndexType ConvertToType);
+	static class UDynamicMesh* CreateSelectAllMeshSelection(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, EGeometryScriptMeshSelectionType SelectionType);
+	static void DebugPrintMeshSelection(const struct FGeometryScriptMeshSelection& Selection, bool bDisable);
+	static class UDynamicMesh* ExpandContractMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, int32 Iterations, bool bContract, bool bOnlyExpandToFaceNeighbours);
+	static class UDynamicMesh* ExpandMeshSelectionToConnected(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, EGeometryScriptTopologyConnectionType ConnectionType);
+	static void GetMeshSelectionInfo(const struct FGeometryScriptMeshSelection& Selection, EGeometryScriptMeshSelectionType* SelectionType, int32* NumSelected);
+	static class UDynamicMesh* InvertMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FGeometryScriptMeshSelection* NewSelection, bool bOnlyToConnected);
+	static class UDynamicMesh* SelectMeshElementsByNormalAngle(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& Normal, double MaxAngleDeg, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
+	static class UDynamicMesh* SelectMeshElementsInBox(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FBox& Box, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
+	static class UDynamicMesh* SelectMeshElementsInsideMesh(class UDynamicMesh* TargetMesh, class UDynamicMesh* SelectionMesh, struct FGeometryScriptMeshSelection* Selection, const struct FTransform& SelectionMeshTransform, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, double ShellDistance, double WindingThreshold, int32 MinNumTrianglePoints);
+	static class UDynamicMesh* SelectMeshElementsInSphere(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& SphereOrigin, double SphereRadius, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
+	static class UDynamicMesh* SelectMeshElementsWithPlane(class UDynamicMesh* TargetMesh, struct FGeometryScriptMeshSelection* Selection, const struct FVector& PlaneOrigin, const struct FVector& PlaneNormal, EGeometryScriptMeshSelectionType SelectionType, bool bInvert, int32 MinNumTrianglePoints);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSelectionFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshSelectionFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSelectionFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSelectionFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSelectionFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSelectionFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSelectionQueryFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* GetMeshSelectionBoundaryLoops(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, TArray<struct FGeometryScriptIndexList>* IndexLoops, TArray<struct FGeometryScriptPolyPath>* PathLoops, int32* NumLoops, bool* bFoundErrors, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* GetMeshSelectionBoundingBox(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, struct FBox* SelectionBounds, bool* bIsEmpty, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSelectionQueryFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshSelectionQueryFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSelectionQueryFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSelectionQueryFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSelectionQueryFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSelectionQueryFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSelectionQueryFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSpatial final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* BuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH* OutputBVH, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* FindNearestPointOnMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptTrianglePoint* NearestResult, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* FindNearestRayIntersectionWithMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& RayOrigin, const struct FVector& RayDirection, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptRayHitResult* HitResult, EGeometryScriptSearchOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* IsBVHValidForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& TestBVH, bool* bIsValid, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* IsPointInsideMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FVector& QueryPoint, const struct FGeometryScriptSpatialQueryOptions& Options, bool* bIsInside, EGeometryScriptContainmentOutcomePins* Outcome, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RebuildBVHForMesh(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& UpdateBVH, bool bOnlyIfInvalid, class UGeometryScriptDebug* Debug);
+	static void ResetBVH(struct FGeometryScriptDynamicMeshBVH& Param_ResetBVH);
+	static class UDynamicMesh* SelectMeshElementsInBoxWithBVH(class UDynamicMesh* TargetMesh, struct FGeometryScriptDynamicMeshBVH& QueryBVH, const struct FBox& QueryBox, const struct FGeometryScriptSpatialQueryOptions& Options, struct FGeometryScriptMeshSelection* Selection, EGeometryScriptMeshSelectionType SelectionType, int32 MinNumTrianglePoints, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSpatial">();
+	}
+	static class UGeometryScriptLibrary_MeshSpatial* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSpatial>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSpatial) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSpatial");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSpatial) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSpatial");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshSubdivideFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* ApplyPNTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptPNTessellateOptions& Options, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplySelectiveTessellation(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FGeometryScriptSelectiveTessellateOptions& Options, int32 TessellationLevel, ESelectiveTessellatePatternType PatternType, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ApplyUniformTessellation(class UDynamicMesh* TargetMesh, int32 TessellationLevel, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshSubdivideFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshSubdivideFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshSubdivideFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshSubdivideFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshSubdivideFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshSubdivideFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshSubdivideFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_MeshTransformFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static class UDynamicMesh* RotateMesh(class UDynamicMesh* TargetMesh, const struct FRotator& Rotation, const struct FVector& RotationOrigin, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* RotateMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FRotator& Rotation, const struct FVector& RotationOrigin, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ScaleMesh(class UDynamicMesh* TargetMesh, const struct FVector& Scale, const struct FVector& ScaleOrigin, bool bFixOrientationForNegativeScale, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* ScaleMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FVector& Scale, const struct FVector& ScaleOrigin, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* TransformMesh(class UDynamicMesh* TargetMesh, const struct FTransform& Transform, bool bFixOrientationForNegativeScale, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* TransformMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FTransform& Transform, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* TranslateMesh(class UDynamicMesh* TargetMesh, const struct FVector& Translation, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* TranslateMeshSelection(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, const struct FVector& Translation, class UGeometryScriptDebug* Debug);
+	static class UDynamicMesh* TranslatePivotToLocation(class UDynamicMesh* TargetMesh, const struct FVector& PivotLocation, class UGeometryScriptDebug* Debug);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_MeshTransformFunctions">();
+	}
+	static class UGeometryScriptLibrary_MeshTransformFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshTransformFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshTransformFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_MeshTransformFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshTransformFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_MeshVertexColorFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_MeshVertexColorFunctions final  : public UBlueprintFunctionLibrary
 {
 public:
+	static class UDynamicMesh* BlurMeshVertexColors(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMeshSelection& Selection, int32 NumIterations, double Strength, EGeometryScriptBlurColorMode BlurMode, const struct FGeometryScriptBlurMeshVertexColorsOptions& Options, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ConvertMeshVertexColorsLinearToSRGB(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* ConvertMeshVertexColorsSRGBToLinear(class UDynamicMesh* TargetMesh, class UGeometryScriptDebug* Debug);
 	static class UDynamicMesh* GetMeshPerVertexColors(class UDynamicMesh* TargetMesh, struct FGeometryScriptColorList* ColorList, bool* bIsValidColorSet, bool* bHasVertexIDGaps, bool bBlendSplitVertexValues);
@@ -819,26 +949,80 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_MeshVertexColorFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshVertexColorFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_MeshVertexColorFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshVertexColorFunctions");
 
-// Class GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions
+// Class GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions
 // 0x0000 (0x0028 - 0x0028)
-class UGeometryScriptLibrary_MeshVoxelFunctions final  : public UBlueprintFunctionLibrary
+class UGeometryScriptLibrary_SimplePolygonFunctions final  : public UBlueprintFunctionLibrary
 {
 public:
-	static class UDynamicMesh* ApplyMeshMorphology(class UDynamicMesh* TargetMesh, const struct FGeometryScriptMorphologyOptions& Options, class UGeometryScriptDebug* Debug);
-	static class UDynamicMesh* ApplyMeshSolidify(class UDynamicMesh* TargetMesh, const struct FGeometryScriptSolidifyOptions& Options, class UGeometryScriptDebug* Debug);
+	static int32 AddPolygonVertex(struct FGeometryScriptSimplePolygon& Polygon, const struct FVector2D& Position);
+	static struct FGeometryScriptSimplePolygon Conv_ArrayOfVector2DToGeometryScriptSimplePolygon(TArray<struct FVector2D>& PathVertices);
+	static struct FGeometryScriptSimplePolygon Conv_ArrayToGeometryScriptSimplePolygon(TArray<struct FVector>& PathVertices);
+	static TArray<struct FVector> Conv_GeometryScriptSimplePolygonToArray(const struct FGeometryScriptSimplePolygon& Polygon);
+	static TArray<struct FVector2D> Conv_GeometryScriptSimplePolygonToArrayOfVector2D(const struct FGeometryScriptSimplePolygon& Polygon);
+	static void ConvertSplineToPolygon(class USplineComponent* Spline, struct FGeometryScriptSimplePolygon* Polygon, const struct FGeometryScriptSplineSamplingOptions& SamplingOptions, EGeometryScriptAxis DropAxis);
+	static double GetPolygonArcLength(const struct FGeometryScriptSimplePolygon& Polygon);
+	static double GetPolygonArea(const struct FGeometryScriptSimplePolygon& Polygon);
+	static struct FBox2D GetPolygonBounds(const struct FGeometryScriptSimplePolygon& Polygon);
+	static struct FVector2D GetPolygonTangent(const struct FGeometryScriptSimplePolygon& Polygon, int32 VertexIndex, bool* bPolygonIsEmpty);
+	static struct FVector2D GetPolygonVertex(const struct FGeometryScriptSimplePolygon& Polygon, int32 VertexIndex, bool* bPolygonIsEmpty);
+	static int32 GetPolygonVertexCount(const struct FGeometryScriptSimplePolygon& Polygon);
+	static void SetPolygonVertex(struct FGeometryScriptSimplePolygon& Polygon, int32 VertexIndex, const struct FVector2D& Position, bool* bPolygonIsEmpty);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"GeometryScriptLibrary_MeshVoxelFunctions">();
+		return StaticClassImpl<"GeometryScriptLibrary_SimplePolygonFunctions">();
 	}
-	static class UGeometryScriptLibrary_MeshVoxelFunctions* GetDefaultObj()
+	static class UGeometryScriptLibrary_SimplePolygonFunctions* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UGeometryScriptLibrary_MeshVoxelFunctions>();
+		return GetDefaultObjImpl<UGeometryScriptLibrary_SimplePolygonFunctions>();
 	}
 };
-static_assert(alignof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_MeshVoxelFunctions");
-static_assert(sizeof(UGeometryScriptLibrary_MeshVoxelFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_MeshVoxelFunctions");
+static_assert(alignof(UGeometryScriptLibrary_SimplePolygonFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_SimplePolygonFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_SimplePolygonFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_SimplePolygonFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_PolygonListFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static int32 AddPolygonToList(struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptSimplePolygon& OuterPolygon, TArray<struct FGeometryScriptSimplePolygon>& HolePolygons, bool bFixHoleOrientations);
+	static void AppendPolygonList(struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptGeneralPolygonList& PolygonsToAppend);
+	static struct FGeometryScriptGeneralPolygonList CreatePolygonListFromSimplePolygons(TArray<struct FGeometryScriptSimplePolygon>& OuterPolygons);
+	static struct FGeometryScriptGeneralPolygonList CreatePolygonListFromSinglePolygon(const struct FGeometryScriptSimplePolygon& OuterPolygon, TArray<struct FGeometryScriptSimplePolygon>& HolePolygons, bool bFixHoleOrientations);
+	static struct FGeometryScriptGeneralPolygonList CreatePolygonsFromOpenPolyPathsOffset(const TArray<struct FGeometryScriptPolyPath>& PolyPaths, const struct FGeometryScriptOpenPathOffsetOptions& OffsetOptions, double Offset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static struct FGeometryScriptGeneralPolygonList CreatePolygonsFromPathOffset(const TArray<struct FVector2D>& Path, const struct FGeometryScriptOpenPathOffsetOptions& OffsetOptions, double Offset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static double GetPolygonArea(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bValidIndex, int32 PolygonIndex);
+	static struct FBox2D GetPolygonBounds(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bValidIndex, int32 PolygonIndex);
+	static int32 GetPolygonCount(const struct FGeometryScriptGeneralPolygonList& PolygonList);
+	static int32 GetPolygonHoleCount(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bValidIndex, int32 PolygonIndex);
+	static double GetPolygonListArea(const struct FGeometryScriptGeneralPolygonList& PolygonList);
+	static struct FBox2D GetPolygonListBounds(const struct FGeometryScriptGeneralPolygonList& PolygonList);
+	static struct FVector2D GetPolygonVertex(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bIsValidVertex, int32 VertexIndex, int32 PolygonIndex, int32 HoleIndex);
+	static int32 GetPolygonVertexCount(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bValidIndices, int32 PolygonIndex, int32 HoleIndex);
+	static void GetPolygonVertices(const struct FGeometryScriptGeneralPolygonList& PolygonList, TArray<struct FVector2D>* OutVertices, bool* bValidIndices, int32 PolygonIndex, int32 HoleIndex);
+	static struct FGeometryScriptSimplePolygon GetSimplePolygon(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool* bValidIndices, int32 PolygonIndex, int32 HoleIndex);
+	static struct FGeometryScriptGeneralPolygonList PolygonsDifference(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptGeneralPolygonList& PolygonsToSubtract);
+	static struct FGeometryScriptGeneralPolygonList PolygonsExclusiveOr(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptGeneralPolygonList& PolygonsToExclusiveOr);
+	static struct FGeometryScriptGeneralPolygonList PolygonsIntersection(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptGeneralPolygonList& PolygonsToIntersect);
+	static struct FGeometryScriptGeneralPolygonList PolygonsMorphologyClose(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptPolygonOffsetOptions& OffsetOptions, double Offset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static struct FGeometryScriptGeneralPolygonList PolygonsMorphologyOpen(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptPolygonOffsetOptions& OffsetOptions, double Offset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static struct FGeometryScriptGeneralPolygonList PolygonsOffset(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptPolygonOffsetOptions& OffsetOptions, double Offset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static struct FGeometryScriptGeneralPolygonList PolygonsOffsets(const struct FGeometryScriptGeneralPolygonList& PolygonList, const struct FGeometryScriptPolygonOffsetOptions& OffsetOptions, double FirstOffset, double SecondOffset, bool* bOperationSuccess, bool bCopyInputOnFailure);
+	static struct FGeometryScriptGeneralPolygonList PolygonsUnion(const struct FGeometryScriptGeneralPolygonList& PolygonList, bool bCopyInputOnFailure);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_PolygonListFunctions">();
+	}
+	static class UGeometryScriptLibrary_PolygonListFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_PolygonListFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_PolygonListFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_PolygonListFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_PolygonListFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_PolygonListFunctions");
 
 // Class GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -903,12 +1087,103 @@ public:
 static_assert(alignof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_SceneUtilityFunctions");
 static_assert(sizeof(UGeometryScriptLibrary_SceneUtilityFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_SceneUtilityFunctions");
 
+// Class GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_TransformFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FPlane GetTransformAxisPlane(const struct FTransform& Transform, EGeometryScriptAxis Axis);
+	static struct FRay GetTransformAxisRay(const struct FTransform& Transform, EGeometryScriptAxis Axis);
+	static struct FVector GetTransformAxisVector(const struct FTransform& Transform, EGeometryScriptAxis Axis);
+	static struct FTransform MakeTransformFromAxes(const struct FVector& Location, const struct FVector& ZAxis, const struct FVector& TangentAxis, bool bTangentIsX);
+	static struct FTransform MakeTransformFromZAxis(const struct FVector& Location, const struct FVector& ZAxis);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_TransformFunctions">();
+	}
+	static class UGeometryScriptLibrary_TransformFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_TransformFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_TransformFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_TransformFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_TransformFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_TransformFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_RayFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_RayFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static bool GetRayBoxIntersection(const struct FRay& Ray, const struct FBox& Box, double* HitDistance);
+	static struct FVector GetRayClosestPoint(const struct FRay& Ray, const struct FVector& Point);
+	static double GetRayLineClosestPoint(const struct FRay& Ray, const struct FVector& LineOrigin, const struct FVector& LineDirection, double* RayParameter, struct FVector* RayPoint, double* LineParameter, struct FVector* LinePoint);
+	static double GetRayParameter(const struct FRay& Ray, const struct FVector& Point);
+	static bool GetRayPlaneIntersection(const struct FRay& Ray, const struct FPlane& Plane, double* HitDistance);
+	static struct FVector GetRayPoint(const struct FRay& Ray, double Distance);
+	static double GetRayPointDistance(const struct FRay& Ray, const struct FVector& Point);
+	static double GetRaySegmentClosestPoint(const struct FRay& Ray, const struct FVector& SegStartPoint, const struct FVector& SegEndPoint, double* RayParameter, struct FVector* RayPoint, struct FVector* SegPoint);
+	static bool GetRaySphereIntersection(const struct FRay& Ray, const struct FVector& SphereCenter, double SphereRadius, double* Distance1, double* Distance2);
+	static void GetRayStartEnd(const struct FRay& Ray, double StartDistance, double EndDistance, struct FVector* StartPoint, struct FVector* Endpoint);
+	static struct FRay GetTransformedRay(const struct FRay& Ray, const struct FTransform& Transform, bool bInvert);
+	static struct FRay MakeRayFromPointDirection(const struct FVector& Origin, const struct FVector& Direction, bool bDirectionIsNormalized);
+	static struct FRay MakeRayFromPoints(const struct FVector& A, const struct FVector& B);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_RayFunctions">();
+	}
+	static class UGeometryScriptLibrary_RayFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_RayFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_RayFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_RayFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_RayFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_RayFunctions");
+
+// Class GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions
+// 0x0000 (0x0028 - 0x0028)
+class UGeometryScriptLibrary_BoxFunctions final  : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FBox FindBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2, bool* bIsIntersecting);
+	static struct FVector FindClosestPointOnBox(const struct FBox& Box, const struct FVector& Point, bool* bIsInside);
+	static double GetBoxBoxDistance(const struct FBox& Box1, const struct FBox& Box2);
+	static void GetBoxCenterSize(const struct FBox& Box, struct FVector* Center, struct FVector* Dimensions);
+	static struct FVector GetBoxCorner(const struct FBox& Box, int32 CornerIndex);
+	static struct FVector GetBoxFaceCenter(const struct FBox& Box, int32 FaceIndex, struct FVector* FaceNormal);
+	static double GetBoxPointDistance(const struct FBox& Box, const struct FVector& Point);
+	static void GetBoxVolumeArea(const struct FBox& Box, double* Volume, double* SurfaceArea);
+	static struct FBox GetExpandedBox(const struct FBox& Box, const struct FVector& ExpandBy);
+	static struct FBox GetTransformedBox(const struct FBox& Box, const struct FTransform& Transform);
+	static struct FBox MakeBoxFromCenterExtents(const struct FVector& Center, const struct FVector& Extents);
+	static struct FBox MakeBoxFromCenterSize(const struct FVector& Center, const struct FVector& Dimensions);
+	static bool TestBoxBoxIntersection(const struct FBox& Box1, const struct FBox& Box2);
+	static bool TestBoxSphereIntersection(const struct FBox& Box, const struct FVector& SphereCenter, double SphereRadius);
+	static bool TestPointInsideBox(const struct FBox& Box, const struct FVector& Point, bool bConsiderOnBoxAsInside);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"GeometryScriptLibrary_BoxFunctions">();
+	}
+	static class UGeometryScriptLibrary_BoxFunctions* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UGeometryScriptLibrary_BoxFunctions>();
+	}
+};
+static_assert(alignof(UGeometryScriptLibrary_BoxFunctions) == 0x000008, "Wrong alignment on UGeometryScriptLibrary_BoxFunctions");
+static_assert(sizeof(UGeometryScriptLibrary_BoxFunctions) == 0x000028, "Wrong size on UGeometryScriptLibrary_BoxFunctions");
+
 // Class GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions
 // 0x0000 (0x0028 - 0x0028)
 class UGeometryScriptLibrary_TextureMapFunctions final  : public UBlueprintFunctionLibrary
 {
 public:
 	static void SampleTexture2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTexture2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
+	static void SampleTextureRenderTarget2DAtUVPositions(const struct FGeometryScriptUVList& UVList, class UTextureRenderTarget2D* Texture, const struct FGeometryScriptSampleTextureOptions& SampleOptions, struct FGeometryScriptColorList* ColorList, class UGeometryScriptDebug* Debug);
 
 public:
 	static class UClass* StaticClass()

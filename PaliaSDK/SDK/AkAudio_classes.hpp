@@ -10,75 +10,19 @@
 
 #include "Basic.hpp"
 
-#include "AkAudio_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "AkAudio_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UMG_classes.hpp"
 #include "MovieScene_structs.hpp"
 #include "MovieScene_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class AkAudio.AkAndroidInitializationSettings
-// 0x00D0 (0x00F8 - 0x0028)
-class UAkAndroidInitializationSettings final  : public UObject
-{
-public:
-	uint8                                         Pad_12BC[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkAndroidAdvancedInitializationSettings AdvancedSettings;                                  // 0x00C0(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-
-public:
-	void MigrateMultiCoreRendering(bool NewValue);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkAndroidInitializationSettings">();
-	}
-	static class UAkAndroidInitializationSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkAndroidInitializationSettings>();
-	}
-};
-static_assert(alignof(UAkAndroidInitializationSettings) == 0x000008, "Wrong alignment on UAkAndroidInitializationSettings");
-static_assert(sizeof(UAkAndroidInitializationSettings) == 0x0000F8, "Wrong size on UAkAndroidInitializationSettings");
-static_assert(offsetof(UAkAndroidInitializationSettings, CommonSettings) == 0x000030, "Member 'UAkAndroidInitializationSettings::CommonSettings' has a wrong offset!");
-static_assert(offsetof(UAkAndroidInitializationSettings, CommunicationSettings) == 0x000098, "Member 'UAkAndroidInitializationSettings::CommunicationSettings' has a wrong offset!");
-static_assert(offsetof(UAkAndroidInitializationSettings, AdvancedSettings) == 0x0000C0, "Member 'UAkAndroidInitializationSettings::AdvancedSettings' has a wrong offset!");
-
-// Class AkAudio.AkPS5InitializationSettings
-// 0x00C8 (0x00F0 - 0x0028)
-class UAkPS5InitializationSettings : public UObject
-{
-public:
-	uint8                                         Pad_12BD[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0030(0x0060)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0090(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
-	struct FAkPS5AdvancedInitializationSettings   AdvancedSettings;                                  // 0x00B8(0x0034)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12BE[0x4];                                     // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkPS5InitializationSettings">();
-	}
-	static class UAkPS5InitializationSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkPS5InitializationSettings>();
-	}
-};
-static_assert(alignof(UAkPS5InitializationSettings) == 0x000008, "Wrong alignment on UAkPS5InitializationSettings");
-static_assert(sizeof(UAkPS5InitializationSettings) == 0x0000F0, "Wrong size on UAkPS5InitializationSettings");
-static_assert(offsetof(UAkPS5InitializationSettings, CommonSettings) == 0x000030, "Member 'UAkPS5InitializationSettings::CommonSettings' has a wrong offset!");
-static_assert(offsetof(UAkPS5InitializationSettings, CommunicationSettings) == 0x000090, "Member 'UAkPS5InitializationSettings::CommunicationSettings' has a wrong offset!");
-static_assert(offsetof(UAkPS5InitializationSettings, AdvancedSettings) == 0x0000B8, "Member 'UAkPS5InitializationSettings::AdvancedSettings' has a wrong offset!");
 
 // Class AkAudio.AkPortalComponent
 // 0x00E0 (0x0380 - 0x02A0)
@@ -87,10 +31,10 @@ class UAkPortalComponent final  : public USceneComponent
 public:
 	bool                                          bDynamic;                                          // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAkAcousticPortalState                        InitialState;                                      // 0x02A1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12BF[0x2];                                     // 0x02A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1962[0x2];                                     // 0x02A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ObstructionRefreshInterval;                        // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionChannel                             ObstructionCollisionChannel;                       // 0x02A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C0[0xD7];                                    // 0x02A9(0x00D7)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1963[0xD7];                                    // 0x02A9(0x00D7)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClosePortal();
@@ -117,50 +61,15 @@ static_assert(offsetof(UAkPortalComponent, InitialState) == 0x0002A1, "Member 'U
 static_assert(offsetof(UAkPortalComponent, ObstructionRefreshInterval) == 0x0002A4, "Member 'UAkPortalComponent::ObstructionRefreshInterval' has a wrong offset!");
 static_assert(offsetof(UAkPortalComponent, ObstructionCollisionChannel) == 0x0002A8, "Member 'UAkPortalComponent::ObstructionCollisionChannel' has a wrong offset!");
 
-// Class AkAudio.AkReverbVolume
-// 0x0038 (0x0310 - 0x02D8)
-class AAkReverbVolume final  : public AVolume
-{
-public:
-	bool                                          bEnabled;                                          // 0x02D8(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C1[0x7];                                     // 0x02D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkAuxBus*                              AuxBus;                                            // 0x02E0(0x0008)(ZeroConstructor, Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 AuxBusName;                                        // 0x02E8(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         SendLevel;                                         // 0x02F8(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FadeRate;                                          // 0x02FC(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Priority;                                          // 0x0300(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C2[0x4];                                     // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkLateReverbComponent*                 LateReverbComponent;                               // 0x0308(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkReverbVolume">();
-	}
-	static class AAkReverbVolume* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<AAkReverbVolume>();
-	}
-};
-static_assert(alignof(AAkReverbVolume) == 0x000008, "Wrong alignment on AAkReverbVolume");
-static_assert(sizeof(AAkReverbVolume) == 0x000310, "Wrong size on AAkReverbVolume");
-static_assert(offsetof(AAkReverbVolume, bEnabled) == 0x0002D8, "Member 'AAkReverbVolume::bEnabled' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, AuxBus) == 0x0002E0, "Member 'AAkReverbVolume::AuxBus' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, AuxBusName) == 0x0002E8, "Member 'AAkReverbVolume::AuxBusName' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, SendLevel) == 0x0002F8, "Member 'AAkReverbVolume::SendLevel' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, FadeRate) == 0x0002FC, "Member 'AAkReverbVolume::FadeRate' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, Priority) == 0x000300, "Member 'AAkReverbVolume::Priority' has a wrong offset!");
-static_assert(offsetof(AAkReverbVolume, LateReverbComponent) == 0x000308, "Member 'AAkReverbVolume::LateReverbComponent' has a wrong offset!");
-
 // Class AkAudio.AkAcousticPortal
-// 0x0010 (0x02E8 - 0x02D8)
+// 0x0010 (0x02F0 - 0x02E0)
 class AAkAcousticPortal final  : public AVolume
 {
 public:
-	class UAkPortalComponent*                     Portal;                                            // 0x02D8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EAkAcousticPortalState                        InitialState;                                      // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bRequiresStateMigration;                           // 0x02E1(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12C3[0x6];                                     // 0x02E2(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UAkPortalComponent*                     Portal;                                            // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EAkAcousticPortalState                        InitialState;                                      // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bRequiresStateMigration;                           // 0x02E9(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1964[0x6];                                     // 0x02EA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClosePortal();
@@ -179,85 +88,10 @@ public:
 	}
 };
 static_assert(alignof(AAkAcousticPortal) == 0x000008, "Wrong alignment on AAkAcousticPortal");
-static_assert(sizeof(AAkAcousticPortal) == 0x0002E8, "Wrong size on AAkAcousticPortal");
-static_assert(offsetof(AAkAcousticPortal, Portal) == 0x0002D8, "Member 'AAkAcousticPortal::Portal' has a wrong offset!");
-static_assert(offsetof(AAkAcousticPortal, InitialState) == 0x0002E0, "Member 'AAkAcousticPortal::InitialState' has a wrong offset!");
-static_assert(offsetof(AAkAcousticPortal, bRequiresStateMigration) == 0x0002E1, "Member 'AAkAcousticPortal::bRequiresStateMigration' has a wrong offset!");
-
-// Class AkAudio.AkGameObject
-// 0x0020 (0x02C0 - 0x02A0)
-class UAkGameObject : public USceneComponent
-{
-public:
-	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 EventName;                                         // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12C4[0x8];                                     // 0x02B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	int32 PostAkEvent(class UAkAudioEvent* AkEvent, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const class FString& In_EventName);
-	void PostAkEventAsync(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, int32* PlayingID, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const struct FLatentActionInfo& LatentInfo);
-	int32 PostAssociatedAkEvent(int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources);
-	void PostAssociatedAkEventAsync(class UObject* WorldContextObject, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const struct FLatentActionInfo& LatentInfo, int32* PlayingID);
-	void Stop();
-
-	void GetRTPCValue(class UAkRtpc* RTPCValue, ERTPCValueType InputValueType, float* Value, ERTPCValueType* OutputValueType, const class FString& Rtpc, int32 PlayingID) const;
-	void SetRTPCValue(class UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, const class FString& Rtpc) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkGameObject">();
-	}
-	static class UAkGameObject* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkGameObject>();
-	}
-};
-static_assert(alignof(UAkGameObject) == 0x000010, "Wrong alignment on UAkGameObject");
-static_assert(sizeof(UAkGameObject) == 0x0002C0, "Wrong size on UAkGameObject");
-static_assert(offsetof(UAkGameObject, AkAudioEvent) == 0x0002A0, "Member 'UAkGameObject::AkAudioEvent' has a wrong offset!");
-static_assert(offsetof(UAkGameObject, EventName) == 0x0002A8, "Member 'UAkGameObject::EventName' has a wrong offset!");
-
-// Class AkAudio.AkRoomComponent
-// 0x0030 (0x02F0 - 0x02C0)
-class UAkRoomComponent : public UAkGameObject
-{
-public:
-	bool                                          bEnable;                                           // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDynamic;                                          // 0x02C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12CE[0x2];                                     // 0x02C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Priority;                                          // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WallOcclusion;                                     // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AuxSendLevel;                                      // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AutoPost;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12CF[0xF];                                     // 0x02D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkAcousticTextureSetComponent*         GeometryComponent;                                 // 0x02E0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12D0[0x8];                                     // 0x02E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetGeometryComponent(class UAkAcousticTextureSetComponent* TextureSetComponent);
-
-	class UPrimitiveComponent* GetPrimitiveParent() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkRoomComponent">();
-	}
-	static class UAkRoomComponent* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkRoomComponent>();
-	}
-};
-static_assert(alignof(UAkRoomComponent) == 0x000010, "Wrong alignment on UAkRoomComponent");
-static_assert(sizeof(UAkRoomComponent) == 0x0002F0, "Wrong size on UAkRoomComponent");
-static_assert(offsetof(UAkRoomComponent, bEnable) == 0x0002C0, "Member 'UAkRoomComponent::bEnable' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, bDynamic) == 0x0002C1, "Member 'UAkRoomComponent::bDynamic' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, Priority) == 0x0002C4, "Member 'UAkRoomComponent::Priority' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, WallOcclusion) == 0x0002C8, "Member 'UAkRoomComponent::WallOcclusion' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, AuxSendLevel) == 0x0002CC, "Member 'UAkRoomComponent::AuxSendLevel' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, AutoPost) == 0x0002D0, "Member 'UAkRoomComponent::AutoPost' has a wrong offset!");
-static_assert(offsetof(UAkRoomComponent, GeometryComponent) == 0x0002E0, "Member 'UAkRoomComponent::GeometryComponent' has a wrong offset!");
+static_assert(sizeof(AAkAcousticPortal) == 0x0002F0, "Wrong size on AAkAcousticPortal");
+static_assert(offsetof(AAkAcousticPortal, Portal) == 0x0002E0, "Member 'AAkAcousticPortal::Portal' has a wrong offset!");
+static_assert(offsetof(AAkAcousticPortal, InitialState) == 0x0002E8, "Member 'AAkAcousticPortal::InitialState' has a wrong offset!");
+static_assert(offsetof(AAkAcousticPortal, bRequiresStateMigration) == 0x0002E9, "Member 'AAkAcousticPortal::bRequiresStateMigration' has a wrong offset!");
 
 // Class AkAudio.AkAudioType
 // 0x0018 (0x0040 - 0x0028)
@@ -265,7 +99,7 @@ class UAkAudioType : public UObject
 {
 public:
 	uint32                                        ShortID;                                           // 0x0028(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D1[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1965[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        UserData;                                          // 0x0030(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 
 public:
@@ -282,23 +116,6 @@ static_assert(alignof(UAkAudioType) == 0x000008, "Wrong alignment on UAkAudioTyp
 static_assert(sizeof(UAkAudioType) == 0x000040, "Wrong size on UAkAudioType");
 static_assert(offsetof(UAkAudioType, ShortID) == 0x000028, "Member 'UAkAudioType::ShortID' has a wrong offset!");
 static_assert(offsetof(UAkAudioType, UserData) == 0x000030, "Member 'UAkAudioType::UserData' has a wrong offset!");
-
-// Class AkAudio.AkRtpc
-// 0x0000 (0x0040 - 0x0040)
-class UAkRtpc final  : public UAkAudioType
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkRtpc">();
-	}
-	static class UAkRtpc* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkRtpc>();
-	}
-};
-static_assert(alignof(UAkRtpc) == 0x000008, "Wrong alignment on UAkRtpc");
-static_assert(sizeof(UAkRtpc) == 0x000040, "Wrong size on UAkRtpc");
 
 // Class AkAudio.AkAcousticTexture
 // 0x0000 (0x0040 - 0x0040)
@@ -317,100 +134,13 @@ public:
 static_assert(alignof(UAkAcousticTexture) == 0x000008, "Wrong alignment on UAkAcousticTexture");
 static_assert(sizeof(UAkAcousticTexture) == 0x000040, "Wrong size on UAkAcousticTexture");
 
-// Class AkAudio.AkSettings
-// 0x02E0 (0x0308 - 0x0028)
-class UAkSettings final  : public UObject
-{
-public:
-	uint8                                         MaxSimultaneousReverbVolumes;                      // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D2[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFilePath                              WwiseProjectPath;                                  // 0x0030(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDirectoryPath                         WwiseSoundDataFolder;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAutoConnectToWAAPI;                               // 0x0050(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECollisionChannel                             DefaultOcclusionCollisionChannel;                  // 0x0051(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECollisionChannel                             DefaultFitToGeometryCollisionChannel;              // 0x0052(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D3[0x5];                                     // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<TSoftObjectPtr<class UPhysicalMaterial>, struct FAkGeometrySurfacePropertiesToMap> AkGeometryMap;                                     // 0x0058(0x0050)(Edit, EditFixedSize, Config, NativeAccessSpecifierPublic)
-	float                                         GlobalDecayAbsorption;                             // 0x00A8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D4[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UAkAuxBus>               DefaultReverbAuxBus;                               // 0x00B0(0x0030)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<float, TSoftObjectPtr<class UAkAuxBus>>  EnvironmentDecayAuxBusMap;                         // 0x00E0(0x0050)(Edit, Config, UObjectWrapper, NativeAccessSpecifierPublic)
-	class FString                                 HFDampingName;                                     // 0x0130(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 DecayEstimateName;                                 // 0x0140(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 TimeToFirstReflectionName;                         // 0x0150(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAkRtpc>                 HFDampingRTPC;                                     // 0x0160(0x0030)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAkRtpc>                 DecayEstimateRTPC;                                 // 0x0190(0x0030)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAkRtpc>                 TimeToFirstReflectionRTPC;                         // 0x01C0(0x0030)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UAkAudioEvent>           AudioInputEvent;                                   // 0x01F0(0x0030)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<struct FGuid, struct FAkAcousticTextureParams> AcousticTextureParamsMap;                          // 0x0220(0x0050)(Config, NativeAccessSpecifierPublic)
-	bool                                          SplitSwitchContainerMedia;                         // 0x0270(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SplitMediaPerFolder;                               // 0x0271(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          UseEventBasedPackaging;                            // 0x0272(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnsureSoundDataPathIsAlwaysCooked;                // 0x0273(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          EnableAutomaticAssetSynchronization;               // 0x0274(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D5[0x3];                                     // 0x0275(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CommandletCommitMessage;                           // 0x0278(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class FString>            UnrealCultureToWwiseCulture;                       // 0x0288(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
-	bool                                          AskedToUseNewAssetManagement;                      // 0x02D8(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableMultiCoreRendering;                         // 0x02D9(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          MigratedEnableMultiCoreRendering;                  // 0x02DA(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FixupRedirectorsDuringMigration;                   // 0x02DB(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D6[0x4];                                     // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FDirectoryPath                         WwiseWindowsInstallationPath;                      // 0x02E0(0x0010)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FFilePath                              WwiseMacInstallationPath;                          // 0x02F0(0x0010)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D7[0x8];                                     // 0x0300(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"AkSettings">();
-	}
-	static class UAkSettings* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UAkSettings>();
-	}
-};
-static_assert(alignof(UAkSettings) == 0x000008, "Wrong alignment on UAkSettings");
-static_assert(sizeof(UAkSettings) == 0x000308, "Wrong size on UAkSettings");
-static_assert(offsetof(UAkSettings, MaxSimultaneousReverbVolumes) == 0x000028, "Member 'UAkSettings::MaxSimultaneousReverbVolumes' has a wrong offset!");
-static_assert(offsetof(UAkSettings, WwiseProjectPath) == 0x000030, "Member 'UAkSettings::WwiseProjectPath' has a wrong offset!");
-static_assert(offsetof(UAkSettings, WwiseSoundDataFolder) == 0x000040, "Member 'UAkSettings::WwiseSoundDataFolder' has a wrong offset!");
-static_assert(offsetof(UAkSettings, bAutoConnectToWAAPI) == 0x000050, "Member 'UAkSettings::bAutoConnectToWAAPI' has a wrong offset!");
-static_assert(offsetof(UAkSettings, DefaultOcclusionCollisionChannel) == 0x000051, "Member 'UAkSettings::DefaultOcclusionCollisionChannel' has a wrong offset!");
-static_assert(offsetof(UAkSettings, DefaultFitToGeometryCollisionChannel) == 0x000052, "Member 'UAkSettings::DefaultFitToGeometryCollisionChannel' has a wrong offset!");
-static_assert(offsetof(UAkSettings, AkGeometryMap) == 0x000058, "Member 'UAkSettings::AkGeometryMap' has a wrong offset!");
-static_assert(offsetof(UAkSettings, GlobalDecayAbsorption) == 0x0000A8, "Member 'UAkSettings::GlobalDecayAbsorption' has a wrong offset!");
-static_assert(offsetof(UAkSettings, DefaultReverbAuxBus) == 0x0000B0, "Member 'UAkSettings::DefaultReverbAuxBus' has a wrong offset!");
-static_assert(offsetof(UAkSettings, EnvironmentDecayAuxBusMap) == 0x0000E0, "Member 'UAkSettings::EnvironmentDecayAuxBusMap' has a wrong offset!");
-static_assert(offsetof(UAkSettings, HFDampingName) == 0x000130, "Member 'UAkSettings::HFDampingName' has a wrong offset!");
-static_assert(offsetof(UAkSettings, DecayEstimateName) == 0x000140, "Member 'UAkSettings::DecayEstimateName' has a wrong offset!");
-static_assert(offsetof(UAkSettings, TimeToFirstReflectionName) == 0x000150, "Member 'UAkSettings::TimeToFirstReflectionName' has a wrong offset!");
-static_assert(offsetof(UAkSettings, HFDampingRTPC) == 0x000160, "Member 'UAkSettings::HFDampingRTPC' has a wrong offset!");
-static_assert(offsetof(UAkSettings, DecayEstimateRTPC) == 0x000190, "Member 'UAkSettings::DecayEstimateRTPC' has a wrong offset!");
-static_assert(offsetof(UAkSettings, TimeToFirstReflectionRTPC) == 0x0001C0, "Member 'UAkSettings::TimeToFirstReflectionRTPC' has a wrong offset!");
-static_assert(offsetof(UAkSettings, AudioInputEvent) == 0x0001F0, "Member 'UAkSettings::AudioInputEvent' has a wrong offset!");
-static_assert(offsetof(UAkSettings, AcousticTextureParamsMap) == 0x000220, "Member 'UAkSettings::AcousticTextureParamsMap' has a wrong offset!");
-static_assert(offsetof(UAkSettings, SplitSwitchContainerMedia) == 0x000270, "Member 'UAkSettings::SplitSwitchContainerMedia' has a wrong offset!");
-static_assert(offsetof(UAkSettings, SplitMediaPerFolder) == 0x000271, "Member 'UAkSettings::SplitMediaPerFolder' has a wrong offset!");
-static_assert(offsetof(UAkSettings, UseEventBasedPackaging) == 0x000272, "Member 'UAkSettings::UseEventBasedPackaging' has a wrong offset!");
-static_assert(offsetof(UAkSettings, bEnsureSoundDataPathIsAlwaysCooked) == 0x000273, "Member 'UAkSettings::bEnsureSoundDataPathIsAlwaysCooked' has a wrong offset!");
-static_assert(offsetof(UAkSettings, EnableAutomaticAssetSynchronization) == 0x000274, "Member 'UAkSettings::EnableAutomaticAssetSynchronization' has a wrong offset!");
-static_assert(offsetof(UAkSettings, CommandletCommitMessage) == 0x000278, "Member 'UAkSettings::CommandletCommitMessage' has a wrong offset!");
-static_assert(offsetof(UAkSettings, UnrealCultureToWwiseCulture) == 0x000288, "Member 'UAkSettings::UnrealCultureToWwiseCulture' has a wrong offset!");
-static_assert(offsetof(UAkSettings, AskedToUseNewAssetManagement) == 0x0002D8, "Member 'UAkSettings::AskedToUseNewAssetManagement' has a wrong offset!");
-static_assert(offsetof(UAkSettings, bEnableMultiCoreRendering) == 0x0002D9, "Member 'UAkSettings::bEnableMultiCoreRendering' has a wrong offset!");
-static_assert(offsetof(UAkSettings, MigratedEnableMultiCoreRendering) == 0x0002DA, "Member 'UAkSettings::MigratedEnableMultiCoreRendering' has a wrong offset!");
-static_assert(offsetof(UAkSettings, FixupRedirectorsDuringMigration) == 0x0002DB, "Member 'UAkSettings::FixupRedirectorsDuringMigration' has a wrong offset!");
-static_assert(offsetof(UAkSettings, WwiseWindowsInstallationPath) == 0x0002E0, "Member 'UAkSettings::WwiseWindowsInstallationPath' has a wrong offset!");
-static_assert(offsetof(UAkSettings, WwiseMacInstallationPath) == 0x0002F0, "Member 'UAkSettings::WwiseMacInstallationPath' has a wrong offset!");
-
 // Class AkAudio.AkAcousticTextureSetComponent
 // 0x0020 (0x02C0 - 0x02A0)
 #pragma pack(push, 0x1)
 class alignas(0x10) UAkAcousticTextureSetComponent : public USceneComponent
 {
 public:
-	uint8                                         Pad_12D8[0x18];                                    // 0x02A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1966[0x18];                                    // 0x02A0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -427,15 +157,15 @@ static_assert(alignof(UAkAcousticTextureSetComponent) == 0x000010, "Wrong alignm
 static_assert(sizeof(UAkAcousticTextureSetComponent) == 0x0002C0, "Wrong size on UAkAcousticTextureSetComponent");
 
 // Class AkAudio.AkAmbientSound
-// 0x0040 (0x02E0 - 0x02A0)
+// 0x0040 (0x02E8 - 0x02A8)
 class AAkAmbientSound : public AActor
 {
 public:
-	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x02A0(0x0008)(ZeroConstructor, Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkComponent*                           AkComponent;                                       // 0x02A8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          StopWhenOwnerIsDestroyed;                          // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AutoPost;                                          // 0x02B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12D9[0x2E];                                    // 0x02B2(0x002E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x02A8(0x0008)(ZeroConstructor, Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkComponent*                           AkComponent;                                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          StopWhenOwnerIsDestroyed;                          // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AutoPost;                                          // 0x02B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1967[0x2E];                                    // 0x02BA(0x002E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void StartAmbientSound();
@@ -452,18 +182,47 @@ public:
 	}
 };
 static_assert(alignof(AAkAmbientSound) == 0x000008, "Wrong alignment on AAkAmbientSound");
-static_assert(sizeof(AAkAmbientSound) == 0x0002E0, "Wrong size on AAkAmbientSound");
-static_assert(offsetof(AAkAmbientSound, AkAudioEvent) == 0x0002A0, "Member 'AAkAmbientSound::AkAudioEvent' has a wrong offset!");
-static_assert(offsetof(AAkAmbientSound, AkComponent) == 0x0002A8, "Member 'AAkAmbientSound::AkComponent' has a wrong offset!");
-static_assert(offsetof(AAkAmbientSound, StopWhenOwnerIsDestroyed) == 0x0002B0, "Member 'AAkAmbientSound::StopWhenOwnerIsDestroyed' has a wrong offset!");
-static_assert(offsetof(AAkAmbientSound, AutoPost) == 0x0002B1, "Member 'AAkAmbientSound::AutoPost' has a wrong offset!");
+static_assert(sizeof(AAkAmbientSound) == 0x0002E8, "Wrong size on AAkAmbientSound");
+static_assert(offsetof(AAkAmbientSound, AkAudioEvent) == 0x0002A8, "Member 'AAkAmbientSound::AkAudioEvent' has a wrong offset!");
+static_assert(offsetof(AAkAmbientSound, AkComponent) == 0x0002B0, "Member 'AAkAmbientSound::AkComponent' has a wrong offset!");
+static_assert(offsetof(AAkAmbientSound, StopWhenOwnerIsDestroyed) == 0x0002B8, "Member 'AAkAmbientSound::StopWhenOwnerIsDestroyed' has a wrong offset!");
+static_assert(offsetof(AAkAmbientSound, AutoPost) == 0x0002B9, "Member 'AAkAmbientSound::AutoPost' has a wrong offset!");
+
+// Class AkAudio.AkAndroidInitializationSettings
+// 0x00D0 (0x00F8 - 0x0028)
+class UAkAndroidInitializationSettings final  : public UObject
+{
+public:
+	uint8                                         Pad_1968[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkAndroidAdvancedInitializationSettings AdvancedSettings;                                  // 0x00C0(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+
+public:
+	void MigrateMultiCoreRendering(bool NewValue);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkAndroidInitializationSettings">();
+	}
+	static class UAkAndroidInitializationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkAndroidInitializationSettings>();
+	}
+};
+static_assert(alignof(UAkAndroidInitializationSettings) == 0x000008, "Wrong alignment on UAkAndroidInitializationSettings");
+static_assert(sizeof(UAkAndroidInitializationSettings) == 0x0000F8, "Wrong size on UAkAndroidInitializationSettings");
+static_assert(offsetof(UAkAndroidInitializationSettings, CommonSettings) == 0x000030, "Member 'UAkAndroidInitializationSettings::CommonSettings' has a wrong offset!");
+static_assert(offsetof(UAkAndroidInitializationSettings, CommunicationSettings) == 0x000098, "Member 'UAkAndroidInitializationSettings::CommunicationSettings' has a wrong offset!");
+static_assert(offsetof(UAkAndroidInitializationSettings, AdvancedSettings) == 0x0000C0, "Member 'UAkAndroidInitializationSettings::AdvancedSettings' has a wrong offset!");
 
 // Class AkAudio.AkPlatformInfo
 // 0x0048 (0x0070 - 0x0028)
 class UAkPlatformInfo : public UObject
 {
 public:
-	uint8                                         Pad_12DA[0x48];                                    // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1969[0x48];                                    // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -501,7 +260,7 @@ class UAkAssetBase : public UAkAudioType
 {
 public:
 	class UAkAssetPlatformData*                   PlatformAssetData;                                 // 0x0040(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12DB[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_196A[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -518,14 +277,14 @@ static_assert(sizeof(UAkAssetBase) == 0x000050, "Wrong size on UAkAssetBase");
 static_assert(offsetof(UAkAssetBase, PlatformAssetData) == 0x000040, "Member 'UAkAssetBase::PlatformAssetData' has a wrong offset!");
 
 // Class AkAudio.AkAssetData
-// 0x0048 (0x0070 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UAkAssetData : public UObject
 {
 public:
 	uint32                                        CachedHash;                                        // 0x0028(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12DC[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_196B[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BankLanguage;                                      // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12DD[0x30];                                    // 0x0040(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_196C[0x38];                                    // 0x0040(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -538,16 +297,16 @@ public:
 	}
 };
 static_assert(alignof(UAkAssetData) == 0x000008, "Wrong alignment on UAkAssetData");
-static_assert(sizeof(UAkAssetData) == 0x000070, "Wrong size on UAkAssetData");
+static_assert(sizeof(UAkAssetData) == 0x000078, "Wrong size on UAkAssetData");
 static_assert(offsetof(UAkAssetData, CachedHash) == 0x000028, "Member 'UAkAssetData::CachedHash' has a wrong offset!");
 static_assert(offsetof(UAkAssetData, BankLanguage) == 0x000030, "Member 'UAkAssetData::BankLanguage' has a wrong offset!");
 
 // Class AkAudio.AkAssetDataWithMedia
-// 0x0010 (0x0080 - 0x0070)
+// 0x0010 (0x0088 - 0x0078)
 class UAkAssetDataWithMedia : public UAkAssetData
 {
 public:
-	TArray<class UAkMediaAsset*>                  MediaList;                                         // 0x0070(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<class UAkMediaAsset*>                  MediaList;                                         // 0x0078(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -560,8 +319,8 @@ public:
 	}
 };
 static_assert(alignof(UAkAssetDataWithMedia) == 0x000008, "Wrong alignment on UAkAssetDataWithMedia");
-static_assert(sizeof(UAkAssetDataWithMedia) == 0x000080, "Wrong size on UAkAssetDataWithMedia");
-static_assert(offsetof(UAkAssetDataWithMedia, MediaList) == 0x000070, "Member 'UAkAssetDataWithMedia::MediaList' has a wrong offset!");
+static_assert(sizeof(UAkAssetDataWithMedia) == 0x000088, "Wrong size on UAkAssetDataWithMedia");
+static_assert(offsetof(UAkAssetDataWithMedia, MediaList) == 0x000078, "Member 'UAkAssetDataWithMedia::MediaList' has a wrong offset!");
 
 // Class AkAudio.AkAssetPlatformData
 // 0x0008 (0x0030 - 0x0028)
@@ -585,14 +344,14 @@ static_assert(sizeof(UAkAssetPlatformData) == 0x000030, "Wrong size on UAkAssetP
 static_assert(offsetof(UAkAssetPlatformData, CurrentAssetData) == 0x000028, "Member 'UAkAssetPlatformData::CurrentAssetData' has a wrong offset!");
 
 // Class AkAudio.AkAssetDataSwitchContainerData
-// 0x0058 (0x0080 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UAkAssetDataSwitchContainerData final  : public UObject
 {
 public:
-	TSoftObjectPtr<class UAkGroupValue>           GroupValue;                                        // 0x0028(0x0030)(Edit, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkGroupValue*                          DefaultGroupValue;                                 // 0x0058(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UAkMediaAsset*>                  MediaList;                                         // 0x0060(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	TArray<class UAkAssetDataSwitchContainerData*> Children;                                          // 0x0070(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkGroupValue>           GroupValue;                                        // 0x0028(0x0028)(Edit, EditConst, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkGroupValue*                          DefaultGroupValue;                                 // 0x0050(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UAkMediaAsset*>                  MediaList;                                         // 0x0058(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<class UAkAssetDataSwitchContainerData*> Children;                                          // 0x0068(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -605,20 +364,20 @@ public:
 	}
 };
 static_assert(alignof(UAkAssetDataSwitchContainerData) == 0x000008, "Wrong alignment on UAkAssetDataSwitchContainerData");
-static_assert(sizeof(UAkAssetDataSwitchContainerData) == 0x000080, "Wrong size on UAkAssetDataSwitchContainerData");
+static_assert(sizeof(UAkAssetDataSwitchContainerData) == 0x000078, "Wrong size on UAkAssetDataSwitchContainerData");
 static_assert(offsetof(UAkAssetDataSwitchContainerData, GroupValue) == 0x000028, "Member 'UAkAssetDataSwitchContainerData::GroupValue' has a wrong offset!");
-static_assert(offsetof(UAkAssetDataSwitchContainerData, DefaultGroupValue) == 0x000058, "Member 'UAkAssetDataSwitchContainerData::DefaultGroupValue' has a wrong offset!");
-static_assert(offsetof(UAkAssetDataSwitchContainerData, MediaList) == 0x000060, "Member 'UAkAssetDataSwitchContainerData::MediaList' has a wrong offset!");
-static_assert(offsetof(UAkAssetDataSwitchContainerData, Children) == 0x000070, "Member 'UAkAssetDataSwitchContainerData::Children' has a wrong offset!");
+static_assert(offsetof(UAkAssetDataSwitchContainerData, DefaultGroupValue) == 0x000050, "Member 'UAkAssetDataSwitchContainerData::DefaultGroupValue' has a wrong offset!");
+static_assert(offsetof(UAkAssetDataSwitchContainerData, MediaList) == 0x000058, "Member 'UAkAssetDataSwitchContainerData::MediaList' has a wrong offset!");
+static_assert(offsetof(UAkAssetDataSwitchContainerData, Children) == 0x000068, "Member 'UAkAssetDataSwitchContainerData::Children' has a wrong offset!");
 
 // Class AkAudio.AkAssetDataSwitchContainer
-// 0x0068 (0x00E8 - 0x0080)
+// 0x0068 (0x00F0 - 0x0088)
 class UAkAssetDataSwitchContainer : public UAkAssetDataWithMedia
 {
 public:
-	TArray<class UAkAssetDataSwitchContainerData*> SwitchContainers;                                  // 0x0080(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
-	class UAkGroupValue*                          DefaultGroupValue;                                 // 0x0090(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12DE[0x50];                                    // 0x0098(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class UAkAssetDataSwitchContainerData*> SwitchContainers;                                  // 0x0088(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	class UAkGroupValue*                          DefaultGroupValue;                                 // 0x0098(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_196D[0x50];                                    // 0x00A0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -631,25 +390,25 @@ public:
 	}
 };
 static_assert(alignof(UAkAssetDataSwitchContainer) == 0x000008, "Wrong alignment on UAkAssetDataSwitchContainer");
-static_assert(sizeof(UAkAssetDataSwitchContainer) == 0x0000E8, "Wrong size on UAkAssetDataSwitchContainer");
-static_assert(offsetof(UAkAssetDataSwitchContainer, SwitchContainers) == 0x000080, "Member 'UAkAssetDataSwitchContainer::SwitchContainers' has a wrong offset!");
-static_assert(offsetof(UAkAssetDataSwitchContainer, DefaultGroupValue) == 0x000090, "Member 'UAkAssetDataSwitchContainer::DefaultGroupValue' has a wrong offset!");
+static_assert(sizeof(UAkAssetDataSwitchContainer) == 0x0000F0, "Wrong size on UAkAssetDataSwitchContainer");
+static_assert(offsetof(UAkAssetDataSwitchContainer, SwitchContainers) == 0x000088, "Member 'UAkAssetDataSwitchContainer::SwitchContainers' has a wrong offset!");
+static_assert(offsetof(UAkAssetDataSwitchContainer, DefaultGroupValue) == 0x000098, "Member 'UAkAssetDataSwitchContainer::DefaultGroupValue' has a wrong offset!");
 
 // Class AkAudio.AkAudioEventData
-// 0x01A0 (0x0288 - 0x00E8)
+// 0x01A0 (0x0290 - 0x00F0)
 class UAkAudioEventData final  : public UAkAssetDataSwitchContainer
 {
 public:
-	float                                         MaxAttenuationRadius;                              // 0x00E8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsInfinite;                                        // 0x00EC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12DF[0x3];                                     // 0x00ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinimumDuration;                                   // 0x00F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MaximumDuration;                                   // 0x00F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, class UAkAssetDataSwitchContainer*> LocalizedMedia;                                    // 0x00F8(0x0050)(Deprecated, NativeAccessSpecifierPublic)
-	TSet<class UAkAudioEvent*>                    PostedEvents;                                      // 0x0148(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	TSet<class UAkAuxBus*>                        UserDefinedSends;                                  // 0x0198(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	TSet<class UAkTrigger*>                       PostedTriggers;                                    // 0x01E8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-	TSet<class UAkGroupValue*>                    GroupValues;                                       // 0x0238(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	float                                         MaxAttenuationRadius;                              // 0x00F0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsInfinite;                                        // 0x00F4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_196E[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinimumDuration;                                   // 0x00F8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaximumDuration;                                   // 0x00FC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class UAkAssetDataSwitchContainer*> LocalizedMedia;                                    // 0x0100(0x0050)(Deprecated, NativeAccessSpecifierPublic)
+	TSet<class UAkAudioEvent*>                    PostedEvents;                                      // 0x0150(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TSet<class UAkAuxBus*>                        UserDefinedSends;                                  // 0x01A0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TSet<class UAkTrigger*>                       PostedTriggers;                                    // 0x01F0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+	TSet<class UAkGroupValue*>                    GroupValues;                                       // 0x0240(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -662,16 +421,16 @@ public:
 	}
 };
 static_assert(alignof(UAkAudioEventData) == 0x000008, "Wrong alignment on UAkAudioEventData");
-static_assert(sizeof(UAkAudioEventData) == 0x000288, "Wrong size on UAkAudioEventData");
-static_assert(offsetof(UAkAudioEventData, MaxAttenuationRadius) == 0x0000E8, "Member 'UAkAudioEventData::MaxAttenuationRadius' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, IsInfinite) == 0x0000EC, "Member 'UAkAudioEventData::IsInfinite' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, MinimumDuration) == 0x0000F0, "Member 'UAkAudioEventData::MinimumDuration' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, MaximumDuration) == 0x0000F4, "Member 'UAkAudioEventData::MaximumDuration' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, LocalizedMedia) == 0x0000F8, "Member 'UAkAudioEventData::LocalizedMedia' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, PostedEvents) == 0x000148, "Member 'UAkAudioEventData::PostedEvents' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, UserDefinedSends) == 0x000198, "Member 'UAkAudioEventData::UserDefinedSends' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, PostedTriggers) == 0x0001E8, "Member 'UAkAudioEventData::PostedTriggers' has a wrong offset!");
-static_assert(offsetof(UAkAudioEventData, GroupValues) == 0x000238, "Member 'UAkAudioEventData::GroupValues' has a wrong offset!");
+static_assert(sizeof(UAkAudioEventData) == 0x000290, "Wrong size on UAkAudioEventData");
+static_assert(offsetof(UAkAudioEventData, MaxAttenuationRadius) == 0x0000F0, "Member 'UAkAudioEventData::MaxAttenuationRadius' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, IsInfinite) == 0x0000F4, "Member 'UAkAudioEventData::IsInfinite' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, MinimumDuration) == 0x0000F8, "Member 'UAkAudioEventData::MinimumDuration' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, MaximumDuration) == 0x0000FC, "Member 'UAkAudioEventData::MaximumDuration' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, LocalizedMedia) == 0x000100, "Member 'UAkAudioEventData::LocalizedMedia' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, PostedEvents) == 0x000150, "Member 'UAkAudioEventData::PostedEvents' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, UserDefinedSends) == 0x0001A0, "Member 'UAkAudioEventData::UserDefinedSends' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, PostedTriggers) == 0x0001F0, "Member 'UAkAudioEventData::PostedTriggers' has a wrong offset!");
+static_assert(offsetof(UAkAudioEventData, GroupValues) == 0x000240, "Member 'UAkAudioEventData::GroupValues' has a wrong offset!");
 
 // Class AkAudio.AkAudioBank
 // 0x00C8 (0x0118 - 0x0050)
@@ -679,11 +438,11 @@ class UAkAudioBank final  : public UAkAssetBase
 {
 public:
 	bool                                          AutoLoad;                                          // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E0[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_196F[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FString, class UAkAssetPlatformData*> LocalizedPlatformAssetDataMap;                     // 0x0058(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	TSet<TSoftObjectPtr<class UAkAudioEvent>>     LinkedAkEvents;                                    // 0x00A8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Transient, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 	class UAkAssetPlatformData*                   CurrentLocalizedPlatformAssetData;                 // 0x00F8(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12E1[0x18];                                    // 0x0100(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1970[0x18];                                    // 0x0100(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -709,14 +468,14 @@ class UAkAudioEvent final  : public UAkAssetBase
 public:
 	TMap<class FString, class UAkAssetPlatformData*> LocalizedPlatformAssetDataMap;                     // 0x0050(0x0050)(Edit, EditConst, NativeAccessSpecifierPublic)
 	class UAkAudioBank*                           RequiredBank;                                      // 0x00A0(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E2[0x8];                                     // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1971[0x8];                                     // 0x00A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAssetPlatformData*                   CurrentLocalizedPlatformData;                      // 0x00B0(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         MaxAttenuationRadius;                              // 0x00B8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          IsInfinite;                                        // 0x00BC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12E3[0x3];                                     // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1972[0x3];                                     // 0x00BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MinimumDuration;                                   // 0x00C0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         MaximumDuration;                                   // 0x00C4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_12E4[0x8];                                     // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1973[0x8];                                     // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetIsInfinite() const;
@@ -744,6 +503,40 @@ static_assert(offsetof(UAkAudioEvent, IsInfinite) == 0x0000BC, "Member 'UAkAudio
 static_assert(offsetof(UAkAudioEvent, MinimumDuration) == 0x0000C0, "Member 'UAkAudioEvent::MinimumDuration' has a wrong offset!");
 static_assert(offsetof(UAkAudioEvent, MaximumDuration) == 0x0000C4, "Member 'UAkAudioEvent::MaximumDuration' has a wrong offset!");
 
+// Class AkAudio.AkGameObject
+// 0x0020 (0x02C0 - 0x02A0)
+class UAkGameObject : public USceneComponent
+{
+public:
+	class UAkAudioEvent*                          AkAudioEvent;                                      // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EventName;                                         // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1974[0x8];                                     // 0x02B8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	int32 PostAkEvent(class UAkAudioEvent* AkEvent, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const class FString& In_EventName);
+	void PostAkEventAsync(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, int32* PlayingID, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const struct FLatentActionInfo& LatentInfo);
+	int32 PostAssociatedAkEvent(int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources);
+	void PostAssociatedAkEventAsync(class UObject* WorldContextObject, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, const struct FLatentActionInfo& LatentInfo, int32* PlayingID);
+	void Stop();
+
+	void GetRTPCValue(class UAkRtpc* RTPCValue, ERTPCValueType InputValueType, float* Value, ERTPCValueType* OutputValueType, const class FString& Rtpc, int32 PlayingID) const;
+	void SetRTPCValue(class UAkRtpc* RTPCValue, float Value, int32 InterpolationTimeMs, const class FString& Rtpc) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkGameObject">();
+	}
+	static class UAkGameObject* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkGameObject>();
+	}
+};
+static_assert(alignof(UAkGameObject) == 0x000010, "Wrong alignment on UAkGameObject");
+static_assert(sizeof(UAkGameObject) == 0x0002C0, "Wrong size on UAkGameObject");
+static_assert(offsetof(UAkGameObject, AkAudioEvent) == 0x0002A0, "Member 'UAkGameObject::AkAudioEvent' has a wrong offset!");
+static_assert(offsetof(UAkGameObject, EventName) == 0x0002A8, "Member 'UAkGameObject::EventName' has a wrong offset!");
+
 // Class AkAudio.AkComponent
 // 0x01D0 (0x0490 - 0x02C0)
 #pragma pack(push, 0x1)
@@ -751,13 +544,13 @@ class alignas(0x10) UAkComponent : public UAkGameObject
 {
 public:
 	bool                                          bUseSpatialAudio;                                  // 0x02C0(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E5[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_197E[0x7];                                     // 0x02C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	ECollisionChannel                             OcclusionCollisionChannel;                         // 0x02C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableSpotReflectors;                              // 0x02C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E6[0x2];                                     // 0x02CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_197F[0x2];                                     // 0x02CA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OuterRadius;                                       // 0x02CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         InnerRadius;                                       // 0x02D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E7[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1980[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAuxBus*                              EarlyReflectionAuxBus;                             // 0x02D8(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FString                                 EarlyReflectionAuxBusName;                         // 0x02E0(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         EarlyReflectionOrder;                              // 0x02F0(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
@@ -772,11 +565,11 @@ public:
 	bool                                          DrawHigherOrderReflections;                        // 0x030E(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          DrawDiffraction;                                   // 0x030F(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          StopWhenOwnerDestroyed;                            // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E8[0x3];                                     // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1981[0x3];                                     // 0x0311(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         AttenuationScalingFactor;                          // 0x0314(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OcclusionRefreshInterval;                          // 0x0318(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseReverbVolumes;                                 // 0x031C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12E9[0x16B];                                   // 0x031D(0x016B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1982[0x16B];                                   // 0x031D(0x016B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetAutoDestroy();
@@ -840,7 +633,7 @@ static_assert(offsetof(UAkComponent, bUseReverbVolumes) == 0x00031C, "Member 'UA
 class UAkAudioInputComponent : public UAkComponent
 {
 public:
-	uint8                                         Pad_12F0[0x38];                                    // 0x0488(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1989[0x38];                                    // 0x0488(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	int32 PostAssociatedAudioInputEvent();
@@ -880,25 +673,25 @@ static_assert(sizeof(UAkAuxBus) == 0x000058, "Wrong size on UAkAuxBus");
 static_assert(offsetof(UAkAuxBus, RequiredBank) == 0x000050, "Member 'UAkAuxBus::RequiredBank' has a wrong offset!");
 
 // Class AkAudio.AkCheckBox
-// 0x0E58 (0x0FC0 - 0x0168)
+// 0x0E58 (0x0FF0 - 0x0198)
 class UAkCheckBox final  : public UContentWidget
 {
 public:
-	uint8                                         Pad_12F1[0x290];                                   // 0x0168(0x0290)(Fixing Size After Last Property [ Dumper-7 ])
-	ECheckBoxState                                CheckedState;                                      // 0x03F8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12F2[0x3];                                     // 0x03F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void()>                             CheckedStateDelegate;                              // 0x03FC(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12F3[0x4];                                     // 0x040C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FCheckBoxStyle                         WidgetStyle;                                       // 0x0410(0x0AD0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0EE0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFocusable;                                       // 0x0EE1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12F4[0x6];                                     // 0x0EE2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAkBoolPropertyToControl               ThePropertyToControl;                              // 0x0EE8(0x0010)(Edit, NativeAccessSpecifierPublic)
-	struct FAkWwiseItemToControl                  ItemToControl;                                     // 0x0EF8(0x0040)(Edit, Config, EditConst, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             AkOnCheckStateChanged;                             // 0x0F38(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnItemDropped;                                     // 0x0F48(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPropertyDropped;                                 // 0x0F58(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12F5[0x58];                                    // 0x0F68(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_198A[0x288];                                   // 0x0198(0x0288)(Fixing Size After Last Property [ Dumper-7 ])
+	ECheckBoxState                                CheckedState;                                      // 0x0420(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_198B[0x3];                                     // 0x0421(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void()>                             CheckedStateDelegate;                              // 0x0424(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_198C[0xC];                                     // 0x0434(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FCheckBoxStyle                         WidgetStyle;                                       // 0x0440(0x0AD0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0F10(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFocusable;                                       // 0x0F11(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_198D[0x6];                                     // 0x0F12(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkBoolPropertyToControl               ThePropertyToControl;                              // 0x0F18(0x0010)(Edit, NativeAccessSpecifierPublic)
+	struct FAkWwiseItemToControl                  ItemToControl;                                     // 0x0F28(0x0040)(Edit, Config, EditConst, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             AkOnCheckStateChanged;                             // 0x0F68(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnItemDropped;                                     // 0x0F78(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPropertyDropped;                                 // 0x0F88(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_198E[0x58];                                    // 0x0F98(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAkBoolProperty(const class FString& ItemProperty);
@@ -923,20 +716,20 @@ public:
 	}
 };
 static_assert(alignof(UAkCheckBox) == 0x000010, "Wrong alignment on UAkCheckBox");
-static_assert(sizeof(UAkCheckBox) == 0x000FC0, "Wrong size on UAkCheckBox");
-static_assert(offsetof(UAkCheckBox, CheckedState) == 0x0003F8, "Member 'UAkCheckBox::CheckedState' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, CheckedStateDelegate) == 0x0003FC, "Member 'UAkCheckBox::CheckedStateDelegate' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, WidgetStyle) == 0x000410, "Member 'UAkCheckBox::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, HorizontalAlignment) == 0x000EE0, "Member 'UAkCheckBox::HorizontalAlignment' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, IsFocusable) == 0x000EE1, "Member 'UAkCheckBox::IsFocusable' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, ThePropertyToControl) == 0x000EE8, "Member 'UAkCheckBox::ThePropertyToControl' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, ItemToControl) == 0x000EF8, "Member 'UAkCheckBox::ItemToControl' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, AkOnCheckStateChanged) == 0x000F38, "Member 'UAkCheckBox::AkOnCheckStateChanged' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, OnItemDropped) == 0x000F48, "Member 'UAkCheckBox::OnItemDropped' has a wrong offset!");
-static_assert(offsetof(UAkCheckBox, OnPropertyDropped) == 0x000F58, "Member 'UAkCheckBox::OnPropertyDropped' has a wrong offset!");
+static_assert(sizeof(UAkCheckBox) == 0x000FF0, "Wrong size on UAkCheckBox");
+static_assert(offsetof(UAkCheckBox, CheckedState) == 0x000420, "Member 'UAkCheckBox::CheckedState' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, CheckedStateDelegate) == 0x000424, "Member 'UAkCheckBox::CheckedStateDelegate' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, WidgetStyle) == 0x000440, "Member 'UAkCheckBox::WidgetStyle' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, HorizontalAlignment) == 0x000F10, "Member 'UAkCheckBox::HorizontalAlignment' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, IsFocusable) == 0x000F11, "Member 'UAkCheckBox::IsFocusable' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, ThePropertyToControl) == 0x000F18, "Member 'UAkCheckBox::ThePropertyToControl' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, ItemToControl) == 0x000F28, "Member 'UAkCheckBox::ItemToControl' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, AkOnCheckStateChanged) == 0x000F68, "Member 'UAkCheckBox::AkOnCheckStateChanged' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, OnItemDropped) == 0x000F78, "Member 'UAkCheckBox::OnItemDropped' has a wrong offset!");
+static_assert(offsetof(UAkCheckBox, OnPropertyDropped) == 0x000F88, "Member 'UAkCheckBox::OnPropertyDropped' has a wrong offset!");
 
 // Class AkAudio.DrawPortalComponent
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0570 - 0x0570)
 class UDrawPortalComponent final  : public UPrimitiveComponent
 {
 public:
@@ -950,10 +743,10 @@ public:
 	}
 };
 static_assert(alignof(UDrawPortalComponent) == 0x000010, "Wrong alignment on UDrawPortalComponent");
-static_assert(sizeof(UDrawPortalComponent) == 0x000540, "Wrong size on UDrawPortalComponent");
+static_assert(sizeof(UDrawPortalComponent) == 0x000570, "Wrong size on UDrawPortalComponent");
 
 // Class AkAudio.DrawRoomComponent
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0570 - 0x0570)
 class UDrawRoomComponent final  : public UPrimitiveComponent
 {
 public:
@@ -967,7 +760,7 @@ public:
 	}
 };
 static_assert(alignof(UDrawRoomComponent) == 0x000010, "Wrong alignment on UDrawRoomComponent");
-static_assert(sizeof(UDrawRoomComponent) == 0x000540, "Wrong size on UDrawRoomComponent");
+static_assert(sizeof(UDrawRoomComponent) == 0x000570, "Wrong size on UDrawRoomComponent");
 
 // Class AkAudio.AkFolder
 // 0x0078 (0x00B8 - 0x0040)
@@ -976,7 +769,7 @@ class UAkFolder final  : public UAkAudioType
 public:
 	class FString                                 UnrealFolderPath;                                  // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 WwiseFolderPath;                                   // 0x0050(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_12F6[0x58];                                    // 0x0060(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_198F[0x58];                                    // 0x0060(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1126,7 +919,7 @@ static_assert(offsetof(UAkEventCallbackInfo, EventId) == 0x000034, "Member 'UAkE
 class UAkMIDIEventCallbackInfo final  : public UAkEventCallbackInfo
 {
 public:
-	uint8                                         Pad_131E[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19B7[0x10];                                    // 0x0038(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetCc(struct FAkMidiCc* AsCc);
@@ -1188,7 +981,7 @@ public:
 	int32                                         AudioNodeID;                                       // 0x0040(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MediaID;                                           // 0x0044(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bStreaming;                                        // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1320[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19B9[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1216,7 +1009,7 @@ public:
 	int32                                         PlayingID;                                         // 0x0030(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FAkSegmentInfo                         SegmentInfo;                                       // 0x0034(0x0024)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, NativeAccessSpecifierPublic)
 	EAkCallbackType                               MusicSyncType;                                     // 0x0058(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1321[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BA[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 UserCueName;                                       // 0x0060(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -1242,20 +1035,20 @@ class UAkGeometryComponent final  : public UAkAcousticTextureSetComponent
 {
 public:
 	EAkMeshType                                   MeshType;                                          // 0x02B8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1322[0x3];                                     // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BB[0x3];                                     // 0x02B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LOD;                                               // 0x02BC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WeldingThreshold;                                  // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1323[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BC[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class UMaterialInterface*, struct FAkGeometrySurfaceOverride> StaticMeshSurfaceOverride;                         // 0x02C8(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	struct FAkGeometrySurfaceOverride             CollisionMeshSurfaceOverride;                      // 0x0318(0x0018)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffraction;                                // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffractionOnBoundaryEdges;                 // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1324[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BD[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 AssociatedRoom;                                    // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1325[0x10];                                    // 0x0340(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BE[0x10];                                    // 0x0340(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkGeometryData                        GeometryData;                                      // 0x0350(0x0050)(NativeAccessSpecifierPrivate)
 	TMap<int32, double>                           SurfaceAreas;                                      // 0x03A0(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1326[0x50];                                    // 0x03F0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19BF[0x50];                                    // 0x03F0(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ConvertMesh();
@@ -1293,7 +1086,7 @@ class UAkGroupValue : public UAkAudioType
 public:
 	TArray<TSoftObjectPtr<class UAkMediaAsset>>   MediaDependencies;                                 // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, UObjectWrapper, NativeAccessSpecifierPublic)
 	uint32                                        GroupShortID;                                      // 0x0050(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1327[0x14];                                    // 0x0054(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C0[0x14];                                    // 0x0054(0x0014)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1315,11 +1108,11 @@ static_assert(offsetof(UAkGroupValue, GroupShortID) == 0x000050, "Member 'UAkGro
 class UAkHololensInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1328[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C1[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkHololensAdvancedInitializationSettings AdvancedSettings;                                  // 0x00C0(0x0034)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1329[0x4];                                     // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C2[0x4];                                     // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -1358,11 +1151,11 @@ static_assert(alignof(UAkHololensPlatformInfo) == 0x000008, "Wrong alignment on 
 static_assert(sizeof(UAkHololensPlatformInfo) == 0x000070, "Wrong size on UAkHololensPlatformInfo");
 
 // Class AkAudio.AkInitBankAssetData
-// 0x0010 (0x0090 - 0x0080)
+// 0x0010 (0x0098 - 0x0088)
 class UAkInitBankAssetData final  : public UAkAssetDataWithMedia
 {
 public:
-	TArray<struct FAkPluginInfo>                  PluginInfos;                                       // 0x0080(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
+	TArray<struct FAkPluginInfo>                  PluginInfos;                                       // 0x0088(0x0010)(Edit, ZeroConstructor, EditConst, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -1375,8 +1168,8 @@ public:
 	}
 };
 static_assert(alignof(UAkInitBankAssetData) == 0x000008, "Wrong alignment on UAkInitBankAssetData");
-static_assert(sizeof(UAkInitBankAssetData) == 0x000090, "Wrong size on UAkInitBankAssetData");
-static_assert(offsetof(UAkInitBankAssetData, PluginInfos) == 0x000080, "Member 'UAkInitBankAssetData::PluginInfos' has a wrong offset!");
+static_assert(sizeof(UAkInitBankAssetData) == 0x000098, "Wrong size on UAkInitBankAssetData");
+static_assert(offsetof(UAkInitBankAssetData, PluginInfos) == 0x000088, "Member 'UAkInitBankAssetData::PluginInfos' has a wrong offset!");
 
 // Class AkAudio.AkInitBank
 // 0x0020 (0x0070 - 0x0050)
@@ -1406,13 +1199,13 @@ static_assert(offsetof(UAkInitBank, DefaultLanguage) == 0x000060, "Member 'UAkIn
 class UAkIOSInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_132A[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C3[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAudioSession                        AudioSession;                                      // 0x0098(0x000C)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132B[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C4[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00A8(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAdvancedInitializationSettings      AdvancedSettings;                                  // 0x00D0(0x002C)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132C[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C5[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1470,13 +1263,13 @@ static_assert(alignof(UAkItemBoolPropertiesConv) == 0x000008, "Wrong alignment o
 static_assert(sizeof(UAkItemBoolPropertiesConv) == 0x000028, "Wrong size on UAkItemBoolPropertiesConv");
 
 // Class AkAudio.AkItemBoolProperties
-// 0x0040 (0x0190 - 0x0150)
+// 0x0040 (0x01C0 - 0x0180)
 class UAkItemBoolProperties final  : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPropertyDragged;                                 // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132D[0x20];                                    // 0x0170(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPropertyDragged;                                 // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19C6[0x20];                                    // 0x01A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetSearchText(const class FString& NewText);
@@ -1495,9 +1288,9 @@ public:
 	}
 };
 static_assert(alignof(UAkItemBoolProperties) == 0x000008, "Wrong alignment on UAkItemBoolProperties");
-static_assert(sizeof(UAkItemBoolProperties) == 0x000190, "Wrong size on UAkItemBoolProperties");
-static_assert(offsetof(UAkItemBoolProperties, OnSelectionChanged) == 0x000150, "Member 'UAkItemBoolProperties::OnSelectionChanged' has a wrong offset!");
-static_assert(offsetof(UAkItemBoolProperties, OnPropertyDragged) == 0x000160, "Member 'UAkItemBoolProperties::OnPropertyDragged' has a wrong offset!");
+static_assert(sizeof(UAkItemBoolProperties) == 0x0001C0, "Wrong size on UAkItemBoolProperties");
+static_assert(offsetof(UAkItemBoolProperties, OnSelectionChanged) == 0x000180, "Member 'UAkItemBoolProperties::OnSelectionChanged' has a wrong offset!");
+static_assert(offsetof(UAkItemBoolProperties, OnPropertyDragged) == 0x000190, "Member 'UAkItemBoolProperties::OnPropertyDragged' has a wrong offset!");
 
 // Class AkAudio.AkItemPropertiesConv
 // 0x0000 (0x0028 - 0x0028)
@@ -1521,13 +1314,13 @@ static_assert(alignof(UAkItemPropertiesConv) == 0x000008, "Wrong alignment on UA
 static_assert(sizeof(UAkItemPropertiesConv) == 0x000028, "Wrong size on UAkItemPropertiesConv");
 
 // Class AkAudio.AkItemProperties
-// 0x0040 (0x0190 - 0x0150)
+// 0x0040 (0x01C0 - 0x0180)
 class UAkItemProperties final  : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPropertyDragged;                                 // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132E[0x20];                                    // 0x0170(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPropertyDragged;                                 // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19C7[0x20];                                    // 0x01A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetSearchText(const class FString& NewText);
@@ -1546,9 +1339,9 @@ public:
 	}
 };
 static_assert(alignof(UAkItemProperties) == 0x000008, "Wrong alignment on UAkItemProperties");
-static_assert(sizeof(UAkItemProperties) == 0x000190, "Wrong size on UAkItemProperties");
-static_assert(offsetof(UAkItemProperties, OnSelectionChanged) == 0x000150, "Member 'UAkItemProperties::OnSelectionChanged' has a wrong offset!");
-static_assert(offsetof(UAkItemProperties, OnPropertyDragged) == 0x000160, "Member 'UAkItemProperties::OnPropertyDragged' has a wrong offset!");
+static_assert(sizeof(UAkItemProperties) == 0x0001C0, "Wrong size on UAkItemProperties");
+static_assert(offsetof(UAkItemProperties, OnSelectionChanged) == 0x000180, "Member 'UAkItemProperties::OnSelectionChanged' has a wrong offset!");
+static_assert(offsetof(UAkItemProperties, OnPropertyDragged) == 0x000190, "Member 'UAkItemProperties::OnPropertyDragged' has a wrong offset!");
 
 // Class AkAudio.AkLateReverbComponent
 // 0x0090 (0x0330 - 0x02A0)
@@ -1557,17 +1350,17 @@ class alignas(0x10) UAkLateReverbComponent : public USceneComponent
 {
 public:
 	bool                                          bEnable;                                           // 0x02A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_132F[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C8[0x3];                                     // 0x02A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         SendLevel;                                         // 0x02A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FadeRate;                                          // 0x02A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Priority;                                          // 0x02AC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AutoAssignAuxBus;                                  // 0x02B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1330[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19C9[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAuxBus*                              AuxBus;                                            // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AuxBusName;                                        // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1331[0x8];                                     // 0x02D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CA[0x8];                                     // 0x02D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAuxBus*                              AuxBusManual;                                      // 0x02D8(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1332[0x48];                                    // 0x02E0(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CB[0x48];                                    // 0x02E0(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AssociateAkTextureSetComponent(class UAkAcousticTextureSetComponent* TextureSetComponent);
@@ -1599,7 +1392,7 @@ static_assert(offsetof(UAkLateReverbComponent, AuxBusManual) == 0x0002D8, "Membe
 class UAkLinuxInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1333[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CC[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                                  // 0x00C0(0x0030)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
@@ -1645,7 +1438,7 @@ static_assert(sizeof(UAkLinuxPlatformInfo) == 0x000070, "Wrong size on UAkLinuxP
 class UAkMacInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1334[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CD[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                                  // 0x00C0(0x0030)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
@@ -1693,10 +1486,10 @@ class UAkMediaAssetData final  : public UObject
 public:
 	bool                                          IsStreamed;                                        // 0x0028(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseDeviceMemory;                                   // 0x0029(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1335[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CE[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Language;                                          // 0x0030(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 AssetPlatform;                                     // 0x0040(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1336[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19CF[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1721,14 +1514,14 @@ class UAkMediaAsset : public UObject
 {
 public:
 	uint32                                        ID;                                                // 0x0028(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1337[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19D0[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MediaName;                                         // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AutoLoad;                                          // 0x0040(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1338[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19D1[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        UserData;                                          // 0x0048(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FString                                 Language;                                          // 0x0058(0x0010)(Edit, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UAkMediaAssetData*                      CurrentMediaAssetData;                             // 0x0068(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1339[0x8];                                     // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19D2[0x8];                                     // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1771,7 +1564,7 @@ static_assert(sizeof(UAkLocalizedMediaAsset) == 0x000078, "Wrong size on UAkLoca
 class UAkExternalMediaAsset final  : public UAkMediaAsset
 {
 public:
-	uint8                                         Pad_133A[0x60];                                    // 0x0078(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19D3[0x60];                                    // 0x0078(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1808,7 +1601,7 @@ static_assert(sizeof(IAkPlatformInitialisationSettingsBase) == 0x000028, "Wrong 
 class UAkPS4InitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_133B[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19D4[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0030(0x0060)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0090(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkPS4AdvancedInitializationSettings   AdvancedSettings;                                  // 0x00B8(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
@@ -1849,6 +1642,33 @@ public:
 static_assert(alignof(UAkPS4PlatformInfo) == 0x000008, "Wrong alignment on UAkPS4PlatformInfo");
 static_assert(sizeof(UAkPS4PlatformInfo) == 0x000070, "Wrong size on UAkPS4PlatformInfo");
 
+// Class AkAudio.AkPS5InitializationSettings
+// 0x00C8 (0x00F0 - 0x0028)
+class UAkPS5InitializationSettings : public UObject
+{
+public:
+	uint8                                         Pad_19D5[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0030(0x0060)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0090(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
+	struct FAkPS5AdvancedInitializationSettings   AdvancedSettings;                                  // 0x00B8(0x0034)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19D6[0x4];                                     // 0x00EC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkPS5InitializationSettings">();
+	}
+	static class UAkPS5InitializationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkPS5InitializationSettings>();
+	}
+};
+static_assert(alignof(UAkPS5InitializationSettings) == 0x000008, "Wrong alignment on UAkPS5InitializationSettings");
+static_assert(sizeof(UAkPS5InitializationSettings) == 0x0000F0, "Wrong size on UAkPS5InitializationSettings");
+static_assert(offsetof(UAkPS5InitializationSettings, CommonSettings) == 0x000030, "Member 'UAkPS5InitializationSettings::CommonSettings' has a wrong offset!");
+static_assert(offsetof(UAkPS5InitializationSettings, CommunicationSettings) == 0x000090, "Member 'UAkPS5InitializationSettings::CommunicationSettings' has a wrong offset!");
+static_assert(offsetof(UAkPS5InitializationSettings, AdvancedSettings) == 0x0000B8, "Member 'UAkPS5InitializationSettings::AdvancedSettings' has a wrong offset!");
+
 // Class AkAudio.AkDPXInitializationSettings
 // 0x0000 (0x00F0 - 0x00F0)
 class UAkDPXInitializationSettings final  : public UAkPS5InitializationSettings
@@ -1883,6 +1703,186 @@ public:
 static_assert(alignof(UAkPS5PlatformInfo) == 0x000008, "Wrong alignment on UAkPS5PlatformInfo");
 static_assert(sizeof(UAkPS5PlatformInfo) == 0x000070, "Wrong size on UAkPS5PlatformInfo");
 
+// Class AkAudio.AkReverbVolume
+// 0x0038 (0x0318 - 0x02E0)
+class AAkReverbVolume final  : public AVolume
+{
+public:
+	bool                                          bEnabled;                                          // 0x02E0(0x0001)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19D7[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAuxBus*                              AuxBus;                                            // 0x02E8(0x0008)(ZeroConstructor, Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AuxBusName;                                        // 0x02F0(0x0010)(ZeroConstructor, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SendLevel;                                         // 0x0300(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FadeRate;                                          // 0x0304(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Priority;                                          // 0x0308(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19D8[0x4];                                     // 0x030C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkLateReverbComponent*                 LateReverbComponent;                               // 0x0310(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkReverbVolume">();
+	}
+	static class AAkReverbVolume* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<AAkReverbVolume>();
+	}
+};
+static_assert(alignof(AAkReverbVolume) == 0x000008, "Wrong alignment on AAkReverbVolume");
+static_assert(sizeof(AAkReverbVolume) == 0x000318, "Wrong size on AAkReverbVolume");
+static_assert(offsetof(AAkReverbVolume, bEnabled) == 0x0002E0, "Member 'AAkReverbVolume::bEnabled' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, AuxBus) == 0x0002E8, "Member 'AAkReverbVolume::AuxBus' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, AuxBusName) == 0x0002F0, "Member 'AAkReverbVolume::AuxBusName' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, SendLevel) == 0x000300, "Member 'AAkReverbVolume::SendLevel' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, FadeRate) == 0x000304, "Member 'AAkReverbVolume::FadeRate' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, Priority) == 0x000308, "Member 'AAkReverbVolume::Priority' has a wrong offset!");
+static_assert(offsetof(AAkReverbVolume, LateReverbComponent) == 0x000310, "Member 'AAkReverbVolume::LateReverbComponent' has a wrong offset!");
+
+// Class AkAudio.AkRoomComponent
+// 0x0030 (0x02F0 - 0x02C0)
+class UAkRoomComponent : public UAkGameObject
+{
+public:
+	bool                                          bEnable;                                           // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDynamic;                                          // 0x02C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19D9[0x2];                                     // 0x02C2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Priority;                                          // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WallOcclusion;                                     // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AuxSendLevel;                                      // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AutoPost;                                          // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, SimpleDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19DA[0xF];                                     // 0x02D1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAcousticTextureSetComponent*         GeometryComponent;                                 // 0x02E0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_19DB[0x8];                                     // 0x02E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetGeometryComponent(class UAkAcousticTextureSetComponent* TextureSetComponent);
+
+	class UPrimitiveComponent* GetPrimitiveParent() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkRoomComponent">();
+	}
+	static class UAkRoomComponent* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkRoomComponent>();
+	}
+};
+static_assert(alignof(UAkRoomComponent) == 0x000010, "Wrong alignment on UAkRoomComponent");
+static_assert(sizeof(UAkRoomComponent) == 0x0002F0, "Wrong size on UAkRoomComponent");
+static_assert(offsetof(UAkRoomComponent, bEnable) == 0x0002C0, "Member 'UAkRoomComponent::bEnable' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, bDynamic) == 0x0002C1, "Member 'UAkRoomComponent::bDynamic' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, Priority) == 0x0002C4, "Member 'UAkRoomComponent::Priority' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, WallOcclusion) == 0x0002C8, "Member 'UAkRoomComponent::WallOcclusion' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, AuxSendLevel) == 0x0002CC, "Member 'UAkRoomComponent::AuxSendLevel' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, AutoPost) == 0x0002D0, "Member 'UAkRoomComponent::AutoPost' has a wrong offset!");
+static_assert(offsetof(UAkRoomComponent, GeometryComponent) == 0x0002E0, "Member 'UAkRoomComponent::GeometryComponent' has a wrong offset!");
+
+// Class AkAudio.AkRtpc
+// 0x0000 (0x0040 - 0x0040)
+class UAkRtpc final  : public UAkAudioType
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkRtpc">();
+	}
+	static class UAkRtpc* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkRtpc>();
+	}
+};
+static_assert(alignof(UAkRtpc) == 0x000008, "Wrong alignment on UAkRtpc");
+static_assert(sizeof(UAkRtpc) == 0x000040, "Wrong size on UAkRtpc");
+
+// Class AkAudio.AkSettings
+// 0x02B8 (0x02E0 - 0x0028)
+class UAkSettings final  : public UObject
+{
+public:
+	uint8                                         MaxSimultaneousReverbVolumes;                      // 0x0028(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19DC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFilePath                              WwiseProjectPath;                                  // 0x0030(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDirectoryPath                         WwiseSoundDataFolder;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAutoConnectToWAAPI;                               // 0x0050(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionChannel                             DefaultOcclusionCollisionChannel;                  // 0x0051(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECollisionChannel                             DefaultFitToGeometryCollisionChannel;              // 0x0052(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19DD[0x5];                                     // 0x0053(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<TSoftObjectPtr<class UPhysicalMaterial>, struct FAkGeometrySurfacePropertiesToMap> AkGeometryMap;                                     // 0x0058(0x0050)(Edit, EditFixedSize, Config, NativeAccessSpecifierPublic)
+	float                                         GlobalDecayAbsorption;                             // 0x00A8(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19DE[0x4];                                     // 0x00AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UAkAuxBus>               DefaultReverbAuxBus;                               // 0x00B0(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<float, TSoftObjectPtr<class UAkAuxBus>>  EnvironmentDecayAuxBusMap;                         // 0x00D8(0x0050)(Edit, Config, UObjectWrapper, NativeAccessSpecifierPublic)
+	class FString                                 HFDampingName;                                     // 0x0128(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DecayEstimateName;                                 // 0x0138(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 TimeToFirstReflectionName;                         // 0x0148(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkRtpc>                 HFDampingRTPC;                                     // 0x0158(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkRtpc>                 DecayEstimateRTPC;                                 // 0x0180(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkRtpc>                 TimeToFirstReflectionRTPC;                         // 0x01A8(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UAkAudioEvent>           AudioInputEvent;                                   // 0x01D0(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<struct FGuid, struct FAkAcousticTextureParams> AcousticTextureParamsMap;                          // 0x01F8(0x0050)(Config, NativeAccessSpecifierPublic)
+	bool                                          SplitSwitchContainerMedia;                         // 0x0248(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SplitMediaPerFolder;                               // 0x0249(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          UseEventBasedPackaging;                            // 0x024A(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnsureSoundDataPathIsAlwaysCooked;                // 0x024B(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          EnableAutomaticAssetSynchronization;               // 0x024C(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19DF[0x3];                                     // 0x024D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CommandletCommitMessage;                           // 0x0250(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            UnrealCultureToWwiseCulture;                       // 0x0260(0x0050)(Edit, Config, NativeAccessSpecifierPublic)
+	bool                                          AskedToUseNewAssetManagement;                      // 0x02B0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableMultiCoreRendering;                         // 0x02B1(0x0001)(ZeroConstructor, Config, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          MigratedEnableMultiCoreRendering;                  // 0x02B2(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FixupRedirectorsDuringMigration;                   // 0x02B3(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E0[0x4];                                     // 0x02B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FDirectoryPath                         WwiseWindowsInstallationPath;                      // 0x02B8(0x0010)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FFilePath                              WwiseMacInstallationPath;                          // 0x02C8(0x0010)(ZeroConstructor, Config, Deprecated, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E1[0x8];                                     // 0x02D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AkSettings">();
+	}
+	static class UAkSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAkSettings>();
+	}
+};
+static_assert(alignof(UAkSettings) == 0x000008, "Wrong alignment on UAkSettings");
+static_assert(sizeof(UAkSettings) == 0x0002E0, "Wrong size on UAkSettings");
+static_assert(offsetof(UAkSettings, MaxSimultaneousReverbVolumes) == 0x000028, "Member 'UAkSettings::MaxSimultaneousReverbVolumes' has a wrong offset!");
+static_assert(offsetof(UAkSettings, WwiseProjectPath) == 0x000030, "Member 'UAkSettings::WwiseProjectPath' has a wrong offset!");
+static_assert(offsetof(UAkSettings, WwiseSoundDataFolder) == 0x000040, "Member 'UAkSettings::WwiseSoundDataFolder' has a wrong offset!");
+static_assert(offsetof(UAkSettings, bAutoConnectToWAAPI) == 0x000050, "Member 'UAkSettings::bAutoConnectToWAAPI' has a wrong offset!");
+static_assert(offsetof(UAkSettings, DefaultOcclusionCollisionChannel) == 0x000051, "Member 'UAkSettings::DefaultOcclusionCollisionChannel' has a wrong offset!");
+static_assert(offsetof(UAkSettings, DefaultFitToGeometryCollisionChannel) == 0x000052, "Member 'UAkSettings::DefaultFitToGeometryCollisionChannel' has a wrong offset!");
+static_assert(offsetof(UAkSettings, AkGeometryMap) == 0x000058, "Member 'UAkSettings::AkGeometryMap' has a wrong offset!");
+static_assert(offsetof(UAkSettings, GlobalDecayAbsorption) == 0x0000A8, "Member 'UAkSettings::GlobalDecayAbsorption' has a wrong offset!");
+static_assert(offsetof(UAkSettings, DefaultReverbAuxBus) == 0x0000B0, "Member 'UAkSettings::DefaultReverbAuxBus' has a wrong offset!");
+static_assert(offsetof(UAkSettings, EnvironmentDecayAuxBusMap) == 0x0000D8, "Member 'UAkSettings::EnvironmentDecayAuxBusMap' has a wrong offset!");
+static_assert(offsetof(UAkSettings, HFDampingName) == 0x000128, "Member 'UAkSettings::HFDampingName' has a wrong offset!");
+static_assert(offsetof(UAkSettings, DecayEstimateName) == 0x000138, "Member 'UAkSettings::DecayEstimateName' has a wrong offset!");
+static_assert(offsetof(UAkSettings, TimeToFirstReflectionName) == 0x000148, "Member 'UAkSettings::TimeToFirstReflectionName' has a wrong offset!");
+static_assert(offsetof(UAkSettings, HFDampingRTPC) == 0x000158, "Member 'UAkSettings::HFDampingRTPC' has a wrong offset!");
+static_assert(offsetof(UAkSettings, DecayEstimateRTPC) == 0x000180, "Member 'UAkSettings::DecayEstimateRTPC' has a wrong offset!");
+static_assert(offsetof(UAkSettings, TimeToFirstReflectionRTPC) == 0x0001A8, "Member 'UAkSettings::TimeToFirstReflectionRTPC' has a wrong offset!");
+static_assert(offsetof(UAkSettings, AudioInputEvent) == 0x0001D0, "Member 'UAkSettings::AudioInputEvent' has a wrong offset!");
+static_assert(offsetof(UAkSettings, AcousticTextureParamsMap) == 0x0001F8, "Member 'UAkSettings::AcousticTextureParamsMap' has a wrong offset!");
+static_assert(offsetof(UAkSettings, SplitSwitchContainerMedia) == 0x000248, "Member 'UAkSettings::SplitSwitchContainerMedia' has a wrong offset!");
+static_assert(offsetof(UAkSettings, SplitMediaPerFolder) == 0x000249, "Member 'UAkSettings::SplitMediaPerFolder' has a wrong offset!");
+static_assert(offsetof(UAkSettings, UseEventBasedPackaging) == 0x00024A, "Member 'UAkSettings::UseEventBasedPackaging' has a wrong offset!");
+static_assert(offsetof(UAkSettings, bEnsureSoundDataPathIsAlwaysCooked) == 0x00024B, "Member 'UAkSettings::bEnsureSoundDataPathIsAlwaysCooked' has a wrong offset!");
+static_assert(offsetof(UAkSettings, EnableAutomaticAssetSynchronization) == 0x00024C, "Member 'UAkSettings::EnableAutomaticAssetSynchronization' has a wrong offset!");
+static_assert(offsetof(UAkSettings, CommandletCommitMessage) == 0x000250, "Member 'UAkSettings::CommandletCommitMessage' has a wrong offset!");
+static_assert(offsetof(UAkSettings, UnrealCultureToWwiseCulture) == 0x000260, "Member 'UAkSettings::UnrealCultureToWwiseCulture' has a wrong offset!");
+static_assert(offsetof(UAkSettings, AskedToUseNewAssetManagement) == 0x0002B0, "Member 'UAkSettings::AskedToUseNewAssetManagement' has a wrong offset!");
+static_assert(offsetof(UAkSettings, bEnableMultiCoreRendering) == 0x0002B1, "Member 'UAkSettings::bEnableMultiCoreRendering' has a wrong offset!");
+static_assert(offsetof(UAkSettings, MigratedEnableMultiCoreRendering) == 0x0002B2, "Member 'UAkSettings::MigratedEnableMultiCoreRendering' has a wrong offset!");
+static_assert(offsetof(UAkSettings, FixupRedirectorsDuringMigration) == 0x0002B3, "Member 'UAkSettings::FixupRedirectorsDuringMigration' has a wrong offset!");
+static_assert(offsetof(UAkSettings, WwiseWindowsInstallationPath) == 0x0002B8, "Member 'UAkSettings::WwiseWindowsInstallationPath' has a wrong offset!");
+static_assert(offsetof(UAkSettings, WwiseMacInstallationPath) == 0x0002C8, "Member 'UAkSettings::WwiseMacInstallationPath' has a wrong offset!");
+
 // Class AkAudio.AkSettingsPerUser
 // 0x0058 (0x0080 - 0x0028)
 class UAkSettingsPerUser final  : public UObject
@@ -1891,14 +1891,14 @@ public:
 	struct FDirectoryPath                         WwiseWindowsInstallationPath;                      // 0x0028(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FFilePath                              WwiseMacInstallationPath;                          // 0x0038(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          EnableAutomaticAssetSynchronization;               // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_133C[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19E2[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 WaapiIPAddress;                                    // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint32                                        WaapiPort;                                         // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAutoConnectToWAAPI;                               // 0x0064(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          AutoSyncSelection;                                 // 0x0065(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SuppressWwiseProjectPathWarnings;                  // 0x0066(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          SoundDataGenerationSkipLanguage;                   // 0x0067(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_133D[0x18];                                    // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19E3[0x18];                                    // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1923,30 +1923,30 @@ static_assert(offsetof(UAkSettingsPerUser, SuppressWwiseProjectPathWarnings) == 
 static_assert(offsetof(UAkSettingsPerUser, SoundDataGenerationSkipLanguage) == 0x000067, "Member 'UAkSettingsPerUser::SoundDataGenerationSkipLanguage' has a wrong offset!");
 
 // Class AkAudio.AkSlider
-// 0x05F0 (0x0740 - 0x0150)
+// 0x05F0 (0x0770 - 0x0180)
 class UAkSlider final  : public UWidget
 {
 public:
-	float                                         Value;                                             // 0x0150(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             ValueDelegate;                                     // 0x0154(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_133E[0xC];                                     // 0x0164(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSliderStyle                           WidgetStyle;                                       // 0x0170(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EOrientation                                  Orientation;                                       // 0x0670(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_133F[0x3];                                     // 0x0671(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FLinearColor                           SliderBarColor;                                    // 0x0674(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           SliderHandleColor;                                 // 0x0684(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IndentHandle;                                      // 0x0694(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          Locked;                                            // 0x0695(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1340[0x2];                                     // 0x0696(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         StepSize;                                          // 0x0698(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFocusable;                                       // 0x069C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1341[0x3];                                     // 0x069D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FAkPropertyToControl                   ThePropertyToControl;                              // 0x06A0(0x0010)(Edit, EditConst, NativeAccessSpecifierPublic)
-	struct FAkWwiseItemToControl                  ItemToControl;                                     // 0x06B0(0x0040)(Edit, Config, EditConst, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnValueChanged;                                    // 0x06F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnItemDropped;                                     // 0x0700(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPropertyDropped;                                 // 0x0710(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1342[0x20];                                    // 0x0720(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Value;                                             // 0x0180(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             ValueDelegate;                                     // 0x0184(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E4[0xC];                                     // 0x0194(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSliderStyle                           WidgetStyle;                                       // 0x01A0(0x0500)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EOrientation                                  Orientation;                                       // 0x06A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E5[0x3];                                     // 0x06A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           SliderBarColor;                                    // 0x06A4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           SliderHandleColor;                                 // 0x06B4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IndentHandle;                                      // 0x06C4(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          Locked;                                            // 0x06C5(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E6[0x2];                                     // 0x06C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         StepSize;                                          // 0x06C8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFocusable;                                       // 0x06CC(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E7[0x3];                                     // 0x06CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FAkPropertyToControl                   ThePropertyToControl;                              // 0x06D0(0x0010)(Edit, EditConst, NativeAccessSpecifierPublic)
+	struct FAkWwiseItemToControl                  ItemToControl;                                     // 0x06E0(0x0040)(Edit, Config, EditConst, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnValueChanged;                                    // 0x0720(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnItemDropped;                                     // 0x0730(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPropertyDropped;                                 // 0x0740(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19E8[0x20];                                    // 0x0750(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetAkSliderItemId(struct FGuid& ItemId);
@@ -1973,31 +1973,31 @@ public:
 	}
 };
 static_assert(alignof(UAkSlider) == 0x000010, "Wrong alignment on UAkSlider");
-static_assert(sizeof(UAkSlider) == 0x000740, "Wrong size on UAkSlider");
-static_assert(offsetof(UAkSlider, Value) == 0x000150, "Member 'UAkSlider::Value' has a wrong offset!");
-static_assert(offsetof(UAkSlider, ValueDelegate) == 0x000154, "Member 'UAkSlider::ValueDelegate' has a wrong offset!");
-static_assert(offsetof(UAkSlider, WidgetStyle) == 0x000170, "Member 'UAkSlider::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UAkSlider, Orientation) == 0x000670, "Member 'UAkSlider::Orientation' has a wrong offset!");
-static_assert(offsetof(UAkSlider, SliderBarColor) == 0x000674, "Member 'UAkSlider::SliderBarColor' has a wrong offset!");
-static_assert(offsetof(UAkSlider, SliderHandleColor) == 0x000684, "Member 'UAkSlider::SliderHandleColor' has a wrong offset!");
-static_assert(offsetof(UAkSlider, IndentHandle) == 0x000694, "Member 'UAkSlider::IndentHandle' has a wrong offset!");
-static_assert(offsetof(UAkSlider, Locked) == 0x000695, "Member 'UAkSlider::Locked' has a wrong offset!");
-static_assert(offsetof(UAkSlider, StepSize) == 0x000698, "Member 'UAkSlider::StepSize' has a wrong offset!");
-static_assert(offsetof(UAkSlider, IsFocusable) == 0x00069C, "Member 'UAkSlider::IsFocusable' has a wrong offset!");
-static_assert(offsetof(UAkSlider, ThePropertyToControl) == 0x0006A0, "Member 'UAkSlider::ThePropertyToControl' has a wrong offset!");
-static_assert(offsetof(UAkSlider, ItemToControl) == 0x0006B0, "Member 'UAkSlider::ItemToControl' has a wrong offset!");
-static_assert(offsetof(UAkSlider, OnValueChanged) == 0x0006F0, "Member 'UAkSlider::OnValueChanged' has a wrong offset!");
-static_assert(offsetof(UAkSlider, OnItemDropped) == 0x000700, "Member 'UAkSlider::OnItemDropped' has a wrong offset!");
-static_assert(offsetof(UAkSlider, OnPropertyDropped) == 0x000710, "Member 'UAkSlider::OnPropertyDropped' has a wrong offset!");
+static_assert(sizeof(UAkSlider) == 0x000770, "Wrong size on UAkSlider");
+static_assert(offsetof(UAkSlider, Value) == 0x000180, "Member 'UAkSlider::Value' has a wrong offset!");
+static_assert(offsetof(UAkSlider, ValueDelegate) == 0x000184, "Member 'UAkSlider::ValueDelegate' has a wrong offset!");
+static_assert(offsetof(UAkSlider, WidgetStyle) == 0x0001A0, "Member 'UAkSlider::WidgetStyle' has a wrong offset!");
+static_assert(offsetof(UAkSlider, Orientation) == 0x0006A0, "Member 'UAkSlider::Orientation' has a wrong offset!");
+static_assert(offsetof(UAkSlider, SliderBarColor) == 0x0006A4, "Member 'UAkSlider::SliderBarColor' has a wrong offset!");
+static_assert(offsetof(UAkSlider, SliderHandleColor) == 0x0006B4, "Member 'UAkSlider::SliderHandleColor' has a wrong offset!");
+static_assert(offsetof(UAkSlider, IndentHandle) == 0x0006C4, "Member 'UAkSlider::IndentHandle' has a wrong offset!");
+static_assert(offsetof(UAkSlider, Locked) == 0x0006C5, "Member 'UAkSlider::Locked' has a wrong offset!");
+static_assert(offsetof(UAkSlider, StepSize) == 0x0006C8, "Member 'UAkSlider::StepSize' has a wrong offset!");
+static_assert(offsetof(UAkSlider, IsFocusable) == 0x0006CC, "Member 'UAkSlider::IsFocusable' has a wrong offset!");
+static_assert(offsetof(UAkSlider, ThePropertyToControl) == 0x0006D0, "Member 'UAkSlider::ThePropertyToControl' has a wrong offset!");
+static_assert(offsetof(UAkSlider, ItemToControl) == 0x0006E0, "Member 'UAkSlider::ItemToControl' has a wrong offset!");
+static_assert(offsetof(UAkSlider, OnValueChanged) == 0x000720, "Member 'UAkSlider::OnValueChanged' has a wrong offset!");
+static_assert(offsetof(UAkSlider, OnItemDropped) == 0x000730, "Member 'UAkSlider::OnItemDropped' has a wrong offset!");
+static_assert(offsetof(UAkSlider, OnPropertyDropped) == 0x000740, "Member 'UAkSlider::OnPropertyDropped' has a wrong offset!");
 
 // Class AkAudio.AkSpatialAudioVolume
-// 0x0018 (0x02F0 - 0x02D8)
+// 0x0018 (0x02F8 - 0x02E0)
 class AAkSpatialAudioVolume : public AVolume
 {
 public:
-	class UAkSurfaceReflectorSetComponent*        SurfaceReflectorSet;                               // 0x02D8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkLateReverbComponent*                 LateReverb;                                        // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkRoomComponent*                       Room;                                              // 0x02E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkSurfaceReflectorSetComponent*        SurfaceReflectorSet;                               // 0x02E0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkLateReverbComponent*                 LateReverb;                                        // 0x02E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkRoomComponent*                       Room;                                              // 0x02F0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -2010,21 +2010,21 @@ public:
 	}
 };
 static_assert(alignof(AAkSpatialAudioVolume) == 0x000008, "Wrong alignment on AAkSpatialAudioVolume");
-static_assert(sizeof(AAkSpatialAudioVolume) == 0x0002F0, "Wrong size on AAkSpatialAudioVolume");
-static_assert(offsetof(AAkSpatialAudioVolume, SurfaceReflectorSet) == 0x0002D8, "Member 'AAkSpatialAudioVolume::SurfaceReflectorSet' has a wrong offset!");
-static_assert(offsetof(AAkSpatialAudioVolume, LateReverb) == 0x0002E0, "Member 'AAkSpatialAudioVolume::LateReverb' has a wrong offset!");
-static_assert(offsetof(AAkSpatialAudioVolume, Room) == 0x0002E8, "Member 'AAkSpatialAudioVolume::Room' has a wrong offset!");
+static_assert(sizeof(AAkSpatialAudioVolume) == 0x0002F8, "Wrong size on AAkSpatialAudioVolume");
+static_assert(offsetof(AAkSpatialAudioVolume, SurfaceReflectorSet) == 0x0002E0, "Member 'AAkSpatialAudioVolume::SurfaceReflectorSet' has a wrong offset!");
+static_assert(offsetof(AAkSpatialAudioVolume, LateReverb) == 0x0002E8, "Member 'AAkSpatialAudioVolume::LateReverb' has a wrong offset!");
+static_assert(offsetof(AAkSpatialAudioVolume, Room) == 0x0002F0, "Member 'AAkSpatialAudioVolume::Room' has a wrong offset!");
 
 // Class AkAudio.AkSpotReflector
-// 0x0028 (0x02C8 - 0x02A0)
+// 0x0028 (0x02D0 - 0x02A8)
 class AAkSpotReflector final  : public AActor
 {
 public:
-	class UAkAuxBus*                              EarlyReflectionAuxBus;                             // 0x02A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 EarlyReflectionAuxBusName;                         // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UAkAcousticTexture*                     AcousticTexture;                                   // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DistanceScalingFactor;                             // 0x02C0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Level;                                             // 0x02C4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkAuxBus*                              EarlyReflectionAuxBus;                             // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 EarlyReflectionAuxBusName;                         // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UAkAcousticTexture*                     AcousticTexture;                                   // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DistanceScalingFactor;                             // 0x02C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Level;                                             // 0x02CC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -2037,12 +2037,12 @@ public:
 	}
 };
 static_assert(alignof(AAkSpotReflector) == 0x000008, "Wrong alignment on AAkSpotReflector");
-static_assert(sizeof(AAkSpotReflector) == 0x0002C8, "Wrong size on AAkSpotReflector");
-static_assert(offsetof(AAkSpotReflector, EarlyReflectionAuxBus) == 0x0002A0, "Member 'AAkSpotReflector::EarlyReflectionAuxBus' has a wrong offset!");
-static_assert(offsetof(AAkSpotReflector, EarlyReflectionAuxBusName) == 0x0002A8, "Member 'AAkSpotReflector::EarlyReflectionAuxBusName' has a wrong offset!");
-static_assert(offsetof(AAkSpotReflector, AcousticTexture) == 0x0002B8, "Member 'AAkSpotReflector::AcousticTexture' has a wrong offset!");
-static_assert(offsetof(AAkSpotReflector, DistanceScalingFactor) == 0x0002C0, "Member 'AAkSpotReflector::DistanceScalingFactor' has a wrong offset!");
-static_assert(offsetof(AAkSpotReflector, Level) == 0x0002C4, "Member 'AAkSpotReflector::Level' has a wrong offset!");
+static_assert(sizeof(AAkSpotReflector) == 0x0002D0, "Wrong size on AAkSpotReflector");
+static_assert(offsetof(AAkSpotReflector, EarlyReflectionAuxBus) == 0x0002A8, "Member 'AAkSpotReflector::EarlyReflectionAuxBus' has a wrong offset!");
+static_assert(offsetof(AAkSpotReflector, EarlyReflectionAuxBusName) == 0x0002B0, "Member 'AAkSpotReflector::EarlyReflectionAuxBusName' has a wrong offset!");
+static_assert(offsetof(AAkSpotReflector, AcousticTexture) == 0x0002C0, "Member 'AAkSpotReflector::AcousticTexture' has a wrong offset!");
+static_assert(offsetof(AAkSpotReflector, DistanceScalingFactor) == 0x0002C8, "Member 'AAkSpotReflector::DistanceScalingFactor' has a wrong offset!");
+static_assert(offsetof(AAkSpotReflector, Level) == 0x0002CC, "Member 'AAkSpotReflector::Level' has a wrong offset!");
 
 // Class AkAudio.AkStateValue
 // 0x0000 (0x0068 - 0x0068)
@@ -2067,7 +2067,7 @@ class UAkSubmixInputComponent final  : public UAkAudioInputComponent
 {
 public:
 	class USoundSubmix*                           SubmixToRecord;                                    // 0x04C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1343[0x48];                                    // 0x04C8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19E9[0x48];                                    // 0x04C8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2089,13 +2089,13 @@ class UAkSurfaceReflectorSetComponent final  : public UAkAcousticTextureSetCompo
 {
 public:
 	bool                                          bEnableSurfaceReflectors;                          // 0x02B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1344[0x7];                                     // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19EA[0x7];                                     // 0x02B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FAkSurfacePoly>                 AcousticPolys;                                     // 0x02C0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffraction;                                // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnableDiffractionOnBoundaryEdges;                 // 0x02D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1345[0x6];                                     // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19EB[0x6];                                     // 0x02D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 AssociatedRoom;                                    // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1346[0x10];                                    // 0x02E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19EC[0x10];                                    // 0x02E0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void RemoveSurfaceReflectorSet();
@@ -2125,7 +2125,7 @@ static_assert(offsetof(UAkSurfaceReflectorSetComponent, AssociatedRoom) == 0x000
 class UAkSwitchInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1347[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19ED[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithCommSelection CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAdvancedInitializationSettingsWithMultiCoreRendering AdvancedSettings;                                  // 0x00C0(0x0030)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
@@ -2205,13 +2205,13 @@ static_assert(sizeof(UAkTrigger) == 0x000040, "Wrong size on UAkTrigger");
 class UAkTVOSInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1348[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19EE[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAudioSession                        AudioSession;                                      // 0x0098(0x000C)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1349[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19EF[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x00A8(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkAdvancedInitializationSettings      AdvancedSettings;                                  // 0x00D0(0x002C)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_134A[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19F0[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2355,7 +2355,7 @@ static_assert(sizeof(UAkWaapiUriConv) == 0x000028, "Wrong size on UAkWaapiUriCon
 class UAkWindowsInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1356[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19FC[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettingsWithSampleRate CommonSettings;                                    // 0x0030(0x0068)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkWindowsAdvancedInitializationSettings AdvancedSettings;                                  // 0x00C0(0x0038)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
@@ -2431,13 +2431,13 @@ static_assert(alignof(UAkWindowsPlatformInfo) == 0x000008, "Wrong alignment on U
 static_assert(sizeof(UAkWindowsPlatformInfo) == 0x000070, "Wrong size on UAkWindowsPlatformInfo");
 
 // Class AkAudio.AkWwiseTree
-// 0x0040 (0x0190 - 0x0150)
+// 0x0040 (0x01C0 - 0x0180)
 class UAkWwiseTree final  : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnItemDragged;                                     // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1357[0x20];                                    // 0x0170(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnItemDragged;                                     // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19FD[0x20];                                    // 0x01A0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetSearchText(const class FString& NewText);
@@ -2456,18 +2456,18 @@ public:
 	}
 };
 static_assert(alignof(UAkWwiseTree) == 0x000008, "Wrong alignment on UAkWwiseTree");
-static_assert(sizeof(UAkWwiseTree) == 0x000190, "Wrong size on UAkWwiseTree");
-static_assert(offsetof(UAkWwiseTree, OnSelectionChanged) == 0x000150, "Member 'UAkWwiseTree::OnSelectionChanged' has a wrong offset!");
-static_assert(offsetof(UAkWwiseTree, OnItemDragged) == 0x000160, "Member 'UAkWwiseTree::OnItemDragged' has a wrong offset!");
+static_assert(sizeof(UAkWwiseTree) == 0x0001C0, "Wrong size on UAkWwiseTree");
+static_assert(offsetof(UAkWwiseTree, OnSelectionChanged) == 0x000180, "Member 'UAkWwiseTree::OnSelectionChanged' has a wrong offset!");
+static_assert(offsetof(UAkWwiseTree, OnItemDragged) == 0x000190, "Member 'UAkWwiseTree::OnItemDragged' has a wrong offset!");
 
 // Class AkAudio.AkWwiseTreeSelector
-// 0x0060 (0x01B0 - 0x0150)
+// 0x0060 (0x01E0 - 0x0180)
 class UAkWwiseTreeSelector final  : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnItemDragged;                                     // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1358[0x40];                                    // 0x0170(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSelectionChanged;                                // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnItemDragged;                                     // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_19FE[0x40];                                    // 0x01A0(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2480,21 +2480,21 @@ public:
 	}
 };
 static_assert(alignof(UAkWwiseTreeSelector) == 0x000008, "Wrong alignment on UAkWwiseTreeSelector");
-static_assert(sizeof(UAkWwiseTreeSelector) == 0x0001B0, "Wrong size on UAkWwiseTreeSelector");
-static_assert(offsetof(UAkWwiseTreeSelector, OnSelectionChanged) == 0x000150, "Member 'UAkWwiseTreeSelector::OnSelectionChanged' has a wrong offset!");
-static_assert(offsetof(UAkWwiseTreeSelector, OnItemDragged) == 0x000160, "Member 'UAkWwiseTreeSelector::OnItemDragged' has a wrong offset!");
+static_assert(sizeof(UAkWwiseTreeSelector) == 0x0001E0, "Wrong size on UAkWwiseTreeSelector");
+static_assert(offsetof(UAkWwiseTreeSelector, OnSelectionChanged) == 0x000180, "Member 'UAkWwiseTreeSelector::OnSelectionChanged' has a wrong offset!");
+static_assert(offsetof(UAkWwiseTreeSelector, OnItemDragged) == 0x000190, "Member 'UAkWwiseTreeSelector::OnItemDragged' has a wrong offset!");
 
 // Class AkAudio.AkXboxOneInitializationSettings
 // 0x00D0 (0x00F8 - 0x0028)
 class UAkXboxOneInitializationSettings final  : public UObject
 {
 public:
-	uint8                                         Pad_1359[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_19FF[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0030(0x0060)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkXboxOneApuHeapInitializationSettings ApuHeapSettings;                                   // 0x0090(0x0008)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkXboxOneAdvancedInitializationSettings AdvancedSettings;                                  // 0x00C0(0x0034)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135A[0x4];                                     // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A00[0x4];                                     // 0x00F4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -2538,12 +2538,12 @@ static_assert(sizeof(UAkXboxOnePlatformInfo) == 0x000070, "Wrong size on UAkXbox
 class UAkXSXInitializationSettings : public UObject
 {
 public:
-	uint8                                         Pad_135B[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A01[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAkCommonInitializationSettings        CommonSettings;                                    // 0x0030(0x0060)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkXSXApuHeapInitializationSettings    ApuHeapSettings;                                   // 0x0090(0x0008)(Edit, Config, NoDestructor, NativeAccessSpecifierPublic)
 	struct FAkCommunicationSettingsWithSystemInitialization CommunicationSettings;                             // 0x0098(0x0028)(Edit, Config, NativeAccessSpecifierPublic)
 	struct FAkXSXAdvancedInitializationSettings   AdvancedSettings;                                  // 0x00C0(0x003C)(Edit, Config, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_135C[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A02[0x4];                                     // 0x00FC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void MigrateMultiCoreRendering(bool NewValue);
@@ -2604,19 +2604,19 @@ static_assert(sizeof(UAkXSXPlatformInfo) == 0x000070, "Wrong size on UAkXSXPlatf
 class UMovieSceneAkAudioEventSection final  : public UMovieSceneSection
 {
 public:
-	uint8                                         Pad_135D[0x40];                                    // 0x00F0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A03[0x40];                                    // 0x00F0(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          Event;                                             // 0x0130(0x0008)(Edit, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          RetriggerEvent;                                    // 0x0138(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_135E[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A04[0x3];                                     // 0x0139(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ScrubTailLengthMs;                                 // 0x013C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          StopAtSectionEnd;                                  // 0x0140(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_135F[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A05[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 EventName;                                         // 0x0148(0x0010)(Edit, ZeroConstructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1360[0x20];                                    // 0x0158(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A06[0x20];                                    // 0x0158(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         MaxSourceDuration;                                 // 0x0178(0x0004)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1361[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A07[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 MaxDurationSourceID;                               // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1362[0x48];                                    // 0x0190(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A08[0x48];                                    // 0x0190(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2645,7 +2645,7 @@ class UMovieSceneAkTrack : public UMovieSceneTrack
 public:
 	TArray<class UMovieSceneSection*>             Sections;                                          // 0x0098(0x0010)(ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	bool                                          bIsAMasterTrack;                                   // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1363[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A09[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2667,7 +2667,7 @@ static_assert(offsetof(UMovieSceneAkTrack, bIsAMasterTrack) == 0x0000A8, "Member
 class UMovieSceneAkAudioEventTrack final  : public UMovieSceneAkTrack
 {
 public:
-	uint8                                         Pad_1364[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0A[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2716,7 +2716,7 @@ static_assert(offsetof(UMovieSceneAkAudioRTPCSection, RTPCChannel) == 0x0001B8, 
 class UMovieSceneAkAudioRTPCTrack final  : public UMovieSceneAkTrack
 {
 public:
-	uint8                                         Pad_1365[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0B[0x8];                                     // 0x00B0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2737,7 +2737,7 @@ class UPostEventAsync final  : public UBlueprintAsyncActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_             Completed;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1366[0x60];                                    // 0x0040(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0C[0x60];                                    // 0x0040(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UPostEventAsync* PostEventAsync(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, class AActor* Actor, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, TArray<struct FAkExternalSourceInfo>& ExternalSources, bool bStopWhenAttachedToDestroyed);
@@ -2764,7 +2764,7 @@ class UPostEventAtLocationAsync final  : public UBlueprintAsyncActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_             Completed;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1369[0x58];                                    // 0x0040(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1A0F[0x58];                                    // 0x0040(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UPostEventAtLocationAsync* PostEventAtLocationAsync(class UObject* WorldContextObject, class UAkAudioEvent* AkEvent, const struct FVector& Location, const struct FRotator& Orientation);

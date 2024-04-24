@@ -16,22 +16,22 @@
 namespace SDK
 {
 
-// BlueprintGeneratedClass Seq_CharSelect_Outro_Master.Seq_CharSelect_Outro_Master (Director BP)_C
+// BlueprintGeneratedClass Seq_CharSelect_Outro_Master.Seq_CharSelect_Outro_Master_DirectorBP_C
 // 0x0000 (0x0038 - 0x0038)
-class USeq_CharSelect_Outro_Master__Director_BP__C final  : public ULevelSequenceDirector
+class USeq_CharSelect_Outro_Master_DirectorBP_C final  : public ULevelSequenceDirector
 {
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Seq_CharSelect_Outro_Master (Director BP)_C">();
+		return StaticBPGeneratedClassImpl<"Seq_CharSelect_Outro_Master_DirectorBP_C">();
 	}
-	static class USeq_CharSelect_Outro_Master__Director_BP__C* GetDefaultObj()
+	static class USeq_CharSelect_Outro_Master_DirectorBP_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USeq_CharSelect_Outro_Master__Director_BP__C>();
+		return GetDefaultObjImpl<USeq_CharSelect_Outro_Master_DirectorBP_C>();
 	}
 };
-static_assert(alignof(USeq_CharSelect_Outro_Master__Director_BP__C) == 0x000008, "Wrong alignment on USeq_CharSelect_Outro_Master__Director_BP__C");
-static_assert(sizeof(USeq_CharSelect_Outro_Master__Director_BP__C) == 0x000038, "Wrong size on USeq_CharSelect_Outro_Master__Director_BP__C");
+static_assert(alignof(USeq_CharSelect_Outro_Master_DirectorBP_C) == 0x000008, "Wrong alignment on USeq_CharSelect_Outro_Master_DirectorBP_C");
+static_assert(sizeof(USeq_CharSelect_Outro_Master_DirectorBP_C) == 0x000038, "Wrong size on USeq_CharSelect_Outro_Master_DirectorBP_C");
 
 }
 

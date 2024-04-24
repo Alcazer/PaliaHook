@@ -17,15 +17,15 @@
 namespace SDK
 {
 
-// Function ModelingComponents.PolygonSelectionMechanicProperties.InvertSelection
+// Function ModelingComponents.MeshTopologySelectionMechanicProperties.InvertSelection
 // (Final, Native, Public)
 
-void UPolygonSelectionMechanicProperties::InvertSelection()
+void UMeshTopologySelectionMechanicProperties::InvertSelection()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PolygonSelectionMechanicProperties", "InvertSelection");
+		Func = Class->GetFunction("MeshTopologySelectionMechanicProperties", "InvertSelection");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -36,15 +36,15 @@ void UPolygonSelectionMechanicProperties::InvertSelection()
 }
 
 
-// Function ModelingComponents.PolygonSelectionMechanicProperties.SelectAll
+// Function ModelingComponents.MeshTopologySelectionMechanicProperties.SelectAll
 // (Final, Native, Public)
 
-void UPolygonSelectionMechanicProperties::SelectAll()
+void UMeshTopologySelectionMechanicProperties::SelectAll()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("PolygonSelectionMechanicProperties", "SelectAll");
+		Func = Class->GetFunction("MeshTopologySelectionMechanicProperties", "SelectAll");
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -124,6 +124,34 @@ class UPointSetComponent* UPreviewGeometry::AddPointSet(const class FString& Poi
 	Params::PreviewGeometry_AddPointSet Parms{};
 
 	Parms.PointSetIdentifier = std::move(PointSetIdentifier);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.PreviewGeometry.AddTriangleSet
+// (Final, Native, Public)
+// Parameters:
+// class FString                           TriangleSetIdentifier                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTriangleSetComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTriangleSetComponent* UPreviewGeometry::AddTriangleSet(const class FString& TriangleSetIdentifier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PreviewGeometry", "AddTriangleSet");
+
+	Params::PreviewGeometry_AddTriangleSet Parms{};
+
+	Parms.TriangleSetIdentifier = std::move(TriangleSetIdentifier);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -226,6 +254,34 @@ class UPointSetComponent* UPreviewGeometry::FindPointSet(const class FString& Po
 	Params::PreviewGeometry_FindPointSet Parms{};
 
 	Parms.PointSetIdentifier = std::move(PointSetIdentifier);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.PreviewGeometry.FindTriangleSet
+// (Final, Native, Public)
+// Parameters:
+// class FString                           TriangleSetIdentifier                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTriangleSetComponent*            ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UTriangleSetComponent* UPreviewGeometry::FindTriangleSet(const class FString& TriangleSetIdentifier)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("PreviewGeometry", "FindTriangleSet");
+
+	Params::PreviewGeometry_FindTriangleSet Parms{};
+
+	Parms.TriangleSetIdentifier = std::move(TriangleSetIdentifier);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -543,6 +599,34 @@ class APreviewGeometryActor* UPreviewGeometry::GetActor() const
 }
 
 
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateMaterialObject
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FCreateMaterialObjectParams      CreateMaterialParams                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FCreateMaterialObjectResult      ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FCreateMaterialObjectResult UModelingObjectsCreationAPI::CreateMaterialObject(struct FCreateMaterialObjectParams& CreateMaterialParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModelingObjectsCreationAPI", "CreateMaterialObject");
+
+	Params::ModelingObjectsCreationAPI_CreateMaterialObject Parms{};
+
+	Parms.CreateMaterialParams = std::move(CreateMaterialParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ModelingComponents.ModelingObjectsCreationAPI.CreateMeshObject
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -559,6 +643,34 @@ struct FCreateMeshObjectResult UModelingObjectsCreationAPI::CreateMeshObject(str
 	Params::ModelingObjectsCreationAPI_CreateMeshObject Parms{};
 
 	Parms.CreateMeshParams = std::move(CreateMeshParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ModelingComponents.ModelingObjectsCreationAPI.CreateNewActor
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FCreateActorParams               CreateActorParams                                      (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FCreateActorResult               ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FCreateActorResult UModelingObjectsCreationAPI::CreateNewActor(struct FCreateActorParams& CreateActorParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ModelingObjectsCreationAPI", "CreateNewActor");
+
+	Params::ModelingObjectsCreationAPI_CreateNewActor Parms{};
+
+	Parms.CreateActorParams = std::move(CreateActorParams);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

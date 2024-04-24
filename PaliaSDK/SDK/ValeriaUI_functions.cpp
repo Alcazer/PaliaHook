@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function ValeriaUI.VALUI_ExpandableArea_Styled.SetExpandableAreaStyle
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UVALUI_ExpandableAreaStyle*       NewStyle                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_ExpandableArea_Styled::SetExpandableAreaStyle(class UVALUI_ExpandableAreaStyle* NewStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ExpandableArea_Styled", "SetExpandableAreaStyle");
-
-	Params::VALUI_ExpandableArea_Styled_SetExpandableAreaStyle Parms{};
-
-	Parms.NewStyle = NewStyle;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.BaitUserWidget.EndBaitSelection
 // (Event, Protected, BlueprintCallable, BlueprintEvent)
 
@@ -169,23 +144,53 @@ void UBaitUserWidget::ShowAmmoType(EAmmoType AmmoType)
 }
 
 
-// Function ValeriaUI.VALUI_ExtensionPointContainerBase.AddExtensibleWidget
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// Function ValeriaUI.VAL_LocalizationUtils.GetGreetingLanguageSuffix
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
-// TSoftClassPtr<class UClass>             WidgetReference                                        (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVALUI_ExtensionPointContainerBase::AddExtensibleWidget(TSoftClassPtr<class UClass>& WidgetReference)
+class FString UVAL_LocalizationUtils::GetGreetingLanguageSuffix()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ExtensionPointContainerBase", "AddExtensibleWidget");
+		Func = StaticClass()->GetFunction("VAL_LocalizationUtils", "GetGreetingLanguageSuffix");
 
-	Params::VALUI_ExtensionPointContainerBase_AddExtensibleWidget Parms{};
+	Params::VAL_LocalizationUtils_GetGreetingLanguageSuffix Parms{};
 
-	Parms.WidgetReference = WidgetReference;
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValeriaUI.VAL_LocalizationUtils.GetGreetingStorageLocation
+// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UVAL_LocalizationUtils::GetGreetingStorageLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("VAL_LocalizationUtils", "GetGreetingStorageLocation");
+
+	Params::VAL_LocalizationUtils_GetGreetingStorageLocation Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -317,56 +322,6 @@ class FText UBookViewerWidget::GetTitle() const
 }
 
 
-// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.AddPopupToQueue
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TSoftObjectPtr<class UGameplayInteractivePopupDataAsset>GpPopupAsset                                           (ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_GameInteractPopupSubsystem::AddPopupToQueue(TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_GameInteractPopupSubsystem", "AddPopupToQueue");
-
-	Params::VALUI_GameInteractPopupSubsystem_AddPopupToQueue Parms{};
-
-	Parms.GpPopupAsset = GpPopupAsset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.OnHandlePopupClosed
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UGameplayInteractivePopupDataAsset*GpPopupAsset                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_GameInteractPopupSubsystem::OnHandlePopupClosed(class UGameplayInteractivePopupDataAsset* GpPopupAsset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_GameInteractPopupSubsystem", "OnHandlePopupClosed");
-
-	Params::VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed Parms{};
-
-	Parms.GpPopupAsset = GpPopupAsset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.DetailUserWidget.UpdateDetail
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -395,21 +350,67 @@ bool UDetailUserWidget::UpdateDetail(TSoftObjectPtr<class UVAL_ItemTypeDefinitio
 }
 
 
-// Function ValeriaUI.VALUI_GpInteractivePopupBase.SetInteractivePopupDataAsset
-// (Final, Native, Public, BlueprintCallable)
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemsChanged__DelegateSignature
+// (MulticastDelegate, Public, Delegate, HasOutParams)
 // Parameters:
-// class UGameplayInteractivePopupDataAsset*InteractivePopupAsset                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  AddedItems                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  RemovedItems                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UVALUI_GpInteractivePopupBase::SetInteractivePopupDataAsset(class UGameplayInteractivePopupDataAsset* InteractivePopupAsset)
+void UVALUI_ListView_Styled::OnListItemsChanged__DelegateSignature(TArray<class UObject*>& AddedItems, TArray<class UObject*>& RemovedItems)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_GpInteractivePopupBase", "SetInteractivePopupDataAsset");
+		Func = Class->GetFunction("VALUI_ListView_Styled", "OnListItemsChanged__DelegateSignature");
 
-	Params::VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset Parms{};
+	Params::VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature Parms{};
 
-	Parms.InteractivePopupAsset = InteractivePopupAsset;
+	Parms.AddedItems = std::move(AddedItems);
+	Parms.RemovedItems = std::move(RemovedItems);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class UObject*                          Item                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bIsSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ESelectInfo                             SelectType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ListView_Styled::OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature(class UObject* Item, bool bIsSelected, ESelectInfo SelectType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
+
+	Params::VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature Parms{};
+
+	Parms.Item = Item;
+	Parms.bIsSelected = bIsSelected;
+	Parms.SelectType = SelectType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValeriaUI.VALUI_ListView_Styled.ResetPoolAndSetListItems
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class UObject*>                  InListItems                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UVALUI_ListView_Styled::ResetPoolAndSetListItems(TArray<class UObject*>& InListItems)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "ResetPoolAndSetListItems");
+
+	Params::VALUI_ListView_Styled_ResetPoolAndSetListItems Parms{};
+
+	Parms.InListItems = std::move(InListItems);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -417,6 +418,251 @@ void UVALUI_GpInteractivePopupBase::SetInteractivePopupDataAsset(class UGameplay
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_ListView_Styled.SetEntryWidgetClass
+// (Final, Native, Protected, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UUserWidget>          NewWidgetClass                                         (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ListView_Styled::SetEntryWidgetClass(TSubclassOf<class UUserWidget> NewWidgetClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "SetEntryWidgetClass");
+
+	Params::VALUI_ListView_Styled_SetEntryWidgetClass Parms{};
+
+	Parms.NewWidgetClass = NewWidgetClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// float                                   DesiredOffset                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ListView_Styled::VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature(float DesiredOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
+
+	Params::VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature Parms{};
+
+	Parms.DesiredOffset = DesiredOffset;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserScrolled__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// float                                   ScrollFraction                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ListView_Styled::VALUI_OnListViewUserScrolled__DelegateSignature(float ScrollFraction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "VALUI_OnListViewUserScrolled__DelegateSignature");
+
+	Params::VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature Parms{};
+
+	Parms.ScrollFraction = ScrollFraction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValeriaUI.VALUI_ListView_Styled.GetItemsWithinRange
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   StartingIndex                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Range                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class UObject*> UVALUI_ListView_Styled::GetItemsWithinRange(int32& StartingIndex, int32& Range) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "GetItemsWithinRange");
+
+	Params::VALUI_ListView_Styled_GetItemsWithinRange Parms{};
+
+	Parms.StartingIndex = StartingIndex;
+	Parms.Range = Range;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValeriaUI.VALUI_ListView_Styled.GetScrollbarDistanceFromBottom
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UVALUI_ListView_Styled::GetScrollbarDistanceFromBottom() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "GetScrollbarDistanceFromBottom");
+
+	Params::VALUI_ListView_Styled_GetScrollbarDistanceFromBottom Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValeriaUI.VALUI_ListView_Styled.ShouldScrollBarBeVisible
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UVALUI_ListView_Styled::ShouldScrollBarBeVisible() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ListView_Styled", "ShouldScrollBarBeVisible");
+
+	Params::VALUI_ListView_Styled_ShouldScrollBarBeVisible Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValeriaUI.VALUI_TileView_Styled.SetEntryHeight
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewHeight                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_TileView_Styled::SetEntryHeight(float NewHeight)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_TileView_Styled", "SetEntryHeight");
+
+	Params::VALUI_TileView_Styled_SetEntryHeight Parms{};
+
+	Parms.NewHeight = NewHeight;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_TileView_Styled.SetEntryWidth
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   NewWidth                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_TileView_Styled::SetEntryWidth(float NewWidth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_TileView_Styled", "SetEntryWidth");
+
+	Params::VALUI_TileView_Styled_SetEntryWidth Parms{};
+
+	Parms.NewWidth = NewWidth;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_TileView_Styled.GetEntryHeight
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UVALUI_TileView_Styled::GetEntryHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_TileView_Styled", "GetEntryHeight");
+
+	Params::VALUI_TileView_Styled_GetEntryHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ValeriaUI.VALUI_TileView_Styled.GetEntryWidth
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UVALUI_TileView_Styled::GetEntryWidth() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_TileView_Styled", "GetEntryWidth");
+
+	Params::VALUI_TileView_Styled_GetEntryWidth Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -455,36 +701,6 @@ class FString UHeadlessSteamAccountFlowBase::GetErrorMessageFromResponse(const c
 	Params::HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse Parms{};
 
 	Parms.Response = std::move(Response);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValeriaUI.HeadlessSteamAccountFlowBase.IsErrorInvalidEmail
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// int32                                   Code                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Message                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UHeadlessSteamAccountFlowBase::IsErrorInvalidEmail(int32 Code, const class FString& Message)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("HeadlessSteamAccountFlowBase", "IsErrorInvalidEmail");
-
-	Params::HeadlessSteamAccountFlowBase_IsErrorInvalidEmail Parms{};
-
-	Parms.Code = Code;
-	Parms.Message = std::move(Message);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -729,64 +945,6 @@ void UHeadlessSteamAccountFlowBase::UnbindDelegates()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_DisableTimer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-
-void UVALUI_HotPotTurnTimer::BP_DisableTimer()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_DisableTimer");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_StartTimer
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   SecondsLeft                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EHotPotTurnState                        TurnState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_HotPotTurnTimer::BP_StartTimer(float SecondsLeft, EHotPotTurnState TurnState)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_StartTimer");
-
-	Params::VALUI_HotPotTurnTimer_BP_StartTimer Parms{};
-
-	Parms.SecondsLeft = SecondsLeft;
-	Parms.TurnState = TurnState;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_UpdatePlayerID
-// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGuid                            PlayerId                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FGuid                            CharacterId                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_HotPotTurnTimer::BP_UpdatePlayerID(struct FGuid& PlayerId, struct FGuid& CharacterId)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_UpdatePlayerID");
-
-	Params::VALUI_HotPotTurnTimer_BP_UpdatePlayerID Parms{};
-
-	Parms.PlayerId = std::move(PlayerId);
-	Parms.CharacterId = std::move(CharacterId);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -1699,12 +1857,11 @@ void UMainLobbyBase::OnSteamInitializationFailure()
 
 
 // Function ValeriaUI.MainLobbyBase.OnSteamLoginError
-// (Event, Public, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
-// int32                                   Code                                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Msg                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FText                             Msg                                                    (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
-void UMainLobbyBase::OnSteamLoginError(int32 Code, const class FString& Msg)
+void UMainLobbyBase::OnSteamLoginError(class FText& Msg)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1713,8 +1870,7 @@ void UMainLobbyBase::OnSteamLoginError(int32 Code, const class FString& Msg)
 
 	Params::MainLobbyBase_OnSteamLoginError Parms{};
 
-	Parms.Code = Code;
-	Parms.Msg = std::move(Msg);
+	Parms.Msg = Msg;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -1800,6 +1956,31 @@ void UValeriaViewportClient::ReceiveOnFadeOutBlack()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_AnnouncementsMessageModalDialog.GetAnnouncementUrl
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UVALUI_AnnouncementsMessageModalDialog::GetAnnouncementUrl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_AnnouncementsMessageModalDialog", "GetAnnouncementUrl");
+
+	Params::VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -1991,28 +2172,6 @@ class UVALUI_AsyncUpdateLoadout* UVALUI_AsyncUpdateLoadout::UpdateLoadout(class 
 	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
-}
-
-
-// DelegateFunction ValeriaUI.VALUI_AsyncUpdateLoadout.OnUpdateLoadoutCompleted__DelegateSignature
-// (MulticastDelegate, Public, Delegate, HasOutParams)
-// Parameters:
-// class UVALUI_CharacterCustomizationPanelBase*CharacterCustomizationPanel                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVALUI_CharCustomization_UpdateLoadoutContextPayloadContextPayload                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UVALUI_AsyncUpdateLoadout::OnUpdateLoadoutCompleted__DelegateSignature(class UVALUI_CharacterCustomizationPanelBase* CharacterCustomizationPanel, struct FVALUI_CharCustomization_UpdateLoadoutContextPayload& ContextPayload)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_AsyncUpdateLoadout", "OnUpdateLoadoutCompleted__DelegateSignature");
-
-	Params::VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature Parms{};
-
-	Parms.CharacterCustomizationPanel = CharacterCustomizationPanel;
-	Parms.ContextPayload = std::move(ContextPayload);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -2775,7 +2934,7 @@ void UVALUI_CharacterCustomizationPanelBase::HandleLoadoutSlotItemsGenerated(cla
 
 
 // Function ValeriaUI.VALUI_CharacterCustomizationPanelBase.HandleLoadoutUpdated
-// (Event, Protected, HasOutParams, BlueprintEvent)
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // struct FVALUI_CharCustomization_UpdateLoadoutContextPayloadContextPayload                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -5183,6 +5342,31 @@ bool UVALUI_ErrorDisplayHandling::TryRaiseErrorForDisplay(class UWidget* Instiga
 }
 
 
+// Function ValeriaUI.VALUI_TextBlockStyle.ApplyToTextBlock
+// (Final, Native, Public, BlueprintCallable, Const)
+// Parameters:
+// class UTextBlock*                       TextWidget                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_TextBlockStyle::ApplyToTextBlock(class UTextBlock* TextWidget) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_TextBlockStyle", "ApplyToTextBlock");
+
+	Params::VALUI_TextBlockStyle_ApplyToTextBlock Parms{};
+
+	Parms.TextWidget = TextWidget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ValeriaUI.VALUI_ExpandableAreaStyle.Apply
 // (Final, Native, Public, BlueprintCallable, Const)
 // Parameters:
@@ -5205,6 +5389,247 @@ void UVALUI_ExpandableAreaStyle::Apply(class UExpandableArea* ExpandableArea) co
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_ExpandableArea_Styled.SetExpandableAreaStyle
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UVALUI_ExpandableAreaStyle*       NewStyle                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ExpandableArea_Styled::SetExpandableAreaStyle(class UVALUI_ExpandableAreaStyle* NewStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ExpandableArea_Styled", "SetExpandableAreaStyle");
+
+	Params::VALUI_ExpandableArea_Styled_SetExpandableAreaStyle Parms{};
+
+	Parms.NewStyle = NewStyle;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_Slider_Styled.SetSliderStyle
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UVALUI_SliderStyle*               NewStyle                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_Slider_Styled::SetSliderStyle(class UVALUI_SliderStyle* NewStyle)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_Slider_Styled", "SetSliderStyle");
+
+	Params::VALUI_Slider_Styled_SetSliderStyle Parms{};
+
+	Parms.NewStyle = NewStyle;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_ExtensionPointContainerBase.AddExtensibleWidget
+// (Event, Protected, HasOutParams, BlueprintEvent)
+// Parameters:
+// TSoftClassPtr<class UClass>             WidgetReference                                        (ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_ExtensionPointContainerBase::AddExtensibleWidget(TSoftClassPtr<class UClass>& WidgetReference)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_ExtensionPointContainerBase", "AddExtensibleWidget");
+
+	Params::VALUI_ExtensionPointContainerBase_AddExtensibleWidget Parms{};
+
+	Parms.WidgetReference = WidgetReference;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.AddPopupToQueue
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TSoftObjectPtr<class UGameplayInteractivePopupDataAsset>GpPopupAsset                                           (ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_GameInteractPopupSubsystem::AddPopupToQueue(TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_GameInteractPopupSubsystem", "AddPopupToQueue");
+
+	Params::VALUI_GameInteractPopupSubsystem_AddPopupToQueue Parms{};
+
+	Parms.GpPopupAsset = GpPopupAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.OnHandlePopupClosed
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UGameplayInteractivePopupDataAsset*GpPopupAsset                                           (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_GameInteractPopupSubsystem::OnHandlePopupClosed(class UGameplayInteractivePopupDataAsset* GpPopupAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_GameInteractPopupSubsystem", "OnHandlePopupClosed");
+
+	Params::VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed Parms{};
+
+	Parms.GpPopupAsset = GpPopupAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_GpInteractivePopupBase.CheckGameplayCondition
+// (Final, Native, Protected, BlueprintCallable)
+
+void UVALUI_GpInteractivePopupBase::CheckGameplayCondition()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_GpInteractivePopupBase", "CheckGameplayCondition");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_GpInteractivePopupBase.ClosePopupWidget
+// (Final, Native, Protected, BlueprintCallable)
+
+void UVALUI_GpInteractivePopupBase::ClosePopupWidget()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_GpInteractivePopupBase", "ClosePopupWidget");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_GpInteractivePopupBase.SetInteractivePopupDataAsset
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UGameplayInteractivePopupDataAsset*InteractivePopupAsset                                  (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_GpInteractivePopupBase::SetInteractivePopupDataAsset(class UGameplayInteractivePopupDataAsset* InteractivePopupAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_GpInteractivePopupBase", "SetInteractivePopupDataAsset");
+
+	Params::VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset Parms{};
+
+	Parms.InteractivePopupAsset = InteractivePopupAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_DisableTimer
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+
+void UVALUI_HotPotTurnTimer::BP_DisableTimer()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_DisableTimer");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_StartTimer
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   SecondsLeft                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EHotPotTurnState                        TurnState                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_HotPotTurnTimer::BP_StartTimer(float SecondsLeft, EHotPotTurnState TurnState)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_StartTimer");
+
+	Params::VALUI_HotPotTurnTimer_BP_StartTimer Parms{};
+
+	Parms.SecondsLeft = SecondsLeft;
+	Parms.TurnState = TurnState;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_UpdatePlayerID
+// (Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGuid                            PlayerId                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            CharacterId                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UVALUI_HotPotTurnTimer::BP_UpdatePlayerID(struct FGuid& PlayerId, struct FGuid& CharacterId)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_HotPotTurnTimer", "BP_UpdatePlayerID");
+
+	Params::VALUI_HotPotTurnTimer_BP_UpdatePlayerID Parms{};
+
+	Parms.PlayerId = std::move(PlayerId);
+	Parms.CharacterId = std::move(CharacterId);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -5515,222 +5940,6 @@ struct FValeriaItem UVALUI_ItemDragDrop::GetItem() const
 	Params::VALUI_ItemDragDrop_GetItem Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemsChanged__DelegateSignature
-// (MulticastDelegate, Public, Delegate, HasOutParams)
-// Parameters:
-// TArray<class UObject*>                  AddedItems                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// TArray<class UObject*>                  RemovedItems                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::OnListItemsChanged__DelegateSignature(TArray<class UObject*>& AddedItems, TArray<class UObject*>& RemovedItems)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "OnListItemsChanged__DelegateSignature");
-
-	Params::VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature Parms{};
-
-	Parms.AddedItems = std::move(AddedItems);
-	Parms.RemovedItems = std::move(RemovedItems);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-// Parameters:
-// class UObject*                          Item                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bIsSelected                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ESelectInfo                             SelectType                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature(class UObject* Item, bool bIsSelected, ESelectInfo SelectType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
-
-	Params::VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature Parms{};
-
-	Parms.Item = Item;
-	Parms.bIsSelected = bIsSelected;
-	Parms.SelectType = SelectType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ValeriaUI.VALUI_ListView_Styled.ResetPoolAndSetListItems
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// TArray<class UObject*>                  InListItems                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::ResetPoolAndSetListItems(TArray<class UObject*>& InListItems)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "ResetPoolAndSetListItems");
-
-	Params::VALUI_ListView_Styled_ResetPoolAndSetListItems Parms{};
-
-	Parms.InListItems = std::move(InListItems);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_ListView_Styled.SetEntryWidgetClass
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UUserWidget>          NewWidgetClass                                         (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::SetEntryWidgetClass(TSubclassOf<class UUserWidget> NewWidgetClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "SetEntryWidgetClass");
-
-	Params::VALUI_ListView_Styled_SetEntryWidgetClass Parms{};
-
-	Parms.NewWidgetClass = NewWidgetClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-// Parameters:
-// float                                   DesiredOffset                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature(float DesiredOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
-
-	Params::VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature Parms{};
-
-	Parms.DesiredOffset = DesiredOffset;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserScrolled__DelegateSignature
-// (MulticastDelegate, Public, Delegate)
-// Parameters:
-// float                                   ScrollFraction                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_ListView_Styled::VALUI_OnListViewUserScrolled__DelegateSignature(float ScrollFraction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "VALUI_OnListViewUserScrolled__DelegateSignature");
-
-	Params::VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature Parms{};
-
-	Parms.ScrollFraction = ScrollFraction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function ValeriaUI.VALUI_ListView_Styled.GetItemsWithinRange
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   StartingIndex                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Range                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class UObject*>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class UObject*> UVALUI_ListView_Styled::GetItemsWithinRange(int32& StartingIndex, int32& Range) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "GetItemsWithinRange");
-
-	Params::VALUI_ListView_Styled_GetItemsWithinRange Parms{};
-
-	Parms.StartingIndex = StartingIndex;
-	Parms.Range = Range;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValeriaUI.VALUI_ListView_Styled.GetScrollbarDistanceFromBottom
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UVALUI_ListView_Styled::GetScrollbarDistanceFromBottom() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "GetScrollbarDistanceFromBottom");
-
-	Params::VALUI_ListView_Styled_GetScrollbarDistanceFromBottom Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValeriaUI.VALUI_ListView_Styled.ShouldScrollBarBeVisible
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UVALUI_ListView_Styled::ShouldScrollBarBeVisible() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_ListView_Styled", "ShouldScrollBarBeVisible");
-
-	Params::VALUI_ListView_Styled_ShouldScrollBarBeVisible Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
 
 	return Parms.ReturnValue;
 }
@@ -6627,60 +6836,6 @@ void UVALUI_PaliaPassHUDWidget::HandleOnViewModelHUDStateChanged(class UObject* 
 }
 
 
-// Function ValeriaUI.VALUI_PhotoCameraScreenBase.AccumulateLookModeInput
-// (Final, Native, Protected, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FGeometry                        InGeometry                                             (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// struct FPointerEvent                    InMouseEvent                                           (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// bool                                    bInvertYAxis                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_PhotoCameraScreenBase::AccumulateLookModeInput(struct FGeometry& InGeometry, struct FPointerEvent& InMouseEvent, bool bInvertYAxis)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_PhotoCameraScreenBase", "AccumulateLookModeInput");
-
-	Params::VALUI_PhotoCameraScreenBase_AccumulateLookModeInput Parms{};
-
-	Parms.InGeometry = std::move(InGeometry);
-	Parms.InMouseEvent = std::move(InMouseEvent);
-	Parms.bInvertYAxis = bInvertYAxis;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_PhotoCameraScreenBase.SetLookMode
-// (Final, Native, Protected, BlueprintCallable)
-// Parameters:
-// EVALUI_PhotoCameraScreenLookMode        Value                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_PhotoCameraScreenBase::SetLookMode(EVALUI_PhotoCameraScreenLookMode Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_PhotoCameraScreenBase", "SetLookMode");
-
-	Params::VALUI_PhotoCameraScreenBase_SetLookMode Parms{};
-
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.VALUI_PlayerSupport.DrawToCanvas
 // (Final, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
@@ -6875,26 +7030,6 @@ bool UVALUI_UIManagerWidgetBase::Implementation_HasAnyHousingPlotsTeleportOption
 	UObject::ProcessEvent(Func, &Parms);
 
 	return Parms.ReturnValue;
-}
-
-
-// Function ValeriaUI.VALUI_UIManagerWidgetBase.Implementation_NavigateToCharacterCustomization
-// (BlueprintCosmetic, Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVAL_CharacterCustomizationModeConfigConfig                                                 (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UVALUI_UIManagerWidgetBase::Implementation_NavigateToCharacterCustomization(struct FVAL_CharacterCustomizationModeConfig& Config)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_UIManagerWidgetBase", "Implementation_NavigateToCharacterCustomization");
-
-	Params::VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization Parms{};
-
-	Parms.Config = std::move(Config);
-
-	UObject::ProcessEvent(Func, &Parms);
 }
 
 
@@ -7452,6 +7587,20 @@ void UVALUI_UIManagerWidgetBase::Implementation_OpenSubgameScreen(class USubgame
 }
 
 
+// Function ValeriaUI.VALUI_UIManagerWidgetBase.Implementation_OpenTourBoard
+// (BlueprintCosmetic, Event, Protected, BlueprintCallable, BlueprintEvent)
+
+void UVALUI_UIManagerWidgetBase::Implementation_OpenTourBoard()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_UIManagerWidgetBase", "Implementation_OpenTourBoard");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function ValeriaUI.VALUI_UIManagerWidgetBase.Implementation_OpenVillagerStore
 // (BlueprintCosmetic, Event, Protected, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -7754,25 +7903,6 @@ void UVALUI_PregameUIManager::DeinitAutoLogin()
 }
 
 
-// Function ValeriaUI.VALUI_PregameUIManager.FetchAnnouncements
-// (Final, Native, Public, BlueprintCallable)
-
-void UVALUI_PregameUIManager::FetchAnnouncements()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_PregameUIManager", "FetchAnnouncements");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.VALUI_PregameUIManager.FetchServerStatus
 // (Final, Native, Public, BlueprintCallable)
 
@@ -7818,6 +7948,31 @@ void UVALUI_PregameUIManager::GetCachedCharacterAtIndex_Checked(int32 Param_Inde
 
 	if (OutCharacter != nullptr)
 		*OutCharacter = std::move(Parms.OutCharacter);
+}
+
+
+// Function ValeriaUI.VALUI_PregameUIManager.GetServerStatusUrl
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UVALUI_PregameUIManager::GetServerStatusUrl()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VALUI_PregameUIManager", "GetServerStatusUrl");
+
+	Params::VALUI_PregameUIManager_GetServerStatusUrl Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 
@@ -8119,33 +8274,8 @@ void UVALUI_PregameUIManager::OnPregameStateChange__DelegateSignature(EVALUI_Pre
 }
 
 
-// Function ValeriaUI.VALUI_PregameUIManager.SetAnnouncementURL
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_PregameUIManager::SetAnnouncementURL(const class FString& URL)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_PregameUIManager", "SetAnnouncementURL");
-
-	Params::VALUI_PregameUIManager_SetAnnouncementURL Parms{};
-
-	Parms.URL = std::move(URL);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.VALUI_PregameUIManager.StartAutoLogin
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Protected, BlueprintCallable)
 
 void UVALUI_PregameUIManager::StartAutoLogin()
 {
@@ -8164,7 +8294,7 @@ void UVALUI_PregameUIManager::StartAutoLogin()
 
 
 // Function ValeriaUI.VALUI_PregameUIManager.StopAutoLogin
-// (Final, Native, Public, BlueprintCallable)
+// (Final, Native, Protected, BlueprintCallable)
 // Parameters:
 // bool                                    bIsComplete                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -8244,7 +8374,7 @@ void UVALUI_PregameUIManager::TryGetCachedCharacters_Checked(TArray<struct FVALD
 
 
 // Function ValeriaUI.VALUI_PregameUIManager.TryStartMatchmaking
-// (Event, Protected, BlueprintCallable, BlueprintEvent)
+// (Event, Public, BlueprintCallable, BlueprintEvent)
 
 void UVALUI_PregameUIManager::TryStartMatchmaking()
 {
@@ -8458,11 +8588,11 @@ void UVALUI_PremiumCurrencyPurchaseWidgetBase::HandlePaymentFulfilled()
 // Function ValeriaUI.VALUI_PremiumCurrencyPurchaseWidgetBase.HandleSteamMicrotransactionCompleted
 // (Final, Native, Public)
 // Parameters:
-// uint32                                  AppId                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint32                                  AppID                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // uint64                                  OrderId                                                (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAuthorized                                            (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UVALUI_PremiumCurrencyPurchaseWidgetBase::HandleSteamMicrotransactionCompleted(uint32 AppId, uint64 OrderId, bool bAuthorized)
+void UVALUI_PremiumCurrencyPurchaseWidgetBase::HandleSteamMicrotransactionCompleted(uint32 AppID, uint64 OrderId, bool bAuthorized)
 {
 	static class UFunction* Func = nullptr;
 
@@ -8471,7 +8601,7 @@ void UVALUI_PremiumCurrencyPurchaseWidgetBase::HandleSteamMicrotransactionComple
 
 	Params::VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted Parms{};
 
-	Parms.AppId = AppId;
+	Parms.AppID = AppID;
 	Parms.OrderId = OrderId;
 	Parms.bAuthorized = bAuthorized;
 
@@ -9756,31 +9886,6 @@ void UVALUI_SliderStyle::Apply(class USlider* Slider) const
 }
 
 
-// Function ValeriaUI.VALUI_Slider_Styled.SetSliderStyle
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UVALUI_SliderStyle*               NewStyle                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_Slider_Styled::SetSliderStyle(class UVALUI_SliderStyle* NewStyle)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_Slider_Styled", "SetSliderStyle");
-
-	Params::VALUI_Slider_Styled_SetSliderStyle Parms{};
-
-	Parms.NewStyle = NewStyle;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ValeriaUI.VALUI_SocialPanelBase.GetDebugSimulationFlag
 // (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -10366,31 +10471,6 @@ void IVALUI_TabButtonInterface::SetIsActiveTabButton(bool bIsActive)
 }
 
 
-// Function ValeriaUI.VALUI_TextBlockStyle.ApplyToTextBlock
-// (Final, Native, Public, BlueprintCallable, Const)
-// Parameters:
-// class UTextBlock*                       TextWidget                                             (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_TextBlockStyle::ApplyToTextBlock(class UTextBlock* TextWidget) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_TextBlockStyle", "ApplyToTextBlock");
-
-	Params::VALUI_TextBlockStyle_ApplyToTextBlock Parms{};
-
-	Parms.TextWidget = TextWidget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // DelegateFunction ValeriaUI.VALUI_TextBlock_Styled.OnStyleLoadComplete__DelegateSignature
 // (MulticastDelegate, Public, Delegate)
 
@@ -10471,106 +10551,6 @@ void UVALUI_TextBlock_Styled::UpdateCrossPlatformStyles(TMap<ERedirectsPlatform,
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_TileView_Styled.SetEntryHeight
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   NewHeight                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_TileView_Styled::SetEntryHeight(float NewHeight)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_TileView_Styled", "SetEntryHeight");
-
-	Params::VALUI_TileView_Styled_SetEntryHeight Parms{};
-
-	Parms.NewHeight = NewHeight;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_TileView_Styled.SetEntryWidth
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   NewWidth                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UVALUI_TileView_Styled::SetEntryWidth(float NewWidth)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_TileView_Styled", "SetEntryWidth");
-
-	Params::VALUI_TileView_Styled_SetEntryWidth Parms{};
-
-	Parms.NewWidth = NewWidth;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ValeriaUI.VALUI_TileView_Styled.GetEntryHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UVALUI_TileView_Styled::GetEntryHeight() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_TileView_Styled", "GetEntryHeight");
-
-	Params::VALUI_TileView_Styled_GetEntryHeight Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ValeriaUI.VALUI_TileView_Styled.GetEntryWidth
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UVALUI_TileView_Styled::GetEntryWidth() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("VALUI_TileView_Styled", "GetEntryWidth");
-
-	Params::VALUI_TileView_Styled_GetEntryWidth Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -11004,6 +10984,26 @@ void UVAL_PlatformInvitationManager::OnLoginFailure(const class FString& ErrorMe
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// DelegateFunction ValeriaUI.VAL_PlatformInvitationManager.PlatformInvitedFailed_FTUEInProgress__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// class FText                             ErrorMessage                                           (Parm, NativeAccessSpecifierPublic)
+
+void UVAL_PlatformInvitationManager::PlatformInvitedFailed_FTUEInProgress__DelegateSignature(class FText ErrorMessage)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("VAL_PlatformInvitationManager", "PlatformInvitedFailed_FTUEInProgress__DelegateSignature");
+
+	Params::VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature Parms{};
+
+	Parms.ErrorMessage = ErrorMessage;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

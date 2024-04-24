@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayer
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpace
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendSpaceReference             ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::ConvertToBlendSpacePlayer(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+struct FBlendSpaceReference UBlendSpaceLibrary::ConvertToBlendSpace(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ConvertToBlendSpacePlayer");
+		Func = StaticClass()->GetFunction("BlendSpaceLibrary", "ConvertToBlendSpace");
 
-	Params::BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer Parms{};
+	Params::BlendSpaceLibrary_ConvertToBlendSpace Parms{};
 
 	Parms.Node = std::move(Node);
 
@@ -49,21 +49,21 @@ struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::ConvertToBlendSpaceP
 }
 
 
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayerPure
+// Function AnimGraphRuntime.BlendSpaceLibrary.ConvertToBlendSpacePure
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendSpaceReference             BlendSpace                                             (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UBlendSpacePlayerLibrary::ConvertToBlendSpacePlayerPure(struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result)
+void UBlendSpaceLibrary::ConvertToBlendSpacePure(struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* Result)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ConvertToBlendSpacePlayerPure");
+		Func = StaticClass()->GetFunction("BlendSpaceLibrary", "ConvertToBlendSpacePure");
 
-	Params::BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure Parms{};
+	Params::BlendSpaceLibrary_ConvertToBlendSpacePure Parms{};
 
 	Parms.Node = std::move(Node);
 
@@ -74,114 +74,30 @@ void UBlendSpacePlayerLibrary::ConvertToBlendSpacePlayerPure(struct FAnimNodeRef
 
 	Func->FunctionFlags = Flgs;
 
-	if (BlendSpacePlayer != nullptr)
-		*BlendSpacePlayer = std::move(Parms.BlendSpacePlayer);
+	if (BlendSpace != nullptr)
+		*BlendSpace = std::move(Parms.BlendSpace);
 
 	if (Result != nullptr)
 		*Result = Parms.Result;
 }
 
 
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetBlendSpace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Function AnimGraphRuntime.BlendSpaceLibrary.GetFilteredPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UBlendSpace*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UBlendSpace* UBlendSpacePlayerLibrary::GetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetBlendSpace");
-
-	Params::BlendSpacePlayerLibrary_GetBlendSpace Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetLoop
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBlendSpacePlayerLibrary::GetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetLoop");
-
-	Params::BlendSpacePlayerLibrary_GetLoop Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPlayRate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UBlendSpacePlayerLibrary::GetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetPlayRate");
-
-	Params::BlendSpacePlayerLibrary_GetPlayRate Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPosition
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendSpaceReference             BlendSpace                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FVector UBlendSpacePlayerLibrary::GetPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+struct FVector UBlendSpaceLibrary::GetFilteredPosition(struct FBlendSpaceReference& BlendSpace)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetPosition");
+		Func = StaticClass()->GetFunction("BlendSpaceLibrary", "GetFilteredPosition");
 
-	Params::BlendSpacePlayerLibrary_GetPosition Parms{};
+	Params::BlendSpaceLibrary_GetFilteredPosition Parms{};
 
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.BlendSpace = std::move(BlendSpace);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -194,22 +110,22 @@ struct FVector UBlendSpacePlayerLibrary::GetPosition(struct FBlendSpacePlayerRef
 }
 
 
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetStartPosition
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Function AnimGraphRuntime.BlendSpaceLibrary.GetPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpaceReference             BlendSpace                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UBlendSpacePlayerLibrary::GetStartPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+struct FVector UBlendSpaceLibrary::GetPosition(struct FBlendSpaceReference& BlendSpace)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetStartPosition");
+		Func = StaticClass()->GetFunction("BlendSpaceLibrary", "GetPosition");
 
-	Params::BlendSpacePlayerLibrary_GetStartPosition Parms{};
+	Params::BlendSpaceLibrary_GetPosition Parms{};
 
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.BlendSpace = std::move(BlendSpace);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -222,24 +138,23 @@ float UBlendSpacePlayerLibrary::GetStartPosition(struct FBlendSpacePlayerReferen
 }
 
 
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpace
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Function AnimGraphRuntime.BlendSpaceLibrary.SnapToPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UBlendSpace*                      BlendSpace                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendSpaceReference             BlendSpace                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          NewPosition                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace)
+void UBlendSpaceLibrary::SnapToPosition(struct FBlendSpaceReference& BlendSpace, const struct FVector& NewPosition)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetBlendSpace");
+		Func = StaticClass()->GetFunction("BlendSpaceLibrary", "SnapToPosition");
 
-	Params::BlendSpacePlayerLibrary_SetBlendSpace Parms{};
+	Params::BlendSpaceLibrary_SnapToPosition Parms{};
 
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-	Parms.BlendSpace = BlendSpace;
+	Parms.BlendSpace = std::move(BlendSpace);
+	Parms.NewPosition = std::move(NewPosition);
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -247,292 +162,11 @@ struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetBlendSpace(struct
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpaceWithInertialBlending
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UBlendSpace*                      BlendSpace                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   BlendTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetBlendSpaceWithInertialBlending(struct FAnimUpdateContext& UpdateContext, struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace, float BlendTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetBlendSpaceWithInertialBlending");
-
-	Params::BlendSpacePlayerLibrary_SetBlendSpaceWithInertialBlending Parms{};
-
-	Parms.UpdateContext = std::move(UpdateContext);
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-	Parms.BlendSpace = BlendSpace;
-	Parms.BlendTime = BlendTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetLoop
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    bLoop                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bLoop)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetLoop");
-
-	Params::BlendSpacePlayerLibrary_SetLoop Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-	Parms.bLoop = bLoop;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetPlayRate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer, float PlayRate)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetPlayRate");
-
-	Params::BlendSpacePlayerLibrary_SetPlayRate Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-	Parms.PlayRate = PlayRate;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetResetPlayTimeWhenBlendSpaceChanges
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    bReset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bReset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetResetPlayTimeWhenBlendSpaceChanges");
-
-	Params::BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-	Parms.bReset = bReset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ShouldResetPlayTimeWhenBlendSpaceChanges
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UBlendSpacePlayerLibrary::ShouldResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ShouldResetPlayTimeWhenBlendSpaceChanges");
-
-	Params::BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges Parms{};
-
-	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBlendPerBonePure
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ULayeredBoneBlendLibrary::ConvertToLayeredBlendPerBonePure(struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "ConvertToLayeredBlendPerBonePure");
-
-	Params::LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (LayeredBoneBlend != nullptr)
-		*LayeredBoneBlend = std::move(Parms.LayeredBoneBlend);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-}
-
-
-// Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBoneBlend
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLayeredBoneBlendReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FLayeredBoneBlendReference ULayeredBoneBlendLibrary::ConvertToLayeredBoneBlend(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "ConvertToLayeredBoneBlend");
-
-	Params::LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend Parms{};
-
-	Parms.Node = std::move(Node);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.LayeredBoneBlendLibrary.GetNumPoses
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
-// Parameters:
-// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 ULayeredBoneBlendLibrary::GetNumPoses(struct FLayeredBoneBlendReference& LayeredBoneBlend)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "GetNumPoses");
-
-	Params::LayeredBoneBlendLibrary_GetNumPoses Parms{};
-
-	Parms.LayeredBoneBlend = std::move(LayeredBoneBlend);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AnimGraphRuntime.LayeredBoneBlendLibrary.SetBlendMask
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-// int32                                   PoseIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             BlendMaskName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLayeredBoneBlendReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FLayeredBoneBlendReference ULayeredBoneBlendLibrary::SetBlendMask(struct FAnimUpdateContext& UpdateContext, struct FLayeredBoneBlendReference& LayeredBoneBlend, int32 PoseIndex, class FName BlendMaskName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "SetBlendMask");
-
-	Params::LayeredBoneBlendLibrary_SetBlendMask Parms{};
-
-	Parms.UpdateContext = std::move(UpdateContext);
-	Parms.LayeredBoneBlend = std::move(LayeredBoneBlend);
-	Parms.PoseIndex = PoseIndex;
-	Parms.BlendMaskName = BlendMaskName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateMachine
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAnimationStateMachineReference  AnimationState                                         (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -598,7 +232,7 @@ void UAnimationStateMachineLibrary::ConvertToAnimationStateMachinePure(struct FA
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.ConvertToAnimationStateResult
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // struct FAnimationStateResultReference   AnimationState                                         (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -664,7 +298,7 @@ void UAnimationStateMachineLibrary::ConvertToAnimationStateResultPure(struct FAn
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetRelevantAnimTimeRemaining
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateResultReference   Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -694,7 +328,7 @@ float UAnimationStateMachineLibrary::GetRelevantAnimTimeRemaining(struct FAnimUp
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetRelevantAnimTimeRemainingFraction
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateResultReference   Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -724,7 +358,7 @@ float UAnimationStateMachineLibrary::GetRelevantAnimTimeRemainingFraction(struct
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.GetState
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateMachineReference  Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -754,7 +388,7 @@ class FName UAnimationStateMachineLibrary::GetState(struct FAnimUpdateContext& U
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.IsStateBlendingIn
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateResultReference   Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -784,7 +418,7 @@ bool UAnimationStateMachineLibrary::IsStateBlendingIn(struct FAnimUpdateContext&
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.IsStateBlendingOut
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateResultReference   Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -814,7 +448,7 @@ bool UAnimationStateMachineLibrary::IsStateBlendingOut(struct FAnimUpdateContext
 
 
 // Function AnimGraphRuntime.AnimationStateMachineLibrary.SetState
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FAnimationStateMachineReference  Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -853,7 +487,7 @@ void UAnimationStateMachineLibrary::SetState(struct FAnimUpdateContext& UpdateCo
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToComponentSpacePoseContext
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EAnimExecutionContextConversionResult   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -885,7 +519,7 @@ struct FAnimComponentSpacePoseContext UAnimExecutionContextLibrary::ConvertToCom
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToInitializationContext
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EAnimExecutionContextConversionResult   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -917,7 +551,7 @@ struct FAnimInitializationContext UAnimExecutionContextLibrary::ConvertToInitial
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToPoseContext
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EAnimExecutionContextConversionResult   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -949,7 +583,7 @@ struct FAnimPoseContext UAnimExecutionContextLibrary::ConvertToPoseContext(struc
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.ConvertToUpdateContext
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // EAnimExecutionContextConversionResult   Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -981,7 +615,7 @@ struct FAnimUpdateContext UAnimExecutionContextLibrary::ConvertToUpdateContext(s
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetAnimInstance
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimExecutionContext            Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // class UAnimInstance*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1009,7 +643,7 @@ class UAnimInstance* UAnimExecutionContextLibrary::GetAnimInstance(struct FAnimE
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetAnimNodeReference
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UAnimInstance*                    Instance                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1039,7 +673,7 @@ struct FAnimNodeReference UAnimExecutionContextLibrary::GetAnimNodeReference(cla
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetCurrentWeight
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1067,7 +701,7 @@ float UAnimExecutionContextLibrary::GetCurrentWeight(struct FAnimUpdateContext& 
 
 
 // Function AnimGraphRuntime.AnimExecutionContextLibrary.GetDeltaTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FAnimUpdateContext               Context                                                (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1094,8 +728,479 @@ float UAnimExecutionContextLibrary::GetDeltaTime(struct FAnimUpdateContext& Cont
 }
 
 
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayer
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::ConvertToBlendSpacePlayer(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ConvertToBlendSpacePlayer");
+
+	Params::BlendSpacePlayerLibrary_ConvertToBlendSpacePlayer Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ConvertToBlendSpacePlayerPure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlendSpacePlayerLibrary::ConvertToBlendSpacePlayerPure(struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ConvertToBlendSpacePlayerPure");
+
+	Params::BlendSpacePlayerLibrary_ConvertToBlendSpacePlayerPure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (BlendSpacePlayer != nullptr)
+		*BlendSpacePlayer = std::move(Parms.BlendSpacePlayer);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetBlendSpace
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UBlendSpace*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UBlendSpace* UBlendSpacePlayerLibrary::GetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetBlendSpace");
+
+	Params::BlendSpacePlayerLibrary_GetBlendSpace Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetLoop
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlendSpacePlayerLibrary::GetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetLoop");
+
+	Params::BlendSpacePlayerLibrary_GetLoop Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPlayRate
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UBlendSpacePlayerLibrary::GetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetPlayRate");
+
+	Params::BlendSpacePlayerLibrary_GetPlayRate Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UBlendSpacePlayerLibrary::GetPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetPosition");
+
+	Params::BlendSpacePlayerLibrary_GetPosition Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.GetStartPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UBlendSpacePlayerLibrary::GetStartPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "GetStartPosition");
+
+	Params::BlendSpacePlayerLibrary_GetStartPosition Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpace
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UBlendSpace*                      BlendSpace                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetBlendSpace");
+
+	Params::BlendSpacePlayerLibrary_SetBlendSpace Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.BlendSpace = BlendSpace;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetBlendSpaceWithInertialBlending
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UBlendSpace*                      BlendSpace                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   BlendTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetBlendSpaceWithInertialBlending(struct FAnimUpdateContext& UpdateContext, struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace, float BlendTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetBlendSpaceWithInertialBlending");
+
+	Params::BlendSpacePlayerLibrary_SetBlendSpaceWithInertialBlending Parms{};
+
+	Parms.UpdateContext = std::move(UpdateContext);
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.BlendSpace = BlendSpace;
+	Parms.BlendTime = BlendTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetLoop
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bLoop                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bLoop)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetLoop");
+
+	Params::BlendSpacePlayerLibrary_SetLoop Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.bLoop = bLoop;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetPlayRate
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer, float PlayRate)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetPlayRate");
+
+	Params::BlendSpacePlayerLibrary_SetPlayRate Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.PlayRate = PlayRate;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SetResetPlayTimeWhenBlendSpaceChanges
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bReset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendSpacePlayerReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendSpacePlayerReference UBlendSpacePlayerLibrary::SetResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bReset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SetResetPlayTimeWhenBlendSpaceChanges");
+
+	Params::BlendSpacePlayerLibrary_SetResetPlayTimeWhenBlendSpaceChanges Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.bReset = bReset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.ShouldResetPlayTimeWhenBlendSpaceChanges
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UBlendSpacePlayerLibrary::ShouldResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "ShouldResetPlayTimeWhenBlendSpaceChanges");
+
+	Params::BlendSpacePlayerLibrary_ShouldResetPlayTimeWhenBlendSpaceChanges Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendSpacePlayerLibrary.SnapToPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FBlendSpacePlayerReference       BlendSpacePlayer                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          NewPosition                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBlendSpacePlayerLibrary::SnapToPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer, const struct FVector& NewPosition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendSpacePlayerLibrary", "SnapToPosition");
+
+	Params::BlendSpacePlayerLibrary_SnapToPosition Parms{};
+
+	Parms.BlendSpacePlayer = std::move(BlendSpacePlayer);
+	Parms.NewPosition = std::move(NewPosition);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ConvertToBlendListBase
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBlendListBaseReference          ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBlendListBaseReference UBlendListBaseLibrary::ConvertToBlendListBase(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ConvertToBlendListBase");
+
+	Params::BlendListBaseLibrary_ConvertToBlendListBase Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.BlendListBaseLibrary.ResetNode
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FBlendListBaseReference          BlendListBase                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UBlendListBaseLibrary::ResetNode(struct FBlendListBaseReference& BlendListBase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("BlendListBaseLibrary", "ResetNode");
+
+	Params::BlendListBaseLibrary_ResetNode Parms{};
+
+	Parms.BlendListBase = std::move(BlendListBase);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function AnimGraphRuntime.KismetAnimationLibrary.CalculateDirection
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                          Velocity                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FRotator                         BaseRotation                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
@@ -1125,7 +1230,7 @@ float UKismetAnimationLibrary::CalculateDirection(struct FVector& Velocity, stru
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromPositionHistory
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Position                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1165,7 +1270,7 @@ float UKismetAnimationLibrary::K2_CalculateVelocityFromPositionHistory(float Del
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_CalculateVelocityFromSockets
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // float                                   DeltaSeconds                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class USkeletalMeshComponent*           Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1217,7 +1322,7 @@ float UKismetAnimationLibrary::K2_CalculateVelocityFromSockets(float DeltaSecond
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DirectionBetweenSockets
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*           Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             SocketOrBoneNameFrom                                   (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1249,7 +1354,7 @@ struct FVector UKismetAnimationLibrary::K2_DirectionBetweenSockets(class USkelet
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_DistanceBetweenTwoSocketsAndMapRange
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class USkeletalMeshComponent*           Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FName                             SocketOrBoneNameA                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1295,7 +1400,7 @@ float UKismetAnimationLibrary::K2_DistanceBetweenTwoSocketsAndMapRange(class USk
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_EndProfilingTimer
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bLog                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class FString                           LogPrefix                                              (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1325,7 +1430,7 @@ float UKismetAnimationLibrary::K2_EndProfilingTimer(bool bLog, const class FStri
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_LookAt
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FTransform                       CurrentTransform                                       (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          TargetPosition                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1363,7 +1468,7 @@ struct FTransform UKismetAnimationLibrary::K2_LookAt(struct FTransform& CurrentT
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseAndRemap
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   RangeOutMin                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1395,7 +1500,7 @@ float UKismetAnimationLibrary::K2_MakePerlinNoiseAndRemap(float Value, float Ran
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_MakePerlinNoiseVectorAndRemap
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // float                                   X                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Y                                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1439,7 +1544,7 @@ struct FVector UKismetAnimationLibrary::K2_MakePerlinNoiseVectorAndRemap(float X
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_StartProfilingTimer
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 
 void UKismetAnimationLibrary::K2_StartProfilingTimer()
 {
@@ -1458,7 +1563,7 @@ void UKismetAnimationLibrary::K2_StartProfilingTimer()
 
 
 // Function AnimGraphRuntime.KismetAnimationLibrary.K2_TwoBoneIK
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FVector                          RootPos                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          JointPos                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1504,8 +1609,135 @@ void UKismetAnimationLibrary::K2_TwoBoneIK(struct FVector& RootPos, struct FVect
 }
 
 
+// Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBlendPerBonePure
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ULayeredBoneBlendLibrary::ConvertToLayeredBlendPerBonePure(struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "ConvertToLayeredBlendPerBonePure");
+
+	Params::LayeredBoneBlendLibrary_ConvertToLayeredBlendPerBonePure Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (LayeredBoneBlend != nullptr)
+		*LayeredBoneBlend = std::move(Parms.LayeredBoneBlend);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function AnimGraphRuntime.LayeredBoneBlendLibrary.ConvertToLayeredBoneBlend
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLayeredBoneBlendReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLayeredBoneBlendReference ULayeredBoneBlendLibrary::ConvertToLayeredBoneBlend(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "ConvertToLayeredBoneBlend");
+
+	Params::LayeredBoneBlendLibrary_ConvertToLayeredBoneBlend Parms{};
+
+	Parms.Node = std::move(Node);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.LayeredBoneBlendLibrary.GetNumPoses
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 ULayeredBoneBlendLibrary::GetNumPoses(struct FLayeredBoneBlendReference& LayeredBoneBlend)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "GetNumPoses");
+
+	Params::LayeredBoneBlendLibrary_GetNumPoses Parms{};
+
+	Parms.LayeredBoneBlend = std::move(LayeredBoneBlend);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AnimGraphRuntime.LayeredBoneBlendLibrary.SetBlendMask
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// struct FLayeredBoneBlendReference       LayeredBoneBlend                                       (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// int32                                   PoseIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             BlendMaskName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLayeredBoneBlendReference       ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FLayeredBoneBlendReference ULayeredBoneBlendLibrary::SetBlendMask(struct FAnimUpdateContext& UpdateContext, struct FLayeredBoneBlendReference& LayeredBoneBlend, int32 PoseIndex, class FName BlendMaskName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("LayeredBoneBlendLibrary", "SetBlendMask");
+
+	Params::LayeredBoneBlendLibrary_SetBlendMask Parms{};
+
+	Parms.UpdateContext = std::move(UpdateContext);
+	Parms.LayeredBoneBlend = std::move(LayeredBoneBlend);
+	Parms.PoseIndex = PoseIndex;
+	Parms.BlendMaskName = BlendMaskName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.ConvertToLinkedAnimGraph
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1570,7 +1802,7 @@ void ULinkedAnimGraphLibrary::ConvertToLinkedAnimGraphPure(struct FAnimNodeRefer
 
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.GetLinkedAnimInstance
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLinkedAnimGraphReference        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimInstance*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1598,7 +1830,7 @@ class UAnimInstance* ULinkedAnimGraphLibrary::GetLinkedAnimInstance(struct FLink
 
 
 // Function AnimGraphRuntime.LinkedAnimGraphLibrary.HasLinkedAnimInstance
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FLinkedAnimGraphReference        Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1626,7 +1858,7 @@ bool ULinkedAnimGraphLibrary::HasLinkedAnimInstance(struct FLinkedAnimGraphRefer
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.CreateProxyObjectForPlayMontage
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class USkeletalMeshComponent*           InSkeletalMeshComponent                                (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAnimMontage*                     MontageToPlay                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1662,7 +1894,7 @@ class UPlayMontageCallbackProxy* UPlayMontageCallbackProxy::CreateProxyObjectFor
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageBlendingOut
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class UAnimMontage*                     Montage                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInterrupted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1689,7 +1921,7 @@ void UPlayMontageCallbackProxy::OnMontageBlendingOut(class UAnimMontage* Montage
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnMontageEnded
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class UAnimMontage*                     Montage                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bInterrupted                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1716,7 +1948,7 @@ void UPlayMontageCallbackProxy::OnMontageEnded(class UAnimMontage* Montage, bool
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyBeginReceived
-// (Final, Native, Protected, HasOutParams)
+// (Final, RequiredAPI, Native, Protected, HasOutParams)
 // Parameters:
 // class FName                             NotifyName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FBranchingPointNotifyPayload     BranchingPointNotifyPayload                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -1743,7 +1975,7 @@ void UPlayMontageCallbackProxy::OnNotifyBeginReceived(class FName NotifyName, st
 
 
 // Function AnimGraphRuntime.PlayMontageCallbackProxy.OnNotifyEndReceived
-// (Final, Native, Protected, HasOutParams)
+// (Final, RequiredAPI, Native, Protected, HasOutParams)
 // Parameters:
 // class FName                             NotifyName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FBranchingPointNotifyPayload     BranchingPointNotifyPayload                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -1770,7 +2002,7 @@ void UPlayMontageCallbackProxy::OnNotifyEndReceived(class FName NotifyName, stru
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.AdvanceTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -1802,7 +2034,7 @@ struct FSequenceEvaluatorReference USequenceEvaluatorLibrary::AdvanceTime(struct
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.ConvertToSequenceEvaluator
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1867,7 +2099,7 @@ void USequenceEvaluatorLibrary::ConvertToSequenceEvaluatorPure(struct FAnimNodeR
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.GetAccumulatedTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1895,7 +2127,7 @@ float USequenceEvaluatorLibrary::GetAccumulatedTime(struct FSequenceEvaluatorRef
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.GetSequence
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimSequenceBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1923,7 +2155,7 @@ class UAnimSequenceBase* USequenceEvaluatorLibrary::GetSequence(struct FSequence
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetExplicitTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1953,7 +2185,7 @@ struct FSequenceEvaluatorReference USequenceEvaluatorLibrary::SetExplicitTime(st
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetSequence
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimSequenceBase*                Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1983,7 +2215,7 @@ struct FSequenceEvaluatorReference USequenceEvaluatorLibrary::SetSequence(struct
 
 
 // Function AnimGraphRuntime.SequenceEvaluatorLibrary.SetSequenceWithInertialBlending
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FSequenceEvaluatorReference      SequenceEvaluator                                      (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -2017,7 +2249,7 @@ struct FSequenceEvaluatorReference USequenceEvaluatorLibrary::SetSequenceWithIne
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.ComputePlayRateFromDuration
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   Duration                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2047,7 +2279,7 @@ float USequencePlayerLibrary::ComputePlayRateFromDuration(struct FSequencePlayer
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.ConvertToSequencePlayer
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2112,7 +2344,7 @@ void USequencePlayerLibrary::ConvertToSequencePlayerPure(struct FAnimNodeReferen
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetAccumulatedTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2140,7 +2372,7 @@ float USequencePlayerLibrary::GetAccumulatedTime(struct FSequencePlayerReference
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetLoopAnimation
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2168,7 +2400,7 @@ bool USequencePlayerLibrary::GetLoopAnimation(struct FSequencePlayerReference& S
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetPlayRate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2196,7 +2428,7 @@ float USequencePlayerLibrary::GetPlayRate(struct FSequencePlayerReference& Seque
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetSequence
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimSequenceBase*                SequenceBase                                           (Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2228,7 +2460,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::GetSequence(struct FSequ
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetSequencePure
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimSequenceBase*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2256,7 +2488,7 @@ class UAnimSequenceBase* USequencePlayerLibrary::GetSequencePure(struct FSequenc
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.GetStartPosition
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2284,7 +2516,7 @@ float USequencePlayerLibrary::GetStartPosition(struct FSequencePlayerReference& 
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetAccumulatedTime
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   Time                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2314,7 +2546,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::SetAccumulatedTime(struc
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetPlayRate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   PlayRate                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2344,7 +2576,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::SetPlayRate(struct FSequ
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetSequence
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // class UAnimSequenceBase*                Sequence                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2374,7 +2606,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::SetSequence(struct FSequ
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetSequenceWithInertialBlending
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimUpdateContext               UpdateContext                                          (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -2408,7 +2640,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::SetSequenceWithInertialB
 
 
 // Function AnimGraphRuntime.SequencePlayerLibrary.SetStartPosition
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSequencePlayerReference         SequencePlayer                                         (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   StartPosition                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2438,7 +2670,7 @@ struct FSequencePlayerReference USequencePlayerLibrary::SetStartPosition(struct 
 
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.ConvertToSkeletalControl
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FAnimNodeReference               Node                                                   (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // EAnimNodeReferenceConversionResult      Result                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2503,7 +2735,7 @@ void USkeletalControlLibrary::ConvertToSkeletalControlPure(struct FAnimNodeRefer
 
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.GetAlpha
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:
 // struct FSkeletalControlReference        SkeletalControl                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2531,7 +2763,7 @@ float USkeletalControlLibrary::GetAlpha(struct FSkeletalControlReference& Skelet
 
 
 // Function AnimGraphRuntime.SkeletalControlLibrary.SetAlpha
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FSkeletalControlReference        SkeletalControl                                        (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 // float                                   Alpha                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

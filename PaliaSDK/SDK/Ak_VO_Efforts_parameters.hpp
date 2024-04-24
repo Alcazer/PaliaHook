@@ -42,17 +42,17 @@ public:
 	class UVAL_CharacterCustomizationComponent*   CustomizationComp;                                 // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AkGetComponent_ComponentCreated;          // 0x0024(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412A[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4685[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkGetComponent_AkComponent;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412B[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4686[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkRtpc*                                CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412C[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4687[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetComponentByClass_ReturnValue;          // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -76,65 +76,65 @@ static_assert(offsetof(Ak_VO_Efforts_C_PrepVoAkComponent, CallFunc_GetComponentB
 static_assert(offsetof(Ak_VO_Efforts_C_PrepVoAkComponent, CallFunc_Add_IntInt_ReturnValue) == 0x000060, "Member 'Ak_VO_Efforts_C_PrepVoAkComponent::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
 
 // Function Ak_VO_Efforts.Ak_VO_Efforts_C.Received_Notify
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct Ak_VO_Efforts_C_Received_Notify final 
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412D[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkAudioEvent*                          VoiceSetEvent;                                     // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          CallFunc_GetVoiceEvent_Value;                      // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412E[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBP_CharacterCustomizationComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_412F[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVAL_VoiceSet*                          CallFunc_GetVoiceSet_ReturnValue;                  // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4130[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVoiceSet_C*                            K2Node_DynamicCast_AsVoice_Set;                    // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0091(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4131[0x6];                                     // 0x0092(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkAudioEvent*                          CallFunc_GetVoiceEvent_Value_1;                    // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4132[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_PrepVoAkComponent_ReturnValue;            // 0x00A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventComponent_ReturnValue;             // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00B5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4688[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          VoiceSetEvent;                                     // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          CallFunc_GetVoiceEvent_Value;                      // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4689[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBP_CharacterCustomizationComponent_C*  CallFunc_GetComponentByClass_ReturnValue;          // 0x0068(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_468A[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_VoiceSet*                          CallFunc_GetVoiceSet_ReturnValue;                  // 0x0080(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_468B[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVoiceSet_C*                            K2Node_DynamicCast_AsVoice_Set;                    // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0099(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_468C[0x6];                                     // 0x009A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkAudioEvent*                          CallFunc_GetVoiceEvent_Value_1;                    // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_468D[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_PrepVoAkComponent_ReturnValue;            // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventComponent_ReturnValue;             // 0x00B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x00BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x00BD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Ak_VO_Efforts_C_Received_Notify) == 0x000008, "Wrong alignment on Ak_VO_Efforts_C_Received_Notify");
-static_assert(sizeof(Ak_VO_Efforts_C_Received_Notify) == 0x0000B8, "Wrong size on Ak_VO_Efforts_C_Received_Notify");
+static_assert(sizeof(Ak_VO_Efforts_C_Received_Notify) == 0x0000C0, "Wrong size on Ak_VO_Efforts_C_Received_Notify");
 static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, MeshComp) == 0x000000, "Member 'Ak_VO_Efforts_C_Received_Notify::MeshComp' has a wrong offset!");
 static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, Animation) == 0x000008, "Member 'Ak_VO_Efforts_C_Received_Notify::Animation' has a wrong offset!");
 static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, EventReference) == 0x000010, "Member 'Ak_VO_Efforts_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, ReturnValue) == 0x000038, "Member 'Ak_VO_Efforts_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, VoiceSetEvent) == 0x000040, "Member 'Ak_VO_Efforts_C_Received_Notify::VoiceSetEvent' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceEvent_Value) == 0x000048, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceEvent_Value' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000050, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_AkEventGlobal_ReturnValue) == 0x000058, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000060, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetGameInstance_ReturnValue) == 0x000068, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000070, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_1) == 0x000071, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceSet_ReturnValue) == 0x000078, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceSet_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsServer_ReturnValue) == 0x000080, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, K2Node_DynamicCast_AsVoice_Set) == 0x000088, "Member 'Ak_VO_Efforts_C_Received_Notify::K2Node_DynamicCast_AsVoice_Set' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000090, "Member 'Ak_VO_Efforts_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_Not_PreBool_ReturnValue) == 0x000091, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceEvent_Value_1) == 0x000098, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceEvent_Value_1' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_2) == 0x0000A0, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_PrepVoAkComponent_ReturnValue) == 0x0000A8, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_PrepVoAkComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_AkEventComponent_ReturnValue) == 0x0000B0, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_AkEventComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_3) == 0x0000B4, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_4) == 0x0000B5, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, ReturnValue) == 0x000040, "Member 'Ak_VO_Efforts_C_Received_Notify::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, VoiceSetEvent) == 0x000048, "Member 'Ak_VO_Efforts_C_Received_Notify::VoiceSetEvent' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceEvent_Value) == 0x000050, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceEvent_Value' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_AkEventGlobal_ReturnValue) == 0x000060, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000068, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetGameInstance_ReturnValue) == 0x000070, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x000078, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_1) == 0x000079, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceSet_ReturnValue) == 0x000080, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceSet_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsServer_ReturnValue) == 0x000088, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, K2Node_DynamicCast_AsVoice_Set) == 0x000090, "Member 'Ak_VO_Efforts_C_Received_Notify::K2Node_DynamicCast_AsVoice_Set' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000098, "Member 'Ak_VO_Efforts_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_Not_PreBool_ReturnValue) == 0x000099, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_GetVoiceEvent_Value_1) == 0x0000A0, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_GetVoiceEvent_Value_1' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_2) == 0x0000A8, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_PrepVoAkComponent_ReturnValue) == 0x0000B0, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_PrepVoAkComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_AkEventComponent_ReturnValue) == 0x0000B8, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_AkEventComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_3) == 0x0000BC, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Ak_VO_Efforts_C_Received_Notify, CallFunc_IsValid_ReturnValue_4) == 0x0000BD, "Member 'Ak_VO_Efforts_C_Received_Notify::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
 
 }
 

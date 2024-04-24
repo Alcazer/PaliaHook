@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
+#include "E_WaterEffect_structs.hpp"
+#include "E_Footwear_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "E_WaterEffect_structs.hpp"
 #include "AkAudio_structs.hpp"
-#include "E_Footwear_structs.hpp"
 
 
 namespace SDK
@@ -28,12 +28,12 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x00A0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	E_WaterEffect                                 E_Water_Effects;                                   // 0x00A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_Footwear                                    E_Footwear;                                        // 0x00A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2460[0x6];                                     // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44AD[0x6];                                     // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WetRTPC;                                           // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WetExterior;                                       // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           Handle;                                            // 0x00C0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsInside;                                          // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2461[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44AE[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WetInterior;                                       // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WetDecayValue;                                     // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WetAccelerateValue;                                // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -46,6 +46,7 @@ public:
 	bool                                          IsPlayingIntro;                                    // 0x0103(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayingOutro;                                    // 0x0104(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsOnQuest;                                         // 0x0105(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          WetnessDecayOverride;                              // 0x0106(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void DecreaseWetness();
@@ -103,6 +104,7 @@ static_assert(offsetof(UComp_Actor_Audio_Data_C, IsInWetArea) == 0x000102, "Memb
 static_assert(offsetof(UComp_Actor_Audio_Data_C, IsPlayingIntro) == 0x000103, "Member 'UComp_Actor_Audio_Data_C::IsPlayingIntro' has a wrong offset!");
 static_assert(offsetof(UComp_Actor_Audio_Data_C, IsPlayingOutro) == 0x000104, "Member 'UComp_Actor_Audio_Data_C::IsPlayingOutro' has a wrong offset!");
 static_assert(offsetof(UComp_Actor_Audio_Data_C, IsOnQuest) == 0x000105, "Member 'UComp_Actor_Audio_Data_C::IsOnQuest' has a wrong offset!");
+static_assert(offsetof(UComp_Actor_Audio_Data_C, WetnessDecayOverride) == 0x000106, "Member 'UComp_Actor_Audio_Data_C::WetnessDecayOverride' has a wrong offset!");
 
 }
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "GameplayAbilities_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GA_LoopableEvent_Base_classes.hpp"
 
 
@@ -19,13 +19,13 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Gather.GA_Gather_C
-// 0x00C0 (0x0600 - 0x0540)
+// 0x00C0 (0x0610 - 0x0550)
 class UGA_Gather_C final  : public UGA_LoopableEvent_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Gather_C;                        // 0x0540(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	struct FGameplayEventData                     GatherEventData;                                   // 0x0548(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
-	struct FActiveGameplayEffectHandle            GameplayEffect_GatherBlocker;                      // 0x05F8(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Gather_C;                        // 0x0550(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	struct FGameplayEventData                     GatherEventData;                                   // 0x0558(0x00B0)(Edit, BlueprintVisible, DisableEditOnInstance)
+	struct FActiveGameplayEffectHandle            GameplayEffect_GatherBlocker;                      // 0x0608(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_GA_Gather(int32 EntryPoint, struct FGameplayEventData& K2Node_Event_EventData);
@@ -45,10 +45,10 @@ public:
 	}
 };
 static_assert(alignof(UGA_Gather_C) == 0x000008, "Wrong alignment on UGA_Gather_C");
-static_assert(sizeof(UGA_Gather_C) == 0x000600, "Wrong size on UGA_Gather_C");
-static_assert(offsetof(UGA_Gather_C, UberGraphFrame_GA_Gather_C) == 0x000540, "Member 'UGA_Gather_C::UberGraphFrame_GA_Gather_C' has a wrong offset!");
-static_assert(offsetof(UGA_Gather_C, GatherEventData) == 0x000548, "Member 'UGA_Gather_C::GatherEventData' has a wrong offset!");
-static_assert(offsetof(UGA_Gather_C, GameplayEffect_GatherBlocker) == 0x0005F8, "Member 'UGA_Gather_C::GameplayEffect_GatherBlocker' has a wrong offset!");
+static_assert(sizeof(UGA_Gather_C) == 0x000610, "Wrong size on UGA_Gather_C");
+static_assert(offsetof(UGA_Gather_C, UberGraphFrame_GA_Gather_C) == 0x000550, "Member 'UGA_Gather_C::UberGraphFrame_GA_Gather_C' has a wrong offset!");
+static_assert(offsetof(UGA_Gather_C, GatherEventData) == 0x000558, "Member 'UGA_Gather_C::GatherEventData' has a wrong offset!");
+static_assert(offsetof(UGA_Gather_C, GameplayEffect_GatherBlocker) == 0x000608, "Member 'UGA_Gather_C::GameplayEffect_GatherBlocker' has a wrong offset!");
 
 }
 

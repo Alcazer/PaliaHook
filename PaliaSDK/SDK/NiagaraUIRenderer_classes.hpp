@@ -11,30 +11,30 @@
 #include "Basic.hpp"
 
 #include "UMG_classes.hpp"
-#include "Niagara_classes.hpp"
 #include "Engine_classes.hpp"
+#include "Niagara_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class NiagaraUIRenderer.NiagaraSystemWidget
-// 0x0088 (0x01D8 - 0x0150)
+// 0x0088 (0x0208 - 0x0180)
 class UNiagaraSystemWidget final  : public UWidget
 {
 public:
-	class UNiagaraSystem*                         NiagaraSystemReference;                            // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class UMaterialInterface*, class UMaterialInterface*> MaterialRemapList;                                 // 0x0158(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	bool                                          AutoActivate;                                      // 0x01A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          TickWhenPaused;                                    // 0x01A9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          FakeDepthScale;                                    // 0x01AA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190D[0x1];                                     // 0x01AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FakeDepthScaleDistance;                            // 0x01AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShowDebugSystemInWorld;                            // 0x01B0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DisableWarnings;                                   // 0x01B1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_190E[0x16];                                    // 0x01B2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
-	class ANiagaraUIActor*                        NiagaraActor;                                      // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UNiagaraUIComponent*                    NiagaraComponent;                                  // 0x01D0(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraSystem*                         NiagaraSystemReference;                            // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class UMaterialInterface*, class UMaterialInterface*> MaterialRemapList;                                 // 0x0188(0x0050)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	bool                                          AutoActivate;                                      // 0x01D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          TickWhenPaused;                                    // 0x01D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          FakeDepthScale;                                    // 0x01DA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D68[0x1];                                     // 0x01DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FakeDepthScaleDistance;                            // 0x01DC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShowDebugSystemInWorld;                            // 0x01E0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DisableWarnings;                                   // 0x01E1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D69[0x16];                                    // 0x01E2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
+	class ANiagaraUIActor*                        NiagaraActor;                                      // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UNiagaraUIComponent*                    NiagaraComponent;                                  // 0x0200(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void ActivateSystem(bool Reset);
@@ -54,20 +54,20 @@ public:
 	}
 };
 static_assert(alignof(UNiagaraSystemWidget) == 0x000008, "Wrong alignment on UNiagaraSystemWidget");
-static_assert(sizeof(UNiagaraSystemWidget) == 0x0001D8, "Wrong size on UNiagaraSystemWidget");
-static_assert(offsetof(UNiagaraSystemWidget, NiagaraSystemReference) == 0x000150, "Member 'UNiagaraSystemWidget::NiagaraSystemReference' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, MaterialRemapList) == 0x000158, "Member 'UNiagaraSystemWidget::MaterialRemapList' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, AutoActivate) == 0x0001A8, "Member 'UNiagaraSystemWidget::AutoActivate' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, TickWhenPaused) == 0x0001A9, "Member 'UNiagaraSystemWidget::TickWhenPaused' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, FakeDepthScale) == 0x0001AA, "Member 'UNiagaraSystemWidget::FakeDepthScale' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, FakeDepthScaleDistance) == 0x0001AC, "Member 'UNiagaraSystemWidget::FakeDepthScaleDistance' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, ShowDebugSystemInWorld) == 0x0001B0, "Member 'UNiagaraSystemWidget::ShowDebugSystemInWorld' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, DisableWarnings) == 0x0001B1, "Member 'UNiagaraSystemWidget::DisableWarnings' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, NiagaraActor) == 0x0001C8, "Member 'UNiagaraSystemWidget::NiagaraActor' has a wrong offset!");
-static_assert(offsetof(UNiagaraSystemWidget, NiagaraComponent) == 0x0001D0, "Member 'UNiagaraSystemWidget::NiagaraComponent' has a wrong offset!");
+static_assert(sizeof(UNiagaraSystemWidget) == 0x000208, "Wrong size on UNiagaraSystemWidget");
+static_assert(offsetof(UNiagaraSystemWidget, NiagaraSystemReference) == 0x000180, "Member 'UNiagaraSystemWidget::NiagaraSystemReference' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, MaterialRemapList) == 0x000188, "Member 'UNiagaraSystemWidget::MaterialRemapList' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, AutoActivate) == 0x0001D8, "Member 'UNiagaraSystemWidget::AutoActivate' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, TickWhenPaused) == 0x0001D9, "Member 'UNiagaraSystemWidget::TickWhenPaused' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, FakeDepthScale) == 0x0001DA, "Member 'UNiagaraSystemWidget::FakeDepthScale' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, FakeDepthScaleDistance) == 0x0001DC, "Member 'UNiagaraSystemWidget::FakeDepthScaleDistance' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, ShowDebugSystemInWorld) == 0x0001E0, "Member 'UNiagaraSystemWidget::ShowDebugSystemInWorld' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, DisableWarnings) == 0x0001E1, "Member 'UNiagaraSystemWidget::DisableWarnings' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, NiagaraActor) == 0x0001F8, "Member 'UNiagaraSystemWidget::NiagaraActor' has a wrong offset!");
+static_assert(offsetof(UNiagaraSystemWidget, NiagaraComponent) == 0x000200, "Member 'UNiagaraSystemWidget::NiagaraComponent' has a wrong offset!");
 
 // Class NiagaraUIRenderer.NiagaraUIActor
-// 0x0000 (0x02A0 - 0x02A0)
+// 0x0000 (0x02A8 - 0x02A8)
 class ANiagaraUIActor final  : public AActor
 {
 public:
@@ -81,14 +81,14 @@ public:
 	}
 };
 static_assert(alignof(ANiagaraUIActor) == 0x000008, "Wrong alignment on ANiagaraUIActor");
-static_assert(sizeof(ANiagaraUIActor) == 0x0002A0, "Wrong size on ANiagaraUIActor");
+static_assert(sizeof(ANiagaraUIActor) == 0x0002A8, "Wrong size on ANiagaraUIActor");
 
 // Class NiagaraUIRenderer.NiagaraUIComponent
-// 0x0010 (0x07E0 - 0x07D0)
+// 0x0010 (0x0820 - 0x0810)
 class UNiagaraUIComponent final  : public UNiagaraComponent
 {
 public:
-	uint8                                         Pad_190F[0x10];                                    // 0x07D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D6A[0x10];                                    // 0x0810(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -101,7 +101,7 @@ public:
 	}
 };
 static_assert(alignof(UNiagaraUIComponent) == 0x000010, "Wrong alignment on UNiagaraUIComponent");
-static_assert(sizeof(UNiagaraUIComponent) == 0x0007E0, "Wrong size on UNiagaraUIComponent");
+static_assert(sizeof(UNiagaraUIComponent) == 0x000820, "Wrong size on UNiagaraUIComponent");
 
 }
 

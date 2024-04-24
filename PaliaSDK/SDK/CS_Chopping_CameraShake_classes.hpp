@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CS_Chopping_CameraShake.CS_Chopping_CameraShake_C
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x01F0 - 0x01F0)
 class UCS_Chopping_CameraShake_C final  : public ULegacyCameraShake
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UCS_Chopping_CameraShake_C) == 0x000010, "Wrong alignment on UCS_Chopping_CameraShake_C");
-static_assert(sizeof(UCS_Chopping_CameraShake_C) == 0x000210, "Wrong size on UCS_Chopping_CameraShake_C");
+static_assert(sizeof(UCS_Chopping_CameraShake_C) == 0x0001F0, "Wrong size on UCS_Chopping_CameraShake_C");
 
 }
 

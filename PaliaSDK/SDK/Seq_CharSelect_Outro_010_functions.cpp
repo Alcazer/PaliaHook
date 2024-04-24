@@ -17,20 +17,20 @@
 namespace SDK
 {
 
-// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010 (Director BP)_C.ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)
+// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010_DirectorBP_C.ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)
 // (Final, UbergraphFunction)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_AkEventGlobal_ReturnValue                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void USeq_CharSelect_Outro_010__Director_BP__C::ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_(int32 EntryPoint, int32 CallFunc_AkEventGlobal_ReturnValue)
+void USeq_CharSelect_Outro_010_DirectorBP_C::ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_(int32 EntryPoint, int32 CallFunc_AkEventGlobal_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_Outro_010 (Director BP)_C", "ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)");
+		Func = Class->GetFunction("Seq_CharSelect_Outro_010_DirectorBP_C", "ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)");
 
-	Params::Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_ Parms{};
+	Params::Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_ Parms{};
 
 	Parms.EntryPoint = EntryPoint;
 	Parms.CallFunc_AkEventGlobal_ReturnValue = CallFunc_AkEventGlobal_ReturnValue;
@@ -39,29 +39,29 @@ void USeq_CharSelect_Outro_010__Director_BP__C::ExecuteUbergraph_Seq_CharSelect_
 }
 
 
-// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010 (Director BP)_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010 (Director BP)
+// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010_DirectorBP_C.SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010 (Director BP)
 // (Public, BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_Outro_010__Director_BP__C::SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010__Director_BP_()
+void USeq_CharSelect_Outro_010_DirectorBP_C::SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010__Director_BP_()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_Outro_010 (Director BP)_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010 (Director BP)");
+		Func = Class->GetFunction("Seq_CharSelect_Outro_010_DirectorBP_C", "SequenceEvent__ENTRYPOINTSeq_CharSelect_Outro_010 (Director BP)");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010 (Director BP)_C.StopFlowAudio
+// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010_DirectorBP_C.StopFlowAudio
 // (BlueprintCallable, BlueprintEvent)
 
-void USeq_CharSelect_Outro_010__Director_BP__C::StopFlowAudio()
+void USeq_CharSelect_Outro_010_DirectorBP_C::StopFlowAudio()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Seq_CharSelect_Outro_010 (Director BP)_C", "StopFlowAudio");
+		Func = Class->GetFunction("Seq_CharSelect_Outro_010_DirectorBP_C", "StopFlowAudio");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

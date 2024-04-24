@@ -22,9 +22,9 @@ namespace SDK
 class US6Telemetry final  : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_3A42[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CAD[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS6TelemtryPendingEnvelope>     Ingest_Queue;                                      // 0x0038(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A43[0x48];                                    // 0x0048(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CAE[0x48];                                    // 0x0048(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

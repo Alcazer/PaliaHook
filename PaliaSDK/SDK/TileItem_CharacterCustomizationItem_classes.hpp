@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass TileItem_CharacterCustomizationItem.TileItem_CharacterCustomizationItem_C
-// 0x0140 (0x0168 - 0x0028)
+// 0x0138 (0x0160 - 0x0028)
 class UTileItem_CharacterCustomizationItem_C final  : public UObject
 {
 public:
 	EVAL_CharacterBodyType                        BodyType;                                          // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          New;                                               // 0x0029(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Owned;                                             // 0x002A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4CDF[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVAL_CharCustomization_AssetData       AssetData;                                         // 0x0030(0x0130)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class UWBP_CharacterCustomization_TileView_C* Owning_Tile_View;                                  // 0x0160(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	uint8                                         Pad_50CF[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVAL_CharCustomization_AssetData       AssetData;                                         // 0x0030(0x0128)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UWBP_CharacterCustomization_TileView_C* Owning_Tile_View;                                  // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -40,12 +40,12 @@ public:
 	}
 };
 static_assert(alignof(UTileItem_CharacterCustomizationItem_C) == 0x000008, "Wrong alignment on UTileItem_CharacterCustomizationItem_C");
-static_assert(sizeof(UTileItem_CharacterCustomizationItem_C) == 0x000168, "Wrong size on UTileItem_CharacterCustomizationItem_C");
+static_assert(sizeof(UTileItem_CharacterCustomizationItem_C) == 0x000160, "Wrong size on UTileItem_CharacterCustomizationItem_C");
 static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, BodyType) == 0x000028, "Member 'UTileItem_CharacterCustomizationItem_C::BodyType' has a wrong offset!");
 static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, New) == 0x000029, "Member 'UTileItem_CharacterCustomizationItem_C::New' has a wrong offset!");
 static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, Owned) == 0x00002A, "Member 'UTileItem_CharacterCustomizationItem_C::Owned' has a wrong offset!");
 static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, AssetData) == 0x000030, "Member 'UTileItem_CharacterCustomizationItem_C::AssetData' has a wrong offset!");
-static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, Owning_Tile_View) == 0x000160, "Member 'UTileItem_CharacterCustomizationItem_C::Owning_Tile_View' has a wrong offset!");
+static_assert(offsetof(UTileItem_CharacterCustomizationItem_C, Owning_Tile_View) == 0x000158, "Member 'UTileItem_CharacterCustomizationItem_C::Owning_Tile_View' has a wrong offset!");
 
 }
 

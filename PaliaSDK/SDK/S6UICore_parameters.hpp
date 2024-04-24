@@ -10,31 +10,31 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 #include "S6UICore_structs.hpp"
-#include "ModelViewViewModel_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "UMG_structs.hpp"
+#include "ModelViewViewModel_structs.hpp"
+#include "FieldNotification_structs.hpp"
 
 
 namespace SDK::Params
 {
 
 // Function S6UICore.S6UI_AsyncAction_OpenModal.OpenModal
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct S6UI_AsyncAction_OpenModal_OpenModal final 
 {
 public:
 	class APlayerController*                      PC;                                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class US6UI_AsyncAction_OpenModal*            ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class US6UI_AsyncAction_OpenModal*            ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_AsyncAction_OpenModal_OpenModal) == 0x000008, "Wrong alignment on S6UI_AsyncAction_OpenModal_OpenModal");
-static_assert(sizeof(S6UI_AsyncAction_OpenModal_OpenModal) == 0x000040, "Wrong size on S6UI_AsyncAction_OpenModal_OpenModal");
+static_assert(sizeof(S6UI_AsyncAction_OpenModal_OpenModal) == 0x000038, "Wrong size on S6UI_AsyncAction_OpenModal_OpenModal");
 static_assert(offsetof(S6UI_AsyncAction_OpenModal_OpenModal, PC) == 0x000000, "Member 'S6UI_AsyncAction_OpenModal_OpenModal::PC' has a wrong offset!");
 static_assert(offsetof(S6UI_AsyncAction_OpenModal_OpenModal, WidgetClass) == 0x000008, "Member 'S6UI_AsyncAction_OpenModal_OpenModal::WidgetClass' has a wrong offset!");
-static_assert(offsetof(S6UI_AsyncAction_OpenModal_OpenModal, ReturnValue) == 0x000038, "Member 'S6UI_AsyncAction_OpenModal_OpenModal::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_AsyncAction_OpenModal_OpenModal, ReturnValue) == 0x000030, "Member 'S6UI_AsyncAction_OpenModal_OpenModal::ReturnValue' has a wrong offset!");
 
 // DelegateFunction S6UICore.S6UI_AsyncAction_OpenModal.OnOpened__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
@@ -46,50 +46,6 @@ public:
 static_assert(alignof(S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature");
 static_assert(sizeof(S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature) == 0x000008, "Wrong size on S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature");
 static_assert(offsetof(S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature, ModalWidget) == 0x000000, "Member 'S6UI_AsyncAction_OpenModal_OnOpened__DelegateSignature::ModalWidget' has a wrong offset!");
-
-// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentBindingsChanged
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged final 
-{
-public:
-	class US6UI_InputActionHandlingWidgetComponent* AffectedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged");
-static_assert(sizeof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged");
-static_assert(offsetof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged, AffectedComponent) == 0x000000, "Member 'S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged::AffectedComponent' has a wrong offset!");
-
-// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentEnabledStateChanged
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged final 
-{
-public:
-	class US6UI_InputActionHandlingWidgetComponent* AffectedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged");
-static_assert(sizeof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged");
-static_assert(offsetof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged, AffectedComponent) == 0x000000, "Member 'S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged::AffectedComponent' has a wrong offset!");
-
-// Function S6UICore.S6UI_InputRouterSubsystem.RegisterInputActionHandler
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_InputRouterSubsystem_RegisterInputActionHandler final 
-{
-public:
-	class US6UI_InputActionHandlingWidgetComponent* InputActionHandler;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_InputRouterSubsystem_RegisterInputActionHandler) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_RegisterInputActionHandler");
-static_assert(sizeof(S6UI_InputRouterSubsystem_RegisterInputActionHandler) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_RegisterInputActionHandler");
-static_assert(offsetof(S6UI_InputRouterSubsystem_RegisterInputActionHandler, InputActionHandler) == 0x000000, "Member 'S6UI_InputRouterSubsystem_RegisterInputActionHandler::InputActionHandler' has a wrong offset!");
-
-// Function S6UICore.S6UI_InputRouterSubsystem.UnregisterInputActionHandler
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_InputRouterSubsystem_UnregisterInputActionHandler final 
-{
-public:
-	class US6UI_InputActionHandlingWidgetComponent* InputActionHandler;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_UnregisterInputActionHandler");
-static_assert(sizeof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_UnregisterInputActionHandler");
-static_assert(offsetof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler, InputActionHandler) == 0x000000, "Member 'S6UI_InputRouterSubsystem_UnregisterInputActionHandler::InputActionHandler' has a wrong offset!");
 
 // Function S6UICore.S6UI_ModalWidgetBase.CanClose
 // 0x0001 (0x0001 - 0x0000)
@@ -198,46 +154,13 @@ static_assert(alignof(S6UI_ModalWidgetBase_GetModalWidgetState) == 0x000001, "Wr
 static_assert(sizeof(S6UI_ModalWidgetBase_GetModalWidgetState) == 0x000001, "Wrong size on S6UI_ModalWidgetBase_GetModalWidgetState");
 static_assert(offsetof(S6UI_ModalWidgetBase_GetModalWidgetState, ReturnValue) == 0x000000, "Member 'S6UI_ModalWidgetBase_GetModalWidgetState::ReturnValue' has a wrong offset!");
 
-// Function S6UICore.S6UI_StateUserWidget.GetInputMode
-// 0x0010 (0x0010 - 0x0000)
-struct S6UI_StateUserWidget_GetInputMode final 
-{
-public:
-	struct FS6UI_InputMode                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_StateUserWidget_GetInputMode) == 0x000004, "Wrong alignment on S6UI_StateUserWidget_GetInputMode");
-static_assert(sizeof(S6UI_StateUserWidget_GetInputMode) == 0x000010, "Wrong size on S6UI_StateUserWidget_GetInputMode");
-static_assert(offsetof(S6UI_StateUserWidget_GetInputMode, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetInputMode::ReturnValue' has a wrong offset!");
-
-// Function S6UICore.S6UI_StateUserWidget.GetViewModel
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_StateUserWidget_GetViewModel final 
-{
-public:
-	class US6UI_StateViewModel*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_StateUserWidget_GetViewModel) == 0x000008, "Wrong alignment on S6UI_StateUserWidget_GetViewModel");
-static_assert(sizeof(S6UI_StateUserWidget_GetViewModel) == 0x000008, "Wrong size on S6UI_StateUserWidget_GetViewModel");
-static_assert(offsetof(S6UI_StateUserWidget_GetViewModel, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetViewModel::ReturnValue' has a wrong offset!");
-
-// Function S6UICore.S6UI_StateUserWidget.GetViewModelContext
-// 0x0010 (0x0010 - 0x0000)
-struct S6UI_StateUserWidget_GetViewModelContext final 
-{
-public:
-	struct FMVVMViewModelContext                  ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_StateUserWidget_GetViewModelContext) == 0x000008, "Wrong alignment on S6UI_StateUserWidget_GetViewModelContext");
-static_assert(sizeof(S6UI_StateUserWidget_GetViewModelContext) == 0x000010, "Wrong size on S6UI_StateUserWidget_GetViewModelContext");
-static_assert(offsetof(S6UI_StateUserWidget_GetViewModelContext, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetViewModelContext::ReturnValue' has a wrong offset!");
-
 // Function S6UICore.S6UI_CustomNavigationGroup.ActiveNavigationGroup
 // 0x0008 (0x0008 - 0x0000)
 struct S6UI_CustomNavigationGroup_ActiveNavigationGroup final 
 {
 public:
 	bool                                          bDelayActive;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1584[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DFF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InAutoSelectNavWidgetID;                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_ActiveNavigationGroup) == 0x000004, "Wrong alignment on S6UI_CustomNavigationGroup_ActiveNavigationGroup");
@@ -257,20 +180,20 @@ static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavExplicitData) == 0x000014,
 static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavExplicitData, InNavExplicitData) == 0x000000, "Member 'S6UI_CustomNavigationGroup_AddNavExplicitData::InNavExplicitData' has a wrong offset!");
 
 // Function S6UICore.S6UI_CustomNavigationGroup.AddNavigationGroupTransitionData
-// 0x0050 (0x0050 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData final 
 {
 public:
-	struct FS6UI_NavigationGroupTranstionData     InTransitionData;                                  // 0x0000(0x0048)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          bInBidirectional;                                  // 0x0048(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bClearMatchingGroupNavigations;                    // 0x0049(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1585[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FS6UI_NavigationGroupTranstionData     InTransitionData;                                  // 0x0000(0x0040)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          bInBidirectional;                                  // 0x0040(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bClearMatchingGroupNavigations;                    // 0x0041(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E00[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData");
-static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData) == 0x000050, "Wrong size on S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData");
+static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData) == 0x000048, "Wrong size on S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData");
 static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData, InTransitionData) == 0x000000, "Member 'S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData::InTransitionData' has a wrong offset!");
-static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData, bInBidirectional) == 0x000048, "Member 'S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData::bInBidirectional' has a wrong offset!");
-static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData, bClearMatchingGroupNavigations) == 0x000049, "Member 'S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData::bClearMatchingGroupNavigations' has a wrong offset!");
+static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData, bInBidirectional) == 0x000040, "Member 'S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData::bInBidirectional' has a wrong offset!");
+static_assert(offsetof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData, bClearMatchingGroupNavigations) == 0x000041, "Member 'S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData::bClearMatchingGroupNavigations' has a wrong offset!");
 
 // Function S6UICore.S6UI_CustomNavigationGroup.AddNavWidgets
 // 0x0018 (0x0018 - 0x0000)
@@ -279,7 +202,7 @@ struct S6UI_CustomNavigationGroup_AddNavWidgets final
 public:
 	TArray<class UWidget*>                        InWidgetArray;                                     // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bInBuildNavigationImmediately;                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1586[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E01[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_AddNavWidgets) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_AddNavWidgets");
 static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavWidgets) == 0x000018, "Wrong size on S6UI_CustomNavigationGroup_AddNavWidgets");
@@ -337,7 +260,7 @@ struct S6UI_CustomNavigationGroup_NavigateToTargetWidget final
 public:
 	int32                                         InTargetWidgetIndex;                               // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDelayActive;                                      // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1587[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E02[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_NavigateToTargetWidget) == 0x000004, "Wrong alignment on S6UI_CustomNavigationGroup_NavigateToTargetWidget");
 static_assert(sizeof(S6UI_CustomNavigationGroup_NavigateToTargetWidget) == 0x000008, "Wrong size on S6UI_CustomNavigationGroup_NavigateToTargetWidget");
@@ -361,12 +284,12 @@ struct S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__Delega
 {
 public:
 	EUINavigation                                 InNavigationType;                                  // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1588[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E03[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class US6UI_CustomNavigationGroup*            InOriginNavigationGroup;                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InOriginWidgetIndex;                               // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InTargetWidgetIndex;                               // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1589[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E04[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature) == 0x000020, "Wrong size on S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature");
@@ -383,7 +306,7 @@ struct S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature final
 public:
 	class US6UI_CustomNavigationGroup*            InNavGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InbIsEnabled;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E05[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature) == 0x000010, "Wrong size on S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature");
@@ -397,7 +320,7 @@ struct S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature 
 public:
 	class UObject*                                NavObject;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E06[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature) == 0x000010, "Wrong size on S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature");
@@ -488,10 +411,10 @@ struct S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding final
 public:
 	class UInputAction*                           InputAction;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerEvent                                 TriggerEventType;                                  // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158D[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E08[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)> Delegate;                                          // 0x000C(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158E[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E09[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding) == 0x000008, "Wrong alignment on S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding");
 static_assert(sizeof(S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding) == 0x000030, "Wrong size on S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding");
@@ -543,6 +466,83 @@ public:
 static_assert(alignof(S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent) == 0x000008, "Wrong alignment on S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent");
 static_assert(sizeof(S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent) == 0x000008, "Wrong size on S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent");
 static_assert(offsetof(S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent, ReturnValue) == 0x000000, "Member 'S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent::ReturnValue' has a wrong offset!");
+
+// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentBindingsChanged
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged final 
+{
+public:
+	class US6UI_InputActionHandlingWidgetComponent* AffectedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged");
+static_assert(sizeof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged");
+static_assert(offsetof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged, AffectedComponent) == 0x000000, "Member 'S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged::AffectedComponent' has a wrong offset!");
+
+// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentEnabledStateChanged
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged final 
+{
+public:
+	class US6UI_InputActionHandlingWidgetComponent* AffectedComponent;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged");
+static_assert(sizeof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged");
+static_assert(offsetof(S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged, AffectedComponent) == 0x000000, "Member 'S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged::AffectedComponent' has a wrong offset!");
+
+// Function S6UICore.S6UI_InputRouterSubsystem.RegisterInputActionHandler
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_InputRouterSubsystem_RegisterInputActionHandler final 
+{
+public:
+	class US6UI_InputActionHandlingWidgetComponent* InputActionHandler;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_InputRouterSubsystem_RegisterInputActionHandler) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_RegisterInputActionHandler");
+static_assert(sizeof(S6UI_InputRouterSubsystem_RegisterInputActionHandler) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_RegisterInputActionHandler");
+static_assert(offsetof(S6UI_InputRouterSubsystem_RegisterInputActionHandler, InputActionHandler) == 0x000000, "Member 'S6UI_InputRouterSubsystem_RegisterInputActionHandler::InputActionHandler' has a wrong offset!");
+
+// Function S6UICore.S6UI_InputRouterSubsystem.UnregisterInputActionHandler
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_InputRouterSubsystem_UnregisterInputActionHandler final 
+{
+public:
+	class US6UI_InputActionHandlingWidgetComponent* InputActionHandler;                                // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler) == 0x000008, "Wrong alignment on S6UI_InputRouterSubsystem_UnregisterInputActionHandler");
+static_assert(sizeof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler) == 0x000008, "Wrong size on S6UI_InputRouterSubsystem_UnregisterInputActionHandler");
+static_assert(offsetof(S6UI_InputRouterSubsystem_UnregisterInputActionHandler, InputActionHandler) == 0x000000, "Member 'S6UI_InputRouterSubsystem_UnregisterInputActionHandler::InputActionHandler' has a wrong offset!");
+
+// Function S6UICore.S6UI_StateUserWidget.GetInputMode
+// 0x0010 (0x0010 - 0x0000)
+struct S6UI_StateUserWidget_GetInputMode final 
+{
+public:
+	struct FS6UI_InputMode                        ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_StateUserWidget_GetInputMode) == 0x000004, "Wrong alignment on S6UI_StateUserWidget_GetInputMode");
+static_assert(sizeof(S6UI_StateUserWidget_GetInputMode) == 0x000010, "Wrong size on S6UI_StateUserWidget_GetInputMode");
+static_assert(offsetof(S6UI_StateUserWidget_GetInputMode, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetInputMode::ReturnValue' has a wrong offset!");
+
+// Function S6UICore.S6UI_StateUserWidget.GetViewModel
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_StateUserWidget_GetViewModel final 
+{
+public:
+	class US6UI_StateViewModel*                   ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_StateUserWidget_GetViewModel) == 0x000008, "Wrong alignment on S6UI_StateUserWidget_GetViewModel");
+static_assert(sizeof(S6UI_StateUserWidget_GetViewModel) == 0x000008, "Wrong size on S6UI_StateUserWidget_GetViewModel");
+static_assert(offsetof(S6UI_StateUserWidget_GetViewModel, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetViewModel::ReturnValue' has a wrong offset!");
+
+// Function S6UICore.S6UI_StateUserWidget.GetViewModelContext
+// 0x0010 (0x0010 - 0x0000)
+struct S6UI_StateUserWidget_GetViewModelContext final 
+{
+public:
+	struct FMVVMViewModelContext                  ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_StateUserWidget_GetViewModelContext) == 0x000008, "Wrong alignment on S6UI_StateUserWidget_GetViewModelContext");
+static_assert(sizeof(S6UI_StateUserWidget_GetViewModelContext) == 0x000010, "Wrong size on S6UI_StateUserWidget_GetViewModelContext");
+static_assert(offsetof(S6UI_StateUserWidget_GetViewModelContext, ReturnValue) == 0x000000, "Member 'S6UI_StateUserWidget_GetViewModelContext::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_ToolTipWidgetInterface.UpdateToolTipText
 // 0x0018 (0x0018 - 0x0000)
@@ -598,7 +598,7 @@ public:
 	class UWidget*                                Widget;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldForceClose;                                 // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPermitLatentClosing;                              // 0x0009(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158F[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0C[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_UIManagerWidgetBase_CloseModalWidget) == 0x000008, "Wrong alignment on S6UI_UIManagerWidgetBase_CloseModalWidget");
 static_assert(sizeof(S6UI_UIManagerWidgetBase_CloseModalWidget) == 0x000010, "Wrong size on S6UI_UIManagerWidgetBase_CloseModalWidget");
@@ -756,30 +756,30 @@ static_assert(sizeof(S6UI_UIManagerHUDBase_GetUIManagerWidget) == 0x000008, "Wro
 static_assert(offsetof(S6UI_UIManagerHUDBase_GetUIManagerWidget, ReturnValue) == 0x000000, "Member 'S6UI_UIManagerHUDBase_GetUIManagerWidget::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_UIManagerCrossPlatformHelper.RedirectModalType
-// 0x0060 (0x0060 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct S6UI_UIManagerCrossPlatformHelper_RedirectModalType final 
 {
 public:
-	TSoftClassPtr<class UClass>                   DefaultModalType;                                  // 0x0000(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   DefaultModalType;                                  // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0028(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType) == 0x000008, "Wrong alignment on S6UI_UIManagerCrossPlatformHelper_RedirectModalType");
-static_assert(sizeof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType) == 0x000060, "Wrong size on S6UI_UIManagerCrossPlatformHelper_RedirectModalType");
+static_assert(sizeof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType) == 0x000050, "Wrong size on S6UI_UIManagerCrossPlatformHelper_RedirectModalType");
 static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType, DefaultModalType) == 0x000000, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectModalType::DefaultModalType' has a wrong offset!");
-static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType, ReturnValue) == 0x000030, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectModalType::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectModalType, ReturnValue) == 0x000028, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectModalType::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_UIManagerCrossPlatformHelper.RedirectStateType
-// 0x0060 (0x0060 - 0x0000)
+// 0x0050 (0x0050 - 0x0000)
 struct S6UI_UIManagerCrossPlatformHelper_RedirectStateType final 
 {
 public:
-	TSoftClassPtr<class UClass>                   DefaultStateType;                                  // 0x0000(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   DefaultStateType;                                  // 0x0000(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ReturnValue;                                       // 0x0028(0x0028)(Parm, OutParm, ReturnParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType) == 0x000008, "Wrong alignment on S6UI_UIManagerCrossPlatformHelper_RedirectStateType");
-static_assert(sizeof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType) == 0x000060, "Wrong size on S6UI_UIManagerCrossPlatformHelper_RedirectStateType");
+static_assert(sizeof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType) == 0x000050, "Wrong size on S6UI_UIManagerCrossPlatformHelper_RedirectStateType");
 static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType, DefaultStateType) == 0x000000, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectStateType::DefaultStateType' has a wrong offset!");
-static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType, ReturnValue) == 0x000030, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectStateType::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_UIManagerCrossPlatformHelper_RedirectStateType, ReturnValue) == 0x000028, "Member 'S6UI_UIManagerCrossPlatformHelper_RedirectStateType::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_Utils.AreCapsLocked
 // 0x0001 (0x0001 - 0x0000)
@@ -843,19 +843,19 @@ static_assert(offsetof(S6UI_Utils_GetContextMenuContentWidget, ContextMenu) == 0
 static_assert(offsetof(S6UI_Utils_GetContextMenuContentWidget, ReturnValue) == 0x000020, "Member 'S6UI_Utils_GetContextMenuContentWidget::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_Utils.GetWidgetFromPool
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct S6UI_Utils_GetWidgetFromPool final 
 {
 public:
 	class UWidget*                                WidgetContext;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   WidgetClassSoftPtr;                                // 0x0008(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUserWidget*                            ReturnValue;                                       // 0x0038(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   WidgetClassSoftPtr;                                // 0x0008(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUserWidget*                            ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_Utils_GetWidgetFromPool) == 0x000008, "Wrong alignment on S6UI_Utils_GetWidgetFromPool");
-static_assert(sizeof(S6UI_Utils_GetWidgetFromPool) == 0x000040, "Wrong size on S6UI_Utils_GetWidgetFromPool");
+static_assert(sizeof(S6UI_Utils_GetWidgetFromPool) == 0x000038, "Wrong size on S6UI_Utils_GetWidgetFromPool");
 static_assert(offsetof(S6UI_Utils_GetWidgetFromPool, WidgetContext) == 0x000000, "Member 'S6UI_Utils_GetWidgetFromPool::WidgetContext' has a wrong offset!");
 static_assert(offsetof(S6UI_Utils_GetWidgetFromPool, WidgetClassSoftPtr) == 0x000008, "Member 'S6UI_Utils_GetWidgetFromPool::WidgetClassSoftPtr' has a wrong offset!");
-static_assert(offsetof(S6UI_Utils_GetWidgetFromPool, ReturnValue) == 0x000038, "Member 'S6UI_Utils_GetWidgetFromPool::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_Utils_GetWidgetFromPool, ReturnValue) == 0x000030, "Member 'S6UI_Utils_GetWidgetFromPool::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_Utils.GetWidgetPoolManager
 // 0x0010 (0x0010 - 0x0000)
@@ -895,24 +895,24 @@ static_assert(offsetof(S6UI_Utils_ReturnWidgetToPool, WidgetContext) == 0x000000
 static_assert(offsetof(S6UI_Utils_ReturnWidgetToPool, Widget) == 0x000008, "Member 'S6UI_Utils_ReturnWidgetToPool::Widget' has a wrong offset!");
 
 // Function S6UICore.S6UI_Utils.SummonContextMenu
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct S6UI_Utils_SummonContextMenu final 
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0008(0x0098)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSubclassOf<class UUserWidget>                ContentWidgetClass;                                // 0x00A0(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FS6UI_ContextMenu                      OutContextMenu;                                    // 0x00A8(0x0020)(Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00C8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1590[0x7];                                     // 0x00C9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FPointerEvent                          MouseEvent;                                        // 0x0008(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSubclassOf<class UUserWidget>                ContentWidgetClass;                                // 0x0080(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FS6UI_ContextMenu                      OutContextMenu;                                    // 0x0088(0x0020)(Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E0D[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_Utils_SummonContextMenu) == 0x000008, "Wrong alignment on S6UI_Utils_SummonContextMenu");
-static_assert(sizeof(S6UI_Utils_SummonContextMenu) == 0x0000D0, "Wrong size on S6UI_Utils_SummonContextMenu");
+static_assert(sizeof(S6UI_Utils_SummonContextMenu) == 0x0000B0, "Wrong size on S6UI_Utils_SummonContextMenu");
 static_assert(offsetof(S6UI_Utils_SummonContextMenu, WorldContextObject) == 0x000000, "Member 'S6UI_Utils_SummonContextMenu::WorldContextObject' has a wrong offset!");
 static_assert(offsetof(S6UI_Utils_SummonContextMenu, MouseEvent) == 0x000008, "Member 'S6UI_Utils_SummonContextMenu::MouseEvent' has a wrong offset!");
-static_assert(offsetof(S6UI_Utils_SummonContextMenu, ContentWidgetClass) == 0x0000A0, "Member 'S6UI_Utils_SummonContextMenu::ContentWidgetClass' has a wrong offset!");
-static_assert(offsetof(S6UI_Utils_SummonContextMenu, OutContextMenu) == 0x0000A8, "Member 'S6UI_Utils_SummonContextMenu::OutContextMenu' has a wrong offset!");
-static_assert(offsetof(S6UI_Utils_SummonContextMenu, ReturnValue) == 0x0000C8, "Member 'S6UI_Utils_SummonContextMenu::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_Utils_SummonContextMenu, ContentWidgetClass) == 0x000080, "Member 'S6UI_Utils_SummonContextMenu::ContentWidgetClass' has a wrong offset!");
+static_assert(offsetof(S6UI_Utils_SummonContextMenu, OutContextMenu) == 0x000088, "Member 'S6UI_Utils_SummonContextMenu::OutContextMenu' has a wrong offset!");
+static_assert(offsetof(S6UI_Utils_SummonContextMenu, ReturnValue) == 0x0000A8, "Member 'S6UI_Utils_SummonContextMenu::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_Utils.SummonContextMenuAtPosition
 // 0x0050 (0x0050 - 0x0000)
@@ -925,7 +925,7 @@ public:
 	TSubclassOf<class UUserWidget>                ContentWidgetClass;                                // 0x0020(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FS6UI_ContextMenu                      OutContextMenu;                                    // 0x0028(0x0020)(Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1591[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0E[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_Utils_SummonContextMenuAtPosition) == 0x000008, "Wrong alignment on S6UI_Utils_SummonContextMenuAtPosition");
 static_assert(sizeof(S6UI_Utils_SummonContextMenuAtPosition) == 0x000050, "Wrong size on S6UI_Utils_SummonContextMenuAtPosition");
@@ -945,9 +945,9 @@ public:
 	ES6UI_MouseLockMode                           MouseLockMode;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHideCursorDuringCapture;                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCursor;                                       // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1592[0x1];                                     // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0F[0x1];                                     // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6UI_InputMode                        ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1593[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E10[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_StateStatics_CreateInputMode_GameAndUI) == 0x000008, "Wrong alignment on S6UI_StateStatics_CreateInputMode_GameAndUI");
 static_assert(sizeof(S6UI_StateStatics_CreateInputMode_GameAndUI) == 0x000020, "Wrong size on S6UI_StateStatics_CreateInputMode_GameAndUI");
@@ -976,9 +976,9 @@ public:
 	class UWidget*                                WidgetToFocus;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6UI_MouseLockMode                           MouseLockMode;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCursor;                                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1594[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E11[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6UI_InputMode                        ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1595[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E12[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_StateStatics_CreateInputMode_UIOnly) == 0x000008, "Wrong alignment on S6UI_StateStatics_CreateInputMode_UIOnly");
 static_assert(sizeof(S6UI_StateStatics_CreateInputMode_UIOnly) == 0x000020, "Wrong size on S6UI_StateStatics_CreateInputMode_UIOnly");
@@ -1010,35 +1010,35 @@ static_assert(sizeof(S6UI_StateStatics_PushState) == 0x000008, "Wrong size on S6
 static_assert(offsetof(S6UI_StateStatics_PushState, Widget) == 0x000000, "Member 'S6UI_StateStatics_PushState::Widget' has a wrong offset!");
 
 // Function S6UICore.S6UI_WidgetPoolManager.GetWidgetFromPool
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct S6UI_WidgetPoolManager_GetWidgetFromPool final 
 {
 public:
 	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UUserWidget*                            ReturnValue;                                       // 0x0038(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUserWidget*                            ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_WidgetPoolManager_GetWidgetFromPool) == 0x000008, "Wrong alignment on S6UI_WidgetPoolManager_GetWidgetFromPool");
-static_assert(sizeof(S6UI_WidgetPoolManager_GetWidgetFromPool) == 0x000040, "Wrong size on S6UI_WidgetPoolManager_GetWidgetFromPool");
+static_assert(sizeof(S6UI_WidgetPoolManager_GetWidgetFromPool) == 0x000038, "Wrong size on S6UI_WidgetPoolManager_GetWidgetFromPool");
 static_assert(offsetof(S6UI_WidgetPoolManager_GetWidgetFromPool, Context) == 0x000000, "Member 'S6UI_WidgetPoolManager_GetWidgetFromPool::Context' has a wrong offset!");
 static_assert(offsetof(S6UI_WidgetPoolManager_GetWidgetFromPool, WidgetClass) == 0x000008, "Member 'S6UI_WidgetPoolManager_GetWidgetFromPool::WidgetClass' has a wrong offset!");
-static_assert(offsetof(S6UI_WidgetPoolManager_GetWidgetFromPool, ReturnValue) == 0x000038, "Member 'S6UI_WidgetPoolManager_GetWidgetFromPool::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6UI_WidgetPoolManager_GetWidgetFromPool, ReturnValue) == 0x000030, "Member 'S6UI_WidgetPoolManager_GetWidgetFromPool::ReturnValue' has a wrong offset!");
 
 // Function S6UICore.S6UI_WidgetPoolManager.ProvisionPool
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct S6UI_WidgetPoolManager_ProvisionPool final 
 {
 public:
 	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TotalSizeOfWidgetsProvisioned;                     // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1596[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TotalSizeOfWidgetsProvisioned;                     // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E13[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_WidgetPoolManager_ProvisionPool) == 0x000008, "Wrong alignment on S6UI_WidgetPoolManager_ProvisionPool");
-static_assert(sizeof(S6UI_WidgetPoolManager_ProvisionPool) == 0x000040, "Wrong size on S6UI_WidgetPoolManager_ProvisionPool");
+static_assert(sizeof(S6UI_WidgetPoolManager_ProvisionPool) == 0x000038, "Wrong size on S6UI_WidgetPoolManager_ProvisionPool");
 static_assert(offsetof(S6UI_WidgetPoolManager_ProvisionPool, Context) == 0x000000, "Member 'S6UI_WidgetPoolManager_ProvisionPool::Context' has a wrong offset!");
 static_assert(offsetof(S6UI_WidgetPoolManager_ProvisionPool, WidgetClass) == 0x000008, "Member 'S6UI_WidgetPoolManager_ProvisionPool::WidgetClass' has a wrong offset!");
-static_assert(offsetof(S6UI_WidgetPoolManager_ProvisionPool, TotalSizeOfWidgetsProvisioned) == 0x000038, "Member 'S6UI_WidgetPoolManager_ProvisionPool::TotalSizeOfWidgetsProvisioned' has a wrong offset!");
+static_assert(offsetof(S6UI_WidgetPoolManager_ProvisionPool, TotalSizeOfWidgetsProvisioned) == 0x000030, "Member 'S6UI_WidgetPoolManager_ProvisionPool::TotalSizeOfWidgetsProvisioned' has a wrong offset!");
 
 // Function S6UICore.S6UI_WidgetPoolManager.ReturnWidgetToPool
 // 0x0008 (0x0008 - 0x0000)

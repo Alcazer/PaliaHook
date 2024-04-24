@@ -40,12 +40,12 @@ static_assert(sizeof(US6EnhancedInputCustomPriorities) == 0x000040, "Wrong size 
 static_assert(offsetof(US6EnhancedInputCustomPriorities, PreconfiguredInputMappingConfigs) == 0x000030, "Member 'US6EnhancedInputCustomPriorities::PreconfiguredInputMappingConfigs' has a wrong offset!");
 
 // Class S6EnhancedInputExtended.S6EnhancedInputExtendedSubsystem
-// 0x0058 (0x0240 - 0x01E8)
+// 0x0058 (0x0248 - 0x01F0)
 class US6EnhancedInputExtendedSubsystem : public UEnhancedInputLocalPlayerSubsystem
 {
 public:
-	TMap<class UInputMappingContext*, class UInputMappingContext*> PlatformContextRedirects;                          // 0x01E8(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_17F2[0x8];                                     // 0x0238(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class UInputMappingContext*, class UInputMappingContext*> PlatformContextRedirects;                          // 0x01F0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1D34[0x8];                                     // 0x0240(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddMappingContextByType(struct FInputMappingPriorityData& InputMappingPriorityData, struct FModifyContextOptions& Options);
@@ -62,15 +62,15 @@ public:
 	}
 };
 static_assert(alignof(US6EnhancedInputExtendedSubsystem) == 0x000008, "Wrong alignment on US6EnhancedInputExtendedSubsystem");
-static_assert(sizeof(US6EnhancedInputExtendedSubsystem) == 0x000240, "Wrong size on US6EnhancedInputExtendedSubsystem");
-static_assert(offsetof(US6EnhancedInputExtendedSubsystem, PlatformContextRedirects) == 0x0001E8, "Member 'US6EnhancedInputExtendedSubsystem::PlatformContextRedirects' has a wrong offset!");
+static_assert(sizeof(US6EnhancedInputExtendedSubsystem) == 0x000248, "Wrong size on US6EnhancedInputExtendedSubsystem");
+static_assert(offsetof(US6EnhancedInputExtendedSubsystem, PlatformContextRedirects) == 0x0001F0, "Member 'US6EnhancedInputExtendedSubsystem::PlatformContextRedirects' has a wrong offset!");
 
 // Class S6EnhancedInputExtended.S6EnhancedPlayerInput
-// 0x0028 (0x0768 - 0x0740)
+// 0x0028 (0x0818 - 0x07F0)
 class US6EnhancedPlayerInput final  : public UEnhancedPlayerInput
 {
 public:
-	uint8                                         Pad_17F5[0x28];                                    // 0x0740(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D37[0x28];                                    // 0x07F0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -83,7 +83,7 @@ public:
 	}
 };
 static_assert(alignof(US6EnhancedPlayerInput) == 0x000008, "Wrong alignment on US6EnhancedPlayerInput");
-static_assert(sizeof(US6EnhancedPlayerInput) == 0x000768, "Wrong size on US6EnhancedPlayerInput");
+static_assert(sizeof(US6EnhancedPlayerInput) == 0x000818, "Wrong size on US6EnhancedPlayerInput");
 
 }
 

@@ -10,42 +10,74 @@
 
 #include "Basic.hpp"
 
-#include "LevelSequence_structs.hpp"
-#include "MovieScene_structs.hpp"
-#include "MovieScene_classes.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "UMG_classes.hpp"
+#include "LevelSequence_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
+#include "MovieScene_structs.hpp"
+#include "MovieScene_classes.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
 {
 
-// Class LevelSequence.LevelSequenceBurnInInitSettings
-// 0x0000 (0x0028 - 0x0028)
-class ULevelSequenceBurnInInitSettings final  : public UObject
+// Class LevelSequence.DefaultLevelSequenceInstanceData
+// 0x0078 (0x00A0 - 0x0028)
+class UDefaultLevelSequenceInstanceData final  : public UObject
 {
+public:
+	uint8                                         Pad_18E4[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 TransformOriginActor;                              // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18E5[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LevelSequenceBurnInInitSettings">();
+		return StaticClassImpl<"DefaultLevelSequenceInstanceData">();
 	}
-	static class ULevelSequenceBurnInInitSettings* GetDefaultObj()
+	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULevelSequenceBurnInInitSettings>();
+		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
 	}
 };
-static_assert(alignof(ULevelSequenceBurnInInitSettings) == 0x000008, "Wrong alignment on ULevelSequenceBurnInInitSettings");
-static_assert(sizeof(ULevelSequenceBurnInInitSettings) == 0x000028, "Wrong size on ULevelSequenceBurnInInitSettings");
+static_assert(alignof(UDefaultLevelSequenceInstanceData) == 0x000010, "Wrong alignment on UDefaultLevelSequenceInstanceData");
+static_assert(sizeof(UDefaultLevelSequenceInstanceData) == 0x0000A0, "Wrong size on UDefaultLevelSequenceInstanceData");
+static_assert(offsetof(UDefaultLevelSequenceInstanceData, TransformOriginActor) == 0x000030, "Member 'UDefaultLevelSequenceInstanceData::TransformOriginActor' has a wrong offset!");
+static_assert(offsetof(UDefaultLevelSequenceInstanceData, TransformOrigin) == 0x000040, "Member 'UDefaultLevelSequenceInstanceData::TransformOrigin' has a wrong offset!");
+
+// Class LevelSequence.AnimSequenceLevelSequenceLink
+// 0x0030 (0x0058 - 0x0028)
+class UAnimSequenceLevelSequenceLink final  : public UAssetUserData
+{
+public:
+	struct FGuid                                  SkelTrackGuid;                                     // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSoftObjectPath                        PathToLevelSequence;                               // 0x0038(0x0020)(BlueprintVisible, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimSequenceLevelSequenceLink">();
+	}
+	static class UAnimSequenceLevelSequenceLink* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequenceLevelSequenceLink>();
+	}
+};
+static_assert(alignof(UAnimSequenceLevelSequenceLink) == 0x000008, "Wrong alignment on UAnimSequenceLevelSequenceLink");
+static_assert(sizeof(UAnimSequenceLevelSequenceLink) == 0x000058, "Wrong size on UAnimSequenceLevelSequenceLink");
+static_assert(offsetof(UAnimSequenceLevelSequenceLink, SkelTrackGuid) == 0x000028, "Member 'UAnimSequenceLevelSequenceLink::SkelTrackGuid' has a wrong offset!");
+static_assert(offsetof(UAnimSequenceLevelSequenceLink, PathToLevelSequence) == 0x000038, "Member 'UAnimSequenceLevelSequenceLink::PathToLevelSequence' has a wrong offset!");
 
 // Class LevelSequence.LevelSequence
 // 0x01B8 (0x0220 - 0x0068)
-class ULevelSequence : public UMovieSceneSequence
+class ULevelSequence final  : public UMovieSceneSequence
 {
 public:
-	uint8                                         Pad_2378[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18E6[0x8];                                     // 0x0068(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMovieScene*                            MovieScene;                                        // 0x0070(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLevelSequenceObjectReferenceMap       ObjectReferences;                                  // 0x0078(0x0050)(Protected, NativeAccessSpecifierProtected)
 	struct FLevelSequenceBindingReferences        BindingReferences;                                 // 0x00C8(0x00F0)(Protected, NativeAccessSpecifierProtected)
@@ -79,93 +111,22 @@ static_assert(offsetof(ULevelSequence, PossessedObjects) == 0x0001B8, "Member 'U
 static_assert(offsetof(ULevelSequence, DirectorClass) == 0x000208, "Member 'ULevelSequence::DirectorClass' has a wrong offset!");
 static_assert(offsetof(ULevelSequence, AssetUserData) == 0x000210, "Member 'ULevelSequence::AssetUserData' has a wrong offset!");
 
-// Class LevelSequence.AnimSequenceLevelSequenceLink
-// 0x0030 (0x0058 - 0x0028)
-class UAnimSequenceLevelSequenceLink final  : public UAssetUserData
+// Class LevelSequence.LevelSequenceBurnInInitSettings
+// 0x0000 (0x0028 - 0x0028)
+class ULevelSequenceBurnInInitSettings final  : public UObject
 {
-public:
-	struct FGuid                                  SkelTrackGuid;                                     // 0x0028(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSoftObjectPath                        PathToLevelSequence;                               // 0x0038(0x0020)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimSequenceLevelSequenceLink">();
+		return StaticClassImpl<"LevelSequenceBurnInInitSettings">();
 	}
-	static class UAnimSequenceLevelSequenceLink* GetDefaultObj()
+	static class ULevelSequenceBurnInInitSettings* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAnimSequenceLevelSequenceLink>();
+		return GetDefaultObjImpl<ULevelSequenceBurnInInitSettings>();
 	}
 };
-static_assert(alignof(UAnimSequenceLevelSequenceLink) == 0x000008, "Wrong alignment on UAnimSequenceLevelSequenceLink");
-static_assert(sizeof(UAnimSequenceLevelSequenceLink) == 0x000058, "Wrong size on UAnimSequenceLevelSequenceLink");
-static_assert(offsetof(UAnimSequenceLevelSequenceLink, SkelTrackGuid) == 0x000028, "Member 'UAnimSequenceLevelSequenceLink::SkelTrackGuid' has a wrong offset!");
-static_assert(offsetof(UAnimSequenceLevelSequenceLink, PathToLevelSequence) == 0x000038, "Member 'UAnimSequenceLevelSequenceLink::PathToLevelSequence' has a wrong offset!");
-
-// Class LevelSequence.LevelSequenceActor
-// 0x0078 (0x0318 - 0x02A0)
-class ALevelSequenceActor : public AActor
-{
-public:
-	uint8                                         Pad_2379[0x10];                                    // 0x02A0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02B0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	class ULevelSequencePlayer*                   SequencePlayer;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequence*                         LevelSequenceAsset;                                // 0x02D8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLevelSequenceCameraSettings           CameraSettings;                                    // 0x02E0(0x0002)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
-	uint8                                         Pad_237A[0x6];                                     // 0x02E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class ULevelSequenceBurnInOptions*            BurnInOptions;                                     // 0x02E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x02F0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bAutoPlay : 1;                                     // 0x02F8(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bOverrideInstanceData : 1;                         // 0x02F8(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         bReplicatePlayback : 1;                            // 0x02F8(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_237B[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                DefaultInstanceData;                               // 0x0300(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class ULevelSequenceBurnIn*                   BurnInInstance;                                    // 0x0308(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	bool                                          bShowBurnin;                                       // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_237C[0x7];                                     // 0x0311(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
-	void AddBindingByTag(class FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);
-	void HideBurnin();
-	void OnLevelSequenceLoaded__DelegateSignature();
-	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
-	void RemoveBindingByTag(class FName Tag, class AActor* Actor);
-	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
-	void ResetBindings();
-	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
-	void SetBindingByTag(class FName BindingTag, TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
-	void SetReplicatePlayback(bool ReplicatePlayback);
-	void SetSequence(class ULevelSequence* InSequence);
-	void ShowBurnin();
-
-	struct FMovieSceneObjectBindingID FindNamedBinding(class FName Tag) const;
-	const TArray<struct FMovieSceneObjectBindingID> FindNamedBindings(class FName Tag) const;
-	class ULevelSequence* GetSequence() const;
-	class ULevelSequencePlayer* GetSequencePlayer() const;
-	class ULevelSequence* LoadSequence() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LevelSequenceActor">();
-	}
-	static class ALevelSequenceActor* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ALevelSequenceActor>();
-	}
-};
-static_assert(alignof(ALevelSequenceActor) == 0x000008, "Wrong alignment on ALevelSequenceActor");
-static_assert(sizeof(ALevelSequenceActor) == 0x000318, "Wrong size on ALevelSequenceActor");
-static_assert(offsetof(ALevelSequenceActor, PlaybackSettings) == 0x0002B0, "Member 'ALevelSequenceActor::PlaybackSettings' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, SequencePlayer) == 0x0002D0, "Member 'ALevelSequenceActor::SequencePlayer' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, LevelSequenceAsset) == 0x0002D8, "Member 'ALevelSequenceActor::LevelSequenceAsset' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, CameraSettings) == 0x0002E0, "Member 'ALevelSequenceActor::CameraSettings' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, BurnInOptions) == 0x0002E8, "Member 'ALevelSequenceActor::BurnInOptions' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, BindingOverrides) == 0x0002F0, "Member 'ALevelSequenceActor::BindingOverrides' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, DefaultInstanceData) == 0x000300, "Member 'ALevelSequenceActor::DefaultInstanceData' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, BurnInInstance) == 0x000308, "Member 'ALevelSequenceActor::BurnInInstance' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceActor, bShowBurnin) == 0x000310, "Member 'ALevelSequenceActor::bShowBurnin' has a wrong offset!");
+static_assert(alignof(ULevelSequenceBurnInInitSettings) == 0x000008, "Wrong alignment on ULevelSequenceBurnInInitSettings");
+static_assert(sizeof(ULevelSequenceBurnInInitSettings) == 0x000028, "Wrong size on ULevelSequenceBurnInInitSettings");
 
 // Class LevelSequence.LevelSequenceBurnInOptions
 // 0x0030 (0x0058 - 0x0028)
@@ -173,7 +134,7 @@ class ULevelSequenceBurnInOptions final  : public UObject
 {
 public:
 	bool                                          bUseBurnIn;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2381[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18E7[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftClassPath                         BurnInClass;                                       // 0x0030(0x0020)(Edit, BlueprintVisible, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULevelSequenceBurnInInitSettings*       Settings;                                          // 0x0050(0x0008)(Edit, BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -196,77 +157,74 @@ static_assert(offsetof(ULevelSequenceBurnInOptions, bUseBurnIn) == 0x000028, "Me
 static_assert(offsetof(ULevelSequenceBurnInOptions, BurnInClass) == 0x000030, "Member 'ULevelSequenceBurnInOptions::BurnInClass' has a wrong offset!");
 static_assert(offsetof(ULevelSequenceBurnInOptions, Settings) == 0x000050, "Member 'ULevelSequenceBurnInOptions::Settings' has a wrong offset!");
 
-// Class LevelSequence.LevelSequencePlayer
-// 0x0110 (0x05C0 - 0x04B0)
-class ULevelSequencePlayer : public UMovieSceneSequencePlayer
+// Class LevelSequence.LevelSequenceActor
+// 0x00A0 (0x0348 - 0x02A8)
+class ALevelSequenceActor : public AActor
 {
 public:
-	FMulticastInlineDelegateProperty_             OnCameraCut;                                       // 0x04B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2382[0x100];                                   // 0x04C0(0x0100)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18E8[0x18];                                    // 0x02A8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMovieSceneSequencePlaybackSettings    PlaybackSettings;                                  // 0x02C0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	class ULevelSequencePlayer*                   SequencePlayer;                                    // 0x02E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, Net, ZeroConstructor, Transient, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequence*                         LevelSequenceAsset;                                // 0x02E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLevelSequenceCameraSettings           CameraSettings;                                    // 0x02F0(0x0002)(Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18E9[0x6];                                     // 0x02F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class ULevelSequenceBurnInOptions*            BurnInOptions;                                     // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMovieSceneBindingOverrides*            BindingOverrides;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bAutoPlay : 1;                                     // 0x0308(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bOverrideInstanceData : 1;                         // 0x0308(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bReplicatePlayback : 1;                            // 0x0308(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_18EA[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                DefaultInstanceData;                               // 0x0310(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, PersistentInstance, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class ULevelSequenceBurnIn*                   BurnInInstance;                                    // 0x0318(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	bool                                          bShowBurnin;                                       // 0x0320(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_18EB[0x7];                                     // 0x0321(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWorldPartitionResolveData             WorldPartitionResolveData;                         // 0x0328(0x0020)(NativeAccessSpecifierPrivate)
 
 public:
-	static class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
+	void AddBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor, bool bAllowBindingsFromAsset);
+	void AddBindingByTag(class FName BindingTag, class AActor* Actor, bool bAllowBindingsFromAsset);
+	void HideBurnin();
+	void OnLevelSequenceLoaded__DelegateSignature();
+	void RemoveBinding(const struct FMovieSceneObjectBindingID& Binding, class AActor* Actor);
+	void RemoveBindingByTag(class FName Tag, class AActor* Actor);
+	void ResetBinding(const struct FMovieSceneObjectBindingID& Binding);
+	void ResetBindings();
+	void SetBinding(const struct FMovieSceneObjectBindingID& Binding, TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
+	void SetBindingByTag(class FName BindingTag, TArray<class AActor*>& Actors, bool bAllowBindingsFromAsset);
+	void SetReplicatePlayback(bool ReplicatePlayback);
+	void SetSequence(class ULevelSequence* InSequence);
+	void ShowBurnin();
 
-	class UCameraComponent* GetActiveCameraComponent() const;
+	struct FMovieSceneObjectBindingID FindNamedBinding(class FName Tag) const;
+	const TArray<struct FMovieSceneObjectBindingID> FindNamedBindings(class FName Tag) const;
+	class ULevelSequence* GetSequence() const;
+	class ULevelSequencePlayer* GetSequencePlayer() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"LevelSequencePlayer">();
+		return StaticClassImpl<"LevelSequenceActor">();
 	}
-	static class ULevelSequencePlayer* GetDefaultObj()
+	static class ALevelSequenceActor* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<ULevelSequencePlayer>();
+		return GetDefaultObjImpl<ALevelSequenceActor>();
 	}
 };
-static_assert(alignof(ULevelSequencePlayer) == 0x000008, "Wrong alignment on ULevelSequencePlayer");
-static_assert(sizeof(ULevelSequencePlayer) == 0x0005C0, "Wrong size on ULevelSequencePlayer");
-static_assert(offsetof(ULevelSequencePlayer, OnCameraCut) == 0x0004B0, "Member 'ULevelSequencePlayer::OnCameraCut' has a wrong offset!");
-
-// Class LevelSequence.DefaultLevelSequenceInstanceData
-// 0x0078 (0x00A0 - 0x0028)
-class UDefaultLevelSequenceInstanceData final  : public UObject
-{
-public:
-	uint8                                         Pad_2383[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 TransformOriginActor;                              // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2384[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             TransformOrigin;                                   // 0x0040(0x0060)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"DefaultLevelSequenceInstanceData">();
-	}
-	static class UDefaultLevelSequenceInstanceData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UDefaultLevelSequenceInstanceData>();
-	}
-};
-static_assert(alignof(UDefaultLevelSequenceInstanceData) == 0x000010, "Wrong alignment on UDefaultLevelSequenceInstanceData");
-static_assert(sizeof(UDefaultLevelSequenceInstanceData) == 0x0000A0, "Wrong size on UDefaultLevelSequenceInstanceData");
-static_assert(offsetof(UDefaultLevelSequenceInstanceData, TransformOriginActor) == 0x000030, "Member 'UDefaultLevelSequenceInstanceData::TransformOriginActor' has a wrong offset!");
-static_assert(offsetof(UDefaultLevelSequenceInstanceData, TransformOrigin) == 0x000040, "Member 'UDefaultLevelSequenceInstanceData::TransformOrigin' has a wrong offset!");
-
-// Class LevelSequence.LevelSequenceMetaData
-// 0x0000 (0x0028 - 0x0028)
-class ILevelSequenceMetaData final  : public IInterface
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LevelSequenceMetaData">();
-	}
-	static class ILevelSequenceMetaData* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ILevelSequenceMetaData>();
-	}
-};
-static_assert(alignof(ILevelSequenceMetaData) == 0x000008, "Wrong alignment on ILevelSequenceMetaData");
-static_assert(sizeof(ILevelSequenceMetaData) == 0x000028, "Wrong size on ILevelSequenceMetaData");
+static_assert(alignof(ALevelSequenceActor) == 0x000008, "Wrong alignment on ALevelSequenceActor");
+static_assert(sizeof(ALevelSequenceActor) == 0x000348, "Wrong size on ALevelSequenceActor");
+static_assert(offsetof(ALevelSequenceActor, PlaybackSettings) == 0x0002C0, "Member 'ALevelSequenceActor::PlaybackSettings' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, SequencePlayer) == 0x0002E0, "Member 'ALevelSequenceActor::SequencePlayer' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, LevelSequenceAsset) == 0x0002E8, "Member 'ALevelSequenceActor::LevelSequenceAsset' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, CameraSettings) == 0x0002F0, "Member 'ALevelSequenceActor::CameraSettings' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, BurnInOptions) == 0x0002F8, "Member 'ALevelSequenceActor::BurnInOptions' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, BindingOverrides) == 0x000300, "Member 'ALevelSequenceActor::BindingOverrides' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, DefaultInstanceData) == 0x000310, "Member 'ALevelSequenceActor::DefaultInstanceData' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, BurnInInstance) == 0x000318, "Member 'ALevelSequenceActor::BurnInInstance' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, bShowBurnin) == 0x000320, "Member 'ALevelSequenceActor::bShowBurnin' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceActor, WorldPartitionResolveData) == 0x000328, "Member 'ALevelSequenceActor::WorldPartitionResolveData' has a wrong offset!");
 
 // Class LevelSequence.ReplicatedLevelSequenceActor
-// 0x0000 (0x0318 - 0x0318)
+// 0x0000 (0x0348 - 0x0348)
 class AReplicatedLevelSequenceActor final  : public ALevelSequenceActor
 {
 public:
@@ -280,7 +238,7 @@ public:
 	}
 };
 static_assert(alignof(AReplicatedLevelSequenceActor) == 0x000008, "Wrong alignment on AReplicatedLevelSequenceActor");
-static_assert(sizeof(AReplicatedLevelSequenceActor) == 0x000318, "Wrong size on AReplicatedLevelSequenceActor");
+static_assert(sizeof(AReplicatedLevelSequenceActor) == 0x000348, "Wrong size on AReplicatedLevelSequenceActor");
 
 // Class LevelSequence.LevelSequenceAnimSequenceLink
 // 0x0010 (0x0038 - 0x0028)
@@ -304,12 +262,12 @@ static_assert(sizeof(ULevelSequenceAnimSequenceLink) == 0x000038, "Wrong size on
 static_assert(offsetof(ULevelSequenceAnimSequenceLink, AnimSequenceLinks) == 0x000028, "Member 'ULevelSequenceAnimSequenceLink::AnimSequenceLinks' has a wrong offset!");
 
 // Class LevelSequence.LevelSequenceBurnIn
-// 0x00B8 (0x0330 - 0x0278)
+// 0x00D0 (0x0390 - 0x02C0)
 class ULevelSequenceBurnIn final  : public UUserWidget
 {
 public:
-	struct FLevelSequencePlayerSnapshot           FrameInformation;                                  // 0x0278(0x00B0)(BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class ALevelSequenceActor*                    LevelSequenceActor;                                // 0x0328(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FLevelSequencePlayerSnapshot           FrameInformation;                                  // 0x02C0(0x00C8)(BlueprintVisible, BlueprintReadOnly, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class ALevelSequenceActor*                    LevelSequenceActor;                                // 0x0388(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void SetSettings(class UObject* InSettings);
@@ -327,9 +285,9 @@ public:
 	}
 };
 static_assert(alignof(ULevelSequenceBurnIn) == 0x000008, "Wrong alignment on ULevelSequenceBurnIn");
-static_assert(sizeof(ULevelSequenceBurnIn) == 0x000330, "Wrong size on ULevelSequenceBurnIn");
-static_assert(offsetof(ULevelSequenceBurnIn, FrameInformation) == 0x000278, "Member 'ULevelSequenceBurnIn::FrameInformation' has a wrong offset!");
-static_assert(offsetof(ULevelSequenceBurnIn, LevelSequenceActor) == 0x000328, "Member 'ULevelSequenceBurnIn::LevelSequenceActor' has a wrong offset!");
+static_assert(sizeof(ULevelSequenceBurnIn) == 0x000390, "Wrong size on ULevelSequenceBurnIn");
+static_assert(offsetof(ULevelSequenceBurnIn, FrameInformation) == 0x0002C0, "Member 'ULevelSequenceBurnIn::FrameInformation' has a wrong offset!");
+static_assert(offsetof(ULevelSequenceBurnIn, LevelSequenceActor) == 0x000388, "Member 'ULevelSequenceBurnIn::LevelSequenceActor' has a wrong offset!");
 
 // Class LevelSequence.LevelSequenceDirector
 // 0x0010 (0x0038 - 0x0028)
@@ -350,6 +308,7 @@ public:
 
 	struct FQualifiedFrameTime GetCurrentTime() const;
 	struct FQualifiedFrameTime GetMasterSequenceTime() const;
+	struct FQualifiedFrameTime GetRootSequenceTime() const;
 
 public:
 	static class UClass* StaticClass()
@@ -384,18 +343,45 @@ public:
 static_assert(alignof(ULegacyLevelSequenceDirectorBlueprint) == 0x000008, "Wrong alignment on ULegacyLevelSequenceDirectorBlueprint");
 static_assert(sizeof(ULegacyLevelSequenceDirectorBlueprint) == 0x0000A8, "Wrong size on ULegacyLevelSequenceDirectorBlueprint");
 
+// Class LevelSequence.LevelSequencePlayer
+// 0x0140 (0x0610 - 0x04D0)
+class ULevelSequencePlayer : public UMovieSceneSequencePlayer
+{
+public:
+	FMulticastInlineDelegateProperty_             OnCameraCut;                                       // 0x04D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_18F0[0x130];                                   // 0x04E0(0x0130)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class ULevelSequencePlayer* CreateLevelSequencePlayer(class UObject* WorldContextObject, class ULevelSequence* LevelSequence, const struct FMovieSceneSequencePlaybackSettings& Settings, class ALevelSequenceActor** OutActor);
+
+	class UCameraComponent* GetActiveCameraComponent() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LevelSequencePlayer">();
+	}
+	static class ULevelSequencePlayer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULevelSequencePlayer>();
+	}
+};
+static_assert(alignof(ULevelSequencePlayer) == 0x000008, "Wrong alignment on ULevelSequencePlayer");
+static_assert(sizeof(ULevelSequencePlayer) == 0x000610, "Wrong size on ULevelSequencePlayer");
+static_assert(offsetof(ULevelSequencePlayer, OnCameraCut) == 0x0004D0, "Member 'ULevelSequencePlayer::OnCameraCut' has a wrong offset!");
+
 // Class LevelSequence.LevelSequenceProjectSettings
 // 0x0050 (0x0088 - 0x0038)
 class ULevelSequenceProjectSettings final  : public UDeveloperSettings
 {
 public:
 	bool                                          bDefaultLockEngineToDisplayRate;                   // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2385[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18F1[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 DefaultDisplayRate;                                // 0x0040(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DefaultTickResolution;                             // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EUpdateClockSource                            DefaultClockSource;                                // 0x0060(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceUseDefaultCustomClockSource;                 // 0x0061(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2386[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18F2[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSoftObjectPath                        DefaultCustomClockSource;                          // 0x0068(0x0020)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -418,15 +404,15 @@ static_assert(offsetof(ULevelSequenceProjectSettings, bForceUseDefaultCustomCloc
 static_assert(offsetof(ULevelSequenceProjectSettings, DefaultCustomClockSource) == 0x000068, "Member 'ULevelSequenceProjectSettings::DefaultCustomClockSource' has a wrong offset!");
 
 // Class LevelSequence.LevelSequenceMediaController
-// 0x0028 (0x02C8 - 0x02A0)
+// 0x0028 (0x02D0 - 0x02A8)
 class ALevelSequenceMediaController final  : public AActor
 {
 public:
-	uint8                                         Pad_2387[0x8];                                     // 0x02A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class ALevelSequenceActor*                    Sequence;                                          // 0x02A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UMediaComponent*                        MediaComponent;                                    // 0x02B0(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ServerStartTimeSeconds;                            // 0x02B8(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2388[0xC];                                     // 0x02BC(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18F3[0x8];                                     // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class ALevelSequenceActor*                    Sequence;                                          // 0x02B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UMediaComponent*                        MediaComponent;                                    // 0x02B8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ServerStartTimeSeconds;                            // 0x02C0(0x0004)(BlueprintVisible, BlueprintReadOnly, Net, ZeroConstructor, IsPlainOldData, RepNotify, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_18F4[0xC];                                     // 0x02C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnRep_ServerStartTimeSeconds();
@@ -447,10 +433,10 @@ public:
 	}
 };
 static_assert(alignof(ALevelSequenceMediaController) == 0x000008, "Wrong alignment on ALevelSequenceMediaController");
-static_assert(sizeof(ALevelSequenceMediaController) == 0x0002C8, "Wrong size on ALevelSequenceMediaController");
-static_assert(offsetof(ALevelSequenceMediaController, Sequence) == 0x0002A8, "Member 'ALevelSequenceMediaController::Sequence' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceMediaController, MediaComponent) == 0x0002B0, "Member 'ALevelSequenceMediaController::MediaComponent' has a wrong offset!");
-static_assert(offsetof(ALevelSequenceMediaController, ServerStartTimeSeconds) == 0x0002B8, "Member 'ALevelSequenceMediaController::ServerStartTimeSeconds' has a wrong offset!");
+static_assert(sizeof(ALevelSequenceMediaController) == 0x0002D0, "Wrong size on ALevelSequenceMediaController");
+static_assert(offsetof(ALevelSequenceMediaController, Sequence) == 0x0002B0, "Member 'ALevelSequenceMediaController::Sequence' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceMediaController, MediaComponent) == 0x0002B8, "Member 'ALevelSequenceMediaController::MediaComponent' has a wrong offset!");
+static_assert(offsetof(ALevelSequenceMediaController, ServerStartTimeSeconds) == 0x0002C0, "Member 'ALevelSequenceMediaController::ServerStartTimeSeconds' has a wrong offset!");
 
 }
 

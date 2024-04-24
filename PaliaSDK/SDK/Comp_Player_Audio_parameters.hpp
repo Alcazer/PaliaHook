@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Physmat_structs.hpp"
 #include "Palia_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
+#include "Struct_Physmat_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Engine_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -56,15 +56,15 @@ static_assert(sizeof(Comp_Player_Audio_C_ClimbOutro) == 0x000018, "Wrong size on
 static_assert(offsetof(Comp_Player_Audio_C_ClimbOutro, Location) == 0x000000, "Member 'Comp_Player_Audio_C_ClimbOutro::Location' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.EquippedItemChanged
-// 0x0060 (0x0060 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct Comp_Player_Audio_C_EquippedItemChanged final 
 {
 public:
 	class UEquipmentComponent*                    Param_EquipmentComponent;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FEquipmentItem                         Param_Item;                                        // 0x0008(0x0058)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FEquipmentItem                         Param_Item;                                        // 0x0008(0x0050)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(Comp_Player_Audio_C_EquippedItemChanged) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_EquippedItemChanged");
-static_assert(sizeof(Comp_Player_Audio_C_EquippedItemChanged) == 0x000060, "Wrong size on Comp_Player_Audio_C_EquippedItemChanged");
+static_assert(sizeof(Comp_Player_Audio_C_EquippedItemChanged) == 0x000058, "Wrong size on Comp_Player_Audio_C_EquippedItemChanged");
 static_assert(offsetof(Comp_Player_Audio_C_EquippedItemChanged, Param_EquipmentComponent) == 0x000000, "Member 'Comp_Player_Audio_C_EquippedItemChanged::Param_EquipmentComponent' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_EquippedItemChanged, Param_Item) == 0x000008, "Member 'Comp_Player_Audio_C_EquippedItemChanged::Param_Item' has a wrong offset!");
 
@@ -82,373 +82,373 @@ static_assert(offsetof(Comp_Player_Audio_C_EquippedItemVisibilityChanged, Param_
 static_assert(offsetof(Comp_Player_Audio_C_EquippedItemVisibilityChanged, bNewVisibility) == 0x000008, "Member 'Comp_Player_Audio_C_EquippedItemVisibilityChanged::bNewVisibility' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.ExecuteUbergraph_Comp_Player_Audio
-// 0x0678 (0x0678 - 0x0000)
+// 0x0650 (0x0650 - 0x0000)
 struct Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio final 
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41EB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FValeriaItem                           K2Node_CustomEvent_Item_1;                         // 0x0008(0x0068)()
-	int32                                         CallFunc_AkEventActor_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41EC[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41ED[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AkEventActor_ReturnValue_1;               // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x008D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41EE[0x2];                                     // 0x008E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(const struct FValeriaItem& Item)> K2Node_CreateDelegate_OutputDelegate;              // 0x0090(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FValeriaItem& Item)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41EF[0x6];                                     // 0x00B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEquipmentComponent*                    K2Node_CustomEvent_EquipmentComponent_1;           // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FEquipmentItem                         K2Node_CustomEvent_Item;                           // 0x00C0(0x0058)()
-	TDelegate<void(class UEquipmentComponent* EquipmentComponent, const struct FEquipmentItem& Item)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0118(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UEquipmentComponent*                    K2Node_CustomEvent_EquipmentComponent;             // 0x0128(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_bNewVisibility;                 // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F0[0x3];                                     // 0x0131(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class UEquipmentComponent* EquipmentComponent, bool bHidden)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0134(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UEquipmentComponent* EquipmentComponent, const struct FEquipmentItem& Item)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0144(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class UEquipmentComponent* EquipmentComponent, bool bHidden)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0154(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0164(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F1[0x3];                                     // 0x0165(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEquipmentItem                         CallFunc_GetEquippedItem_ReturnValue;              // 0x0168(0x0058)()
-	class AEquipViewActor*                        CallFunc_Array_Get_Item;                           // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x01C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue; // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F2[0x6];                                     // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1; // 0x01E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01F1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F3[0x6];                                     // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEquipmentComponent*                    CallFunc_GetEquipment_ReturnValue;                 // 0x01F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F4[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AValeriaMoveablePawn* Pawn, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x0210(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventActor_ReturnValue_2;               // 0x0220(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F5[0x4];                                     // 0x0224(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x0240(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0244(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0248(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventActor_ReturnValue_3;               // 0x024C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AValeriaMoveablePawn*                   K2Node_CustomEvent_Pawn;                           // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EMovementMode                                 K2Node_CustomEvent_PrevMovementMode;               // 0x0258(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         K2Node_CustomEvent_PreviousCustomMode;             // 0x0259(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x025A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F6[0x5];                                     // 0x025B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Find_Distance_to_Ground_Hit;              // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F7[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Find_Distance_to_Ground_Distance;         // 0x0280(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x0290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F8[0x7];                                     // 0x0291(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_1;                // 0x0298(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_X;                            // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x02C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue_1;                      // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x02E8(0x0008)(NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue_1;                // 0x02F0(0x0008)(NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isGliding;                      // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41F9[0x3];                                     // 0x02F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AkEventActor_ReturnValue_4;               // 0x02FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventActor_ReturnValue_5;               // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isClimbing_1;                   // 0x0304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_IsClosed_Variable_2;                     // 0x0305(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FA[0x2];                                     // 0x0306(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaCharacterMoveComponent*         K2Node_DynamicCast_AsValeria_Character_Move_Component; // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0310(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isClimbing;                     // 0x0311(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EValeriaClimbDashDirection                    K2Node_CustomEvent_direction;                      // 0x0312(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FB[0x5];                                     // 0x0313(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_CustomEvent_Location;                       // 0x0318(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0331(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FC[0x2];                                     // 0x0332(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsGliding)>               K2Node_CreateDelegate_OutputDelegate_7;            // 0x0334(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable; // 0x0344(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FD[0x3];                                     // 0x0345(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AkEventActor_ReturnValue_6;               // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FE[0x3];                                     // 0x0351(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0354(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         K2Node_CustomEvent_DeltaSeconds;                   // 0x0358(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41FF[0x4];                                     // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                K2Node_CustomEvent_OldLocation;                    // 0x0360(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                K2Node_CustomEvent_OldVelocity;                    // 0x0378(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AValeriaCharacter*                      K2Node_CustomEvent_Character;                      // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_isSprinting;                    // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4200[0x3];                                     // 0x0399(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AkEventActor_ReturnValue_7;               // 0x039C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventActor_ReturnValue_8;               // 0x03A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4201[0x4];                                     // 0x03A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetVelocity_ReturnValue_2;                // 0x03A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x03C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4202[0x7];                                     // 0x03C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_VSize_ReturnValue_2;                      // 0x03C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4203[0x6];                                     // 0x03D2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2; // 0x03D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Find_Distance_to_Ground_Hit_1;            // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4204[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Find_Distance_to_Ground_Distance_1;       // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(class AValeriaMoveablePawn* Pawn, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x03F0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsGliding)>               K2Node_CreateDelegate_OutputDelegate_9;            // 0x0400(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsClimbing)>              K2Node_CreateDelegate_OutputDelegate_10;           // 0x0410(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsClimbing, EValeriaClimbDashDirection Direction)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x0420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FVector& Location)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0430(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0440(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4205[0x7];                                     // 0x0451(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UEquipmentComponent*                    CallFunc_GetEquipment_ReturnValue_1;               // 0x0458(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4206[0x3];                                     // 0x0461(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AValeriaCharacter* Character, bool IsSprinting)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x0464(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Has_Been_Initd_Variable_2;               // 0x0474(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x0475(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_1;      // 0x0476(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0477(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0478(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4207[0x7];                                     // 0x0479(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3; // 0x0480(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsSprinting_ReturnValue;                  // 0x0488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0489(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4208[0x6];                                     // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaCharacterMoveComponent*         K2Node_DynamicCast_AsValeria_Character_Move_Component_1; // 0x0490(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0499(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4209[0x6];                                     // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4; // 0x04A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          CallFunc_GetGliderLoop_Output;                     // 0x04A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventActor_ReturnValue_9;               // 0x04B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420A[0x4];                                     // 0x04B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x04B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x04C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420B[0x7];                                     // 0x04C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character;            // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x04D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420C[0x2];                                     // 0x04D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x04D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_Actor;                          // 0x04D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_CustomEvent_WasDamaged;                     // 0x04E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420D[0x7];                                     // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> K2Node_CustomEvent_ItemType;                       // 0x04E8(0x0030)(HasGetValueTypeHash)
-	class AActor*                                 K2Node_CustomEvent_Instigator;                     // 0x0518(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FValeriaItem                           CallFunc_Array_Get_Item_1;                         // 0x0520(0x0068)()
-	class ABP_ValeriaGatherableLoot_C*            K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot;   // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0590(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420E[0x7];                                     // 0x0591(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0598(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition;         // 0x05A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x05A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x05A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_420F[0x6];                                     // 0x05AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition_1;       // 0x05B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x05C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x05C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4210[0x6];                                     // 0x05C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FItemAudioConfig                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x05C8(0x0038)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0600(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x0601(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x0602(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4211[0x1];                                     // 0x0603(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_AkEventActor_ReturnValue_10;              // 0x0604(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x0608(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4212[0x3];                                     // 0x0609(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(class AValeriaCharacter* Character, bool IsSprinting)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x060C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x061C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(const struct FVector& Location)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x062C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(bool IsClimbing, EValeriaClimbDashDirection Direction)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x063C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x064C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x064D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x064E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4213[0x1];                                     // 0x064F(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(bool IsClimbing)>              K2Node_CreateDelegate_OutputDelegate_19;           // 0x0650(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0661(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4214[0x2];                                     // 0x0662(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_RetriggerableDelay_Duration_ImplicitCast; // 0x0664(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        K2Node_VariableSet_NewRotationYaw_ImplicitCast;    // 0x0668(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0670(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast_1;          // 0x0674(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FValeriaItem                           K2Node_CustomEvent_Item_1;                         // 0x0008(0x0060)()
+	int32                                         CallFunc_AkEventActor_ReturnValue;                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x0074(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C9[0x3];                                     // 0x0075(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CA[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_AkEventActor_ReturnValue_1;               // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CB[0x2];                                     // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(const struct FValeriaItem& Item)> K2Node_CreateDelegate_OutputDelegate;              // 0x0088(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FValeriaItem& Item)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable;                 // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_1;               // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CC[0x6];                                     // 0x00AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEquipmentComponent*                    K2Node_CustomEvent_EquipmentComponent_1;           // 0x00B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FEquipmentItem                         K2Node_CustomEvent_Item;                           // 0x00B8(0x0050)()
+	TDelegate<void(class UEquipmentComponent* EquipmentComponent, const struct FEquipmentItem& Item)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0108(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UEquipmentComponent*                    K2Node_CustomEvent_EquipmentComponent;             // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_bNewVisibility;                 // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CD[0x3];                                     // 0x0121(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class UEquipmentComponent* EquipmentComponent, bool bHidden)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0124(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UEquipmentComponent* EquipmentComponent, const struct FEquipmentItem& Item)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x0134(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class UEquipmentComponent* EquipmentComponent, bool bHidden)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0144(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable;                       // 0x0154(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CE[0x3];                                     // 0x0155(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEquipmentItem                         CallFunc_GetEquippedItem_ReturnValue;              // 0x0158(0x0050)()
+	class AEquipViewActor*                        CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UClass*                                 CallFunc_GetObjectClass_ReturnValue;               // 0x01B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue; // 0x01B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_1;                     // 0x01C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46CF[0x6];                                     // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x01C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1; // 0x01D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x01D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D0[0x6];                                     // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEquipmentComponent*                    CallFunc_GetEquipment_ReturnValue;                 // 0x01E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D1[0x7];                                     // 0x01E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AValeriaMoveablePawn* Pawn, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> K2Node_CreateDelegate_OutputDelegate_6;            // 0x01F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventActor_ReturnValue_2;               // 0x0208(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D2[0x4];                                     // 0x020C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               CallFunc_K2_GetActorRotation_ReturnValue;          // 0x0210(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventActor_ReturnValue_3;               // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AValeriaMoveablePawn*                   K2Node_CustomEvent_Pawn;                           // 0x0238(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EMovementMode                                 K2Node_CustomEvent_PrevMovementMode;               // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         K2Node_CustomEvent_PreviousCustomMode;             // 0x0241(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0242(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D3[0x5];                                     // 0x0243(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue;                  // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Find_Distance_to_Ground_Hit;              // 0x0260(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D4[0x7];                                     // 0x0261(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Find_Distance_to_Ground_Distance;         // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D5[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_1;                // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_X;                            // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x02A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02B0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue_1;                      // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue;                  // 0x02D0(0x0008)(NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimer_ReturnValue_1;                // 0x02D8(0x0008)(NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_isGliding;                      // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D6[0x3];                                     // 0x02E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_AkEventActor_ReturnValue_4;               // 0x02E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventActor_ReturnValue_5;               // 0x02E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_isClimbing_1;                   // 0x02EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_IsClosed_Variable_2;                     // 0x02ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D7[0x2];                                     // 0x02EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaCharacterMoveComponent*         K2Node_DynamicCast_AsValeria_Character_Move_Component; // 0x02F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x02F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_isClimbing;                     // 0x02F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EValeriaClimbDashDirection                    K2Node_CustomEvent_direction;                      // 0x02FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D8[0x5];                                     // 0x02FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_CustomEvent_Location;                       // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0319(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46D9[0x2];                                     // 0x031A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsGliding)>               K2Node_CreateDelegate_OutputDelegate_7;            // 0x031C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable; // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DA[0x3];                                     // 0x032D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_AkEventActor_ReturnValue_6;               // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0334(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DB[0x3];                                     // 0x0339(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x033C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         K2Node_CustomEvent_DeltaSeconds;                   // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DC[0x4];                                     // 0x0344(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                K2Node_CustomEvent_OldLocation;                    // 0x0348(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                K2Node_CustomEvent_OldVelocity;                    // 0x0360(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AValeriaCharacter*                      K2Node_CustomEvent_Character;                      // 0x0378(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_isSprinting;                    // 0x0380(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DD[0x3];                                     // 0x0381(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_AkEventActor_ReturnValue_7;               // 0x0384(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventActor_ReturnValue_8;               // 0x0388(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DE[0x4];                                     // 0x038C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetVelocity_ReturnValue_2;                // 0x0390(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46DF[0x7];                                     // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_VSize_ReturnValue_2;                      // 0x03B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x03B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E0[0x6];                                     // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2; // 0x03C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Find_Distance_to_Ground_Hit_1;            // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E1[0x7];                                     // 0x03C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Find_Distance_to_Ground_Distance_1;       // 0x03D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(class AValeriaMoveablePawn* Pawn, EMovementMode PrevMovementMode, uint8 PreviousCustomMode)> K2Node_CreateDelegate_OutputDelegate_8;            // 0x03D8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsGliding)>               K2Node_CreateDelegate_OutputDelegate_9;            // 0x03E8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsClimbing)>              K2Node_CreateDelegate_OutputDelegate_10;           // 0x03F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsClimbing, EValeriaClimbDashDirection Direction)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x0408(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FVector& Location)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x0418(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x0428(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E2[0x7];                                     // 0x0439(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UEquipmentComponent*                    CallFunc_GetEquipment_ReturnValue_1;               // 0x0440(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0448(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E3[0x3];                                     // 0x0449(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class AValeriaCharacter* Character, bool IsSprinting)> K2Node_CreateDelegate_OutputDelegate_14;           // 0x044C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Has_Been_Initd_Variable_2;               // 0x045C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue;        // 0x045D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsValidTimerHandle_ReturnValue_1;      // 0x045E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x045F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0460(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E4[0x7];                                     // 0x0461(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3; // 0x0468(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsSprinting_ReturnValue;                  // 0x0470(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_9;                    // 0x0471(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E5[0x6];                                     // 0x0472(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaCharacterMoveComponent*         K2Node_DynamicCast_AsValeria_Character_Move_Component_1; // 0x0478(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_10;                   // 0x0481(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E6[0x6];                                     // 0x0482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaCharacterMoveComponent*         CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4; // 0x0488(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          CallFunc_GetGliderLoop_Output;                     // 0x0490(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventActor_ReturnValue_9;               // 0x0498(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E7[0x4];                                     // 0x049C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue;                     // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E8[0x7];                                     // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character;            // 0x04B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x04B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x04B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46E9[0x2];                                     // 0x04BA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x04BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_actor;                          // 0x04C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_CustomEvent_WasDamaged;                     // 0x04C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46EA[0x7];                                     // 0x04C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> K2Node_CustomEvent_ItemType;                       // 0x04D0(0x0028)(HasGetValueTypeHash)
+	class AActor*                                 K2Node_CustomEvent_instigator;                     // 0x04F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FValeriaItem                           CallFunc_Array_Get_Item_1;                         // 0x0500(0x0060)()
+	class ABP_ValeriaGatherableLoot_C*            K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot;   // 0x0560(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0568(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46EB[0x7];                                     // 0x0569(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0570(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition;         // 0x0578(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_11;                   // 0x0581(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46EC[0x6];                                     // 0x0582(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x0588(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition_1;       // 0x0590(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0598(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_12;                   // 0x0599(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46ED[0x6];                                     // 0x059A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FItemAudioConfig                       CallFunc_GetDataTableRowFromName_OutRow;           // 0x05A0(0x0038)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x05D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_13;                   // 0x05D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_14;                   // 0x05DA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46EE[0x1];                                     // 0x05DB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_AkEventActor_ReturnValue_10;              // 0x05DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_15;                   // 0x05E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46EF[0x3];                                     // 0x05E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(class AValeriaCharacter* Character, bool IsSprinting)> K2Node_CreateDelegate_OutputDelegate_15;           // 0x05E4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(float DeltaSeconds, const struct FVector& OldLocation, const struct FVector& OldVelocity)> K2Node_CreateDelegate_OutputDelegate_16;           // 0x05F4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(const struct FVector& Location)> K2Node_CreateDelegate_OutputDelegate_17;           // 0x0604(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(bool IsClimbing, EValeriaClimbDashDirection Direction)> K2Node_CreateDelegate_OutputDelegate_18;           // 0x0614(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EEndPlayReason                                K2Node_Event_EndPlayReason;                        // 0x0624(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsServer_ReturnValue_1;                   // 0x0625(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x0626(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46F0[0x1];                                     // 0x0627(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(bool IsClimbing)>              K2Node_CreateDelegate_OutputDelegate_19;           // 0x0628(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x0638(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_16;                   // 0x0639(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46F1[0x2];                                     // 0x063A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_RetriggerableDelay_Duration_ImplicitCast; // 0x063C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        K2Node_VariableSet_NewRotationYaw_ImplicitCast;    // 0x0640(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast;            // 0x0648(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_SetTimer_Time_ImplicitCast_1;          // 0x064C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio");
-static_assert(sizeof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio) == 0x000678, "Wrong size on Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio");
+static_assert(sizeof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio) == 0x000650, "Wrong size on Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio");
 static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, EntryPoint) == 0x000000, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::EntryPoint' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Item_1) == 0x000008, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Item_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue) == 0x000070, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_AddUnique_ReturnValue) == 0x000074, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Length_ReturnValue) == 0x000078, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x00007C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Length_ReturnValue_1) == 0x000080, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue) == 0x000084, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_1) == 0x000088, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue) == 0x00008C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_1) == 0x00008D, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate) == 0x000090, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_1) == 0x0000A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable) == 0x0000B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable_1) == 0x0000B1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_EquipmentComponent_1) == 0x0000B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_EquipmentComponent_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Item) == 0x0000C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Item' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_2) == 0x000118, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_EquipmentComponent) == 0x000128, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_EquipmentComponent' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_bNewVisibility) == 0x000130, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_bNewVisibility' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_3) == 0x000134, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_4) == 0x000144, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_5) == 0x000154, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable) == 0x000164, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquippedItem_ReturnValue) == 0x000168, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquippedItem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Get_Item) == 0x0001C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetObjectClass_ReturnValue) == 0x0001C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue) == 0x0001D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable_1) == 0x0001D9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1) == 0x0001E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_2) == 0x0001F0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0001F1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquipment_ReturnValue) == 0x0001F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquipment_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_3) == 0x000200, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x000208, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_6) == 0x000210, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_2) == 0x000220, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000228, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Roll) == 0x000240, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Pitch) == 0x000244, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Yaw) == 0x000248, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_3) == 0x00024C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Pawn) == 0x000250, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Pawn' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_PrevMovementMode) == 0x000258, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_PrevMovementMode' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_PreviousCustomMode) == 0x000259, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_PreviousCustomMode' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_SwitchEnum_CmpSuccess) == 0x00025A, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue) == 0x000260, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Hit) == 0x000278, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Hit' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Distance) == 0x000280, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Distance' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue) == 0x000288, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_InRange_FloatFloat_ReturnValue) == 0x000290, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue_1) == 0x000298, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_X) == 0x0002B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_Y) == 0x0002B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_Z) == 0x0002C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_MakeVector_ReturnValue) == 0x0002C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue_1) == 0x0002E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_ReturnValue) == 0x0002E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_ReturnValue_1) == 0x0002F0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isGliding) == 0x0002F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isGliding' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_4) == 0x0002FC, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_5) == 0x000300, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isClimbing_1) == 0x000304, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isClimbing_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable_2) == 0x000305, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character_Move_Component) == 0x000308, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character_Move_Component' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess) == 0x000310, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isClimbing) == 0x000311, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isClimbing' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_direction) == 0x000312, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_direction' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Location) == 0x000318, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Location' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000330, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BooleanAND_ReturnValue) == 0x000331, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_7) == 0x000334, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable) == 0x000344, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_6) == 0x000348, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_int_Loop_Counter_Variable) == 0x00034C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Less_IntInt_ReturnValue) == 0x000350, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Add_IntInt_ReturnValue) == 0x000354, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_DeltaSeconds) == 0x000358, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_DeltaSeconds' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_OldLocation) == 0x000360, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_OldLocation' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_OldVelocity) == 0x000378, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_OldVelocity' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Character) == 0x000390, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Character' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isSprinting) == 0x000398, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isSprinting' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_7) == 0x00039C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_8) == 0x0003A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue_2) == 0x0003A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_4) == 0x0003C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue_2) == 0x0003C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0003D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_5) == 0x0003D1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2) == 0x0003D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Hit_1) == 0x0003E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Hit_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Distance_1) == 0x0003E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Distance_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_8) == 0x0003F0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_9) == 0x000400, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_10) == 0x000410, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_11) == 0x000420, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_12) == 0x000430, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_13) == 0x000440, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_6) == 0x000450, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquipment_ReturnValue_1) == 0x000458, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquipment_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_7) == 0x000460, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_14) == 0x000464, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable_2) == 0x000474, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x000475, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_IsValidTimerHandle_ReturnValue_1) == 0x000476, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_IsValidTimerHandle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsLocallyControlled_ReturnValue) == 0x000477, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_8) == 0x000478, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3) == 0x000480, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsSprinting_ReturnValue) == 0x000488, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsSprinting_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_9) == 0x000489, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character_Move_Component_1) == 0x000490, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character_Move_Component_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_1) == 0x000498, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_10) == 0x000499, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4) == 0x0004A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetGliderLoop_Output) == 0x0004A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetGliderLoop_Output' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_9) == 0x0004B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_9' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetOwner_ReturnValue) == 0x0004B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsServer_ReturnValue) == 0x0004C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character) == 0x0004C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_2) == 0x0004D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue_1) == 0x0004D1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_int_Array_Index_Variable) == 0x0004D4, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Actor) == 0x0004D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Actor' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_WasDamaged) == 0x0004E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_WasDamaged' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_ItemType) == 0x0004E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_ItemType' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Instigator) == 0x000518, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Instigator' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Get_Item_1) == 0x000520, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Get_Item_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot) == 0x000588, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_3) == 0x000590, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000598, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsItem_Type_Definition) == 0x0005A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsItem_Type_Definition' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_4) == 0x0005A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_11) == 0x0005A9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x0005B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsItem_Type_Definition_1) == 0x0005B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsItem_Type_Definition_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_5) == 0x0005C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_12) == 0x0005C1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetDataTableRowFromName_OutRow) == 0x0005C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000600, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_13) == 0x000601, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_14) == 0x000602, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_10) == 0x000604, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_10' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_15) == 0x000608, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_15) == 0x00060C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_16) == 0x00061C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_17) == 0x00062C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_18) == 0x00063C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_Event_EndPlayReason) == 0x00064C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_Event_EndPlayReason' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsServer_ReturnValue_1) == 0x00064D, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue_2) == 0x00064E, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_19) == 0x000650, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x000660, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_16) == 0x000661, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_RetriggerableDelay_Duration_ImplicitCast) == 0x000664, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_RetriggerableDelay_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_VariableSet_NewRotationYaw_ImplicitCast) == 0x000668, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_VariableSet_NewRotationYaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000670, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_Time_ImplicitCast_1) == 0x000674, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_Time_ImplicitCast_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue) == 0x000068, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_AddUnique_ReturnValue) == 0x00006C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_AddUnique_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Length_ReturnValue) == 0x000070, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x000074, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Length_ReturnValue_1) == 0x000078, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue) == 0x00007C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_1) == 0x000080, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue) == 0x000084, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_1) == 0x000085, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate) == 0x000088, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_1) == 0x000098, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable) == 0x0000A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable_1) == 0x0000A9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_EquipmentComponent_1) == 0x0000B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_EquipmentComponent_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Item) == 0x0000B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Item' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_2) == 0x000108, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_EquipmentComponent) == 0x000118, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_EquipmentComponent' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_bNewVisibility) == 0x000120, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_bNewVisibility' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_3) == 0x000124, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_4) == 0x000134, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_5) == 0x000144, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_5' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable) == 0x000154, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquippedItem_ReturnValue) == 0x000158, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquippedItem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Get_Item) == 0x0001A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetObjectClass_ReturnValue) == 0x0001B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetObjectClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue) == 0x0001B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable_1) == 0x0001C1, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x0001C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1) == 0x0001D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_2) == 0x0001D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_EqualEqual_ByteByte_ReturnValue_1) == 0x0001D9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_EqualEqual_ByteByte_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquipment_ReturnValue) == 0x0001E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquipment_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_3) == 0x0001E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Subtract_DoubleDouble_ReturnValue_1) == 0x0001F0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Subtract_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_6) == 0x0001F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_6' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_2) == 0x000208, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_GetActorRotation_ReturnValue) == 0x000210, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_GetActorRotation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Roll) == 0x000228, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Pitch) == 0x00022C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakRotator_Yaw) == 0x000230, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_3) == 0x000234, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Pawn) == 0x000238, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Pawn' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_PrevMovementMode) == 0x000240, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_PrevMovementMode' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_PreviousCustomMode) == 0x000241, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_PreviousCustomMode' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_SwitchEnum_CmpSuccess) == 0x000242, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue) == 0x000248, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Hit) == 0x000260, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Hit' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Distance) == 0x000268, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Distance' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue) == 0x000270, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_InRange_FloatFloat_ReturnValue) == 0x000278, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_InRange_FloatFloat_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue_1) == 0x000280, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_X) == 0x000298, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_Y) == 0x0002A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BreakVector_Z) == 0x0002A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_MakeVector_ReturnValue) == 0x0002B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue_1) == 0x0002C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_ReturnValue) == 0x0002D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_ReturnValue_1) == 0x0002D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isGliding) == 0x0002E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isGliding' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_4) == 0x0002E4, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_5) == 0x0002E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isClimbing_1) == 0x0002EC, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isClimbing_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_IsClosed_Variable_2) == 0x0002ED, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_IsClosed_Variable_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character_Move_Component) == 0x0002F0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character_Move_Component' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess) == 0x0002F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isClimbing) == 0x0002F9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isClimbing' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_direction) == 0x0002FA, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_direction' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Location) == 0x000300, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Location' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000318, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_BooleanAND_ReturnValue) == 0x000319, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_7) == 0x00031C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_7' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable) == 0x00032C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Whether_the_gate_is_currently_open_or_close_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_6) == 0x000330, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_int_Loop_Counter_Variable) == 0x000334, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Less_IntInt_ReturnValue) == 0x000338, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Add_IntInt_ReturnValue) == 0x00033C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_DeltaSeconds) == 0x000340, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_DeltaSeconds' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_OldLocation) == 0x000348, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_OldLocation' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_OldVelocity) == 0x000360, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_OldVelocity' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_Character) == 0x000378, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_Character' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_isSprinting) == 0x000380, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_isSprinting' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_7) == 0x000384, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_8) == 0x000388, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetVelocity_ReturnValue_2) == 0x000390, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetVelocity_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_4) == 0x0003A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_VSize_ReturnValue_2) == 0x0003B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_VSize_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x0003B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_5) == 0x0003B9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2) == 0x0003C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Hit_1) == 0x0003C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Hit_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Find_Distance_to_Ground_Distance_1) == 0x0003D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Find_Distance_to_Ground_Distance_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_8) == 0x0003D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_8' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_9) == 0x0003E8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_9' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_10) == 0x0003F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_10' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_11) == 0x000408, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_11' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_12) == 0x000418, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_12' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_13) == 0x000428, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_13' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_6) == 0x000438, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetEquipment_ReturnValue_1) == 0x000440, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetEquipment_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_7) == 0x000448, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_14) == 0x00044C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_14' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_bool_Has_Been_Initd_Variable_2) == 0x00045C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_bool_Has_Been_Initd_Variable_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_IsValidTimerHandle_ReturnValue) == 0x00045D, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_IsValidTimerHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_IsValidTimerHandle_ReturnValue_1) == 0x00045E, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_IsValidTimerHandle_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsLocallyControlled_ReturnValue) == 0x00045F, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_8) == 0x000460, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3) == 0x000468, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsSprinting_ReturnValue) == 0x000470, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsSprinting_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_9) == 0x000471, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character_Move_Component_1) == 0x000478, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character_Move_Component_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_1) == 0x000480, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_10) == 0x000481, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4) == 0x000488, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetGliderLoop_Output) == 0x000490, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetGliderLoop_Output' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_9) == 0x000498, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_9' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetOwner_ReturnValue) == 0x0004A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsServer_ReturnValue) == 0x0004A8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsValeria_Character) == 0x0004B0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsValeria_Character' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_2) == 0x0004B8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue_1) == 0x0004B9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, Temp_int_Array_Index_Variable) == 0x0004BC, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_actor) == 0x0004C0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_actor' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_WasDamaged) == 0x0004C8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_WasDamaged' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_ItemType) == 0x0004D0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_ItemType' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CustomEvent_instigator) == 0x0004F8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CustomEvent_instigator' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Array_Get_Item_1) == 0x000500, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Array_Get_Item_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot) == 0x000560, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsBP_Valeria_Gatherable_Loot' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_3) == 0x000568, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000570, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsItem_Type_Definition) == 0x000578, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsItem_Type_Definition' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_4) == 0x000580, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_11) == 0x000581, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_11' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x000588, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_AsItem_Type_Definition_1) == 0x000590, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_AsItem_Type_Definition_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_DynamicCast_bSuccess_5) == 0x000598, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_DynamicCast_bSuccess_5' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_12) == 0x000599, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_12' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetDataTableRowFromName_OutRow) == 0x0005A0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x0005D8, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_13) == 0x0005D9, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_13' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_14) == 0x0005DA, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_14' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_AkEventActor_ReturnValue_10) == 0x0005DC, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_AkEventActor_ReturnValue_10' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_15) == 0x0005E0, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_15' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_15) == 0x0005E4, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_15' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_16) == 0x0005F4, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_16' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_17) == 0x000604, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_17' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_18) == 0x000614, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_18' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_Event_EndPlayReason) == 0x000624, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_Event_EndPlayReason' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsServer_ReturnValue_1) == 0x000625, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsServer_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_Not_PreBool_ReturnValue_2) == 0x000626, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_Not_PreBool_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_CreateDelegate_OutputDelegate_19) == 0x000628, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_CreateDelegate_OutputDelegate_19' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x000638, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_IsValid_ReturnValue_16) == 0x000639, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_IsValid_ReturnValue_16' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_RetriggerableDelay_Duration_ImplicitCast) == 0x00063C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_RetriggerableDelay_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, K2Node_VariableSet_NewRotationYaw_ImplicitCast) == 0x000640, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::K2Node_VariableSet_NewRotationYaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_Time_ImplicitCast) == 0x000648, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_Time_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio, CallFunc_K2_SetTimer_Time_ImplicitCast_1) == 0x00064C, "Member 'Comp_Player_Audio_C_ExecuteUbergraph_Comp_Player_Audio::CallFunc_K2_SetTimer_Time_ImplicitCast_1' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.Find Distance to Ground
 // 0x0240 (0x0240 - 0x0000)
@@ -457,7 +457,7 @@ struct Comp_Player_Audio_C_Find_Distance_to_Ground final
 public:
 	class AValeriaMoveablePawn*                   Param_Character;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Hit;                                               // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4215[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F2[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Distance;                                          // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0018(0x0010)(ConstParm, ReferenceParm)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -470,10 +470,10 @@ public:
 	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0161(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0162(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4216[0x1];                                     // 0x0163(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F3[0x1];                                     // 0x0163(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0168(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4217[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F4[0x4];                                     // 0x016C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -486,7 +486,7 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0200(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4218[0x4];                                     // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F5[0x4];                                     // 0x0204(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0208(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_FunctionResult_Distance_ImplicitCast;       // 0x0238(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -526,43 +526,43 @@ static_assert(offsetof(Comp_Player_Audio_C_Find_Distance_to_Ground, CallFunc_Bre
 static_assert(offsetof(Comp_Player_Audio_C_Find_Distance_to_Ground, K2Node_FunctionResult_Distance_ImplicitCast) == 0x000238, "Member 'Comp_Player_Audio_C_Find_Distance_to_Ground::K2Node_FunctionResult_Distance_ImplicitCast' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.GetGliderLoop
-// 0x0AB0 (0x0AB0 - 0x0000)
+// 0x0A00 (0x0A00 - 0x0000)
 struct Comp_Player_Audio_C_GetGliderLoop final 
 {
 public:
 	class UAkAudioEvent*                          Output;                                            // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVAL_CharacterCustomizationLoadout     CallFunc_GetLoadout_ReturnValue;                   // 0x0010(0x0998)(ConstParm)
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x09A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVAL_CharacterCustomizationItem_GliderTrail* K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail; // 0x09B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x09B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x09B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4219[0x6];                                     // 0x09BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVAL_CharacterCustomizationItem_GliderTrail_PerBodyTypeConfig CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig; // 0x09C0(0x00D0)()
-	bool                                          CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue; // 0x0A90(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0A91(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421A[0x6];                                     // 0x0A92(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x0A98(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          K2Node_DynamicCast_AsAk_Audio_Event;               // 0x0AA0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0AA8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0AA9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVAL_CharacterCustomizationLoadout     CallFunc_GetLoadout_ReturnValue;                   // 0x0010(0x0900)(ConstParm)
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0910(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVAL_CharacterCustomizationItem_GliderTrail* K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail; // 0x0918(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0920(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0921(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46F6[0x6];                                     // 0x0922(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVAL_CharacterCustomizationItem_GliderTrail_PerBodyTypeConfig CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig; // 0x0928(0x00B8)()
+	bool                                          CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue; // 0x09E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x09E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46F7[0x6];                                     // 0x09E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue_1;         // 0x09E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          K2Node_DynamicCast_AsAk_Audio_Event;               // 0x09F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x09F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x09F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Player_Audio_C_GetGliderLoop) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_GetGliderLoop");
-static_assert(sizeof(Comp_Player_Audio_C_GetGliderLoop) == 0x000AB0, "Wrong size on Comp_Player_Audio_C_GetGliderLoop");
+static_assert(sizeof(Comp_Player_Audio_C_GetGliderLoop) == 0x000A00, "Wrong size on Comp_Player_Audio_C_GetGliderLoop");
 static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, Output) == 0x000000, "Member 'Comp_Player_Audio_C_GetGliderLoop::Output' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_GetCharacterCustomizationComponent_ReturnValue) == 0x000008, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_GetCharacterCustomizationComponent_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_GetLoadout_ReturnValue) == 0x000010, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_GetLoadout_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x0009A8, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail) == 0x0009B0, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_bSuccess) == 0x0009B8, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValid_ReturnValue) == 0x0009B9, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig) == 0x0009C0, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue) == 0x000A90, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000A91, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x000A98, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_AsAk_Audio_Event) == 0x000AA0, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_AsAk_Audio_Event' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_bSuccess_1) == 0x000AA8, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValid_ReturnValue_1) == 0x000AA9, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000910, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail) == 0x000918, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_AsVAL_Character_Customization_Item_Glider_Trail' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_bSuccess) == 0x000920, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValid_ReturnValue) == 0x000921, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig) == 0x000928, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_OutBodyTypeSpecificConfig' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue) == 0x0009E0, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_TryGetBodyTypeSpecificConfig_GliderTrail_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x0009E1, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_LoadAsset_Blocking_ReturnValue_1) == 0x0009E8, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_LoadAsset_Blocking_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_AsAk_Audio_Event) == 0x0009F0, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_AsAk_Audio_Event' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, K2Node_DynamicCast_bSuccess_1) == 0x0009F8, "Member 'Comp_Player_Audio_C_GetGliderLoop::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_GetGliderLoop, CallFunc_IsValid_ReturnValue_1) == 0x0009F9, "Member 'Comp_Player_Audio_C_GetGliderLoop::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.GliderChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -576,14 +576,14 @@ static_assert(sizeof(Comp_Player_Audio_C_GliderChanged) == 0x000001, "Wrong size
 static_assert(offsetof(Comp_Player_Audio_C_GliderChanged, IsGliding) == 0x000000, "Member 'Comp_Player_Audio_C_GliderChanged::IsGliding' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.ItemAddedSFX
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct Comp_Player_Audio_C_ItemAddedSFX final 
 {
 public:
-	struct FValeriaItem                           Param_Item;                                        // 0x0000(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
+	struct FValeriaItem                           Param_Item;                                        // 0x0000(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(Comp_Player_Audio_C_ItemAddedSFX) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_ItemAddedSFX");
-static_assert(sizeof(Comp_Player_Audio_C_ItemAddedSFX) == 0x000068, "Wrong size on Comp_Player_Audio_C_ItemAddedSFX");
+static_assert(sizeof(Comp_Player_Audio_C_ItemAddedSFX) == 0x000060, "Wrong size on Comp_Player_Audio_C_ItemAddedSFX");
 static_assert(offsetof(Comp_Player_Audio_C_ItemAddedSFX, Param_Item) == 0x000000, "Member 'Comp_Player_Audio_C_ItemAddedSFX::Param_Item' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.MovementModeChanged
@@ -607,7 +607,7 @@ struct Comp_Player_Audio_C_MovementUpdate final
 {
 public:
 	float                                         DeltaSeconds;                                      // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                OldLocation;                                       // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                OldVelocity;                                       // 0x0020(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -624,19 +624,19 @@ struct Comp_Player_Audio_C_PlayEquipSound final
 public:
 	TSubclassOf<class AEquipViewActor>            Param_Class;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash)
 	bool                                          Unequip;                                           // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46F9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 K2Node_ClassDynamicCast_AsBP_Equip_View_Actor;     // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_ClassDynamicCast_bSuccess;                  // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValidClass_ReturnValue;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421D[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46FA[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          CallFunc_Get_Audio_Event_AudioEvent;               // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Audio_Event_Found;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421E[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46FB[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          CallFunc_Get_Audio_Event_AudioEvent_1;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Get_Audio_Event_Found_1;                  // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_421F[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46FC[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          K2Node_Select_Default;                             // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventActor_ReturnValue;                 // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -657,160 +657,160 @@ static_assert(offsetof(Comp_Player_Audio_C_PlayEquipSound, K2Node_Select_Default
 static_assert(offsetof(Comp_Player_Audio_C_PlayEquipSound, CallFunc_AkEventActor_ReturnValue) == 0x000048, "Member 'Comp_Player_Audio_C_PlayEquipSound::CallFunc_AkEventActor_ReturnValue' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.PlayPickWiffFX
-// 0x0350 (0x0350 - 0x0000)
+// 0x0348 (0x0348 - 0x0000)
 struct Comp_Player_Audio_C_PlayPickWiffFX final 
 {
 public:
-	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0000(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class AActor*                                 Instigator;                                        // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable;                                 // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_1;                               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_2;                               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_3;                               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_4;                               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_5;                               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_6;                               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_7;                               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_8;                               // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_9;                               // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_10;                              // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_11;                              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_12;                              // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_13;                              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_14;                              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_15;                              // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_16;                              // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Variable_17;                              // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0080(0x0010)(ConstParm, ReferenceParm)
-	int32                                         Temp_int_Variable_18;                              // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4220[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition;         // 0x00A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4221[0x3];                                     // 0x00A9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_19;                              // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4222[0x2];                                     // 0x00B2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Variable_20;                              // 0x00B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPhysicalSurface                              Temp_byte_Variable;                                // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4223[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x00C0(0x0010)(ConstParm, ReferenceParm)
-	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      Temp_object_Variable_1;                            // 0x00D8(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4224[0x7];                                     // 0x00E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x00F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4225[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0140(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x022A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4226[0x1];                                     // 0x022B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakHitResult_Time;                      // 0x022C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4227[0x4];                                     // 0x0234(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0268(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0280(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x02B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4228[0x4];                                     // 0x02CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x0300(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0308(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0309(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4229[0x6];                                     // 0x030A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      K2Node_Select_Default;                             // 0x0310(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FStruct_Physmat                        CallFunc_GetSurfaceEffect_Value;                   // 0x0318(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSurfaceEffect_ReturnValue;             // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_422A[0x7];                                     // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent;              // 0x0340(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventLocation_Playing_ID;               // 0x0348(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         K2Node_Select_Default_1;                           // 0x034C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0000(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class AActor*                                 Instigator;                                        // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable;                                 // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_1;                               // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_2;                               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_3;                               // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_4;                               // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_5;                               // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_6;                               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_7;                               // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_8;                               // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_9;                               // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_10;                              // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_11;                              // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_12;                              // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_13;                              // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_14;                              // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_15;                              // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_16;                              // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Variable_17;                              // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0078(0x0010)(ConstParm, ReferenceParm)
+	int32                                         Temp_int_Variable_18;                              // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46FD[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVAL_ItemTypeDefinitionAsset*           K2Node_DynamicCast_AsItem_Type_Definition;         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46FE[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_19;                              // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x00A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46FF[0x2];                                     // 0x00AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Variable_20;                              // 0x00AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPhysicalSurface                              Temp_byte_Variable;                                // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4700[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ConstParm, ReferenceParm)
+	class USkeletalMeshComponent*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      Temp_object_Variable_1;                            // 0x00D0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4701[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x00E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0100(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0118(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4702[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FHitResult                             CallFunc_LineTraceSingleForObjects_OutHit;         // 0x0138(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+	bool                                          CallFunc_LineTraceSingleForObjects_ReturnValue;    // 0x0220(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0221(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0222(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4703[0x1];                                     // 0x0223(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakHitResult_Time;                      // 0x0224(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0228(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4704[0x4];                                     // 0x022C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0230(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0248(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0260(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_ImpactNormal;              // 0x0278(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      CallFunc_BreakHitResult_PhysMat;                   // 0x0290(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_BreakHitResult_HitActor;                  // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    CallFunc_BreakHitResult_HitComponent;              // 0x02A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_HitBoneName;               // 0x02A8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CallFunc_BreakHitResult_BoneName;                  // 0x02B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02B8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02BC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4705[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x02F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0300(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0301(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4706[0x6];                                     // 0x0302(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      K2Node_Select_Default;                             // 0x0308(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_Physmat                        CallFunc_GetSurfaceEffect_Value;                   // 0x0310(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSurfaceEffect_ReturnValue;             // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4707[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent;              // 0x0338(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventLocation_Playing_ID;               // 0x0340(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         K2Node_Select_Default_1;                           // 0x0344(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Player_Audio_C_PlayPickWiffFX) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_PlayPickWiffFX");
-static_assert(sizeof(Comp_Player_Audio_C_PlayPickWiffFX) == 0x000350, "Wrong size on Comp_Player_Audio_C_PlayPickWiffFX");
+static_assert(sizeof(Comp_Player_Audio_C_PlayPickWiffFX) == 0x000348, "Wrong size on Comp_Player_Audio_C_PlayPickWiffFX");
 static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, ItemType) == 0x000000, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::ItemType' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Instigator) == 0x000030, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Instigator' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable) == 0x000038, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_1) == 0x00003C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_2) == 0x000040, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_3) == 0x000044, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_4) == 0x000048, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_4' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_5) == 0x00004C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_5' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_6) == 0x000050, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_6' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_7) == 0x000054, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_7' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_8) == 0x000058, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_8' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_9) == 0x00005C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_9' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_10) == 0x000060, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_10' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_11) == 0x000064, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_11' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_12) == 0x000068, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_12' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_13) == 0x00006C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_13' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_14) == 0x000070, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_14' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_15) == 0x000074, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_15' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_16) == 0x000078, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_16' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_17) == 0x00007C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_17' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_object_Variable) == 0x000080, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_object_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_18) == 0x000090, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_18' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000098, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_DynamicCast_AsItem_Type_Definition) == 0x0000A0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_DynamicCast_AsItem_Type_Definition' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_DynamicCast_bSuccess) == 0x0000A8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_19) == 0x0000AC, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_19' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue) == 0x0000B0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_HasTag_ReturnValue) == 0x0000B1, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_20) == 0x0000B4, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_20' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_byte_Variable) == 0x0000B8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_MakeArray_Array) == 0x0000C0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_MakeArray_Array' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetComponentByClass_ReturnValue) == 0x0000D0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_object_Variable_1) == 0x0000D8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_object_Variable_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0000E0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_1) == 0x0000E8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x0000F0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_Add_VectorVector_ReturnValue) == 0x000108, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000120, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_bool_Variable) == 0x000138, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000140, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000228, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_bBlockingHit) == 0x000229, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_bInitialOverlap) == 0x00022A, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Time) == 0x00022C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Time' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Distance) == 0x000230, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Distance' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Location) == 0x000238, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Location' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ImpactPoint) == 0x000250, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Normal) == 0x000268, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Normal' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ImpactNormal) == 0x000280, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_PhysMat) == 0x000298, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitActor) == 0x0002A0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitComponent) == 0x0002A8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitBoneName) == 0x0002B0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_BoneName) == 0x0002B8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitItem) == 0x0002C0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ElementIndex) == 0x0002C4, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_FaceIndex) == 0x0002C8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_TraceStart) == 0x0002D0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_TraceEnd) == 0x0002E8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x000300, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_2) == 0x000308, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_3) == 0x000309, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_Select_Default) == 0x000310, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetSurfaceEffect_Value) == 0x000318, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetSurfaceEffect_Value' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetSurfaceEffect_ReturnValue) == 0x000338, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetSurfaceEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_AkEventLocation_AkComponent) == 0x000340, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_AkEventLocation_AkComponent' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_AkEventLocation_Playing_ID) == 0x000348, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_AkEventLocation_Playing_ID' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_Select_Default_1) == 0x00034C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Instigator) == 0x000028, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Instigator' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable) == 0x000030, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_1) == 0x000034, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_2) == 0x000038, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_3) == 0x00003C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_4) == 0x000040, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_4' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_5) == 0x000044, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_5' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_6) == 0x000048, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_6' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_7) == 0x00004C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_7' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_8) == 0x000050, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_8' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_9) == 0x000054, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_9' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_10) == 0x000058, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_10' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_11) == 0x00005C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_11' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_12) == 0x000060, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_12' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_13) == 0x000064, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_13' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_14) == 0x000068, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_14' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_15) == 0x00006C, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_15' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_16) == 0x000070, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_16' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_17) == 0x000074, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_17' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_object_Variable) == 0x000078, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_object_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_18) == 0x000088, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_18' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LoadAsset_Blocking_ReturnValue) == 0x000090, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LoadAsset_Blocking_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_DynamicCast_AsItem_Type_Definition) == 0x000098, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_DynamicCast_AsItem_Type_Definition' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_19) == 0x0000A4, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_19' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue) == 0x0000A8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_HasTag_ReturnValue) == 0x0000A9, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_HasTag_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_int_Variable_20) == 0x0000AC, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_int_Variable_20' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_byte_Variable) == 0x0000B0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_MakeArray_Array) == 0x0000B8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_MakeArray_Array' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetComponentByClass_ReturnValue) == 0x0000C8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_object_Variable_1) == 0x0000D0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_object_Variable_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0000D8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_1) == 0x0000E0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x0000E8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_Add_VectorVector_ReturnValue) == 0x000100, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000118, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, Temp_bool_Variable) == 0x000130, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LineTraceSingleForObjects_OutHit) == 0x000138, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LineTraceSingleForObjects_OutHit' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_LineTraceSingleForObjects_ReturnValue) == 0x000220, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_LineTraceSingleForObjects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_bBlockingHit) == 0x000221, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_bBlockingHit' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_bInitialOverlap) == 0x000222, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_bInitialOverlap' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Time) == 0x000224, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Time' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Distance) == 0x000228, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Distance' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Location) == 0x000230, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Location' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ImpactPoint) == 0x000248, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ImpactPoint' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_Normal) == 0x000260, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_Normal' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ImpactNormal) == 0x000278, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ImpactNormal' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_PhysMat) == 0x000290, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_PhysMat' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitActor) == 0x000298, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitActor' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitComponent) == 0x0002A0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitComponent' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitBoneName) == 0x0002A8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitBoneName' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_BoneName) == 0x0002B0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_BoneName' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_HitItem) == 0x0002B8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_HitItem' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_ElementIndex) == 0x0002BC, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_ElementIndex' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_FaceIndex) == 0x0002C0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_FaceIndex' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_TraceStart) == 0x0002C8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_TraceStart' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_BreakHitResult_TraceEnd) == 0x0002E0, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_BreakHitResult_TraceEnd' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x0002F8, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_2) == 0x000300, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_IsValid_ReturnValue_3) == 0x000301, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_Select_Default) == 0x000308, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetSurfaceEffect_Value) == 0x000310, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetSurfaceEffect_Value' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_GetSurfaceEffect_ReturnValue) == 0x000330, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_GetSurfaceEffect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_AkEventLocation_AkComponent) == 0x000338, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_AkEventLocation_AkComponent' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, CallFunc_AkEventLocation_Playing_ID) == 0x000340, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::CallFunc_AkEventLocation_Playing_ID' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_PlayPickWiffFX, K2Node_Select_Default_1) == 0x000344, "Member 'Comp_Player_Audio_C_PlayPickWiffFX::K2Node_Select_Default_1' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)
@@ -824,22 +824,22 @@ static_assert(sizeof(Comp_Player_Audio_C_ReceiveEndPlay) == 0x000001, "Wrong siz
 static_assert(offsetof(Comp_Player_Audio_C_ReceiveEndPlay, EndPlayReason) == 0x000000, "Member 'Comp_Player_Audio_C_ReceiveEndPlay::EndPlayReason' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.ReplicatedAudioEvent
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct Comp_Player_Audio_C_ReplicatedAudioEvent final 
 {
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          WasDamaged;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_422B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0010(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class AActor*                                 Instigator;                                        // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4708[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0010(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class AActor*                                 Instigator;                                        // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Player_Audio_C_ReplicatedAudioEvent) == 0x000008, "Wrong alignment on Comp_Player_Audio_C_ReplicatedAudioEvent");
-static_assert(sizeof(Comp_Player_Audio_C_ReplicatedAudioEvent) == 0x000048, "Wrong size on Comp_Player_Audio_C_ReplicatedAudioEvent");
+static_assert(sizeof(Comp_Player_Audio_C_ReplicatedAudioEvent) == 0x000040, "Wrong size on Comp_Player_Audio_C_ReplicatedAudioEvent");
 static_assert(offsetof(Comp_Player_Audio_C_ReplicatedAudioEvent, Actor) == 0x000000, "Member 'Comp_Player_Audio_C_ReplicatedAudioEvent::Actor' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_ReplicatedAudioEvent, WasDamaged) == 0x000008, "Member 'Comp_Player_Audio_C_ReplicatedAudioEvent::WasDamaged' has a wrong offset!");
 static_assert(offsetof(Comp_Player_Audio_C_ReplicatedAudioEvent, ItemType) == 0x000010, "Member 'Comp_Player_Audio_C_ReplicatedAudioEvent::ItemType' has a wrong offset!");
-static_assert(offsetof(Comp_Player_Audio_C_ReplicatedAudioEvent, Instigator) == 0x000040, "Member 'Comp_Player_Audio_C_ReplicatedAudioEvent::Instigator' has a wrong offset!");
+static_assert(offsetof(Comp_Player_Audio_C_ReplicatedAudioEvent, Instigator) == 0x000038, "Member 'Comp_Player_Audio_C_ReplicatedAudioEvent::Instigator' has a wrong offset!");
 
 // Function Comp_Player_Audio.Comp_Player_Audio_C.SprintChange
 // 0x0010 (0x0010 - 0x0000)

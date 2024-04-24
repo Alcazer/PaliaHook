@@ -17,40 +17,6 @@
 namespace SDK
 {
 
-// Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TScriptInterface<class ITurnBasedMatchInterface>TurnBasedMatchInterface                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UEndTurnCallbackProxy*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TScriptInterface<class ITurnBasedMatchInterface> TurnBasedMatchInterface)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("EndTurnCallbackProxy", "EndTurn");
-
-	Params::EndTurnCallbackProxy_EndTurn Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.PlayerController = PlayerController;
-	Parms.MatchID = std::move(MatchID);
-	Parms.TurnBasedMatchInterface = TurnBasedMatchInterface;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function OnlineSubsystemUtils.AchievementBlueprintLibrary.GetCachedAchievementDescription
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -365,6 +331,40 @@ class UEndMatchCallbackProxy* UEndMatchCallbackProxy::EndMatch(class UObject* Wo
 }
 
 
+// Function OnlineSubsystemUtils.EndTurnCallbackProxy.EndTurn
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           MatchID                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TScriptInterface<class ITurnBasedMatchInterface>TurnBasedMatchInterface                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEndTurnCallbackProxy*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UEndTurnCallbackProxy* UEndTurnCallbackProxy::EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TScriptInterface<class ITurnBasedMatchInterface> TurnBasedMatchInterface)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("EndTurnCallbackProxy", "EndTurn");
+
+	Params::EndTurnCallbackProxy_EndTurn Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.PlayerController = PlayerController;
+	Parms.MatchID = std::move(MatchID);
+	Parms.TurnBasedMatchInterface = TurnBasedMatchInterface;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemUtils.FindSessionsCallbackProxy.FindSessions
 // (Final, Native, Static, Public, BlueprintCallable)
 // Parameters:
@@ -637,6 +637,66 @@ class UInAppPurchaseCallbackProxy2* UInAppPurchaseCallbackProxy2::CreateProxyObj
 }
 
 
+// Function OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy.CreateProxyObjectForInAppPurchaseCheckout
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FInAppPurchaseProductRequest2    ProductRequest                                         (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class UInAppPurchaseCheckoutCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInAppPurchaseCheckoutCallbackProxy* UInAppPurchaseCheckoutCallbackProxy::CreateProxyObjectForInAppPurchaseCheckout(class APlayerController* PlayerController, struct FInAppPurchaseProductRequest2& ProductRequest)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InAppPurchaseCheckoutCallbackProxy", "CreateProxyObjectForInAppPurchaseCheckout");
+
+	Params::InAppPurchaseCheckoutCallbackProxy_CreateProxyObjectForInAppPurchaseCheckout Parms{};
+
+	Parms.PlayerController = PlayerController;
+	Parms.ProductRequest = std::move(ProductRequest);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.InAppPurchaseFinalizeProxy.CreateProxyObjectForInAppPurchaseFinalize
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FInAppPurchaseReceiptInfo2       InAppPurchaseReceipt                                   (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInAppPurchaseFinalizeProxy*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInAppPurchaseFinalizeProxy* UInAppPurchaseFinalizeProxy::CreateProxyObjectForInAppPurchaseFinalize(struct FInAppPurchaseReceiptInfo2& InAppPurchaseReceipt, class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InAppPurchaseFinalizeProxy", "CreateProxyObjectForInAppPurchaseFinalize");
+
+	Params::InAppPurchaseFinalizeProxy_CreateProxyObjectForInAppPurchaseFinalize Parms{};
+
+	Parms.InAppPurchaseReceipt = std::move(InAppPurchaseReceipt);
+	Parms.PlayerController = PlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2.CreateProxyObjectForInAppPurchaseQuery
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -655,6 +715,90 @@ class UInAppPurchaseQueryCallbackProxy2* UInAppPurchaseQueryCallbackProxy2::Crea
 
 	Parms.PlayerController = PlayerController;
 	Parms.ProductIdentifiers = std::move(ProductIdentifiers);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseGetKnownReceipts
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInAppPurchaseReceiptsCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInAppPurchaseReceiptsCallbackProxy* UInAppPurchaseReceiptsCallbackProxy::CreateProxyObjectForInAppPurchaseGetKnownReceipts(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InAppPurchaseReceiptsCallbackProxy", "CreateProxyObjectForInAppPurchaseGetKnownReceipts");
+
+	Params::InAppPurchaseReceiptsCallbackProxy_CreateProxyObjectForInAppPurchaseGetKnownReceipts Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseQueryOwnedProducts
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInAppPurchaseReceiptsCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInAppPurchaseReceiptsCallbackProxy* UInAppPurchaseReceiptsCallbackProxy::CreateProxyObjectForInAppPurchaseQueryOwnedProducts(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InAppPurchaseReceiptsCallbackProxy", "CreateProxyObjectForInAppPurchaseQueryOwnedProducts");
+
+	Params::InAppPurchaseReceiptsCallbackProxy_CreateProxyObjectForInAppPurchaseQueryOwnedProducts Parms{};
+
+	Parms.PlayerController = PlayerController;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy.CreateProxyObjectForInAppPurchaseRestoreOwnedProducts
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class APlayerController*                PlayerController                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UInAppPurchaseReceiptsCallbackProxy*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UInAppPurchaseReceiptsCallbackProxy* UInAppPurchaseReceiptsCallbackProxy::CreateProxyObjectForInAppPurchaseRestoreOwnedProducts(class APlayerController* PlayerController)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("InAppPurchaseReceiptsCallbackProxy", "CreateProxyObjectForInAppPurchaseRestoreOwnedProducts");
+
+	Params::InAppPurchaseReceiptsCallbackProxy_CreateProxyObjectForInAppPurchaseRestoreOwnedProducts Parms{};
+
+	Parms.PlayerController = PlayerController;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

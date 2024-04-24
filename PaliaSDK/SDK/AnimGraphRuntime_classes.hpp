@@ -19,60 +19,29 @@
 namespace SDK
 {
 
-// Class AnimGraphRuntime.BlendSpacePlayerLibrary
+// Class AnimGraphRuntime.BlendSpaceLibrary
 // 0x0000 (0x0028 - 0x0028)
-class UBlendSpacePlayerLibrary final  : public UBlueprintFunctionLibrary
+class UBlendSpaceLibrary final  : public UBlueprintFunctionLibrary
 {
 public:
-	static struct FBlendSpacePlayerReference ConvertToBlendSpacePlayer(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static void ConvertToBlendSpacePlayerPure(struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result);
-	static class UBlendSpace* GetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer);
-	static bool GetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer);
-	static float GetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer);
-	static struct FVector GetPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer);
-	static float GetStartPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer);
-	static struct FBlendSpacePlayerReference SetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace);
-	static struct FBlendSpacePlayerReference SetBlendSpaceWithInertialBlending(struct FAnimUpdateContext& UpdateContext, struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace, float BlendTime);
-	static struct FBlendSpacePlayerReference SetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bLoop);
-	static struct FBlendSpacePlayerReference SetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer, float PlayRate);
-	static struct FBlendSpacePlayerReference SetResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bReset);
-	static bool ShouldResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static struct FBlendSpaceReference ConvertToBlendSpace(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToBlendSpacePure(struct FAnimNodeReference& Node, struct FBlendSpaceReference* BlendSpace, bool* Result);
+	static struct FVector GetFilteredPosition(struct FBlendSpaceReference& BlendSpace);
+	static struct FVector GetPosition(struct FBlendSpaceReference& BlendSpace);
+	static void SnapToPosition(struct FBlendSpaceReference& BlendSpace, const struct FVector& NewPosition);
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"BlendSpacePlayerLibrary">();
+		return StaticClassImpl<"BlendSpaceLibrary">();
 	}
-	static class UBlendSpacePlayerLibrary* GetDefaultObj()
+	static class UBlendSpaceLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UBlendSpacePlayerLibrary>();
+		return GetDefaultObjImpl<UBlendSpaceLibrary>();
 	}
 };
-static_assert(alignof(UBlendSpacePlayerLibrary) == 0x000008, "Wrong alignment on UBlendSpacePlayerLibrary");
-static_assert(sizeof(UBlendSpacePlayerLibrary) == 0x000028, "Wrong size on UBlendSpacePlayerLibrary");
-
-// Class AnimGraphRuntime.LayeredBoneBlendLibrary
-// 0x0000 (0x0028 - 0x0028)
-class ULayeredBoneBlendLibrary final  : public UBlueprintFunctionLibrary
-{
-public:
-	static void ConvertToLayeredBlendPerBonePure(struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* Result);
-	static struct FLayeredBoneBlendReference ConvertToLayeredBoneBlend(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
-	static int32 GetNumPoses(struct FLayeredBoneBlendReference& LayeredBoneBlend);
-	static struct FLayeredBoneBlendReference SetBlendMask(struct FAnimUpdateContext& UpdateContext, struct FLayeredBoneBlendReference& LayeredBoneBlend, int32 PoseIndex, class FName BlendMaskName);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"LayeredBoneBlendLibrary">();
-	}
-	static class ULayeredBoneBlendLibrary* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<ULayeredBoneBlendLibrary>();
-	}
-};
-static_assert(alignof(ULayeredBoneBlendLibrary) == 0x000008, "Wrong alignment on ULayeredBoneBlendLibrary");
-static_assert(sizeof(ULayeredBoneBlendLibrary) == 0x000028, "Wrong size on ULayeredBoneBlendLibrary");
+static_assert(alignof(UBlendSpaceLibrary) == 0x000008, "Wrong alignment on UBlendSpaceLibrary");
+static_assert(sizeof(UBlendSpaceLibrary) == 0x000028, "Wrong size on UBlendSpaceLibrary");
 
 // Class AnimGraphRuntime.AnimationStateMachineLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -103,6 +72,23 @@ public:
 static_assert(alignof(UAnimationStateMachineLibrary) == 0x000008, "Wrong alignment on UAnimationStateMachineLibrary");
 static_assert(sizeof(UAnimationStateMachineLibrary) == 0x000028, "Wrong size on UAnimationStateMachineLibrary");
 
+// Class AnimGraphRuntime.AnimSequencerInstance
+// 0x0000 (0x0350 - 0x0350)
+class UAnimSequencerInstance final  : public UAnimInstance
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"AnimSequencerInstance">();
+	}
+	static class UAnimSequencerInstance* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UAnimSequencerInstance>();
+	}
+};
+static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
+static_assert(sizeof(UAnimSequencerInstance) == 0x000350, "Wrong size on UAnimSequencerInstance");
+
 // Class AnimGraphRuntime.AnimExecutionContextLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UAnimExecutionContextLibrary final  : public UBlueprintFunctionLibrary
@@ -129,6 +115,39 @@ public:
 };
 static_assert(alignof(UAnimExecutionContextLibrary) == 0x000008, "Wrong alignment on UAnimExecutionContextLibrary");
 static_assert(sizeof(UAnimExecutionContextLibrary) == 0x000028, "Wrong size on UAnimExecutionContextLibrary");
+
+// Class AnimGraphRuntime.BlendSpacePlayerLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlendSpacePlayerLibrary final  : public UBlueprintFunctionLibrary
+{
+public:
+	static struct FBlendSpacePlayerReference ConvertToBlendSpacePlayer(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ConvertToBlendSpacePlayerPure(struct FAnimNodeReference& Node, struct FBlendSpacePlayerReference* BlendSpacePlayer, bool* Result);
+	static class UBlendSpace* GetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static bool GetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static float GetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static struct FVector GetPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static float GetStartPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static struct FBlendSpacePlayerReference SetBlendSpace(struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace);
+	static struct FBlendSpacePlayerReference SetBlendSpaceWithInertialBlending(struct FAnimUpdateContext& UpdateContext, struct FBlendSpacePlayerReference& BlendSpacePlayer, class UBlendSpace* BlendSpace, float BlendTime);
+	static struct FBlendSpacePlayerReference SetLoop(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bLoop);
+	static struct FBlendSpacePlayerReference SetPlayRate(struct FBlendSpacePlayerReference& BlendSpacePlayer, float PlayRate);
+	static struct FBlendSpacePlayerReference SetResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer, bool bReset);
+	static bool ShouldResetPlayTimeWhenBlendSpaceChanges(struct FBlendSpacePlayerReference& BlendSpacePlayer);
+	static void SnapToPosition(struct FBlendSpacePlayerReference& BlendSpacePlayer, const struct FVector& NewPosition);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"BlendSpacePlayerLibrary">();
+	}
+	static class UBlendSpacePlayerLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UBlendSpacePlayerLibrary>();
+	}
+};
+static_assert(alignof(UBlendSpacePlayerLibrary) == 0x000008, "Wrong alignment on UBlendSpacePlayerLibrary");
+static_assert(sizeof(UBlendSpacePlayerLibrary) == 0x000028, "Wrong size on UBlendSpacePlayerLibrary");
 
 // Class AnimGraphRuntime.AnimNotify_PlayMontageNotify
 // 0x0008 (0x0040 - 0x0038)
@@ -172,22 +191,26 @@ static_assert(alignof(UAnimNotify_PlayMontageNotifyWindow) == 0x000008, "Wrong a
 static_assert(sizeof(UAnimNotify_PlayMontageNotifyWindow) == 0x000038, "Wrong size on UAnimNotify_PlayMontageNotifyWindow");
 static_assert(offsetof(UAnimNotify_PlayMontageNotifyWindow, NotifyName) == 0x000030, "Member 'UAnimNotify_PlayMontageNotifyWindow::NotifyName' has a wrong offset!");
 
-// Class AnimGraphRuntime.AnimSequencerInstance
-// 0x0000 (0x0350 - 0x0350)
-class UAnimSequencerInstance final  : public UAnimInstance
+// Class AnimGraphRuntime.BlendListBaseLibrary
+// 0x0000 (0x0028 - 0x0028)
+class UBlendListBaseLibrary final  : public UBlueprintFunctionLibrary
 {
+public:
+	static struct FBlendListBaseReference ConvertToBlendListBase(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static void ResetNode(struct FBlendListBaseReference& BlendListBase);
+
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"AnimSequencerInstance">();
+		return StaticClassImpl<"BlendListBaseLibrary">();
 	}
-	static class UAnimSequencerInstance* GetDefaultObj()
+	static class UBlendListBaseLibrary* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UAnimSequencerInstance>();
+		return GetDefaultObjImpl<UBlendListBaseLibrary>();
 	}
 };
-static_assert(alignof(UAnimSequencerInstance) == 0x000010, "Wrong alignment on UAnimSequencerInstance");
-static_assert(sizeof(UAnimSequencerInstance) == 0x000350, "Wrong size on UAnimSequencerInstance");
+static_assert(alignof(UBlendListBaseLibrary) == 0x000008, "Wrong alignment on UBlendListBaseLibrary");
+static_assert(sizeof(UBlendListBaseLibrary) == 0x000028, "Wrong size on UBlendListBaseLibrary");
 
 // Class AnimGraphRuntime.KismetAnimationLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -218,6 +241,29 @@ public:
 };
 static_assert(alignof(UKismetAnimationLibrary) == 0x000008, "Wrong alignment on UKismetAnimationLibrary");
 static_assert(sizeof(UKismetAnimationLibrary) == 0x000028, "Wrong size on UKismetAnimationLibrary");
+
+// Class AnimGraphRuntime.LayeredBoneBlendLibrary
+// 0x0000 (0x0028 - 0x0028)
+class ULayeredBoneBlendLibrary final  : public UBlueprintFunctionLibrary
+{
+public:
+	static void ConvertToLayeredBlendPerBonePure(struct FAnimNodeReference& Node, struct FLayeredBoneBlendReference* LayeredBoneBlend, bool* Result);
+	static struct FLayeredBoneBlendReference ConvertToLayeredBoneBlend(struct FAnimNodeReference& Node, EAnimNodeReferenceConversionResult* Result);
+	static int32 GetNumPoses(struct FLayeredBoneBlendReference& LayeredBoneBlend);
+	static struct FLayeredBoneBlendReference SetBlendMask(struct FAnimUpdateContext& UpdateContext, struct FLayeredBoneBlendReference& LayeredBoneBlend, int32 PoseIndex, class FName BlendMaskName);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"LayeredBoneBlendLibrary">();
+	}
+	static class ULayeredBoneBlendLibrary* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ULayeredBoneBlendLibrary>();
+	}
+};
+static_assert(alignof(ULayeredBoneBlendLibrary) == 0x000008, "Wrong alignment on ULayeredBoneBlendLibrary");
+static_assert(sizeof(ULayeredBoneBlendLibrary) == 0x000028, "Wrong size on ULayeredBoneBlendLibrary");
 
 // Class AnimGraphRuntime.LinkedAnimGraphLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -252,7 +298,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnInterrupted;                                     // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnNotifyBegin;                                     // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnNotifyEnd;                                       // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_391A[0x30];                                    // 0x0078(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_15B7[0x30];                                    // 0x0078(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UPlayMontageCallbackProxy* CreateProxyObjectForPlayMontage(class USkeletalMeshComponent* InSkeletalMeshComponent, class UAnimMontage* MontageToPlay, float PlayRate, float StartingPosition, class FName StartingSection);

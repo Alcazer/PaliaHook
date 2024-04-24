@@ -35,7 +35,7 @@ public:
 	int32                                         Caption;                                           // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MetaData;                                          // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Script;                                            // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         SubTitle;                                          // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Subtitle;                                          // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Text;                                              // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Video;                                             // 0x0018(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -45,7 +45,7 @@ static_assert(offsetof(FMediaPlayerTrackOptions, Audio) == 0x000000, "Member 'FM
 static_assert(offsetof(FMediaPlayerTrackOptions, Caption) == 0x000004, "Member 'FMediaPlayerTrackOptions::Caption' has a wrong offset!");
 static_assert(offsetof(FMediaPlayerTrackOptions, MetaData) == 0x000008, "Member 'FMediaPlayerTrackOptions::MetaData' has a wrong offset!");
 static_assert(offsetof(FMediaPlayerTrackOptions, Script) == 0x00000C, "Member 'FMediaPlayerTrackOptions::Script' has a wrong offset!");
-static_assert(offsetof(FMediaPlayerTrackOptions, SubTitle) == 0x000010, "Member 'FMediaPlayerTrackOptions::SubTitle' has a wrong offset!");
+static_assert(offsetof(FMediaPlayerTrackOptions, Subtitle) == 0x000010, "Member 'FMediaPlayerTrackOptions::Subtitle' has a wrong offset!");
 static_assert(offsetof(FMediaPlayerTrackOptions, Text) == 0x000014, "Member 'FMediaPlayerTrackOptions::Text' has a wrong offset!");
 static_assert(offsetof(FMediaPlayerTrackOptions, Video) == 0x000018, "Member 'FMediaPlayerTrackOptions::Video' has a wrong offset!");
 
@@ -55,11 +55,11 @@ struct FMediaPlayerOptions final
 {
 public:
 	struct FMediaPlayerTrackOptions               Tracks;                                            // 0x0000(0x001C)(BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AEA[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DCF[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              SeekTime;                                          // 0x0020(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaPlayerOptionBooleanOverride             PlayOnOpen;                                        // 0x0028(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMediaPlayerOptionBooleanOverride             Loop;                                              // 0x0029(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3AEB[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DD0[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FMediaPlayerOptions) == 0x000008, "Wrong alignment on FMediaPlayerOptions");
 static_assert(sizeof(FMediaPlayerOptions) == 0x000030, "Wrong size on FMediaPlayerOptions");

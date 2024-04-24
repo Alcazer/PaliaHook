@@ -16,6 +16,55 @@
 namespace SDK
 {
 
+// ScriptStruct ValeriaDTOs.VALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable
+// 0x02B8 (0x02B8 - 0x0000)
+struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable final 
+{
+public:
+	uint8                                         BodyType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C80[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Thickness;                                         // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Height;                                            // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GenderExpression;                                  // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MuscularExpression;                                // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  AnimSetId;                                         // 0x0014(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C81[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<class FString, struct FGuid>             AnimSet_VariantSelections;                         // 0x0028(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  SkinToneId;                                        // 0x0078(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             SkinTone_VariantSelections;                        // 0x0088(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  EyesId;                                            // 0x00D8(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             Eyes_VariantSelections;                            // 0x00E8(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  HairStyleId;                                       // 0x0138(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             HairStyle_VariantSelections;                       // 0x0148(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  HeadId;                                            // 0x0198(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             Head_VariantSelections;                            // 0x01A8(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  FacialHairStyleId;                                 // 0x01F8(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             FacialHairStyle_VariantSelections;                 // 0x0208(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+	struct FGuid                                  VoiceId;                                           // 0x0258(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, struct FGuid>             Voice_VariantSelections;                           // 0x0268(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable) == 0x000008, "Wrong alignment on FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable");
+static_assert(sizeof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable) == 0x0002B8, "Wrong size on FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, BodyType) == 0x000000, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::BodyType' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Thickness) == 0x000004, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Thickness' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Height) == 0x000008, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Height' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, GenderExpression) == 0x00000C, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::GenderExpression' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, MuscularExpression) == 0x000010, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::MuscularExpression' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, AnimSetId) == 0x000014, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::AnimSetId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, AnimSet_VariantSelections) == 0x000028, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::AnimSet_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, SkinToneId) == 0x000078, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::SkinToneId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, SkinTone_VariantSelections) == 0x000088, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::SkinTone_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, EyesId) == 0x0000D8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::EyesId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Eyes_VariantSelections) == 0x0000E8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Eyes_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HairStyleId) == 0x000138, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HairStyleId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HairStyle_VariantSelections) == 0x000148, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HairStyle_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HeadId) == 0x000198, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HeadId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Head_VariantSelections) == 0x0001A8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Head_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, FacialHairStyleId) == 0x0001F8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::FacialHairStyleId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, FacialHairStyle_VariantSelections) == 0x000208, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::FacialHairStyle_VariantSelections' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, VoiceId) == 0x000258, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::VoiceId' has a wrong offset!");
+static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Voice_VariantSelections) == 0x000268, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Voice_VariantSelections' has a wrong offset!");
+
 // ScriptStruct ValeriaDTOs.VALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile
 // 0x0480 (0x0480 - 0x0000)
 struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile final 
@@ -72,55 +121,6 @@ static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatil
 static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile, GliderTrail_VariantSelections) == 0x0003D0, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile::GliderTrail_VariantSelections' has a wrong offset!");
 static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile, PetId) == 0x000420, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile::PetId' has a wrong offset!");
 static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile, Pet_VariantSelections) == 0x000430, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile::Pet_VariantSelections' has a wrong offset!");
-
-// ScriptStruct ValeriaDTOs.VALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable
-// 0x02B8 (0x02B8 - 0x0000)
-struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable final 
-{
-public:
-	uint8                                         BodyType;                                          // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A14[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Thickness;                                         // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Height;                                            // 0x0008(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GenderExpression;                                  // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         MuscularExpression;                                // 0x0010(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  AnimSetId;                                         // 0x0014(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A15[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<class FString, struct FGuid>             AnimSet_VariantSelections;                         // 0x0028(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  SkinToneId;                                        // 0x0078(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             SkinTone_VariantSelections;                        // 0x0088(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  EyesId;                                            // 0x00D8(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             Eyes_VariantSelections;                            // 0x00E8(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  HairStyleId;                                       // 0x0138(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             HairStyle_VariantSelections;                       // 0x0148(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  HeadId;                                            // 0x0198(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             Head_VariantSelections;                            // 0x01A8(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  FacialHairStyleId;                                 // 0x01F8(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             FacialHairStyle_VariantSelections;                 // 0x0208(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-	struct FGuid                                  VoiceId;                                           // 0x0258(0x0010)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<class FString, struct FGuid>             Voice_VariantSelections;                           // 0x0268(0x0050)(BlueprintVisible, RepSkip, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable) == 0x000008, "Wrong alignment on FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable");
-static_assert(sizeof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable) == 0x0002B8, "Wrong size on FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, BodyType) == 0x000000, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::BodyType' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Thickness) == 0x000004, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Thickness' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Height) == 0x000008, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Height' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, GenderExpression) == 0x00000C, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::GenderExpression' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, MuscularExpression) == 0x000010, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::MuscularExpression' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, AnimSetId) == 0x000014, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::AnimSetId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, AnimSet_VariantSelections) == 0x000028, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::AnimSet_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, SkinToneId) == 0x000078, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::SkinToneId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, SkinTone_VariantSelections) == 0x000088, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::SkinTone_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, EyesId) == 0x0000D8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::EyesId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Eyes_VariantSelections) == 0x0000E8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Eyes_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HairStyleId) == 0x000138, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HairStyleId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HairStyle_VariantSelections) == 0x000148, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HairStyle_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, HeadId) == 0x000198, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::HeadId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Head_VariantSelections) == 0x0001A8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Head_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, FacialHairStyleId) == 0x0001F8, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::FacialHairStyleId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, FacialHairStyle_VariantSelections) == 0x000208, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::FacialHairStyle_VariantSelections' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, VoiceId) == 0x000258, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::VoiceId' has a wrong offset!");
-static_assert(offsetof(FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable, Voice_VariantSelections) == 0x000268, "Member 'FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable::Voice_VariantSelections' has a wrong offset!");
 
 // ScriptStruct ValeriaDTOs.VALDTOS_MetaCharacterFormat
 // 0x0778 (0x0778 - 0x0000)

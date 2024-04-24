@@ -88,6 +88,26 @@ enum class ESwapAudioOutputDeviceResultState : uint8
 	ESwapAudioOutputDeviceResultState_MAX    = 3,
 };
 
+// Enum AudioMixer.ESourceManagerRenderThreadPhase
+// NumValues: 0x000E
+enum class ESourceManagerRenderThreadPhase : uint8
+{
+	Begin                                    = 0,
+	PumpMpscCmds                             = 1,
+	PumpCmds                                 = 2,
+	ProcessModulators                        = 3,
+	UpdatePendingReleaseData                 = 4,
+	GenerateSrcAudio_WithBusses              = 5,
+	ComputeBusses                            = 6,
+	GenerateSrcAudio_WithoutBusses           = 7,
+	UpdateBusses                             = 8,
+	SpatialInterface_OnAllSourcesProcessed   = 9,
+	SourceDataOverride_OnAllSourcesProcessed = 10,
+	UpdateGameThreadCopies                   = 11,
+	Finished                                 = 12,
+	ESourceManagerRenderThreadPhase_MAX      = 13,
+};
+
 // Enum AudioMixer.EMusicalNoteName
 // NumValues: 0x000D
 enum class EMusicalNoteName : uint8
@@ -153,21 +173,6 @@ enum class ESubmixEffectDynamicsKeySource : uint8
 	ESubmixEffectDynamicsKeySource_MAX       = 4,
 };
 
-// ScriptStruct AudioMixer.SubmixEffectDynamicProcessorFilterSettings
-// 0x000C (0x000C - 0x0000)
-struct FSubmixEffectDynamicProcessorFilterSettings final 
-{
-public:
-	uint8                                         bEnabled : 1;                                      // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1620[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Cutoff;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GainDb;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FSubmixEffectDynamicProcessorFilterSettings) == 0x000004, "Wrong alignment on FSubmixEffectDynamicProcessorFilterSettings");
-static_assert(sizeof(FSubmixEffectDynamicProcessorFilterSettings) == 0x00000C, "Wrong size on FSubmixEffectDynamicProcessorFilterSettings");
-static_assert(offsetof(FSubmixEffectDynamicProcessorFilterSettings, Cutoff) == 0x000004, "Member 'FSubmixEffectDynamicProcessorFilterSettings::Cutoff' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectDynamicProcessorFilterSettings, GainDb) == 0x000008, "Member 'FSubmixEffectDynamicProcessorFilterSettings::GainDb' has a wrong offset!");
-
 // ScriptStruct AudioMixer.AudioOutputDeviceInfo
 // 0x0048 (0x0048 - 0x0000)
 struct FAudioOutputDeviceInfo final 
@@ -178,11 +183,11 @@ public:
 	int32                                         NumChannels;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SampleRate;                                        // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EAudioMixerStreamDataFormatType               Format;                                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1621[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F1[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<EAudioMixerChannelType>                OutputChannelArray;                                // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	uint8                                         bIsSystemDefault : 1;                              // 0x0040(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bIsCurrentDevice : 1;                              // 0x0040(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (BlueprintVisible, BlueprintReadOnly, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1622[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F2[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAudioOutputDeviceInfo) == 0x000008, "Wrong alignment on FAudioOutputDeviceInfo");
 static_assert(sizeof(FAudioOutputDeviceInfo) == 0x000048, "Wrong size on FAudioOutputDeviceInfo");
@@ -193,49 +198,22 @@ static_assert(offsetof(FAudioOutputDeviceInfo, SampleRate) == 0x000024, "Member 
 static_assert(offsetof(FAudioOutputDeviceInfo, Format) == 0x000028, "Member 'FAudioOutputDeviceInfo::Format' has a wrong offset!");
 static_assert(offsetof(FAudioOutputDeviceInfo, OutputChannelArray) == 0x000030, "Member 'FAudioOutputDeviceInfo::OutputChannelArray' has a wrong offset!");
 
-// ScriptStruct AudioMixer.SubmixEffectReverbSettings
-// 0x0040 (0x0040 - 0x0000)
-struct FSubmixEffectReverbSettings final 
+// ScriptStruct AudioMixer.SubmixEffectEQBand
+// 0x0010 (0x0010 - 0x0000)
+struct FSubmixEffectEQBand final 
 {
 public:
-	bool                                          bBypassEarlyReflections;                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1623[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ReflectionsDelay;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GainHF;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReflectionsGain;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBypassLateReflections;                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1624[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         LateDelay;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecayTime;                                         // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Density;                                           // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Diffusion;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         AirAbsorptionGainHF;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DecayHFRatio;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         LateGain;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Gain;                                              // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         WetLevel;                                          // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DryLevel;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bBypass;                                           // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1625[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         Frequency;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Bandwidth;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GainDb;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         bEnabled : 1;                                      // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_17F3[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FSubmixEffectReverbSettings) == 0x000004, "Wrong alignment on FSubmixEffectReverbSettings");
-static_assert(sizeof(FSubmixEffectReverbSettings) == 0x000040, "Wrong size on FSubmixEffectReverbSettings");
-static_assert(offsetof(FSubmixEffectReverbSettings, bBypassEarlyReflections) == 0x000000, "Member 'FSubmixEffectReverbSettings::bBypassEarlyReflections' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, ReflectionsDelay) == 0x000004, "Member 'FSubmixEffectReverbSettings::ReflectionsDelay' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, GainHF) == 0x000008, "Member 'FSubmixEffectReverbSettings::GainHF' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, ReflectionsGain) == 0x00000C, "Member 'FSubmixEffectReverbSettings::ReflectionsGain' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, bBypassLateReflections) == 0x000010, "Member 'FSubmixEffectReverbSettings::bBypassLateReflections' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, LateDelay) == 0x000014, "Member 'FSubmixEffectReverbSettings::LateDelay' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, DecayTime) == 0x000018, "Member 'FSubmixEffectReverbSettings::DecayTime' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, Density) == 0x00001C, "Member 'FSubmixEffectReverbSettings::Density' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, Diffusion) == 0x000020, "Member 'FSubmixEffectReverbSettings::Diffusion' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, AirAbsorptionGainHF) == 0x000024, "Member 'FSubmixEffectReverbSettings::AirAbsorptionGainHF' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, DecayHFRatio) == 0x000028, "Member 'FSubmixEffectReverbSettings::DecayHFRatio' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, LateGain) == 0x00002C, "Member 'FSubmixEffectReverbSettings::LateGain' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, Gain) == 0x000030, "Member 'FSubmixEffectReverbSettings::Gain' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, WetLevel) == 0x000034, "Member 'FSubmixEffectReverbSettings::WetLevel' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, DryLevel) == 0x000038, "Member 'FSubmixEffectReverbSettings::DryLevel' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectReverbSettings, bBypass) == 0x00003C, "Member 'FSubmixEffectReverbSettings::bBypass' has a wrong offset!");
+static_assert(alignof(FSubmixEffectEQBand) == 0x000004, "Wrong alignment on FSubmixEffectEQBand");
+static_assert(sizeof(FSubmixEffectEQBand) == 0x000010, "Wrong size on FSubmixEffectEQBand");
+static_assert(offsetof(FSubmixEffectEQBand, Frequency) == 0x000000, "Member 'FSubmixEffectEQBand::Frequency' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectEQBand, Bandwidth) == 0x000004, "Member 'FSubmixEffectEQBand::Bandwidth' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectEQBand, GainDb) == 0x000008, "Member 'FSubmixEffectEQBand::GainDb' has a wrong offset!");
 
 // ScriptStruct AudioMixer.SwapAudioOutputResult
 // 0x0028 (0x0028 - 0x0000)
@@ -245,13 +223,28 @@ public:
 	class FString                                 CurrentDeviceId;                                   // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 RequestedDeviceId;                                 // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESwapAudioOutputDeviceResultState             Result;                                            // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1626[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F4[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSwapAudioOutputResult) == 0x000008, "Wrong alignment on FSwapAudioOutputResult");
 static_assert(sizeof(FSwapAudioOutputResult) == 0x000028, "Wrong size on FSwapAudioOutputResult");
 static_assert(offsetof(FSwapAudioOutputResult, CurrentDeviceId) == 0x000000, "Member 'FSwapAudioOutputResult::CurrentDeviceId' has a wrong offset!");
 static_assert(offsetof(FSwapAudioOutputResult, RequestedDeviceId) == 0x000010, "Member 'FSwapAudioOutputResult::RequestedDeviceId' has a wrong offset!");
 static_assert(offsetof(FSwapAudioOutputResult, Result) == 0x000020, "Member 'FSwapAudioOutputResult::Result' has a wrong offset!");
+
+// ScriptStruct AudioMixer.SubmixEffectDynamicProcessorFilterSettings
+// 0x000C (0x000C - 0x0000)
+struct FSubmixEffectDynamicProcessorFilterSettings final 
+{
+public:
+	uint8                                         bEnabled : 1;                                      // 0x0000(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_17F5[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Cutoff;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GainDb;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FSubmixEffectDynamicProcessorFilterSettings) == 0x000004, "Wrong alignment on FSubmixEffectDynamicProcessorFilterSettings");
+static_assert(sizeof(FSubmixEffectDynamicProcessorFilterSettings) == 0x00000C, "Wrong size on FSubmixEffectDynamicProcessorFilterSettings");
+static_assert(offsetof(FSubmixEffectDynamicProcessorFilterSettings, Cutoff) == 0x000004, "Member 'FSubmixEffectDynamicProcessorFilterSettings::Cutoff' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectDynamicProcessorFilterSettings, GainDb) == 0x000008, "Member 'FSubmixEffectDynamicProcessorFilterSettings::GainDb' has a wrong offset!");
 
 // ScriptStruct AudioMixer.SubmixEffectDynamicsProcessorSettings
 // 0x0060 (0x0060 - 0x0000)
@@ -261,7 +254,7 @@ public:
 	ESubmixEffectDynamicsProcessorType            DynamicsProcessorType;                             // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESubmixEffectDynamicsPeakMode                 PeakMode;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESubmixEffectDynamicsChannelLinkMode          LinkMode;                                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1627[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F6[0x1];                                     // 0x0003(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         InputGainDb;                                       // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ThresholdDb;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Ratio;                                             // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -270,19 +263,19 @@ public:
 	float                                         AttackTimeMsec;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReleaseTimeMsec;                                   // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESubmixEffectDynamicsKeySource                KeySource;                                         // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1628[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F7[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAudioBus*                              ExternalAudioBus;                                  // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USoundSubmix*                           ExternalSubmix;                                    // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bChannelLinked : 1;                                // 0x0038(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Deprecated, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bAnalogMode : 1;                                   // 0x0038(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bBypass : 1;                                       // 0x0038(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bKeyAudition : 1;                                  // 0x0038(0x0001)(BitIndex: 0x03, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_1629[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F8[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         KeyGainDb;                                         // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         OutputGainDb;                                      // 0x0040(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSubmixEffectDynamicProcessorFilterSettings KeyHighshelf;                                      // 0x0044(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FSubmixEffectDynamicProcessorFilterSettings KeyLowshelf;                                       // 0x0050(0x000C)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_162A[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17F9[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSubmixEffectDynamicsProcessorSettings) == 0x000008, "Wrong alignment on FSubmixEffectDynamicsProcessorSettings");
 static_assert(sizeof(FSubmixEffectDynamicsProcessorSettings) == 0x000060, "Wrong size on FSubmixEffectDynamicsProcessorSettings");
@@ -304,23 +297,6 @@ static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, OutputGainDb) == 
 static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, KeyHighshelf) == 0x000044, "Member 'FSubmixEffectDynamicsProcessorSettings::KeyHighshelf' has a wrong offset!");
 static_assert(offsetof(FSubmixEffectDynamicsProcessorSettings, KeyLowshelf) == 0x000050, "Member 'FSubmixEffectDynamicsProcessorSettings::KeyLowshelf' has a wrong offset!");
 
-// ScriptStruct AudioMixer.SubmixEffectEQBand
-// 0x0010 (0x0010 - 0x0000)
-struct FSubmixEffectEQBand final 
-{
-public:
-	float                                         Frequency;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Bandwidth;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         GainDb;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         bEnabled : 1;                                      // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_162B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FSubmixEffectEQBand) == 0x000004, "Wrong alignment on FSubmixEffectEQBand");
-static_assert(sizeof(FSubmixEffectEQBand) == 0x000010, "Wrong size on FSubmixEffectEQBand");
-static_assert(offsetof(FSubmixEffectEQBand, Frequency) == 0x000000, "Member 'FSubmixEffectEQBand::Frequency' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectEQBand, Bandwidth) == 0x000004, "Member 'FSubmixEffectEQBand::Bandwidth' has a wrong offset!");
-static_assert(offsetof(FSubmixEffectEQBand, GainDb) == 0x000008, "Member 'FSubmixEffectEQBand::GainDb' has a wrong offset!");
-
 // ScriptStruct AudioMixer.SubmixEffectSubmixEQSettings
 // 0x0010 (0x0010 - 0x0000)
 struct FSubmixEffectSubmixEQSettings final 
@@ -331,6 +307,50 @@ public:
 static_assert(alignof(FSubmixEffectSubmixEQSettings) == 0x000008, "Wrong alignment on FSubmixEffectSubmixEQSettings");
 static_assert(sizeof(FSubmixEffectSubmixEQSettings) == 0x000010, "Wrong size on FSubmixEffectSubmixEQSettings");
 static_assert(offsetof(FSubmixEffectSubmixEQSettings, EQBands) == 0x000000, "Member 'FSubmixEffectSubmixEQSettings::EQBands' has a wrong offset!");
+
+// ScriptStruct AudioMixer.SubmixEffectReverbSettings
+// 0x0040 (0x0040 - 0x0000)
+struct FSubmixEffectReverbSettings final 
+{
+public:
+	bool                                          bBypassEarlyReflections;                           // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17FA[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ReflectionsDelay;                                  // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         GainHF;                                            // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReflectionsGain;                                   // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBypassLateReflections;                            // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17FB[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         LateDelay;                                         // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecayTime;                                         // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Density;                                           // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Diffusion;                                         // 0x0020(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         AirAbsorptionGainHF;                               // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DecayHFRatio;                                      // 0x0028(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         LateGain;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Gain;                                              // 0x0030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         WetLevel;                                          // 0x0034(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DryLevel;                                          // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBypass;                                           // 0x003C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_17FC[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FSubmixEffectReverbSettings) == 0x000004, "Wrong alignment on FSubmixEffectReverbSettings");
+static_assert(sizeof(FSubmixEffectReverbSettings) == 0x000040, "Wrong size on FSubmixEffectReverbSettings");
+static_assert(offsetof(FSubmixEffectReverbSettings, bBypassEarlyReflections) == 0x000000, "Member 'FSubmixEffectReverbSettings::bBypassEarlyReflections' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, ReflectionsDelay) == 0x000004, "Member 'FSubmixEffectReverbSettings::ReflectionsDelay' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, GainHF) == 0x000008, "Member 'FSubmixEffectReverbSettings::GainHF' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, ReflectionsGain) == 0x00000C, "Member 'FSubmixEffectReverbSettings::ReflectionsGain' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, bBypassLateReflections) == 0x000010, "Member 'FSubmixEffectReverbSettings::bBypassLateReflections' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, LateDelay) == 0x000014, "Member 'FSubmixEffectReverbSettings::LateDelay' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, DecayTime) == 0x000018, "Member 'FSubmixEffectReverbSettings::DecayTime' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, Density) == 0x00001C, "Member 'FSubmixEffectReverbSettings::Density' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, Diffusion) == 0x000020, "Member 'FSubmixEffectReverbSettings::Diffusion' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, AirAbsorptionGainHF) == 0x000024, "Member 'FSubmixEffectReverbSettings::AirAbsorptionGainHF' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, DecayHFRatio) == 0x000028, "Member 'FSubmixEffectReverbSettings::DecayHFRatio' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, LateGain) == 0x00002C, "Member 'FSubmixEffectReverbSettings::LateGain' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, Gain) == 0x000030, "Member 'FSubmixEffectReverbSettings::Gain' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, WetLevel) == 0x000034, "Member 'FSubmixEffectReverbSettings::WetLevel' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, DryLevel) == 0x000038, "Member 'FSubmixEffectReverbSettings::DryLevel' has a wrong offset!");
+static_assert(offsetof(FSubmixEffectReverbSettings, bBypass) == 0x00003C, "Member 'FSubmixEffectReverbSettings::bBypass' has a wrong offset!");
 
 }
 

@@ -18,16 +18,16 @@ namespace SDK
 {
 
 // Class WebBrowserWidget.WebBrowser
-// 0x0058 (0x01A8 - 0x0150)
+// 0x0058 (0x01D8 - 0x0180)
 class UWebBrowser : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnUrlChanged;                                      // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnBeforePopup;                                     // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnConsoleMessage;                                  // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class FString                                 InitialURL;                                        // 0x0180(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bSupportsTransparency;                             // 0x0190(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_190A[0x17];                                    // 0x0191(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnUrlChanged;                                      // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnBeforePopup;                                     // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnConsoleMessage;                                  // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FString                                 InitialURL;                                        // 0x01B0(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bSupportsTransparency;                             // 0x01C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C26[0x17];                                    // 0x01C1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ExecuteJavascript(const class FString& ScriptText);
@@ -51,20 +51,20 @@ public:
 	}
 };
 static_assert(alignof(UWebBrowser) == 0x000008, "Wrong alignment on UWebBrowser");
-static_assert(sizeof(UWebBrowser) == 0x0001A8, "Wrong size on UWebBrowser");
-static_assert(offsetof(UWebBrowser, OnUrlChanged) == 0x000150, "Member 'UWebBrowser::OnUrlChanged' has a wrong offset!");
-static_assert(offsetof(UWebBrowser, OnBeforePopup) == 0x000160, "Member 'UWebBrowser::OnBeforePopup' has a wrong offset!");
-static_assert(offsetof(UWebBrowser, OnConsoleMessage) == 0x000170, "Member 'UWebBrowser::OnConsoleMessage' has a wrong offset!");
-static_assert(offsetof(UWebBrowser, InitialURL) == 0x000180, "Member 'UWebBrowser::InitialURL' has a wrong offset!");
-static_assert(offsetof(UWebBrowser, bSupportsTransparency) == 0x000190, "Member 'UWebBrowser::bSupportsTransparency' has a wrong offset!");
+static_assert(sizeof(UWebBrowser) == 0x0001D8, "Wrong size on UWebBrowser");
+static_assert(offsetof(UWebBrowser, OnUrlChanged) == 0x000180, "Member 'UWebBrowser::OnUrlChanged' has a wrong offset!");
+static_assert(offsetof(UWebBrowser, OnBeforePopup) == 0x000190, "Member 'UWebBrowser::OnBeforePopup' has a wrong offset!");
+static_assert(offsetof(UWebBrowser, OnConsoleMessage) == 0x0001A0, "Member 'UWebBrowser::OnConsoleMessage' has a wrong offset!");
+static_assert(offsetof(UWebBrowser, InitialURL) == 0x0001B0, "Member 'UWebBrowser::InitialURL' has a wrong offset!");
+static_assert(offsetof(UWebBrowser, bSupportsTransparency) == 0x0001C0, "Member 'UWebBrowser::bSupportsTransparency' has a wrong offset!");
 
 // Class WebBrowserWidget.WebBrowserAssetManager
-// 0x0060 (0x0088 - 0x0028)
+// 0x0050 (0x0078 - 0x0028)
 class UWebBrowserAssetManager final  : public UObject
 {
 public:
-	TSoftObjectPtr<class UMaterial>               DefaultMaterial;                                   // 0x0028(0x0030)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_190C[0x30];                                    // 0x0058(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UMaterial>               DefaultMaterial;                                   // 0x0028(0x0028)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C28[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -77,7 +77,7 @@ public:
 	}
 };
 static_assert(alignof(UWebBrowserAssetManager) == 0x000008, "Wrong alignment on UWebBrowserAssetManager");
-static_assert(sizeof(UWebBrowserAssetManager) == 0x000088, "Wrong size on UWebBrowserAssetManager");
+static_assert(sizeof(UWebBrowserAssetManager) == 0x000078, "Wrong size on UWebBrowserAssetManager");
 static_assert(offsetof(UWebBrowserAssetManager, DefaultMaterial) == 0x000028, "Member 'UWebBrowserAssetManager::DefaultMaterial' has a wrong offset!");
 
 }

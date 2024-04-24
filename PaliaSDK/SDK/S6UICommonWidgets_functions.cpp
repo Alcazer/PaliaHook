@@ -92,134 +92,6 @@ void US6UI_CommonButton_Styled::ToggleRootButtonFocuseState(bool bEnable)
 }
 
 
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.AddChildToOverlaySwitcher
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UWidget*                          Content                                                (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class US6UI_OverlaySwitcherSlot*        ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class US6UI_OverlaySwitcherSlot* US6UI_OverlaySwitcher::AddChildToOverlaySwitcher(class UWidget* Content)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_OverlaySwitcher", "AddChildToOverlaySwitcher");
-
-	Params::S6UI_OverlaySwitcher_AddChildToOverlaySwitcher Parms{};
-
-	Parms.Content = Content;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UWidget*                          Widget                                                 (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_OverlaySwitcher::SetActiveWidget(class UWidget* Widget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_OverlaySwitcher", "SetActiveWidget");
-
-	Params::S6UI_OverlaySwitcher_SetActiveWidget Parms{};
-
-	Parms.Widget = Widget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_OverlaySwitcher::SetActiveWidgetIndex(int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_OverlaySwitcher", "SetActiveWidgetIndex");
-
-	Params::S6UI_OverlaySwitcher_SetActiveWidgetIndex Parms{};
-
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidget
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UWidget* US6UI_OverlaySwitcher::GetActiveWidget() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_OverlaySwitcher", "GetActiveWidget");
-
-	Params::S6UI_OverlaySwitcher_GetActiveWidget Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidgetIndex
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 US6UI_OverlaySwitcher::GetActiveWidgetIndex() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_OverlaySwitcher", "GetActiveWidgetIndex");
-
-	Params::S6UI_OverlaySwitcher_GetActiveWidgetIndex Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function S6UICommonWidgets.S6UI_EditableRichText.ClearAllDefaultStyleOverrides
 // (Final, Native, Public)
 
@@ -858,6 +730,134 @@ void US6UI_GridPanel::ClearFill()
 	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.AddChildToOverlaySwitcher
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                          Content                                                (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class US6UI_OverlaySwitcherSlot*        ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class US6UI_OverlaySwitcherSlot* US6UI_OverlaySwitcher::AddChildToOverlaySwitcher(class UWidget* Content)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_OverlaySwitcher", "AddChildToOverlaySwitcher");
+
+	Params::S6UI_OverlaySwitcher_AddChildToOverlaySwitcher Parms{};
+
+	Parms.Content = Content;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidget
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UWidget*                          Widget                                                 (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_OverlaySwitcher::SetActiveWidget(class UWidget* Widget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_OverlaySwitcher", "SetActiveWidget");
+
+	Params::S6UI_OverlaySwitcher_SetActiveWidget Parms{};
+
+	Parms.Widget = Widget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidgetIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_OverlaySwitcher::SetActiveWidgetIndex(int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_OverlaySwitcher", "SetActiveWidgetIndex");
+
+	Params::S6UI_OverlaySwitcher_SetActiveWidgetIndex Parms{};
+
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidget
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UWidget*                          ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UWidget* US6UI_OverlaySwitcher::GetActiveWidget() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_OverlaySwitcher", "GetActiveWidget");
+
+	Params::S6UI_OverlaySwitcher_GetActiveWidget Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidgetIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 US6UI_OverlaySwitcher::GetActiveWidgetIndex() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_OverlaySwitcher", "GetActiveWidgetIndex");
+
+	Params::S6UI_OverlaySwitcher_GetActiveWidgetIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 }

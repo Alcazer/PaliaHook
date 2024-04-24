@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function AkAudio.AkAndroidInitializationSettings.MigrateMultiCoreRendering
-// (Final, Native, Public)
-// Parameters:
-// bool                                    NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAkAndroidInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAndroidInitializationSettings", "MigrateMultiCoreRendering");
-
-	Params::AkAndroidInitializationSettings_MigrateMultiCoreRendering Parms{};
-
-	Parms.NewValue = NewValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function AkAudio.AkPortalComponent.ClosePortal
 // (Final, Native, Public, BlueprintCallable)
 
@@ -206,6 +181,169 @@ EAkAcousticPortalState AAkAcousticPortal::GetCurrentState() const
 		Func = Class->GetFunction("AkAcousticPortal", "GetCurrentState");
 
 	Params::AkAcousticPortal_GetCurrentState Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AkAudio.AkAmbientSound.StartAmbientSound
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void AAkAmbientSound::StartAmbientSound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAmbientSound", "StartAmbientSound");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkAmbientSound.StopAmbientSound
+// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+
+void AAkAmbientSound::StopAmbientSound()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAmbientSound", "StopAmbientSound");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkAndroidInitializationSettings.MigrateMultiCoreRendering
+// (Final, Native, Public)
+// Parameters:
+// bool                                    NewValue                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAkAndroidInitializationSettings::MigrateMultiCoreRendering(bool NewValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAndroidInitializationSettings", "MigrateMultiCoreRendering");
+
+	Params::AkAndroidInitializationSettings_MigrateMultiCoreRendering Parms{};
+
+	Parms.NewValue = NewValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkAudioEvent.GetIsInfinite
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UAkAudioEvent::GetIsInfinite() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAudioEvent", "GetIsInfinite");
+
+	Params::AkAudioEvent_GetIsInfinite Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AkAudio.AkAudioEvent.GetMaxAttenuationRadius
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UAkAudioEvent::GetMaxAttenuationRadius() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAudioEvent", "GetMaxAttenuationRadius");
+
+	Params::AkAudioEvent_GetMaxAttenuationRadius Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AkAudio.AkAudioEvent.GetMaximumDuration
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UAkAudioEvent::GetMaximumDuration() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAudioEvent", "GetMaximumDuration");
+
+	Params::AkAudioEvent_GetMaximumDuration Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function AkAudio.AkAudioEvent.GetMinimumDuration
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UAkAudioEvent::GetMinimumDuration() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkAudioEvent", "GetMinimumDuration");
+
+	Params::AkAudioEvent_GetMinimumDuration Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -448,194 +586,6 @@ void UAkGameObject::SetRTPCValue(class UAkRtpc* RTPCValue, float Value, int32 In
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AkAudio.AkRoomComponent.SetGeometryComponent
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UAkAcousticTextureSetComponent*   TextureSetComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UAkRoomComponent::SetGeometryComponent(class UAkAcousticTextureSetComponent* TextureSetComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkRoomComponent", "SetGeometryComponent");
-
-	Params::AkRoomComponent_SetGeometryComponent Parms{};
-
-	Parms.TextureSetComponent = TextureSetComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AkAudio.AkRoomComponent.GetPrimitiveParent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UPrimitiveComponent*              ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UPrimitiveComponent* UAkRoomComponent::GetPrimitiveParent() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkRoomComponent", "GetPrimitiveParent");
-
-	Params::AkRoomComponent_GetPrimitiveParent Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AkAudio.AkAmbientSound.StartAmbientSound
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void AAkAmbientSound::StartAmbientSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAmbientSound", "StartAmbientSound");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AkAudio.AkAmbientSound.StopAmbientSound
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
-
-void AAkAmbientSound::StopAmbientSound()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAmbientSound", "StopAmbientSound");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function AkAudio.AkAudioEvent.GetIsInfinite
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UAkAudioEvent::GetIsInfinite() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAudioEvent", "GetIsInfinite");
-
-	Params::AkAudioEvent_GetIsInfinite Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AkAudio.AkAudioEvent.GetMaxAttenuationRadius
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UAkAudioEvent::GetMaxAttenuationRadius() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAudioEvent", "GetMaxAttenuationRadius");
-
-	Params::AkAudioEvent_GetMaxAttenuationRadius Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AkAudio.AkAudioEvent.GetMaximumDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UAkAudioEvent::GetMaximumDuration() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAudioEvent", "GetMaximumDuration");
-
-	Params::AkAudioEvent_GetMaximumDuration Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function AkAudio.AkAudioEvent.GetMinimumDuration
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UAkAudioEvent::GetMinimumDuration() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("AkAudioEvent", "GetMinimumDuration");
-
-	Params::AkAudioEvent_GetMinimumDuration Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
 }
 
 
@@ -3998,6 +3948,56 @@ void UAkPS4InitializationSettings::MigrateMultiCoreRendering(bool NewValue)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkRoomComponent.SetGeometryComponent
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UAkAcousticTextureSetComponent*   TextureSetComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UAkRoomComponent::SetGeometryComponent(class UAkAcousticTextureSetComponent* TextureSetComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkRoomComponent", "SetGeometryComponent");
+
+	Params::AkRoomComponent_SetGeometryComponent Parms{};
+
+	Parms.TextureSetComponent = TextureSetComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function AkAudio.AkRoomComponent.GetPrimitiveParent
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UPrimitiveComponent*              ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UPrimitiveComponent* UAkRoomComponent::GetPrimitiveParent() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("AkRoomComponent", "GetPrimitiveParent");
+
+	Params::AkRoomComponent_GetPrimitiveParent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

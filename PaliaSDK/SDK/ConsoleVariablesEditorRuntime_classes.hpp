@@ -19,12 +19,13 @@ namespace SDK
 {
 
 // Class ConsoleVariablesEditorRuntime.ConsoleVariablesAsset
-// 0x0020 (0x0048 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UConsoleVariablesAsset final  : public UObject
 {
 public:
-	class FString                                 VariableCollectionDescription;                     // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<struct FConsoleVariablesEditorAssetSaveData> SavedCommands;                                     // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2E23[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 VariableCollectionDescription;                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<struct FConsoleVariablesEditorAssetSaveData> SavedCommands;                                     // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	void AddOrSetConsoleObjectSavedData(struct FConsoleVariablesEditorAssetSaveData& InData);
@@ -52,9 +53,9 @@ public:
 	}
 };
 static_assert(alignof(UConsoleVariablesAsset) == 0x000008, "Wrong alignment on UConsoleVariablesAsset");
-static_assert(sizeof(UConsoleVariablesAsset) == 0x000048, "Wrong size on UConsoleVariablesAsset");
-static_assert(offsetof(UConsoleVariablesAsset, VariableCollectionDescription) == 0x000028, "Member 'UConsoleVariablesAsset::VariableCollectionDescription' has a wrong offset!");
-static_assert(offsetof(UConsoleVariablesAsset, SavedCommands) == 0x000038, "Member 'UConsoleVariablesAsset::SavedCommands' has a wrong offset!");
+static_assert(sizeof(UConsoleVariablesAsset) == 0x000050, "Wrong size on UConsoleVariablesAsset");
+static_assert(offsetof(UConsoleVariablesAsset, VariableCollectionDescription) == 0x000030, "Member 'UConsoleVariablesAsset::VariableCollectionDescription' has a wrong offset!");
+static_assert(offsetof(UConsoleVariablesAsset, SavedCommands) == 0x000040, "Member 'UConsoleVariablesAsset::SavedCommands' has a wrong offset!");
 
 }
 

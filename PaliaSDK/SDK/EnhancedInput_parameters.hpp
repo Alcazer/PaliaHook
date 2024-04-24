@@ -13,10 +13,384 @@
 #include "EnhancedInput_structs.hpp"
 #include "InputCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.ResetMappingToDefault
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_ResetMappingToDefault final 
+{
+public:
+	class FName                                   InMappingName;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_ResetMappingToDefault) == 0x000004, "Wrong alignment on EnhancedPlayerMappableKeyProfile_ResetMappingToDefault");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_ResetMappingToDefault) == 0x000008, "Wrong size on EnhancedPlayerMappableKeyProfile_ResetMappingToDefault");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_ResetMappingToDefault, InMappingName) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_ResetMappingToDefault::InMappingName' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.SetDisplayName
+// 0x0018 (0x0018 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_SetDisplayName final 
+{
+public:
+	class FText                                   NewDisplayName;                                    // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_SetDisplayName) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_SetDisplayName");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_SetDisplayName) == 0x000018, "Wrong size on EnhancedPlayerMappableKeyProfile_SetDisplayName");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_SetDisplayName, NewDisplayName) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_SetDisplayName::NewDisplayName' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.DoesMappingPassQueryOptions
+// 0x00C0 (0x00C0 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions final 
+{
+public:
+	struct FPlayerKeyMapping                      PlayerMapping;                                     // 0x0000(0x0090)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerMappableKeyQueryOptions         Options;                                           // 0x0090(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CEC[0x7];                                     // 0x00B9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions) == 0x0000C0, "Wrong size on EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions, PlayerMapping) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions::PlayerMapping' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions, Options) == 0x000090, "Member 'EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions::Options' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions, ReturnValue) == 0x0000B8, "Member 'EnhancedPlayerMappableKeyProfile_DoesMappingPassQueryOptions::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappedKeysInRow
+// 0x0020 (0x0020 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKey>                           OutKeys;                                           // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CED[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow) == 0x000020, "Wrong size on EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow, MappingName) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow, OutKeys) == 0x000008, "Member 'EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow::OutKeys' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow, ReturnValue) == 0x000018, "Member 'EnhancedPlayerMappableKeyProfile_GetMappedKeysInRow::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetMappingNamesForKey
+// 0x0030 (0x0030 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey final 
+{
+public:
+	struct FKey                                   InKey;                                             // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class FName>                           OutMappingNames;                                   // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CEE[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey) == 0x000030, "Wrong size on EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey, InKey) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey::InKey' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey, OutMappingNames) == 0x000018, "Member 'EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey::OutMappingNames' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey, ReturnValue) == 0x000028, "Member 'EnhancedPlayerMappableKeyProfile_GetMappingNamesForKey::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetPlayerMappingRows
+// 0x0050 (0x0050 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows final 
+{
+public:
+	TMap<class FName, struct FKeyMappingRow>      ReturnValue;                                       // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows) == 0x000050, "Wrong size on EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows, ReturnValue) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_GetPlayerMappingRows::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetProfileDisplayName
+// 0x0018 (0x0018 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_GetProfileDisplayName final 
+{
+public:
+	class FText                                   ReturnValue;                                       // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_GetProfileDisplayName) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_GetProfileDisplayName");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_GetProfileDisplayName) == 0x000018, "Wrong size on EnhancedPlayerMappableKeyProfile_GetProfileDisplayName");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetProfileDisplayName, ReturnValue) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_GetProfileDisplayName::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.GetProfileIdentifer
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_GetProfileIdentifer final 
+{
+public:
+	struct FGameplayTag                           ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_GetProfileIdentifer) == 0x000004, "Wrong alignment on EnhancedPlayerMappableKeyProfile_GetProfileIdentifer");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_GetProfileIdentifer) == 0x000008, "Wrong size on EnhancedPlayerMappableKeyProfile_GetProfileIdentifer");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_GetProfileIdentifer, ReturnValue) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_GetProfileIdentifer::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.K2_FindKeyMapping
+// 0x00D0 (0x00D0 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping final 
+{
+public:
+	struct FPlayerKeyMapping                      OutKeyMapping;                                     // 0x0000(0x0090)(Parm, OutParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMapPlayerKeyArgs                      InArgs;                                            // 0x0090(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping) == 0x0000D0, "Wrong size on EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping, OutKeyMapping) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping::OutKeyMapping' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping, InArgs) == 0x000090, "Member 'EnhancedPlayerMappableKeyProfile_K2_FindKeyMapping::InArgs' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.QueryPlayerMappedKeys
+// 0x0040 (0x0040 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys final 
+{
+public:
+	struct FPlayerMappableKeyQueryOptions         Options;                                           // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FKey>                           OutKeys;                                           // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CEF[0x4];                                     // 0x003C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys) == 0x000040, "Wrong size on EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys, Options) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys::Options' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys, OutKeys) == 0x000028, "Member 'EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys::OutKeys' has a wrong offset!");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys, ReturnValue) == 0x000038, "Member 'EnhancedPlayerMappableKeyProfile_QueryPlayerMappedKeys::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedPlayerMappableKeyProfile.ToString
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedPlayerMappableKeyProfile_ToString final 
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedPlayerMappableKeyProfile_ToString) == 0x000008, "Wrong alignment on EnhancedPlayerMappableKeyProfile_ToString");
+static_assert(sizeof(EnhancedPlayerMappableKeyProfile_ToString) == 0x000010, "Wrong size on EnhancedPlayerMappableKeyProfile_ToString");
+static_assert(offsetof(EnhancedPlayerMappableKeyProfile_ToString, ReturnValue) == 0x000000, "Member 'EnhancedPlayerMappableKeyProfile_ToString::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.CreateNewKeyProfile
+// 0x0040 (0x0040 - 0x0000)
+struct EnhancedInputUserSettings_CreateNewKeyProfile final 
+{
+public:
+	struct FPlayerMappableKeyProfileCreationArgs  InArgs;                                            // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UEnhancedPlayerMappableKeyProfile*      ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_CreateNewKeyProfile) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_CreateNewKeyProfile");
+static_assert(sizeof(EnhancedInputUserSettings_CreateNewKeyProfile) == 0x000040, "Wrong size on EnhancedInputUserSettings_CreateNewKeyProfile");
+static_assert(offsetof(EnhancedInputUserSettings_CreateNewKeyProfile, InArgs) == 0x000000, "Member 'EnhancedInputUserSettings_CreateNewKeyProfile::InArgs' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_CreateNewKeyProfile, ReturnValue) == 0x000038, "Member 'EnhancedInputUserSettings_CreateNewKeyProfile::ReturnValue' has a wrong offset!");
+
+// DelegateFunction EnhancedInput.EnhancedInputUserSettings.EnhancedInputUserSettingsChanged__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature final 
+{
+public:
+	class UEnhancedInputUserSettings*             Settings;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature");
+static_assert(sizeof(EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature) == 0x000008, "Wrong size on EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature");
+static_assert(offsetof(EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature, Settings) == 0x000000, "Member 'EnhancedInputUserSettings_EnhancedInputUserSettingsChanged__DelegateSignature::Settings' has a wrong offset!");
+
+// DelegateFunction EnhancedInput.EnhancedInputUserSettings.MappableKeyProfileChanged__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature final 
+{
+public:
+	class UEnhancedPlayerMappableKeyProfile*      NewProfile;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature");
+static_assert(sizeof(EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature) == 0x000008, "Wrong size on EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature");
+static_assert(offsetof(EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature, NewProfile) == 0x000000, "Member 'EnhancedInputUserSettings_MappableKeyProfileChanged__DelegateSignature::NewProfile' has a wrong offset!");
+
+// DelegateFunction EnhancedInput.EnhancedInputUserSettings.MappingContextRegisteredWithSettings__DelegateSignature
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature final 
+{
+public:
+	class UInputMappingContext*                   IMC;                                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature");
+static_assert(sizeof(EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature) == 0x000008, "Wrong size on EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature");
+static_assert(offsetof(EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature, IMC) == 0x000000, "Member 'EnhancedInputUserSettings_MappingContextRegisteredWithSettings__DelegateSignature::IMC' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.MapPlayerKey
+// 0x0060 (0x0060 - 0x0000)
+struct EnhancedInputUserSettings_MapPlayerKey final 
+{
+public:
+	struct FMapPlayerKeyArgs                      InArgs;                                            // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FailureReason;                                     // 0x0040(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_MapPlayerKey) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_MapPlayerKey");
+static_assert(sizeof(EnhancedInputUserSettings_MapPlayerKey) == 0x000060, "Wrong size on EnhancedInputUserSettings_MapPlayerKey");
+static_assert(offsetof(EnhancedInputUserSettings_MapPlayerKey, InArgs) == 0x000000, "Member 'EnhancedInputUserSettings_MapPlayerKey::InArgs' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_MapPlayerKey, FailureReason) == 0x000040, "Member 'EnhancedInputUserSettings_MapPlayerKey::FailureReason' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContext
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputUserSettings_RegisterInputMappingContext final 
+{
+public:
+	class UInputMappingContext*                   IMC;                                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF2[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_RegisterInputMappingContext) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_RegisterInputMappingContext");
+static_assert(sizeof(EnhancedInputUserSettings_RegisterInputMappingContext) == 0x000010, "Wrong size on EnhancedInputUserSettings_RegisterInputMappingContext");
+static_assert(offsetof(EnhancedInputUserSettings_RegisterInputMappingContext, IMC) == 0x000000, "Member 'EnhancedInputUserSettings_RegisterInputMappingContext::IMC' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_RegisterInputMappingContext, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_RegisterInputMappingContext::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.RegisterInputMappingContexts
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputUserSettings_RegisterInputMappingContexts final 
+{
+public:
+	TSet<class UInputMappingContext*>             MappingContexts;                                   // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF3[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_RegisterInputMappingContexts) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_RegisterInputMappingContexts");
+static_assert(sizeof(EnhancedInputUserSettings_RegisterInputMappingContexts) == 0x000058, "Wrong size on EnhancedInputUserSettings_RegisterInputMappingContexts");
+static_assert(offsetof(EnhancedInputUserSettings_RegisterInputMappingContexts, MappingContexts) == 0x000000, "Member 'EnhancedInputUserSettings_RegisterInputMappingContexts::MappingContexts' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_RegisterInputMappingContexts, ReturnValue) == 0x000050, "Member 'EnhancedInputUserSettings_RegisterInputMappingContexts::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.ResetAllPlayerKeysInRow
+// 0x0060 (0x0060 - 0x0000)
+struct EnhancedInputUserSettings_ResetAllPlayerKeysInRow final 
+{
+public:
+	struct FMapPlayerKeyArgs                      InArgs;                                            // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FailureReason;                                     // 0x0040(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_ResetAllPlayerKeysInRow) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_ResetAllPlayerKeysInRow");
+static_assert(sizeof(EnhancedInputUserSettings_ResetAllPlayerKeysInRow) == 0x000060, "Wrong size on EnhancedInputUserSettings_ResetAllPlayerKeysInRow");
+static_assert(offsetof(EnhancedInputUserSettings_ResetAllPlayerKeysInRow, InArgs) == 0x000000, "Member 'EnhancedInputUserSettings_ResetAllPlayerKeysInRow::InArgs' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_ResetAllPlayerKeysInRow, FailureReason) == 0x000040, "Member 'EnhancedInputUserSettings_ResetAllPlayerKeysInRow::FailureReason' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.ResetKeyProfileToDefault
+// 0x0028 (0x0028 - 0x0000)
+struct EnhancedInputUserSettings_ResetKeyProfileToDefault final 
+{
+public:
+	struct FGameplayTag                           ProfileId;                                         // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FailureReason;                                     // 0x0008(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_ResetKeyProfileToDefault) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_ResetKeyProfileToDefault");
+static_assert(sizeof(EnhancedInputUserSettings_ResetKeyProfileToDefault) == 0x000028, "Wrong size on EnhancedInputUserSettings_ResetKeyProfileToDefault");
+static_assert(offsetof(EnhancedInputUserSettings_ResetKeyProfileToDefault, ProfileId) == 0x000000, "Member 'EnhancedInputUserSettings_ResetKeyProfileToDefault::ProfileId' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_ResetKeyProfileToDefault, FailureReason) == 0x000008, "Member 'EnhancedInputUserSettings_ResetKeyProfileToDefault::FailureReason' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.SetKeyProfile
+// 0x000C (0x000C - 0x0000)
+struct EnhancedInputUserSettings_SetKeyProfile final 
+{
+public:
+	struct FGameplayTag                           InProfileId;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF4[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_SetKeyProfile) == 0x000004, "Wrong alignment on EnhancedInputUserSettings_SetKeyProfile");
+static_assert(sizeof(EnhancedInputUserSettings_SetKeyProfile) == 0x00000C, "Wrong size on EnhancedInputUserSettings_SetKeyProfile");
+static_assert(offsetof(EnhancedInputUserSettings_SetKeyProfile, InProfileId) == 0x000000, "Member 'EnhancedInputUserSettings_SetKeyProfile::InProfileId' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_SetKeyProfile, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_SetKeyProfile::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.UnMapPlayerKey
+// 0x0060 (0x0060 - 0x0000)
+struct EnhancedInputUserSettings_UnMapPlayerKey final 
+{
+public:
+	struct FMapPlayerKeyArgs                      InArgs;                                            // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGameplayTagContainer                  FailureReason;                                     // 0x0040(0x0020)(Parm, OutParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_UnMapPlayerKey) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_UnMapPlayerKey");
+static_assert(sizeof(EnhancedInputUserSettings_UnMapPlayerKey) == 0x000060, "Wrong size on EnhancedInputUserSettings_UnMapPlayerKey");
+static_assert(offsetof(EnhancedInputUserSettings_UnMapPlayerKey, InArgs) == 0x000000, "Member 'EnhancedInputUserSettings_UnMapPlayerKey::InArgs' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_UnMapPlayerKey, FailureReason) == 0x000040, "Member 'EnhancedInputUserSettings_UnMapPlayerKey::FailureReason' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContext
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputUserSettings_UnregisterInputMappingContext final 
+{
+public:
+	class UInputMappingContext*                   IMC;                                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF5[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_UnregisterInputMappingContext) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_UnregisterInputMappingContext");
+static_assert(sizeof(EnhancedInputUserSettings_UnregisterInputMappingContext) == 0x000010, "Wrong size on EnhancedInputUserSettings_UnregisterInputMappingContext");
+static_assert(offsetof(EnhancedInputUserSettings_UnregisterInputMappingContext, IMC) == 0x000000, "Member 'EnhancedInputUserSettings_UnregisterInputMappingContext::IMC' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_UnregisterInputMappingContext, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_UnregisterInputMappingContext::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.UnregisterInputMappingContexts
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputUserSettings_UnregisterInputMappingContexts final 
+{
+public:
+	TSet<class UInputMappingContext*>             MappingContexts;                                   // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF6[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_UnregisterInputMappingContexts) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_UnregisterInputMappingContexts");
+static_assert(sizeof(EnhancedInputUserSettings_UnregisterInputMappingContexts) == 0x000058, "Wrong size on EnhancedInputUserSettings_UnregisterInputMappingContexts");
+static_assert(offsetof(EnhancedInputUserSettings_UnregisterInputMappingContexts, MappingContexts) == 0x000000, "Member 'EnhancedInputUserSettings_UnregisterInputMappingContexts::MappingContexts' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_UnregisterInputMappingContexts, ReturnValue) == 0x000050, "Member 'EnhancedInputUserSettings_UnregisterInputMappingContexts::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.FindMappingsInRow
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputUserSettings_FindMappingsInRow final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<struct FPlayerKeyMapping>                ReturnValue;                                       // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_FindMappingsInRow) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_FindMappingsInRow");
+static_assert(sizeof(EnhancedInputUserSettings_FindMappingsInRow) == 0x000058, "Wrong size on EnhancedInputUserSettings_FindMappingsInRow");
+static_assert(offsetof(EnhancedInputUserSettings_FindMappingsInRow, MappingName) == 0x000000, "Member 'EnhancedInputUserSettings_FindMappingsInRow::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_FindMappingsInRow, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_FindMappingsInRow::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.GetCurrentKeyProfile
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputUserSettings_GetCurrentKeyProfile final 
+{
+public:
+	class UEnhancedPlayerMappableKeyProfile*      ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_GetCurrentKeyProfile) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_GetCurrentKeyProfile");
+static_assert(sizeof(EnhancedInputUserSettings_GetCurrentKeyProfile) == 0x000008, "Wrong size on EnhancedInputUserSettings_GetCurrentKeyProfile");
+static_assert(offsetof(EnhancedInputUserSettings_GetCurrentKeyProfile, ReturnValue) == 0x000000, "Member 'EnhancedInputUserSettings_GetCurrentKeyProfile::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.GetCurrentKeyProfileIdentifier
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier final 
+{
+public:
+	struct FGameplayTag                           ReturnValue;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier) == 0x000004, "Wrong alignment on EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier");
+static_assert(sizeof(EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier) == 0x000008, "Wrong size on EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier");
+static_assert(offsetof(EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier, ReturnValue) == 0x000000, "Member 'EnhancedInputUserSettings_GetCurrentKeyProfileIdentifier::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.GetKeyProfileWithIdentifier
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputUserSettings_GetKeyProfileWithIdentifier final 
+{
+public:
+	struct FGameplayTag                           ProfileId;                                         // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UEnhancedPlayerMappableKeyProfile*      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputUserSettings_GetKeyProfileWithIdentifier) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_GetKeyProfileWithIdentifier");
+static_assert(sizeof(EnhancedInputUserSettings_GetKeyProfileWithIdentifier) == 0x000010, "Wrong size on EnhancedInputUserSettings_GetKeyProfileWithIdentifier");
+static_assert(offsetof(EnhancedInputUserSettings_GetKeyProfileWithIdentifier, ProfileId) == 0x000000, "Member 'EnhancedInputUserSettings_GetKeyProfileWithIdentifier::ProfileId' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_GetKeyProfileWithIdentifier, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_GetKeyProfileWithIdentifier::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputUserSettings.IsMappingContextRegistered
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputUserSettings_IsMappingContextRegistered final 
+{
+public:
+	class UInputMappingContext*                   IMC;                                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CF7[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputUserSettings_IsMappingContextRegistered) == 0x000008, "Wrong alignment on EnhancedInputUserSettings_IsMappingContextRegistered");
+static_assert(sizeof(EnhancedInputUserSettings_IsMappingContextRegistered) == 0x000010, "Wrong size on EnhancedInputUserSettings_IsMappingContextRegistered");
+static_assert(offsetof(EnhancedInputUserSettings_IsMappingContextRegistered, IMC) == 0x000000, "Member 'EnhancedInputUserSettings_IsMappingContextRegistered::IMC' has a wrong offset!");
+static_assert(offsetof(EnhancedInputUserSettings_IsMappingContextRegistered, ReturnValue) == 0x000008, "Member 'EnhancedInputUserSettings_IsMappingContextRegistered::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.EnhancedInputComponent.GetBoundActionValue
 // 0x0028 (0x0028 - 0x0000)
@@ -41,7 +415,7 @@ public:
 	double                                        Y;                                                 // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Z;                                                 // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInputActionValueType                         Type;                                              // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17CD[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFA[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputLibrary_BreakInputActionValue) == 0x000008, "Wrong alignment on EnhancedInputLibrary_BreakInputActionValue");
 static_assert(sizeof(EnhancedInputLibrary_BreakInputActionValue) == 0x000040, "Wrong size on EnhancedInputLibrary_BreakInputActionValue");
@@ -97,7 +471,7 @@ struct EnhancedInputLibrary_Conv_InputActionValueToBool final
 public:
 	struct FInputActionValue                      InValue;                                           // 0x0000(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17CE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFB[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputLibrary_Conv_InputActionValueToBool) == 0x000008, "Wrong alignment on EnhancedInputLibrary_Conv_InputActionValueToBool");
 static_assert(sizeof(EnhancedInputLibrary_Conv_InputActionValueToBool) == 0x000028, "Wrong size on EnhancedInputLibrary_Conv_InputActionValueToBool");
@@ -132,6 +506,90 @@ static_assert(offsetof(EnhancedInputLibrary_GetBoundActionValue, Actor) == 0x000
 static_assert(offsetof(EnhancedInputLibrary_GetBoundActionValue, Action) == 0x000008, "Member 'EnhancedInputLibrary_GetBoundActionValue::Action' has a wrong offset!");
 static_assert(offsetof(EnhancedInputLibrary_GetBoundActionValue, ReturnValue) == 0x000010, "Member 'EnhancedInputLibrary_GetBoundActionValue::ReturnValue' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputLibrary.GetFirstPlayerMappableKeySlot
+// 0x0004 (0x0004 - 0x0000)
+struct EnhancedInputLibrary_GetFirstPlayerMappableKeySlot final 
+{
+public:
+	struct FPlayerMappableKeySlot                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetFirstPlayerMappableKeySlot) == 0x000004, "Wrong alignment on EnhancedInputLibrary_GetFirstPlayerMappableKeySlot");
+static_assert(sizeof(EnhancedInputLibrary_GetFirstPlayerMappableKeySlot) == 0x000004, "Wrong size on EnhancedInputLibrary_GetFirstPlayerMappableKeySlot");
+static_assert(offsetof(EnhancedInputLibrary_GetFirstPlayerMappableKeySlot, ReturnValue) == 0x000000, "Member 'EnhancedInputLibrary_GetFirstPlayerMappableKeySlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.GetFourthPlayerMappableKeySlot
+// 0x0004 (0x0004 - 0x0000)
+struct EnhancedInputLibrary_GetFourthPlayerMappableKeySlot final 
+{
+public:
+	struct FPlayerMappableKeySlot                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetFourthPlayerMappableKeySlot) == 0x000004, "Wrong alignment on EnhancedInputLibrary_GetFourthPlayerMappableKeySlot");
+static_assert(sizeof(EnhancedInputLibrary_GetFourthPlayerMappableKeySlot) == 0x000004, "Wrong size on EnhancedInputLibrary_GetFourthPlayerMappableKeySlot");
+static_assert(offsetof(EnhancedInputLibrary_GetFourthPlayerMappableKeySlot, ReturnValue) == 0x000000, "Member 'EnhancedInputLibrary_GetFourthPlayerMappableKeySlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.GetMappingName
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputLibrary_GetMappingName final 
+{
+public:
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetMappingName) == 0x000008, "Wrong alignment on EnhancedInputLibrary_GetMappingName");
+static_assert(sizeof(EnhancedInputLibrary_GetMappingName) == 0x000058, "Wrong size on EnhancedInputLibrary_GetMappingName");
+static_assert(offsetof(EnhancedInputLibrary_GetMappingName, ActionKeyMapping) == 0x000000, "Member 'EnhancedInputLibrary_GetMappingName::ActionKeyMapping' has a wrong offset!");
+static_assert(offsetof(EnhancedInputLibrary_GetMappingName, ReturnValue) == 0x000050, "Member 'EnhancedInputLibrary_GetMappingName::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.GetPlayerMappableKeySettings
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputLibrary_GetPlayerMappableKeySettings final 
+{
+public:
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UPlayerMappableKeySettings*             ReturnValue;                                       // 0x0050(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetPlayerMappableKeySettings) == 0x000008, "Wrong alignment on EnhancedInputLibrary_GetPlayerMappableKeySettings");
+static_assert(sizeof(EnhancedInputLibrary_GetPlayerMappableKeySettings) == 0x000058, "Wrong size on EnhancedInputLibrary_GetPlayerMappableKeySettings");
+static_assert(offsetof(EnhancedInputLibrary_GetPlayerMappableKeySettings, ActionKeyMapping) == 0x000000, "Member 'EnhancedInputLibrary_GetPlayerMappableKeySettings::ActionKeyMapping' has a wrong offset!");
+static_assert(offsetof(EnhancedInputLibrary_GetPlayerMappableKeySettings, ReturnValue) == 0x000050, "Member 'EnhancedInputLibrary_GetPlayerMappableKeySettings::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.GetSecondPlayerMappableKeySlot
+// 0x0004 (0x0004 - 0x0000)
+struct EnhancedInputLibrary_GetSecondPlayerMappableKeySlot final 
+{
+public:
+	struct FPlayerMappableKeySlot                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetSecondPlayerMappableKeySlot) == 0x000004, "Wrong alignment on EnhancedInputLibrary_GetSecondPlayerMappableKeySlot");
+static_assert(sizeof(EnhancedInputLibrary_GetSecondPlayerMappableKeySlot) == 0x000004, "Wrong size on EnhancedInputLibrary_GetSecondPlayerMappableKeySlot");
+static_assert(offsetof(EnhancedInputLibrary_GetSecondPlayerMappableKeySlot, ReturnValue) == 0x000000, "Member 'EnhancedInputLibrary_GetSecondPlayerMappableKeySlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.GetThirdPlayerMappableKeySlot
+// 0x0004 (0x0004 - 0x0000)
+struct EnhancedInputLibrary_GetThirdPlayerMappableKeySlot final 
+{
+public:
+	struct FPlayerMappableKeySlot                 ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputLibrary_GetThirdPlayerMappableKeySlot) == 0x000004, "Wrong alignment on EnhancedInputLibrary_GetThirdPlayerMappableKeySlot");
+static_assert(sizeof(EnhancedInputLibrary_GetThirdPlayerMappableKeySlot) == 0x000004, "Wrong size on EnhancedInputLibrary_GetThirdPlayerMappableKeySlot");
+static_assert(offsetof(EnhancedInputLibrary_GetThirdPlayerMappableKeySlot, ReturnValue) == 0x000000, "Member 'EnhancedInputLibrary_GetThirdPlayerMappableKeySlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputLibrary.IsActionKeyMappingPlayerMappable
+// 0x0058 (0x0058 - 0x0000)
+struct EnhancedInputLibrary_IsActionKeyMappingPlayerMappable final 
+{
+public:
+	struct FEnhancedActionKeyMapping              ActionKeyMapping;                                  // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CFC[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputLibrary_IsActionKeyMappingPlayerMappable) == 0x000008, "Wrong alignment on EnhancedInputLibrary_IsActionKeyMappingPlayerMappable");
+static_assert(sizeof(EnhancedInputLibrary_IsActionKeyMappingPlayerMappable) == 0x000058, "Wrong size on EnhancedInputLibrary_IsActionKeyMappingPlayerMappable");
+static_assert(offsetof(EnhancedInputLibrary_IsActionKeyMappingPlayerMappable, ActionKeyMapping) == 0x000000, "Member 'EnhancedInputLibrary_IsActionKeyMappingPlayerMappable::ActionKeyMapping' has a wrong offset!");
+static_assert(offsetof(EnhancedInputLibrary_IsActionKeyMappingPlayerMappable, ReturnValue) == 0x000050, "Member 'EnhancedInputLibrary_IsActionKeyMappingPlayerMappable::ReturnValue' has a wrong offset!");
+
 // Function EnhancedInput.EnhancedInputLibrary.MakeInputActionValue
 // 0x0058 (0x0058 - 0x0000)
 struct EnhancedInputLibrary_MakeInputActionValue final 
@@ -160,7 +618,7 @@ public:
 	double                                        Y;                                                 // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        Z;                                                 // 0x0010(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInputActionValueType                         ValueType;                                         // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17CF[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFD[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      ReturnValue;                                       // 0x0020(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(EnhancedInputLibrary_MakeInputActionValueOfType) == 0x000008, "Wrong alignment on EnhancedInputLibrary_MakeInputActionValueOfType");
@@ -178,7 +636,7 @@ struct EnhancedInputLibrary_RequestRebuildControlMappingsUsingContext final
 public:
 	class UInputMappingContext*                   Context;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceImmediately;                                 // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D0[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFE[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputLibrary_RequestRebuildControlMappingsUsingContext) == 0x000008, "Wrong alignment on EnhancedInputLibrary_RequestRebuildControlMappingsUsingContext");
 static_assert(sizeof(EnhancedInputLibrary_RequestRebuildControlMappingsUsingContext) == 0x000010, "Wrong size on EnhancedInputLibrary_RequestRebuildControlMappingsUsingContext");
@@ -206,7 +664,7 @@ public:
 	class UInputMappingContext*                   MappingContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Priority;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x000C(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D1[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D00[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_AddMappingContext) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_AddMappingContext");
 static_assert(sizeof(EnhancedInputSubsystemInterface_AddMappingContext) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_AddMappingContext");
@@ -221,30 +679,12 @@ struct EnhancedInputSubsystemInterface_AddPlayerMappableConfig final
 public:
 	class UPlayerMappableInputConfig*             Config;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D2[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D01[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_AddPlayerMappableConfig) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_AddPlayerMappableConfig");
 static_assert(sizeof(EnhancedInputSubsystemInterface_AddPlayerMappableConfig) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_AddPlayerMappableConfig");
 static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappableConfig, Config) == 0x000000, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappableConfig::Config' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappableConfig, Options) == 0x000008, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappableConfig::Options' has a wrong offset!");
-
-// Function EnhancedInput.EnhancedInputSubsystemInterface.AddPlayerMappedKey
-// 0x0028 (0x0028 - 0x0000)
-struct EnhancedInputSubsystemInterface_AddPlayerMappedKey final 
-{
-public:
-	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   NewKey;                                            // 0x0008(0x0018)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FModifyContextOptions                  Options;                                           // 0x0020(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D3[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x0024(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(EnhancedInputSubsystemInterface_AddPlayerMappedKey) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_AddPlayerMappedKey");
-static_assert(sizeof(EnhancedInputSubsystemInterface_AddPlayerMappedKey) == 0x000028, "Wrong size on EnhancedInputSubsystemInterface_AddPlayerMappedKey");
-static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappedKey, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappedKey::MappingName' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappedKey, NewKey) == 0x000008, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappedKey::NewKey' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappedKey, Options) == 0x000020, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappedKey::Options' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_AddPlayerMappedKey, ReturnValue) == 0x000024, "Member 'EnhancedInputSubsystemInterface_AddPlayerMappedKey::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputForAction
 // 0x0048 (0x0048 - 0x0000)
@@ -263,6 +703,23 @@ static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForAction, Raw
 static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForAction, Modifiers) == 0x000028, "Member 'EnhancedInputSubsystemInterface_InjectInputForAction::Modifiers' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForAction, Triggers) == 0x000038, "Member 'EnhancedInputSubsystemInterface_InjectInputForAction::Triggers' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputForPlayerMapping
+// 0x0048 (0x0048 - 0x0000)
+struct EnhancedInputSubsystemInterface_InjectInputForPlayerMapping final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputActionValue                      RawValue;                                          // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_InjectInputForPlayerMapping");
+static_assert(sizeof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping) == 0x000048, "Wrong size on EnhancedInputSubsystemInterface_InjectInputForPlayerMapping");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_InjectInputForPlayerMapping::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping, RawValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_InjectInputForPlayerMapping::RawValue' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping, Modifiers) == 0x000028, "Member 'EnhancedInputSubsystemInterface_InjectInputForPlayerMapping::Modifiers' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputForPlayerMapping, Triggers) == 0x000038, "Member 'EnhancedInputSubsystemInterface_InjectInputForPlayerMapping::Triggers' has a wrong offset!");
+
 // Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputVectorForAction
 // 0x0040 (0x0040 - 0x0000)
 struct EnhancedInputSubsystemInterface_InjectInputVectorForAction final 
@@ -280,6 +737,84 @@ static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForActio
 static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForAction, Modifiers) == 0x000020, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForAction::Modifiers' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForAction, Triggers) == 0x000030, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForAction::Triggers' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.InjectInputVectorForPlayerMapping
+// 0x0040 (0x0040 - 0x0000)
+struct EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Value;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping");
+static_assert(sizeof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping) == 0x000040, "Wrong size on EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping, Value) == 0x000008, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping::Value' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping, Modifiers) == 0x000020, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping::Modifiers' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping, Triggers) == 0x000030, "Member 'EnhancedInputSubsystemInterface_InjectInputVectorForPlayerMapping::Triggers' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.K2_AddPlayerMappedKeyInSlot
+// 0x0030 (0x0030 - 0x0000)
+struct EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   NewKey;                                            // 0x0008(0x0018)(ConstParm, Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerMappableKeySlot                 KeySlot;                                           // 0x0020(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FModifyContextOptions                  Options;                                           // 0x0024(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D02[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D03[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot");
+static_assert(sizeof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot) == 0x000030, "Wrong size on EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot, NewKey) == 0x000008, "Member 'EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot::NewKey' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot, KeySlot) == 0x000020, "Member 'EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot::KeySlot' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot, Options) == 0x000024, "Member 'EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot::Options' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot, ReturnValue) == 0x000028, "Member 'EnhancedInputSubsystemInterface_K2_AddPlayerMappedKeyInSlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.K2_RemovePlayerMappedKeyInSlot
+// 0x0014 (0x0014 - 0x0000)
+struct EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerMappableKeySlot                 KeySlot;                                           // 0x0008(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FModifyContextOptions                  Options;                                           // 0x000C(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D04[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot) == 0x000004, "Wrong alignment on EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot");
+static_assert(sizeof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot) == 0x000014, "Wrong size on EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot, KeySlot) == 0x000008, "Member 'EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot::KeySlot' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot, Options) == 0x00000C, "Member 'EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot::Options' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot, ReturnValue) == 0x000010, "Member 'EnhancedInputSubsystemInterface_K2_RemovePlayerMappedKeyInSlot::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.OnUserKeyProfileChanged
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputSubsystemInterface_OnUserKeyProfileChanged final 
+{
+public:
+	class UEnhancedPlayerMappableKeyProfile*      InNewProfile;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_OnUserKeyProfileChanged) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_OnUserKeyProfileChanged");
+static_assert(sizeof(EnhancedInputSubsystemInterface_OnUserKeyProfileChanged) == 0x000008, "Wrong size on EnhancedInputSubsystemInterface_OnUserKeyProfileChanged");
+static_assert(offsetof(EnhancedInputSubsystemInterface_OnUserKeyProfileChanged, InNewProfile) == 0x000000, "Member 'EnhancedInputSubsystemInterface_OnUserKeyProfileChanged::InNewProfile' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.OnUserSettingsChanged
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputSubsystemInterface_OnUserSettingsChanged final 
+{
+public:
+	class UEnhancedInputUserSettings*             Settings;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_OnUserSettingsChanged) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_OnUserSettingsChanged");
+static_assert(sizeof(EnhancedInputSubsystemInterface_OnUserSettingsChanged) == 0x000008, "Wrong size on EnhancedInputSubsystemInterface_OnUserSettingsChanged");
+static_assert(offsetof(EnhancedInputSubsystemInterface_OnUserSettingsChanged, Settings) == 0x000000, "Member 'EnhancedInputSubsystemInterface_OnUserSettingsChanged::Settings' has a wrong offset!");
+
 // Function EnhancedInput.EnhancedInputSubsystemInterface.QueryMapKeyInActiveContextSet
 // 0x0040 (0x0040 - 0x0000)
 struct EnhancedInputSubsystemInterface_QueryMapKeyInActiveContextSet final 
@@ -291,7 +826,7 @@ public:
 	TArray<struct FMappingQueryIssue>             OutIssues;                                         // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EMappingQueryIssue                            BlockingIssues;                                    // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMappingQueryResult                           ReturnValue;                                       // 0x0039(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D4[0x6];                                     // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D05[0x6];                                     // 0x003A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_QueryMapKeyInActiveContextSet) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_QueryMapKeyInActiveContextSet");
 static_assert(sizeof(EnhancedInputSubsystemInterface_QueryMapKeyInActiveContextSet) == 0x000040, "Wrong size on EnhancedInputSubsystemInterface_QueryMapKeyInActiveContextSet");
@@ -314,7 +849,7 @@ public:
 	TArray<struct FMappingQueryIssue>             OutIssues;                                         // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EMappingQueryIssue                            BlockingIssues;                                    // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMappingQueryResult                           ReturnValue;                                       // 0x0049(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D5[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D06[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_QueryMapKeyInContextSet) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_QueryMapKeyInContextSet");
 static_assert(sizeof(EnhancedInputSubsystemInterface_QueryMapKeyInContextSet) == 0x000050, "Wrong size on EnhancedInputSubsystemInterface_QueryMapKeyInContextSet");
@@ -337,6 +872,22 @@ static_assert(alignof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeys)
 static_assert(sizeof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeys) == 0x000001, "Wrong size on EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeys");
 static_assert(offsetof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeys, Options) == 0x000000, "Member 'EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeys::Options' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.RemoveAllPlayerMappedKeysForMapping
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D07[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping) == 0x000004, "Wrong alignment on EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping");
+static_assert(sizeof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping");
+static_assert(offsetof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping, Options) == 0x000008, "Member 'EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping::Options' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping, ReturnValue) == 0x00000C, "Member 'EnhancedInputSubsystemInterface_RemoveAllPlayerMappedKeysForMapping::ReturnValue' has a wrong offset!");
+
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RemoveMappingContext
 // 0x0010 (0x0010 - 0x0000)
 struct EnhancedInputSubsystemInterface_RemoveMappingContext final 
@@ -344,7 +895,7 @@ struct EnhancedInputSubsystemInterface_RemoveMappingContext final
 public:
 	class UInputMappingContext*                   MappingContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D6[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D08[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_RemoveMappingContext) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_RemoveMappingContext");
 static_assert(sizeof(EnhancedInputSubsystemInterface_RemoveMappingContext) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_RemoveMappingContext");
@@ -358,28 +909,12 @@ struct EnhancedInputSubsystemInterface_RemovePlayerMappableConfig final
 public:
 	class UPlayerMappableInputConfig*             Config;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D7[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D09[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_RemovePlayerMappableConfig) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_RemovePlayerMappableConfig");
 static_assert(sizeof(EnhancedInputSubsystemInterface_RemovePlayerMappableConfig) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_RemovePlayerMappableConfig");
 static_assert(offsetof(EnhancedInputSubsystemInterface_RemovePlayerMappableConfig, Config) == 0x000000, "Member 'EnhancedInputSubsystemInterface_RemovePlayerMappableConfig::Config' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_RemovePlayerMappableConfig, Options) == 0x000008, "Member 'EnhancedInputSubsystemInterface_RemovePlayerMappableConfig::Options' has a wrong offset!");
-
-// Function EnhancedInput.EnhancedInputSubsystemInterface.RemovePlayerMappedKey
-// 0x0010 (0x0010 - 0x0000)
-struct EnhancedInputSubsystemInterface_RemovePlayerMappedKey final 
-{
-public:
-	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D8[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(EnhancedInputSubsystemInterface_RemovePlayerMappedKey) == 0x000004, "Wrong alignment on EnhancedInputSubsystemInterface_RemovePlayerMappedKey");
-static_assert(sizeof(EnhancedInputSubsystemInterface_RemovePlayerMappedKey) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_RemovePlayerMappedKey");
-static_assert(offsetof(EnhancedInputSubsystemInterface_RemovePlayerMappedKey, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_RemovePlayerMappedKey::MappingName' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_RemovePlayerMappedKey, Options) == 0x000008, "Member 'EnhancedInputSubsystemInterface_RemovePlayerMappedKey::Options' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_RemovePlayerMappedKey, ReturnValue) == 0x00000C, "Member 'EnhancedInputSubsystemInterface_RemovePlayerMappedKey::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.RequestRebuildControlMappings
 // 0x0002 (0x0002 - 0x0000)
@@ -394,6 +929,62 @@ static_assert(sizeof(EnhancedInputSubsystemInterface_RequestRebuildControlMappin
 static_assert(offsetof(EnhancedInputSubsystemInterface_RequestRebuildControlMappings, Options) == 0x000000, "Member 'EnhancedInputSubsystemInterface_RequestRebuildControlMappings::Options' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_RequestRebuildControlMappings, RebuildType) == 0x000001, "Member 'EnhancedInputSubsystemInterface_RequestRebuildControlMappings::RebuildType' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.StartContinuousInputInjectionForAction
+// 0x0048 (0x0048 - 0x0000)
+struct EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction final 
+{
+public:
+	class UInputAction*                           Action;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputActionValue                      RawValue;                                          // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction");
+static_assert(sizeof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction) == 0x000048, "Wrong size on EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction, Action) == 0x000000, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction::Action' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction, RawValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction::RawValue' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction, Modifiers) == 0x000028, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction::Modifiers' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction, Triggers) == 0x000038, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForAction::Triggers' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.StartContinuousInputInjectionForPlayerMapping
+// 0x0048 (0x0048 - 0x0000)
+struct EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FInputActionValue                      RawValue;                                          // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<class UInputModifier*>                 Modifiers;                                         // 0x0028(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UInputTrigger*>                  Triggers;                                          // 0x0038(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping");
+static_assert(sizeof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping) == 0x000048, "Wrong size on EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping, RawValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping::RawValue' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping, Modifiers) == 0x000028, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping::Modifiers' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping, Triggers) == 0x000038, "Member 'EnhancedInputSubsystemInterface_StartContinuousInputInjectionForPlayerMapping::Triggers' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.StopContinuousInputInjectionForAction
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction final 
+{
+public:
+	class UInputAction*                           Action;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction");
+static_assert(sizeof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction) == 0x000008, "Wrong size on EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction, Action) == 0x000000, "Member 'EnhancedInputSubsystemInterface_StopContinuousInputInjectionForAction::Action' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.StopContinuousInputInjectionForPlayerMapping
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping) == 0x000004, "Wrong alignment on EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping");
+static_assert(sizeof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping) == 0x000008, "Wrong size on EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping");
+static_assert(offsetof(EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_StopContinuousInputInjectionForPlayerMapping::MappingName' has a wrong offset!");
+
 // Function EnhancedInput.EnhancedInputSubsystemInterface.GetAllPlayerMappableActionKeyMappings
 // 0x0010 (0x0010 - 0x0000)
 struct EnhancedInputSubsystemInterface_GetAllPlayerMappableActionKeyMappings final 
@@ -405,18 +996,29 @@ static_assert(alignof(EnhancedInputSubsystemInterface_GetAllPlayerMappableAction
 static_assert(sizeof(EnhancedInputSubsystemInterface_GetAllPlayerMappableActionKeyMappings) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_GetAllPlayerMappableActionKeyMappings");
 static_assert(offsetof(EnhancedInputSubsystemInterface_GetAllPlayerMappableActionKeyMappings, ReturnValue) == 0x000000, "Member 'EnhancedInputSubsystemInterface_GetAllPlayerMappableActionKeyMappings::ReturnValue' has a wrong offset!");
 
-// Function EnhancedInput.EnhancedInputSubsystemInterface.GetPlayerMappedKey
-// 0x0020 (0x0020 - 0x0000)
-struct EnhancedInputSubsystemInterface_GetPlayerMappedKey final 
+// Function EnhancedInput.EnhancedInputSubsystemInterface.GetAllPlayerMappedKeys
+// 0x0018 (0x0018 - 0x0000)
+struct EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys final 
 {
 public:
 	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FKey>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(EnhancedInputSubsystemInterface_GetPlayerMappedKey) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_GetPlayerMappedKey");
-static_assert(sizeof(EnhancedInputSubsystemInterface_GetPlayerMappedKey) == 0x000020, "Wrong size on EnhancedInputSubsystemInterface_GetPlayerMappedKey");
-static_assert(offsetof(EnhancedInputSubsystemInterface_GetPlayerMappedKey, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_GetPlayerMappedKey::MappingName' has a wrong offset!");
-static_assert(offsetof(EnhancedInputSubsystemInterface_GetPlayerMappedKey, ReturnValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_GetPlayerMappedKey::ReturnValue' has a wrong offset!");
+static_assert(alignof(EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys");
+static_assert(sizeof(EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys) == 0x000018, "Wrong size on EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys");
+static_assert(offsetof(EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys, ReturnValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_GetAllPlayerMappedKeys::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.GetUserSettings
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputSubsystemInterface_GetUserSettings final 
+{
+public:
+	class UEnhancedInputUserSettings*             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_GetUserSettings) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_GetUserSettings");
+static_assert(sizeof(EnhancedInputSubsystemInterface_GetUserSettings) == 0x000008, "Wrong size on EnhancedInputSubsystemInterface_GetUserSettings");
+static_assert(offsetof(EnhancedInputSubsystemInterface_GetUserSettings, ReturnValue) == 0x000000, "Member 'EnhancedInputSubsystemInterface_GetUserSettings::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.HasMappingContext
 // 0x0010 (0x0010 - 0x0000)
@@ -426,13 +1028,29 @@ public:
 	class UInputMappingContext*                   MappingContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OutFoundPriority;                                  // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17D9[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D0A[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(EnhancedInputSubsystemInterface_HasMappingContext) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_HasMappingContext");
 static_assert(sizeof(EnhancedInputSubsystemInterface_HasMappingContext) == 0x000010, "Wrong size on EnhancedInputSubsystemInterface_HasMappingContext");
 static_assert(offsetof(EnhancedInputSubsystemInterface_HasMappingContext, MappingContext) == 0x000000, "Member 'EnhancedInputSubsystemInterface_HasMappingContext::MappingContext' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_HasMappingContext, OutFoundPriority) == 0x000008, "Member 'EnhancedInputSubsystemInterface_HasMappingContext::OutFoundPriority' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_HasMappingContext, ReturnValue) == 0x00000C, "Member 'EnhancedInputSubsystemInterface_HasMappingContext::ReturnValue' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputSubsystemInterface.K2_GetPlayerMappedKeyInSlot
+// 0x0028 (0x0028 - 0x0000)
+struct EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot final 
+{
+public:
+	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPlayerMappableKeySlot                 KeySlot;                                           // 0x0008(0x0004)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D0B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKey                                   ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot) == 0x000008, "Wrong alignment on EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot");
+static_assert(sizeof(EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot) == 0x000028, "Wrong size on EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot, MappingName) == 0x000000, "Member 'EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot::MappingName' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot, KeySlot) == 0x000008, "Member 'EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot::KeySlot' has a wrong offset!");
+static_assert(offsetof(EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot, ReturnValue) == 0x000010, "Member 'EnhancedInputSubsystemInterface_K2_GetPlayerMappedKeyInSlot::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.EnhancedInputSubsystemInterface.QueryActionKeyMappings
 // 0x0018 (0x0018 - 0x0000)
@@ -460,17 +1078,42 @@ static_assert(sizeof(EnhancedInputSubsystemInterface_QueryKeysMappedToAction) ==
 static_assert(offsetof(EnhancedInputSubsystemInterface_QueryKeysMappedToAction, Action) == 0x000000, "Member 'EnhancedInputSubsystemInterface_QueryKeysMappedToAction::Action' has a wrong offset!");
 static_assert(offsetof(EnhancedInputSubsystemInterface_QueryKeysMappedToAction, ReturnValue) == 0x000008, "Member 'EnhancedInputSubsystemInterface_QueryKeysMappedToAction::ReturnValue' has a wrong offset!");
 
+// Function EnhancedInput.EnhancedInputWorldSubsystem.AddActorInputComponent
+// 0x0008 (0x0008 - 0x0000)
+struct EnhancedInputWorldSubsystem_AddActorInputComponent final 
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(EnhancedInputWorldSubsystem_AddActorInputComponent) == 0x000008, "Wrong alignment on EnhancedInputWorldSubsystem_AddActorInputComponent");
+static_assert(sizeof(EnhancedInputWorldSubsystem_AddActorInputComponent) == 0x000008, "Wrong size on EnhancedInputWorldSubsystem_AddActorInputComponent");
+static_assert(offsetof(EnhancedInputWorldSubsystem_AddActorInputComponent, Actor) == 0x000000, "Member 'EnhancedInputWorldSubsystem_AddActorInputComponent::Actor' has a wrong offset!");
+
+// Function EnhancedInput.EnhancedInputWorldSubsystem.RemoveActorInputComponent
+// 0x0010 (0x0010 - 0x0000)
+struct EnhancedInputWorldSubsystem_RemoveActorInputComponent final 
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D0F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(EnhancedInputWorldSubsystem_RemoveActorInputComponent) == 0x000008, "Wrong alignment on EnhancedInputWorldSubsystem_RemoveActorInputComponent");
+static_assert(sizeof(EnhancedInputWorldSubsystem_RemoveActorInputComponent) == 0x000010, "Wrong size on EnhancedInputWorldSubsystem_RemoveActorInputComponent");
+static_assert(offsetof(EnhancedInputWorldSubsystem_RemoveActorInputComponent, Actor) == 0x000000, "Member 'EnhancedInputWorldSubsystem_RemoveActorInputComponent::Actor' has a wrong offset!");
+static_assert(offsetof(EnhancedInputWorldSubsystem_RemoveActorInputComponent, ReturnValue) == 0x000008, "Member 'EnhancedInputWorldSubsystem_RemoveActorInputComponent::ReturnValue' has a wrong offset!");
+
 // Function EnhancedInput.InputMappingContext.MapKey
-// 0x00A8 (0x00A8 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct InputMappingContext_MapKey final 
 {
 public:
 	class UInputAction*                           Action;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FKey                                   ToKey;                                             // 0x0008(0x0018)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0020(0x0088)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0020(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InputMappingContext_MapKey) == 0x000008, "Wrong alignment on InputMappingContext_MapKey");
-static_assert(sizeof(InputMappingContext_MapKey) == 0x0000A8, "Wrong size on InputMappingContext_MapKey");
+static_assert(sizeof(InputMappingContext_MapKey) == 0x000070, "Wrong size on InputMappingContext_MapKey");
 static_assert(offsetof(InputMappingContext_MapKey, Action) == 0x000000, "Member 'InputMappingContext_MapKey::Action' has a wrong offset!");
 static_assert(offsetof(InputMappingContext_MapKey, ToKey) == 0x000008, "Member 'InputMappingContext_MapKey::ToKey' has a wrong offset!");
 static_assert(offsetof(InputMappingContext_MapKey, ReturnValue) == 0x000020, "Member 'InputMappingContext_MapKey::ReturnValue' has a wrong offset!");
@@ -544,7 +1187,7 @@ public:
 	class UEnhancedPlayerInput*                   PlayerInput;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FInputActionValue                      CurrentValue;                                      // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17DF[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D15[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      ReturnValue;                                       // 0x0030(0x0020)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(InputModifier_ModifyRaw) == 0x000008, "Wrong alignment on InputModifier_ModifyRaw");
@@ -563,7 +1206,7 @@ public:
 	struct FInputActionValue                      ModifiedValue;                                     // 0x0008(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         DeltaTime;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerState                                 ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17E6[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1C[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InputTrigger_UpdateState) == 0x000008, "Wrong alignment on InputTrigger_UpdateState");
 static_assert(sizeof(InputTrigger_UpdateState) == 0x000030, "Wrong size on InputTrigger_UpdateState");
@@ -590,7 +1233,7 @@ struct InputTrigger_IsActuated final
 public:
 	struct FInputActionValue                      ForValue;                                          // 0x0000(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17E7[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D1D[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(InputTrigger_IsActuated) == 0x000008, "Wrong alignment on InputTrigger_IsActuated");
 static_assert(sizeof(InputTrigger_IsActuated) == 0x000028, "Wrong size on InputTrigger_IsActuated");
@@ -633,15 +1276,15 @@ static_assert(offsetof(PlayerMappableInputConfig_GetKeysBoundToAction, InAction)
 static_assert(offsetof(PlayerMappableInputConfig_GetKeysBoundToAction, ReturnValue) == 0x000008, "Member 'PlayerMappableInputConfig_GetKeysBoundToAction::ReturnValue' has a wrong offset!");
 
 // Function EnhancedInput.PlayerMappableInputConfig.GetMappingByName
-// 0x0090 (0x0090 - 0x0000)
+// 0x0058 (0x0058 - 0x0000)
 struct PlayerMappableInputConfig_GetMappingByName final 
 {
 public:
 	class FName                                   MappingName;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0008(0x0088)(Parm, OutParm, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FEnhancedActionKeyMapping              ReturnValue;                                       // 0x0008(0x0050)(Parm, OutParm, ReturnParm, ContainsInstancedReference, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PlayerMappableInputConfig_GetMappingByName) == 0x000008, "Wrong alignment on PlayerMappableInputConfig_GetMappingByName");
-static_assert(sizeof(PlayerMappableInputConfig_GetMappingByName) == 0x000090, "Wrong size on PlayerMappableInputConfig_GetMappingByName");
+static_assert(sizeof(PlayerMappableInputConfig_GetMappingByName) == 0x000058, "Wrong size on PlayerMappableInputConfig_GetMappingByName");
 static_assert(offsetof(PlayerMappableInputConfig_GetMappingByName, MappingName) == 0x000000, "Member 'PlayerMappableInputConfig_GetMappingByName::MappingName' has a wrong offset!");
 static_assert(offsetof(PlayerMappableInputConfig_GetMappingByName, ReturnValue) == 0x000008, "Member 'PlayerMappableInputConfig_GetMappingByName::ReturnValue' has a wrong offset!");
 

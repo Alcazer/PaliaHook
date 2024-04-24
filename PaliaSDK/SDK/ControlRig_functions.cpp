@@ -17,21 +17,21 @@
 namespace SDK
 {
 
-// Function ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
+// Function ControlRig.ControlRigShapeLibraryLink.SetShapeLibrary
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRigShapeLibrary*          InShapeLibrary                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UControlRigComponent::AddMappedCompleteSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent)
+void UControlRigShapeLibraryLink::SetShapeLibrary(class UControlRigShapeLibrary* InShapeLibrary)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "AddMappedCompleteSkeletalMesh");
+		Func = Class->GetFunction("ControlRigShapeLibraryLink", "SetShapeLibrary");
 
-	Params::ControlRigComponent_AddMappedCompleteSkeletalMesh Parms{};
+	Params::ControlRigShapeLibraryLink_SetShapeLibrary Parms{};
 
-	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
+	Parms.InShapeLibrary = InShapeLibrary;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -42,1247 +42,19 @@ void UControlRigComponent::AddMappedCompleteSkeletalMesh(class USkeletalMeshComp
 }
 
 
-// Function ControlRig.ControlRigComponent.AddMappedComponents
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FControlRigComponentMappedComponent>Components                                             (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::AddMappedComponents(const TArray<struct FControlRigComponentMappedComponent>& Components)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "AddMappedComponents");
-
-	Params::ControlRigComponent_AddMappedComponents Parms{};
-
-	Parms.Components = std::move(Components);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.AddMappedElements
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FControlRigComponentMappedElement>NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::AddMappedElements(const TArray<struct FControlRigComponentMappedElement>& NewMappedElements)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "AddMappedElements");
-
-	Params::ControlRigComponent_AddMappedElements Parms{};
-
-	Parms.NewMappedElements = std::move(NewMappedElements);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.AddMappedSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FControlRigComponentMappedBone>Bones                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// TArray<struct FControlRigComponentMappedCurve>Curves                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::AddMappedSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const TArray<struct FControlRigComponentMappedBone>& Bones, const TArray<struct FControlRigComponentMappedCurve>& Curves)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "AddMappedSkeletalMesh");
-
-	Params::ControlRigComponent_AddMappedSkeletalMesh Parms{};
-
-	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
-	Parms.Bones = std::move(Bones);
-	Parms.Curves = std::move(Curves);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.CanExecute
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRigComponent::CanExecute()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "CanExecute");
-
-	Params::ControlRigComponent_CanExecute Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.ClearMappedElements
-// (Final, Native, Public, BlueprintCallable)
-
-void UControlRigComponent::ClearMappedElements()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "ClearMappedElements");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.DoesElementExist
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             Param_Name                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRigComponent::DoesElementExist(class FName Param_Name, ERigElementType ElementType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "DoesElementExist");
-
-	Params::ControlRigComponent_DoesElementExist Parms{};
-
-	Parms.Param_Name = Param_Name;
-	Parms.ElementType = ElementType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetBoneTransform(class FName BoneName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetBoneTransform");
-
-	Params::ControlRigComponent_GetBoneTransform Parms{};
-
-	Parms.BoneName = BoneName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlBool
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRigComponent::GetControlBool(class FName ControlName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlBool");
-
-	Params::ControlRigComponent_GetControlBool Parms{};
-
-	Parms.ControlName = ControlName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlFloat
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UControlRigComponent::GetControlFloat(class FName ControlName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlFloat");
-
-	Params::ControlRigComponent_GetControlFloat Parms{};
-
-	Parms.ControlName = ControlName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlInt
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UControlRigComponent::GetControlInt(class FName ControlName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlInt");
-
-	Params::ControlRigComponent_GetControlInt Parms{};
-
-	Parms.ControlName = ControlName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetControlOffset(class FName ControlName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlOffset");
-
-	Params::ControlRigComponent_GetControlOffset Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlPosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UControlRigComponent::GetControlPosition(class FName ControlName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlPosition");
-
-	Params::ControlRigComponent_GetControlPosition Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlRig
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class UControlRig*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UControlRig* UControlRigComponent::GetControlRig()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlRig");
-
-	Params::ControlRigComponent_GetControlRig Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlRotator
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FRotator UControlRigComponent::GetControlRotator(class FName ControlName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlRotator");
-
-	Params::ControlRigComponent_GetControlRotator Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UControlRigComponent::GetControlScale(class FName ControlName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlScale");
-
-	Params::ControlRigComponent_GetControlScale Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetControlTransform(class FName ControlName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlTransform");
-
-	Params::ControlRigComponent_GetControlTransform Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetControlVector2D
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UControlRigComponent::GetControlVector2D(class FName ControlName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetControlVector2D");
-
-	Params::ControlRigComponent_GetControlVector2D Parms{};
-
-	Parms.ControlName = ControlName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetElementNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UControlRigComponent::GetElementNames(ERigElementType ElementType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetElementNames");
-
-	Params::ControlRigComponent_GetElementNames Parms{};
-
-	Parms.ElementType = ElementType;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetInitialBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetInitialBoneTransform(class FName BoneName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetInitialBoneTransform");
-
-	Params::ControlRigComponent_GetInitialBoneTransform Parms{};
-
-	Parms.BoneName = BoneName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetInitialSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetInitialSpaceTransform(class FName SpaceName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetInitialSpaceTransform");
-
-	Params::ControlRigComponent_GetInitialSpaceTransform Parms{};
-
-	Parms.SpaceName = SpaceName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FTransform UControlRigComponent::GetSpaceTransform(class FName SpaceName, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetSpaceTransform");
-
-	Params::ControlRigComponent_GetSpaceTransform Parms{};
-
-	Parms.SpaceName = SpaceName;
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRigComponent.Initialize
-// (Final, Native, Public, BlueprintCallable)
-
-void UControlRigComponent::Initialize()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "Initialize");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPostConstruction
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPostConstruction(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostConstruction");
-
-	Params::ControlRigComponent_OnPostConstruction Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPostForwardsSolve
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPostForwardsSolve(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostForwardsSolve");
-
-	Params::ControlRigComponent_OnPostForwardsSolve Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPostInitialize
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPostInitialize(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPostInitialize");
-
-	Params::ControlRigComponent_OnPostInitialize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPreConstruction
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPreConstruction(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreConstruction");
-
-	Params::ControlRigComponent_OnPreConstruction Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPreForwardsSolve
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPreForwardsSolve(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreForwardsSolve");
-
-	Params::ControlRigComponent_OnPreForwardsSolve Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.OnPreInitialize
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::OnPreInitialize(class UControlRigComponent* Component)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "OnPreInitialize");
-
-	Params::ControlRigComponent_OnPreInitialize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetBoneInitialTransformsFromSkeletalMesh
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetBoneInitialTransformsFromSkeletalMesh(class USkeletalMesh* InSkeletalMesh)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetBoneInitialTransformsFromSkeletalMesh");
-
-	Params::ControlRigComponent_SetBoneInitialTransformsFromSkeletalMesh Parms{};
-
-	Parms.InSkeletalMesh = InSkeletalMesh;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Weight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPropagateToChildren                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetBoneTransform(class FName BoneName, const struct FTransform& Transform, EControlRigComponentSpace Space, float Weight, bool bPropagateToChildren)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetBoneTransform");
-
-	Params::ControlRigComponent_SetBoneTransform Parms{};
-
-	Parms.BoneName = BoneName;
-	Parms.Transform = std::move(Transform);
-	Parms.Space = Space;
-	Parms.Weight = Weight;
-	Parms.bPropagateToChildren = bPropagateToChildren;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlBool
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlBool(class FName ControlName, bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlBool");
-
-	Params::ControlRigComponent_SetControlBool Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlFloat
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlFloat(class FName ControlName, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlFloat");
-
-	Params::ControlRigComponent_SetControlFloat Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlInt
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlInt(class FName ControlName, int32 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlInt");
-
-	Params::ControlRigComponent_SetControlInt Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlOffset
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       OffsetTransform                                        (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlOffset(class FName ControlName, const struct FTransform& OffsetTransform, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlOffset");
-
-	Params::ControlRigComponent_SetControlOffset Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.OffsetTransform = std::move(OffsetTransform);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlPosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlPosition(class FName ControlName, const struct FVector& Value, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlPosition");
-
-	Params::ControlRigComponent_SetControlPosition Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = std::move(Value);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlRigClass
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TSubclassOf<class UControlRig>          InControlRigClass                                      (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlRigClass(TSubclassOf<class UControlRig> InControlRigClass)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlRigClass");
-
-	Params::ControlRigComponent_SetControlRigClass Parms{};
-
-	Parms.InControlRigClass = InControlRigClass;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlRotator
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlRotator(class FName ControlName, const struct FRotator& Value, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlRotator");
-
-	Params::ControlRigComponent_SetControlRotator Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = std::move(Value);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlScale(class FName ControlName, const struct FVector& Value, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlScale");
-
-	Params::ControlRigComponent_SetControlScale Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = std::move(Value);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       Value                                                  (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlTransform(class FName ControlName, const struct FTransform& Value, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlTransform");
-
-	Params::ControlRigComponent_SetControlTransform Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = std::move(Value);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetControlVector2D
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetControlVector2D(class FName ControlName, const struct FVector2D& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetControlVector2D");
-
-	Params::ControlRigComponent_SetControlVector2D Parms{};
-
-	Parms.ControlName = ControlName;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetInitialBoneTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPropagateToChildren                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetInitialBoneTransform(class FName BoneName, const struct FTransform& InitialTransform, EControlRigComponentSpace Space, bool bPropagateToChildren)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetInitialBoneTransform");
-
-	Params::ControlRigComponent_SetInitialBoneTransform Parms{};
-
-	Parms.BoneName = BoneName;
-	Parms.InitialTransform = std::move(InitialTransform);
-	Parms.Space = Space;
-	Parms.bPropagateToChildren = bPropagateToChildren;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetInitialSpaceTransform
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FTransform                       InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetInitialSpaceTransform(class FName SpaceName, const struct FTransform& InitialTransform, EControlRigComponentSpace Space)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetInitialSpaceTransform");
-
-	Params::ControlRigComponent_SetInitialSpaceTransform Parms{};
-
-	Parms.SpaceName = SpaceName;
-	Parms.InitialTransform = std::move(InitialTransform);
-	Parms.Space = Space;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetMappedElements
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FControlRigComponentMappedElement>NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetMappedElements(const TArray<struct FControlRigComponentMappedElement>& NewMappedElements)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetMappedElements");
-
-	Params::ControlRigComponent_SetMappedElements Parms{};
-
-	Parms.NewMappedElements = std::move(NewMappedElements);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.SetObjectBinding
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          InObjectToBind                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::SetObjectBinding(class UObject* InObjectToBind)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "SetObjectBinding");
-
-	Params::ControlRigComponent_SetObjectBinding Parms{};
-
-	Parms.InObjectToBind = InObjectToBind;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.Update
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRigComponent::Update(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "Update");
-
-	Params::ControlRigComponent_Update Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRigComponent.GetAbsoluteTime
+// Function ControlRig.ControlRigShapeLibraryLink.GetShapeLibrary
 // (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRigShapeLibrary*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-float UControlRigComponent::GetAbsoluteTime() const
+class UControlRigShapeLibrary* UControlRigShapeLibraryLink::GetShapeLibrary() const
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRigComponent", "GetAbsoluteTime");
+		Func = Class->GetFunction("ControlRigShapeLibraryLink", "GetShapeLibrary");
 
-	Params::ControlRigComponent_GetAbsoluteTime Parms{};
+	Params::ControlRigShapeLibraryLink_GetShapeLibrary Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -2218,15 +990,135 @@ void URigHierarchy::SetControlOffsetTransformByIndex(int32 InElementIndex, const
 }
 
 
+// Function ControlRig.RigHierarchy.SetControlPreferredEulerAngles
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InEulerAngles                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFixEulerFlips                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigHierarchy::SetControlPreferredEulerAngles(const struct FRigElementKey& InKey, struct FVector& InEulerAngles, EEulerRotationOrder InRotationOrder, bool bInitial, bool bFixEulerFlips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "SetControlPreferredEulerAngles");
+
+	Params::RigHierarchy_SetControlPreferredEulerAngles Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.InEulerAngles = std::move(InEulerAngles);
+	Parms.InRotationOrder = InRotationOrder;
+	Parms.bInitial = bInitial;
+	Parms.bFixEulerFlips = bFixEulerFlips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.RigHierarchy.SetControlPreferredEulerAnglesByIndex
+// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// int32                                   InElementIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InEulerAngles                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFixEulerFlips                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigHierarchy::SetControlPreferredEulerAnglesByIndex(int32 InElementIndex, struct FVector& InEulerAngles, EEulerRotationOrder InRotationOrder, bool bInitial, bool bFixEulerFlips)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "SetControlPreferredEulerAnglesByIndex");
+
+	Params::RigHierarchy_SetControlPreferredEulerAnglesByIndex Parms{};
+
+	Parms.InElementIndex = InElementIndex;
+	Parms.InEulerAngles = std::move(InEulerAngles);
+	Parms.InRotationOrder = InRotationOrder;
+	Parms.bInitial = bInitial;
+	Parms.bFixEulerFlips = bFixEulerFlips;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotationOrder
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigHierarchy::SetControlPreferredRotationOrder(const struct FRigElementKey& InKey, EEulerRotationOrder InRotationOrder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "SetControlPreferredRotationOrder");
+
+	Params::RigHierarchy_SetControlPreferredRotationOrder Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.InRotationOrder = InRotationOrder;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotationOrderByIndex
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   InElementIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigHierarchy::SetControlPreferredRotationOrderByIndex(int32 InElementIndex, EEulerRotationOrder InRotationOrder)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "SetControlPreferredRotationOrderByIndex");
+
+	Params::RigHierarchy_SetControlPreferredRotationOrderByIndex Parms{};
+
+	Parms.InElementIndex = InElementIndex;
+	Parms.InRotationOrder = InRotationOrder;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ControlRig.RigHierarchy.SetControlPreferredRotator
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FRotator                         InRotator                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bFixEulerFlips                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void URigHierarchy::SetControlPreferredRotator(const struct FRigElementKey& InKey, struct FRotator& InValue, bool bInitial, bool bFixEulerFlips)
+void URigHierarchy::SetControlPreferredRotator(const struct FRigElementKey& InKey, struct FRotator& InRotator, bool bInitial, bool bFixEulerFlips)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2236,7 +1128,7 @@ void URigHierarchy::SetControlPreferredRotator(const struct FRigElementKey& InKe
 	Params::RigHierarchy_SetControlPreferredRotator Parms{};
 
 	Parms.InKey = std::move(InKey);
-	Parms.InValue = std::move(InValue);
+	Parms.InRotator = std::move(InRotator);
 	Parms.bInitial = bInitial;
 	Parms.bFixEulerFlips = bFixEulerFlips;
 
@@ -2253,11 +1145,11 @@ void URigHierarchy::SetControlPreferredRotator(const struct FRigElementKey& InKe
 // (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   InElementIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FRotator                         InRotator                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bFixEulerFlips                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void URigHierarchy::SetControlPreferredRotatorByIndex(int32 InElementIndex, struct FRotator& InValue, bool bInitial, bool bFixEulerFlips)
+void URigHierarchy::SetControlPreferredRotatorByIndex(int32 InElementIndex, struct FRotator& InRotator, bool bInitial, bool bFixEulerFlips)
 {
 	static class UFunction* Func = nullptr;
 
@@ -2267,7 +1159,7 @@ void URigHierarchy::SetControlPreferredRotatorByIndex(int32 InElementIndex, stru
 	Params::RigHierarchy_SetControlPreferredRotatorByIndex Parms{};
 
 	Parms.InElementIndex = InElementIndex;
-	Parms.InValue = std::move(InValue);
+	Parms.InRotator = std::move(InRotator);
 	Parms.bInitial = bInitial;
 	Parms.bFixEulerFlips = bFixEulerFlips;
 
@@ -3867,6 +2759,130 @@ TArray<struct FRigElementKey> URigHierarchy::GetControlKeys(bool bTraverse) cons
 }
 
 
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerAngles
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector URigHierarchy::GetControlPreferredEulerAngles(const struct FRigElementKey& InKey, EEulerRotationOrder InRotationOrder, bool bInitial) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetControlPreferredEulerAngles");
+
+	Params::RigHierarchy_GetControlPreferredEulerAngles Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.InRotationOrder = InRotationOrder;
+	Parms.bInitial = bInitial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerAnglesByIndex
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InElementIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     InRotationOrder                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInitial                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector URigHierarchy::GetControlPreferredEulerAnglesByIndex(int32 InElementIndex, EEulerRotationOrder InRotationOrder, bool bInitial) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetControlPreferredEulerAnglesByIndex");
+
+	Params::RigHierarchy_GetControlPreferredEulerAnglesByIndex Parms{};
+
+	Parms.InElementIndex = InElementIndex;
+	Parms.InRotationOrder = InRotationOrder;
+	Parms.bInitial = bInitial;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrder
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFromSettings                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EEulerRotationOrder URigHierarchy::GetControlPreferredEulerRotationOrder(const struct FRigElementKey& InKey, bool bFromSettings) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetControlPreferredEulerRotationOrder");
+
+	Params::RigHierarchy_GetControlPreferredEulerRotationOrder Parms{};
+
+	Parms.InKey = std::move(InKey);
+	Parms.bFromSettings = bFromSettings;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrderByIndex
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   InElementIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bFromSettings                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEulerRotationOrder                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EEulerRotationOrder URigHierarchy::GetControlPreferredEulerRotationOrderByIndex(int32 InElementIndex, bool bFromSettings) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetControlPreferredEulerRotationOrderByIndex");
+
+	Params::RigHierarchy_GetControlPreferredEulerRotationOrderByIndex Parms{};
+
+	Parms.InElementIndex = InElementIndex;
+	Parms.bFromSettings = bFromSettings;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchy.GetControlPreferredRotator
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -4634,6 +3650,34 @@ struct FTransform URigHierarchy::GetLocalControlShapeTransformByIndex(int32 InEl
 }
 
 
+// Function ControlRig.RigHierarchy.GetLocalIndex_ForBlueprint
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FRigElementKey                   InKey                                                  (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 URigHierarchy::GetLocalIndex_ForBlueprint(const struct FRigElementKey& InKey) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetLocalIndex_ForBlueprint");
+
+	Params::RigHierarchy_GetLocalIndex_ForBlueprint Parms{};
+
+	Parms.InKey = std::move(InKey);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function ControlRig.RigHierarchy.GetLocalTransform
 // (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -5216,6 +4260,31 @@ TArray<struct FRigElementKey> URigHierarchy::GetRigidBodyKeys(bool bTraverse) co
 	Params::RigHierarchy_GetRigidBodyKeys Parms{};
 
 	Parms.bTraverse = bTraverse;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchy.GetRootElementKeys
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FRigElementKey> URigHierarchy::GetRootElementKeys() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchy", "GetRootElementKeys");
+
+	Params::RigHierarchy_GetRootElementKeys Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5831,64 +4900,6 @@ bool UControlRig::ClearControlSelection()
 }
 
 
-// Function ControlRig.ControlRig.Execute
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// EControlRigState                        State                                                  (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRig::Execute(EControlRigState State, class FName& InEventName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "Execute");
-
-	Params::ControlRig_Execute Parms{};
-
-	Parms.State = State;
-	Parms.InEventName = InEventName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.ExecuteEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRig::ExecuteEvent(class FName& InEventName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "ExecuteEvent");
-
-	Params::ControlRig_ExecuteEvent Parms{};
-
-	Parms.InEventName = InEventName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ControlRig.ControlRig.GetHierarchy
 // (Final, Native, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -5902,31 +4913,6 @@ class URigHierarchy* UControlRig::GetHierarchy()
 		Func = Class->GetFunction("ControlRig", "GetHierarchy");
 
 	Params::ControlRig_GetHierarchy Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetVM
-// (Final, Native, Public, BlueprintCallable, BlueprintPure)
-// Parameters:
-// class URigVM*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class URigVM* UControlRig::GetVM()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetVM");
-
-	Params::ControlRig_GetVM Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5982,25 +4968,6 @@ void UControlRig::RequestConstruction()
 }
 
 
-// Function ControlRig.ControlRig.RequestInit
-// (Final, Native, Public, BlueprintCallable)
-
-void UControlRig::RequestInit()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "RequestInit");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function ControlRig.ControlRig.SelectControl
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -6018,110 +4985,6 @@ void UControlRig::SelectControl(class FName& InControlName, bool bSelect)
 
 	Parms.InControlName = InControlName;
 	Parms.bSelect = bSelect;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRig.SetAbsoluteAndDeltaTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRig::SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SetAbsoluteAndDeltaTime");
-
-	Params::ControlRig_SetAbsoluteAndDeltaTime Parms{};
-
-	Parms.InAbsoluteTime = InAbsoluteTime;
-	Parms.InDeltaTime = InDeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRig.SetAbsoluteTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    InSetDeltaTimeZero                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRig::SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SetAbsoluteTime");
-
-	Params::ControlRig_SetAbsoluteTime Parms{};
-
-	Parms.InAbsoluteTime = InAbsoluteTime;
-	Parms.InSetDeltaTimeZero = InSetDeltaTimeZero;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRig.SetDeltaTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRig::SetDeltaTime(float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SetDeltaTime");
-
-	Params::ControlRig_SetDeltaTime Parms{};
-
-	Parms.InDeltaTime = InDeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function ControlRig.ControlRig.SetFramesPerSecond
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InFramesPerSecond                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UControlRig::SetFramesPerSecond(float InFramesPerSecond)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SetFramesPerSecond");
-
-	Params::ControlRig_SetFramesPerSecond Parms{};
-
-	Parms.InFramesPerSecond = InFramesPerSecond;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6182,89 +5045,6 @@ void UControlRig::SetInteractionRigClass(TSubclassOf<class UControlRig> InIntera
 }
 
 
-// Function ControlRig.ControlRig.SetVariableFromString
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRig::SetVariableFromString(class FName& InVariableName, const class FString& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SetVariableFromString");
-
-	Params::ControlRig_SetVariableFromString Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.CanExecute
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRig::CanExecute() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "CanExecute");
-
-	Params::ControlRig_CanExecute Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.ContainsEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UControlRig::ContainsEvent(class FName& InEventName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "ContainsEvent");
-
-	Params::ControlRig_ContainsEvent Parms{};
-
-	Parms.InEventName = InEventName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ControlRig.ControlRig.CreateTransformableControlHandle
 // (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -6308,81 +5088,6 @@ TArray<class FName> UControlRig::CurrentControlSelection() const
 		Func = Class->GetFunction("ControlRig", "CurrentControlSelection");
 
 	Params::ControlRig_CurrentControlSelection Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetAbsoluteTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UControlRig::GetAbsoluteTime() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetAbsoluteTime");
-
-	Params::ControlRig_GetAbsoluteTime Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetCurrentFramesPerSecond
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UControlRig::GetCurrentFramesPerSecond() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetCurrentFramesPerSecond");
-
-	Params::ControlRig_GetCurrentFramesPerSecond Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetEvents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UControlRig::GetEvents() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetEvents");
-
-	Params::ControlRig_GetEvents Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -6470,112 +5175,6 @@ TSubclassOf<class UControlRig> UControlRig::GetInteractionRigClass() const
 }
 
 
-// Function ControlRig.ControlRig.GetScriptAccessibleVariables
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UControlRig::GetScriptAccessibleVariables() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetScriptAccessibleVariables");
-
-	Params::ControlRig_GetScriptAccessibleVariables Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetSupportedEvents
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<class FName> UControlRig::GetSupportedEvents() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetSupportedEvents");
-
-	Params::ControlRig_GetSupportedEvents Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetVariableAsString
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UControlRig::GetVariableAsString(class FName& InVariableName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetVariableAsString");
-
-	Params::ControlRig_GetVariableAsString Parms{};
-
-	Parms.InVariableName = InVariableName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function ControlRig.ControlRig.GetVariableType
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FName UControlRig::GetVariableType(class FName& InVariableName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "GetVariableType");
-
-	Params::ControlRig_GetVariableType Parms{};
-
-	Parms.InVariableName = InVariableName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function ControlRig.ControlRig.IsControlSelected
 // (Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -6604,22 +5203,1272 @@ bool UControlRig::IsControlSelected(class FName& InControlName) const
 }
 
 
-// Function ControlRig.ControlRig.SupportsEvent
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Function ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
+// (Final, Native, Public, BlueprintCallable)
 // Parameters:
-// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool UControlRig::SupportsEvent(class FName& InEventName) const
+void UControlRigComponent::AddMappedCompleteSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("ControlRig", "SupportsEvent");
+		Func = Class->GetFunction("ControlRigComponent", "AddMappedCompleteSkeletalMesh");
 
-	Params::ControlRig_SupportsEvent Parms{};
+	Params::ControlRigComponent_AddMappedCompleteSkeletalMesh Parms{};
 
-	Parms.InEventName = InEventName;
+	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.AddMappedComponents
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FControlRigComponentMappedComponent>Components                                             (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::AddMappedComponents(const TArray<struct FControlRigComponentMappedComponent>& Components)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "AddMappedComponents");
+
+	Params::ControlRigComponent_AddMappedComponents Parms{};
+
+	Parms.Components = std::move(Components);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.AddMappedElements
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FControlRigComponentMappedElement>NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::AddMappedElements(const TArray<struct FControlRigComponentMappedElement>& NewMappedElements)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "AddMappedElements");
+
+	Params::ControlRigComponent_AddMappedElements Parms{};
+
+	Parms.NewMappedElements = std::move(NewMappedElements);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.AddMappedSkeletalMesh
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FControlRigComponentMappedBone>Bones                                                  (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// TArray<struct FControlRigComponentMappedCurve>Curves                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::AddMappedSkeletalMesh(class USkeletalMeshComponent* SkeletalMeshComponent, const TArray<struct FControlRigComponentMappedBone>& Bones, const TArray<struct FControlRigComponentMappedCurve>& Curves)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "AddMappedSkeletalMesh");
+
+	Params::ControlRigComponent_AddMappedSkeletalMesh Parms{};
+
+	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
+	Parms.Bones = std::move(Bones);
+	Parms.Curves = std::move(Curves);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.CanExecute
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigComponent::CanExecute()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "CanExecute");
+
+	Params::ControlRigComponent_CanExecute Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.ClearMappedElements
+// (Final, Native, Public, BlueprintCallable)
+
+void UControlRigComponent::ClearMappedElements()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "ClearMappedElements");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.DoesElementExist
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             Param_Name                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigComponent::DoesElementExist(class FName Param_Name, ERigElementType ElementType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "DoesElementExist");
+
+	Params::ControlRigComponent_DoesElementExist Parms{};
+
+	Parms.Param_Name = Param_Name;
+	Parms.ElementType = ElementType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetBoneTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetBoneTransform(class FName BoneName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetBoneTransform");
+
+	Params::ControlRigComponent_GetBoneTransform Parms{};
+
+	Parms.BoneName = BoneName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlBool
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigComponent::GetControlBool(class FName ControlName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlBool");
+
+	Params::ControlRigComponent_GetControlBool Parms{};
+
+	Parms.ControlName = ControlName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlFloat
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UControlRigComponent::GetControlFloat(class FName ControlName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlFloat");
+
+	Params::ControlRigComponent_GetControlFloat Parms{};
+
+	Parms.ControlName = ControlName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlInt
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UControlRigComponent::GetControlInt(class FName ControlName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlInt");
+
+	Params::ControlRigComponent_GetControlInt Parms{};
+
+	Parms.ControlName = ControlName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlOffset
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetControlOffset(class FName ControlName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlOffset");
+
+	Params::ControlRigComponent_GetControlOffset Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UControlRigComponent::GetControlPosition(class FName ControlName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlPosition");
+
+	Params::ControlRigComponent_GetControlPosition Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlRig
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UControlRig*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UControlRig* UControlRigComponent::GetControlRig()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlRig");
+
+	Params::ControlRigComponent_GetControlRig Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlRotator
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FRotator UControlRigComponent::GetControlRotator(class FName ControlName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlRotator");
+
+	Params::ControlRigComponent_GetControlRotator Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlScale
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UControlRigComponent::GetControlScale(class FName ControlName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlScale");
+
+	Params::ControlRigComponent_GetControlScale Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetControlTransform(class FName ControlName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlTransform");
+
+	Params::ControlRigComponent_GetControlTransform Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetControlVector2D
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UControlRigComponent::GetControlVector2D(class FName ControlName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetControlVector2D");
+
+	Params::ControlRigComponent_GetControlVector2D Parms{};
+
+	Parms.ControlName = ControlName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetElementNames
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// ERigElementType                         ElementType                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> UControlRigComponent::GetElementNames(ERigElementType ElementType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetElementNames");
+
+	Params::ControlRigComponent_GetElementNames Parms{};
+
+	Parms.ElementType = ElementType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetInitialBoneTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetInitialBoneTransform(class FName BoneName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetInitialBoneTransform");
+
+	Params::ControlRigComponent_GetInitialBoneTransform Parms{};
+
+	Parms.BoneName = BoneName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetInitialSpaceTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetInitialSpaceTransform(class FName SpaceName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetInitialSpaceTransform");
+
+	Params::ControlRigComponent_GetInitialSpaceTransform Parms{};
+
+	Parms.SpaceName = SpaceName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetSpaceTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UControlRigComponent::GetSpaceTransform(class FName SpaceName, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetSpaceTransform");
+
+	Params::ControlRigComponent_GetSpaceTransform Parms{};
+
+	Parms.SpaceName = SpaceName;
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigComponent.Initialize
+// (Final, Native, Public, BlueprintCallable)
+
+void UControlRigComponent::Initialize()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "Initialize");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPostConstruction
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPostConstruction(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPostConstruction");
+
+	Params::ControlRigComponent_OnPostConstruction Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPostForwardsSolve
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPostForwardsSolve(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPostForwardsSolve");
+
+	Params::ControlRigComponent_OnPostForwardsSolve Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPostInitialize
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPostInitialize(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPostInitialize");
+
+	Params::ControlRigComponent_OnPostInitialize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPreConstruction
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPreConstruction(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPreConstruction");
+
+	Params::ControlRigComponent_OnPreConstruction Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPreForwardsSolve
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPreForwardsSolve(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPreForwardsSolve");
+
+	Params::ControlRigComponent_OnPreForwardsSolve Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.OnPreInitialize
+// (Native, Event, Public, BlueprintEvent)
+// Parameters:
+// class UControlRigComponent*             Component                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::OnPreInitialize(class UControlRigComponent* Component)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "OnPreInitialize");
+
+	Params::ControlRigComponent_OnPreInitialize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetBoneInitialTransformsFromSkeletalMesh
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class USkeletalMesh*                    InSkeletalMesh                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetBoneInitialTransformsFromSkeletalMesh(class USkeletalMesh* InSkeletalMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetBoneInitialTransformsFromSkeletalMesh");
+
+	Params::ControlRigComponent_SetBoneInitialTransformsFromSkeletalMesh Parms{};
+
+	Parms.InSkeletalMesh = InSkeletalMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetBoneTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Weight                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPropagateToChildren                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetBoneTransform(class FName BoneName, const struct FTransform& Transform, EControlRigComponentSpace Space, float Weight, bool bPropagateToChildren)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetBoneTransform");
+
+	Params::ControlRigComponent_SetBoneTransform Parms{};
+
+	Parms.BoneName = BoneName;
+	Parms.Transform = std::move(Transform);
+	Parms.Space = Space;
+	Parms.Weight = Weight;
+	Parms.bPropagateToChildren = bPropagateToChildren;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlBool
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlBool(class FName ControlName, bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlBool");
+
+	Params::ControlRigComponent_SetControlBool Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlFloat
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlFloat(class FName ControlName, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlFloat");
+
+	Params::ControlRigComponent_SetControlFloat Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlInt
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlInt(class FName ControlName, int32 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlInt");
+
+	Params::ControlRigComponent_SetControlInt Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlOffset
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       OffsetTransform                                        (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlOffset(class FName ControlName, const struct FTransform& OffsetTransform, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlOffset");
+
+	Params::ControlRigComponent_SetControlOffset Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.OffsetTransform = std::move(OffsetTransform);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlPosition
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlPosition(class FName ControlName, const struct FVector& Value, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlPosition");
+
+	Params::ControlRigComponent_SetControlPosition Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = std::move(Value);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlRigClass
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TSubclassOf<class UControlRig>          InControlRigClass                                      (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlRigClass(TSubclassOf<class UControlRig> InControlRigClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlRigClass");
+
+	Params::ControlRigComponent_SetControlRigClass Parms{};
+
+	Parms.InControlRigClass = InControlRigClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlRotator
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlRotator(class FName ControlName, const struct FRotator& Value, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlRotator");
+
+	Params::ControlRigComponent_SetControlRotator Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = std::move(Value);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlScale
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlScale(class FName ControlName, const struct FVector& Value, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlScale");
+
+	Params::ControlRigComponent_SetControlScale Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = std::move(Value);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       Value                                                  (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlTransform(class FName ControlName, const struct FTransform& Value, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlTransform");
+
+	Params::ControlRigComponent_SetControlTransform Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = std::move(Value);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetControlVector2D
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             ControlName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetControlVector2D(class FName ControlName, const struct FVector2D& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetControlVector2D");
+
+	Params::ControlRigComponent_SetControlVector2D Parms{};
+
+	Parms.ControlName = ControlName;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetInitialBoneTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             BoneName                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPropagateToChildren                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetInitialBoneTransform(class FName BoneName, const struct FTransform& InitialTransform, EControlRigComponentSpace Space, bool bPropagateToChildren)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetInitialBoneTransform");
+
+	Params::ControlRigComponent_SetInitialBoneTransform Parms{};
+
+	Parms.BoneName = BoneName;
+	Parms.InitialTransform = std::move(InitialTransform);
+	Parms.Space = Space;
+	Parms.bPropagateToChildren = bPropagateToChildren;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetInitialSpaceTransform
+// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             SpaceName                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FTransform                       InitialTransform                                       (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EControlRigComponentSpace               Space                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetInitialSpaceTransform(class FName SpaceName, const struct FTransform& InitialTransform, EControlRigComponentSpace Space)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetInitialSpaceTransform");
+
+	Params::ControlRigComponent_SetInitialSpaceTransform Parms{};
+
+	Parms.SpaceName = SpaceName;
+	Parms.InitialTransform = std::move(InitialTransform);
+	Parms.Space = Space;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetMappedElements
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FControlRigComponentMappedElement>NewMappedElements                                      (Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetMappedElements(const TArray<struct FControlRigComponentMappedElement>& NewMappedElements)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetMappedElements");
+
+	Params::ControlRigComponent_SetMappedElements Parms{};
+
+	Parms.NewMappedElements = std::move(NewMappedElements);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.SetObjectBinding
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          InObjectToBind                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::SetObjectBinding(class UObject* InObjectToBind)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "SetObjectBinding");
+
+	Params::ControlRigComponent_SetObjectBinding Parms{};
+
+	Parms.InObjectToBind = InObjectToBind;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.Update
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UControlRigComponent::Update(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "Update");
+
+	Params::ControlRigComponent_Update Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigComponent.GetAbsoluteTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UControlRigComponent::GetAbsoluteTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigComponent", "GetAbsoluteTime");
+
+	Params::ControlRigComponent_GetAbsoluteTime Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7002,6 +6851,248 @@ bool AControlRigShapeActor::IsSelectedInEditor() const
 		Func = Class->GetFunction("ControlRigShapeActor", "IsSelectedInEditor");
 
 	Params::ControlRigShapeActor_IsSelectedInEditor Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.CreateNewAsset
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InDesiredPackagePath                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           InBlueprintPathName                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UControlRigTestData*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UControlRigTestData* UControlRigTestData::CreateNewAsset(const class FString& InDesiredPackagePath, const class FString& InBlueprintPathName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("ControlRigTestData", "CreateNewAsset");
+
+	Params::ControlRigTestData_CreateNewAsset Parms{};
+
+	Parms.InDesiredPackagePath = std::move(InDesiredPackagePath);
+	Parms.InBlueprintPathName = std::move(InBlueprintPathName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.Record
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  InRecordingDuration                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigTestData::Record(class UControlRig* InControlRig, double InRecordingDuration)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "Record");
+
+	Params::ControlRigTestData_Record Parms{};
+
+	Parms.InControlRig = InControlRig;
+	Parms.InRecordingDuration = InRecordingDuration;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.ReleaseReplay
+// (Final, Native, Public, BlueprintCallable)
+
+void UControlRigTestData::ReleaseReplay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "ReleaseReplay");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ControlRig.ControlRigTestData.SetupReplay
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UControlRig*                      InControlRig                                           (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bGroundTruth                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigTestData::SetupReplay(class UControlRig* InControlRig, bool bGroundTruth)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "SetupReplay");
+
+	Params::ControlRigTestData_SetupReplay Parms{};
+
+	Parms.InControlRig = InControlRig;
+	Parms.bGroundTruth = bGroundTruth;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.GetFrameIndexForTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// double                                  InSeconds                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bInput                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UControlRigTestData::GetFrameIndexForTime(double InSeconds, bool bInput) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "GetFrameIndexForTime");
+
+	Params::ControlRigTestData_GetFrameIndexForTime Parms{};
+
+	Parms.InSeconds = InSeconds;
+	Parms.bInput = bInput;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.GetPlaybackMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EControlRigTestDataPlaybackMode         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EControlRigTestDataPlaybackMode UControlRigTestData::GetPlaybackMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "GetPlaybackMode");
+
+	Params::ControlRigTestData_GetPlaybackMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.GetTimeRange
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    bInput                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UControlRigTestData::GetTimeRange(bool bInput) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "GetTimeRange");
+
+	Params::ControlRigTestData_GetTimeRange Parms{};
+
+	Parms.bInput = bInput;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.IsRecording
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigTestData::IsRecording() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "IsRecording");
+
+	Params::ControlRigTestData_IsRecording Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.ControlRigTestData.IsReplaying
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UControlRigTestData::IsReplaying() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ControlRigTestData", "IsReplaying");
+
+	Params::ControlRigTestData_IsReplaying Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -7477,13 +7568,13 @@ TArray<struct FRigElementKey> URigHierarchyController::ImportFromText(const clas
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
 // TArray<struct FRigElementKey>           InKeys                                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// struct FRigMirrorSettings               InSettings                                             (Parm, NativeAccessSpecifierPublic)
+// struct FRigVMMirrorSettings             InSettings                                             (Parm, NativeAccessSpecifierPublic)
 // bool                                    bSelectNewElements                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bPrintPythonCommands                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // TArray<struct FRigElementKey>           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
-TArray<struct FRigElementKey> URigHierarchyController::MirrorElements(const TArray<struct FRigElementKey>& InKeys, const struct FRigMirrorSettings& InSettings, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands)
+TArray<struct FRigElementKey> URigHierarchyController::MirrorElements(const TArray<struct FRigElementKey>& InKeys, const struct FRigVMMirrorSettings& InSettings, bool bSelectNewElements, bool bSetupUndo, bool bPrintPythonCommands)
 {
 	static class UFunction* Func = nullptr;
 
@@ -7635,6 +7726,40 @@ struct FRigElementKey URigHierarchyController::RenameElement(const struct FRigEl
 	Parms.bSetupUndo = bSetupUndo;
 	Parms.bPrintPythonCommand = bPrintPythonCommand;
 	Parms.bClearSelection = bClearSelection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function ControlRig.RigHierarchyController.ReorderElement
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FRigElementKey                   InElement                                              (Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSetupUndo                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPrintPythonCommand                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigHierarchyController::ReorderElement(const struct FRigElementKey& InElement, int32 InIndex, bool bSetupUndo, bool bPrintPythonCommand)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigHierarchyController", "ReorderElement");
+
+	Params::RigHierarchyController_ReorderElement Parms{};
+
+	Parms.InElement = std::move(InElement);
+	Parms.InIndex = InIndex;
+	Parms.bSetupUndo = bSetupUndo;
+	Parms.bPrintPythonCommand = bPrintPythonCommand;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

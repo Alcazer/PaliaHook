@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "SlateCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
 
 
 namespace SDK
@@ -28,10 +28,10 @@ public:
 	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVerticalAlignment                            VerticalAlignment;                                 // 0x0021(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyAlphaToBlur;                                 // 0x0022(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18F4[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C10[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BlurStrength;                                      // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideAutoRadiusCalculation;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18F5[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C11[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BlurRadius;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            LowQualityFallbackBrush;                           // 0x0030(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
@@ -52,7 +52,7 @@ static_assert(offsetof(FS6UI_BackgroundBlurSettings, LowQualityFallbackBrush) ==
 struct FS6UI_FEditableRichTextStyleRow final  : public FTableRowBase
 {
 public:
-	uint8                                         Pad_18F6[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C12[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEditableTextStyle                     TextStyle;                                         // 0x0010(0x02F0)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6UI_FEditableRichTextStyleRow) == 0x000010, "Wrong alignment on FS6UI_FEditableRichTextStyleRow");
@@ -60,26 +60,26 @@ static_assert(sizeof(FS6UI_FEditableRichTextStyleRow) == 0x000300, "Wrong size o
 static_assert(offsetof(FS6UI_FEditableRichTextStyleRow, TextStyle) == 0x000010, "Member 'FS6UI_FEditableRichTextStyleRow::TextStyle' has a wrong offset!");
 
 // ScriptStruct S6UICommonWidgets.S6UI_FRichImageRow_Soft
-// 0x0050 (0x0058 - 0x0008)
+// 0x0048 (0x0050 - 0x0008)
 struct FS6UI_FRichImageRow_Soft final  : public FTableRowBase
 {
 public:
-	TSoftObjectPtr<class UTexture2D>              ImageTexture;                                      // 0x0008(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ImageSize;                                         // 0x0038(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           TintColor;                                         // 0x0048(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              ImageTexture;                                      // 0x0008(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ImageSize;                                         // 0x0030(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           TintColor;                                         // 0x0040(0x0010)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6UI_FRichImageRow_Soft) == 0x000008, "Wrong alignment on FS6UI_FRichImageRow_Soft");
-static_assert(sizeof(FS6UI_FRichImageRow_Soft) == 0x000058, "Wrong size on FS6UI_FRichImageRow_Soft");
+static_assert(sizeof(FS6UI_FRichImageRow_Soft) == 0x000050, "Wrong size on FS6UI_FRichImageRow_Soft");
 static_assert(offsetof(FS6UI_FRichImageRow_Soft, ImageTexture) == 0x000008, "Member 'FS6UI_FRichImageRow_Soft::ImageTexture' has a wrong offset!");
-static_assert(offsetof(FS6UI_FRichImageRow_Soft, ImageSize) == 0x000038, "Member 'FS6UI_FRichImageRow_Soft::ImageSize' has a wrong offset!");
-static_assert(offsetof(FS6UI_FRichImageRow_Soft, TintColor) == 0x000048, "Member 'FS6UI_FRichImageRow_Soft::TintColor' has a wrong offset!");
+static_assert(offsetof(FS6UI_FRichImageRow_Soft, ImageSize) == 0x000030, "Member 'FS6UI_FRichImageRow_Soft::ImageSize' has a wrong offset!");
+static_assert(offsetof(FS6UI_FRichImageRow_Soft, TintColor) == 0x000040, "Member 'FS6UI_FRichImageRow_Soft::TintColor' has a wrong offset!");
 
 // ScriptStruct S6UICommonWidgets.S6UI_RichTextHyperlinkStyle
 // 0x0758 (0x0760 - 0x0008)
 struct FS6UI_RichTextHyperlinkStyle final  : public FTableRowBase
 {
 public:
-	uint8                                         Pad_18F7[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C13[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHyperlinkStyle                        Style;                                             // 0x0010(0x0750)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6UI_RichTextHyperlinkStyle) == 0x000010, "Wrong alignment on FS6UI_RichTextHyperlinkStyle");

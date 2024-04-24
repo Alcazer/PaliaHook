@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "OnlineSubsystemValeria_structs.hpp"
-#include "ValeriaDTOs_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Engine_structs.hpp"
 #include "OnlineSubsystemUtils_structs.hpp"
+#include "Engine_structs.hpp"
+#include "ValeriaDTOs_structs.hpp"
 
 
 namespace SDK::Params
@@ -234,20 +234,49 @@ static_assert(alignof(OSSVAL_AsyncActionProfanityFilterString_OnResultObtained__
 static_assert(sizeof(OSSVAL_AsyncActionProfanityFilterString_OnResultObtained__DelegateSignature) == 0x000018, "Wrong size on OSSVAL_AsyncActionProfanityFilterString_OnResultObtained__DelegateSignature");
 static_assert(offsetof(OSSVAL_AsyncActionProfanityFilterString_OnResultObtained__DelegateSignature, Response) == 0x000000, "Member 'OSSVAL_AsyncActionProfanityFilterString_OnResultObtained__DelegateSignature::Response' has a wrong offset!");
 
+// Function OnlineSubsystemValeria.OSSVAL_AsyncActionQueryUserPrivileges.QueryUserPrivileges
+// 0x0018 (0x0018 - 0x0000)
+struct OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges final 
+{
+public:
+	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InUserIndex;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVAL_UserPrivileges                           InPrivilegesType;                                  // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CA7[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UOSSVAL_AsyncActionQueryUserPrivileges* ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges) == 0x000008, "Wrong alignment on OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges");
+static_assert(sizeof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges) == 0x000018, "Wrong size on OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges");
+static_assert(offsetof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges, WorldContextObject) == 0x000000, "Member 'OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges::WorldContextObject' has a wrong offset!");
+static_assert(offsetof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges, InUserIndex) == 0x000008, "Member 'OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges::InUserIndex' has a wrong offset!");
+static_assert(offsetof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges, InPrivilegesType) == 0x00000C, "Member 'OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges::InPrivilegesType' has a wrong offset!");
+static_assert(offsetof(OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges, ReturnValue) == 0x000010, "Member 'OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges::ReturnValue' has a wrong offset!");
+
+// DelegateFunction OnlineSubsystemValeria.OSSVAL_AsyncActionQueryUserPrivileges.OnQueryUserPrivilegesComplete__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature final 
+{
+public:
+	bool                                          bQueryResult;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature) == 0x000001, "Wrong alignment on OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature");
+static_assert(sizeof(OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature) == 0x000001, "Wrong size on OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature");
+static_assert(offsetof(OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature, bQueryResult) == 0x000000, "Member 'OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature::bQueryResult' has a wrong offset!");
+
 // Function OnlineSubsystemValeria.OSSVAL_BeaconClient.RpcClient_SendTicketValidationResponse
 // 0x00C0 (0x00C0 - 0x0000)
 struct OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse final 
 {
 public:
-	struct FGuid                                  RequestId;                                         // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  RequestID;                                         // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAccepted;                                         // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A34[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOSSVAL_MatchmakingTicket              Ticket;                                            // 0x0018(0x0098)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FOSSVAL_MatchmakingTicketContext       Context;                                           // 0x00B0(0x0010)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse) == 0x000008, "Wrong alignment on OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse");
 static_assert(sizeof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse) == 0x0000C0, "Wrong size on OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse");
-static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse, RequestId) == 0x000000, "Member 'OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse::RequestId' has a wrong offset!");
+static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse, RequestID) == 0x000000, "Member 'OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse::RequestID' has a wrong offset!");
 static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse, bAccepted) == 0x000010, "Member 'OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse::bAccepted' has a wrong offset!");
 static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse, Ticket) == 0x000018, "Member 'OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse::Ticket' has a wrong offset!");
 static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse, Context) == 0x0000B0, "Member 'OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse::Context' has a wrong offset!");
@@ -257,13 +286,13 @@ static_assert(offsetof(OSSVAL_BeaconClient_RpcClient_SendTicketValidationRespons
 struct OSSVAL_BeaconClient_RpcServer_ValidateTicket final 
 {
 public:
-	struct FGuid                                  RequestId;                                         // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  RequestID;                                         // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOSSVAL_MatchmakingTicket              Ticket;                                            // 0x0010(0x0098)(ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FOSSVAL_MatchmakingTicketContext       Context;                                           // 0x00A8(0x0010)(ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OSSVAL_BeaconClient_RpcServer_ValidateTicket) == 0x000008, "Wrong alignment on OSSVAL_BeaconClient_RpcServer_ValidateTicket");
 static_assert(sizeof(OSSVAL_BeaconClient_RpcServer_ValidateTicket) == 0x0000B8, "Wrong size on OSSVAL_BeaconClient_RpcServer_ValidateTicket");
-static_assert(offsetof(OSSVAL_BeaconClient_RpcServer_ValidateTicket, RequestId) == 0x000000, "Member 'OSSVAL_BeaconClient_RpcServer_ValidateTicket::RequestId' has a wrong offset!");
+static_assert(offsetof(OSSVAL_BeaconClient_RpcServer_ValidateTicket, RequestID) == 0x000000, "Member 'OSSVAL_BeaconClient_RpcServer_ValidateTicket::RequestID' has a wrong offset!");
 static_assert(offsetof(OSSVAL_BeaconClient_RpcServer_ValidateTicket, Ticket) == 0x000010, "Member 'OSSVAL_BeaconClient_RpcServer_ValidateTicket::Ticket' has a wrong offset!");
 static_assert(offsetof(OSSVAL_BeaconClient_RpcServer_ValidateTicket, Context) == 0x0000A8, "Member 'OSSVAL_BeaconClient_RpcServer_ValidateTicket::Context' has a wrong offset!");
 

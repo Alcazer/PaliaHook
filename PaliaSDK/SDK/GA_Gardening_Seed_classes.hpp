@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GA_Gardening_Seed.GA_Gardening_Seed_C
-// 0x0010 (0x0550 - 0x0540)
+// 0x0010 (0x0560 - 0x0550)
 class UGA_Gardening_Seed_C final  : public UGA_LoopableEvent_Base_C
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Gardening_Seed_C;                // 0x0540(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class AActor*                                 BP_seed;                                           // 0x0548(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Gardening_Seed_C;                // 0x0550(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class AActor*                                 BP_seed;                                           // 0x0558(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Event_vfx_throwSeeds();
@@ -42,9 +42,9 @@ public:
 	}
 };
 static_assert(alignof(UGA_Gardening_Seed_C) == 0x000008, "Wrong alignment on UGA_Gardening_Seed_C");
-static_assert(sizeof(UGA_Gardening_Seed_C) == 0x000550, "Wrong size on UGA_Gardening_Seed_C");
-static_assert(offsetof(UGA_Gardening_Seed_C, UberGraphFrame_GA_Gardening_Seed_C) == 0x000540, "Member 'UGA_Gardening_Seed_C::UberGraphFrame_GA_Gardening_Seed_C' has a wrong offset!");
-static_assert(offsetof(UGA_Gardening_Seed_C, BP_seed) == 0x000548, "Member 'UGA_Gardening_Seed_C::BP_seed' has a wrong offset!");
+static_assert(sizeof(UGA_Gardening_Seed_C) == 0x000560, "Wrong size on UGA_Gardening_Seed_C");
+static_assert(offsetof(UGA_Gardening_Seed_C, UberGraphFrame_GA_Gardening_Seed_C) == 0x000550, "Member 'UGA_Gardening_Seed_C::UberGraphFrame_GA_Gardening_Seed_C' has a wrong offset!");
+static_assert(offsetof(UGA_Gardening_Seed_C, BP_seed) == 0x000558, "Member 'UGA_Gardening_Seed_C::BP_seed' has a wrong offset!");
 
 }
 

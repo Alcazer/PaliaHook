@@ -50,7 +50,7 @@ enum class EPartyInviteRestriction : uint8
 };
 
 // Enum Party.EPartyJoinDenialReason
-// NumValues: 0x0041
+// NumValues: 0x0043
 enum class EPartyJoinDenialReason : uint8
 {
 	NoReason                                 = 0,
@@ -77,47 +77,49 @@ enum class EPartyJoinDenialReason : uint8
 	FailedToStartFindConsoleSession          = 21,
 	MissingPartyClassForTypeId               = 22,
 	TargetUserBlocked                        = 23,
-	CustomReason0                            = 24,
-	CustomReason1                            = 25,
-	CustomReason2                            = 26,
-	CustomReason3                            = 27,
-	CustomReason4                            = 28,
-	CustomReason5                            = 29,
-	CustomReason6                            = 30,
-	CustomReason7                            = 31,
-	CustomReason8                            = 32,
-	CustomReason9                            = 33,
-	CustomReason10                           = 34,
-	CustomReason11                           = 35,
-	CustomReason12                           = 36,
-	CustomReason13                           = 37,
-	CustomReason14                           = 38,
-	CustomReason15                           = 39,
-	CustomReason16                           = 40,
-	CustomReason17                           = 41,
-	CustomReason18                           = 42,
-	CustomReason19                           = 43,
-	CustomReason20                           = 44,
-	CustomReason21                           = 45,
-	CustomReason22                           = 46,
-	CustomReason23                           = 47,
-	CustomReason24                           = 48,
-	CustomReason25                           = 49,
-	CustomReason26                           = 50,
-	CustomReason27                           = 51,
-	CustomReason28                           = 52,
-	CustomReason29                           = 53,
-	CustomReason30                           = 54,
-	CustomReason31                           = 55,
-	CustomReason32                           = 56,
-	CustomReason33                           = 57,
-	CustomReason34                           = 58,
-	CustomReason35                           = 59,
-	CustomReason36                           = 60,
-	CustomReason37                           = 61,
-	CustomReason38                           = 62,
-	CustomReason39                           = 63,
-	MAX                                      = 64,
+	InvalidJoinInfo                          = 24,
+	NotFriends                               = 25,
+	CustomReason0                            = 26,
+	CustomReason1                            = 27,
+	CustomReason2                            = 28,
+	CustomReason3                            = 29,
+	CustomReason4                            = 30,
+	CustomReason5                            = 31,
+	CustomReason6                            = 32,
+	CustomReason7                            = 33,
+	CustomReason8                            = 34,
+	CustomReason9                            = 35,
+	CustomReason10                           = 36,
+	CustomReason11                           = 37,
+	CustomReason12                           = 38,
+	CustomReason13                           = 39,
+	CustomReason14                           = 40,
+	CustomReason15                           = 41,
+	CustomReason16                           = 42,
+	CustomReason17                           = 43,
+	CustomReason18                           = 44,
+	CustomReason19                           = 45,
+	CustomReason20                           = 46,
+	CustomReason21                           = 47,
+	CustomReason22                           = 48,
+	CustomReason23                           = 49,
+	CustomReason24                           = 50,
+	CustomReason25                           = 51,
+	CustomReason26                           = 52,
+	CustomReason27                           = 53,
+	CustomReason28                           = 54,
+	CustomReason29                           = 55,
+	CustomReason30                           = 56,
+	CustomReason31                           = 57,
+	CustomReason32                           = 58,
+	CustomReason33                           = 59,
+	CustomReason34                           = 60,
+	CustomReason35                           = 61,
+	CustomReason36                           = 62,
+	CustomReason37                           = 63,
+	CustomReason38                           = 64,
+	CustomReason39                           = 65,
+	MAX                                      = 66,
 };
 
 // Enum Party.EApprovalAction
@@ -132,13 +134,23 @@ enum class EApprovalAction : uint8
 };
 
 // Enum Party.ESocialPartyInviteMethod
-// NumValues: 0x0004
+// NumValues: 0x000E
 enum class ESocialPartyInviteMethod : uint8
 {
 	Other                                    = 0,
 	Notification                             = 1,
-	Custom1                                  = 2,
-	ESocialPartyInviteMethod_MAX             = 3,
+	AcceptRequestToJoin                      = 2,
+	Custom0                                  = 3,
+	Custom1                                  = 4,
+	Custom2                                  = 5,
+	Custom3                                  = 6,
+	Custom4                                  = 7,
+	Custom5                                  = 8,
+	Custom6                                  = 9,
+	Custom7                                  = 10,
+	Custom8                                  = 11,
+	Custom9                                  = 12,
+	MAX                                      = 13,
 };
 
 // Enum Party.ESocialPartyInviteFailureReason
@@ -242,14 +254,14 @@ static_assert(offsetof(FUserPlatform, PlatformDescription) == 0x000000, "Member 
 struct FPartyMemberPlatformData final 
 {
 public:
-	struct FUserPlatform                          Platform;                                          // 0x0000(0x0058)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FUniqueNetIdRepl                       UniqueId;                                          // 0x0058(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FUserPlatform                          Platform;                                          // 0x0000(0x0058)(NativeAccessSpecifierPublic)
+	struct FUniqueNetIdRepl                       UniqueID;                                          // 0x0058(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 SessionId;                                         // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPartyMemberPlatformData) == 0x000008, "Wrong alignment on FPartyMemberPlatformData");
 static_assert(sizeof(FPartyMemberPlatformData) == 0x000098, "Wrong size on FPartyMemberPlatformData");
 static_assert(offsetof(FPartyMemberPlatformData, Platform) == 0x000000, "Member 'FPartyMemberPlatformData::Platform' has a wrong offset!");
-static_assert(offsetof(FPartyMemberPlatformData, UniqueId) == 0x000058, "Member 'FPartyMemberPlatformData::UniqueId' has a wrong offset!");
+static_assert(offsetof(FPartyMemberPlatformData, UniqueID) == 0x000058, "Member 'FPartyMemberPlatformData::UniqueID' has a wrong offset!");
 static_assert(offsetof(FPartyMemberPlatformData, SessionId) == 0x000088, "Member 'FPartyMemberPlatformData::SessionId' has a wrong offset!");
 
 // ScriptStruct Party.PartyMemberJoinInProgressRequest
@@ -274,7 +286,7 @@ public:
 	int64                                         RequestTime;                                       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int64                                         ResponseTime;                                      // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         DenialReason;                                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DD4[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_328C[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPartyMemberJoinInProgressResponse) == 0x000008, "Wrong alignment on FPartyMemberJoinInProgressResponse");
 static_assert(sizeof(FPartyMemberJoinInProgressResponse) == 0x000048, "Wrong size on FPartyMemberJoinInProgressResponse");
@@ -301,32 +313,32 @@ static_assert(offsetof(FPartyMemberJoinInProgressData, Responses) == 0x000038, "
 struct alignas(0x08) FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_1DD5[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_328D[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOnlinePartyRepDataBase) == 0x000008, "Wrong alignment on FOnlinePartyRepDataBase");
 static_assert(sizeof(FOnlinePartyRepDataBase) == 0x000018, "Wrong size on FOnlinePartyRepDataBase");
 
 // ScriptStruct Party.PartyMemberRepData
-// 0x0250 (0x0268 - 0x0018)
+// 0x0258 (0x0270 - 0x0018)
 struct FPartyMemberRepData final  : public FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_1DD6[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPartyMemberPlatformData               PlatformData;                                      // 0x0020(0x0098)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DD7[0x90];                                    // 0x00B8(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
-	ECrossplayPreference                          CrossplayPreference;                               // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DD8[0x37];                                    // 0x0149(0x0037)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 JoinMethod;                                        // 0x0180(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DD9[0x30];                                    // 0x0190(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPartyMemberJoinInProgressData         JoinInProgressData;                                // 0x01C0(0x0048)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DDA[0x60];                                    // 0x0208(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_328E[0x10];                                    // 0x0018(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartyMemberPlatformData               PlatformData;                                      // 0x0028(0x0098)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_328F[0x90];                                    // 0x00C0(0x0090)(Fixing Size After Last Property [ Dumper-7 ])
+	ECrossplayPreference                          CrossplayPreference;                               // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3290[0x37];                                    // 0x0151(0x0037)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 JoinMethod;                                        // 0x0188(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3291[0x30];                                    // 0x0198(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartyMemberJoinInProgressData         JoinInProgressData;                                // 0x01C8(0x0048)(NativeAccessSpecifierPrivate)
+	uint8                                         Pad_3292[0x60];                                    // 0x0210(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPartyMemberRepData) == 0x000008, "Wrong alignment on FPartyMemberRepData");
-static_assert(sizeof(FPartyMemberRepData) == 0x000268, "Wrong size on FPartyMemberRepData");
-static_assert(offsetof(FPartyMemberRepData, PlatformData) == 0x000020, "Member 'FPartyMemberRepData::PlatformData' has a wrong offset!");
-static_assert(offsetof(FPartyMemberRepData, CrossplayPreference) == 0x000148, "Member 'FPartyMemberRepData::CrossplayPreference' has a wrong offset!");
-static_assert(offsetof(FPartyMemberRepData, JoinMethod) == 0x000180, "Member 'FPartyMemberRepData::JoinMethod' has a wrong offset!");
-static_assert(offsetof(FPartyMemberRepData, JoinInProgressData) == 0x0001C0, "Member 'FPartyMemberRepData::JoinInProgressData' has a wrong offset!");
+static_assert(sizeof(FPartyMemberRepData) == 0x000270, "Wrong size on FPartyMemberRepData");
+static_assert(offsetof(FPartyMemberRepData, PlatformData) == 0x000028, "Member 'FPartyMemberRepData::PlatformData' has a wrong offset!");
+static_assert(offsetof(FPartyMemberRepData, CrossplayPreference) == 0x000150, "Member 'FPartyMemberRepData::CrossplayPreference' has a wrong offset!");
+static_assert(offsetof(FPartyMemberRepData, JoinMethod) == 0x000188, "Member 'FPartyMemberRepData::JoinMethod' has a wrong offset!");
+static_assert(offsetof(FPartyMemberRepData, JoinInProgressData) == 0x0001C8, "Member 'FPartyMemberRepData::JoinInProgressData' has a wrong offset!");
 
 // ScriptStruct Party.PartyPlatformSessionInfo
 // 0x0050 (0x0050 - 0x0000)
@@ -363,15 +375,15 @@ static_assert(offsetof(FPartyPrivacySettings, bOnlyLeaderFriendsCanJoin) == 0x00
 struct FPartyRepData final  : public FOnlinePartyRepDataBase
 {
 public:
-	uint8                                         Pad_1DDB[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPartyPrivacySettings                  PrivacySettings;                                   // 0x0020(0x0003)(NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DDC[0x35];                                    // 0x0023(0x0035)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3293[0x9];                                     // 0x0018(0x0009)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPartyPrivacySettings                  PrivacySettings;                                   // 0x0021(0x0003)(NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_3294[0x34];                                    // 0x0024(0x0034)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPartyPlatformSessionInfo>      PlatformSessions;                                  // 0x0058(0x0010)(ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DDD[0x18];                                    // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3295[0x18];                                    // 0x0068(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FPartyRepData) == 0x000008, "Wrong alignment on FPartyRepData");
 static_assert(sizeof(FPartyRepData) == 0x000080, "Wrong size on FPartyRepData");
-static_assert(offsetof(FPartyRepData, PrivacySettings) == 0x000020, "Member 'FPartyRepData::PrivacySettings' has a wrong offset!");
+static_assert(offsetof(FPartyRepData, PrivacySettings) == 0x000021, "Member 'FPartyRepData::PrivacySettings' has a wrong offset!");
 static_assert(offsetof(FPartyRepData, PlatformSessions) == 0x000058, "Member 'FPartyRepData::PlatformSessions' has a wrong offset!");
 
 // ScriptStruct Party.SocialChatChannelConfig
@@ -380,9 +392,9 @@ struct FSocialChatChannelConfig final
 {
 public:
 	class USocialUser*                            SocialUser;                                        // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDE[0x10];                                    // 0x0008(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3296[0x10];                                    // 0x0008(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USocialChatChannel*>             ListenChannels;                                    // 0x0018(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDF[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3297[0x18];                                    // 0x0028(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSocialChatChannelConfig) == 0x000008, "Wrong alignment on FSocialChatChannelConfig");
 static_assert(sizeof(FSocialChatChannelConfig) == 0x000040, "Wrong size on FSocialChatChannelConfig");

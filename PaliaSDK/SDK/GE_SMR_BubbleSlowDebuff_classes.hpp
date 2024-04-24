@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass GE_SMR_BubbleSlowDebuff.GE_SMR_BubbleSlowDebuff_C
-// 0x0000 (0x0860 - 0x0860)
+// 0x0000 (0x0A70 - 0x0A70)
 class UGE_SMR_BubbleSlowDebuff_C final  : public UGameplayEffect
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UGE_SMR_BubbleSlowDebuff_C) == 0x000008, "Wrong alignment on UGE_SMR_BubbleSlowDebuff_C");
-static_assert(sizeof(UGE_SMR_BubbleSlowDebuff_C) == 0x000860, "Wrong size on UGE_SMR_BubbleSlowDebuff_C");
+static_assert(sizeof(UGE_SMR_BubbleSlowDebuff_C) == 0x000A70, "Wrong size on UGE_SMR_BubbleSlowDebuff_C");
 
 }
 

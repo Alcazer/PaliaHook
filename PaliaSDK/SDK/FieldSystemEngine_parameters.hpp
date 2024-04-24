@@ -10,39 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
 #include "Chaos_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function FieldSystemEngine.RadialFalloff.SetRadialFalloff
-// 0x0040 (0x0040 - 0x0000)
-struct RadialFalloff_SetRadialFalloff final 
-{
-public:
-	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Param_MinRange;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Param_MaxRange;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Param_Default;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Param_Radius;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37C4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Param_Position;                                    // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EFieldFalloffType                             Param_Falloff;                                     // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37C5[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URadialFalloff*                         ReturnValue;                                       // 0x0038(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RadialFalloff_SetRadialFalloff) == 0x000008, "Wrong alignment on RadialFalloff_SetRadialFalloff");
-static_assert(sizeof(RadialFalloff_SetRadialFalloff) == 0x000040, "Wrong size on RadialFalloff_SetRadialFalloff");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Magnitude) == 0x000000, "Member 'RadialFalloff_SetRadialFalloff::Param_Magnitude' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_MinRange) == 0x000004, "Member 'RadialFalloff_SetRadialFalloff::Param_MinRange' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_MaxRange) == 0x000008, "Member 'RadialFalloff_SetRadialFalloff::Param_MaxRange' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Default) == 0x00000C, "Member 'RadialFalloff_SetRadialFalloff::Param_Default' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Radius) == 0x000010, "Member 'RadialFalloff_SetRadialFalloff::Param_Radius' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Position) == 0x000018, "Member 'RadialFalloff_SetRadialFalloff::Param_Position' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Falloff) == 0x000030, "Member 'RadialFalloff_SetRadialFalloff::Param_Falloff' has a wrong offset!");
-static_assert(offsetof(RadialFalloff_SetRadialFalloff, ReturnValue) == 0x000038, "Member 'RadialFalloff_SetRadialFalloff::ReturnValue' has a wrong offset!");
 
 // Function FieldSystemEngine.FieldSystemComponent.AddFieldCommand
 // 0x0018 (0x0018 - 0x0000)
@@ -51,7 +24,7 @@ struct FieldSystemComponent_AddFieldCommand final
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldPhysicsType                             Target;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37C9[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_146F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaData*                   MetaData;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Field;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -69,7 +42,7 @@ struct FieldSystemComponent_AddPersistentField final
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldPhysicsType                             Target;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CA[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1470[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaData*                   MetaData;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Field;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -86,10 +59,10 @@ struct FieldSystemComponent_ApplyLinearForce final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1471[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Direction;                                         // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CC[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1472[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FieldSystemComponent_ApplyLinearForce) == 0x000008, "Wrong alignment on FieldSystemComponent_ApplyLinearForce");
 static_assert(sizeof(FieldSystemComponent_ApplyLinearForce) == 0x000028, "Wrong size on FieldSystemComponent_ApplyLinearForce");
@@ -104,7 +77,7 @@ struct FieldSystemComponent_ApplyPhysicsField final
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldPhysicsType                             Target;                                            // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CD[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1473[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaData*                   MetaData;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Field;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -121,10 +94,10 @@ struct FieldSystemComponent_ApplyRadialForce final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1474[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37CF[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1475[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FieldSystemComponent_ApplyRadialForce) == 0x000008, "Wrong alignment on FieldSystemComponent_ApplyRadialForce");
 static_assert(sizeof(FieldSystemComponent_ApplyRadialForce) == 0x000028, "Wrong size on FieldSystemComponent_ApplyRadialForce");
@@ -138,7 +111,7 @@ struct FieldSystemComponent_ApplyRadialVectorFalloffForce final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1476[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -156,10 +129,10 @@ struct FieldSystemComponent_ApplyStayDynamicField final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1477[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D2[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1478[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FieldSystemComponent_ApplyStayDynamicField) == 0x000008, "Wrong alignment on FieldSystemComponent_ApplyStayDynamicField");
 static_assert(sizeof(FieldSystemComponent_ApplyStayDynamicField) == 0x000028, "Wrong size on FieldSystemComponent_ApplyStayDynamicField");
@@ -173,12 +146,12 @@ struct FieldSystemComponent_ApplyStrainField final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1479[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Iterations;                                        // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D4[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_147A[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FieldSystemComponent_ApplyStrainField) == 0x000008, "Wrong alignment on FieldSystemComponent_ApplyStrainField");
 static_assert(sizeof(FieldSystemComponent_ApplyStrainField) == 0x000030, "Wrong size on FieldSystemComponent_ApplyStrainField");
@@ -194,7 +167,7 @@ struct FieldSystemComponent_ApplyUniformVectorFalloffForce final
 {
 public:
 	bool                                          Enabled;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D5[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_147B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Position;                                          // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Direction;                                         // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -214,7 +187,7 @@ struct FieldSystemMetaDataIteration_SetMetaDataIteration final
 {
 public:
 	int32                                         Param_Iterations;                                  // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_147D[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaDataIteration*          ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FieldSystemMetaDataIteration_SetMetaDataIteration) == 0x000008, "Wrong alignment on FieldSystemMetaDataIteration_SetMetaDataIteration");
@@ -228,27 +201,13 @@ struct FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionT
 {
 public:
 	EFieldResolutionType                          Param_ResolutionType;                              // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37D9[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_147F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaDataProcessingResolution* ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType) == 0x000008, "Wrong alignment on FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType");
 static_assert(sizeof(FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType) == 0x000010, "Wrong size on FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType");
 static_assert(offsetof(FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType, Param_ResolutionType) == 0x000000, "Member 'FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType::Param_ResolutionType' has a wrong offset!");
 static_assert(offsetof(FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType, ReturnValue) == 0x000008, "Member 'FieldSystemMetaDataProcessingResolution_SetMetaDataaProcessingResolutionType::ReturnValue' has a wrong offset!");
-
-// Function FieldSystemEngine.UniformScalar.SetUniformScalar
-// 0x0010 (0x0010 - 0x0000)
-struct UniformScalar_SetUniformScalar final 
-{
-public:
-	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37DB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UUniformScalar*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(UniformScalar_SetUniformScalar) == 0x000008, "Wrong alignment on UniformScalar_SetUniformScalar");
-static_assert(sizeof(UniformScalar_SetUniformScalar) == 0x000010, "Wrong size on UniformScalar_SetUniformScalar");
-static_assert(offsetof(UniformScalar_SetUniformScalar, Param_Magnitude) == 0x000000, "Member 'UniformScalar_SetUniformScalar::Param_Magnitude' has a wrong offset!");
-static_assert(offsetof(UniformScalar_SetUniformScalar, ReturnValue) == 0x000008, "Member 'UniformScalar_SetUniformScalar::ReturnValue' has a wrong offset!");
 
 // Function FieldSystemEngine.FieldSystemMetaDataFilter.SetMetaDataFilterType
 // 0x0010 (0x0010 - 0x0000)
@@ -258,7 +217,7 @@ public:
 	EFieldFilterType                              Param_FilterType;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldObjectType                              Param_ObjectType;                                  // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldPositionType                            Param_PositionType;                                // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37DD[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1481[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldSystemMetaDataFilter*             ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FieldSystemMetaDataFilter_SetMetaDataFilterType) == 0x000008, "Wrong alignment on FieldSystemMetaDataFilter_SetMetaDataFilterType");
@@ -274,7 +233,7 @@ struct UniformInteger_SetUniformInteger final
 {
 public:
 	int32                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37DF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1483[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUniformInteger*                        ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(UniformInteger_SetUniformInteger) == 0x000008, "Wrong alignment on UniformInteger_SetUniformInteger");
@@ -288,12 +247,12 @@ struct RadialIntMask_SetRadialIntMask final
 {
 public:
 	float                                         Param_Radius;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37E2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1486[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Param_Position;                                    // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Param_InteriorValue;                               // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Param_ExteriorValue;                               // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESetMaskConditionType                         SetMaskConditionIn;                                // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37E3[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1487[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class URadialIntMask*                         ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RadialIntMask_SetRadialIntMask) == 0x000008, "Wrong alignment on RadialIntMask_SetRadialIntMask");
@@ -305,20 +264,34 @@ static_assert(offsetof(RadialIntMask_SetRadialIntMask, Param_ExteriorValue) == 0
 static_assert(offsetof(RadialIntMask_SetRadialIntMask, SetMaskConditionIn) == 0x000028, "Member 'RadialIntMask_SetRadialIntMask::SetMaskConditionIn' has a wrong offset!");
 static_assert(offsetof(RadialIntMask_SetRadialIntMask, ReturnValue) == 0x000030, "Member 'RadialIntMask_SetRadialIntMask::ReturnValue' has a wrong offset!");
 
+// Function FieldSystemEngine.UniformScalar.SetUniformScalar
+// 0x0010 (0x0010 - 0x0000)
+struct UniformScalar_SetUniformScalar final 
+{
+public:
+	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1489[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UUniformScalar*                         ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(UniformScalar_SetUniformScalar) == 0x000008, "Wrong alignment on UniformScalar_SetUniformScalar");
+static_assert(sizeof(UniformScalar_SetUniformScalar) == 0x000010, "Wrong size on UniformScalar_SetUniformScalar");
+static_assert(offsetof(UniformScalar_SetUniformScalar, Param_Magnitude) == 0x000000, "Member 'UniformScalar_SetUniformScalar::Param_Magnitude' has a wrong offset!");
+static_assert(offsetof(UniformScalar_SetUniformScalar, ReturnValue) == 0x000008, "Member 'UniformScalar_SetUniformScalar::ReturnValue' has a wrong offset!");
+
 // Function FieldSystemEngine.WaveScalar.SetWaveScalar
 // 0x0038 (0x0038 - 0x0000)
 struct WaveScalar_SetWaveScalar final 
 {
 public:
 	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37E6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_148C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Param_Position;                                    // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Param_WaveLength;                                  // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Param_Period;                                      // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Time;                                              // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EWaveFunctionType                             Param_Function;                                    // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldFalloffType                             Param_Falloff;                                     // 0x002D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37E7[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_148D[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWaveScalar*                            ReturnValue;                                       // 0x0030(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WaveScalar_SetWaveScalar) == 0x000008, "Wrong alignment on WaveScalar_SetWaveScalar");
@@ -332,6 +305,33 @@ static_assert(offsetof(WaveScalar_SetWaveScalar, Param_Function) == 0x00002C, "M
 static_assert(offsetof(WaveScalar_SetWaveScalar, Param_Falloff) == 0x00002D, "Member 'WaveScalar_SetWaveScalar::Param_Falloff' has a wrong offset!");
 static_assert(offsetof(WaveScalar_SetWaveScalar, ReturnValue) == 0x000030, "Member 'WaveScalar_SetWaveScalar::ReturnValue' has a wrong offset!");
 
+// Function FieldSystemEngine.RadialFalloff.SetRadialFalloff
+// 0x0040 (0x0040 - 0x0000)
+struct RadialFalloff_SetRadialFalloff final 
+{
+public:
+	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Param_MinRange;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Param_MaxRange;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Param_Default;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Param_Radius;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1490[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Param_Position;                                    // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EFieldFalloffType                             Param_Falloff;                                     // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1491[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URadialFalloff*                         ReturnValue;                                       // 0x0038(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RadialFalloff_SetRadialFalloff) == 0x000008, "Wrong alignment on RadialFalloff_SetRadialFalloff");
+static_assert(sizeof(RadialFalloff_SetRadialFalloff) == 0x000040, "Wrong size on RadialFalloff_SetRadialFalloff");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Magnitude) == 0x000000, "Member 'RadialFalloff_SetRadialFalloff::Param_Magnitude' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_MinRange) == 0x000004, "Member 'RadialFalloff_SetRadialFalloff::Param_MinRange' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_MaxRange) == 0x000008, "Member 'RadialFalloff_SetRadialFalloff::Param_MaxRange' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Default) == 0x00000C, "Member 'RadialFalloff_SetRadialFalloff::Param_Default' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Radius) == 0x000010, "Member 'RadialFalloff_SetRadialFalloff::Param_Radius' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Position) == 0x000018, "Member 'RadialFalloff_SetRadialFalloff::Param_Position' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, Param_Falloff) == 0x000030, "Member 'RadialFalloff_SetRadialFalloff::Param_Falloff' has a wrong offset!");
+static_assert(offsetof(RadialFalloff_SetRadialFalloff, ReturnValue) == 0x000038, "Member 'RadialFalloff_SetRadialFalloff::ReturnValue' has a wrong offset!");
+
 // Function FieldSystemEngine.PlaneFalloff.SetPlaneFalloff
 // 0x0058 (0x0058 - 0x0000)
 struct PlaneFalloff_SetPlaneFalloff final 
@@ -342,11 +342,11 @@ public:
 	float                                         Param_MaxRange;                                    // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Param_Default;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Param_Distance;                                    // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37EA[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1494[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Param_Position;                                    // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Param_Normal;                                      // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldFalloffType                             Param_Falloff;                                     // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37EB[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1495[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPlaneFalloff*                          ReturnValue;                                       // 0x0050(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(PlaneFalloff_SetPlaneFalloff) == 0x000008, "Wrong alignment on PlaneFalloff_SetPlaneFalloff");
@@ -372,7 +372,7 @@ public:
 	float                                         Param_Default;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             Param_Transform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldFalloffType                             Param_Falloff;                                     // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37ED[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1497[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBoxFalloff*                            ReturnValue;                                       // 0x0078(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BoxFalloff_SetBoxFalloff) == 0x000010, "Wrong alignment on BoxFalloff_SetBoxFalloff");
@@ -392,10 +392,10 @@ struct NoiseField_SetNoiseField final
 public:
 	float                                         Param_MinRange;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Param_MaxRange;                                    // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37EF[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1499[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Param_Transform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UNoiseField*                            ReturnValue;                                       // 0x0070(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F0[0x8];                                     // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149A[0x8];                                     // 0x0078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(NoiseField_SetNoiseField) == 0x000010, "Wrong alignment on NoiseField_SetNoiseField");
 static_assert(sizeof(NoiseField_SetNoiseField) == 0x000080, "Wrong size on NoiseField_SetNoiseField");
@@ -410,7 +410,7 @@ struct UniformVector_SetUniformVector final
 {
 public:
 	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Param_Direction;                                   // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UUniformVector*                         ReturnValue;                                       // 0x0020(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -426,7 +426,7 @@ struct RadialVector_SetRadialVector final
 {
 public:
 	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_149E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Param_Position;                                    // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class URadialVector*                          ReturnValue;                                       // 0x0020(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -442,7 +442,7 @@ struct RandomVector_SetRandomVector final
 {
 public:
 	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14A0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class URandomVector*                          ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RandomVector_SetRandomVector) == 0x000008, "Wrong alignment on RandomVector_SetRandomVector");
@@ -456,11 +456,11 @@ struct OperatorField_SetOperatorField final
 {
 public:
 	float                                         Param_Magnitude;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37F9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14A3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFieldNodeBase*                         Param_LeftField;                                   // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Param_RightField;                                  // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldOperationType                           Param_Operation;                                   // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37FA[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14A4[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOperatorField*                         ReturnValue;                                       // 0x0020(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(OperatorField_SetOperatorField) == 0x000008, "Wrong alignment on OperatorField_SetOperatorField");
@@ -505,7 +505,7 @@ public:
 	class UFieldNodeBase*                         Param_Culling;                                     // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UFieldNodeBase*                         Param_Field;                                       // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EFieldCullingOperationType                    Param_Operation;                                   // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_37FC[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_14A6[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCullingField*                          ReturnValue;                                       // 0x0018(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CullingField_SetCullingField) == 0x000008, "Wrong alignment on CullingField_SetCullingField");

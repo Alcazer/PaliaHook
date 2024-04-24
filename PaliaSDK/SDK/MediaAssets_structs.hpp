@@ -14,27 +14,6 @@
 namespace SDK
 {
 
-// Enum MediaAssets.EMediaSoundChannels
-// NumValues: 0x0004
-enum class EMediaSoundChannels : uint32
-{
-	Mono                                     = 0,
-	Stereo                                   = 1,
-	Surround                                 = 2,
-	EMediaSoundChannels_MAX                  = 3,
-};
-
-// Enum MediaAssets.EMediaSoundComponentFFTSize
-// NumValues: 0x0005
-enum class EMediaSoundComponentFFTSize : uint8
-{
-	Min_64                                   = 0,
-	Small_256                                = 1,
-	Medium_512                               = 2,
-	Large_1024                               = 3,
-	EMediaSoundComponentFFTSize_MAX          = 4,
-};
-
 // Enum MediaAssets.MediaTextureOutputFormat
 // NumValues: 0x0003
 enum class EMediaTextureOutputFormat : uint8
@@ -67,6 +46,27 @@ enum class EMediaPlayerTrack : uint8
 	Text                                     = 5,
 	Video                                    = 6,
 	EMediaPlayerTrack_MAX                    = 7,
+};
+
+// Enum MediaAssets.EMediaSoundChannels
+// NumValues: 0x0004
+enum class EMediaSoundChannels : uint32
+{
+	Mono                                     = 0,
+	Stereo                                   = 1,
+	Surround                                 = 2,
+	EMediaSoundChannels_MAX                  = 3,
+};
+
+// Enum MediaAssets.EMediaSoundComponentFFTSize
+// NumValues: 0x0005
+enum class EMediaSoundComponentFFTSize : uint8
+{
+	Min_64                                   = 0,
+	Small_256                                = 1,
+	Medium_512                               = 2,
+	Large_1024                               = 3,
+	EMediaSoundComponentFFTSize_MAX          = 4,
 };
 
 // Enum MediaAssets.EMediaTextureVisibleMipsTiles
@@ -115,6 +115,34 @@ enum class EMediaWebcamCaptureDeviceFilter : uint8
 	EMediaWebcamCaptureDeviceFilter_MAX      = 9,
 };
 
+// ScriptStruct MediaAssets.MediaMetadataItemBPT
+// 0x0040 (0x0040 - 0x0000)
+struct FMediaMetadataItemBPT final 
+{
+public:
+	class FString                                 LanguageCode;                                      // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 MimeType;                                          // 0x0010(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 StringData;                                        // 0x0020(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<uint8>                                 BinaryData;                                        // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMediaMetadataItemBPT) == 0x000008, "Wrong alignment on FMediaMetadataItemBPT");
+static_assert(sizeof(FMediaMetadataItemBPT) == 0x000040, "Wrong size on FMediaMetadataItemBPT");
+static_assert(offsetof(FMediaMetadataItemBPT, LanguageCode) == 0x000000, "Member 'FMediaMetadataItemBPT::LanguageCode' has a wrong offset!");
+static_assert(offsetof(FMediaMetadataItemBPT, MimeType) == 0x000010, "Member 'FMediaMetadataItemBPT::MimeType' has a wrong offset!");
+static_assert(offsetof(FMediaMetadataItemBPT, StringData) == 0x000020, "Member 'FMediaMetadataItemBPT::StringData' has a wrong offset!");
+static_assert(offsetof(FMediaMetadataItemBPT, BinaryData) == 0x000030, "Member 'FMediaMetadataItemBPT::BinaryData' has a wrong offset!");
+
+// ScriptStruct MediaAssets.MediaMetadataItemsBPT
+// 0x0010 (0x0010 - 0x0000)
+struct FMediaMetadataItemsBPT final 
+{
+public:
+	TArray<struct FMediaMetadataItemBPT>          Items;                                             // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FMediaMetadataItemsBPT) == 0x000008, "Wrong alignment on FMediaMetadataItemsBPT");
+static_assert(sizeof(FMediaMetadataItemsBPT) == 0x000010, "Wrong size on FMediaMetadataItemsBPT");
+static_assert(offsetof(FMediaMetadataItemsBPT, Items) == 0x000000, "Member 'FMediaMetadataItemsBPT::Items' has a wrong offset!");
+
 // ScriptStruct MediaAssets.MediaSoundComponentSpectralData
 // 0x0008 (0x0008 - 0x0000)
 struct FMediaSoundComponentSpectralData final 
@@ -134,7 +162,7 @@ struct FMediaSourceCacheSettings final
 {
 public:
 	bool                                          bOverride;                                         // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_260A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18A2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         TimeToLookAhead;                                   // 0x0004(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FMediaSourceCacheSettings) == 0x000004, "Wrong alignment on FMediaSourceCacheSettings");

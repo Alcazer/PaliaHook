@@ -70,17 +70,17 @@ static_assert(offsetof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingIn
 static_assert(offsetof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_PrimaryAssetId, ReturnValue) == 0x000010, "Member 'S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_PrimaryAssetId::ReturnValue' has a wrong offset!");
 
 // Function S6AssetReleaseTargetingDeveloper.S6AssetReleaseTargetingLibrary.GetAssetReleaseTargetingInfo_SoftObject
-// 0x0090 (0x0090 - 0x0000)
+// 0x0088 (0x0088 - 0x0000)
 struct S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject final 
 {
 public:
-	TSoftObjectPtr<class UObject>                 SoftObject;                                        // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FS6AssetReleaseTargetingInfo           ReturnValue;                                       // 0x0030(0x0060)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UObject>                 SoftObject;                                        // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FS6AssetReleaseTargetingInfo           ReturnValue;                                       // 0x0028(0x0060)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject) == 0x000008, "Wrong alignment on S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject");
-static_assert(sizeof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject) == 0x000090, "Wrong size on S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject");
+static_assert(sizeof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject) == 0x000088, "Wrong size on S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject");
 static_assert(offsetof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject, SoftObject) == 0x000000, "Member 'S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject::SoftObject' has a wrong offset!");
-static_assert(offsetof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject, ReturnValue) == 0x000030, "Member 'S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject::ReturnValue' has a wrong offset!");
+static_assert(offsetof(S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject, ReturnValue) == 0x000028, "Member 'S6AssetReleaseTargetingLibrary_GetAssetReleaseTargetingInfo_SoftObject::ReturnValue' has a wrong offset!");
 
 }
 

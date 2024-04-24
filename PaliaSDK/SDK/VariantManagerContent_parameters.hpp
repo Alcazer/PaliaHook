@@ -34,7 +34,7 @@ struct LevelVariantSets_GetVariantSet final
 {
 public:
 	int32                                         VariantSetIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2564[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38AB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVariantSet*                            ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LevelVariantSets_GetVariantSet) == 0x000008, "Wrong alignment on LevelVariantSets_GetVariantSet");
@@ -61,7 +61,7 @@ struct LevelVariantSetsActor_GetLevelVariantSets final
 {
 public:
 	bool                                          bLoad;                                             // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2565[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38AC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULevelVariantSets*                      ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LevelVariantSetsActor_GetLevelVariantSets) == 0x000008, "Wrong alignment on LevelVariantSetsActor_GetLevelVariantSets");
@@ -88,7 +88,7 @@ public:
 	int32                                         VariantSetIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VariantIndex;                                      // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2566[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38AD[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelVariantSetsActor_SwitchOnVariantByIndex) == 0x000004, "Wrong alignment on LevelVariantSetsActor_SwitchOnVariantByIndex");
 static_assert(sizeof(LevelVariantSetsActor_SwitchOnVariantByIndex) == 0x00000C, "Wrong size on LevelVariantSetsActor_SwitchOnVariantByIndex");
@@ -104,7 +104,7 @@ public:
 	class FString                                 VariantSetName;                                    // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 VariantName;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2567[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38AE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LevelVariantSetsActor_SwitchOnVariantByName) == 0x000008, "Wrong alignment on LevelVariantSetsActor_SwitchOnVariantByName");
 static_assert(sizeof(LevelVariantSetsActor_SwitchOnVariantByName) == 0x000028, "Wrong size on LevelVariantSetsActor_SwitchOnVariantByName");
@@ -179,18 +179,18 @@ static_assert(sizeof(SwitchActor_GetSelectedOption) == 0x000004, "Wrong size on 
 static_assert(offsetof(SwitchActor_GetSelectedOption, ReturnValue) == 0x000000, "Member 'SwitchActor_GetSelectedOption::ReturnValue' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.AddDependency
-// 0x0070 (0x0070 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct Variant_AddDependency final 
 {
 public:
-	struct FVariantDependency                     Dependency;                                        // 0x0000(0x0068)(Parm, OutParm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0068(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2570[0x4];                                     // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVariantDependency                     Dependency;                                        // 0x0000(0x0058)(Parm, OutParm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0058(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38B7[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(Variant_AddDependency) == 0x000008, "Wrong alignment on Variant_AddDependency");
-static_assert(sizeof(Variant_AddDependency) == 0x000070, "Wrong size on Variant_AddDependency");
+static_assert(sizeof(Variant_AddDependency) == 0x000060, "Wrong size on Variant_AddDependency");
 static_assert(offsetof(Variant_AddDependency, Dependency) == 0x000000, "Member 'Variant_AddDependency::Dependency' has a wrong offset!");
-static_assert(offsetof(Variant_AddDependency, ReturnValue) == 0x000068, "Member 'Variant_AddDependency::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Variant_AddDependency, ReturnValue) == 0x000058, "Member 'Variant_AddDependency::ReturnValue' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.DeleteDependency
 // 0x0004 (0x0004 - 0x0000)
@@ -209,7 +209,7 @@ struct Variant_GetActor final
 {
 public:
 	int32                                         ActorIndex;                                        // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2571[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38B8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_GetActor) == 0x000008, "Wrong alignment on Variant_GetActor");
@@ -218,16 +218,16 @@ static_assert(offsetof(Variant_GetActor, ActorIndex) == 0x000000, "Member 'Varia
 static_assert(offsetof(Variant_GetActor, ReturnValue) == 0x000008, "Member 'Variant_GetActor::ReturnValue' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.GetDependency
-// 0x0070 (0x0070 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct Variant_GetDependency final 
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2572[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDependency                     ReturnValue;                                       // 0x0008(0x0068)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38B9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDependency                     ReturnValue;                                       // 0x0008(0x0058)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_GetDependency) == 0x000008, "Wrong alignment on Variant_GetDependency");
-static_assert(sizeof(Variant_GetDependency) == 0x000070, "Wrong size on Variant_GetDependency");
+static_assert(sizeof(Variant_GetDependency) == 0x000060, "Wrong size on Variant_GetDependency");
 static_assert(offsetof(Variant_GetDependency, Param_Index) == 0x000000, "Member 'Variant_GetDependency::Param_Index' has a wrong offset!");
 static_assert(offsetof(Variant_GetDependency, ReturnValue) == 0x000008, "Member 'Variant_GetDependency::ReturnValue' has a wrong offset!");
 
@@ -238,7 +238,7 @@ struct Variant_GetDependents final
 public:
 	class ULevelVariantSets*                      LevelVariantSets;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnlyEnabledDependencies;                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2573[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38BA[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UVariant*>                       ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_GetDependents) == 0x000008, "Wrong alignment on Variant_GetDependents");
@@ -303,16 +303,16 @@ static_assert(sizeof(Variant_IsActive) == 0x000001, "Wrong size on Variant_IsAct
 static_assert(offsetof(Variant_IsActive, ReturnValue) == 0x000000, "Member 'Variant_IsActive::ReturnValue' has a wrong offset!");
 
 // Function VariantManagerContent.Variant.SetDependency
-// 0x0070 (0x0070 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct Variant_SetDependency final 
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2574[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVariantDependency                     Dependency;                                        // 0x0008(0x0068)(Parm, OutParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_38BB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVariantDependency                     Dependency;                                        // 0x0008(0x0058)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(Variant_SetDependency) == 0x000008, "Wrong alignment on Variant_SetDependency");
-static_assert(sizeof(Variant_SetDependency) == 0x000070, "Wrong size on Variant_SetDependency");
+static_assert(sizeof(Variant_SetDependency) == 0x000060, "Wrong size on Variant_SetDependency");
 static_assert(offsetof(Variant_SetDependency, Param_Index) == 0x000000, "Member 'Variant_SetDependency::Param_Index' has a wrong offset!");
 static_assert(offsetof(Variant_SetDependency, Dependency) == 0x000008, "Member 'Variant_SetDependency::Dependency' has a wrong offset!");
 
@@ -333,12 +333,12 @@ struct Variant_SetThumbnailFromCamera final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2575[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38BC[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CameraTransform;                                   // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FOVDegrees;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinZ;                                              // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Gamma;                                             // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2576[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38BD[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(Variant_SetThumbnailFromCamera) == 0x000010, "Wrong alignment on Variant_SetThumbnailFromCamera");
 static_assert(sizeof(Variant_SetThumbnailFromCamera) == 0x000080, "Wrong size on Variant_SetThumbnailFromCamera");
@@ -409,7 +409,7 @@ struct VariantSet_GetVariant final
 {
 public:
 	int32                                         VariantIndex;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_257A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38C0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVariant*                               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VariantSet_GetVariant) == 0x000008, "Wrong alignment on VariantSet_GetVariant");
@@ -447,12 +447,12 @@ struct VariantSet_SetThumbnailFromCamera final
 {
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_257B[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38C1[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CameraTransform;                                   // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FOVDegrees;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinZ;                                              // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Gamma;                                             // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_257C[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_38C2[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VariantSet_SetThumbnailFromCamera) == 0x000010, "Wrong alignment on VariantSet_SetThumbnailFromCamera");
 static_assert(sizeof(VariantSet_SetThumbnailFromCamera) == 0x000080, "Wrong size on VariantSet_SetThumbnailFromCamera");

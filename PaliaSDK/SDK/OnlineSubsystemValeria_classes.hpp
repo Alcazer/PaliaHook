@@ -11,8 +11,9 @@
 #include "Basic.hpp"
 
 #include "DeveloperSettings_classes.hpp"
-#include "Engine_classes.hpp"
 #include "OnlineSubsystemUtils_classes.hpp"
+#include "Engine_classes.hpp"
+#include "OnlineSubsystemValeria_structs.hpp"
 
 
 namespace SDK
@@ -99,7 +100,7 @@ class UOSSVAL_GetCharacterNamesByAccountIdProxy final  : public UBlueprintAsyncA
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2D[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA0[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_GetCharacterNamesByAccountIdProxy* GetCharacterNamesByAccountId(class UObject* WorldContextObject, struct FGuid& AccountId);
@@ -129,7 +130,7 @@ class UOSSVAL_GetCharacterNameByAccountIdAndCharacterIdProxy final  : public UBl
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2E[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA1[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_GetCharacterNameByAccountIdAndCharacterIdProxy* GetCharacterNameByAccountIdAndCharacterId(class UObject* WorldContextObject, struct FGuid& AccountId, struct FGuid& CharacterId);
@@ -159,7 +160,7 @@ class UOSSVAL_GetCharacterNameByCharacterIdProxy final  : public UBlueprintAsync
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2F[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA2[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_GetCharacterNameByCharacterIdProxy* GetCharacterNameByCharacterId(class UObject* WorldContextObject, struct FGuid& CharacterId);
@@ -189,7 +190,7 @@ class UOSSVAL_GetNetIdByCharacterIdProxy final  : public UBlueprintAsyncActionBa
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A30[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA3[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_GetNetIdByCharacterIdProxy* GetNetIdByCharacterId(class UObject* WorldContextObject, struct FGuid& CharacterId);
@@ -212,23 +213,6 @@ static_assert(sizeof(UOSSVAL_GetNetIdByCharacterIdProxy) == 0x000068, "Wrong siz
 static_assert(offsetof(UOSSVAL_GetNetIdByCharacterIdProxy, OnSuccess) == 0x000030, "Member 'UOSSVAL_GetNetIdByCharacterIdProxy::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UOSSVAL_GetNetIdByCharacterIdProxy, OnFailure) == 0x000040, "Member 'UOSSVAL_GetNetIdByCharacterIdProxy::OnFailure' has a wrong offset!");
 
-// Class OnlineSubsystemValeria.OSSVAL_OnlineEngineInterfaceImpl
-// 0x0000 (0x0188 - 0x0188)
-class UOSSVAL_OnlineEngineInterfaceImpl final  : public UOnlineEngineInterfaceImpl
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"OSSVAL_OnlineEngineInterfaceImpl">();
-	}
-	static class UOSSVAL_OnlineEngineInterfaceImpl* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UOSSVAL_OnlineEngineInterfaceImpl>();
-	}
-};
-static_assert(alignof(UOSSVAL_OnlineEngineInterfaceImpl) == 0x000008, "Wrong alignment on UOSSVAL_OnlineEngineInterfaceImpl");
-static_assert(sizeof(UOSSVAL_OnlineEngineInterfaceImpl) == 0x000188, "Wrong size on UOSSVAL_OnlineEngineInterfaceImpl");
-
 // Class OnlineSubsystemValeria.OSSVAL_AsyncActionGetCharactersByAccountId
 // 0x0038 (0x0068 - 0x0030)
 class UOSSVAL_AsyncActionGetCharactersByAccountId final  : public UBlueprintAsyncActionBase
@@ -236,7 +220,7 @@ class UOSSVAL_AsyncActionGetCharactersByAccountId final  : public UBlueprintAsyn
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailed;                                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A31[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA4[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_AsyncActionGetCharactersByAccountId* GetCharactersByAccountId(class ULocalPlayer* LocalPlayer, struct FGuid& ID);
@@ -265,7 +249,7 @@ class UOSSVAL_AsyncActionProfanityFilterString final  : public UBlueprintAsyncAc
 {
 public:
 	FMulticastInlineDelegateProperty_             OnResultObtained;                                  // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A32[0x18];                                    // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA5[0x18];                                    // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UOSSVAL_AsyncActionProfanityFilterString* FilterString(class ULocalPlayer* LocalPlayer, const class FString& Str);
@@ -286,16 +270,43 @@ static_assert(alignof(UOSSVAL_AsyncActionProfanityFilterString) == 0x000008, "Wr
 static_assert(sizeof(UOSSVAL_AsyncActionProfanityFilterString) == 0x000058, "Wrong size on UOSSVAL_AsyncActionProfanityFilterString");
 static_assert(offsetof(UOSSVAL_AsyncActionProfanityFilterString, OnResultObtained) == 0x000030, "Member 'UOSSVAL_AsyncActionProfanityFilterString::OnResultObtained' has a wrong offset!");
 
+// Class OnlineSubsystemValeria.OSSVAL_AsyncActionQueryUserPrivileges
+// 0x0018 (0x0048 - 0x0030)
+class UOSSVAL_AsyncActionQueryUserPrivileges final  : public UBlueprintAsyncActionBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnComplete;                                        // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1CA6[0x8];                                     // 0x0040(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UOSSVAL_AsyncActionQueryUserPrivileges* QueryUserPrivileges(class UObject* WorldContextObject, int32 InUserIndex, EVAL_UserPrivileges InPrivilegesType);
+
+	void OnQueryUserPrivilegesComplete__DelegateSignature(bool bQueryResult);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OSSVAL_AsyncActionQueryUserPrivileges">();
+	}
+	static class UOSSVAL_AsyncActionQueryUserPrivileges* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOSSVAL_AsyncActionQueryUserPrivileges>();
+	}
+};
+static_assert(alignof(UOSSVAL_AsyncActionQueryUserPrivileges) == 0x000008, "Wrong alignment on UOSSVAL_AsyncActionQueryUserPrivileges");
+static_assert(sizeof(UOSSVAL_AsyncActionQueryUserPrivileges) == 0x000048, "Wrong size on UOSSVAL_AsyncActionQueryUserPrivileges");
+static_assert(offsetof(UOSSVAL_AsyncActionQueryUserPrivileges, OnComplete) == 0x000030, "Member 'UOSSVAL_AsyncActionQueryUserPrivileges::OnComplete' has a wrong offset!");
+
 // Class OnlineSubsystemValeria.OSSVAL_BeaconClient
-// 0x0020 (0x0350 - 0x0330)
+// 0x0020 (0x0358 - 0x0338)
 class AOSSVAL_BeaconClient final  : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_3A33[0x20];                                    // 0x0330(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CA8[0x20];                                    // 0x0338(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
-	void RpcClient_SendTicketValidationResponse(struct FGuid& RequestId, bool bAccepted, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context);
-	void RpcServer_ValidateTicket(struct FGuid& RequestId, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context);
+	void RpcClient_SendTicketValidationResponse(struct FGuid& RequestID, bool bAccepted, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context);
+	void RpcServer_ValidateTicket(struct FGuid& RequestID, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context);
 
 public:
 	static class UClass* StaticClass()
@@ -308,10 +319,10 @@ public:
 	}
 };
 static_assert(alignof(AOSSVAL_BeaconClient) == 0x000008, "Wrong alignment on AOSSVAL_BeaconClient");
-static_assert(sizeof(AOSSVAL_BeaconClient) == 0x000350, "Wrong size on AOSSVAL_BeaconClient");
+static_assert(sizeof(AOSSVAL_BeaconClient) == 0x000358, "Wrong size on AOSSVAL_BeaconClient");
 
 // Class OnlineSubsystemValeria.OSSVAL_BeaconHost
-// 0x0000 (0x03E0 - 0x03E0)
+// 0x0000 (0x03E8 - 0x03E8)
 class AOSSVAL_BeaconHost final  : public AOnlineBeaconHost
 {
 public:
@@ -325,14 +336,14 @@ public:
 	}
 };
 static_assert(alignof(AOSSVAL_BeaconHost) == 0x000008, "Wrong alignment on AOSSVAL_BeaconHost");
-static_assert(sizeof(AOSSVAL_BeaconHost) == 0x0003E0, "Wrong size on AOSSVAL_BeaconHost");
+static_assert(sizeof(AOSSVAL_BeaconHost) == 0x0003E8, "Wrong size on AOSSVAL_BeaconHost");
 
 // Class OnlineSubsystemValeria.OSSVAL_BeaconHostObject
-// 0x0048 (0x0310 - 0x02C8)
+// 0x0048 (0x0318 - 0x02D0)
 class AOSSVAL_BeaconHostObject final  : public AOnlineBeaconHostObject
 {
 public:
-	uint8                                         Pad_3A35[0x48];                                    // 0x02C8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CAA[0x48];                                    // 0x02D0(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -345,7 +356,7 @@ public:
 	}
 };
 static_assert(alignof(AOSSVAL_BeaconHostObject) == 0x000008, "Wrong alignment on AOSSVAL_BeaconHostObject");
-static_assert(sizeof(AOSSVAL_BeaconHostObject) == 0x000310, "Wrong size on AOSSVAL_BeaconHostObject");
+static_assert(sizeof(AOSSVAL_BeaconHostObject) == 0x000318, "Wrong size on AOSSVAL_BeaconHostObject");
 
 // Class OnlineSubsystemValeria.ValeriaOnlineBlueprintFunctions
 // 0x0000 (0x0028 - 0x0028)
@@ -383,6 +394,32 @@ public:
 };
 static_assert(alignof(UValeriaPartyBeaconState) == 0x000008, "Wrong alignment on UValeriaPartyBeaconState");
 static_assert(sizeof(UValeriaPartyBeaconState) == 0x0000A0, "Wrong size on UValeriaPartyBeaconState");
+
+// Class OnlineSubsystemValeria.OSSVAL_OnlineEngineInterfaceImpl
+// 0x0110 (0x0138 - 0x0028)
+class UOSSVAL_OnlineEngineInterfaceImpl final  : public UOnlineEngineInterface
+{
+public:
+	TMap<class FName, class FName>                MappedUniqueNetIdTypes;                            // 0x0028(0x0050)(Config, NativeAccessSpecifierPrivate)
+	TArray<class FName>                           CompatibleUniqueNetIdTypes;                        // 0x0078(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
+	class FName                                   VoiceSubsystemNameOverride;                        // 0x0088(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1CAB[0xA8];                                    // 0x0090(0x00A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"OSSVAL_OnlineEngineInterfaceImpl">();
+	}
+	static class UOSSVAL_OnlineEngineInterfaceImpl* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UOSSVAL_OnlineEngineInterfaceImpl>();
+	}
+};
+static_assert(alignof(UOSSVAL_OnlineEngineInterfaceImpl) == 0x000008, "Wrong alignment on UOSSVAL_OnlineEngineInterfaceImpl");
+static_assert(sizeof(UOSSVAL_OnlineEngineInterfaceImpl) == 0x000138, "Wrong size on UOSSVAL_OnlineEngineInterfaceImpl");
+static_assert(offsetof(UOSSVAL_OnlineEngineInterfaceImpl, MappedUniqueNetIdTypes) == 0x000028, "Member 'UOSSVAL_OnlineEngineInterfaceImpl::MappedUniqueNetIdTypes' has a wrong offset!");
+static_assert(offsetof(UOSSVAL_OnlineEngineInterfaceImpl, CompatibleUniqueNetIdTypes) == 0x000078, "Member 'UOSSVAL_OnlineEngineInterfaceImpl::CompatibleUniqueNetIdTypes' has a wrong offset!");
+static_assert(offsetof(UOSSVAL_OnlineEngineInterfaceImpl, VoiceSubsystemNameOverride) == 0x000088, "Member 'UOSSVAL_OnlineEngineInterfaceImpl::VoiceSubsystemNameOverride' has a wrong offset!");
 
 }
 

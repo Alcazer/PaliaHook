@@ -25,7 +25,7 @@ public:
 	class UScriptStruct*                          InRigVMStruct;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   InMethodName;                                      // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2442[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_344E[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_AddRigVMFunction) == 0x000008, "Wrong alignment on RigVM_AddRigVMFunction");
 static_assert(sizeof(RigVM_AddRigVMFunction) == 0x000018, "Wrong size on RigVM_AddRigVMFunction");
@@ -34,18 +34,20 @@ static_assert(offsetof(RigVM_AddRigVMFunction, InMethodName) == 0x000008, "Membe
 static_assert(offsetof(RigVM_AddRigVMFunction, ReturnValue) == 0x000010, "Member 'RigVM_AddRigVMFunction::ReturnValue' has a wrong offset!");
 
 // Function RigVM.RigVM.Execute
-// 0x000C (0x000C - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct RigVM_Execute final 
 {
 public:
-	class FName                                   InEntryName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2443[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FRigVMExtendedExecuteContext           Context;                                           // 0x0000(0x01B8)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class FName                                   InEntryName;                                       // 0x01B8(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x01C0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_344F[0x7];                                     // 0x01C1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(RigVM_Execute) == 0x000004, "Wrong alignment on RigVM_Execute");
-static_assert(sizeof(RigVM_Execute) == 0x00000C, "Wrong size on RigVM_Execute");
-static_assert(offsetof(RigVM_Execute, InEntryName) == 0x000000, "Member 'RigVM_Execute::InEntryName' has a wrong offset!");
-static_assert(offsetof(RigVM_Execute, ReturnValue) == 0x000008, "Member 'RigVM_Execute::ReturnValue' has a wrong offset!");
+static_assert(alignof(RigVM_Execute) == 0x000008, "Wrong alignment on RigVM_Execute");
+static_assert(sizeof(RigVM_Execute) == 0x0001C8, "Wrong size on RigVM_Execute");
+static_assert(offsetof(RigVM_Execute, Context) == 0x000000, "Member 'RigVM_Execute::Context' has a wrong offset!");
+static_assert(offsetof(RigVM_Execute, InEntryName) == 0x0001B8, "Member 'RigVM_Execute::InEntryName' has a wrong offset!");
+static_assert(offsetof(RigVM_Execute, ReturnValue) == 0x0001C0, "Member 'RigVM_Execute::ReturnValue' has a wrong offset!");
 
 // Function RigVM.RigVM.GetParameterValueBool
 // 0x0010 (0x0010 - 0x0000)
@@ -55,7 +57,7 @@ public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2444[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3450[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_GetParameterValueBool) == 0x000004, "Wrong alignment on RigVM_GetParameterValueBool");
 static_assert(sizeof(RigVM_GetParameterValueBool) == 0x000010, "Wrong size on RigVM_GetParameterValueBool");
@@ -70,7 +72,7 @@ struct RigVM_GetParameterValueDouble final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2445[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3451[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueDouble) == 0x000008, "Wrong alignment on RigVM_GetParameterValueDouble");
@@ -131,7 +133,7 @@ struct RigVM_GetParameterValueQuat final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2446[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3452[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  ReturnValue;                                       // 0x0010(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueQuat) == 0x000010, "Wrong alignment on RigVM_GetParameterValueQuat");
@@ -147,7 +149,7 @@ struct RigVM_GetParameterValueString final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2447[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3453[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueString) == 0x000008, "Wrong alignment on RigVM_GetParameterValueString");
@@ -163,7 +165,7 @@ struct RigVM_GetParameterValueTransform final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2448[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3454[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueTransform) == 0x000010, "Wrong alignment on RigVM_GetParameterValueTransform");
@@ -179,7 +181,7 @@ struct RigVM_GetParameterValueVector final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2449[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3455[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueVector) == 0x000008, "Wrong alignment on RigVM_GetParameterValueVector");
@@ -195,7 +197,7 @@ struct RigVM_GetParameterValueVector2D final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3456[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetParameterValueVector2D) == 0x000008, "Wrong alignment on RigVM_GetParameterValueVector2D");
@@ -211,7 +213,7 @@ struct RigVM_SetParameterValueBool final
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InValue;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244B[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3457[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InArrayIndex;                                      // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_SetParameterValueBool) == 0x000004, "Wrong alignment on RigVM_SetParameterValueBool");
@@ -228,7 +230,7 @@ public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        InValue;                                           // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244C[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3458[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueDouble) == 0x000008, "Wrong alignment on RigVM_SetParameterValueDouble");
 static_assert(sizeof(RigVM_SetParameterValueDouble) == 0x000018, "Wrong size on RigVM_SetParameterValueDouble");
@@ -287,10 +289,10 @@ struct RigVM_SetParameterValueQuat final
 {
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3459[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  InValue;                                           // 0x0010(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244E[0xC];                                     // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345A[0xC];                                     // 0x0034(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueQuat) == 0x000010, "Wrong alignment on RigVM_SetParameterValueQuat");
 static_assert(sizeof(RigVM_SetParameterValueQuat) == 0x000040, "Wrong size on RigVM_SetParameterValueQuat");
@@ -306,7 +308,7 @@ public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 InValue;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_244F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345B[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueString) == 0x000008, "Wrong alignment on RigVM_SetParameterValueString");
 static_assert(sizeof(RigVM_SetParameterValueString) == 0x000020, "Wrong size on RigVM_SetParameterValueString");
@@ -320,10 +322,10 @@ struct RigVM_SetParameterValueTransform final
 {
 public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2450[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345C[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InValue;                                           // 0x0010(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2451[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345D[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueTransform) == 0x000010, "Wrong alignment on RigVM_SetParameterValueTransform");
 static_assert(sizeof(RigVM_SetParameterValueTransform) == 0x000080, "Wrong size on RigVM_SetParameterValueTransform");
@@ -339,7 +341,7 @@ public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                InValue;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2452[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345E[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueVector) == 0x000008, "Wrong alignment on RigVM_SetParameterValueVector");
 static_assert(sizeof(RigVM_SetParameterValueVector) == 0x000028, "Wrong size on RigVM_SetParameterValueVector");
@@ -355,7 +357,7 @@ public:
 	class FName                                   InParameterName;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              InValue;                                           // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InArrayIndex;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2453[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_345F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigVM_SetParameterValueVector2D) == 0x000008, "Wrong alignment on RigVM_SetParameterValueVector2D");
 static_assert(sizeof(RigVM_SetParameterValueVector2D) == 0x000020, "Wrong size on RigVM_SetParameterValueVector2D");
@@ -369,7 +371,7 @@ struct RigVM_GetRigVMFunctionName final
 {
 public:
 	int32                                         InFunctionIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2454[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3460[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigVM_GetRigVMFunctionName) == 0x000008, "Wrong alignment on RigVM_GetRigVMFunctionName");
@@ -387,6 +389,28 @@ public:
 static_assert(alignof(RigVM_GetStatistics) == 0x000004, "Wrong alignment on RigVM_GetStatistics");
 static_assert(sizeof(RigVM_GetStatistics) == 0x000038, "Wrong size on RigVM_GetStatistics");
 static_assert(offsetof(RigVM_GetStatistics, ReturnValue) == 0x000000, "Member 'RigVM_GetStatistics::ReturnValue' has a wrong offset!");
+
+// Function RigVM.DataAssetLink.SetDataAsset
+// 0x0008 (0x0008 - 0x0000)
+struct DataAssetLink_SetDataAsset final 
+{
+public:
+	class UDataAsset*                             InDataAsset;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DataAssetLink_SetDataAsset) == 0x000008, "Wrong alignment on DataAssetLink_SetDataAsset");
+static_assert(sizeof(DataAssetLink_SetDataAsset) == 0x000008, "Wrong size on DataAssetLink_SetDataAsset");
+static_assert(offsetof(DataAssetLink_SetDataAsset, InDataAsset) == 0x000000, "Member 'DataAssetLink_SetDataAsset::InDataAsset' has a wrong offset!");
+
+// Function RigVM.DataAssetLink.GetDataAsset
+// 0x0008 (0x0008 - 0x0000)
+struct DataAssetLink_GetDataAsset final 
+{
+public:
+	class UDataAsset*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(DataAssetLink_GetDataAsset) == 0x000008, "Wrong alignment on DataAssetLink_GetDataAsset");
+static_assert(sizeof(DataAssetLink_GetDataAsset) == 0x000008, "Wrong size on DataAssetLink_GetDataAsset");
+static_assert(offsetof(DataAssetLink_GetDataAsset, ReturnValue) == 0x000000, "Member 'DataAssetLink_GetDataAsset::ReturnValue' has a wrong offset!");
 
 // Function RigVM.RigVMUserWorkflowOptions.ReportError
 // 0x0010 (0x0010 - 0x0000)
@@ -442,6 +466,269 @@ public:
 static_assert(alignof(RigVMUserWorkflowOptions_RequiresDialog) == 0x000001, "Wrong alignment on RigVMUserWorkflowOptions_RequiresDialog");
 static_assert(sizeof(RigVMUserWorkflowOptions_RequiresDialog) == 0x000001, "Wrong size on RigVMUserWorkflowOptions_RequiresDialog");
 static_assert(offsetof(RigVMUserWorkflowOptions_RequiresDialog, ReturnValue) == 0x000000, "Member 'RigVMUserWorkflowOptions_RequiresDialog::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.FindRigVMHosts
+// 0x0020 (0x0020 - 0x0000)
+struct RigVMHost_FindRigVMHosts final 
+{
+public:
+	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class URigVMHost>                 OptionalClass;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class URigVMHost*>                     ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_FindRigVMHosts) == 0x000008, "Wrong alignment on RigVMHost_FindRigVMHosts");
+static_assert(sizeof(RigVMHost_FindRigVMHosts) == 0x000020, "Wrong size on RigVMHost_FindRigVMHosts");
+static_assert(offsetof(RigVMHost_FindRigVMHosts, Param_Outer) == 0x000000, "Member 'RigVMHost_FindRigVMHosts::Param_Outer' has a wrong offset!");
+static_assert(offsetof(RigVMHost_FindRigVMHosts, OptionalClass) == 0x000008, "Member 'RigVMHost_FindRigVMHosts::OptionalClass' has a wrong offset!");
+static_assert(offsetof(RigVMHost_FindRigVMHosts, ReturnValue) == 0x000010, "Member 'RigVMHost_FindRigVMHosts::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.Execute
+// 0x000C (0x000C - 0x0000)
+struct RigVMHost_Execute final 
+{
+public:
+	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346A[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_Execute) == 0x000004, "Wrong alignment on RigVMHost_Execute");
+static_assert(sizeof(RigVMHost_Execute) == 0x00000C, "Wrong size on RigVMHost_Execute");
+static_assert(offsetof(RigVMHost_Execute, InEventName) == 0x000000, "Member 'RigVMHost_Execute::InEventName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_Execute, ReturnValue) == 0x000008, "Member 'RigVMHost_Execute::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.ExecuteEvent
+// 0x000C (0x000C - 0x0000)
+struct RigVMHost_ExecuteEvent final 
+{
+public:
+	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346B[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_ExecuteEvent) == 0x000004, "Wrong alignment on RigVMHost_ExecuteEvent");
+static_assert(sizeof(RigVMHost_ExecuteEvent) == 0x00000C, "Wrong size on RigVMHost_ExecuteEvent");
+static_assert(offsetof(RigVMHost_ExecuteEvent, InEventName) == 0x000000, "Member 'RigVMHost_ExecuteEvent::InEventName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_ExecuteEvent, ReturnValue) == 0x000008, "Member 'RigVMHost_ExecuteEvent::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetExtendedExecuteContext
+// 0x01B8 (0x01B8 - 0x0000)
+struct RigVMHost_GetExtendedExecuteContext final 
+{
+public:
+	struct FRigVMExtendedExecuteContext           ReturnValue;                                       // 0x0000(0x01B8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetExtendedExecuteContext) == 0x000008, "Wrong alignment on RigVMHost_GetExtendedExecuteContext");
+static_assert(sizeof(RigVMHost_GetExtendedExecuteContext) == 0x0001B8, "Wrong size on RigVMHost_GetExtendedExecuteContext");
+static_assert(offsetof(RigVMHost_GetExtendedExecuteContext, ReturnValue) == 0x000000, "Member 'RigVMHost_GetExtendedExecuteContext::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetVM
+// 0x0008 (0x0008 - 0x0000)
+struct RigVMHost_GetVM final 
+{
+public:
+	class URigVM*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetVM) == 0x000008, "Wrong alignment on RigVMHost_GetVM");
+static_assert(sizeof(RigVMHost_GetVM) == 0x000008, "Wrong size on RigVMHost_GetVM");
+static_assert(offsetof(RigVMHost_GetVM, ReturnValue) == 0x000000, "Member 'RigVMHost_GetVM::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.RemoveRunOnceEvent
+// 0x000C (0x000C - 0x0000)
+struct RigVMHost_RemoveRunOnceEvent final 
+{
+public:
+	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346C[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_RemoveRunOnceEvent) == 0x000004, "Wrong alignment on RigVMHost_RemoveRunOnceEvent");
+static_assert(sizeof(RigVMHost_RemoveRunOnceEvent) == 0x00000C, "Wrong size on RigVMHost_RemoveRunOnceEvent");
+static_assert(offsetof(RigVMHost_RemoveRunOnceEvent, InEventName) == 0x000000, "Member 'RigVMHost_RemoveRunOnceEvent::InEventName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_RemoveRunOnceEvent, ReturnValue) == 0x000008, "Member 'RigVMHost_RemoveRunOnceEvent::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.RequestRunOnceEvent
+// 0x000C (0x000C - 0x0000)
+struct RigVMHost_RequestRunOnceEvent final 
+{
+public:
+	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InEventIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_RequestRunOnceEvent) == 0x000004, "Wrong alignment on RigVMHost_RequestRunOnceEvent");
+static_assert(sizeof(RigVMHost_RequestRunOnceEvent) == 0x00000C, "Wrong size on RigVMHost_RequestRunOnceEvent");
+static_assert(offsetof(RigVMHost_RequestRunOnceEvent, InEventName) == 0x000000, "Member 'RigVMHost_RequestRunOnceEvent::InEventName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_RequestRunOnceEvent, InEventIndex) == 0x000008, "Member 'RigVMHost_RequestRunOnceEvent::InEventIndex' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SetAbsoluteAndDeltaTime
+// 0x0008 (0x0008 - 0x0000)
+struct RigVMHost_SetAbsoluteAndDeltaTime final 
+{
+public:
+	float                                         InAbsoluteTime;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InDeltaTime;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_SetAbsoluteAndDeltaTime) == 0x000004, "Wrong alignment on RigVMHost_SetAbsoluteAndDeltaTime");
+static_assert(sizeof(RigVMHost_SetAbsoluteAndDeltaTime) == 0x000008, "Wrong size on RigVMHost_SetAbsoluteAndDeltaTime");
+static_assert(offsetof(RigVMHost_SetAbsoluteAndDeltaTime, InAbsoluteTime) == 0x000000, "Member 'RigVMHost_SetAbsoluteAndDeltaTime::InAbsoluteTime' has a wrong offset!");
+static_assert(offsetof(RigVMHost_SetAbsoluteAndDeltaTime, InDeltaTime) == 0x000004, "Member 'RigVMHost_SetAbsoluteAndDeltaTime::InDeltaTime' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SetAbsoluteTime
+// 0x0008 (0x0008 - 0x0000)
+struct RigVMHost_SetAbsoluteTime final 
+{
+public:
+	float                                         InAbsoluteTime;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InSetDeltaTimeZero;                                // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346D[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_SetAbsoluteTime) == 0x000004, "Wrong alignment on RigVMHost_SetAbsoluteTime");
+static_assert(sizeof(RigVMHost_SetAbsoluteTime) == 0x000008, "Wrong size on RigVMHost_SetAbsoluteTime");
+static_assert(offsetof(RigVMHost_SetAbsoluteTime, InAbsoluteTime) == 0x000000, "Member 'RigVMHost_SetAbsoluteTime::InAbsoluteTime' has a wrong offset!");
+static_assert(offsetof(RigVMHost_SetAbsoluteTime, InSetDeltaTimeZero) == 0x000004, "Member 'RigVMHost_SetAbsoluteTime::InSetDeltaTimeZero' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SetDeltaTime
+// 0x0004 (0x0004 - 0x0000)
+struct RigVMHost_SetDeltaTime final 
+{
+public:
+	float                                         InDeltaTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_SetDeltaTime) == 0x000004, "Wrong alignment on RigVMHost_SetDeltaTime");
+static_assert(sizeof(RigVMHost_SetDeltaTime) == 0x000004, "Wrong size on RigVMHost_SetDeltaTime");
+static_assert(offsetof(RigVMHost_SetDeltaTime, InDeltaTime) == 0x000000, "Member 'RigVMHost_SetDeltaTime::InDeltaTime' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SetFramesPerSecond
+// 0x0004 (0x0004 - 0x0000)
+struct RigVMHost_SetFramesPerSecond final 
+{
+public:
+	float                                         InFramesPerSecond;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_SetFramesPerSecond) == 0x000004, "Wrong alignment on RigVMHost_SetFramesPerSecond");
+static_assert(sizeof(RigVMHost_SetFramesPerSecond) == 0x000004, "Wrong size on RigVMHost_SetFramesPerSecond");
+static_assert(offsetof(RigVMHost_SetFramesPerSecond, InFramesPerSecond) == 0x000000, "Member 'RigVMHost_SetFramesPerSecond::InFramesPerSecond' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SetVariableFromString
+// 0x0020 (0x0020 - 0x0000)
+struct RigVMHost_SetVariableFromString final 
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InValue;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346E[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_SetVariableFromString) == 0x000008, "Wrong alignment on RigVMHost_SetVariableFromString");
+static_assert(sizeof(RigVMHost_SetVariableFromString) == 0x000020, "Wrong size on RigVMHost_SetVariableFromString");
+static_assert(offsetof(RigVMHost_SetVariableFromString, InVariableName) == 0x000000, "Member 'RigVMHost_SetVariableFromString::InVariableName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_SetVariableFromString, InValue) == 0x000008, "Member 'RigVMHost_SetVariableFromString::InValue' has a wrong offset!");
+static_assert(offsetof(RigVMHost_SetVariableFromString, ReturnValue) == 0x000018, "Member 'RigVMHost_SetVariableFromString::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.CanExecute
+// 0x0001 (0x0001 - 0x0000)
+struct RigVMHost_CanExecute final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_CanExecute) == 0x000001, "Wrong alignment on RigVMHost_CanExecute");
+static_assert(sizeof(RigVMHost_CanExecute) == 0x000001, "Wrong size on RigVMHost_CanExecute");
+static_assert(offsetof(RigVMHost_CanExecute, ReturnValue) == 0x000000, "Member 'RigVMHost_CanExecute::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetAbsoluteTime
+// 0x0004 (0x0004 - 0x0000)
+struct RigVMHost_GetAbsoluteTime final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetAbsoluteTime) == 0x000004, "Wrong alignment on RigVMHost_GetAbsoluteTime");
+static_assert(sizeof(RigVMHost_GetAbsoluteTime) == 0x000004, "Wrong size on RigVMHost_GetAbsoluteTime");
+static_assert(offsetof(RigVMHost_GetAbsoluteTime, ReturnValue) == 0x000000, "Member 'RigVMHost_GetAbsoluteTime::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetCurrentFramesPerSecond
+// 0x0004 (0x0004 - 0x0000)
+struct RigVMHost_GetCurrentFramesPerSecond final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetCurrentFramesPerSecond) == 0x000004, "Wrong alignment on RigVMHost_GetCurrentFramesPerSecond");
+static_assert(sizeof(RigVMHost_GetCurrentFramesPerSecond) == 0x000004, "Wrong size on RigVMHost_GetCurrentFramesPerSecond");
+static_assert(offsetof(RigVMHost_GetCurrentFramesPerSecond, ReturnValue) == 0x000000, "Member 'RigVMHost_GetCurrentFramesPerSecond::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetDeltaTime
+// 0x0004 (0x0004 - 0x0000)
+struct RigVMHost_GetDeltaTime final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetDeltaTime) == 0x000004, "Wrong alignment on RigVMHost_GetDeltaTime");
+static_assert(sizeof(RigVMHost_GetDeltaTime) == 0x000004, "Wrong size on RigVMHost_GetDeltaTime");
+static_assert(offsetof(RigVMHost_GetDeltaTime, ReturnValue) == 0x000000, "Member 'RigVMHost_GetDeltaTime::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetScriptAccessibleVariables
+// 0x0010 (0x0010 - 0x0000)
+struct RigVMHost_GetScriptAccessibleVariables final 
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetScriptAccessibleVariables) == 0x000008, "Wrong alignment on RigVMHost_GetScriptAccessibleVariables");
+static_assert(sizeof(RigVMHost_GetScriptAccessibleVariables) == 0x000010, "Wrong size on RigVMHost_GetScriptAccessibleVariables");
+static_assert(offsetof(RigVMHost_GetScriptAccessibleVariables, ReturnValue) == 0x000000, "Member 'RigVMHost_GetScriptAccessibleVariables::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetSupportedEvents
+// 0x0010 (0x0010 - 0x0000)
+struct RigVMHost_GetSupportedEvents final 
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetSupportedEvents) == 0x000008, "Wrong alignment on RigVMHost_GetSupportedEvents");
+static_assert(sizeof(RigVMHost_GetSupportedEvents) == 0x000010, "Wrong size on RigVMHost_GetSupportedEvents");
+static_assert(offsetof(RigVMHost_GetSupportedEvents, ReturnValue) == 0x000000, "Member 'RigVMHost_GetSupportedEvents::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetVariableAsString
+// 0x0018 (0x0018 - 0x0000)
+struct RigVMHost_GetVariableAsString final 
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetVariableAsString) == 0x000008, "Wrong alignment on RigVMHost_GetVariableAsString");
+static_assert(sizeof(RigVMHost_GetVariableAsString) == 0x000018, "Wrong size on RigVMHost_GetVariableAsString");
+static_assert(offsetof(RigVMHost_GetVariableAsString, InVariableName) == 0x000000, "Member 'RigVMHost_GetVariableAsString::InVariableName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_GetVariableAsString, ReturnValue) == 0x000008, "Member 'RigVMHost_GetVariableAsString::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.GetVariableType
+// 0x0010 (0x0010 - 0x0000)
+struct RigVMHost_GetVariableType final 
+{
+public:
+	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigVMHost_GetVariableType) == 0x000004, "Wrong alignment on RigVMHost_GetVariableType");
+static_assert(sizeof(RigVMHost_GetVariableType) == 0x000010, "Wrong size on RigVMHost_GetVariableType");
+static_assert(offsetof(RigVMHost_GetVariableType, InVariableName) == 0x000000, "Member 'RigVMHost_GetVariableType::InVariableName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_GetVariableType, ReturnValue) == 0x000008, "Member 'RigVMHost_GetVariableType::ReturnValue' has a wrong offset!");
+
+// Function RigVM.RigVMHost.SupportsEvent
+// 0x000C (0x000C - 0x0000)
+struct RigVMHost_SupportsEvent final 
+{
+public:
+	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_346F[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigVMHost_SupportsEvent) == 0x000004, "Wrong alignment on RigVMHost_SupportsEvent");
+static_assert(sizeof(RigVMHost_SupportsEvent) == 0x00000C, "Wrong size on RigVMHost_SupportsEvent");
+static_assert(offsetof(RigVMHost_SupportsEvent, InEventName) == 0x000000, "Member 'RigVMHost_SupportsEvent::InEventName' has a wrong offset!");
+static_assert(offsetof(RigVMHost_SupportsEvent, ReturnValue) == 0x000008, "Member 'RigVMHost_SupportsEvent::ReturnValue' has a wrong offset!");
 
 }
 

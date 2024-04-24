@@ -25,17 +25,17 @@ enum class EPriorityType : uint8
 };
 
 // ScriptStruct S6EnhancedInputExtended.InputMappingPriorityData
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct FInputMappingPriorityData final 
 {
 public:
 	EPriorityType                                 PriorityType;                                      // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17F0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D32[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputMappingContext*                   InputMappingContext;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class US6EnhancedInputCustomPriorities> CustomPriorityDataAsset;                           // 0x0010(0x0030)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class US6EnhancedInputCustomPriorities> CustomPriorityDataAsset;                           // 0x0010(0x0028)(Edit, BlueprintVisible, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FInputMappingPriorityData) == 0x000008, "Wrong alignment on FInputMappingPriorityData");
-static_assert(sizeof(FInputMappingPriorityData) == 0x000040, "Wrong size on FInputMappingPriorityData");
+static_assert(sizeof(FInputMappingPriorityData) == 0x000038, "Wrong size on FInputMappingPriorityData");
 static_assert(offsetof(FInputMappingPriorityData, PriorityType) == 0x000000, "Member 'FInputMappingPriorityData::PriorityType' has a wrong offset!");
 static_assert(offsetof(FInputMappingPriorityData, InputMappingContext) == 0x000008, "Member 'FInputMappingPriorityData::InputMappingContext' has a wrong offset!");
 static_assert(offsetof(FInputMappingPriorityData, CustomPriorityDataAsset) == 0x000010, "Member 'FInputMappingPriorityData::CustomPriorityDataAsset' has a wrong offset!");
@@ -49,7 +49,7 @@ public:
 	bool                                          bAlsoReplace;                                      // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowReplace;                                     // 0x0005(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowAutomaticStacking;                           // 0x0006(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17F1[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D33[0x1];                                     // 0x0007(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputMappingContext*                   InputMappingContext;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FPreconfiguredInputMappingContextInfo) == 0x000008, "Wrong alignment on FPreconfiguredInputMappingContextInfo");

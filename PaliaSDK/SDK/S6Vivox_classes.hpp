@@ -22,15 +22,15 @@ namespace SDK
 class US6VivoxSubsystem final  : public ULocalPlayerSubsystem
 {
 public:
-	uint8                                         Pad_1DC0[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8A[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLoggedIn;                                        // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoginFailed;                                     // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnLoggedOut;                                       // 0x0058(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnChannelMsgReceived;                              // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnDirectMsgReceived;                               // 0x0078(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DC1[0x10];                                    // 0x0088(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8B[0x10];                                    // 0x0088(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6Vivox_AccountId                     VivoxAccountId;                                    // 0x0098(0x0048)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DC2[0x28];                                    // 0x00E0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8C[0x28];                                    // 0x00E0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

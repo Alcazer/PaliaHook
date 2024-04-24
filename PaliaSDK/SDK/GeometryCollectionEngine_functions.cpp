@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.AddChaosSolverActor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AChaosSolverActor*                ChaosSolverActor                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -43,7 +43,7 @@ void UChaosDestructionListener::AddChaosSolverActor(class AChaosSolverActor* Cha
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.AddGeometryCollectionActor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AGeometryCollectionActor*         GeometryCollectionActor                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -68,7 +68,7 @@ void UChaosDestructionListener::AddGeometryCollectionActor(class AGeometryCollec
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.RemoveChaosSolverActor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AChaosSolverActor*                ChaosSolverActor                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -93,7 +93,7 @@ void UChaosDestructionListener::RemoveChaosSolverActor(class AChaosSolverActor* 
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.RemoveGeometryCollectionActor
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class AGeometryCollectionActor*         GeometryCollectionActor                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -118,7 +118,7 @@ void UChaosDestructionListener::RemoveGeometryCollectionActor(class AGeometryCol
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -143,7 +143,7 @@ void UChaosDestructionListener::SetBreakingEventEnabled(bool bIsEnabled)
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetBreakingEventRequestSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChaosBreakingEventRequestSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -168,7 +168,7 @@ void UChaosDestructionListener::SetBreakingEventRequestSettings(struct FChaosBre
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -193,7 +193,7 @@ void UChaosDestructionListener::SetCollisionEventEnabled(bool bIsEnabled)
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetCollisionEventRequestSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChaosCollisionEventRequestSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -218,7 +218,7 @@ void UChaosDestructionListener::SetCollisionEventRequestSettings(struct FChaosCo
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -243,7 +243,7 @@ void UChaosDestructionListener::SetRemovalEventEnabled(bool bIsEnabled)
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetRemovalEventRequestSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChaosRemovalEventRequestSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -268,7 +268,7 @@ void UChaosDestructionListener::SetRemovalEventRequestSettings(struct FChaosRemo
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bIsEnabled                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -293,7 +293,7 @@ void UChaosDestructionListener::SetTrailingEventEnabled(bool bIsEnabled)
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SetTrailingEventRequestSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // struct FChaosTrailingEventRequestSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -318,7 +318,7 @@ void UChaosDestructionListener::SetTrailingEventRequestSettings(struct FChaosTra
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortBreakingEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FChaosBreakingEventData>  BreakingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // EChaosBreakingSortMethod                SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -347,7 +347,7 @@ void UChaosDestructionListener::SortBreakingEvents(TArray<struct FChaosBreakingE
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortCollisionEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FChaosCollisionEventData> CollisionEvents                                        (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // EChaosCollisionSortMethod               SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -376,7 +376,7 @@ void UChaosDestructionListener::SortCollisionEvents(TArray<struct FChaosCollisio
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortRemovalEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FChaosRemovalEventData>   RemovalEvents                                          (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // EChaosRemovalSortMethod                 SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -405,7 +405,7 @@ void UChaosDestructionListener::SortRemovalEvents(TArray<struct FChaosRemovalEve
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.SortTrailingEvents
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FChaosTrailingEventData>  TrailingEvents                                         (Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 // EChaosTrailingSortMethod                SortMethod                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -434,7 +434,7 @@ void UChaosDestructionListener::SortTrailingEvents(TArray<struct FChaosTrailingE
 
 
 // Function GeometryCollectionEngine.ChaosDestructionListener.IsEventListening
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -459,7 +459,7 @@ bool UChaosDestructionListener::IsEventListening() const
 
 
 // Function GeometryCollectionEngine.GeometryCollectionActor.RaycastSingle
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FVector                          Start                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          End                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -493,7 +493,7 @@ bool AGeometryCollectionActor::RaycastSingle(const struct FVector& Start, const 
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyAngularVelocity
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          AngularVelocity                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -519,8 +519,27 @@ void UGeometryCollectionComponent::ApplyAngularVelocity(int32 ItemIndex, struct 
 }
 
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyAssetDefaults
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UGeometryCollectionComponent::ApplyAssetDefaults()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "ApplyAssetDefaults");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyBreakingAngularVelocity
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          AngularVelocity                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -547,7 +566,7 @@ void UGeometryCollectionComponent::ApplyBreakingAngularVelocity(int32 ItemIndex,
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyBreakingLinearVelocity
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          LinearVelocity                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -574,7 +593,7 @@ void UGeometryCollectionComponent::ApplyBreakingLinearVelocity(int32 ItemIndex, 
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyExternalStrain
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -609,7 +628,7 @@ void UGeometryCollectionComponent::ApplyExternalStrain(int32 ItemIndex, struct F
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyInternalStrain
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Location                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -644,7 +663,7 @@ void UGeometryCollectionComponent::ApplyInternalStrain(int32 ItemIndex, struct F
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyKinematicField
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // float                                   Radius                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          Position                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -671,7 +690,7 @@ void UGeometryCollectionComponent::ApplyKinematicField(float Radius, const struc
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyLinearVelocity
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector                          LinearVelocity                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -698,7 +717,7 @@ void UGeometryCollectionComponent::ApplyLinearVelocity(int32 ItemIndex, struct F
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ApplyPhysicsField
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Enabled                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EGeometryCollectionPhysicsTypeEnum      Target                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -729,7 +748,7 @@ void UGeometryCollectionComponent::ApplyPhysicsField(bool Enabled, EGeometryColl
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.CrumbleActiveClusters
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGeometryCollectionComponent::CrumbleActiveClusters()
 {
@@ -748,7 +767,7 @@ void UGeometryCollectionComponent::CrumbleActiveClusters()
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.CrumbleCluster
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -772,8 +791,33 @@ void UGeometryCollectionComponent::CrumbleCluster(int32 ItemIndex)
 }
 
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetDebugInfo
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UGeometryCollectionComponent::GetDebugInfo()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetDebugInfo");
+
+	Params::GeometryCollectionComponent_GetDebugInfo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLevel
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -801,7 +845,7 @@ int32 UGeometryCollectionComponent::GetInitialLevel(int32 ItemIndex)
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.GetMassAndExtents
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // int32                                   ItemIndex                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   OutMass                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -873,8 +917,27 @@ void UGeometryCollectionComponent::NotifyGeometryCollectionPhysicsStateChange__D
 }
 
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.OnRep_RepData
+// (Final, RequiredAPI, Native, Protected)
+
+void UGeometryCollectionComponent::OnRep_RepData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "OnRep_RepData");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.ReceivePhysicsCollision
-// (Event, Public, HasOutParams, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // struct FChaosPhysicsCollisionInfo       CollisionInfo                                          (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
@@ -894,7 +957,7 @@ void UGeometryCollectionComponent::ReceivePhysicsCollision(struct FChaosPhysicsC
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.RemoveAllAnchors
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGeometryCollectionComponent::RemoveAllAnchors()
 {
@@ -912,8 +975,197 @@ void UGeometryCollectionComponent::RemoveAllAnchors()
 }
 
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAbandonedParticleCollisionProfileName
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             CollisionProfile                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetAbandonedParticleCollisionProfileName(class FName CollisionProfile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetAbandonedParticleCollisionProfileName");
+
+	Params::GeometryCollectionComponent_SetAbandonedParticleCollisionProfileName Parms{};
+
+	Parms.CollisionProfile = CollisionProfile;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByBox
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FBox                             WorldSpaceBox                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bAnchored                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MaxLevel                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetAnchoredByBox(const struct FBox& WorldSpaceBox, bool bAnchored, int32 MaxLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetAnchoredByBox");
+
+	Params::GeometryCollectionComponent_SetAnchoredByBox Parms{};
+
+	Parms.WorldSpaceBox = std::move(WorldSpaceBox);
+	Parms.bAnchored = bAnchored;
+	Parms.MaxLevel = MaxLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByIndex
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAnchored                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetAnchoredByIndex(int32 Param_Index, bool bAnchored)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetAnchoredByIndex");
+
+	Params::GeometryCollectionComponent_SetAnchoredByIndex Parms{};
+
+	Parms.Param_Index = Param_Index;
+	Parms.bAnchored = bAnchored;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetAnchoredByTransformedBox
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FBox                             Box                                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAnchored                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   MaxLevel                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetAnchoredByTransformedBox(const struct FBox& Box, const struct FTransform& Transform, bool bAnchored, int32 MaxLevel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetAnchoredByTransformedBox");
+
+	Params::GeometryCollectionComponent_SetAnchoredByTransformedBox Parms{};
+
+	Parms.Box = std::move(Box);
+	Parms.Transform = std::move(Transform);
+	Parms.bAnchored = bAnchored;
+	Parms.MaxLevel = MaxLevel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetDamageThreshold
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<float>                           InDamageThreshold                                      (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetDamageThreshold(TArray<float>& InDamageThreshold)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetDamageThreshold");
+
+	Params::GeometryCollectionComponent_SetDamageThreshold Parms{};
+
+	Parms.InDamageThreshold = std::move(InDamageThreshold);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetEnableDamageFromCollision
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetEnableDamageFromCollision(bool bValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetEnableDamageFromCollision");
+
+	Params::GeometryCollectionComponent_SetEnableDamageFromCollision Parms{};
+
+	Parms.bValue = bValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetLocalRestTransforms
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<struct FTransform>               Transforms                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bOnlyLeaves                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetLocalRestTransforms(TArray<struct FTransform>& Transforms, bool bOnlyLeaves)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetLocalRestTransforms");
+
+	Params::GeometryCollectionComponent_SetLocalRestTransforms Parms{};
+
+	Parms.Transforms = std::move(Transforms);
+	Parms.bOnlyLeaves = bOnlyLeaves;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyBreaks
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bNewNotifyBreaks                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -938,11 +1190,12 @@ void UGeometryCollectionComponent::SetNotifyBreaks(bool bNewNotifyBreaks)
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyCrumblings
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bNewNotifyCrumblings                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNewCrumblingEventIncludesChildren                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryCollectionComponent::SetNotifyCrumblings(bool bNewNotifyCrumblings)
+void UGeometryCollectionComponent::SetNotifyCrumblings(bool bNewNotifyCrumblings, bool bNewCrumblingEventIncludesChildren)
 {
 	static class UFunction* Func = nullptr;
 
@@ -952,6 +1205,109 @@ void UGeometryCollectionComponent::SetNotifyCrumblings(bool bNewNotifyCrumblings
 	Params::GeometryCollectionComponent_SetNotifyCrumblings Parms{};
 
 	Parms.bNewNotifyCrumblings = bNewNotifyCrumblings;
+	Parms.bNewCrumblingEventIncludesChildren = bNewCrumblingEventIncludesChildren;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalBreaks
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bNewNotifyGlobalBreaks                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetNotifyGlobalBreaks(bool bNewNotifyGlobalBreaks)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetNotifyGlobalBreaks");
+
+	Params::GeometryCollectionComponent_SetNotifyGlobalBreaks Parms{};
+
+	Parms.bNewNotifyGlobalBreaks = bNewNotifyGlobalBreaks;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCollision
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bNewNotifyGlobalCollisions                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetNotifyGlobalCollision(bool bNewNotifyGlobalCollisions)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetNotifyGlobalCollision");
+
+	Params::GeometryCollectionComponent_SetNotifyGlobalCollision Parms{};
+
+	Parms.bNewNotifyGlobalCollisions = bNewNotifyGlobalCollisions;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalCrumblings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bNewNotifyGlobalCrumblings                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bGlobalNewCrumblingEventIncludesChildren               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetNotifyGlobalCrumblings(bool bNewNotifyGlobalCrumblings, bool bGlobalNewCrumblingEventIncludesChildren)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetNotifyGlobalCrumblings");
+
+	Params::GeometryCollectionComponent_SetNotifyGlobalCrumblings Parms{};
+
+	Parms.bNewNotifyGlobalCrumblings = bNewNotifyGlobalCrumblings;
+	Parms.bGlobalNewCrumblingEventIncludesChildren = bGlobalNewCrumblingEventIncludesChildren;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyGlobalRemovals
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bNewNotifyGlobalRemovals                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetNotifyGlobalRemovals(bool bNewNotifyGlobalRemovals)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetNotifyGlobalRemovals");
+
+	Params::GeometryCollectionComponent_SetNotifyGlobalRemovals Parms{};
+
+	Parms.bNewNotifyGlobalRemovals = bNewNotifyGlobalRemovals;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -963,7 +1319,7 @@ void UGeometryCollectionComponent::SetNotifyCrumblings(bool bNewNotifyCrumblings
 
 
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetNotifyRemovals
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bNewNotifyRemovals                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -987,12 +1343,65 @@ void UGeometryCollectionComponent::SetNotifyRemovals(bool bNewNotifyRemovals)
 }
 
 
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetPerLevelCollisionProfileNames
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<class FName>                     ProfileNames                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetPerLevelCollisionProfileNames(TArray<class FName>& ProfileNames)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetPerLevelCollisionProfileNames");
+
+	Params::GeometryCollectionComponent_SetPerLevelCollisionProfileNames Parms{};
+
+	Parms.ProfileNames = std::move(ProfileNames);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.SetPerParticleCollisionProfileName
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// TArray<int32>                           BoneIds                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class FName                             ProfileName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollectionComponent::SetPerParticleCollisionProfileName(TArray<int32>& BoneIds, class FName ProfileName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "SetPerParticleCollisionProfileName");
+
+	Params::GeometryCollectionComponent_SetPerParticleCollisionProfileName Parms{};
+
+	Parms.BoneIds = std::move(BoneIds);
+	Parms.ProfileName = ProfileName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryCollectionEngine.GeometryCollectionComponent.SetRestCollection
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UGeometryCollection*              RestCollectionIn                                       (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bApplyAssetDefaults                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void UGeometryCollectionComponent::SetRestCollection(class UGeometryCollection* RestCollectionIn)
+void UGeometryCollectionComponent::SetRestCollection(class UGeometryCollection* RestCollectionIn, bool bApplyAssetDefaults)
 {
 	static class UFunction* Func = nullptr;
 
@@ -1002,6 +1411,232 @@ void UGeometryCollectionComponent::SetRestCollection(class UGeometryCollection* 
 	Params::GeometryCollectionComponent_SetRestCollection Parms{};
 
 	Parms.RestCollectionIn = RestCollectionIn;
+	Parms.bApplyAssetDefaults = bApplyAssetDefaults;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetDamageThreshold
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UGeometryCollectionComponent::GetDamageThreshold() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetDamageThreshold");
+
+	Params::GeometryCollectionComponent_GetDamageThreshold Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetInitialLocalRestTransforms
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FTransform>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FTransform> UGeometryCollectionComponent::GetInitialLocalRestTransforms() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetInitialLocalRestTransforms");
+
+	Params::GeometryCollectionComponent_GetInitialLocalRestTransforms Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetLocalBounds
+// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox UGeometryCollectionComponent::GetLocalBounds() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetLocalBounds");
+
+	Params::GeometryCollectionComponent_GetLocalBounds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootCurrentTransform
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UGeometryCollectionComponent::GetRootCurrentTransform() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetRootCurrentTransform");
+
+	Params::GeometryCollectionComponent_GetRootCurrentTransform Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootIndex
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UGeometryCollectionComponent::GetRootIndex() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetRootIndex");
+
+	Params::GeometryCollectionComponent_GetRootIndex Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.GetRootInitialTransform
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTransform                       ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTransform UGeometryCollectionComponent::GetRootInitialTransform() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "GetRootInitialTransform");
+
+	Params::GeometryCollectionComponent_GetRootInitialTransform Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollectionComponent.IsRootBroken
+// (Final, RequiredAPI, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UGeometryCollectionComponent::IsRootBroken() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollectionComponent", "IsRootBroken");
+
+	Params::GeometryCollectionComponent_IsRootBroken Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollection.SetConvertVertexColorsToSRGB
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollection::SetConvertVertexColorsToSRGB(bool bValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollection", "SetConvertVertexColorsToSRGB");
+
+	Params::GeometryCollection_SetConvertVertexColorsToSRGB Parms{};
+
+	Parms.bValue = bValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryCollectionEngine.GeometryCollection.SetEnableNanite
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bValue                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UGeometryCollection::SetEnableNanite(bool bValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("GeometryCollection", "SetEnableNanite");
+
+	Params::GeometryCollection_SetEnableNanite Parms{};
+
+	Parms.bValue = bValue;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

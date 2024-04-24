@@ -26,12 +26,14 @@ public:
 	struct FStruct_Physmat                        Value;                                             // 0x0008(0x0020)(Parm, OutParm, ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EPhysicalSurface                              Temp_byte_Variable;                                // 0x0029(0x0001)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C5F[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3FE3[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_Physmat                        CallFunc_Map_Find_Value;                           // 0x0030(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C60[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3FE4[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_Physmat                        CallFunc_Map_Find_Value_1;                         // 0x0058(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue_1;                   // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(PhysmatEffect_C_GetSurfaceEffect) == 0x000008, "Wrong alignment on PhysmatEffect_C_GetSurfaceEffect");
 static_assert(sizeof(PhysmatEffect_C_GetSurfaceEffect) == 0x000080, "Wrong size on PhysmatEffect_C_GetSurfaceEffect");
@@ -43,6 +45,8 @@ static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_Map_Find_Value
 static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_Map_Find_ReturnValue) == 0x000050, "Member 'PhysmatEffect_C_GetSurfaceEffect::CallFunc_Map_Find_ReturnValue' has a wrong offset!");
 static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_Map_Find_Value_1) == 0x000058, "Member 'PhysmatEffect_C_GetSurfaceEffect::CallFunc_Map_Find_Value_1' has a wrong offset!");
 static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_Map_Find_ReturnValue_1) == 0x000078, "Member 'PhysmatEffect_C_GetSurfaceEffect::CallFunc_Map_Find_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_IsValid_ReturnValue) == 0x000079, "Member 'PhysmatEffect_C_GetSurfaceEffect::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(PhysmatEffect_C_GetSurfaceEffect, CallFunc_BooleanAND_ReturnValue) == 0x00007A, "Member 'PhysmatEffect_C_GetSurfaceEffect::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
 
 }
 

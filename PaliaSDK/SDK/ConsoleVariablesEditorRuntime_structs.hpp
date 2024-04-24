@@ -24,7 +24,7 @@ public:
 	class FString                                 CommandName;                                       // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 CommandValueAsString;                              // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECheckBoxState                                CheckedState;                                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19F6[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E22[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FConsoleVariablesEditorAssetSaveData) == 0x000008, "Wrong alignment on FConsoleVariablesEditorAssetSaveData");
 static_assert(sizeof(FConsoleVariablesEditorAssetSaveData) == 0x000028, "Wrong size on FConsoleVariablesEditorAssetSaveData");

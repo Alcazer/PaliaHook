@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function AudioAnalyzer.AudioAnalyzer.StartAnalyzing
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAudioBus*                        AudioBusToAnalyze                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ void UAudioAnalyzer::StartAnalyzing(class UObject* WorldContextObject, class UAu
 
 
 // Function AudioAnalyzer.AudioAnalyzer.StopAnalyzing
-// (Final, BlueprintCosmetic, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, BlueprintCosmetic, Native, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

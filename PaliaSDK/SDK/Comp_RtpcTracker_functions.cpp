@@ -139,32 +139,6 @@ void UComp_RtpcTracker_C::ExecuteUbergraph_Comp_RtpcTracker(int32 EntryPoint, EE
 }
 
 
-// Function Comp_RtpcTracker.Comp_RtpcTracker_C.OnRtpcChanged__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UComp_RtpcTracker_C*              RtpcTrackerComp                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UAkRtpc*                          Rtpc                                                   (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Interpolation_ms_                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UComp_RtpcTracker_C::OnRtpcChanged__DelegateSignature(class UComp_RtpcTracker_C* RtpcTrackerComp, class UAkRtpc* Rtpc, double Value, int32 Interpolation_ms_)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("Comp_RtpcTracker_C", "OnRtpcChanged__DelegateSignature");
-
-	Params::Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature Parms{};
-
-	Parms.RtpcTrackerComp = RtpcTrackerComp;
-	Parms.Rtpc = Rtpc;
-	Parms.Value = Value;
-	Parms.Interpolation_ms_ = Interpolation_ms_;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function Comp_RtpcTracker.Comp_RtpcTracker_C.ReceiveEndPlay
 // (Event, Public, BlueprintEvent)
 // Parameters:

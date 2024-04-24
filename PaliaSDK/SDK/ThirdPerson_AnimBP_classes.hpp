@@ -24,7 +24,7 @@ namespace SDK
 class UThirdPerson_AnimBP_C final  : public UAnimInstance
 {
 public:
-	uint8                                         Pad_3C19[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5178[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct ThirdPerson_AnimBP::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0358(0x0008)(HasGetValueTypeHash)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0360(0x0008)()
@@ -44,7 +44,7 @@ public:
 	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x05D8(0x0020)()
 	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x05F8(0x00C8)()
 	bool                                          IsInAir_;                                          // 0x06C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C1A[0x7];                                     // 0x06C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5179[0x7];                                     // 0x06C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Speed;                                             // 0x06C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

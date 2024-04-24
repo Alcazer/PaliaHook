@@ -17,31 +17,6 @@
 namespace SDK
 {
 
-// Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FSourceEffectDynamicsProcessorSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-void USourceEffectDynamicsProcessorPreset::SetSettings(struct FSourceEffectDynamicsProcessorSettings& InSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("SourceEffectDynamicsProcessorPreset", "SetSettings");
-
-	Params::SourceEffectDynamicsProcessorPreset_SetSettings Parms{};
-
-	Parms.InSettings = std::move(InSettings);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function Synthesis.ModularSynthLibrary.AddModularSynthPresetToBankAsset
 // (Final, Native, Static, Private, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -2346,6 +2321,31 @@ void USourceEffectConvolutionReverbPreset::SetSettings(struct FSourceEffectConvo
 }
 
 
+// Function Synthesis.SourceEffectDynamicsProcessorPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FSourceEffectDynamicsProcessorSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USourceEffectDynamicsProcessorPreset::SetSettings(struct FSourceEffectDynamicsProcessorSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SourceEffectDynamicsProcessorPreset", "SetSettings");
+
+	Params::SourceEffectDynamicsProcessorPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Synthesis.SourceEffectEnvelopeFollowerPreset.RegisterEnvelopeFollowerListener
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -3274,6 +3274,31 @@ void USubmixEffectStereoDelayPreset::SetSettings(struct FSubmixEffectStereoDelay
 		Func = Class->GetFunction("SubmixEffectStereoDelayPreset", "SetSettings");
 
 	Params::SubmixEffectStereoDelayPreset_SetSettings Parms{};
+
+	Parms.InSettings = std::move(InSettings);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Synthesis.SubmixEffectStereoToQuadPreset.SetSettings
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FSubmixEffectStereoToQuadSettingsInSettings                                             (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+void USubmixEffectStereoToQuadPreset::SetSettings(struct FSubmixEffectStereoToQuadSettings& InSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("SubmixEffectStereoToQuadPreset", "SetSettings");
+
+	Params::SubmixEffectStereoToQuadPreset_SetSettings Parms{};
 
 	Parms.InSettings = std::move(InSettings);
 

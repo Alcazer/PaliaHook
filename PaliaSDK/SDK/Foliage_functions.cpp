@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxCount
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UStaticMesh*                      StaticMesh                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -50,7 +50,7 @@ int32 UFoliageStatistics::FoliageOverlappingBoxCount(class UObject* WorldContext
 
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingBoxTransforms
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UStaticMesh*                      StaticMesh                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -83,7 +83,7 @@ void UFoliageStatistics::FoliageOverlappingBoxTransforms(class UObject* WorldCon
 
 
 // Function Foliage.FoliageStatistics.FoliageOverlappingSphereCount
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UStaticMesh*                      StaticMesh                                             (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -152,7 +152,7 @@ void AInteractiveFoliageActor::CapsuleTouched(class UPrimitiveComponent* Overlap
 
 
 // Function Foliage.ProceduralFoliageSpawner.Simulate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   NumSteps                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

@@ -14,18 +14,18 @@
 namespace SDK::Params
 {
 
-// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010 (Director BP)_C.ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)
+// Function Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010_DirectorBP_C.ExecuteUbergraph_Seq_CharSelect_Outro_010 (Director BP)
 // 0x0008 (0x0008 - 0x0000)
-struct Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_ final 
+struct Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_ final 
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_) == 0x000004, "Wrong alignment on Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_");
-static_assert(sizeof(Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_) == 0x000008, "Wrong size on Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_");
-static_assert(offsetof(Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_, EntryPoint) == 0x000000, "Member 'Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_::EntryPoint' has a wrong offset!");
-static_assert(offsetof(Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue) == 0x000004, "Member 'Seq_CharSelect_Outro_010__Director_BP__C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
+static_assert(alignof(Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_) == 0x000004, "Wrong alignment on Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_");
+static_assert(sizeof(Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_) == 0x000008, "Wrong size on Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_");
+static_assert(offsetof(Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_, EntryPoint) == 0x000000, "Member 'Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_::EntryPoint' has a wrong offset!");
+static_assert(offsetof(Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_, CallFunc_AkEventGlobal_ReturnValue) == 0x000004, "Member 'Seq_CharSelect_Outro_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_Outro_010__Director_BP_::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
 
 }
 

@@ -10,33 +10,33 @@
 
 #include "Basic.hpp"
 
-#include "DeveloperSettings_classes.hpp"
-#include "ValeriaUI_structs.hpp"
-#include "S6UICore_classes.hpp"
 #include "Palia_structs.hpp"
+#include "S6UICore_classes.hpp"
+#include "Slate_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "CommonWidgetInputExtended_classes.hpp"
-#include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
-#include "Engine_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "EnhancedInput_structs.hpp"
+#include "CommonWidgetInputExtended_classes.hpp"
+#include "ValeriaUI_structs.hpp"
+#include "Engine_structs.hpp"
+#include "Engine_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "S6Core_structs.hpp"
 #include "S6Core_classes.hpp"
+#include "EnhancedInput_structs.hpp"
 #include "S6UICommonWidgets_classes.hpp"
 #include "InputCore_structs.hpp"
 #include "CommonUI_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 #include "WebBrowserWidget_classes.hpp"
-#include "Slate_structs.hpp"
 
 
 namespace SDK
 {
 
 // Class ValeriaUI.VALUI_ModalWidgetBase
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x0558 - 0x0558)
 class UVALUI_ModalWidgetBase : public US6UI_ModalWidgetBase
 {
 public:
@@ -50,41 +50,16 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ModalWidgetBase) == 0x000008, "Wrong alignment on UVALUI_ModalWidgetBase");
-static_assert(sizeof(UVALUI_ModalWidgetBase) == 0x000528, "Wrong size on UVALUI_ModalWidgetBase");
-
-// Class ValeriaUI.VALUI_ExpandableArea_Styled
-// 0x0010 (0x0470 - 0x0460)
-class UVALUI_ExpandableArea_Styled final  : public UExpandableArea
-{
-public:
-	class UVALUI_ExpandableAreaStyle*             ExpandableAreaStyle;                               // 0x0460(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B5[0x8];                                     // 0x0468(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetExpandableAreaStyle(class UVALUI_ExpandableAreaStyle* NewStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_ExpandableArea_Styled">();
-	}
-	static class UVALUI_ExpandableArea_Styled* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_ExpandableArea_Styled>();
-	}
-};
-static_assert(alignof(UVALUI_ExpandableArea_Styled) == 0x000010, "Wrong alignment on UVALUI_ExpandableArea_Styled");
-static_assert(sizeof(UVALUI_ExpandableArea_Styled) == 0x000470, "Wrong size on UVALUI_ExpandableArea_Styled");
-static_assert(offsetof(UVALUI_ExpandableArea_Styled, ExpandableAreaStyle) == 0x000460, "Member 'UVALUI_ExpandableArea_Styled::ExpandableAreaStyle' has a wrong offset!");
+static_assert(sizeof(UVALUI_ModalWidgetBase) == 0x000558, "Wrong size on UVALUI_ModalWidgetBase");
 
 // Class ValeriaUI.BaitUserWidget
-// 0x0080 (0x05A8 - 0x0528)
+// 0x0078 (0x05D0 - 0x0558)
 class UBaitUserWidget final  : public UVALUI_ModalWidgetBase
 {
 public:
-	TArray<struct FValeriaItem>                   Bait;                                              // 0x0528(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
-	struct FValeriaItem                           SelectedBait;                                      // 0x0538(0x0068)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34B6[0x8];                                     // 0x05A0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<struct FValeriaItem>                   Bait;                                              // 0x0558(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NativeAccessSpecifierPrivate)
+	struct FValeriaItem                           SelectedBait;                                      // 0x0568(0x0060)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C44[0x8];                                     // 0x05C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void EndBaitSelection();
@@ -105,41 +80,38 @@ public:
 	}
 };
 static_assert(alignof(UBaitUserWidget) == 0x000008, "Wrong alignment on UBaitUserWidget");
-static_assert(sizeof(UBaitUserWidget) == 0x0005A8, "Wrong size on UBaitUserWidget");
-static_assert(offsetof(UBaitUserWidget, Bait) == 0x000528, "Member 'UBaitUserWidget::Bait' has a wrong offset!");
-static_assert(offsetof(UBaitUserWidget, SelectedBait) == 0x000538, "Member 'UBaitUserWidget::SelectedBait' has a wrong offset!");
+static_assert(sizeof(UBaitUserWidget) == 0x0005D0, "Wrong size on UBaitUserWidget");
+static_assert(offsetof(UBaitUserWidget, Bait) == 0x000558, "Member 'UBaitUserWidget::Bait' has a wrong offset!");
+static_assert(offsetof(UBaitUserWidget, SelectedBait) == 0x000568, "Member 'UBaitUserWidget::SelectedBait' has a wrong offset!");
 
-// Class ValeriaUI.VALUI_ExtensionPointContainerBase
-// 0x0008 (0x0280 - 0x0278)
-class UVALUI_ExtensionPointContainerBase final  : public UUserWidget
+// Class ValeriaUI.VAL_LocalizationUtils
+// 0x0000 (0x0028 - 0x0028)
+class UVAL_LocalizationUtils final  : public UBlueprintFunctionLibrary
 {
 public:
-	class FName                                   Identifier;                                        // 0x0278(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void AddExtensibleWidget(TSoftClassPtr<class UClass>& WidgetReference);
+	static class FString GetGreetingLanguageSuffix();
+	static class FString GetGreetingStorageLocation();
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VALUI_ExtensionPointContainerBase">();
+		return StaticClassImpl<"VAL_LocalizationUtils">();
 	}
-	static class UVALUI_ExtensionPointContainerBase* GetDefaultObj()
+	static class UVAL_LocalizationUtils* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UVALUI_ExtensionPointContainerBase>();
+		return GetDefaultObjImpl<UVAL_LocalizationUtils>();
 	}
 };
-static_assert(alignof(UVALUI_ExtensionPointContainerBase) == 0x000008, "Wrong alignment on UVALUI_ExtensionPointContainerBase");
-static_assert(sizeof(UVALUI_ExtensionPointContainerBase) == 0x000280, "Wrong size on UVALUI_ExtensionPointContainerBase");
-static_assert(offsetof(UVALUI_ExtensionPointContainerBase, Identifier) == 0x000278, "Member 'UVALUI_ExtensionPointContainerBase::Identifier' has a wrong offset!");
+static_assert(alignof(UVAL_LocalizationUtils) == 0x000008, "Wrong alignment on UVAL_LocalizationUtils");
+static_assert(sizeof(UVAL_LocalizationUtils) == 0x000028, "Wrong size on UVAL_LocalizationUtils");
 
 // Class ValeriaUI.BookViewerWidget
-// 0x0008 (0x0530 - 0x0528)
+// 0x0008 (0x0560 - 0x0558)
 class UBookViewerWidget final  : public UVALUI_ModalWidgetBase
 {
 public:
-	int32                                         CurrentBookId;                                     // 0x0528(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B7[0x4];                                     // 0x052C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         CurrentBookId;                                     // 0x0558(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C45[0x4];                                     // 0x055C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void MarkPageAsRead(int32 Param_Index);
@@ -160,46 +132,19 @@ public:
 	}
 };
 static_assert(alignof(UBookViewerWidget) == 0x000008, "Wrong alignment on UBookViewerWidget");
-static_assert(sizeof(UBookViewerWidget) == 0x000530, "Wrong size on UBookViewerWidget");
-static_assert(offsetof(UBookViewerWidget, CurrentBookId) == 0x000528, "Member 'UBookViewerWidget::CurrentBookId' has a wrong offset!");
-
-// Class ValeriaUI.VALUI_GameInteractPopupSubsystem
-// 0x0020 (0x0050 - 0x0030)
-class alignas(0x10) UVALUI_GameInteractPopupSubsystem final  : public ULocalPlayerSubsystem
-{
-public:
-	uint8                                         Pad_34B9[0x10];                                    // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGameplayInteractivePopupDataAsset*     ActivePopup;                                       // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34BA[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AddPopupToQueue(TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset);
-	void OnHandlePopupClosed(class UGameplayInteractivePopupDataAsset* GpPopupAsset);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_GameInteractPopupSubsystem">();
-	}
-	static class UVALUI_GameInteractPopupSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_GameInteractPopupSubsystem>();
-	}
-};
-static_assert(alignof(UVALUI_GameInteractPopupSubsystem) == 0x000010, "Wrong alignment on UVALUI_GameInteractPopupSubsystem");
-static_assert(sizeof(UVALUI_GameInteractPopupSubsystem) == 0x000050, "Wrong size on UVALUI_GameInteractPopupSubsystem");
-static_assert(offsetof(UVALUI_GameInteractPopupSubsystem, ActivePopup) == 0x000040, "Member 'UVALUI_GameInteractPopupSubsystem::ActivePopup' has a wrong offset!");
+static_assert(sizeof(UBookViewerWidget) == 0x000560, "Wrong size on UBookViewerWidget");
+static_assert(offsetof(UBookViewerWidget, CurrentBookId) == 0x000558, "Member 'UBookViewerWidget::CurrentBookId' has a wrong offset!");
 
 // Class ValeriaUI.DetailUserWidget
-// 0x0058 (0x02D0 - 0x0278)
+// 0x0050 (0x0310 - 0x02C0)
 class UDetailUserWidget final  : public UUserWidget
 {
 public:
-	class UTextBlock*                             DetailName;                                        // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextBlock*                             DetailCategory;                                    // 0x0280(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTextBlock*                             DetailDescription;                                 // 0x0288(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UImage*                                 DetailIcon;                                        // 0x0290(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34BB[0x38];                                    // 0x0298(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UTextBlock*                             DetailName;                                        // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             DetailCategory;                                    // 0x02C8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTextBlock*                             DetailDescription;                                 // 0x02D0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UImage*                                 DetailIcon;                                        // 0x02D8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C47[0x30];                                    // 0x02E0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool UpdateDetail(TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset>& ItemType);
@@ -215,44 +160,104 @@ public:
 	}
 };
 static_assert(alignof(UDetailUserWidget) == 0x000008, "Wrong alignment on UDetailUserWidget");
-static_assert(sizeof(UDetailUserWidget) == 0x0002D0, "Wrong size on UDetailUserWidget");
-static_assert(offsetof(UDetailUserWidget, DetailName) == 0x000278, "Member 'UDetailUserWidget::DetailName' has a wrong offset!");
-static_assert(offsetof(UDetailUserWidget, DetailCategory) == 0x000280, "Member 'UDetailUserWidget::DetailCategory' has a wrong offset!");
-static_assert(offsetof(UDetailUserWidget, DetailDescription) == 0x000288, "Member 'UDetailUserWidget::DetailDescription' has a wrong offset!");
-static_assert(offsetof(UDetailUserWidget, DetailIcon) == 0x000290, "Member 'UDetailUserWidget::DetailIcon' has a wrong offset!");
+static_assert(sizeof(UDetailUserWidget) == 0x000310, "Wrong size on UDetailUserWidget");
+static_assert(offsetof(UDetailUserWidget, DetailName) == 0x0002C0, "Member 'UDetailUserWidget::DetailName' has a wrong offset!");
+static_assert(offsetof(UDetailUserWidget, DetailCategory) == 0x0002C8, "Member 'UDetailUserWidget::DetailCategory' has a wrong offset!");
+static_assert(offsetof(UDetailUserWidget, DetailDescription) == 0x0002D0, "Member 'UDetailUserWidget::DetailDescription' has a wrong offset!");
+static_assert(offsetof(UDetailUserWidget, DetailIcon) == 0x0002D8, "Member 'UDetailUserWidget::DetailIcon' has a wrong offset!");
 
-// Class ValeriaUI.VALUI_GpInteractivePopupBase
-// 0x0008 (0x0530 - 0x0528)
-class UVALUI_GpInteractivePopupBase : public UVALUI_ModalWidgetBase
+// Class ValeriaUI.VALUI_ListView_Styled
+// 0x0070 (0x0CE0 - 0x0C70)
+#pragma pack(push, 0x1)
+class alignas(0x10) UVALUI_ListView_Styled : public UListView
 {
 public:
-	class UGameplayInteractivePopupDataAsset*     InteractivePopupDataAsset;                         // 0x0528(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C49[0x8];                                     // 0x0C70(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_ListViewStyle*                   Style;                                             // 0x0C78(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHandleDirectionalNavigation;                      // 0x0C80(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bProvideInputType;                                 // 0x0C81(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4A[0x6];                                     // 0x0C82(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnUserScrolled;                                    // 0x0C88(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnUserMouseWheelScrolled;                          // 0x0C98(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnListItemsChanged;                                // 0x0CA8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4B[0x10];                                    // 0x0CB8(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             BP_OnListItemSelectionChangedWithInputType;        // 0x0CC8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 
 public:
-	void SetInteractivePopupDataAsset(class UGameplayInteractivePopupDataAsset* InteractivePopupAsset);
+	void OnListItemsChanged__DelegateSignature(TArray<class UObject*>& AddedItems, TArray<class UObject*>& RemovedItems);
+	void OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature(class UObject* Item, bool bIsSelected, ESelectInfo SelectType);
+	void ResetPoolAndSetListItems(TArray<class UObject*>& InListItems);
+	void SetEntryWidgetClass(TSubclassOf<class UUserWidget> NewWidgetClass);
+	void VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature(float DesiredOffset);
+	void VALUI_OnListViewUserScrolled__DelegateSignature(float ScrollFraction);
+
+	TArray<class UObject*> GetItemsWithinRange(int32& StartingIndex, int32& Range) const;
+	float GetScrollbarDistanceFromBottom() const;
+	bool ShouldScrollBarBeVisible() const;
 
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticClassImpl<"VALUI_GpInteractivePopupBase">();
+		return StaticClassImpl<"VALUI_ListView_Styled">();
 	}
-	static class UVALUI_GpInteractivePopupBase* GetDefaultObj()
+	static class UVALUI_ListView_Styled* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<UVALUI_GpInteractivePopupBase>();
+		return GetDefaultObjImpl<UVALUI_ListView_Styled>();
 	}
 };
-static_assert(alignof(UVALUI_GpInteractivePopupBase) == 0x000008, "Wrong alignment on UVALUI_GpInteractivePopupBase");
-static_assert(sizeof(UVALUI_GpInteractivePopupBase) == 0x000530, "Wrong size on UVALUI_GpInteractivePopupBase");
-static_assert(offsetof(UVALUI_GpInteractivePopupBase, InteractivePopupDataAsset) == 0x000528, "Member 'UVALUI_GpInteractivePopupBase::InteractivePopupDataAsset' has a wrong offset!");
+#pragma pack(pop)
+static_assert(alignof(UVALUI_ListView_Styled) == 0x000010, "Wrong alignment on UVALUI_ListView_Styled");
+static_assert(sizeof(UVALUI_ListView_Styled) == 0x000CE0, "Wrong size on UVALUI_ListView_Styled");
+static_assert(offsetof(UVALUI_ListView_Styled, Style) == 0x000C78, "Member 'UVALUI_ListView_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, bHandleDirectionalNavigation) == 0x000C80, "Member 'UVALUI_ListView_Styled::bHandleDirectionalNavigation' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, bProvideInputType) == 0x000C81, "Member 'UVALUI_ListView_Styled::bProvideInputType' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, OnUserScrolled) == 0x000C88, "Member 'UVALUI_ListView_Styled::OnUserScrolled' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, OnUserMouseWheelScrolled) == 0x000C98, "Member 'UVALUI_ListView_Styled::OnUserMouseWheelScrolled' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, OnListItemsChanged) == 0x000CA8, "Member 'UVALUI_ListView_Styled::OnListItemsChanged' has a wrong offset!");
+static_assert(offsetof(UVALUI_ListView_Styled, BP_OnListItemSelectionChangedWithInputType) == 0x000CC8, "Member 'UVALUI_ListView_Styled::BP_OnListItemSelectionChangedWithInputType' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_TileView_Styled
+// 0x0020 (0x0D00 - 0x0CE0)
+class UVALUI_TileView_Styled final  : public UVALUI_ListView_Styled
+{
+public:
+	float                                         EntryHeight;                                       // 0x0CD8(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         EntryWidth;                                        // 0x0CDC(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EListItemAlignment                            TileAlignment;                                     // 0x0CE0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bWrapHorizontalNavigation;                         // 0x0CE1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C4D[0x1E];                                    // 0x0CE2(0x001E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetEntryHeight(float NewHeight);
+	void SetEntryWidth(float NewWidth);
+
+	float GetEntryHeight() const;
+	float GetEntryWidth() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_TileView_Styled">();
+	}
+	static class UVALUI_TileView_Styled* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_TileView_Styled>();
+	}
+};
+static_assert(alignof(UVALUI_TileView_Styled) == 0x000010, "Wrong alignment on UVALUI_TileView_Styled");
+static_assert(sizeof(UVALUI_TileView_Styled) == 0x000D00, "Wrong size on UVALUI_TileView_Styled");
+static_assert(offsetof(UVALUI_TileView_Styled, EntryHeight) == 0x000CD8, "Member 'UVALUI_TileView_Styled::EntryHeight' has a wrong offset!");
+static_assert(offsetof(UVALUI_TileView_Styled, EntryWidth) == 0x000CDC, "Member 'UVALUI_TileView_Styled::EntryWidth' has a wrong offset!");
+static_assert(offsetof(UVALUI_TileView_Styled, TileAlignment) == 0x000CE0, "Member 'UVALUI_TileView_Styled::TileAlignment' has a wrong offset!");
+static_assert(offsetof(UVALUI_TileView_Styled, bWrapHorizontalNavigation) == 0x000CE1, "Member 'UVALUI_TileView_Styled::bWrapHorizontalNavigation' has a wrong offset!");
 
 // Class ValeriaUI.HeadlessSteamAccountFlowBase
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x0510 - 0x0510)
 class UHeadlessSteamAccountFlowBase : public UCommonActivatableWidgetInputExtended
 {
 public:
 	void BindDelegates();
 	class FString GetErrorMessageFromResponse(const class FString& Response);
-	bool IsErrorInvalidEmail(int32 Code, const class FString& Message);
 	bool IsErrorRetriable(int32 Code, const class FString& Message);
 	class FText LoginErrorMessage(int32 Code, const class FString& Message);
 	void OnPlatformLoggedInFailure(const class FString& ErrorMessage, int32 ErrorCode);
@@ -275,32 +280,10 @@ public:
 	}
 };
 static_assert(alignof(UHeadlessSteamAccountFlowBase) == 0x000008, "Wrong alignment on UHeadlessSteamAccountFlowBase");
-static_assert(sizeof(UHeadlessSteamAccountFlowBase) == 0x0004E0, "Wrong size on UHeadlessSteamAccountFlowBase");
-
-// Class ValeriaUI.VALUI_HotPotTurnTimer
-// 0x0000 (0x02A0 - 0x02A0)
-class UVALUI_HotPotTurnTimer final  : public UCommonUserWidget
-{
-public:
-	void BP_DisableTimer();
-	void BP_StartTimer(float SecondsLeft, EHotPotTurnState TurnState);
-	void BP_UpdatePlayerID(struct FGuid& PlayerId, struct FGuid& CharacterId);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_HotPotTurnTimer">();
-	}
-	static class UVALUI_HotPotTurnTimer* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_HotPotTurnTimer>();
-	}
-};
-static_assert(alignof(UVALUI_HotPotTurnTimer) == 0x000008, "Wrong alignment on UVALUI_HotPotTurnTimer");
-static_assert(sizeof(UVALUI_HotPotTurnTimer) == 0x0002A0, "Wrong size on UVALUI_HotPotTurnTimer");
+static_assert(sizeof(UHeadlessSteamAccountFlowBase) == 0x000510, "Wrong size on UHeadlessSteamAccountFlowBase");
 
 // Class ValeriaUI.LinkSteamAccountFlowBase
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x0510 - 0x0510)
 class ULinkSteamAccountFlowBase : public UCommonActivatableWidgetInputExtended
 {
 public:
@@ -326,16 +309,16 @@ public:
 	}
 };
 static_assert(alignof(ULinkSteamAccountFlowBase) == 0x000008, "Wrong alignment on ULinkSteamAccountFlowBase");
-static_assert(sizeof(ULinkSteamAccountFlowBase) == 0x0004E0, "Wrong size on ULinkSteamAccountFlowBase");
+static_assert(sizeof(ULinkSteamAccountFlowBase) == 0x000510, "Wrong size on ULinkSteamAccountFlowBase");
 
 // Class ValeriaUI.VALUI_LoadingScreenUserWidget
-// 0x0048 (0x02C0 - 0x0278)
+// 0x0048 (0x0308 - 0x02C0)
 class UVALUI_LoadingScreenUserWidget final  : public UUserWidget
 {
 public:
-	class UVALUI_LoadingScreenBlackWidget*        LoadingScreenBlackWidget;                          // 0x0278(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UTexture2D*                             CurrentBackgroundTexture;                          // 0x0280(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34CD[0x38];                                    // 0x0288(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_LoadingScreenBlackWidget*        LoadingScreenBlackWidget;                          // 0x02C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UTexture2D*                             CurrentBackgroundTexture;                          // 0x02C8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C5B[0x38];                                    // 0x02D0(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleOnPawnChanged(class APawn* Pawn);
@@ -355,21 +338,21 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_LoadingScreenUserWidget) == 0x000008, "Wrong alignment on UVALUI_LoadingScreenUserWidget");
-static_assert(sizeof(UVALUI_LoadingScreenUserWidget) == 0x0002C0, "Wrong size on UVALUI_LoadingScreenUserWidget");
-static_assert(offsetof(UVALUI_LoadingScreenUserWidget, LoadingScreenBlackWidget) == 0x000278, "Member 'UVALUI_LoadingScreenUserWidget::LoadingScreenBlackWidget' has a wrong offset!");
-static_assert(offsetof(UVALUI_LoadingScreenUserWidget, CurrentBackgroundTexture) == 0x000280, "Member 'UVALUI_LoadingScreenUserWidget::CurrentBackgroundTexture' has a wrong offset!");
+static_assert(sizeof(UVALUI_LoadingScreenUserWidget) == 0x000308, "Wrong size on UVALUI_LoadingScreenUserWidget");
+static_assert(offsetof(UVALUI_LoadingScreenUserWidget, LoadingScreenBlackWidget) == 0x0002C0, "Member 'UVALUI_LoadingScreenUserWidget::LoadingScreenBlackWidget' has a wrong offset!");
+static_assert(offsetof(UVALUI_LoadingScreenUserWidget, CurrentBackgroundTexture) == 0x0002C8, "Member 'UVALUI_LoadingScreenUserWidget::CurrentBackgroundTexture' has a wrong offset!");
 
 // Class ValeriaUI.MailboxViewerUserWidget
-// 0x0030 (0x0558 - 0x0528)
+// 0x0030 (0x0588 - 0x0558)
 class UMailboxViewerUserWidget final  : public UVALUI_ModalWidgetBase
 {
 public:
-	bool                                          bIsLoadingMail;                                    // 0x0528(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34CE[0x7];                                     // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FMailMessageWidgetData>         MailMessages;                                      // 0x0530(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	EMailboxViewerFilter                          CurrentFilter;                                     // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34CF[0x7];                                     // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMailbox                               LoadedMailbox;                                     // 0x0548(0x0010)(NativeAccessSpecifierPrivate)
+	bool                                          bIsLoadingMail;                                    // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C5C[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FMailMessageWidgetData>         MailMessages;                                      // 0x0560(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	EMailboxViewerFilter                          CurrentFilter;                                     // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C5D[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMailbox                               LoadedMailbox;                                     // 0x0578(0x0010)(NativeAccessSpecifierPrivate)
 
 public:
 	bool CanAllRewardsBeCollected(int32 Param_Index);
@@ -407,20 +390,20 @@ public:
 	}
 };
 static_assert(alignof(UMailboxViewerUserWidget) == 0x000008, "Wrong alignment on UMailboxViewerUserWidget");
-static_assert(sizeof(UMailboxViewerUserWidget) == 0x000558, "Wrong size on UMailboxViewerUserWidget");
-static_assert(offsetof(UMailboxViewerUserWidget, bIsLoadingMail) == 0x000528, "Member 'UMailboxViewerUserWidget::bIsLoadingMail' has a wrong offset!");
-static_assert(offsetof(UMailboxViewerUserWidget, MailMessages) == 0x000530, "Member 'UMailboxViewerUserWidget::MailMessages' has a wrong offset!");
-static_assert(offsetof(UMailboxViewerUserWidget, CurrentFilter) == 0x000540, "Member 'UMailboxViewerUserWidget::CurrentFilter' has a wrong offset!");
-static_assert(offsetof(UMailboxViewerUserWidget, LoadedMailbox) == 0x000548, "Member 'UMailboxViewerUserWidget::LoadedMailbox' has a wrong offset!");
+static_assert(sizeof(UMailboxViewerUserWidget) == 0x000588, "Wrong size on UMailboxViewerUserWidget");
+static_assert(offsetof(UMailboxViewerUserWidget, bIsLoadingMail) == 0x000558, "Member 'UMailboxViewerUserWidget::bIsLoadingMail' has a wrong offset!");
+static_assert(offsetof(UMailboxViewerUserWidget, MailMessages) == 0x000560, "Member 'UMailboxViewerUserWidget::MailMessages' has a wrong offset!");
+static_assert(offsetof(UMailboxViewerUserWidget, CurrentFilter) == 0x000570, "Member 'UMailboxViewerUserWidget::CurrentFilter' has a wrong offset!");
+static_assert(offsetof(UMailboxViewerUserWidget, LoadedMailbox) == 0x000578, "Member 'UMailboxViewerUserWidget::LoadedMailbox' has a wrong offset!");
 
 // Class ValeriaUI.MainLobbyBase
-// 0x0000 (0x04E0 - 0x04E0)
+// 0x0000 (0x0510 - 0x0510)
 class UMainLobbyBase : public UCommonActivatableWidgetInputExtended
 {
 public:
 	void HandleInitialSteamLoginFailure(int32 Code, const class FString& Msg);
 	void OnSteamInitializationFailure();
-	void OnSteamLoginError(int32 Code, const class FString& Msg);
+	void OnSteamLoginError(class FText& Msg);
 	void OnSteamLoginNotFound();
 
 public:
@@ -434,16 +417,16 @@ public:
 	}
 };
 static_assert(alignof(UMainLobbyBase) == 0x000008, "Wrong alignment on UMainLobbyBase");
-static_assert(sizeof(UMainLobbyBase) == 0x0004E0, "Wrong size on UMainLobbyBase");
+static_assert(sizeof(UMainLobbyBase) == 0x000510, "Wrong size on UMainLobbyBase");
 
 // Class ValeriaUI.ValeriaViewportClient
-// 0x0060 (0x0440 - 0x03E0)
+// 0x0060 (0x0450 - 0x03F0)
 class UValeriaViewportClient final  : public US6UI_GameViewportClient
 {
 public:
-	uint8                                         Pad_34D9[0x50];                                    // 0x03E0(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_LoadingScreenUserWidget*         LoadingScreenWidget;                               // 0x0430(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34DA[0x8];                                     // 0x0438(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C66[0x50];                                    // 0x03F0(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_LoadingScreenUserWidget*         LoadingScreenWidget;                               // 0x0440(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C67[0x8];                                     // 0x0448(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleOnFadeInBlack(float DurationSeconds);
@@ -461,21 +444,22 @@ public:
 	}
 };
 static_assert(alignof(UValeriaViewportClient) == 0x000008, "Wrong alignment on UValeriaViewportClient");
-static_assert(sizeof(UValeriaViewportClient) == 0x000440, "Wrong size on UValeriaViewportClient");
-static_assert(offsetof(UValeriaViewportClient, LoadingScreenWidget) == 0x000430, "Member 'UValeriaViewportClient::LoadingScreenWidget' has a wrong offset!");
+static_assert(sizeof(UValeriaViewportClient) == 0x000450, "Wrong size on UValeriaViewportClient");
+static_assert(offsetof(UValeriaViewportClient, LoadingScreenWidget) == 0x000440, "Member 'UValeriaViewportClient::LoadingScreenWidget' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_AnnouncementsMessageModalDialog
-// 0x0038 (0x0560 - 0x0528)
+// 0x0038 (0x0590 - 0x0558)
 class UVALUI_AnnouncementsMessageModalDialog : public UVALUI_ModalWidgetBase
 {
 public:
-	bool                                          bIsFromLogin;                                      // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34DB[0x7];                                     // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PrefetchedMessage;                                 // 0x0530(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0540(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class FString                                 URL;                                               // 0x0550(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsFromLogin;                                      // 0x0558(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C68[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PrefetchedMessage;                                 // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0570(0x0010)(BlueprintVisible, ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class FString                                 URL;                                               // 0x0580(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
+	class FString GetAnnouncementUrl();
 	void HandleRefreshedMessageFromWeb(const class FString& Message);
 	void NotifyConfirmComplete();
 	void OnConfirmDelegate__DelegateSignature();
@@ -493,11 +477,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_AnnouncementsMessageModalDialog) == 0x000008, "Wrong alignment on UVALUI_AnnouncementsMessageModalDialog");
-static_assert(sizeof(UVALUI_AnnouncementsMessageModalDialog) == 0x000560, "Wrong size on UVALUI_AnnouncementsMessageModalDialog");
-static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, bIsFromLogin) == 0x000528, "Member 'UVALUI_AnnouncementsMessageModalDialog::bIsFromLogin' has a wrong offset!");
-static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, PrefetchedMessage) == 0x000530, "Member 'UVALUI_AnnouncementsMessageModalDialog::PrefetchedMessage' has a wrong offset!");
-static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, OnConfirm) == 0x000540, "Member 'UVALUI_AnnouncementsMessageModalDialog::OnConfirm' has a wrong offset!");
-static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, URL) == 0x000550, "Member 'UVALUI_AnnouncementsMessageModalDialog::URL' has a wrong offset!");
+static_assert(sizeof(UVALUI_AnnouncementsMessageModalDialog) == 0x000590, "Wrong size on UVALUI_AnnouncementsMessageModalDialog");
+static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, bIsFromLogin) == 0x000558, "Member 'UVALUI_AnnouncementsMessageModalDialog::bIsFromLogin' has a wrong offset!");
+static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, PrefetchedMessage) == 0x000560, "Member 'UVALUI_AnnouncementsMessageModalDialog::PrefetchedMessage' has a wrong offset!");
+static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, OnConfirm) == 0x000570, "Member 'UVALUI_AnnouncementsMessageModalDialog::OnConfirm' has a wrong offset!");
+static_assert(offsetof(UVALUI_AnnouncementsMessageModalDialog, URL) == 0x000580, "Member 'UVALUI_AnnouncementsMessageModalDialog::URL' has a wrong offset!");
 
 // Class ValeriaUI.VAL_AsyncActionRequestStorefront
 // 0x0028 (0x0058 - 0x0030)
@@ -506,7 +490,7 @@ class UVAL_AsyncActionRequestStorefront final  : public UBlueprintAsyncActionBas
 public:
 	FMulticastInlineDelegateProperty_             Successful;                                        // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             Failure;                                           // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34DC[0x8];                                     // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C69[0x8];                                     // 0x0050(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UVAL_AsyncActionRequestStorefront* RequestStorefront(class ULocalPlayer* LP);
@@ -529,19 +513,35 @@ static_assert(sizeof(UVAL_AsyncActionRequestStorefront) == 0x000058, "Wrong size
 static_assert(offsetof(UVAL_AsyncActionRequestStorefront, Successful) == 0x000030, "Member 'UVAL_AsyncActionRequestStorefront::Successful' has a wrong offset!");
 static_assert(offsetof(UVAL_AsyncActionRequestStorefront, Failure) == 0x000040, "Member 'UVAL_AsyncActionRequestStorefront::Failure' has a wrong offset!");
 
+// Class ValeriaUI.WishViewWidget
+// 0x0000 (0x0558 - 0x0558)
+class UWishViewWidget final  : public UVALUI_ModalWidgetBase
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"WishViewWidget">();
+	}
+	static class UWishViewWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UWishViewWidget>();
+	}
+};
+static_assert(alignof(UWishViewWidget) == 0x000008, "Wrong alignment on UWishViewWidget");
+static_assert(sizeof(UWishViewWidget) == 0x000558, "Wrong size on UWishViewWidget");
+
 // Class ValeriaUI.VALUI_AsyncUpdateLoadout
-// 0x0A28 (0x0A58 - 0x0030)
+// 0x0990 (0x09C0 - 0x0030)
 class UVALUI_AsyncUpdateLoadout final  : public UBlueprintAsyncActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_             Completed;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             Failed;                                            // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34DD[0xA08];                                   // 0x0050(0x0A08)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C6A[0x970];                                   // 0x0050(0x0970)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UVALUI_AsyncUpdateLoadout* UpdateLoadout(class UVALUI_CharacterCustomizationPanelBase* CustPanel, struct FVAL_CharacterCustomizationLoadout& NewLoadout, struct FVALUI_CharCustomization_UpdateLoadoutContextPayload& ContextPayload);
 
-	void OnUpdateLoadoutCompleted__DelegateSignature(class UVALUI_CharacterCustomizationPanelBase* CharacterCustomizationPanel, struct FVALUI_CharCustomization_UpdateLoadoutContextPayload& ContextPayload);
 	void OnUpdateLoadoutFailed__DelegateSignature(struct FVALUI_CharCustomization_UpdateLoadoutContextPayload& ContextPayload);
 
 public:
@@ -555,7 +555,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_AsyncUpdateLoadout) == 0x000008, "Wrong alignment on UVALUI_AsyncUpdateLoadout");
-static_assert(sizeof(UVALUI_AsyncUpdateLoadout) == 0x000A58, "Wrong size on UVALUI_AsyncUpdateLoadout");
+static_assert(sizeof(UVALUI_AsyncUpdateLoadout) == 0x0009C0, "Wrong size on UVALUI_AsyncUpdateLoadout");
 static_assert(offsetof(UVALUI_AsyncUpdateLoadout, Completed) == 0x000030, "Member 'UVALUI_AsyncUpdateLoadout::Completed' has a wrong offset!");
 static_assert(offsetof(UVALUI_AsyncUpdateLoadout, Failed) == 0x000040, "Member 'UVALUI_AsyncUpdateLoadout::Failed' has a wrong offset!");
 
@@ -582,16 +582,16 @@ class UVALUI_BorderStyle final  : public UVALUI_WidgetStyleBase
 {
 public:
 	bool                                          bShowEffectWhenDisabled;                           // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34DE[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C6B[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                Padding;                                           // 0x0034(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FLinearColor                           ContentColorAndOpacity;                            // 0x0044(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34DF[0xC];                                     // 0x0054(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C6C[0xC];                                     // 0x0054(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            Background;                                        // 0x0060(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            Background_Light;                                  // 0x0130(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            Background_Dark;                                   // 0x0200(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FLinearColor                           BrushColor;                                        // 0x02D0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFlipForRightToLeftFlowDirection;                  // 0x02E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E0[0xF];                                     // 0x02E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C6D[0xF];                                     // 0x02E1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Apply(class UBorder* Border) const;
@@ -618,16 +618,16 @@ static_assert(offsetof(UVALUI_BorderStyle, BrushColor) == 0x0002D0, "Member 'UVA
 static_assert(offsetof(UVALUI_BorderStyle, bFlipForRightToLeftFlowDirection) == 0x0002E0, "Member 'UVALUI_BorderStyle::bFlipForRightToLeftFlowDirection' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_Border_Styled
-// 0x0070 (0x0380 - 0x0310)
+// 0x0070 (0x03B0 - 0x0340)
 class UVALUI_Border_Styled final  : public UBorder
 {
 public:
-	bool                                          bSupportCrossPlatform;                             // 0x0308(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowHUDOpacitySettings;                          // 0x0309(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E1[0x6];                                     // 0x030A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_BorderStyle*                     Style;                                             // 0x0310(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_BorderStyle>> CrossPlatformStyles;                               // 0x0318(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E2[0x18];                                    // 0x0368(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportCrossPlatform;                             // 0x0338(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowHUDOpacitySettings;                          // 0x0339(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C6E[0x6];                                     // 0x033A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_BorderStyle*                     Style;                                             // 0x0340(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_BorderStyle>> CrossPlatformStyles;                               // 0x0348(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C6F[0x18];                                    // 0x0398(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnAccessbilitySettingsChanged(struct FValeriaAccessibilitySettings& AccessbilitySettings);
@@ -645,19 +645,19 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_Border_Styled) == 0x000010, "Wrong alignment on UVALUI_Border_Styled");
-static_assert(sizeof(UVALUI_Border_Styled) == 0x000380, "Wrong size on UVALUI_Border_Styled");
-static_assert(offsetof(UVALUI_Border_Styled, bSupportCrossPlatform) == 0x000308, "Member 'UVALUI_Border_Styled::bSupportCrossPlatform' has a wrong offset!");
-static_assert(offsetof(UVALUI_Border_Styled, bAllowHUDOpacitySettings) == 0x000309, "Member 'UVALUI_Border_Styled::bAllowHUDOpacitySettings' has a wrong offset!");
-static_assert(offsetof(UVALUI_Border_Styled, Style) == 0x000310, "Member 'UVALUI_Border_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_Border_Styled, CrossPlatformStyles) == 0x000318, "Member 'UVALUI_Border_Styled::CrossPlatformStyles' has a wrong offset!");
+static_assert(sizeof(UVALUI_Border_Styled) == 0x0003B0, "Wrong size on UVALUI_Border_Styled");
+static_assert(offsetof(UVALUI_Border_Styled, bSupportCrossPlatform) == 0x000338, "Member 'UVALUI_Border_Styled::bSupportCrossPlatform' has a wrong offset!");
+static_assert(offsetof(UVALUI_Border_Styled, bAllowHUDOpacitySettings) == 0x000339, "Member 'UVALUI_Border_Styled::bAllowHUDOpacitySettings' has a wrong offset!");
+static_assert(offsetof(UVALUI_Border_Styled, Style) == 0x000340, "Member 'UVALUI_Border_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_Border_Styled, CrossPlatformStyles) == 0x000348, "Member 'UVALUI_Border_Styled::CrossPlatformStyles' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_BoundInputActionStateWidget
-// 0x0058 (0x02D0 - 0x0278)
+// 0x0058 (0x0318 - 0x02C0)
 class UVALUI_BoundInputActionStateWidget : public UUserWidget
 {
 public:
-	class UInputAction*                           InputAction;                                       // 0x0278(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E3[0x50];                                    // 0x0280(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UInputAction*                           InputAction;                                       // 0x02C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C70[0x50];                                    // 0x02C8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetInputAction(class UInputAction* InInputAction);
@@ -674,19 +674,19 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_BoundInputActionStateWidget) == 0x000008, "Wrong alignment on UVALUI_BoundInputActionStateWidget");
-static_assert(sizeof(UVALUI_BoundInputActionStateWidget) == 0x0002D0, "Wrong size on UVALUI_BoundInputActionStateWidget");
-static_assert(offsetof(UVALUI_BoundInputActionStateWidget, InputAction) == 0x000278, "Member 'UVALUI_BoundInputActionStateWidget::InputAction' has a wrong offset!");
+static_assert(sizeof(UVALUI_BoundInputActionStateWidget) == 0x000318, "Wrong size on UVALUI_BoundInputActionStateWidget");
+static_assert(offsetof(UVALUI_BoundInputActionStateWidget, InputAction) == 0x0002C0, "Member 'UVALUI_BoundInputActionStateWidget::InputAction' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_BoxDropShadow
-// 0x0038 (0x01A0 - 0x0168)
+// 0x0038 (0x01D0 - 0x0198)
 class UVALUI_BoxDropShadow final  : public UContentWidget
 {
 public:
-	struct FVector2D                              ShadowOffset;                                      // 0x0168(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ShadowHardness;                                    // 0x0178(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         CornerRadius;                                      // 0x017C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ShadowColor;                                       // 0x0180(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E6[0x10];                                    // 0x0190(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ShadowOffset;                                      // 0x0198(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ShadowHardness;                                    // 0x01A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CornerRadius;                                      // 0x01AC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ShadowColor;                                       // 0x01B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C73[0x10];                                    // 0x01C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -699,11 +699,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_BoxDropShadow) == 0x000008, "Wrong alignment on UVALUI_BoxDropShadow");
-static_assert(sizeof(UVALUI_BoxDropShadow) == 0x0001A0, "Wrong size on UVALUI_BoxDropShadow");
-static_assert(offsetof(UVALUI_BoxDropShadow, ShadowOffset) == 0x000168, "Member 'UVALUI_BoxDropShadow::ShadowOffset' has a wrong offset!");
-static_assert(offsetof(UVALUI_BoxDropShadow, ShadowHardness) == 0x000178, "Member 'UVALUI_BoxDropShadow::ShadowHardness' has a wrong offset!");
-static_assert(offsetof(UVALUI_BoxDropShadow, CornerRadius) == 0x00017C, "Member 'UVALUI_BoxDropShadow::CornerRadius' has a wrong offset!");
-static_assert(offsetof(UVALUI_BoxDropShadow, ShadowColor) == 0x000180, "Member 'UVALUI_BoxDropShadow::ShadowColor' has a wrong offset!");
+static_assert(sizeof(UVALUI_BoxDropShadow) == 0x0001D0, "Wrong size on UVALUI_BoxDropShadow");
+static_assert(offsetof(UVALUI_BoxDropShadow, ShadowOffset) == 0x000198, "Member 'UVALUI_BoxDropShadow::ShadowOffset' has a wrong offset!");
+static_assert(offsetof(UVALUI_BoxDropShadow, ShadowHardness) == 0x0001A8, "Member 'UVALUI_BoxDropShadow::ShadowHardness' has a wrong offset!");
+static_assert(offsetof(UVALUI_BoxDropShadow, CornerRadius) == 0x0001AC, "Member 'UVALUI_BoxDropShadow::CornerRadius' has a wrong offset!");
+static_assert(offsetof(UVALUI_BoxDropShadow, ShadowColor) == 0x0001B0, "Member 'UVALUI_BoxDropShadow::ShadowColor' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ButtonStyle
 // 0x0460 (0x0490 - 0x0030)
@@ -714,7 +714,7 @@ public:
 	struct FLinearColor                           ColorAndOpacity;                                   // 0x0420(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           BackgroundColor;                                   // 0x0430(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DropShadowCornerRadius;                            // 0x0440(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E7[0x4];                                     // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C74[0x4];                                     // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ShadowOffset_Normal;                               // 0x0448(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ShadowOffset_Pressed;                              // 0x0458(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ShadowHardness_Normal;                             // 0x0468(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -754,10 +754,10 @@ class UVALUI_ButtonStyle_WithBG final  : public UVALUI_ButtonStyle
 {
 public:
 	bool                                          bUseBackgroundImage;                               // 0x0490(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E8[0xF];                                     // 0x0491(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C75[0xF];                                     // 0x0491(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            BackgroundImage;                                   // 0x04A0(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                          bUseBackgroundStyle;                               // 0x0570(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E9[0xF];                                     // 0x0571(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C76[0xF];                                     // 0x0571(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           BackgroundStyle;                                   // 0x0580(0x03F0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
@@ -778,18 +778,18 @@ static_assert(offsetof(UVALUI_ButtonStyle_WithBG, bUseBackgroundStyle) == 0x0005
 static_assert(offsetof(UVALUI_ButtonStyle_WithBG, BackgroundStyle) == 0x000580, "Member 'UVALUI_ButtonStyle_WithBG::BackgroundStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_Button_Styled
-// 0x0060 (0x0650 - 0x05F0)
+// 0x0060 (0x0680 - 0x0620)
 class UVALUI_Button_Styled : public UButton
 {
 public:
-	class UVALUI_ButtonStyle*                     Style;                                             // 0x05E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEffectWhenReleased;                               // 0x05F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34EA[0x3];                                     // 0x05F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         FEffectTime;                                       // 0x05F4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34EB[0x38];                                    // 0x05F8(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
-	ECursorState                                  CursorState;                                       // 0x0630(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EFocusDirection                               DirectionOfCursorOnButton;                         // 0x0631(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34EC[0x1E];                                    // 0x0632(0x001E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_ButtonStyle*                     Style;                                             // 0x0618(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEffectWhenReleased;                               // 0x0620(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C77[0x3];                                     // 0x0621(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         FEffectTime;                                       // 0x0624(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C78[0x38];                                    // 0x0628(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	ECursorState                                  CursorState;                                       // 0x0660(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EFocusDirection                               DirectionOfCursorOnButton;                         // 0x0661(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C79[0x1E];                                    // 0x0662(0x001E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Construct();
@@ -815,26 +815,26 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_Button_Styled) == 0x000010, "Wrong alignment on UVALUI_Button_Styled");
-static_assert(sizeof(UVALUI_Button_Styled) == 0x000650, "Wrong size on UVALUI_Button_Styled");
-static_assert(offsetof(UVALUI_Button_Styled, Style) == 0x0005E8, "Member 'UVALUI_Button_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled, bEffectWhenReleased) == 0x0005F0, "Member 'UVALUI_Button_Styled::bEffectWhenReleased' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled, FEffectTime) == 0x0005F4, "Member 'UVALUI_Button_Styled::FEffectTime' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled, CursorState) == 0x000630, "Member 'UVALUI_Button_Styled::CursorState' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled, DirectionOfCursorOnButton) == 0x000631, "Member 'UVALUI_Button_Styled::DirectionOfCursorOnButton' has a wrong offset!");
+static_assert(sizeof(UVALUI_Button_Styled) == 0x000680, "Wrong size on UVALUI_Button_Styled");
+static_assert(offsetof(UVALUI_Button_Styled, Style) == 0x000618, "Member 'UVALUI_Button_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled, bEffectWhenReleased) == 0x000620, "Member 'UVALUI_Button_Styled::bEffectWhenReleased' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled, FEffectTime) == 0x000624, "Member 'UVALUI_Button_Styled::FEffectTime' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled, CursorState) == 0x000660, "Member 'UVALUI_Button_Styled::CursorState' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled, DirectionOfCursorOnButton) == 0x000661, "Member 'UVALUI_Button_Styled::DirectionOfCursorOnButton' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_Button_Styled_WithBG
-// 0x0220 (0x0870 - 0x0650)
+// 0x0220 (0x08A0 - 0x0680)
 class UVALUI_Button_Styled_WithBG final  : public UVALUI_Button_Styled
 {
 public:
-	uint8                                         Pad_34EE[0x10];                                    // 0x0650(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateBrush                            GamepadKeyHint;                                    // 0x0660(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	EGamepadKeyHintLocation                       HintShowLocation;                                  // 0x0730(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34EF[0x7];                                     // 0x0731(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              HintMargin;                                        // 0x0738(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F0[0xD8];                                    // 0x0748(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
-	EFocusDirection                               DirectionOfCursorOnBG;                             // 0x0820(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_34F1[0x4F];                                    // 0x0821(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C7B[0x10];                                    // 0x0680(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateBrush                            GamepadKeyHint;                                    // 0x0690(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	EGamepadKeyHintLocation                       HintShowLocation;                                  // 0x0760(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C7C[0x7];                                     // 0x0761(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              HintMargin;                                        // 0x0768(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C7D[0xD8];                                    // 0x0778(0x00D8)(Fixing Size After Last Property [ Dumper-7 ])
+	EFocusDirection                               DirectionOfCursorOnBG;                             // 0x0850(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C7E[0x4F];                                    // 0x0851(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleHovered();
@@ -851,11 +851,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_Button_Styled_WithBG) == 0x000010, "Wrong alignment on UVALUI_Button_Styled_WithBG");
-static_assert(sizeof(UVALUI_Button_Styled_WithBG) == 0x000870, "Wrong size on UVALUI_Button_Styled_WithBG");
-static_assert(offsetof(UVALUI_Button_Styled_WithBG, GamepadKeyHint) == 0x000660, "Member 'UVALUI_Button_Styled_WithBG::GamepadKeyHint' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled_WithBG, HintShowLocation) == 0x000730, "Member 'UVALUI_Button_Styled_WithBG::HintShowLocation' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled_WithBG, HintMargin) == 0x000738, "Member 'UVALUI_Button_Styled_WithBG::HintMargin' has a wrong offset!");
-static_assert(offsetof(UVALUI_Button_Styled_WithBG, DirectionOfCursorOnBG) == 0x000820, "Member 'UVALUI_Button_Styled_WithBG::DirectionOfCursorOnBG' has a wrong offset!");
+static_assert(sizeof(UVALUI_Button_Styled_WithBG) == 0x0008A0, "Wrong size on UVALUI_Button_Styled_WithBG");
+static_assert(offsetof(UVALUI_Button_Styled_WithBG, GamepadKeyHint) == 0x000690, "Member 'UVALUI_Button_Styled_WithBG::GamepadKeyHint' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled_WithBG, HintShowLocation) == 0x000760, "Member 'UVALUI_Button_Styled_WithBG::HintShowLocation' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled_WithBG, HintMargin) == 0x000768, "Member 'UVALUI_Button_Styled_WithBG::HintMargin' has a wrong offset!");
+static_assert(offsetof(UVALUI_Button_Styled_WithBG, DirectionOfCursorOnBG) == 0x000850, "Member 'UVALUI_Button_Styled_WithBG::DirectionOfCursorOnBG' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CameraVirtualMoveHooker_Mobile
 // 0x0000 (0x0028 - 0x0028)
@@ -960,16 +960,16 @@ static_assert(sizeof(UVALUI_NameValidatorDataAsset) == 0x000080, "Wrong size on 
 static_assert(offsetof(UVALUI_NameValidatorDataAsset, ValidatorClasses) == 0x000030, "Member 'UVALUI_NameValidatorDataAsset::ValidatorClasses' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CharacterCreationScreenBase
-// 0x0050 (0x0530 - 0x04E0)
+// 0x0050 (0x0560 - 0x0510)
 class UVALUI_CharacterCreationScreenBase : public UCommonActivatableWidgetInputExtended
 {
 public:
-	class UVALUI_CharacterCustomizationPanelBase* CustomizationPanel;                                // 0x04E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UVALUI_NameValidatorDataAsset*          NameValidatorDataAsset;                            // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UVALUI_NameValidator*>           NameValidators;                                    // 0x04F0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             EventOnCommitCharacter;                            // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             EventOnBodyTypeSelectionConfirm;                   // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             EventOnBodyTypeSelectionChange;                    // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	class UVALUI_CharacterCustomizationPanelBase* CustomizationPanel;                                // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UVALUI_NameValidatorDataAsset*          NameValidatorDataAsset;                            // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UVALUI_NameValidator*>           NameValidators;                                    // 0x0520(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             EventOnCommitCharacter;                            // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             EventOnBodyTypeSelectionConfirm;                   // 0x0540(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             EventOnBodyTypeSelectionChange;                    // 0x0550(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
 
 public:
 	void HandleCharacterNameChanged(class FText& InCharacterName, EVAL_CharacterNameType InCharacterNameType);
@@ -994,13 +994,13 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CharacterCreationScreenBase) == 0x000008, "Wrong alignment on UVALUI_CharacterCreationScreenBase");
-static_assert(sizeof(UVALUI_CharacterCreationScreenBase) == 0x000530, "Wrong size on UVALUI_CharacterCreationScreenBase");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, CustomizationPanel) == 0x0004E0, "Member 'UVALUI_CharacterCreationScreenBase::CustomizationPanel' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, NameValidatorDataAsset) == 0x0004E8, "Member 'UVALUI_CharacterCreationScreenBase::NameValidatorDataAsset' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, NameValidators) == 0x0004F0, "Member 'UVALUI_CharacterCreationScreenBase::NameValidators' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnCommitCharacter) == 0x000500, "Member 'UVALUI_CharacterCreationScreenBase::EventOnCommitCharacter' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnBodyTypeSelectionConfirm) == 0x000510, "Member 'UVALUI_CharacterCreationScreenBase::EventOnBodyTypeSelectionConfirm' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnBodyTypeSelectionChange) == 0x000520, "Member 'UVALUI_CharacterCreationScreenBase::EventOnBodyTypeSelectionChange' has a wrong offset!");
+static_assert(sizeof(UVALUI_CharacterCreationScreenBase) == 0x000560, "Wrong size on UVALUI_CharacterCreationScreenBase");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, CustomizationPanel) == 0x000510, "Member 'UVALUI_CharacterCreationScreenBase::CustomizationPanel' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, NameValidatorDataAsset) == 0x000518, "Member 'UVALUI_CharacterCreationScreenBase::NameValidatorDataAsset' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, NameValidators) == 0x000520, "Member 'UVALUI_CharacterCreationScreenBase::NameValidators' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnCommitCharacter) == 0x000530, "Member 'UVALUI_CharacterCreationScreenBase::EventOnCommitCharacter' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnBodyTypeSelectionConfirm) == 0x000540, "Member 'UVALUI_CharacterCreationScreenBase::EventOnBodyTypeSelectionConfirm' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCreationScreenBase, EventOnBodyTypeSelectionChange) == 0x000550, "Member 'UVALUI_CharacterCreationScreenBase::EventOnBodyTypeSelectionChange' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CharacterCreationStatics
 // 0x0000 (0x0028 - 0x0028)
@@ -1023,17 +1023,17 @@ static_assert(alignof(UVALUI_CharacterCreationStatics) == 0x000008, "Wrong align
 static_assert(sizeof(UVALUI_CharacterCreationStatics) == 0x000028, "Wrong size on UVALUI_CharacterCreationStatics");
 
 // Class ValeriaUI.VALUI_CharacterCustomizationPanelBase
-// 0x0A60 (0x0F40 - 0x04E0)
+// 0x09C8 (0x0ED8 - 0x0510)
 class UVALUI_CharacterCustomizationPanelBase : public UCommonActivatableWidgetInputExtended
 {
 public:
-	uint8                                         Pad_34F5[0x10];                                    // 0x04E0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 PreviewCharacterActor;                             // 0x04F0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UVAL_CharacterCustomizationComponent*   CharacterCustomizationComponent;                   // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVAL_CharacterCustomizationLoadout     CurrentLoadout;                                    // 0x0500(0x0998)(BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FVALUI_CharCustomization_LoadoutSlotData> LoadoutSlotMap;                                    // 0x0E98(0x0050)(Edit, BlueprintVisible, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class UEnum*                                  ItemTypeEnum;                                      // 0x0EE8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSet<class FName>                             EnabledTagNames;                                   // 0x0EF0(0x0050)(BlueprintVisible, BlueprintReadOnly, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C82[0x10];                                    // 0x0510(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 PreviewCharacterActor;                             // 0x0520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UVAL_CharacterCustomizationComponent*   CharacterCustomizationComponent;                   // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVAL_CharacterCustomizationLoadout     CurrentLoadout;                                    // 0x0530(0x0900)(BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FVALUI_CharCustomization_LoadoutSlotData> LoadoutSlotMap;                                    // 0x0E30(0x0050)(Edit, BlueprintVisible, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class UEnum*                                  ItemTypeEnum;                                      // 0x0E80(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSet<class FName>                             EnabledTagNames;                                   // 0x0E88(0x0050)(BlueprintVisible, BlueprintReadOnly, Transient, Protected, NativeAccessSpecifierProtected)
 
 public:
 	class UObject* GenerateItemObject(struct FVAL_CharCustomization_AssetData& AssetData, class UWidget* ViewWidget);
@@ -1058,22 +1058,22 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CharacterCustomizationPanelBase) == 0x000008, "Wrong alignment on UVALUI_CharacterCustomizationPanelBase");
-static_assert(sizeof(UVALUI_CharacterCustomizationPanelBase) == 0x000F40, "Wrong size on UVALUI_CharacterCustomizationPanelBase");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, PreviewCharacterActor) == 0x0004F0, "Member 'UVALUI_CharacterCustomizationPanelBase::PreviewCharacterActor' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, CharacterCustomizationComponent) == 0x0004F8, "Member 'UVALUI_CharacterCustomizationPanelBase::CharacterCustomizationComponent' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, CurrentLoadout) == 0x000500, "Member 'UVALUI_CharacterCustomizationPanelBase::CurrentLoadout' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, LoadoutSlotMap) == 0x000E98, "Member 'UVALUI_CharacterCustomizationPanelBase::LoadoutSlotMap' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, ItemTypeEnum) == 0x000EE8, "Member 'UVALUI_CharacterCustomizationPanelBase::ItemTypeEnum' has a wrong offset!");
-static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, EnabledTagNames) == 0x000EF0, "Member 'UVALUI_CharacterCustomizationPanelBase::EnabledTagNames' has a wrong offset!");
+static_assert(sizeof(UVALUI_CharacterCustomizationPanelBase) == 0x000ED8, "Wrong size on UVALUI_CharacterCustomizationPanelBase");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, PreviewCharacterActor) == 0x000520, "Member 'UVALUI_CharacterCustomizationPanelBase::PreviewCharacterActor' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, CharacterCustomizationComponent) == 0x000528, "Member 'UVALUI_CharacterCustomizationPanelBase::CharacterCustomizationComponent' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, CurrentLoadout) == 0x000530, "Member 'UVALUI_CharacterCustomizationPanelBase::CurrentLoadout' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, LoadoutSlotMap) == 0x000E30, "Member 'UVALUI_CharacterCustomizationPanelBase::LoadoutSlotMap' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, ItemTypeEnum) == 0x000E80, "Member 'UVALUI_CharacterCustomizationPanelBase::ItemTypeEnum' has a wrong offset!");
+static_assert(offsetof(UVALUI_CharacterCustomizationPanelBase, EnabledTagNames) == 0x000E88, "Member 'UVALUI_CharacterCustomizationPanelBase::EnabledTagNames' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CharacterMovementStick_Mobile
-// 0x0060 (0x0550 - 0x04F0)
+// 0x0060 (0x0580 - 0x0520)
 class UVALUI_CharacterMovementStick_Mobile final  : public US6UI_InputActionHandlingUserWidget
 {
 public:
-	uint8                                         Pad_34F7[0x50];                                    // 0x04F0(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_CameraVirtualMoveHooker_Mobile*  Hooker;                                            // 0x0540(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34F8[0x8];                                     // 0x0548(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C84[0x50];                                    // 0x0520(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_CameraVirtualMoveHooker_Mobile*  Hooker;                                            // 0x0570(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C85[0x8];                                     // 0x0578(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitMovementVirtualStack(const struct FVector2D& DefaultPosition, float ValidTouchRadius, float MovementValidDistanceTemp, float WalkBoundaryDistanceTemp);
@@ -1092,8 +1092,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CharacterMovementStick_Mobile) == 0x000008, "Wrong alignment on UVALUI_CharacterMovementStick_Mobile");
-static_assert(sizeof(UVALUI_CharacterMovementStick_Mobile) == 0x000550, "Wrong size on UVALUI_CharacterMovementStick_Mobile");
-static_assert(offsetof(UVALUI_CharacterMovementStick_Mobile, Hooker) == 0x000540, "Member 'UVALUI_CharacterMovementStick_Mobile::Hooker' has a wrong offset!");
+static_assert(sizeof(UVALUI_CharacterMovementStick_Mobile) == 0x000580, "Wrong size on UVALUI_CharacterMovementStick_Mobile");
+static_assert(offsetof(UVALUI_CharacterMovementStick_Mobile, Hooker) == 0x000570, "Member 'UVALUI_CharacterMovementStick_Mobile::Hooker' has a wrong offset!");
 
 // Class ValeriaUI.VAL_ChatBubbleWidgetInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1121,7 +1121,7 @@ class UVALUI_ChatBubbleManager final  : public ULocalPlayerSubsystem
 {
 public:
 	TSubclassOf<class UWidgetComponent>           WidgetComponentClass;                              // 0x0030(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34FB[0x8];                                     // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C88[0x8];                                     // 0x0038(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleOnNewChatMessageReceived(struct FValeriaChatMessage& Message);
@@ -1141,7 +1141,7 @@ static_assert(sizeof(UVALUI_ChatBubbleManager) == 0x000040, "Wrong size on UVALU
 static_assert(offsetof(UVALUI_ChatBubbleManager, WidgetComponentClass) == 0x000030, "Member 'UVALUI_ChatBubbleManager::WidgetComponentClass' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ChatEmojiPanel
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x02C0 - 0x02C0)
 class UVALUI_ChatEmojiPanel : public UUserWidget
 {
 public:
@@ -1158,27 +1158,27 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ChatEmojiPanel) == 0x000008, "Wrong alignment on UVALUI_ChatEmojiPanel");
-static_assert(sizeof(UVALUI_ChatEmojiPanel) == 0x000278, "Wrong size on UVALUI_ChatEmojiPanel");
+static_assert(sizeof(UVALUI_ChatEmojiPanel) == 0x0002C0, "Wrong size on UVALUI_ChatEmojiPanel");
 
 // Class ValeriaUI.VALUI_ChatInputBar
-// 0x0200 (0x0478 - 0x0278)
+// 0x0200 (0x04C0 - 0x02C0)
 class UVALUI_ChatInputBar : public UUserWidget
 {
 public:
-	uint8                                         Pad_34FC[0x68];                                    // 0x0278(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnCommitBlankText;                                 // 0x02E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnMessageSubmitted;                                // 0x02F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnTextChanged;                                     // 0x0300(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnMessageTargetCycled;                             // 0x0310(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnCommandSuggestionsChanged;                       // 0x0320(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34FD[0x20];                                    // 0x0330(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVAL_ChatCommand_Base*                  ActiveChatCommand;                                 // 0x0350(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	TArray<TSubclassOf<class UVAL_ChatCommand_Base>> ChatCommandClasses;                                // 0x0358(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TMap<EVAL_DirectMessageResult, class FText>   DirectMessageErrorMessageTable;                    // 0x0368(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	class UVALUI_ChatInputEditableText*           EditableText;                                      // 0x03B8(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UVAL_ChatCommand_Base*>          ChatCommandTemplateObjects;                        // 0x03C0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	TSet<class UVAL_ChatCommand_Base*>            PendingActiveCommands;                             // 0x03D0(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_34FE[0x58];                                    // 0x0420(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C89[0x68];                                    // 0x02C0(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnCommitBlankText;                                 // 0x0328(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnMessageSubmitted;                                // 0x0338(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnTextChanged;                                     // 0x0348(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnMessageTargetCycled;                             // 0x0358(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnCommandSuggestionsChanged;                       // 0x0368(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C8A[0x20];                                    // 0x0378(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_ChatCommand_Base*                  ActiveChatCommand;                                 // 0x0398(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TArray<TSubclassOf<class UVAL_ChatCommand_Base>> ChatCommandClasses;                                // 0x03A0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<EVAL_DirectMessageResult, class FText>   DirectMessageErrorMessageTable;                    // 0x03B0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	class UVALUI_ChatInputEditableText*           EditableText;                                      // 0x0400(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UVAL_ChatCommand_Base*>          ChatCommandTemplateObjects;                        // 0x0408(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	TSet<class UVAL_ChatCommand_Base*>            PendingActiveCommands;                             // 0x0418(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C8B[0x58];                                    // 0x0468(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool ChangeMessageTarget(struct FMessageTarget& MessageTarget);
@@ -1217,26 +1217,26 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ChatInputBar) == 0x000008, "Wrong alignment on UVALUI_ChatInputBar");
-static_assert(sizeof(UVALUI_ChatInputBar) == 0x000478, "Wrong size on UVALUI_ChatInputBar");
-static_assert(offsetof(UVALUI_ChatInputBar, OnCommitBlankText) == 0x0002E0, "Member 'UVALUI_ChatInputBar::OnCommitBlankText' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, OnMessageSubmitted) == 0x0002F0, "Member 'UVALUI_ChatInputBar::OnMessageSubmitted' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, OnTextChanged) == 0x000300, "Member 'UVALUI_ChatInputBar::OnTextChanged' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, OnMessageTargetCycled) == 0x000310, "Member 'UVALUI_ChatInputBar::OnMessageTargetCycled' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, OnCommandSuggestionsChanged) == 0x000320, "Member 'UVALUI_ChatInputBar::OnCommandSuggestionsChanged' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, ActiveChatCommand) == 0x000350, "Member 'UVALUI_ChatInputBar::ActiveChatCommand' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, ChatCommandClasses) == 0x000358, "Member 'UVALUI_ChatInputBar::ChatCommandClasses' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, DirectMessageErrorMessageTable) == 0x000368, "Member 'UVALUI_ChatInputBar::DirectMessageErrorMessageTable' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, EditableText) == 0x0003B8, "Member 'UVALUI_ChatInputBar::EditableText' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, ChatCommandTemplateObjects) == 0x0003C0, "Member 'UVALUI_ChatInputBar::ChatCommandTemplateObjects' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputBar, PendingActiveCommands) == 0x0003D0, "Member 'UVALUI_ChatInputBar::PendingActiveCommands' has a wrong offset!");
+static_assert(sizeof(UVALUI_ChatInputBar) == 0x0004C0, "Wrong size on UVALUI_ChatInputBar");
+static_assert(offsetof(UVALUI_ChatInputBar, OnCommitBlankText) == 0x000328, "Member 'UVALUI_ChatInputBar::OnCommitBlankText' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, OnMessageSubmitted) == 0x000338, "Member 'UVALUI_ChatInputBar::OnMessageSubmitted' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, OnTextChanged) == 0x000348, "Member 'UVALUI_ChatInputBar::OnTextChanged' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, OnMessageTargetCycled) == 0x000358, "Member 'UVALUI_ChatInputBar::OnMessageTargetCycled' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, OnCommandSuggestionsChanged) == 0x000368, "Member 'UVALUI_ChatInputBar::OnCommandSuggestionsChanged' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, ActiveChatCommand) == 0x000398, "Member 'UVALUI_ChatInputBar::ActiveChatCommand' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, ChatCommandClasses) == 0x0003A0, "Member 'UVALUI_ChatInputBar::ChatCommandClasses' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, DirectMessageErrorMessageTable) == 0x0003B0, "Member 'UVALUI_ChatInputBar::DirectMessageErrorMessageTable' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, EditableText) == 0x000400, "Member 'UVALUI_ChatInputBar::EditableText' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, ChatCommandTemplateObjects) == 0x000408, "Member 'UVALUI_ChatInputBar::ChatCommandTemplateObjects' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputBar, PendingActiveCommands) == 0x000418, "Member 'UVALUI_ChatInputBar::PendingActiveCommands' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EditableRichText_Styled
-// 0x0010 (0x0830 - 0x0820)
+// 0x0010 (0x0860 - 0x0850)
 #pragma pack(push, 0x1)
 class alignas(0x10) UVALUI_EditableRichText_Styled : public US6UI_EditableRichText
 {
 public:
-	class UVALUI_EditableRichTextStyle*           Style;                                             // 0x0820(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_EditableRichTextStyle*           Style;                                             // 0x0850(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetTextBlockStyle(class UVALUI_EditableRichTextStyle* NewStyle);
@@ -1253,27 +1253,27 @@ public:
 };
 #pragma pack(pop)
 static_assert(alignof(UVALUI_EditableRichText_Styled) == 0x000010, "Wrong alignment on UVALUI_EditableRichText_Styled");
-static_assert(sizeof(UVALUI_EditableRichText_Styled) == 0x000830, "Wrong size on UVALUI_EditableRichText_Styled");
-static_assert(offsetof(UVALUI_EditableRichText_Styled, Style) == 0x000820, "Member 'UVALUI_EditableRichText_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_EditableRichText_Styled) == 0x000860, "Wrong size on UVALUI_EditableRichText_Styled");
+static_assert(offsetof(UVALUI_EditableRichText_Styled, Style) == 0x000850, "Member 'UVALUI_EditableRichText_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ChatInputEditableText
-// 0x0100 (0x0930 - 0x0830)
+// 0x0100 (0x0960 - 0x0860)
 class UVALUI_ChatInputEditableText final  : public UVALUI_EditableRichText_Styled
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSummonContextMenu;                               // 0x0828(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	int32                                         MaximumCharacterLimit;                             // 0x0838(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3504[0x4];                                     // 0x083C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 PlainTextTag;                                      // 0x0840(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 BoldTextTag;                                       // 0x0850(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ItalicTextTag;                                     // 0x0860(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FKey                                   CycleKey;                                          // 0x0870(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FKey                                   UpKey;                                             // 0x0888(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FKey                                   DownKey;                                           // 0x08A0(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FKey                                   PlainTextKey;                                      // 0x08B8(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FKey                                   BoldKey;                                           // 0x08D0(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FKey                                   ItalicKey;                                         // 0x08E8(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3505[0x30];                                    // 0x0900(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSummonContextMenu;                               // 0x0858(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	int32                                         MaximumCharacterLimit;                             // 0x0868(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C91[0x4];                                     // 0x086C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 PlainTextTag;                                      // 0x0870(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BoldTextTag;                                       // 0x0880(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ItalicTextTag;                                     // 0x0890(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FKey                                   CycleKey;                                          // 0x08A0(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKey                                   UpKey;                                             // 0x08B8(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKey                                   DownKey;                                           // 0x08D0(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKey                                   PlainTextKey;                                      // 0x08E8(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKey                                   BoldKey;                                           // 0x0900(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FKey                                   ItalicKey;                                         // 0x0918(0x0018)(Edit, BlueprintVisible, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C92[0x30];                                    // 0x0930(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InsertTextAtCursorChecked(class FText& InText);
@@ -1295,21 +1295,21 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ChatInputEditableText) == 0x000010, "Wrong alignment on UVALUI_ChatInputEditableText");
-static_assert(sizeof(UVALUI_ChatInputEditableText) == 0x000930, "Wrong size on UVALUI_ChatInputEditableText");
-static_assert(offsetof(UVALUI_ChatInputEditableText, OnSummonContextMenu) == 0x000828, "Member 'UVALUI_ChatInputEditableText::OnSummonContextMenu' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, MaximumCharacterLimit) == 0x000838, "Member 'UVALUI_ChatInputEditableText::MaximumCharacterLimit' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, PlainTextTag) == 0x000840, "Member 'UVALUI_ChatInputEditableText::PlainTextTag' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, BoldTextTag) == 0x000850, "Member 'UVALUI_ChatInputEditableText::BoldTextTag' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, ItalicTextTag) == 0x000860, "Member 'UVALUI_ChatInputEditableText::ItalicTextTag' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, CycleKey) == 0x000870, "Member 'UVALUI_ChatInputEditableText::CycleKey' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, UpKey) == 0x000888, "Member 'UVALUI_ChatInputEditableText::UpKey' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, DownKey) == 0x0008A0, "Member 'UVALUI_ChatInputEditableText::DownKey' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, PlainTextKey) == 0x0008B8, "Member 'UVALUI_ChatInputEditableText::PlainTextKey' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, BoldKey) == 0x0008D0, "Member 'UVALUI_ChatInputEditableText::BoldKey' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatInputEditableText, ItalicKey) == 0x0008E8, "Member 'UVALUI_ChatInputEditableText::ItalicKey' has a wrong offset!");
+static_assert(sizeof(UVALUI_ChatInputEditableText) == 0x000960, "Wrong size on UVALUI_ChatInputEditableText");
+static_assert(offsetof(UVALUI_ChatInputEditableText, OnSummonContextMenu) == 0x000858, "Member 'UVALUI_ChatInputEditableText::OnSummonContextMenu' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, MaximumCharacterLimit) == 0x000868, "Member 'UVALUI_ChatInputEditableText::MaximumCharacterLimit' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, PlainTextTag) == 0x000870, "Member 'UVALUI_ChatInputEditableText::PlainTextTag' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, BoldTextTag) == 0x000880, "Member 'UVALUI_ChatInputEditableText::BoldTextTag' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, ItalicTextTag) == 0x000890, "Member 'UVALUI_ChatInputEditableText::ItalicTextTag' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, CycleKey) == 0x0008A0, "Member 'UVALUI_ChatInputEditableText::CycleKey' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, UpKey) == 0x0008B8, "Member 'UVALUI_ChatInputEditableText::UpKey' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, DownKey) == 0x0008D0, "Member 'UVALUI_ChatInputEditableText::DownKey' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, PlainTextKey) == 0x0008E8, "Member 'UVALUI_ChatInputEditableText::PlainTextKey' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, BoldKey) == 0x000900, "Member 'UVALUI_ChatInputEditableText::BoldKey' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatInputEditableText, ItalicKey) == 0x000918, "Member 'UVALUI_ChatInputEditableText::ItalicKey' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ChatMessage
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x02C0 - 0x02C0)
 class UVALUI_ChatMessage : public UUserWidget
 {
 public:
@@ -1327,20 +1327,20 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ChatMessage) == 0x000008, "Wrong alignment on UVALUI_ChatMessage");
-static_assert(sizeof(UVALUI_ChatMessage) == 0x000278, "Wrong size on UVALUI_ChatMessage");
+static_assert(sizeof(UVALUI_ChatMessage) == 0x0002C0, "Wrong size on UVALUI_ChatMessage");
 
 // Class ValeriaUI.VALUI_ChatPanelBase
-// 0x0110 (0x0600 - 0x04F0)
+// 0x0108 (0x0628 - 0x0520)
 class UVALUI_ChatPanelBase : public US6UI_InputActionHandlingUserWidget
 {
 public:
-	uint8                                         Pad_3506[0x68];                                    // 0x04F0(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnChatPanelStateChanged;                           // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TMap<class FName, struct FVALUI_ChatTab>      TabTable;                                          // 0x0568(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class FName                                   ActiveTabName;                                     // 0x05B8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UVALUI_ChatInputBar*                    InputBar;                                          // 0x05C0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   ChatRequestDecoratorWidgetPtr;                     // 0x05C8(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UUserWidget>                ChatRequestDecoratorWidget;                        // 0x05F8(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C93[0x68];                                    // 0x0520(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnChatPanelStateChanged;                           // 0x0588(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TMap<class FName, struct FVALUI_ChatTab>      TabTable;                                          // 0x0598(0x0050)(Edit, BlueprintVisible, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class FName                                   ActiveTabName;                                     // 0x05E8(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UVALUI_ChatInputBar*                    InputBar;                                          // 0x05F0(0x0008)(BlueprintVisible, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   ChatRequestDecoratorWidgetPtr;                     // 0x05F8(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UUserWidget>                ChatRequestDecoratorWidget;                        // 0x0620(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void ClearTabSidePanel(struct FVALUI_ChatTab& Tab);
@@ -1386,13 +1386,13 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ChatPanelBase) == 0x000008, "Wrong alignment on UVALUI_ChatPanelBase");
-static_assert(sizeof(UVALUI_ChatPanelBase) == 0x000600, "Wrong size on UVALUI_ChatPanelBase");
-static_assert(offsetof(UVALUI_ChatPanelBase, OnChatPanelStateChanged) == 0x000558, "Member 'UVALUI_ChatPanelBase::OnChatPanelStateChanged' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatPanelBase, TabTable) == 0x000568, "Member 'UVALUI_ChatPanelBase::TabTable' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatPanelBase, ActiveTabName) == 0x0005B8, "Member 'UVALUI_ChatPanelBase::ActiveTabName' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatPanelBase, InputBar) == 0x0005C0, "Member 'UVALUI_ChatPanelBase::InputBar' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatPanelBase, ChatRequestDecoratorWidgetPtr) == 0x0005C8, "Member 'UVALUI_ChatPanelBase::ChatRequestDecoratorWidgetPtr' has a wrong offset!");
-static_assert(offsetof(UVALUI_ChatPanelBase, ChatRequestDecoratorWidget) == 0x0005F8, "Member 'UVALUI_ChatPanelBase::ChatRequestDecoratorWidget' has a wrong offset!");
+static_assert(sizeof(UVALUI_ChatPanelBase) == 0x000628, "Wrong size on UVALUI_ChatPanelBase");
+static_assert(offsetof(UVALUI_ChatPanelBase, OnChatPanelStateChanged) == 0x000588, "Member 'UVALUI_ChatPanelBase::OnChatPanelStateChanged' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatPanelBase, TabTable) == 0x000598, "Member 'UVALUI_ChatPanelBase::TabTable' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatPanelBase, ActiveTabName) == 0x0005E8, "Member 'UVALUI_ChatPanelBase::ActiveTabName' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatPanelBase, InputBar) == 0x0005F0, "Member 'UVALUI_ChatPanelBase::InputBar' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatPanelBase, ChatRequestDecoratorWidgetPtr) == 0x0005F8, "Member 'UVALUI_ChatPanelBase::ChatRequestDecoratorWidgetPtr' has a wrong offset!");
+static_assert(offsetof(UVALUI_ChatPanelBase, ChatRequestDecoratorWidget) == 0x000620, "Member 'UVALUI_ChatPanelBase::ChatRequestDecoratorWidget' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ChatStatics
 // 0x0000 (0x0028 - 0x0028)
@@ -1443,11 +1443,11 @@ static_assert(sizeof(UVALUI_CheckBoxStyle) == 0x000B00, "Wrong size on UVALUI_Ch
 static_assert(offsetof(UVALUI_CheckBoxStyle, WidgetStyle) == 0x000030, "Member 'UVALUI_CheckBoxStyle::WidgetStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CheckBox_Styled
-// 0x0000 (0x0C80 - 0x0C80)
+// 0x0000 (0x0CB0 - 0x0CB0)
 class UVALUI_CheckBox_Styled final  : public UCheckBox
 {
 public:
-	class UVALUI_CheckBoxStyle*                   Style;                                             // 0x0C78(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_CheckBoxStyle*                   Style;                                             // 0x0CA8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetCheckBoxStyle(class UVALUI_CheckBoxStyle* NewStyle);
@@ -1463,16 +1463,16 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CheckBox_Styled) == 0x000010, "Wrong alignment on UVALUI_CheckBox_Styled");
-static_assert(sizeof(UVALUI_CheckBox_Styled) == 0x000C80, "Wrong size on UVALUI_CheckBox_Styled");
-static_assert(offsetof(UVALUI_CheckBox_Styled, Style) == 0x000C78, "Member 'UVALUI_CheckBox_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_CheckBox_Styled) == 0x000CB0, "Wrong size on UVALUI_CheckBox_Styled");
+static_assert(offsetof(UVALUI_CheckBox_Styled, Style) == 0x000CA8, "Member 'UVALUI_CheckBox_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CrafterContentWidget
-// 0x0058 (0x02D0 - 0x0278)
+// 0x0058 (0x0318 - 0x02C0)
 class UVALUI_CrafterContentWidget final  : public UUserWidget
 {
 public:
-	TMap<class FName, struct FVALUI_Crafter>      CrafterTable;                                      // 0x0278(0x0050)(Edit, BlueprintVisible, EditFixedSize, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	class UDataTable*                             CrafterConfigsDataTable;                           // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FVALUI_Crafter>      CrafterTable;                                      // 0x02C0(0x0050)(Edit, BlueprintVisible, EditFixedSize, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	class UDataTable*                             CrafterConfigsDataTable;                           // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	bool GetCrafterData(struct FCrafterConfig& CrafterConfig, struct FVALUI_Crafter* CrafterData) const;
@@ -1489,12 +1489,12 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CrafterContentWidget) == 0x000008, "Wrong alignment on UVALUI_CrafterContentWidget");
-static_assert(sizeof(UVALUI_CrafterContentWidget) == 0x0002D0, "Wrong size on UVALUI_CrafterContentWidget");
-static_assert(offsetof(UVALUI_CrafterContentWidget, CrafterTable) == 0x000278, "Member 'UVALUI_CrafterContentWidget::CrafterTable' has a wrong offset!");
-static_assert(offsetof(UVALUI_CrafterContentWidget, CrafterConfigsDataTable) == 0x0002C8, "Member 'UVALUI_CrafterContentWidget::CrafterConfigsDataTable' has a wrong offset!");
+static_assert(sizeof(UVALUI_CrafterContentWidget) == 0x000318, "Wrong size on UVALUI_CrafterContentWidget");
+static_assert(offsetof(UVALUI_CrafterContentWidget, CrafterTable) == 0x0002C0, "Member 'UVALUI_CrafterContentWidget::CrafterTable' has a wrong offset!");
+static_assert(offsetof(UVALUI_CrafterContentWidget, CrafterConfigsDataTable) == 0x000310, "Member 'UVALUI_CrafterContentWidget::CrafterConfigsDataTable' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_CrafterStationsViewWidget
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x02C0 - 0x02C0)
 class UVALUI_CrafterStationsViewWidget final  : public UUserWidget
 {
 public:
@@ -1511,15 +1511,15 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_CrafterStationsViewWidget) == 0x000008, "Wrong alignment on UVALUI_CrafterStationsViewWidget");
-static_assert(sizeof(UVALUI_CrafterStationsViewWidget) == 0x000278, "Wrong size on UVALUI_CrafterStationsViewWidget");
+static_assert(sizeof(UVALUI_CrafterStationsViewWidget) == 0x0002C0, "Wrong size on UVALUI_CrafterStationsViewWidget");
 
 // Class ValeriaUI.VALUI_DebugOnly
-// 0x0018 (0x0180 - 0x0168)
+// 0x0018 (0x01B0 - 0x0198)
 class UVALUI_DebugOnly final  : public UContentWidget
 {
 public:
-	bool                                          bShouldCollapseIfNotDebugMode;                     // 0x0168(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3511[0x17];                                    // 0x0169(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bShouldCollapseIfNotDebugMode;                     // 0x0198(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9E[0x17];                                    // 0x0199(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1532,16 +1532,16 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_DebugOnly) == 0x000008, "Wrong alignment on UVALUI_DebugOnly");
-static_assert(sizeof(UVALUI_DebugOnly) == 0x000180, "Wrong size on UVALUI_DebugOnly");
-static_assert(offsetof(UVALUI_DebugOnly, bShouldCollapseIfNotDebugMode) == 0x000168, "Member 'UVALUI_DebugOnly::bShouldCollapseIfNotDebugMode' has a wrong offset!");
+static_assert(sizeof(UVALUI_DebugOnly) == 0x0001B0, "Wrong size on UVALUI_DebugOnly");
+static_assert(offsetof(UVALUI_DebugOnly, bShouldCollapseIfNotDebugMode) == 0x000198, "Member 'UVALUI_DebugOnly::bShouldCollapseIfNotDebugMode' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_DepthSortedHorizontalBox
-// 0x0008 (0x0180 - 0x0178)
+// 0x0008 (0x01B0 - 0x01A8)
 class UVALUI_DepthSortedHorizontalBox final  : public UHorizontalBox
 {
 public:
-	int32                                         ForemostWidgetIndex;                               // 0x0178(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3512[0x4];                                     // 0x017C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ForemostWidgetIndex;                               // 0x01A8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9F[0x4];                                     // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetForemostWidgetIndex(int32 Param_Index);
@@ -1557,8 +1557,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_DepthSortedHorizontalBox) == 0x000008, "Wrong alignment on UVALUI_DepthSortedHorizontalBox");
-static_assert(sizeof(UVALUI_DepthSortedHorizontalBox) == 0x000180, "Wrong size on UVALUI_DepthSortedHorizontalBox");
-static_assert(offsetof(UVALUI_DepthSortedHorizontalBox, ForemostWidgetIndex) == 0x000178, "Member 'UVALUI_DepthSortedHorizontalBox::ForemostWidgetIndex' has a wrong offset!");
+static_assert(sizeof(UVALUI_DepthSortedHorizontalBox) == 0x0001B0, "Wrong size on UVALUI_DepthSortedHorizontalBox");
+static_assert(offsetof(UVALUI_DepthSortedHorizontalBox, ForemostWidgetIndex) == 0x0001A8, "Member 'UVALUI_DepthSortedHorizontalBox::ForemostWidgetIndex' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_DragDropOperation
 // 0x0018 (0x00A8 - 0x0090)
@@ -1567,7 +1567,7 @@ class UVALUI_DragDropOperation : public UDragDropOperation
 public:
 	FMulticastInlineDelegateProperty_             OnDragStarted;                                     // 0x0090(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	bool                                          bStartedDrag;                                      // 0x00A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3513[0x7];                                     // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA0[0x7];                                     // 0x00A1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DragStarted(struct FPointerEvent& PointerEvent);
@@ -1592,7 +1592,7 @@ static_assert(offsetof(UVALUI_DragDropOperation, bStartedDrag) == 0x0000A0, "Mem
 class UVALUI_Functor_Button_OnClicked final  : public UObject
 {
 public:
-	uint8                                         Pad_3514[0x48];                                    // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA1[0x48];                                    // 0x0028(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnClicked();
@@ -1611,14 +1611,14 @@ static_assert(alignof(UVALUI_Functor_Button_OnClicked) == 0x000008, "Wrong align
 static_assert(sizeof(UVALUI_Functor_Button_OnClicked) == 0x000070, "Wrong size on UVALUI_Functor_Button_OnClicked");
 
 // Class ValeriaUI.VALUI_DynamicExtensionBase
-// 0x0040 (0x0070 - 0x0030)
+// 0x0038 (0x0068 - 0x0030)
 class UVALUI_DynamicExtensionBase final  : public UPrimaryDataAsset
 {
 public:
 	class FName                                   TargetContainer;                                   // 0x0030(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   TargetWidget;                                      // 0x0038(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint32                                        Priority;                                          // 0x0068(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3515[0x4];                                     // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   TargetWidget;                                      // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint32                                        Priority;                                          // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CA2[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AttachedToWidget();
@@ -1634,10 +1634,10 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_DynamicExtensionBase) == 0x000008, "Wrong alignment on UVALUI_DynamicExtensionBase");
-static_assert(sizeof(UVALUI_DynamicExtensionBase) == 0x000070, "Wrong size on UVALUI_DynamicExtensionBase");
+static_assert(sizeof(UVALUI_DynamicExtensionBase) == 0x000068, "Wrong size on UVALUI_DynamicExtensionBase");
 static_assert(offsetof(UVALUI_DynamicExtensionBase, TargetContainer) == 0x000030, "Member 'UVALUI_DynamicExtensionBase::TargetContainer' has a wrong offset!");
 static_assert(offsetof(UVALUI_DynamicExtensionBase, TargetWidget) == 0x000038, "Member 'UVALUI_DynamicExtensionBase::TargetWidget' has a wrong offset!");
-static_assert(offsetof(UVALUI_DynamicExtensionBase, Priority) == 0x000068, "Member 'UVALUI_DynamicExtensionBase::Priority' has a wrong offset!");
+static_assert(offsetof(UVALUI_DynamicExtensionBase, Priority) == 0x000060, "Member 'UVALUI_DynamicExtensionBase::Priority' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EditableRichTextStyle
 // 0x0310 (0x0340 - 0x0030)
@@ -1647,7 +1647,7 @@ public:
 	class UDataTable*                             TextStyleSet;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class US6UI_EditableRichTextDecorator>> DecoratorClasses;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bOverrideDefaultStyle;                             // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3516[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA3[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEditableTextStyle                     DefaultTextStyleOverride;                          // 0x0050(0x02F0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
@@ -1695,11 +1695,11 @@ static_assert(sizeof(UVALUI_EditableTextBoxStyle) == 0x000EB0, "Wrong size on UV
 static_assert(offsetof(UVALUI_EditableTextBoxStyle, WidgetStyle) == 0x000030, "Member 'UVALUI_EditableTextBoxStyle::WidgetStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EditableTextBox_Styled
-// 0x0000 (0x1080 - 0x1080)
+// 0x0000 (0x10B0 - 0x10B0)
 class UVALUI_EditableTextBox_Styled final  : public UEditableTextBox
 {
 public:
-	class UVALUI_EditableTextBoxStyle*            Style;                                             // 0x1078(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_EditableTextBoxStyle*            Style;                                             // 0x10A8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetTextStyle(class UVALUI_EditableTextBoxStyle* NewStyle);
@@ -1715,8 +1715,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_EditableTextBox_Styled) == 0x000010, "Wrong alignment on UVALUI_EditableTextBox_Styled");
-static_assert(sizeof(UVALUI_EditableTextBox_Styled) == 0x001080, "Wrong size on UVALUI_EditableTextBox_Styled");
-static_assert(offsetof(UVALUI_EditableTextBox_Styled, Style) == 0x001078, "Member 'UVALUI_EditableTextBox_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_EditableTextBox_Styled) == 0x0010B0, "Wrong size on UVALUI_EditableTextBox_Styled");
+static_assert(offsetof(UVALUI_EditableTextBox_Styled, Style) == 0x0010A8, "Member 'UVALUI_EditableTextBox_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EditableTextStyle
 // 0x0630 (0x0660 - 0x0030)
@@ -1745,13 +1745,13 @@ static_assert(offsetof(UVALUI_EditableTextStyle, WidgetStyle) == 0x000030, "Memb
 static_assert(offsetof(UVALUI_EditableTextStyle, HintTextStyle) == 0x000320, "Member 'UVALUI_EditableTextStyle::HintTextStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EditableText_Styled
-// 0x0020 (0x0500 - 0x04E0)
+// 0x0020 (0x0530 - 0x0510)
 class UVALUI_EditableText_Styled final  : public UEditableText
 {
 public:
-	FMulticastInlineDelegateProperty_             OnCaretMovedDelegate;                              // 0x04E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UVALUI_EditableTextStyle*               Style;                                             // 0x04F0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3517[0x8];                                     // 0x04F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnCaretMovedDelegate;                              // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UVALUI_EditableTextStyle*               Style;                                             // 0x0520(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CA4[0x8];                                     // 0x0528(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void CaretGoTo(int32 LineIndex, int32 Offset);
@@ -1769,17 +1769,42 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_EditableText_Styled) == 0x000010, "Wrong alignment on UVALUI_EditableText_Styled");
-static_assert(sizeof(UVALUI_EditableText_Styled) == 0x000500, "Wrong size on UVALUI_EditableText_Styled");
-static_assert(offsetof(UVALUI_EditableText_Styled, OnCaretMovedDelegate) == 0x0004E0, "Member 'UVALUI_EditableText_Styled::OnCaretMovedDelegate' has a wrong offset!");
-static_assert(offsetof(UVALUI_EditableText_Styled, Style) == 0x0004F0, "Member 'UVALUI_EditableText_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_EditableText_Styled) == 0x000530, "Wrong size on UVALUI_EditableText_Styled");
+static_assert(offsetof(UVALUI_EditableText_Styled, OnCaretMovedDelegate) == 0x000510, "Member 'UVALUI_EditableText_Styled::OnCaretMovedDelegate' has a wrong offset!");
+static_assert(offsetof(UVALUI_EditableText_Styled, Style) == 0x000520, "Member 'UVALUI_EditableText_Styled::Style' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_LobbyScreenUserWidget
+// 0x0030 (0x0550 - 0x0520)
+class UVALUI_LobbyScreenUserWidget : public US6UI_InputActionHandlingUserWidget
+{
+public:
+	FMulticastInlineDelegateProperty_             EventUpdateSelectedCharacter;                      // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             EventOnPlayButtonClicked;                          // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             EventOnCancelLoginQueueButtonClicked;              // 0x0540(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_LobbyScreenUserWidget">();
+	}
+	static class UVALUI_LobbyScreenUserWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_LobbyScreenUserWidget>();
+	}
+};
+static_assert(alignof(UVALUI_LobbyScreenUserWidget) == 0x000008, "Wrong alignment on UVALUI_LobbyScreenUserWidget");
+static_assert(sizeof(UVALUI_LobbyScreenUserWidget) == 0x000550, "Wrong size on UVALUI_LobbyScreenUserWidget");
+static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventUpdateSelectedCharacter) == 0x000520, "Member 'UVALUI_LobbyScreenUserWidget::EventUpdateSelectedCharacter' has a wrong offset!");
+static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventOnPlayButtonClicked) == 0x000530, "Member 'UVALUI_LobbyScreenUserWidget::EventOnPlayButtonClicked' has a wrong offset!");
+static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventOnCancelLoginQueueButtonClicked) == 0x000540, "Member 'UVALUI_LobbyScreenUserWidget::EventOnCancelLoginQueueButtonClicked' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EmoteButton
-// 0x0018 (0x0290 - 0x0278)
+// 0x0018 (0x02D8 - 0x02C0)
 class UVALUI_EmoteButton : public UUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, BlueprintCallable, NativeAccessSpecifierProtected)
-	class UEmoteDataAsset*                        EmoteDataAsset;                                    // 0x0288(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, BlueprintCallable, NativeAccessSpecifierProtected)
+	class UEmoteDataAsset*                        EmoteDataAsset;                                    // 0x02D0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -1792,18 +1817,18 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_EmoteButton) == 0x000008, "Wrong alignment on UVALUI_EmoteButton");
-static_assert(sizeof(UVALUI_EmoteButton) == 0x000290, "Wrong size on UVALUI_EmoteButton");
-static_assert(offsetof(UVALUI_EmoteButton, OnButtonClicked) == 0x000278, "Member 'UVALUI_EmoteButton::OnButtonClicked' has a wrong offset!");
-static_assert(offsetof(UVALUI_EmoteButton, EmoteDataAsset) == 0x000288, "Member 'UVALUI_EmoteButton::EmoteDataAsset' has a wrong offset!");
+static_assert(sizeof(UVALUI_EmoteButton) == 0x0002D8, "Wrong size on UVALUI_EmoteButton");
+static_assert(offsetof(UVALUI_EmoteButton, OnButtonClicked) == 0x0002C0, "Member 'UVALUI_EmoteButton::OnButtonClicked' has a wrong offset!");
+static_assert(offsetof(UVALUI_EmoteButton, EmoteDataAsset) == 0x0002D0, "Member 'UVALUI_EmoteButton::EmoteDataAsset' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_EmoteButtonContainer
-// 0x0028 (0x02A0 - 0x0278)
+// 0x0028 (0x02E8 - 0x02C0)
 class UVALUI_EmoteButtonContainer : public UUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TSubclassOf<class UVALUI_EmoteButton>         EmoteButtonWidgetClass;                            // 0x0288(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftObjectPtr<class UEmoteDataAsset>> Emotes;                                            // 0x0290(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TSubclassOf<class UVALUI_EmoteButton>         EmoteButtonWidgetClass;                            // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSoftObjectPtr<class UEmoteDataAsset>> Emotes;                                            // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
 public:
 	void HandleAddButtonToContainer(class UVALUI_EmoteButton* Button);
@@ -1822,10 +1847,10 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_EmoteButtonContainer) == 0x000008, "Wrong alignment on UVALUI_EmoteButtonContainer");
-static_assert(sizeof(UVALUI_EmoteButtonContainer) == 0x0002A0, "Wrong size on UVALUI_EmoteButtonContainer");
-static_assert(offsetof(UVALUI_EmoteButtonContainer, OnButtonClicked) == 0x000278, "Member 'UVALUI_EmoteButtonContainer::OnButtonClicked' has a wrong offset!");
-static_assert(offsetof(UVALUI_EmoteButtonContainer, EmoteButtonWidgetClass) == 0x000288, "Member 'UVALUI_EmoteButtonContainer::EmoteButtonWidgetClass' has a wrong offset!");
-static_assert(offsetof(UVALUI_EmoteButtonContainer, Emotes) == 0x000290, "Member 'UVALUI_EmoteButtonContainer::Emotes' has a wrong offset!");
+static_assert(sizeof(UVALUI_EmoteButtonContainer) == 0x0002E8, "Wrong size on UVALUI_EmoteButtonContainer");
+static_assert(offsetof(UVALUI_EmoteButtonContainer, OnButtonClicked) == 0x0002C0, "Member 'UVALUI_EmoteButtonContainer::OnButtonClicked' has a wrong offset!");
+static_assert(offsetof(UVALUI_EmoteButtonContainer, EmoteButtonWidgetClass) == 0x0002D0, "Member 'UVALUI_EmoteButtonContainer::EmoteButtonWidgetClass' has a wrong offset!");
+static_assert(offsetof(UVALUI_EmoteButtonContainer, Emotes) == 0x0002D8, "Member 'UVALUI_EmoteButtonContainer::Emotes' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ErrorDisplayHandlerInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -1867,6 +1892,39 @@ public:
 static_assert(alignof(UVALUI_ErrorDisplayHandling) == 0x000008, "Wrong alignment on UVALUI_ErrorDisplayHandling");
 static_assert(sizeof(UVALUI_ErrorDisplayHandling) == 0x000028, "Wrong size on UVALUI_ErrorDisplayHandling");
 
+// Class ValeriaUI.VALUI_TextBlockStyle
+// 0x0160 (0x0190 - 0x0030)
+class UVALUI_TextBlockStyle final  : public UVALUI_WidgetStyleBase
+{
+public:
+	struct FSlateColor                            ColorAndOpacity;                                   // 0x0030(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CA6[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FSlateFontInfo                         Font;                                              // 0x0048(0x0058)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FSlateBrush                            StrikeBrush;                                       // 0x00A0(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	struct FVector2D                              ShadowOffset;                                      // 0x0170(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ShadowColorAndOpacity;                             // 0x0180(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void ApplyToTextBlock(class UTextBlock* TextWidget) const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_TextBlockStyle">();
+	}
+	static class UVALUI_TextBlockStyle* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_TextBlockStyle>();
+	}
+};
+static_assert(alignof(UVALUI_TextBlockStyle) == 0x000010, "Wrong alignment on UVALUI_TextBlockStyle");
+static_assert(sizeof(UVALUI_TextBlockStyle) == 0x000190, "Wrong size on UVALUI_TextBlockStyle");
+static_assert(offsetof(UVALUI_TextBlockStyle, ColorAndOpacity) == 0x000030, "Member 'UVALUI_TextBlockStyle::ColorAndOpacity' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlockStyle, Font) == 0x000048, "Member 'UVALUI_TextBlockStyle::Font' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlockStyle, StrikeBrush) == 0x0000A0, "Member 'UVALUI_TextBlockStyle::StrikeBrush' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlockStyle, ShadowOffset) == 0x000170, "Member 'UVALUI_TextBlockStyle::ShadowOffset' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlockStyle, ShadowColorAndOpacity) == 0x000180, "Member 'UVALUI_TextBlockStyle::ShadowColorAndOpacity' has a wrong offset!");
+
 // Class ValeriaUI.VALUI_ExpandableAreaStyle
 // 0x02D0 (0x0300 - 0x0030)
 class UVALUI_ExpandableAreaStyle final  : public UVALUI_WidgetStyleBase
@@ -1877,7 +1935,7 @@ public:
 	struct FSlateColor                            BorderColor;                                       // 0x02C0(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	struct FMargin                                HeaderPadding;                                     // 0x02D4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FMargin                                AreaPadding;                                       // 0x02E4(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3519[0xC];                                     // 0x02F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA7[0xC];                                     // 0x02F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Apply(class UExpandableArea* ExpandableArea) const;
@@ -1899,6 +1957,161 @@ static_assert(offsetof(UVALUI_ExpandableAreaStyle, BorderBrush) == 0x0001F0, "Me
 static_assert(offsetof(UVALUI_ExpandableAreaStyle, BorderColor) == 0x0002C0, "Member 'UVALUI_ExpandableAreaStyle::BorderColor' has a wrong offset!");
 static_assert(offsetof(UVALUI_ExpandableAreaStyle, HeaderPadding) == 0x0002D4, "Member 'UVALUI_ExpandableAreaStyle::HeaderPadding' has a wrong offset!");
 static_assert(offsetof(UVALUI_ExpandableAreaStyle, AreaPadding) == 0x0002E4, "Member 'UVALUI_ExpandableAreaStyle::AreaPadding' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_ExpandableArea_Styled
+// 0x0010 (0x04A0 - 0x0490)
+class UVALUI_ExpandableArea_Styled final  : public UExpandableArea
+{
+public:
+	class UVALUI_ExpandableAreaStyle*             ExpandableAreaStyle;                               // 0x0490(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CA8[0x8];                                     // 0x0498(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetExpandableAreaStyle(class UVALUI_ExpandableAreaStyle* NewStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_ExpandableArea_Styled">();
+	}
+	static class UVALUI_ExpandableArea_Styled* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_ExpandableArea_Styled>();
+	}
+};
+static_assert(alignof(UVALUI_ExpandableArea_Styled) == 0x000010, "Wrong alignment on UVALUI_ExpandableArea_Styled");
+static_assert(sizeof(UVALUI_ExpandableArea_Styled) == 0x0004A0, "Wrong size on UVALUI_ExpandableArea_Styled");
+static_assert(offsetof(UVALUI_ExpandableArea_Styled, ExpandableAreaStyle) == 0x000490, "Member 'UVALUI_ExpandableArea_Styled::ExpandableAreaStyle' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_Slider_Styled
+// 0x0010 (0x0740 - 0x0730)
+class UVALUI_Slider_Styled final  : public USlider
+{
+public:
+	class UVALUI_SliderStyle*                     Style;                                             // 0x0730(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CA9[0x8];                                     // 0x0738(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void SetSliderStyle(class UVALUI_SliderStyle* NewStyle);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_Slider_Styled">();
+	}
+	static class UVALUI_Slider_Styled* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_Slider_Styled>();
+	}
+};
+static_assert(alignof(UVALUI_Slider_Styled) == 0x000010, "Wrong alignment on UVALUI_Slider_Styled");
+static_assert(sizeof(UVALUI_Slider_Styled) == 0x000740, "Wrong size on UVALUI_Slider_Styled");
+static_assert(offsetof(UVALUI_Slider_Styled, Style) == 0x000730, "Member 'UVALUI_Slider_Styled::Style' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_ExtensionPointContainerBase
+// 0x0008 (0x02C8 - 0x02C0)
+class UVALUI_ExtensionPointContainerBase final  : public UUserWidget
+{
+public:
+	class FName                                   Identifier;                                        // 0x02C0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+public:
+	void AddExtensibleWidget(TSoftClassPtr<class UClass>& WidgetReference);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_ExtensionPointContainerBase">();
+	}
+	static class UVALUI_ExtensionPointContainerBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_ExtensionPointContainerBase>();
+	}
+};
+static_assert(alignof(UVALUI_ExtensionPointContainerBase) == 0x000008, "Wrong alignment on UVALUI_ExtensionPointContainerBase");
+static_assert(sizeof(UVALUI_ExtensionPointContainerBase) == 0x0002C8, "Wrong size on UVALUI_ExtensionPointContainerBase");
+static_assert(offsetof(UVALUI_ExtensionPointContainerBase, Identifier) == 0x0002C0, "Member 'UVALUI_ExtensionPointContainerBase::Identifier' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_GameInteractPopupSubsystem
+// 0x0020 (0x0050 - 0x0030)
+class alignas(0x10) UVALUI_GameInteractPopupSubsystem final  : public ULocalPlayerSubsystem
+{
+public:
+	uint8                                         Pad_2CAA[0x10];                                    // 0x0030(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGameplayInteractivePopupDataAsset*     ActivePopup;                                       // 0x0040(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CAB[0x8];                                     // 0x0048(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void AddPopupToQueue(TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset);
+	void OnHandlePopupClosed(class UGameplayInteractivePopupDataAsset* GpPopupAsset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_GameInteractPopupSubsystem">();
+	}
+	static class UVALUI_GameInteractPopupSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_GameInteractPopupSubsystem>();
+	}
+};
+static_assert(alignof(UVALUI_GameInteractPopupSubsystem) == 0x000010, "Wrong alignment on UVALUI_GameInteractPopupSubsystem");
+static_assert(sizeof(UVALUI_GameInteractPopupSubsystem) == 0x000050, "Wrong size on UVALUI_GameInteractPopupSubsystem");
+static_assert(offsetof(UVALUI_GameInteractPopupSubsystem, ActivePopup) == 0x000040, "Member 'UVALUI_GameInteractPopupSubsystem::ActivePopup' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_GpInteractivePopupBase
+// 0x0028 (0x0538 - 0x0510)
+class UVALUI_GpInteractivePopupBase : public UCommonActivatableWidgetInputExtended
+{
+public:
+	FMulticastInlineDelegateProperty_             OnPopupClosed;                                     // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UGameplayInteractivePopupDataAsset*     InteractivePopupDataAsset;                         // 0x0520(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UVAL_GameplayConditionDef*              GameplayCondition;                                 // 0x0528(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class AValeriaCharacter*                      ValeriaCharacter;                                  // 0x0530(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	void CheckGameplayCondition();
+	void ClosePopupWidget();
+	void SetInteractivePopupDataAsset(class UGameplayInteractivePopupDataAsset* InteractivePopupAsset);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_GpInteractivePopupBase">();
+	}
+	static class UVALUI_GpInteractivePopupBase* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_GpInteractivePopupBase>();
+	}
+};
+static_assert(alignof(UVALUI_GpInteractivePopupBase) == 0x000008, "Wrong alignment on UVALUI_GpInteractivePopupBase");
+static_assert(sizeof(UVALUI_GpInteractivePopupBase) == 0x000538, "Wrong size on UVALUI_GpInteractivePopupBase");
+static_assert(offsetof(UVALUI_GpInteractivePopupBase, OnPopupClosed) == 0x000510, "Member 'UVALUI_GpInteractivePopupBase::OnPopupClosed' has a wrong offset!");
+static_assert(offsetof(UVALUI_GpInteractivePopupBase, InteractivePopupDataAsset) == 0x000520, "Member 'UVALUI_GpInteractivePopupBase::InteractivePopupDataAsset' has a wrong offset!");
+static_assert(offsetof(UVALUI_GpInteractivePopupBase, GameplayCondition) == 0x000528, "Member 'UVALUI_GpInteractivePopupBase::GameplayCondition' has a wrong offset!");
+static_assert(offsetof(UVALUI_GpInteractivePopupBase, ValeriaCharacter) == 0x000530, "Member 'UVALUI_GpInteractivePopupBase::ValeriaCharacter' has a wrong offset!");
+
+// Class ValeriaUI.VALUI_HotPotTurnTimer
+// 0x0000 (0x02E8 - 0x02E8)
+class UVALUI_HotPotTurnTimer final  : public UCommonUserWidget
+{
+public:
+	void BP_DisableTimer();
+	void BP_StartTimer(float SecondsLeft, EHotPotTurnState TurnState);
+	void BP_UpdatePlayerID(struct FGuid& PlayerId, struct FGuid& CharacterId);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VALUI_HotPotTurnTimer">();
+	}
+	static class UVALUI_HotPotTurnTimer* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVALUI_HotPotTurnTimer>();
+	}
+};
+static_assert(alignof(UVALUI_HotPotTurnTimer) == 0x000008, "Wrong alignment on UVALUI_HotPotTurnTimer");
+static_assert(sizeof(UVALUI_HotPotTurnTimer) == 0x0002E8, "Wrong size on UVALUI_HotPotTurnTimer");
 
 // Class ValeriaUI.VALUI_ImageStyle
 // 0x0280 (0x02B0 - 0x0030)
@@ -1931,16 +2144,16 @@ static_assert(offsetof(UVALUI_ImageStyle, Brush_Dark) == 0x0001D0, "Member 'UVAL
 static_assert(offsetof(UVALUI_ImageStyle, BrushColor) == 0x0002A0, "Member 'UVALUI_ImageStyle::BrushColor' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_Image_Styled
-// 0x0070 (0x0320 - 0x02B0)
+// 0x0070 (0x0350 - 0x02E0)
 class UVALUI_Image_Styled final  : public UImage
 {
 public:
-	bool                                          bSupportCrossPlatform;                             // 0x02A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowHUDOpacitySettings;                          // 0x02A9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_351A[0x6];                                     // 0x02AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_ImageStyle*                      Style;                                             // 0x02B0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_ImageStyle>> CrossPlatformStyles;                               // 0x02B8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_351B[0x18];                                    // 0x0308(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportCrossPlatform;                             // 0x02D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowHUDOpacitySettings;                          // 0x02D9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CAD[0x6];                                     // 0x02DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_ImageStyle*                      Style;                                             // 0x02E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_ImageStyle>> CrossPlatformStyles;                               // 0x02E8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CAE[0x18];                                    // 0x0338(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnAccessbilitySettingsChanged(struct FValeriaAccessibilitySettings& AccessbilitySettings);
@@ -1958,11 +2171,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_Image_Styled) == 0x000010, "Wrong alignment on UVALUI_Image_Styled");
-static_assert(sizeof(UVALUI_Image_Styled) == 0x000320, "Wrong size on UVALUI_Image_Styled");
-static_assert(offsetof(UVALUI_Image_Styled, bSupportCrossPlatform) == 0x0002A8, "Member 'UVALUI_Image_Styled::bSupportCrossPlatform' has a wrong offset!");
-static_assert(offsetof(UVALUI_Image_Styled, bAllowHUDOpacitySettings) == 0x0002A9, "Member 'UVALUI_Image_Styled::bAllowHUDOpacitySettings' has a wrong offset!");
-static_assert(offsetof(UVALUI_Image_Styled, Style) == 0x0002B0, "Member 'UVALUI_Image_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_Image_Styled, CrossPlatformStyles) == 0x0002B8, "Member 'UVALUI_Image_Styled::CrossPlatformStyles' has a wrong offset!");
+static_assert(sizeof(UVALUI_Image_Styled) == 0x000350, "Wrong size on UVALUI_Image_Styled");
+static_assert(offsetof(UVALUI_Image_Styled, bSupportCrossPlatform) == 0x0002D8, "Member 'UVALUI_Image_Styled::bSupportCrossPlatform' has a wrong offset!");
+static_assert(offsetof(UVALUI_Image_Styled, bAllowHUDOpacitySettings) == 0x0002D9, "Member 'UVALUI_Image_Styled::bAllowHUDOpacitySettings' has a wrong offset!");
+static_assert(offsetof(UVALUI_Image_Styled, Style) == 0x0002E0, "Member 'UVALUI_Image_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_Image_Styled, CrossPlatformStyles) == 0x0002E8, "Member 'UVALUI_Image_Styled::CrossPlatformStyles' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_InputValidationFunctionLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -2008,12 +2221,12 @@ static_assert(alignof(IVALUI_ItemAcquisitionNotificationInterface) == 0x000008, 
 static_assert(sizeof(IVALUI_ItemAcquisitionNotificationInterface) == 0x000028, "Wrong size on IVALUI_ItemAcquisitionNotificationInterface");
 
 // Class ValeriaUI.VALUI_ItemAcquisitionNotifier
-// 0x00E0 (0x0108 - 0x0028)
+// 0x00D8 (0x0100 - 0x0028)
 class UVALUI_ItemAcquisitionNotifier final  : public UObject
 {
 public:
-	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0028(0x0030)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_351D[0xB0];                                    // 0x0058(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0028(0x0028)(UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CB0[0xB0];                                    // 0x0050(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandleItemAcquired(const struct FValeriaItem& Item);
@@ -2032,7 +2245,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ItemAcquisitionNotifier) == 0x000008, "Wrong alignment on UVALUI_ItemAcquisitionNotifier");
-static_assert(sizeof(UVALUI_ItemAcquisitionNotifier) == 0x000108, "Wrong size on UVALUI_ItemAcquisitionNotifier");
+static_assert(sizeof(UVALUI_ItemAcquisitionNotifier) == 0x000100, "Wrong size on UVALUI_ItemAcquisitionNotifier");
 static_assert(offsetof(UVALUI_ItemAcquisitionNotifier, WidgetClass) == 0x000028, "Member 'UVALUI_ItemAcquisitionNotifier::WidgetClass' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ItemDragDrop
@@ -2041,7 +2254,7 @@ class UVALUI_ItemDragDrop : public UVALUI_DragDropOperation
 {
 public:
 	bool                                          WasShiftDown;                                      // 0x00A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_351E[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB1[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FValeriaItem GetItem() const;
@@ -2073,7 +2286,7 @@ public:
 	struct FSlateBrush                            Brush_Disabled;                                    // 0x0440(0x00D0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	bool                                          bRaiseOnHover;                                     // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPlayAnimOnHover;                                  // 0x0511(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_351F[0xE];                                     // 0x0512(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB2[0xE];                                     // 0x0512(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2104,7 +2317,7 @@ public:
 	EItemEmptyDisplayType                         EmptyDisplayType;                                  // 0x0030(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EItemAmountDisplayType                        AmountDisplayType;                                 // 0x0031(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseCustomAmountDisplayColor;                      // 0x0032(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3520[0x1];                                     // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB3[0x1];                                     // 0x0033(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateColor                            AmountDisplayColor;                                // 0x0034(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	bool                                          bCanShowDurability;                                // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanShowCapacity;                                  // 0x0049(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2112,7 +2325,7 @@ public:
 	bool                                          bCanShowQuestIcon;                                 // 0x004B(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCanShowAmmo;                                      // 0x004C(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowTooltipOnHover;                               // 0x004D(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3521[0x2];                                     // 0x004E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB4[0x2];                                     // 0x004E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2144,11 +2357,11 @@ class UVALUI_ListViewStyle final  : public UVALUI_WidgetStyleBase
 public:
 	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0030(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 	ESlateVisibility                              ScrollBarVisibility;                               // 0x07A0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3522[0x7];                                     // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB5[0x7];                                     // 0x07A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ScrollbarThickness;                                // 0x07A8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMargin                                ScrollbarPadding;                                  // 0x07B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bScrollBarAlwaysVisible;                           // 0x07C8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3523[0x3];                                     // 0x07C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB6[0x3];                                     // 0x07C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumberOfItemsToMakeScrollBarVisible;               // 0x07CC(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
@@ -2170,58 +2383,8 @@ static_assert(offsetof(UVALUI_ListViewStyle, ScrollbarPadding) == 0x0007B8, "Mem
 static_assert(offsetof(UVALUI_ListViewStyle, bScrollBarAlwaysVisible) == 0x0007C8, "Member 'UVALUI_ListViewStyle::bScrollBarAlwaysVisible' has a wrong offset!");
 static_assert(offsetof(UVALUI_ListViewStyle, NumberOfItemsToMakeScrollBarVisible) == 0x0007CC, "Member 'UVALUI_ListViewStyle::NumberOfItemsToMakeScrollBarVisible' has a wrong offset!");
 
-// Class ValeriaUI.VALUI_ListView_Styled
-// 0x0070 (0x0C90 - 0x0C20)
-#pragma pack(push, 0x1)
-class alignas(0x10) UVALUI_ListView_Styled : public UListView
-{
-public:
-	uint8                                         Pad_3524[0x8];                                     // 0x0C20(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_ListViewStyle*                   Style;                                             // 0x0C28(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHandleDirectionalNavigation;                      // 0x0C30(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bProvideInputType;                                 // 0x0C31(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3525[0x6];                                     // 0x0C32(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnUserScrolled;                                    // 0x0C38(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnUserMouseWheelScrolled;                          // 0x0C48(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnListItemsChanged;                                // 0x0C58(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3526[0x10];                                    // 0x0C68(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             BP_OnListItemSelectionChangedWithInputType;        // 0x0C78(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
-
-public:
-	void OnListItemsChanged__DelegateSignature(TArray<class UObject*>& AddedItems, TArray<class UObject*>& RemovedItems);
-	void OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature(class UObject* Item, bool bIsSelected, ESelectInfo SelectType);
-	void ResetPoolAndSetListItems(TArray<class UObject*>& InListItems);
-	void SetEntryWidgetClass(TSubclassOf<class UUserWidget> NewWidgetClass);
-	void VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature(float DesiredOffset);
-	void VALUI_OnListViewUserScrolled__DelegateSignature(float ScrollFraction);
-
-	TArray<class UObject*> GetItemsWithinRange(int32& StartingIndex, int32& Range) const;
-	float GetScrollbarDistanceFromBottom() const;
-	bool ShouldScrollBarBeVisible() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_ListView_Styled">();
-	}
-	static class UVALUI_ListView_Styled* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_ListView_Styled>();
-	}
-};
-#pragma pack(pop)
-static_assert(alignof(UVALUI_ListView_Styled) == 0x000010, "Wrong alignment on UVALUI_ListView_Styled");
-static_assert(sizeof(UVALUI_ListView_Styled) == 0x000C90, "Wrong size on UVALUI_ListView_Styled");
-static_assert(offsetof(UVALUI_ListView_Styled, Style) == 0x000C28, "Member 'UVALUI_ListView_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, bHandleDirectionalNavigation) == 0x000C30, "Member 'UVALUI_ListView_Styled::bHandleDirectionalNavigation' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, bProvideInputType) == 0x000C31, "Member 'UVALUI_ListView_Styled::bProvideInputType' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, OnUserScrolled) == 0x000C38, "Member 'UVALUI_ListView_Styled::OnUserScrolled' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, OnUserMouseWheelScrolled) == 0x000C48, "Member 'UVALUI_ListView_Styled::OnUserMouseWheelScrolled' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, OnListItemsChanged) == 0x000C58, "Member 'UVALUI_ListView_Styled::OnListItemsChanged' has a wrong offset!");
-static_assert(offsetof(UVALUI_ListView_Styled, BP_OnListItemSelectionChangedWithInputType) == 0x000C78, "Member 'UVALUI_ListView_Styled::BP_OnListItemSelectionChangedWithInputType' has a wrong offset!");
-
 // Class ValeriaUI.VALUI_LoadingScreenBlackWidget
-// 0x0000 (0x0278 - 0x0278)
+// 0x0000 (0x02C0 - 0x02C0)
 class UVALUI_LoadingScreenBlackWidget final  : public UUserWidget
 {
 public:
@@ -2241,7 +2404,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_LoadingScreenBlackWidget) == 0x000008, "Wrong alignment on UVALUI_LoadingScreenBlackWidget");
-static_assert(sizeof(UVALUI_LoadingScreenBlackWidget) == 0x000278, "Wrong size on UVALUI_LoadingScreenBlackWidget");
+static_assert(sizeof(UVALUI_LoadingScreenBlackWidget) == 0x0002C0, "Wrong size on UVALUI_LoadingScreenBlackWidget");
 
 // Class ValeriaUI.VALUI_MainHUDViewModel
 // 0x0020 (0x0098 - 0x0078)
@@ -2271,7 +2434,7 @@ static_assert(offsetof(UVALUI_MainHUDViewModel, HUDState) == 0x000078, "Member '
 static_assert(offsetof(UVALUI_MainHUDViewModel, SocialTrackingData) == 0x000084, "Member 'UVALUI_MainHUDViewModel::SocialTrackingData' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_MainHUDWidget
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x0558 - 0x0558)
 class UVALUI_MainHUDWidget : public US6UI_StateUserWidget
 {
 public:
@@ -2291,7 +2454,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_MainHUDWidget) == 0x000008, "Wrong alignment on UVALUI_MainHUDWidget");
-static_assert(sizeof(UVALUI_MainHUDWidget) == 0x000528, "Wrong size on UVALUI_MainHUDWidget");
+static_assert(sizeof(UVALUI_MainHUDWidget) == 0x000558, "Wrong size on UVALUI_MainHUDWidget");
 
 // Class ValeriaUI.VALUI_MultiLineEditableTextBoxStyle
 // 0x11C0 (0x11F0 - 0x0030)
@@ -2320,12 +2483,12 @@ static_assert(offsetof(UVALUI_MultiLineEditableTextBoxStyle, WidgetStyle) == 0x0
 static_assert(offsetof(UVALUI_MultiLineEditableTextBoxStyle, TextStyle) == 0x000EB0, "Member 'UVALUI_MultiLineEditableTextBoxStyle::TextStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_MultiLineEditableTextBox_Styled
-// 0x0010 (0x1080 - 0x1070)
+// 0x0010 (0x10B0 - 0x10A0)
 class UVALUI_MultiLineEditableTextBox_Styled final  : public UMultiLineEditableTextBox
 {
 public:
-	class UVALUI_MultiLineEditableTextBoxStyle*   Style;                                             // 0x1070(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3528[0x8];                                     // 0x1078(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_MultiLineEditableTextBoxStyle*   Style;                                             // 0x10A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CB7[0x8];                                     // 0x10A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetTextBoxStyle(class UVALUI_MultiLineEditableTextBoxStyle* NewStyle);
@@ -2341,8 +2504,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_MultiLineEditableTextBox_Styled) == 0x000010, "Wrong alignment on UVALUI_MultiLineEditableTextBox_Styled");
-static_assert(sizeof(UVALUI_MultiLineEditableTextBox_Styled) == 0x001080, "Wrong size on UVALUI_MultiLineEditableTextBox_Styled");
-static_assert(offsetof(UVALUI_MultiLineEditableTextBox_Styled, Style) == 0x001070, "Member 'UVALUI_MultiLineEditableTextBox_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_MultiLineEditableTextBox_Styled) == 0x0010B0, "Wrong size on UVALUI_MultiLineEditableTextBox_Styled");
+static_assert(offsetof(UVALUI_MultiLineEditableTextBox_Styled, Style) == 0x0010A0, "Member 'UVALUI_MultiLineEditableTextBox_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_MultiLineEditableTextStyle
 // 0x0340 (0x0370 - 0x0030)
@@ -2369,11 +2532,11 @@ static_assert(sizeof(UVALUI_MultiLineEditableTextStyle) == 0x000370, "Wrong size
 static_assert(offsetof(UVALUI_MultiLineEditableTextStyle, WidgetStyle) == 0x000030, "Member 'UVALUI_MultiLineEditableTextStyle::WidgetStyle' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_MultiLineEditableText_Styled
-// 0x0000 (0x0540 - 0x0540)
+// 0x0000 (0x0570 - 0x0570)
 class UVALUI_MultiLineEditableText_Styled final  : public UMultiLineEditableText
 {
 public:
-	class UVALUI_MultiLineEditableTextStyle*      Style;                                             // 0x0538(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_MultiLineEditableTextStyle*      Style;                                             // 0x0568(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetTextStyle(class UVALUI_MultiLineEditableTextStyle* NewStyle);
@@ -2389,8 +2552,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_MultiLineEditableText_Styled) == 0x000010, "Wrong alignment on UVALUI_MultiLineEditableText_Styled");
-static_assert(sizeof(UVALUI_MultiLineEditableText_Styled) == 0x000540, "Wrong size on UVALUI_MultiLineEditableText_Styled");
-static_assert(offsetof(UVALUI_MultiLineEditableText_Styled, Style) == 0x000538, "Member 'UVALUI_MultiLineEditableText_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_MultiLineEditableText_Styled) == 0x000570, "Wrong size on UVALUI_MultiLineEditableText_Styled");
+static_assert(offsetof(UVALUI_MultiLineEditableText_Styled, Style) == 0x000568, "Member 'UVALUI_MultiLineEditableText_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_NewsInboxMessageDataAsset
 // 0x0048 (0x0078 - 0x0030)
@@ -2399,7 +2562,7 @@ class UVALUI_NewsInboxMessageDataAsset final  : public UDataAsset
 public:
 	struct FGuid                                  Guid;                                              // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVAL_NewsInboxMessageType                     MessageType;                                       // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3529[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CB8[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Subject;                                           // 0x0048(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   Body;                                              // 0x0060(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance, NativeAccessSpecifierPublic)
 
@@ -2421,15 +2584,15 @@ static_assert(offsetof(UVALUI_NewsInboxMessageDataAsset, Subject) == 0x000048, "
 static_assert(offsetof(UVALUI_NewsInboxMessageDataAsset, Body) == 0x000060, "Member 'UVALUI_NewsInboxMessageDataAsset::Body' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_NewsInbox_Widget
-// 0x0030 (0x0558 - 0x0528)
+// 0x0030 (0x0588 - 0x0558)
 class UVALUI_NewsInbox_Widget final  : public UVALUI_ModalWidgetBase
 {
 public:
-	bool                                          MessageDefsLoaded;                                 // 0x0528(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_352A[0x7];                                     // 0x0529(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVAL_NewsInboxComponent*                CurrentNewsInbox;                                  // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UVALUI_NewsInboxMessageDataAsset*> NewsInboxMessageDefinitions;                       // 0x0538(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_352B[0x10];                                    // 0x0548(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          MessageDefsLoaded;                                 // 0x0558(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CB9[0x7];                                     // 0x0559(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_NewsInboxComponent*                CurrentNewsInbox;                                  // 0x0560(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UVALUI_NewsInboxMessageDataAsset*> NewsInboxMessageDefinitions;                       // 0x0568(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2CBA[0x10];                                    // 0x0578(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BP_OnLoadSuccess();
@@ -2454,10 +2617,10 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_NewsInbox_Widget) == 0x000008, "Wrong alignment on UVALUI_NewsInbox_Widget");
-static_assert(sizeof(UVALUI_NewsInbox_Widget) == 0x000558, "Wrong size on UVALUI_NewsInbox_Widget");
-static_assert(offsetof(UVALUI_NewsInbox_Widget, MessageDefsLoaded) == 0x000528, "Member 'UVALUI_NewsInbox_Widget::MessageDefsLoaded' has a wrong offset!");
-static_assert(offsetof(UVALUI_NewsInbox_Widget, CurrentNewsInbox) == 0x000530, "Member 'UVALUI_NewsInbox_Widget::CurrentNewsInbox' has a wrong offset!");
-static_assert(offsetof(UVALUI_NewsInbox_Widget, NewsInboxMessageDefinitions) == 0x000538, "Member 'UVALUI_NewsInbox_Widget::NewsInboxMessageDefinitions' has a wrong offset!");
+static_assert(sizeof(UVALUI_NewsInbox_Widget) == 0x000588, "Wrong size on UVALUI_NewsInbox_Widget");
+static_assert(offsetof(UVALUI_NewsInbox_Widget, MessageDefsLoaded) == 0x000558, "Member 'UVALUI_NewsInbox_Widget::MessageDefsLoaded' has a wrong offset!");
+static_assert(offsetof(UVALUI_NewsInbox_Widget, CurrentNewsInbox) == 0x000560, "Member 'UVALUI_NewsInbox_Widget::CurrentNewsInbox' has a wrong offset!");
+static_assert(offsetof(UVALUI_NewsInbox_Widget, NewsInboxMessageDefinitions) == 0x000568, "Member 'UVALUI_NewsInbox_Widget::NewsInboxMessageDefinitions' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_NotificationFactory
 // 0x0000 (0x0028 - 0x0028)
@@ -2507,7 +2670,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnNotificationDismissed;                           // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<struct FVALUI_NotificationQueueEntry>  Entries;                                           // 0x0048(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TArray<struct FVALUI_NotificationQueueEntry>  PendingEntries;                                    // 0x0058(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_352F[0x8];                                     // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CBE[0x8];                                     // 0x0068(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnNotificationDismissed__DelegateSignature(class UVALUI_NotificationQueue* NotificationQueue, struct FGuid& AffectedNotificationId, class UWidget* NotificationWidget);
@@ -2546,7 +2709,7 @@ class UVALUI_PaliaPassHUDViewModel final  : public US6UI_StateViewModel
 {
 public:
 	struct FVALUI_PaliaPassHUDState               HUDState;                                          // 0x0078(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3532[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC1[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -2563,7 +2726,7 @@ static_assert(sizeof(UVALUI_PaliaPassHUDViewModel) == 0x000080, "Wrong size on U
 static_assert(offsetof(UVALUI_PaliaPassHUDViewModel, HUDState) == 0x000078, "Member 'UVALUI_PaliaPassHUDViewModel::HUDState' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PaliaPassHUDWidget
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x0558 - 0x0558)
 class UVALUI_PaliaPassHUDWidget final  : public US6UI_StateUserWidget
 {
 public:
@@ -2582,40 +2745,14 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PaliaPassHUDWidget) == 0x000008, "Wrong alignment on UVALUI_PaliaPassHUDWidget");
-static_assert(sizeof(UVALUI_PaliaPassHUDWidget) == 0x000528, "Wrong size on UVALUI_PaliaPassHUDWidget");
-
-// Class ValeriaUI.VALUI_PhotoCameraScreenBase
-// 0x0030 (0x0558 - 0x0528)
-class UVALUI_PhotoCameraScreenBase : public US6UI_StateUserWidget
-{
-public:
-	EVALUI_PhotoCameraScreenLookMode              LookMode;                                          // 0x0528(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3533[0x2F];                                    // 0x0529(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void AccumulateLookModeInput(struct FGeometry& InGeometry, struct FPointerEvent& InMouseEvent, bool bInvertYAxis);
-	void SetLookMode(EVALUI_PhotoCameraScreenLookMode Value);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_PhotoCameraScreenBase">();
-	}
-	static class UVALUI_PhotoCameraScreenBase* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_PhotoCameraScreenBase>();
-	}
-};
-static_assert(alignof(UVALUI_PhotoCameraScreenBase) == 0x000008, "Wrong alignment on UVALUI_PhotoCameraScreenBase");
-static_assert(sizeof(UVALUI_PhotoCameraScreenBase) == 0x000558, "Wrong size on UVALUI_PhotoCameraScreenBase");
-static_assert(offsetof(UVALUI_PhotoCameraScreenBase, LookMode) == 0x000528, "Member 'UVALUI_PhotoCameraScreenBase::LookMode' has a wrong offset!");
+static_assert(sizeof(UVALUI_PaliaPassHUDWidget) == 0x000558, "Wrong size on UVALUI_PaliaPassHUDWidget");
 
 // Class ValeriaUI.VALUI_PlayerSupport
-// 0x0008 (0x0530 - 0x0528)
+// 0x0008 (0x0560 - 0x0558)
 class UVALUI_PlayerSupport : public UVALUI_ModalWidgetBase
 {
 public:
-	class UVAL_PlayerSupport*                     PlayerSupport;                                     // 0x0528(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UVAL_PlayerSupport*                     PlayerSupport;                                     // 0x0558(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void DrawToCanvas(class UCanvas* Canvas, const struct FVector2D& ImageDimensions, const TArray<uint8>& QrData, int32 Size);
@@ -2635,25 +2772,24 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PlayerSupport) == 0x000008, "Wrong alignment on UVALUI_PlayerSupport");
-static_assert(sizeof(UVALUI_PlayerSupport) == 0x000530, "Wrong size on UVALUI_PlayerSupport");
-static_assert(offsetof(UVALUI_PlayerSupport, PlayerSupport) == 0x000528, "Member 'UVALUI_PlayerSupport::PlayerSupport' has a wrong offset!");
+static_assert(sizeof(UVALUI_PlayerSupport) == 0x000560, "Wrong size on UVALUI_PlayerSupport");
+static_assert(offsetof(UVALUI_PlayerSupport, PlayerSupport) == 0x000558, "Member 'UVALUI_PlayerSupport::PlayerSupport' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_UIManagerWidgetBase
-// 0x00C8 (0x0680 - 0x05B8)
+// 0x00C8 (0x06A0 - 0x05D8)
 class UVALUI_UIManagerWidgetBase : public US6UI_UIManagerWidgetBase
 {
 public:
-	uint8                                         Pad_3537[0x8];                                     // 0x05B8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnItemDragDrop;                                    // 0x05C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             InventoryVisibilityToggled;                        // 0x05D0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3538[0xA0];                                    // 0x05E0(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC4[0x8];                                     // 0x05D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnItemDragDrop;                                    // 0x05E0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             InventoryVisibilityToggled;                        // 0x05F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CC5[0xA0];                                    // 0x0600(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetStoredCrafterUIState(class FName& CrafterName, struct FCrafterUIState* OutCrafterUIState);
 	void Implementation_CloseMenuHub();
 	void Implementation_CloseSubgameScreen();
 	bool Implementation_HasAnyHousingPlotsTeleportOptions(class AVAL_TeleporterBase* Teleporter);
-	void Implementation_NavigateToCharacterCustomization(struct FVAL_CharacterCustomizationModeConfig& Config);
 	void Implementation_NavigateToOnlinePhotoAlbum(struct FGuid& IdOfPhotoToNavigateTo, bool bShouldSelectPhoto);
 	void Implementation_NavigateToRecentPhotos(struct FGuid& IdOfPhotoToNavigateTo, bool bShouldSelectPhoto);
 	void Implementation_OpenAmmoMenu(EAmmoType AmmoType);
@@ -2684,6 +2820,7 @@ public:
 	void Implementation_OpenStables(class AActor* StablesActor);
 	void Implementation_OpenStore(class UVillagerStoreConfig* StoreConfig);
 	void Implementation_OpenSubgameScreen(class USubgameConfig* InSubgameConfig);
+	void Implementation_OpenTourBoard();
 	void Implementation_OpenVillagerStore(int32 VillagerConfigId);
 	void Implementation_OpenWishView(TArray<struct FWishTreeEntry>& Wishes, class UVillagerWishDataAsset* VillagerWishOverride);
 	void Implementation_ToggleCollectionsMenu(EVAL_CollectionsTabState& TabState);
@@ -2708,32 +2845,32 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_UIManagerWidgetBase) == 0x000008, "Wrong alignment on UVALUI_UIManagerWidgetBase");
-static_assert(sizeof(UVALUI_UIManagerWidgetBase) == 0x000680, "Wrong size on UVALUI_UIManagerWidgetBase");
-static_assert(offsetof(UVALUI_UIManagerWidgetBase, OnItemDragDrop) == 0x0005C0, "Member 'UVALUI_UIManagerWidgetBase::OnItemDragDrop' has a wrong offset!");
-static_assert(offsetof(UVALUI_UIManagerWidgetBase, InventoryVisibilityToggled) == 0x0005D0, "Member 'UVALUI_UIManagerWidgetBase::InventoryVisibilityToggled' has a wrong offset!");
+static_assert(sizeof(UVALUI_UIManagerWidgetBase) == 0x0006A0, "Wrong size on UVALUI_UIManagerWidgetBase");
+static_assert(offsetof(UVALUI_UIManagerWidgetBase, OnItemDragDrop) == 0x0005E0, "Member 'UVALUI_UIManagerWidgetBase::OnItemDragDrop' has a wrong offset!");
+static_assert(offsetof(UVALUI_UIManagerWidgetBase, InventoryVisibilityToggled) == 0x0005F0, "Member 'UVALUI_UIManagerWidgetBase::InventoryVisibilityToggled' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PregameUIManager
-// 0x00F8 (0x0778 - 0x0680)
+// 0x00F8 (0x0798 - 0x06A0)
 class UVALUI_PregameUIManager : public UVALUI_UIManagerWidgetBase
 {
 public:
-	uint8                                         Pad_3540[0x68];                                    // 0x0680(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnPregameStateChange;                              // 0x06E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnLobbyStateChange;                                // 0x06F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	class AVAL_CharacterRenderStudio*             RenderStudio;                                      // 0x0708(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 AnnouncementURL;                                   // 0x0710(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 Announcement;                                      // 0x0720(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FDateTime                              AnnouncementTimestamp;                             // 0x0730(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 ServerStatusURL;                                   // 0x0738(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 ServerStatus;                                      // 0x0748(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bEnableAutoLogin;                                  // 0x0758(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3541[0x1F];                                    // 0x0759(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCD[0x68];                                    // 0x06A0(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnPregameStateChange;                              // 0x0708(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnLobbyStateChange;                                // 0x0718(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	class AVAL_CharacterRenderStudio*             RenderStudio;                                      // 0x0728(0x0008)(BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 AnnouncementURL;                                   // 0x0730(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 Announcement;                                      // 0x0740(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FDateTime                              AnnouncementTimestamp;                             // 0x0750(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 ServerStatusURL;                                   // 0x0758(0x0010)(Edit, BlueprintVisible, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 ServerStatus;                                      // 0x0768(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bEnableAutoLogin;                                  // 0x0778(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CCE[0x1F];                                    // 0x0779(0x001F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DeinitAutoLogin();
-	void FetchAnnouncements();
 	void FetchServerStatus();
 	void GetCachedCharacterAtIndex_Checked(int32 Param_Index, struct FVALDTOS_MetaCharacterFormat* OutCharacter);
+	class FString GetServerStatusUrl();
 	void GoToCharacterCreationState(EVALUI_CharacterCreationState NewState);
 	void GoToLobbyState(EVALUI_LobbyState NewState);
 	void GoToLoginState(EVALUI_LoginState NewState);
@@ -2748,7 +2885,6 @@ public:
 	void InitAutoLogin();
 	void OnLobbyStateChange__DelegateSignature(EVALUI_LobbyState State);
 	void OnPregameStateChange__DelegateSignature(EVALUI_PregameState State);
-	void SetAnnouncementURL(const class FString& URL);
 	void StartAutoLogin();
 	void StopAutoLogin(bool bIsComplete);
 	bool TryGetCachedCharacters(TArray<struct FVALDTOS_MetaCharacterFormat>* OutOurCharacters);
@@ -2770,28 +2906,28 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PregameUIManager) == 0x000008, "Wrong alignment on UVALUI_PregameUIManager");
-static_assert(sizeof(UVALUI_PregameUIManager) == 0x000778, "Wrong size on UVALUI_PregameUIManager");
-static_assert(offsetof(UVALUI_PregameUIManager, OnPregameStateChange) == 0x0006E8, "Member 'UVALUI_PregameUIManager::OnPregameStateChange' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, OnLobbyStateChange) == 0x0006F8, "Member 'UVALUI_PregameUIManager::OnLobbyStateChange' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, RenderStudio) == 0x000708, "Member 'UVALUI_PregameUIManager::RenderStudio' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, AnnouncementURL) == 0x000710, "Member 'UVALUI_PregameUIManager::AnnouncementURL' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, Announcement) == 0x000720, "Member 'UVALUI_PregameUIManager::Announcement' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, AnnouncementTimestamp) == 0x000730, "Member 'UVALUI_PregameUIManager::AnnouncementTimestamp' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, ServerStatusURL) == 0x000738, "Member 'UVALUI_PregameUIManager::ServerStatusURL' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, ServerStatus) == 0x000748, "Member 'UVALUI_PregameUIManager::ServerStatus' has a wrong offset!");
-static_assert(offsetof(UVALUI_PregameUIManager, bEnableAutoLogin) == 0x000758, "Member 'UVALUI_PregameUIManager::bEnableAutoLogin' has a wrong offset!");
+static_assert(sizeof(UVALUI_PregameUIManager) == 0x000798, "Wrong size on UVALUI_PregameUIManager");
+static_assert(offsetof(UVALUI_PregameUIManager, OnPregameStateChange) == 0x000708, "Member 'UVALUI_PregameUIManager::OnPregameStateChange' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, OnLobbyStateChange) == 0x000718, "Member 'UVALUI_PregameUIManager::OnLobbyStateChange' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, RenderStudio) == 0x000728, "Member 'UVALUI_PregameUIManager::RenderStudio' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, AnnouncementURL) == 0x000730, "Member 'UVALUI_PregameUIManager::AnnouncementURL' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, Announcement) == 0x000740, "Member 'UVALUI_PregameUIManager::Announcement' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, AnnouncementTimestamp) == 0x000750, "Member 'UVALUI_PregameUIManager::AnnouncementTimestamp' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, ServerStatusURL) == 0x000758, "Member 'UVALUI_PregameUIManager::ServerStatusURL' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, ServerStatus) == 0x000768, "Member 'UVALUI_PregameUIManager::ServerStatus' has a wrong offset!");
+static_assert(offsetof(UVALUI_PregameUIManager, bEnableAutoLogin) == 0x000778, "Member 'UVALUI_PregameUIManager::bEnableAutoLogin' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PremiumCurrencyPurchaseWidgetBase
-// 0x0048 (0x0420 - 0x03D8)
+// 0x0048 (0x0458 - 0x0410)
 class UVALUI_PremiumCurrencyPurchaseWidgetBase final  : public UCommonActivatableWidget
 {
 public:
-	EVALUI_PremiumCurrencyPurchaseState           PurchaseState;                                     // 0x03D8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3544[0x13];                                    // 0x03D9(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         ValidatePurchaseTimerSecs;                         // 0x03EC(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ValidatePurchaseMaxAttempts;                       // 0x03F0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3545[0x24];                                    // 0x03F4(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVAL_PremiumStoreSubsystem*             PremiumStoreSubsystem;                             // 0x0418(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	EVALUI_PremiumCurrencyPurchaseState           PurchaseState;                                     // 0x0410(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CD1[0x13];                                    // 0x0411(0x0013)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         ValidatePurchaseTimerSecs;                         // 0x0424(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ValidatePurchaseMaxAttempts;                       // 0x0428(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CD2[0x24];                                    // 0x042C(0x0024)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_PremiumStoreSubsystem*             PremiumStoreSubsystem;                             // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void CancelValidatePaymentPolling();
@@ -2801,7 +2937,7 @@ public:
 	void HandlePaymentCancelled();
 	void HandlePaymentCompleted();
 	void HandlePaymentFulfilled();
-	void HandleSteamMicrotransactionCompleted(uint32 AppId, uint64 OrderId, bool bAuthorized);
+	void HandleSteamMicrotransactionCompleted(uint32 AppID, uint64 OrderId, bool bAuthorized);
 	void HandleUrlChanged(class FText& Text);
 	void HandleValidatePaymentFulfillmentTick(struct FGuid& PaymentID);
 	void PurchasePremiumCurrency(struct FGuid& BundleId);
@@ -2818,20 +2954,20 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumCurrencyPurchaseWidgetBase) == 0x000008, "Wrong alignment on UVALUI_PremiumCurrencyPurchaseWidgetBase");
-static_assert(sizeof(UVALUI_PremiumCurrencyPurchaseWidgetBase) == 0x000420, "Wrong size on UVALUI_PremiumCurrencyPurchaseWidgetBase");
-static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, PurchaseState) == 0x0003D8, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::PurchaseState' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, ValidatePurchaseTimerSecs) == 0x0003EC, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::ValidatePurchaseTimerSecs' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, ValidatePurchaseMaxAttempts) == 0x0003F0, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::ValidatePurchaseMaxAttempts' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, PremiumStoreSubsystem) == 0x000418, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::PremiumStoreSubsystem' has a wrong offset!");
+static_assert(sizeof(UVALUI_PremiumCurrencyPurchaseWidgetBase) == 0x000458, "Wrong size on UVALUI_PremiumCurrencyPurchaseWidgetBase");
+static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, PurchaseState) == 0x000410, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::PurchaseState' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, ValidatePurchaseTimerSecs) == 0x000424, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::ValidatePurchaseTimerSecs' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, ValidatePurchaseMaxAttempts) == 0x000428, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::ValidatePurchaseMaxAttempts' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumCurrencyPurchaseWidgetBase, PremiumStoreSubsystem) == 0x000450, "Member 'UVALUI_PremiumCurrencyPurchaseWidgetBase::PremiumStoreSubsystem' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PremiumItemPurchaseWidgetBase
-// 0x00F0 (0x04C8 - 0x03D8)
+// 0x00F0 (0x0500 - 0x0410)
 class UVALUI_PremiumItemPurchaseWidgetBase final  : public UCommonActivatableWidget
 {
 public:
-	TMap<struct FVALUI_PremiumStorefrontVariant, bool> MultipleVariantsShouldForceDiscountMap;            // 0x03D8(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	TSet<struct FVALUI_PremiumStorefrontVariant>  ExcludedVariants;                                  // 0x0428(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	TMap<struct FVALUI_PremiumStorefrontVariant, struct FVALUI_PremiumStorefrontWidgetModel> MultipleVariantsData;                              // 0x0478(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TMap<struct FVALUI_PremiumStorefrontVariant, bool> MultipleVariantsShouldForceDiscountMap;            // 0x0410(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TSet<struct FVALUI_PremiumStorefrontVariant>  ExcludedVariants;                                  // 0x0460(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	TMap<struct FVALUI_PremiumStorefrontVariant, struct FVALUI_PremiumStorefrontWidgetModel> MultipleVariantsData;                              // 0x04B0(0x0050)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
 
 public:
 	void GenerateMultipleVariantsShouldForceDiscountMap();
@@ -2849,18 +2985,18 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumItemPurchaseWidgetBase) == 0x000008, "Wrong alignment on UVALUI_PremiumItemPurchaseWidgetBase");
-static_assert(sizeof(UVALUI_PremiumItemPurchaseWidgetBase) == 0x0004C8, "Wrong size on UVALUI_PremiumItemPurchaseWidgetBase");
-static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, MultipleVariantsShouldForceDiscountMap) == 0x0003D8, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::MultipleVariantsShouldForceDiscountMap' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, ExcludedVariants) == 0x000428, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::ExcludedVariants' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, MultipleVariantsData) == 0x000478, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::MultipleVariantsData' has a wrong offset!");
+static_assert(sizeof(UVALUI_PremiumItemPurchaseWidgetBase) == 0x000500, "Wrong size on UVALUI_PremiumItemPurchaseWidgetBase");
+static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, MultipleVariantsShouldForceDiscountMap) == 0x000410, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::MultipleVariantsShouldForceDiscountMap' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, ExcludedVariants) == 0x000460, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::ExcludedVariants' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumItemPurchaseWidgetBase, MultipleVariantsData) == 0x0004B0, "Member 'UVALUI_PremiumItemPurchaseWidgetBase::MultipleVariantsData' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PremiumStorefrontTileWidgetBase
-// 0x0068 (0x02E0 - 0x0278)
+// 0x0068 (0x0328 - 0x02C0)
 class UVALUI_PremiumStorefrontTileWidgetBase final  : public UUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSelected;                                        // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	struct FVALUI_PremiumStorefrontWidgetModel    Model;                                             // 0x0288(0x0058)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             OnSelected;                                        // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	struct FVALUI_PremiumStorefrontWidgetModel    Model;                                             // 0x02D0(0x0058)(BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
 
 public:
 	void HandleModelUpdate(struct FVALUI_PremiumStorefrontWidgetModel& NewModel);
@@ -2881,19 +3017,19 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumStorefrontTileWidgetBase) == 0x000008, "Wrong alignment on UVALUI_PremiumStorefrontTileWidgetBase");
-static_assert(sizeof(UVALUI_PremiumStorefrontTileWidgetBase) == 0x0002E0, "Wrong size on UVALUI_PremiumStorefrontTileWidgetBase");
-static_assert(offsetof(UVALUI_PremiumStorefrontTileWidgetBase, OnSelected) == 0x000278, "Member 'UVALUI_PremiumStorefrontTileWidgetBase::OnSelected' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumStorefrontTileWidgetBase, Model) == 0x000288, "Member 'UVALUI_PremiumStorefrontTileWidgetBase::Model' has a wrong offset!");
+static_assert(sizeof(UVALUI_PremiumStorefrontTileWidgetBase) == 0x000328, "Wrong size on UVALUI_PremiumStorefrontTileWidgetBase");
+static_assert(offsetof(UVALUI_PremiumStorefrontTileWidgetBase, OnSelected) == 0x0002C0, "Member 'UVALUI_PremiumStorefrontTileWidgetBase::OnSelected' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumStorefrontTileWidgetBase, Model) == 0x0002D0, "Member 'UVALUI_PremiumStorefrontTileWidgetBase::Model' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PremiumStorefrontWidgetBase
-// 0x0018 (0x03F0 - 0x03D8)
+// 0x0018 (0x0428 - 0x0410)
 class UVALUI_PremiumStorefrontWidgetBase final  : public UCommonActivatableWidget
 {
 public:
-	int32                                         TilePaddingAmount;                                 // 0x03D8(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3548[0x4];                                     // 0x03DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGridPanel*                             StoreGrid;                                         // 0x03E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UVALUI_PremiumStorefrontTileWidgetBase> TileWidgetClass;                                   // 0x03E8(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         TilePaddingAmount;                                 // 0x0410(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CD5[0x4];                                     // 0x0414(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGridPanel*                             StoreGrid;                                         // 0x0418(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UVALUI_PremiumStorefrontTileWidgetBase> TileWidgetClass;                                   // 0x0420(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	void CreateStorefrontGrid(int32 WidgetsPerRow, TArray<struct FVALUI_PremiumStorefrontWidgetModel>& Models);
@@ -2915,18 +3051,18 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumStorefrontWidgetBase) == 0x000008, "Wrong alignment on UVALUI_PremiumStorefrontWidgetBase");
-static_assert(sizeof(UVALUI_PremiumStorefrontWidgetBase) == 0x0003F0, "Wrong size on UVALUI_PremiumStorefrontWidgetBase");
-static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, TilePaddingAmount) == 0x0003D8, "Member 'UVALUI_PremiumStorefrontWidgetBase::TilePaddingAmount' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, StoreGrid) == 0x0003E0, "Member 'UVALUI_PremiumStorefrontWidgetBase::StoreGrid' has a wrong offset!");
-static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, TileWidgetClass) == 0x0003E8, "Member 'UVALUI_PremiumStorefrontWidgetBase::TileWidgetClass' has a wrong offset!");
+static_assert(sizeof(UVALUI_PremiumStorefrontWidgetBase) == 0x000428, "Wrong size on UVALUI_PremiumStorefrontWidgetBase");
+static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, TilePaddingAmount) == 0x000410, "Member 'UVALUI_PremiumStorefrontWidgetBase::TilePaddingAmount' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, StoreGrid) == 0x000418, "Member 'UVALUI_PremiumStorefrontWidgetBase::StoreGrid' has a wrong offset!");
+static_assert(offsetof(UVALUI_PremiumStorefrontWidgetBase, TileWidgetClass) == 0x000420, "Member 'UVALUI_PremiumStorefrontWidgetBase::TileWidgetClass' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_PremiumStoreScreenWidgetBase
-// 0x0078 (0x05A0 - 0x0528)
+// 0x0078 (0x05D0 - 0x0558)
 class UVALUI_PremiumStoreScreenWidgetBase final  : public US6UI_StateUserWidget
 {
 public:
-	uint8                                         Pad_354A[0x68];                                    // 0x0528(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnStudioStateChanged;                              // 0x0590(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CD7[0x68];                                    // 0x0558(0x0068)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnStudioStateChanged;                              // 0x05C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	void GoToPremiumStoreState(EVALUI_PremiumStoreState NewState);
@@ -2947,8 +3083,8 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumStoreScreenWidgetBase) == 0x000008, "Wrong alignment on UVALUI_PremiumStoreScreenWidgetBase");
-static_assert(sizeof(UVALUI_PremiumStoreScreenWidgetBase) == 0x0005A0, "Wrong size on UVALUI_PremiumStoreScreenWidgetBase");
-static_assert(offsetof(UVALUI_PremiumStoreScreenWidgetBase, OnStudioStateChanged) == 0x000590, "Member 'UVALUI_PremiumStoreScreenWidgetBase::OnStudioStateChanged' has a wrong offset!");
+static_assert(sizeof(UVALUI_PremiumStoreScreenWidgetBase) == 0x0005D0, "Wrong size on UVALUI_PremiumStoreScreenWidgetBase");
+static_assert(offsetof(UVALUI_PremiumStoreScreenWidgetBase, OnStudioStateChanged) == 0x0005C0, "Member 'UVALUI_PremiumStoreScreenWidgetBase::OnStudioStateChanged' has a wrong offset!");
 
 // Class ValeriaUI.VAL_PremiumStoreSettings
 // 0x0068 (0x00A0 - 0x0038)
@@ -2956,7 +3092,7 @@ class UVAL_PremiumStoreSettings final  : public UDeveloperSettings
 {
 public:
 	float                                         DefaultPerItemBundleDiscount;                      // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_354C[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD9[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSubclassOf<class UVAL_CharacterCustomizationItemBase>> ItemSlotOrder;                                     // 0x0040(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, UObjectWrapper, NativeAccessSpecifierPublic)
 	TMap<TSubclassOf<class UVAL_CharacterCustomizationItemBase>, TSoftObjectPtr<class UTexture2D>> ItemClassToIcon;                                   // 0x0050(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Config, UObjectWrapper, NativeAccessSpecifierPublic)
 
@@ -3001,11 +3137,11 @@ static_assert(alignof(UVALUI_PremiumStoreFunctionLibrary) == 0x000008, "Wrong al
 static_assert(sizeof(UVALUI_PremiumStoreFunctionLibrary) == 0x000028, "Wrong size on UVALUI_PremiumStoreFunctionLibrary");
 
 // Class ValeriaUI.VALUI_PremiumStoreWebBrowser
-// 0x0050 (0x01F8 - 0x01A8)
+// 0x0050 (0x0228 - 0x01D8)
 class UVALUI_PremiumStoreWebBrowser final  : public UWebBrowser
 {
 public:
-	uint8                                         Pad_354E[0x50];                                    // 0x01A8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDB[0x50];                                    // 0x01D8(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -3018,7 +3154,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_PremiumStoreWebBrowser) == 0x000008, "Wrong alignment on UVALUI_PremiumStoreWebBrowser");
-static_assert(sizeof(UVALUI_PremiumStoreWebBrowser) == 0x0001F8, "Wrong size on UVALUI_PremiumStoreWebBrowser");
+static_assert(sizeof(UVALUI_PremiumStoreWebBrowser) == 0x000228, "Wrong size on UVALUI_PremiumStoreWebBrowser");
 
 // Class ValeriaUI.VALUI_ProgressBarStyle
 // 0x02A0 (0x02D0 - 0x0030)
@@ -3047,11 +3183,11 @@ static_assert(offsetof(UVALUI_ProgressBarStyle, WidgetStyle) == 0x000030, "Membe
 static_assert(offsetof(UVALUI_ProgressBarStyle, BorderPadding) == 0x0002C0, "Member 'UVALUI_ProgressBarStyle::BorderPadding' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ProgressBar_Styled
-// 0x0000 (0x0440 - 0x0440)
+// 0x0000 (0x0470 - 0x0470)
 class UVALUI_ProgressBar_Styled final  : public UProgressBar
 {
 public:
-	class UVALUI_ProgressBarStyle*                Style;                                             // 0x0438(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UVALUI_ProgressBarStyle*                Style;                                             // 0x0468(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	void SetProgressBarStyle(class UVALUI_ProgressBarStyle* NewStyle);
@@ -3067,31 +3203,31 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ProgressBar_Styled) == 0x000010, "Wrong alignment on UVALUI_ProgressBar_Styled");
-static_assert(sizeof(UVALUI_ProgressBar_Styled) == 0x000440, "Wrong size on UVALUI_ProgressBar_Styled");
-static_assert(offsetof(UVALUI_ProgressBar_Styled, Style) == 0x000438, "Member 'UVALUI_ProgressBar_Styled::Style' has a wrong offset!");
+static_assert(sizeof(UVALUI_ProgressBar_Styled) == 0x000470, "Wrong size on UVALUI_ProgressBar_Styled");
+static_assert(offsetof(UVALUI_ProgressBar_Styled, Style) == 0x000468, "Member 'UVALUI_ProgressBar_Styled::Style' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_RadioSlider
-// 0x0210 (0x0360 - 0x0150)
+// 0x0210 (0x0390 - 0x0180)
 class UVALUI_RadioSlider final  : public UWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnSliderAnimationStarted;                          // 0x0150(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnSliderAnimationCompleted;                        // 0x0160(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnSliderWidgetCreated;                             // 0x0170(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnElementWidgetCreated;                            // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnPageChanged;                                     // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TSubclassOf<class UUserWidget>                SliderWidgetClass;                                 // 0x01A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class UUserWidget>                ElementWidgetClass;                                // 0x01A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         ElementCount;                                      // 0x01B0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         SliderIndex;                                       // 0x01B4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FVALUI_RadioSliderPaginationSettings   PaginationSettings;                                // 0x01B8(0x0098)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	float                                         SliderAnimationTime;                               // 0x0250(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_354F[0x4];                                     // 0x0254(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRuntimeFloatCurve                     SliderAnimationCurve;                              // 0x0258(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
-	struct FMargin                                ElementPadding;                                    // 0x02E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	class UUserWidget*                            SliderWidget;                                      // 0x02F0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<int32, class UUserWidget*>               ElementWidgetsTable;                               // 0x02F8(0x0050)(ExportObject, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3550[0x18];                                    // 0x0348(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnSliderAnimationStarted;                          // 0x0180(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnSliderAnimationCompleted;                        // 0x0190(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnSliderWidgetCreated;                             // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnElementWidgetCreated;                            // 0x01B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnPageChanged;                                     // 0x01C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TSubclassOf<class UUserWidget>                SliderWidgetClass;                                 // 0x01D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class UUserWidget>                ElementWidgetClass;                                // 0x01D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         ElementCount;                                      // 0x01E0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         SliderIndex;                                       // 0x01E4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FVALUI_RadioSliderPaginationSettings   PaginationSettings;                                // 0x01E8(0x0098)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	float                                         SliderAnimationTime;                               // 0x0280(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CDC[0x4];                                     // 0x0284(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRuntimeFloatCurve                     SliderAnimationCurve;                              // 0x0288(0x0088)(Edit, BlueprintVisible, BlueprintReadOnly, Protected, NativeAccessSpecifierProtected)
+	struct FMargin                                ElementPadding;                                    // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	class UUserWidget*                            SliderWidget;                                      // 0x0320(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<int32, class UUserWidget*>               ElementWidgetsTable;                               // 0x0328(0x0050)(ExportObject, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CDD[0x18];                                    // 0x0378(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BuildElementsAndSlider();
@@ -3123,29 +3259,29 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_RadioSlider) == 0x000008, "Wrong alignment on UVALUI_RadioSlider");
-static_assert(sizeof(UVALUI_RadioSlider) == 0x000360, "Wrong size on UVALUI_RadioSlider");
-static_assert(offsetof(UVALUI_RadioSlider, OnSliderAnimationStarted) == 0x000150, "Member 'UVALUI_RadioSlider::OnSliderAnimationStarted' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, OnSliderAnimationCompleted) == 0x000160, "Member 'UVALUI_RadioSlider::OnSliderAnimationCompleted' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, OnSliderWidgetCreated) == 0x000170, "Member 'UVALUI_RadioSlider::OnSliderWidgetCreated' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, OnElementWidgetCreated) == 0x000180, "Member 'UVALUI_RadioSlider::OnElementWidgetCreated' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, OnPageChanged) == 0x000190, "Member 'UVALUI_RadioSlider::OnPageChanged' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, SliderWidgetClass) == 0x0001A0, "Member 'UVALUI_RadioSlider::SliderWidgetClass' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, ElementWidgetClass) == 0x0001A8, "Member 'UVALUI_RadioSlider::ElementWidgetClass' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, ElementCount) == 0x0001B0, "Member 'UVALUI_RadioSlider::ElementCount' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, SliderIndex) == 0x0001B4, "Member 'UVALUI_RadioSlider::SliderIndex' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, PaginationSettings) == 0x0001B8, "Member 'UVALUI_RadioSlider::PaginationSettings' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, SliderAnimationTime) == 0x000250, "Member 'UVALUI_RadioSlider::SliderAnimationTime' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, SliderAnimationCurve) == 0x000258, "Member 'UVALUI_RadioSlider::SliderAnimationCurve' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, ElementPadding) == 0x0002E0, "Member 'UVALUI_RadioSlider::ElementPadding' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, SliderWidget) == 0x0002F0, "Member 'UVALUI_RadioSlider::SliderWidget' has a wrong offset!");
-static_assert(offsetof(UVALUI_RadioSlider, ElementWidgetsTable) == 0x0002F8, "Member 'UVALUI_RadioSlider::ElementWidgetsTable' has a wrong offset!");
+static_assert(sizeof(UVALUI_RadioSlider) == 0x000390, "Wrong size on UVALUI_RadioSlider");
+static_assert(offsetof(UVALUI_RadioSlider, OnSliderAnimationStarted) == 0x000180, "Member 'UVALUI_RadioSlider::OnSliderAnimationStarted' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, OnSliderAnimationCompleted) == 0x000190, "Member 'UVALUI_RadioSlider::OnSliderAnimationCompleted' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, OnSliderWidgetCreated) == 0x0001A0, "Member 'UVALUI_RadioSlider::OnSliderWidgetCreated' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, OnElementWidgetCreated) == 0x0001B0, "Member 'UVALUI_RadioSlider::OnElementWidgetCreated' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, OnPageChanged) == 0x0001C0, "Member 'UVALUI_RadioSlider::OnPageChanged' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, SliderWidgetClass) == 0x0001D0, "Member 'UVALUI_RadioSlider::SliderWidgetClass' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, ElementWidgetClass) == 0x0001D8, "Member 'UVALUI_RadioSlider::ElementWidgetClass' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, ElementCount) == 0x0001E0, "Member 'UVALUI_RadioSlider::ElementCount' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, SliderIndex) == 0x0001E4, "Member 'UVALUI_RadioSlider::SliderIndex' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, PaginationSettings) == 0x0001E8, "Member 'UVALUI_RadioSlider::PaginationSettings' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, SliderAnimationTime) == 0x000280, "Member 'UVALUI_RadioSlider::SliderAnimationTime' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, SliderAnimationCurve) == 0x000288, "Member 'UVALUI_RadioSlider::SliderAnimationCurve' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, ElementPadding) == 0x000310, "Member 'UVALUI_RadioSlider::ElementPadding' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, SliderWidget) == 0x000320, "Member 'UVALUI_RadioSlider::SliderWidget' has a wrong offset!");
+static_assert(offsetof(UVALUI_RadioSlider, ElementWidgetsTable) == 0x000328, "Member 'UVALUI_RadioSlider::ElementWidgetsTable' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_RichTextBlockDecorator_RequestLink
-// 0x0030 (0x0058 - 0x0028)
+// 0x0028 (0x0050 - 0x0028)
 class UVALUI_RichTextBlockDecorator_RequestLink : public URichTextBlockDecorator
 {
 public:
-	TSoftClassPtr<class UClass>                   ButtonWidgetClass;                                 // 0x0028(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   ButtonWidgetClass;                                 // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -3158,7 +3294,7 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_RichTextBlockDecorator_RequestLink) == 0x000008, "Wrong alignment on UVALUI_RichTextBlockDecorator_RequestLink");
-static_assert(sizeof(UVALUI_RichTextBlockDecorator_RequestLink) == 0x000058, "Wrong size on UVALUI_RichTextBlockDecorator_RequestLink");
+static_assert(sizeof(UVALUI_RichTextBlockDecorator_RequestLink) == 0x000050, "Wrong size on UVALUI_RichTextBlockDecorator_RequestLink");
 static_assert(offsetof(UVALUI_RichTextBlockDecorator_RequestLink, ButtonWidgetClass) == 0x000028, "Member 'UVALUI_RichTextBlockDecorator_RequestLink::ButtonWidgetClass' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_RichTextBlockStyle
@@ -3169,7 +3305,7 @@ public:
 	class UDataTable*                             TextStyleSet;                                      // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<TSubclassOf<class URichTextBlockDecorator>> DecoratorClasses;                                  // 0x0038(0x0010)(Edit, BlueprintVisible, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bOverrideDefaultStyle;                             // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3557[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE4[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTextBlockStyle                        DefaultTextStyleOverride;                          // 0x0050(0x0340)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 
 public:
@@ -3193,15 +3329,15 @@ static_assert(offsetof(UVALUI_RichTextBlockStyle, bOverrideDefaultStyle) == 0x00
 static_assert(offsetof(UVALUI_RichTextBlockStyle, DefaultTextStyleOverride) == 0x000050, "Member 'UVALUI_RichTextBlockStyle::DefaultTextStyleOverride' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_RichTextBlock_Styled
-// 0x0070 (0x08E0 - 0x0870)
+// 0x0070 (0x0910 - 0x08A0)
 class UVALUI_RichTextBlock_Styled final  : public US6UI_RichTextBlock
 {
 public:
-	class UVALUI_RichTextBlockStyle*              Style;                                             // 0x0870(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSupportCrossPlatform;                             // 0x0878(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3558[0x7];                                     // 0x0879(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_RichTextBlockStyle>> CrossPlatformStyles;                               // 0x0880(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3559[0x10];                                    // 0x08D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_RichTextBlockStyle*              Style;                                             // 0x08A0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSupportCrossPlatform;                             // 0x08A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CE5[0x7];                                     // 0x08A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_RichTextBlockStyle>> CrossPlatformStyles;                               // 0x08B0(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CE6[0x10];                                    // 0x0900(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetTextBlockStyle(class UVALUI_RichTextBlockStyle* NewStyle);
@@ -3218,20 +3354,20 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_RichTextBlock_Styled) == 0x000010, "Wrong alignment on UVALUI_RichTextBlock_Styled");
-static_assert(sizeof(UVALUI_RichTextBlock_Styled) == 0x0008E0, "Wrong size on UVALUI_RichTextBlock_Styled");
-static_assert(offsetof(UVALUI_RichTextBlock_Styled, Style) == 0x000870, "Member 'UVALUI_RichTextBlock_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_RichTextBlock_Styled, bSupportCrossPlatform) == 0x000878, "Member 'UVALUI_RichTextBlock_Styled::bSupportCrossPlatform' has a wrong offset!");
-static_assert(offsetof(UVALUI_RichTextBlock_Styled, CrossPlatformStyles) == 0x000880, "Member 'UVALUI_RichTextBlock_Styled::CrossPlatformStyles' has a wrong offset!");
+static_assert(sizeof(UVALUI_RichTextBlock_Styled) == 0x000910, "Wrong size on UVALUI_RichTextBlock_Styled");
+static_assert(offsetof(UVALUI_RichTextBlock_Styled, Style) == 0x0008A0, "Member 'UVALUI_RichTextBlock_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_RichTextBlock_Styled, bSupportCrossPlatform) == 0x0008A8, "Member 'UVALUI_RichTextBlock_Styled::bSupportCrossPlatform' has a wrong offset!");
+static_assert(offsetof(UVALUI_RichTextBlock_Styled, CrossPlatformStyles) == 0x0008B0, "Member 'UVALUI_RichTextBlock_Styled::CrossPlatformStyles' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ScrollBoxStyle
-// 0x0AE0 (0x0B10 - 0x0030)
+// 0x0B00 (0x0B30 - 0x0030)
 class UVALUI_ScrollBoxStyle final  : public UVALUI_WidgetStyleBase
 {
 public:
-	struct FScrollBoxStyle                        WidgetStyle;                                       // 0x0030(0x0350)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x0380(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScrollbarThickness;                                // 0x0AF0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMargin                                ScrollbarPadding;                                  // 0x0B00(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FScrollBoxStyle                        WidgetStyle;                                       // 0x0030(0x0370)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FScrollBarStyle                        WidgetBarStyle;                                    // 0x03A0(0x0770)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScrollbarThickness;                                // 0x0B10(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMargin                                ScrollbarPadding;                                  // 0x0B20(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
 public:
 	void ApplyToScrollBox(class UScrollBox* ScrollBox) const;
@@ -3247,20 +3383,20 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ScrollBoxStyle) == 0x000010, "Wrong alignment on UVALUI_ScrollBoxStyle");
-static_assert(sizeof(UVALUI_ScrollBoxStyle) == 0x000B10, "Wrong size on UVALUI_ScrollBoxStyle");
+static_assert(sizeof(UVALUI_ScrollBoxStyle) == 0x000B30, "Wrong size on UVALUI_ScrollBoxStyle");
 static_assert(offsetof(UVALUI_ScrollBoxStyle, WidgetStyle) == 0x000030, "Member 'UVALUI_ScrollBoxStyle::WidgetStyle' has a wrong offset!");
-static_assert(offsetof(UVALUI_ScrollBoxStyle, WidgetBarStyle) == 0x000380, "Member 'UVALUI_ScrollBoxStyle::WidgetBarStyle' has a wrong offset!");
-static_assert(offsetof(UVALUI_ScrollBoxStyle, ScrollbarThickness) == 0x000AF0, "Member 'UVALUI_ScrollBoxStyle::ScrollbarThickness' has a wrong offset!");
-static_assert(offsetof(UVALUI_ScrollBoxStyle, ScrollbarPadding) == 0x000B00, "Member 'UVALUI_ScrollBoxStyle::ScrollbarPadding' has a wrong offset!");
+static_assert(offsetof(UVALUI_ScrollBoxStyle, WidgetBarStyle) == 0x0003A0, "Member 'UVALUI_ScrollBoxStyle::WidgetBarStyle' has a wrong offset!");
+static_assert(offsetof(UVALUI_ScrollBoxStyle, ScrollbarThickness) == 0x000B10, "Member 'UVALUI_ScrollBoxStyle::ScrollbarThickness' has a wrong offset!");
+static_assert(offsetof(UVALUI_ScrollBoxStyle, ScrollbarPadding) == 0x000B20, "Member 'UVALUI_ScrollBoxStyle::ScrollbarPadding' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_ScrollBox_Styled
-// 0x0010 (0x0CB0 - 0x0CA0)
+// 0x0010 (0x0D00 - 0x0CF0)
 class UVALUI_ScrollBox_Styled final  : public UScrollBox
 {
 public:
-	class UVALUI_ScrollBoxStyle*                  Style;                                             // 0x0CA0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHandleDirectionalNavigation;                      // 0x0CA8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_355A[0x7];                                     // 0x0CA9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_ScrollBoxStyle*                  Style;                                             // 0x0CF0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHandleDirectionalNavigation;                      // 0x0CF8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CE7[0x7];                                     // 0x0CF9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetScrollBoxStyle(class UVALUI_ScrollBoxStyle* NewStyle);
@@ -3276,19 +3412,19 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_ScrollBox_Styled) == 0x000010, "Wrong alignment on UVALUI_ScrollBox_Styled");
-static_assert(sizeof(UVALUI_ScrollBox_Styled) == 0x000CB0, "Wrong size on UVALUI_ScrollBox_Styled");
-static_assert(offsetof(UVALUI_ScrollBox_Styled, Style) == 0x000CA0, "Member 'UVALUI_ScrollBox_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_ScrollBox_Styled, bHandleDirectionalNavigation) == 0x000CA8, "Member 'UVALUI_ScrollBox_Styled::bHandleDirectionalNavigation' has a wrong offset!");
+static_assert(sizeof(UVALUI_ScrollBox_Styled) == 0x000D00, "Wrong size on UVALUI_ScrollBox_Styled");
+static_assert(offsetof(UVALUI_ScrollBox_Styled, Style) == 0x000CF0, "Member 'UVALUI_ScrollBox_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_ScrollBox_Styled, bHandleDirectionalNavigation) == 0x000CF8, "Member 'UVALUI_ScrollBox_Styled::bHandleDirectionalNavigation' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_Settings
-// 0x0040 (0x0078 - 0x0038)
+// 0x0038 (0x0070 - 0x0038)
 class UVALUI_Settings final  : public UDeveloperSettings
 {
 public:
 	TSubclassOf<class UUserWidget>                ToolTipWidgetClass;                                // 0x0038(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UCurveFloat>             RadioSliderDefaultAnimCurve;                       // 0x0040(0x0030)(Edit, BlueprintVisible, BlueprintReadOnly, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DelayBetweenQueuedPopupsSeconds;                   // 0x0070(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_355B[0x4];                                     // 0x0074(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UCurveFloat>             RadioSliderDefaultAnimCurve;                       // 0x0040(0x0028)(Edit, BlueprintVisible, BlueprintReadOnly, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DelayBetweenQueuedPopupsSeconds;                   // 0x0068(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CE8[0x4];                                     // 0x006C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -3301,10 +3437,10 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_Settings) == 0x000008, "Wrong alignment on UVALUI_Settings");
-static_assert(sizeof(UVALUI_Settings) == 0x000078, "Wrong size on UVALUI_Settings");
+static_assert(sizeof(UVALUI_Settings) == 0x000070, "Wrong size on UVALUI_Settings");
 static_assert(offsetof(UVALUI_Settings, ToolTipWidgetClass) == 0x000038, "Member 'UVALUI_Settings::ToolTipWidgetClass' has a wrong offset!");
 static_assert(offsetof(UVALUI_Settings, RadioSliderDefaultAnimCurve) == 0x000040, "Member 'UVALUI_Settings::RadioSliderDefaultAnimCurve' has a wrong offset!");
-static_assert(offsetof(UVALUI_Settings, DelayBetweenQueuedPopupsSeconds) == 0x000070, "Member 'UVALUI_Settings::DelayBetweenQueuedPopupsSeconds' has a wrong offset!");
+static_assert(offsetof(UVALUI_Settings, DelayBetweenQueuedPopupsSeconds) == 0x000068, "Member 'UVALUI_Settings::DelayBetweenQueuedPopupsSeconds' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_SliderStyle
 // 0x0500 (0x0530 - 0x0030)
@@ -3330,37 +3466,12 @@ static_assert(alignof(UVALUI_SliderStyle) == 0x000010, "Wrong alignment on UVALU
 static_assert(sizeof(UVALUI_SliderStyle) == 0x000530, "Wrong size on UVALUI_SliderStyle");
 static_assert(offsetof(UVALUI_SliderStyle, WidgetStyle) == 0x000030, "Member 'UVALUI_SliderStyle::WidgetStyle' has a wrong offset!");
 
-// Class ValeriaUI.VALUI_Slider_Styled
-// 0x0010 (0x0710 - 0x0700)
-class UVALUI_Slider_Styled final  : public USlider
-{
-public:
-	class UVALUI_SliderStyle*                     Style;                                             // 0x0700(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_355C[0x8];                                     // 0x0708(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetSliderStyle(class UVALUI_SliderStyle* NewStyle);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_Slider_Styled">();
-	}
-	static class UVALUI_Slider_Styled* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_Slider_Styled>();
-	}
-};
-static_assert(alignof(UVALUI_Slider_Styled) == 0x000010, "Wrong alignment on UVALUI_Slider_Styled");
-static_assert(sizeof(UVALUI_Slider_Styled) == 0x000710, "Wrong size on UVALUI_Slider_Styled");
-static_assert(offsetof(UVALUI_Slider_Styled, Style) == 0x000700, "Member 'UVALUI_Slider_Styled::Style' has a wrong offset!");
-
 // Class ValeriaUI.VALUI_SocialPanelBase
-// 0x0010 (0x0500 - 0x04F0)
+// 0x0010 (0x0530 - 0x0520)
 class UVALUI_SocialPanelBase : public US6UI_InputActionHandlingUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnToggleDebugSimulation;                           // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnToggleDebugSimulation;                           // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 
 public:
 	static class FString GetDebugSimulationFlag();
@@ -3378,36 +3489,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_SocialPanelBase) == 0x000008, "Wrong alignment on UVALUI_SocialPanelBase");
-static_assert(sizeof(UVALUI_SocialPanelBase) == 0x000500, "Wrong size on UVALUI_SocialPanelBase");
-static_assert(offsetof(UVALUI_SocialPanelBase, OnToggleDebugSimulation) == 0x0004F0, "Member 'UVALUI_SocialPanelBase::OnToggleDebugSimulation' has a wrong offset!");
-
-// Class ValeriaUI.VALUI_LobbyScreenUserWidget
-// 0x0030 (0x0520 - 0x04F0)
-class UVALUI_LobbyScreenUserWidget : public US6UI_InputActionHandlingUserWidget
-{
-public:
-	FMulticastInlineDelegateProperty_             EventUpdateSelectedCharacter;                      // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             EventOnPlayButtonClicked;                          // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             EventOnCancelLoginQueueButtonClicked;              // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_LobbyScreenUserWidget">();
-	}
-	static class UVALUI_LobbyScreenUserWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_LobbyScreenUserWidget>();
-	}
-};
-static_assert(alignof(UVALUI_LobbyScreenUserWidget) == 0x000008, "Wrong alignment on UVALUI_LobbyScreenUserWidget");
-static_assert(sizeof(UVALUI_LobbyScreenUserWidget) == 0x000520, "Wrong size on UVALUI_LobbyScreenUserWidget");
-static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventUpdateSelectedCharacter) == 0x0004F0, "Member 'UVALUI_LobbyScreenUserWidget::EventUpdateSelectedCharacter' has a wrong offset!");
-static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventOnPlayButtonClicked) == 0x000500, "Member 'UVALUI_LobbyScreenUserWidget::EventOnPlayButtonClicked' has a wrong offset!");
-static_assert(offsetof(UVALUI_LobbyScreenUserWidget, EventOnCancelLoginQueueButtonClicked) == 0x000510, "Member 'UVALUI_LobbyScreenUserWidget::EventOnCancelLoginQueueButtonClicked' has a wrong offset!");
+static_assert(sizeof(UVALUI_SocialPanelBase) == 0x000530, "Wrong size on UVALUI_SocialPanelBase");
+static_assert(offsetof(UVALUI_SocialPanelBase, OnToggleDebugSimulation) == 0x000520, "Member 'UVALUI_SocialPanelBase::OnToggleDebugSimulation' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_StateUserWidget_PregameHUD
-// 0x0000 (0x0528 - 0x0528)
+// 0x0000 (0x0558 - 0x0558)
 class UVALUI_StateUserWidget_PregameHUD : public US6UI_StateUserWidget
 {
 public:
@@ -3433,17 +3519,17 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_StateUserWidget_PregameHUD) == 0x000008, "Wrong alignment on UVALUI_StateUserWidget_PregameHUD");
-static_assert(sizeof(UVALUI_StateUserWidget_PregameHUD) == 0x000528, "Wrong size on UVALUI_StateUserWidget_PregameHUD");
+static_assert(sizeof(UVALUI_StateUserWidget_PregameHUD) == 0x000558, "Wrong size on UVALUI_StateUserWidget_PregameHUD");
 
 // Class ValeriaUI.VALUI_TabButtonHostBase
-// 0x0078 (0x02F0 - 0x0278)
+// 0x0078 (0x0338 - 0x02C0)
 class UVALUI_TabButtonHostBase : public UUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnDifferentActiveTabSet;                           // 0x0278(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	TArray<struct FVALUI_TabButtonPreregistrationInfo> PreregisteredTabsInfoArray;                        // 0x0288(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	class FName                                   ActiveTabName;                                     // 0x0298(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TMap<class FName, struct FVALUI_InstantiatedTabButtonInfo> InstantiatedTabButtonsInfoMap;                     // 0x02A0(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
+	FMulticastInlineDelegateProperty_             OnDifferentActiveTabSet;                           // 0x02C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	TArray<struct FVALUI_TabButtonPreregistrationInfo> PreregisteredTabsInfoArray;                        // 0x02D0(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	class FName                                   ActiveTabName;                                     // 0x02E0(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TMap<class FName, struct FVALUI_InstantiatedTabButtonInfo> InstantiatedTabButtonsInfoMap;                     // 0x02E8(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 
 public:
 	void AddTabButton(class FName& TabName, struct FVALUI_InstantiatedTabButtonInfo& Info);
@@ -3472,11 +3558,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_TabButtonHostBase) == 0x000008, "Wrong alignment on UVALUI_TabButtonHostBase");
-static_assert(sizeof(UVALUI_TabButtonHostBase) == 0x0002F0, "Wrong size on UVALUI_TabButtonHostBase");
-static_assert(offsetof(UVALUI_TabButtonHostBase, OnDifferentActiveTabSet) == 0x000278, "Member 'UVALUI_TabButtonHostBase::OnDifferentActiveTabSet' has a wrong offset!");
-static_assert(offsetof(UVALUI_TabButtonHostBase, PreregisteredTabsInfoArray) == 0x000288, "Member 'UVALUI_TabButtonHostBase::PreregisteredTabsInfoArray' has a wrong offset!");
-static_assert(offsetof(UVALUI_TabButtonHostBase, ActiveTabName) == 0x000298, "Member 'UVALUI_TabButtonHostBase::ActiveTabName' has a wrong offset!");
-static_assert(offsetof(UVALUI_TabButtonHostBase, InstantiatedTabButtonsInfoMap) == 0x0002A0, "Member 'UVALUI_TabButtonHostBase::InstantiatedTabButtonsInfoMap' has a wrong offset!");
+static_assert(sizeof(UVALUI_TabButtonHostBase) == 0x000338, "Wrong size on UVALUI_TabButtonHostBase");
+static_assert(offsetof(UVALUI_TabButtonHostBase, OnDifferentActiveTabSet) == 0x0002C0, "Member 'UVALUI_TabButtonHostBase::OnDifferentActiveTabSet' has a wrong offset!");
+static_assert(offsetof(UVALUI_TabButtonHostBase, PreregisteredTabsInfoArray) == 0x0002D0, "Member 'UVALUI_TabButtonHostBase::PreregisteredTabsInfoArray' has a wrong offset!");
+static_assert(offsetof(UVALUI_TabButtonHostBase, ActiveTabName) == 0x0002E0, "Member 'UVALUI_TabButtonHostBase::ActiveTabName' has a wrong offset!");
+static_assert(offsetof(UVALUI_TabButtonHostBase, InstantiatedTabButtonsInfoMap) == 0x0002E8, "Member 'UVALUI_TabButtonHostBase::InstantiatedTabButtonsInfoMap' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_TabButtonInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -3498,50 +3584,17 @@ public:
 static_assert(alignof(IVALUI_TabButtonInterface) == 0x000008, "Wrong alignment on IVALUI_TabButtonInterface");
 static_assert(sizeof(IVALUI_TabButtonInterface) == 0x000028, "Wrong size on IVALUI_TabButtonInterface");
 
-// Class ValeriaUI.VALUI_TextBlockStyle
-// 0x0160 (0x0190 - 0x0030)
-class UVALUI_TextBlockStyle final  : public UVALUI_WidgetStyleBase
-{
-public:
-	struct FSlateColor                            ColorAndOpacity;                                   // 0x0030(0x0014)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3560[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FSlateFontInfo                         Font;                                              // 0x0048(0x0058)(Edit, BlueprintVisible, BlueprintReadOnly, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FSlateBrush                            StrikeBrush;                                       // 0x00A0(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	struct FVector2D                              ShadowOffset;                                      // 0x0170(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ShadowColorAndOpacity;                             // 0x0180(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-public:
-	void ApplyToTextBlock(class UTextBlock* TextWidget) const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_TextBlockStyle">();
-	}
-	static class UVALUI_TextBlockStyle* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_TextBlockStyle>();
-	}
-};
-static_assert(alignof(UVALUI_TextBlockStyle) == 0x000010, "Wrong alignment on UVALUI_TextBlockStyle");
-static_assert(sizeof(UVALUI_TextBlockStyle) == 0x000190, "Wrong size on UVALUI_TextBlockStyle");
-static_assert(offsetof(UVALUI_TextBlockStyle, ColorAndOpacity) == 0x000030, "Member 'UVALUI_TextBlockStyle::ColorAndOpacity' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlockStyle, Font) == 0x000048, "Member 'UVALUI_TextBlockStyle::Font' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlockStyle, StrikeBrush) == 0x0000A0, "Member 'UVALUI_TextBlockStyle::StrikeBrush' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlockStyle, ShadowOffset) == 0x000170, "Member 'UVALUI_TextBlockStyle::ShadowOffset' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlockStyle, ShadowColorAndOpacity) == 0x000180, "Member 'UVALUI_TextBlockStyle::ShadowColorAndOpacity' has a wrong offset!");
-
 // Class ValeriaUI.VALUI_TextBlock_Styled
-// 0x0080 (0x03C0 - 0x0340)
+// 0x0080 (0x03F0 - 0x0370)
 class UVALUI_TextBlock_Styled final  : public UTextBlock
 {
 public:
-	bool                                          bSupportCrossPlatform;                             // 0x0338(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3561[0x7];                                     // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVALUI_TextBlockStyle*                  Style;                                             // 0x0340(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_TextBlockStyle>> CrossPlatformStyles;                               // 0x0348(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnStyleLoadComplete;                               // 0x0398(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3562[0x18];                                    // 0x03A8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bSupportCrossPlatform;                             // 0x0368(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CEC[0x7];                                     // 0x0369(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVALUI_TextBlockStyle*                  Style;                                             // 0x0370(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_TextBlockStyle>> CrossPlatformStyles;                               // 0x0378(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, UObjectWrapper, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnStyleLoadComplete;                               // 0x03C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CED[0x18];                                    // 0x03D8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnStyleLoadComplete__DelegateSignature();
@@ -3560,46 +3613,11 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_TextBlock_Styled) == 0x000010, "Wrong alignment on UVALUI_TextBlock_Styled");
-static_assert(sizeof(UVALUI_TextBlock_Styled) == 0x0003C0, "Wrong size on UVALUI_TextBlock_Styled");
-static_assert(offsetof(UVALUI_TextBlock_Styled, bSupportCrossPlatform) == 0x000338, "Member 'UVALUI_TextBlock_Styled::bSupportCrossPlatform' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlock_Styled, Style) == 0x000340, "Member 'UVALUI_TextBlock_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlock_Styled, CrossPlatformStyles) == 0x000348, "Member 'UVALUI_TextBlock_Styled::CrossPlatformStyles' has a wrong offset!");
-static_assert(offsetof(UVALUI_TextBlock_Styled, OnStyleLoadComplete) == 0x000398, "Member 'UVALUI_TextBlock_Styled::OnStyleLoadComplete' has a wrong offset!");
-
-// Class ValeriaUI.VALUI_TileView_Styled
-// 0x0020 (0x0CB0 - 0x0C90)
-class UVALUI_TileView_Styled final  : public UVALUI_ListView_Styled
-{
-public:
-	float                                         EntryHeight;                                       // 0x0C88(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         EntryWidth;                                        // 0x0C8C(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EListItemAlignment                            TileAlignment;                                     // 0x0C90(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bWrapHorizontalNavigation;                         // 0x0C91(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3563[0x1E];                                    // 0x0C92(0x001E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void SetEntryHeight(float NewHeight);
-	void SetEntryWidth(float NewWidth);
-
-	float GetEntryHeight() const;
-	float GetEntryWidth() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"VALUI_TileView_Styled">();
-	}
-	static class UVALUI_TileView_Styled* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UVALUI_TileView_Styled>();
-	}
-};
-static_assert(alignof(UVALUI_TileView_Styled) == 0x000010, "Wrong alignment on UVALUI_TileView_Styled");
-static_assert(sizeof(UVALUI_TileView_Styled) == 0x000CB0, "Wrong size on UVALUI_TileView_Styled");
-static_assert(offsetof(UVALUI_TileView_Styled, EntryHeight) == 0x000C88, "Member 'UVALUI_TileView_Styled::EntryHeight' has a wrong offset!");
-static_assert(offsetof(UVALUI_TileView_Styled, EntryWidth) == 0x000C8C, "Member 'UVALUI_TileView_Styled::EntryWidth' has a wrong offset!");
-static_assert(offsetof(UVALUI_TileView_Styled, TileAlignment) == 0x000C90, "Member 'UVALUI_TileView_Styled::TileAlignment' has a wrong offset!");
-static_assert(offsetof(UVALUI_TileView_Styled, bWrapHorizontalNavigation) == 0x000C91, "Member 'UVALUI_TileView_Styled::bWrapHorizontalNavigation' has a wrong offset!");
+static_assert(sizeof(UVALUI_TextBlock_Styled) == 0x0003F0, "Wrong size on UVALUI_TextBlock_Styled");
+static_assert(offsetof(UVALUI_TextBlock_Styled, bSupportCrossPlatform) == 0x000368, "Member 'UVALUI_TextBlock_Styled::bSupportCrossPlatform' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlock_Styled, Style) == 0x000370, "Member 'UVALUI_TextBlock_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlock_Styled, CrossPlatformStyles) == 0x000378, "Member 'UVALUI_TextBlock_Styled::CrossPlatformStyles' has a wrong offset!");
+static_assert(offsetof(UVALUI_TextBlock_Styled, OnStyleLoadComplete) == 0x0003C8, "Member 'UVALUI_TextBlock_Styled::OnStyleLoadComplete' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_UButtonSlot
 // 0x0028 (0x0060 - 0x0038)
@@ -3609,7 +3627,7 @@ public:
 	struct FMargin                                Padding;                                           // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0048(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVerticalAlignment                            VerticalAlignment;                                 // 0x0049(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3564[0x16];                                    // 0x004A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CEE[0x16];                                    // 0x004A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetHorizontalAlignment(EHorizontalAlignment InHorizontalAlignment);
@@ -3633,27 +3651,27 @@ static_assert(offsetof(UVALUI_UButtonSlot, HorizontalAlignment) == 0x000048, "Me
 static_assert(offsetof(UVALUI_UButtonSlot, VerticalAlignment) == 0x000049, "Member 'UVALUI_UButtonSlot::VerticalAlignment' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_UButton_Styled
-// 0x04A8 (0x0610 - 0x0168)
+// 0x04A8 (0x0640 - 0x0198)
 class UVALUI_UButton_Styled final  : public UContentWidget
 {
 public:
-	class UVALUI_ButtonStyle*                     Style;                                             // 0x0168(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ColorAndOpacity;                                   // 0x0170(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           BackgroundColor;                                   // 0x0180(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EButtonClickMethod                            ClickMethod;                                       // 0x0190(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EButtonTouchMethod                            TouchMethod;                                       // 0x0191(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EButtonPressMethod                            PressMethod;                                       // 0x0192(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsFocusable;                                       // 0x0193(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3565[0x4];                                     // 0x0194(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x0198(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnButtonPressed;                                   // 0x01A8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnButtonReleased;                                  // 0x01B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnButtonHovered;                                   // 0x01C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnButtonUnhovered;                                 // 0x01D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnButtonDrop;                                      // 0x01E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3566[0x18];                                    // 0x01F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FButtonStyle                           WidgetStyleOverride;                               // 0x0210(0x03F0)(Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_3567[0x10];                                    // 0x0600(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UVALUI_ButtonStyle*                     Style;                                             // 0x0198(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ColorAndOpacity;                                   // 0x01A0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           BackgroundColor;                                   // 0x01B0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EButtonClickMethod                            ClickMethod;                                       // 0x01C0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EButtonTouchMethod                            TouchMethod;                                       // 0x01C1(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EButtonPressMethod                            PressMethod;                                       // 0x01C2(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsFocusable;                                       // 0x01C3(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CEF[0x4];                                     // 0x01C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnButtonClicked;                                   // 0x01C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnButtonPressed;                                   // 0x01D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnButtonReleased;                                  // 0x01E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnButtonHovered;                                   // 0x01F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnButtonUnhovered;                                 // 0x0208(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnButtonDrop;                                      // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CF0[0x18];                                    // 0x0228(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FButtonStyle                           WidgetStyleOverride;                               // 0x0240(0x03F0)(Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2CF1[0x10];                                    // 0x0630(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FEventReply OnMouseButtonClicked(const struct FGeometry& MyGeometry, struct FPointerEvent& InMouseEvent);
@@ -3676,21 +3694,21 @@ public:
 	}
 };
 static_assert(alignof(UVALUI_UButton_Styled) == 0x000010, "Wrong alignment on UVALUI_UButton_Styled");
-static_assert(sizeof(UVALUI_UButton_Styled) == 0x000610, "Wrong size on UVALUI_UButton_Styled");
-static_assert(offsetof(UVALUI_UButton_Styled, Style) == 0x000168, "Member 'UVALUI_UButton_Styled::Style' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, ColorAndOpacity) == 0x000170, "Member 'UVALUI_UButton_Styled::ColorAndOpacity' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, BackgroundColor) == 0x000180, "Member 'UVALUI_UButton_Styled::BackgroundColor' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, ClickMethod) == 0x000190, "Member 'UVALUI_UButton_Styled::ClickMethod' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, TouchMethod) == 0x000191, "Member 'UVALUI_UButton_Styled::TouchMethod' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, PressMethod) == 0x000192, "Member 'UVALUI_UButton_Styled::PressMethod' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, IsFocusable) == 0x000193, "Member 'UVALUI_UButton_Styled::IsFocusable' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonClicked) == 0x000198, "Member 'UVALUI_UButton_Styled::OnButtonClicked' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonPressed) == 0x0001A8, "Member 'UVALUI_UButton_Styled::OnButtonPressed' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonReleased) == 0x0001B8, "Member 'UVALUI_UButton_Styled::OnButtonReleased' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonHovered) == 0x0001C8, "Member 'UVALUI_UButton_Styled::OnButtonHovered' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonUnhovered) == 0x0001D8, "Member 'UVALUI_UButton_Styled::OnButtonUnhovered' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, OnButtonDrop) == 0x0001E8, "Member 'UVALUI_UButton_Styled::OnButtonDrop' has a wrong offset!");
-static_assert(offsetof(UVALUI_UButton_Styled, WidgetStyleOverride) == 0x000210, "Member 'UVALUI_UButton_Styled::WidgetStyleOverride' has a wrong offset!");
+static_assert(sizeof(UVALUI_UButton_Styled) == 0x000640, "Wrong size on UVALUI_UButton_Styled");
+static_assert(offsetof(UVALUI_UButton_Styled, Style) == 0x000198, "Member 'UVALUI_UButton_Styled::Style' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, ColorAndOpacity) == 0x0001A0, "Member 'UVALUI_UButton_Styled::ColorAndOpacity' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, BackgroundColor) == 0x0001B0, "Member 'UVALUI_UButton_Styled::BackgroundColor' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, ClickMethod) == 0x0001C0, "Member 'UVALUI_UButton_Styled::ClickMethod' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, TouchMethod) == 0x0001C1, "Member 'UVALUI_UButton_Styled::TouchMethod' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, PressMethod) == 0x0001C2, "Member 'UVALUI_UButton_Styled::PressMethod' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, IsFocusable) == 0x0001C3, "Member 'UVALUI_UButton_Styled::IsFocusable' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonClicked) == 0x0001C8, "Member 'UVALUI_UButton_Styled::OnButtonClicked' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonPressed) == 0x0001D8, "Member 'UVALUI_UButton_Styled::OnButtonPressed' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonReleased) == 0x0001E8, "Member 'UVALUI_UButton_Styled::OnButtonReleased' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonHovered) == 0x0001F8, "Member 'UVALUI_UButton_Styled::OnButtonHovered' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonUnhovered) == 0x000208, "Member 'UVALUI_UButton_Styled::OnButtonUnhovered' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, OnButtonDrop) == 0x000218, "Member 'UVALUI_UButton_Styled::OnButtonDrop' has a wrong offset!");
+static_assert(offsetof(UVALUI_UButton_Styled, WidgetStyleOverride) == 0x000240, "Member 'UVALUI_UButton_Styled::WidgetStyleOverride' has a wrong offset!");
 
 // Class ValeriaUI.VALUI_UIManagerHUDBase
 // 0x0000 (0x03C8 - 0x03C8)
@@ -3733,15 +3751,48 @@ public:
 static_assert(alignof(UVALUI_WidgetBlueprintLibrary) == 0x000008, "Wrong alignment on UVALUI_WidgetBlueprintLibrary");
 static_assert(sizeof(UVALUI_WidgetBlueprintLibrary) == 0x000028, "Wrong size on UVALUI_WidgetBlueprintLibrary");
 
+// Class ValeriaUI.VAL_LocalizationSettings
+// 0x00E0 (0x0118 - 0x0038)
+class UVAL_LocalizationSettings final  : public UDeveloperSettings
+{
+public:
+	class FString                                 MaintenanceUrlFormat;                              // 0x0038(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 AnnouncementUrlFormat;                             // 0x0048(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 DefaultEnvironment;                                // 0x0058(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            EnvironmentTable;                                  // 0x0068(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
+	class FString                                 DefaultLanguage;                                   // 0x00B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TMap<class FString, class FString>            LanguageTable;                                     // 0x00C8(0x0050)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"VAL_LocalizationSettings">();
+	}
+	static class UVAL_LocalizationSettings* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UVAL_LocalizationSettings>();
+	}
+};
+static_assert(alignof(UVAL_LocalizationSettings) == 0x000008, "Wrong alignment on UVAL_LocalizationSettings");
+static_assert(sizeof(UVAL_LocalizationSettings) == 0x000118, "Wrong size on UVAL_LocalizationSettings");
+static_assert(offsetof(UVAL_LocalizationSettings, MaintenanceUrlFormat) == 0x000038, "Member 'UVAL_LocalizationSettings::MaintenanceUrlFormat' has a wrong offset!");
+static_assert(offsetof(UVAL_LocalizationSettings, AnnouncementUrlFormat) == 0x000048, "Member 'UVAL_LocalizationSettings::AnnouncementUrlFormat' has a wrong offset!");
+static_assert(offsetof(UVAL_LocalizationSettings, DefaultEnvironment) == 0x000058, "Member 'UVAL_LocalizationSettings::DefaultEnvironment' has a wrong offset!");
+static_assert(offsetof(UVAL_LocalizationSettings, EnvironmentTable) == 0x000068, "Member 'UVAL_LocalizationSettings::EnvironmentTable' has a wrong offset!");
+static_assert(offsetof(UVAL_LocalizationSettings, DefaultLanguage) == 0x0000B8, "Member 'UVAL_LocalizationSettings::DefaultLanguage' has a wrong offset!");
+static_assert(offsetof(UVAL_LocalizationSettings, LanguageTable) == 0x0000C8, "Member 'UVAL_LocalizationSettings::LanguageTable' has a wrong offset!");
+
 // Class ValeriaUI.VAL_PlatformInvitationManager
-// 0x0010 (0x0330 - 0x0320)
+// 0x0048 (0x0248 - 0x0200)
 class UVAL_PlatformInvitationManager final  : public US6Core_PlatformInvitationManager
 {
 public:
-	uint8                                         Pad_3568[0x10];                                    // 0x0320(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             PlatformInvitedFailed_FTUEInProgress;              // 0x0200(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CF2[0x38];                                    // 0x0210(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnLoginFailure(const class FString& ErrorMessage, int32 ErrorCode);
+	void PlatformInvitedFailed_FTUEInProgress__DelegateSignature(class FText ErrorMessage);
 
 public:
 	static class UClass* StaticClass()
@@ -3754,24 +3805,8 @@ public:
 	}
 };
 static_assert(alignof(UVAL_PlatformInvitationManager) == 0x000008, "Wrong alignment on UVAL_PlatformInvitationManager");
-static_assert(sizeof(UVAL_PlatformInvitationManager) == 0x000330, "Wrong size on UVAL_PlatformInvitationManager");
-
-// Class ValeriaUI.WishViewWidget
-// 0x0000 (0x0528 - 0x0528)
-class UWishViewWidget final  : public UVALUI_ModalWidgetBase
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"WishViewWidget">();
-	}
-	static class UWishViewWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UWishViewWidget>();
-	}
-};
-static_assert(alignof(UWishViewWidget) == 0x000008, "Wrong alignment on UWishViewWidget");
-static_assert(sizeof(UWishViewWidget) == 0x000528, "Wrong size on UWishViewWidget");
+static_assert(sizeof(UVAL_PlatformInvitationManager) == 0x000248, "Wrong size on UVAL_PlatformInvitationManager");
+static_assert(offsetof(UVAL_PlatformInvitationManager, PlatformInvitedFailed_FTUEInProgress) == 0x000200, "Member 'UVAL_PlatformInvitationManager::PlatformInvitedFailed_FTUEInProgress' has a wrong offset!");
 
 }
 

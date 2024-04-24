@@ -17,19 +17,79 @@
 namespace SDK
 {
 
-// Function MAP_PreGame.MAP_PreGame_C.GetCharacterInventoryPreviewer
+// Function MAP_PreGame.MAP_PreGame_C.GetRenderStudioSpawnLocation
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AVAL_CharacterPreviewer*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-class AVAL_CharacterPreviewer* AMAP_PreGame_C::GetCharacterInventoryPreviewer()
+struct FVector AMAP_PreGame_C::GetRenderStudioSpawnLocation()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MAP_PreGame_C", "GetCharacterInventoryPreviewer");
+		Func = Class->GetFunction("MAP_PreGame_C", "GetRenderStudioSpawnLocation");
 
-	Params::MAP_PreGame_C_GetCharacterInventoryPreviewer Parms{};
+	Params::MAP_PreGame_C_GetRenderStudioSpawnLocation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MAP_PreGame.MAP_PreGame_C.GetLobbyCharacter
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AValeriaCharacter*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class AValeriaCharacter* AMAP_PreGame_C::GetLobbyCharacter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MAP_PreGame_C", "GetLobbyCharacter");
+
+	Params::MAP_PreGame_C_GetLobbyCharacter Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MAP_PreGame.MAP_PreGame_C.GetItemPreviewerSpawnLocation
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+struct FVector AMAP_PreGame_C::GetItemPreviewerSpawnLocation()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MAP_PreGame_C", "GetItemPreviewerSpawnLocation");
+
+	Params::MAP_PreGame_C_GetItemPreviewerSpawnLocation Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MAP_PreGame.MAP_PreGame_C.GetCharacterRenderStudio
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AVAL_CharacterRenderStudio*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+
+class AVAL_CharacterRenderStudio* AMAP_PreGame_C::GetCharacterRenderStudio()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MAP_PreGame_C", "GetCharacterRenderStudio");
+
+	Params::MAP_PreGame_C_GetCharacterRenderStudio Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -66,79 +126,19 @@ class AVAL_CharacterPreviewer* AMAP_PreGame_C::GetCharacterPreviewer(bool CallFu
 }
 
 
-// Function MAP_PreGame.MAP_PreGame_C.GetCharacterRenderStudio
+// Function MAP_PreGame.MAP_PreGame_C.GetCharacterInventoryPreviewer
 // (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AVAL_CharacterRenderStudio*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
+// class AVAL_CharacterPreviewer*          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
 
-class AVAL_CharacterRenderStudio* AMAP_PreGame_C::GetCharacterRenderStudio()
+class AVAL_CharacterPreviewer* AMAP_PreGame_C::GetCharacterInventoryPreviewer()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("MAP_PreGame_C", "GetCharacterRenderStudio");
+		Func = Class->GetFunction("MAP_PreGame_C", "GetCharacterInventoryPreviewer");
 
-	Params::MAP_PreGame_C_GetCharacterRenderStudio Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MAP_PreGame.MAP_PreGame_C.GetItemPreviewerSpawnLocation
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FVector AMAP_PreGame_C::GetItemPreviewerSpawnLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MAP_PreGame_C", "GetItemPreviewerSpawnLocation");
-
-	Params::MAP_PreGame_C_GetItemPreviewerSpawnLocation Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MAP_PreGame.MAP_PreGame_C.GetLobbyCharacter
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class AValeriaCharacter*                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash)
-
-class AValeriaCharacter* AMAP_PreGame_C::GetLobbyCharacter()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MAP_PreGame_C", "GetLobbyCharacter");
-
-	Params::MAP_PreGame_C_GetLobbyCharacter Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MAP_PreGame.MAP_PreGame_C.GetRenderStudioSpawnLocation
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-struct FVector AMAP_PreGame_C::GetRenderStudioSpawnLocation()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MAP_PreGame_C", "GetRenderStudioSpawnLocation");
-
-	Params::MAP_PreGame_C_GetRenderStudioSpawnLocation Parms{};
+	Params::MAP_PreGame_C_GetCharacterInventoryPreviewer Parms{};
 
 	UObject::ProcessEvent(Func, &Parms);
 

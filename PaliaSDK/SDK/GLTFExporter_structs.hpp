@@ -26,49 +26,6 @@ enum class EGLTFTextureImageFormat : uint8
 	EGLTFTextureImageFormat_MAX              = 3,
 };
 
-// Enum GLTFExporter.EGLTFTextureType
-// NumValues: 0x0006
-enum class EGLTFTextureType : uint8
-{
-	None                                     = 0,
-	HDR                                      = 1,
-	Normalmaps                               = 2,
-	Lightmaps                                = 4,
-	All                                      = 7,
-	EGLTFTextureType_MAX                     = 8,
-};
-
-// Enum GLTFExporter.EGLTFTextureHDREncoding
-// NumValues: 0x0003
-enum class EGLTFTextureHDREncoding : uint8
-{
-	None                                     = 0,
-	RGBM                                     = 1,
-	EGLTFTextureHDREncoding_MAX              = 2,
-};
-
-// Enum GLTFExporter.EGLTFSceneMobility
-// NumValues: 0x0006
-enum class EGLTFSceneMobility : uint8
-{
-	None                                     = 0,
-	Static                                   = 1,
-	Stationary                               = 2,
-	Movable                                  = 4,
-	All                                      = 7,
-	EGLTFSceneMobility_MAX                   = 8,
-};
-
-// Enum GLTFExporter.EGLTFVariantSetsMode
-// NumValues: 0x0004
-enum class EGLTFVariantSetsMode : uint8
-{
-	None                                     = 0,
-	Khronos                                  = 1,
-	Epic                                     = 2,
-	EGLTFVariantSetsMode_MAX                 = 3,
-};
-
 // Enum GLTFExporter.EGLTFMaterialVariantMode
 // NumValues: 0x0004
 enum class EGLTFMaterialVariantMode : uint8

@@ -11,17 +11,17 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "GameplayAbilities_structs.hpp"
 #include "Palia_structs.hpp"
 #include "Palia_classes.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GameplayAbilities_structs.hpp"
 
 
 namespace SDK
 {
 
 // BlueprintGeneratedClass GA_LoopableEvent_Base.GA_LoopableEvent_Base_C
-// 0x0108 (0x0540 - 0x0438)
+// 0x0118 (0x0550 - 0x0438)
 class UGA_LoopableEvent_Base_C : public UValeriaGASGameplayAbility
 {
 public:
@@ -38,19 +38,19 @@ public:
 	bool                                          BlockMovementOnOutro;                              // 0x0489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanLoop;                                           // 0x048A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          LoopStartsInIntro;                                 // 0x048B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BD8[0x4];                                     // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45DD[0x4];                                     // 0x048C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 GatherGameplayEffect;                              // 0x0490(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CameraShakeAmount;                                 // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CameraShakeShouldTrigger;                          // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ButtonPressed;                                     // 0x04A1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BD9[0x2];                                     // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45DE[0x2];                                     // 0x04A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         DamageOnHit;                                       // 0x04A4(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   AnimationName;                                     // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   MontageSection;                                    // 0x04B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 StaminaEffect;                                     // 0x04B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FBoxSphereBounds                       ProbeSphere;                                       // 0x04C0(0x0038)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	bool                                          EnforceYaw;                                        // 0x04F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BDA[0x7];                                     // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45DF[0x7];                                     // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        EnforcedYaw;                                       // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            GameplayEffect_AbilityLockedIn;                    // 0x0508(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FActiveGameplayEffectHandle            GameplayEffect_MovementBlocker;                    // 0x0510(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -59,12 +59,15 @@ public:
 	bool                                          RetriggerAbilityFromOutroOnInputPress;             // 0x0528(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsFinishing;                                       // 0x0529(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReLoopIfInputWithinTimeWindow;                     // 0x052A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BDB[0x5];                                     // 0x052B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_45E0[0x5];                                     // 0x052B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_TaskProxy_PlayMontageAndWaitForEvent* Async_Task;                                        // 0x0530(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          LockedIn;                                          // 0x0538(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ButtonPressToTriggerNextLoop;                      // 0x0539(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AllowTriggeringNextLoop;                           // 0x053A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldAllowMovement;                               // 0x053B(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_45E1[0x4];                                     // 0x053C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UClass*                                 SecondaryTargetType;                               // 0x0540(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          SecondaryIsNonliving;                              // 0x0548(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void Callback_InputPressed(bool CallFunc_BooleanAND_ReturnValue, int64 CallFunc_GetValeriaTimestampMs64_ReturnValue);
@@ -132,7 +135,7 @@ public:
 	}
 };
 static_assert(alignof(UGA_LoopableEvent_Base_C) == 0x000008, "Wrong alignment on UGA_LoopableEvent_Base_C");
-static_assert(sizeof(UGA_LoopableEvent_Base_C) == 0x000540, "Wrong size on UGA_LoopableEvent_Base_C");
+static_assert(sizeof(UGA_LoopableEvent_Base_C) == 0x000550, "Wrong size on UGA_LoopableEvent_Base_C");
 static_assert(offsetof(UGA_LoopableEvent_Base_C, UberGraphFrame) == 0x000438, "Member 'UGA_LoopableEvent_Base_C::UberGraphFrame' has a wrong offset!");
 static_assert(offsetof(UGA_LoopableEvent_Base_C, InAnimationName) == 0x000440, "Member 'UGA_LoopableEvent_Base_C::InAnimationName' has a wrong offset!");
 static_assert(offsetof(UGA_LoopableEvent_Base_C, InAnimationSection) == 0x000448, "Member 'UGA_LoopableEvent_Base_C::InAnimationSection' has a wrong offset!");
@@ -169,6 +172,8 @@ static_assert(offsetof(UGA_LoopableEvent_Base_C, LockedIn) == 0x000538, "Member 
 static_assert(offsetof(UGA_LoopableEvent_Base_C, ButtonPressToTriggerNextLoop) == 0x000539, "Member 'UGA_LoopableEvent_Base_C::ButtonPressToTriggerNextLoop' has a wrong offset!");
 static_assert(offsetof(UGA_LoopableEvent_Base_C, AllowTriggeringNextLoop) == 0x00053A, "Member 'UGA_LoopableEvent_Base_C::AllowTriggeringNextLoop' has a wrong offset!");
 static_assert(offsetof(UGA_LoopableEvent_Base_C, ShouldAllowMovement) == 0x00053B, "Member 'UGA_LoopableEvent_Base_C::ShouldAllowMovement' has a wrong offset!");
+static_assert(offsetof(UGA_LoopableEvent_Base_C, SecondaryTargetType) == 0x000540, "Member 'UGA_LoopableEvent_Base_C::SecondaryTargetType' has a wrong offset!");
+static_assert(offsetof(UGA_LoopableEvent_Base_C, SecondaryIsNonliving) == 0x000548, "Member 'UGA_LoopableEvent_Base_C::SecondaryIsNonliving' has a wrong offset!");
 
 }
 

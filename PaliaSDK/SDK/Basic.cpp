@@ -15,10 +15,7 @@
 
 namespace SDK
 {
-void InitGObjects()
-{
-	UObject::GObjects = reinterpret_cast<TUObjectArray*>(uintptr_t(GetModuleHandle(0)) + Offsets::GObjects);
-}
+
 class UClass* BasicFilesImpleUtils::FindClassByName(const std::string& Name)
 {
 	return UObject::FindClassFast(Name);

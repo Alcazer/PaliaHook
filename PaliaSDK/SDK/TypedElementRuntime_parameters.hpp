@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "CoreUObject_structs.hpp"
 #include "TypedElementFramework_structs.hpp"
 #include "TypedElementRuntime_structs.hpp"
-#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,7 +27,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          SelectionOptions;                                  // 0x0018(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3932[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126B[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSetLibrary_DeselectElementsFromList) == 0x000008, "Wrong alignment on TypedElementSelectionSetLibrary_DeselectElementsFromList");
 static_assert(sizeof(TypedElementSelectionSetLibrary_DeselectElementsFromList) == 0x000020, "Wrong size on TypedElementSelectionSetLibrary_DeselectElementsFromList");
@@ -44,7 +44,7 @@ public:
 	class UTypedElementSelectionSet*              SelectionSet;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionNormalizationOptions NormalizationOptions;                              // 0x0018(0x0002)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3933[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126C[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementListProxy           ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementSelectionSetLibrary_GetNormalizedElementList) == 0x000008, "Wrong alignment on TypedElementSelectionSetLibrary_GetNormalizedElementList");
@@ -61,7 +61,7 @@ struct TypedElementSelectionSetLibrary_GetNormalizedSelection final
 public:
 	class UTypedElementSelectionSet*              SelectionSet;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionNormalizationOptions NormalizationOptions;                              // 0x0008(0x0002)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3934[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126D[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementListProxy           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementSelectionSetLibrary_GetNormalizedSelection) == 0x000008, "Wrong alignment on TypedElementSelectionSetLibrary_GetNormalizedSelection");
@@ -79,7 +79,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          SelectionOptions;                                  // 0x0018(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3935[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126E[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSetLibrary_SelectElementsFromList) == 0x000008, "Wrong alignment on TypedElementSelectionSetLibrary_SelectElementsFromList");
 static_assert(sizeof(TypedElementSelectionSetLibrary_SelectElementsFromList) == 0x000020, "Wrong size on TypedElementSelectionSetLibrary_SelectElementsFromList");
@@ -97,7 +97,7 @@ public:
 	struct FScriptTypedElementListProxy           ElementList;                                       // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          SelectionOptions;                                  // 0x0018(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3936[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_126F[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSetLibrary_SetSelectionFromList) == 0x000008, "Wrong alignment on TypedElementSelectionSetLibrary_SetSelectionFromList");
 static_assert(sizeof(TypedElementSelectionSetLibrary_SetSelectionFromList) == 0x000020, "Wrong size on TypedElementSelectionSetLibrary_SetSelectionFromList");
@@ -127,7 +127,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3939[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1272[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_DeselectElement) == 0x000008, "Wrong alignment on TypedElementSelectionSet_DeselectElement");
 static_assert(sizeof(TypedElementSelectionSet_DeselectElement) == 0x000010, "Wrong size on TypedElementSelectionSet_DeselectElement");
@@ -143,7 +143,7 @@ public:
 	TArray<struct FScriptTypedElementHandle>      InElementHandles;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0010(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393A[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1273[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_DeselectElements) == 0x000008, "Wrong alignment on TypedElementSelectionSet_DeselectElements");
 static_assert(sizeof(TypedElementSelectionSet_DeselectElements) == 0x000018, "Wrong size on TypedElementSelectionSet_DeselectElements");
@@ -192,7 +192,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393B[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1274[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_SelectElement) == 0x000008, "Wrong alignment on TypedElementSelectionSet_SelectElement");
 static_assert(sizeof(TypedElementSelectionSet_SelectElement) == 0x000010, "Wrong size on TypedElementSelectionSet_SelectElement");
@@ -208,7 +208,7 @@ public:
 	TArray<struct FScriptTypedElementHandle>      InElementHandles;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0010(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393C[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1275[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_SelectElements) == 0x000008, "Wrong alignment on TypedElementSelectionSet_SelectElements");
 static_assert(sizeof(TypedElementSelectionSet_SelectElements) == 0x000018, "Wrong size on TypedElementSelectionSet_SelectElements");
@@ -224,7 +224,7 @@ public:
 	TArray<struct FScriptTypedElementHandle>      InElementHandles;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0010(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393D[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1276[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_SetSelection) == 0x000008, "Wrong alignment on TypedElementSelectionSet_SetSelection");
 static_assert(sizeof(TypedElementSelectionSet_SetSelection) == 0x000018, "Wrong size on TypedElementSelectionSet_SetSelection");
@@ -239,7 +239,7 @@ struct TypedElementSelectionSet_AllowSelectionModifiers final
 public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1277[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_AllowSelectionModifiers) == 0x000008, "Wrong alignment on TypedElementSelectionSet_AllowSelectionModifiers");
 static_assert(sizeof(TypedElementSelectionSet_AllowSelectionModifiers) == 0x000010, "Wrong size on TypedElementSelectionSet_AllowSelectionModifiers");
@@ -254,7 +254,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_393F[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1278[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_CanDeselectElement) == 0x000008, "Wrong alignment on TypedElementSelectionSet_CanDeselectElement");
 static_assert(sizeof(TypedElementSelectionSet_CanDeselectElement) == 0x000010, "Wrong size on TypedElementSelectionSet_CanDeselectElement");
@@ -270,7 +270,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3940[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1279[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_CanSelectElement) == 0x000008, "Wrong alignment on TypedElementSelectionSet_CanSelectElement");
 static_assert(sizeof(TypedElementSelectionSet_CanSelectElement) == 0x000010, "Wrong size on TypedElementSelectionSet_CanSelectElement");
@@ -285,7 +285,7 @@ struct TypedElementSelectionSet_CountSelectedElements final
 public:
 	TSubclassOf<class IInterface>                 InBaseInterfaceType;                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3941[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127A[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_CountSelectedElements) == 0x000008, "Wrong alignment on TypedElementSelectionSet_CountSelectedElements");
 static_assert(sizeof(TypedElementSelectionSet_CountSelectedElements) == 0x000010, "Wrong size on TypedElementSelectionSet_CountSelectedElements");
@@ -299,7 +299,7 @@ struct TypedElementSelectionSet_CountSelectedObjects final
 public:
 	class UClass*                                 InRequiredClass;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3942[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127B[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_CountSelectedObjects) == 0x000008, "Wrong alignment on TypedElementSelectionSet_CountSelectedObjects");
 static_assert(sizeof(TypedElementSelectionSet_CountSelectedObjects) == 0x000010, "Wrong size on TypedElementSelectionSet_CountSelectedObjects");
@@ -361,7 +361,7 @@ struct TypedElementSelectionSet_GetSelectionElement final
 public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	ETypedElementSelectionMethod                  InSelectionMethod;                                 // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3943[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementSelectionSet_GetSelectionElement) == 0x000008, "Wrong alignment on TypedElementSelectionSet_GetSelectionElement");
@@ -390,7 +390,7 @@ struct TypedElementSelectionSet_HasSelectedElements final
 public:
 	TSubclassOf<class IInterface>                 InBaseInterfaceType;                               // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3944[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_HasSelectedElements) == 0x000008, "Wrong alignment on TypedElementSelectionSet_HasSelectedElements");
 static_assert(sizeof(TypedElementSelectionSet_HasSelectedElements) == 0x000010, "Wrong size on TypedElementSelectionSet_HasSelectedElements");
@@ -404,7 +404,7 @@ struct TypedElementSelectionSet_HasSelectedObjects final
 public:
 	class UClass*                                 InRequiredClass;                                   // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3945[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127E[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_HasSelectedObjects) == 0x000008, "Wrong alignment on TypedElementSelectionSet_HasSelectedObjects");
 static_assert(sizeof(TypedElementSelectionSet_HasSelectedObjects) == 0x000010, "Wrong size on TypedElementSelectionSet_HasSelectedObjects");
@@ -419,7 +419,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementIsSelectedOptions         InSelectionOptions;                                // 0x0008(0x0001)(ConstParm, Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3946[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_127F[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionSet_IsElementSelected) == 0x000008, "Wrong alignment on TypedElementSelectionSet_IsElementSelected");
 static_assert(sizeof(TypedElementSelectionSet_IsElementSelected) == 0x000010, "Wrong size on TypedElementSelectionSet_IsElementSelected");
@@ -474,7 +474,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FScriptTypedElementHandle>      OutElementHandles;                                 // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          bAllowCreate;                                      // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3947[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1280[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementHierarchyInterface_GetChildElements) == 0x000008, "Wrong alignment on TypedElementHierarchyInterface_GetChildElements");
 static_assert(sizeof(TypedElementHierarchyInterface_GetChildElements) == 0x000020, "Wrong size on TypedElementHierarchyInterface_GetChildElements");
@@ -489,7 +489,7 @@ struct TypedElementHierarchyInterface_GetParentElement final
 public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bAllowCreate;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3948[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1281[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementHierarchyInterface_GetParentElement) == 0x000008, "Wrong alignment on TypedElementHierarchyInterface_GetParentElement");
@@ -524,6 +524,40 @@ static_assert(sizeof(TypedElementObjectInterface_GetObjectClass) == 0x000010, "W
 static_assert(offsetof(TypedElementObjectInterface_GetObjectClass, InElementHandle) == 0x000000, "Member 'TypedElementObjectInterface_GetObjectClass::InElementHandle' has a wrong offset!");
 static_assert(offsetof(TypedElementObjectInterface_GetObjectClass, ReturnValue) == 0x000008, "Member 'TypedElementObjectInterface_GetObjectClass::ReturnValue' has a wrong offset!");
 
+// Function TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomData
+// 0x0020 (0x0020 - 0x0000)
+struct TypedElementPrimitiveCustomDataInterface_SetCustomData final 
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<float>                                 CustomDataFloats;                                  // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bMarkRenderStateDirty;                             // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1282[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TypedElementPrimitiveCustomDataInterface_SetCustomData) == 0x000008, "Wrong alignment on TypedElementPrimitiveCustomDataInterface_SetCustomData");
+static_assert(sizeof(TypedElementPrimitiveCustomDataInterface_SetCustomData) == 0x000020, "Wrong size on TypedElementPrimitiveCustomDataInterface_SetCustomData");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomData, InElementHandle) == 0x000000, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomData::InElementHandle' has a wrong offset!");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomData, CustomDataFloats) == 0x000008, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomData::CustomDataFloats' has a wrong offset!");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomData, bMarkRenderStateDirty) == 0x000018, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomData::bMarkRenderStateDirty' has a wrong offset!");
+
+// Function TypedElementRuntime.TypedElementPrimitiveCustomDataInterface.SetCustomDataValue
+// 0x0018 (0x0018 - 0x0000)
+struct TypedElementPrimitiveCustomDataInterface_SetCustomDataValue final 
+{
+public:
+	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         CustomDataIndex;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         CustomDataValue;                                   // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMarkRenderStateDirty;                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1283[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue) == 0x000008, "Wrong alignment on TypedElementPrimitiveCustomDataInterface_SetCustomDataValue");
+static_assert(sizeof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue) == 0x000018, "Wrong size on TypedElementPrimitiveCustomDataInterface_SetCustomDataValue");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue, InElementHandle) == 0x000000, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomDataValue::InElementHandle' has a wrong offset!");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue, CustomDataIndex) == 0x000008, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomDataValue::CustomDataIndex' has a wrong offset!");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue, CustomDataValue) == 0x00000C, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomDataValue::CustomDataValue' has a wrong offset!");
+static_assert(offsetof(TypedElementPrimitiveCustomDataInterface_SetCustomDataValue, bMarkRenderStateDirty) == 0x000010, "Member 'TypedElementPrimitiveCustomDataInterface_SetCustomDataValue::bMarkRenderStateDirty' has a wrong offset!");
+
 // Function TypedElementRuntime.TypedElementSelectionInterface.AllowSelectionModifiers
 // 0x0020 (0x0020 - 0x0000)
 struct TypedElementSelectionInterface_AllowSelectionModifiers final 
@@ -532,7 +566,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           InSelectionSet;                                    // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3949[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1284[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_AllowSelectionModifiers) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_AllowSelectionModifiers");
 static_assert(sizeof(TypedElementSelectionInterface_AllowSelectionModifiers) == 0x000020, "Wrong size on TypedElementSelectionInterface_AllowSelectionModifiers");
@@ -548,7 +582,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394A[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1285[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_CanDeselectElement) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_CanDeselectElement");
 static_assert(sizeof(TypedElementSelectionInterface_CanDeselectElement) == 0x000010, "Wrong size on TypedElementSelectionInterface_CanDeselectElement");
@@ -564,7 +598,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0008(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394B[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1286[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_CanSelectElement) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_CanSelectElement");
 static_assert(sizeof(TypedElementSelectionInterface_CanSelectElement) == 0x000010, "Wrong size on TypedElementSelectionInterface_CanSelectElement");
@@ -581,7 +615,7 @@ public:
 	struct FScriptTypedElementListProxy           InSelectionSet;                                    // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0018(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394C[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1287[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_DeselectElement) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_DeselectElement");
 static_assert(sizeof(TypedElementSelectionInterface_DeselectElement) == 0x000020, "Wrong size on TypedElementSelectionInterface_DeselectElement");
@@ -598,7 +632,7 @@ public:
 	struct FScriptTypedElementHandle              InElementHandle;                                   // 0x0000(0x0008)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FScriptTypedElementListProxy           InCurrentSelection;                                // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	ETypedElementSelectionMethod                  InSelectionMethod;                                 // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394D[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1288[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FScriptTypedElementHandle              ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(TypedElementSelectionInterface_GetSelectionElement) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_GetSelectionElement");
@@ -617,7 +651,7 @@ public:
 	struct FScriptTypedElementListProxy           InSelectionSet;                                    // 0x0008(0x0010)(ConstParm, Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementIsSelectedOptions         InSelectionOptions;                                // 0x0018(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394E[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1289[0x6];                                     // 0x001A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_IsElementSelected) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_IsElementSelected");
 static_assert(sizeof(TypedElementSelectionInterface_IsElementSelected) == 0x000020, "Wrong size on TypedElementSelectionInterface_IsElementSelected");
@@ -635,7 +669,7 @@ public:
 	struct FScriptTypedElementListProxy           InSelectionSet;                                    // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FTypedElementSelectionOptions          InSelectionOptions;                                // 0x0018(0x0005)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_394F[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_128A[0x2];                                     // 0x001E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(TypedElementSelectionInterface_SelectElement) == 0x000008, "Wrong alignment on TypedElementSelectionInterface_SelectElement");
 static_assert(sizeof(TypedElementSelectionInterface_SelectElement) == 0x000020, "Wrong size on TypedElementSelectionInterface_SelectElement");

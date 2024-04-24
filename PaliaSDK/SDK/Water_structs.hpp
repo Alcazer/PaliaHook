@@ -67,6 +67,29 @@ enum class EWaterBrushFalloffMode : uint8
 	EWaterBrushFalloffMode_MAX               = 2,
 };
 
+// ScriptStruct Water.UnderwaterPostProcessSettings
+// 0x0700 (0x0700 - 0x0000)
+struct FUnderwaterPostProcessSettings final 
+{
+public:
+	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CFE[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         Priority;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendRadius;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         BlendWeight;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x06E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x06F0(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CFF[0x8];                                     // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FUnderwaterPostProcessSettings) == 0x000010, "Wrong alignment on FUnderwaterPostProcessSettings");
+static_assert(sizeof(FUnderwaterPostProcessSettings) == 0x000700, "Wrong size on FUnderwaterPostProcessSettings");
+static_assert(offsetof(FUnderwaterPostProcessSettings, bEnabled) == 0x000000, "Member 'FUnderwaterPostProcessSettings::bEnabled' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, Priority) == 0x000004, "Member 'FUnderwaterPostProcessSettings::Priority' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, BlendRadius) == 0x000008, "Member 'FUnderwaterPostProcessSettings::BlendRadius' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, BlendWeight) == 0x00000C, "Member 'FUnderwaterPostProcessSettings::BlendWeight' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, PostProcessSettings) == 0x000010, "Member 'FUnderwaterPostProcessSettings::PostProcessSettings' has a wrong offset!");
+static_assert(offsetof(FUnderwaterPostProcessSettings, UnderwaterPostProcessMaterial) == 0x0006F0, "Member 'FUnderwaterPostProcessSettings::UnderwaterPostProcessMaterial' has a wrong offset!");
+
 // ScriptStruct Water.SphericalPontoon
 // 0x02D0 (0x02D0 - 0x0000)
 struct FSphericalPontoon final 
@@ -76,13 +99,13 @@ public:
 	struct FVector                                RelativeLocation;                                  // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0020(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFXEnabled;                                        // 0x0024(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1678[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D00[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                LocalForce;                                        // 0x0028(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                CenterLocation;                                    // 0x0040(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1679[0x8];                                     // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D01[0x8];                                     // 0x0058(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FQuat                                  SocketRotation;                                    // 0x0060(0x0020)(BlueprintVisible, BlueprintReadOnly, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Offset;                                            // 0x0080(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167A[0x4];                                     // 0x0098(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D02[0x4];                                     // 0x0098(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         WaterHeight;                                       // 0x009C(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WaterDepth;                                        // 0x00A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ImmersionDepth;                                    // 0x00A4(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -92,9 +115,9 @@ public:
 	struct FVector                                WaterVelocity;                                     // 0x00F0(0x0018)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         WaterBodyIndex;                                    // 0x0108(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsInWater;                                        // 0x010C(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167B[0x1AB];                                   // 0x010D(0x01AB)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D03[0x1AB];                                   // 0x010D(0x01AB)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWaterBodyComponent*                    CurrentWaterBodyComponent;                         // 0x02B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167C[0x10];                                    // 0x02C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D04[0x10];                                    // 0x02C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FSphericalPontoon) == 0x000010, "Wrong alignment on FSphericalPontoon");
 static_assert(sizeof(FSphericalPontoon) == 0x0002D0, "Wrong size on FSphericalPontoon");
@@ -117,29 +140,6 @@ static_assert(offsetof(FSphericalPontoon, WaterBodyIndex) == 0x000108, "Member '
 static_assert(offsetof(FSphericalPontoon, bIsInWater) == 0x00010C, "Member 'FSphericalPontoon::bIsInWater' has a wrong offset!");
 static_assert(offsetof(FSphericalPontoon, CurrentWaterBodyComponent) == 0x0002B8, "Member 'FSphericalPontoon::CurrentWaterBodyComponent' has a wrong offset!");
 
-// ScriptStruct Water.WaterBodyWeightmapSettings
-// 0x0020 (0x0020 - 0x0000)
-struct FWaterBodyWeightmapSettings final 
-{
-public:
-	float                                         FalloffWidth;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EdgeOffset;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTexture2D*                             ModulationTexture;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TextureTiling;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TextureInfluence;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Midpoint;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         FinalOpacity;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FWaterBodyWeightmapSettings) == 0x000008, "Wrong alignment on FWaterBodyWeightmapSettings");
-static_assert(sizeof(FWaterBodyWeightmapSettings) == 0x000020, "Wrong size on FWaterBodyWeightmapSettings");
-static_assert(offsetof(FWaterBodyWeightmapSettings, FalloffWidth) == 0x000000, "Member 'FWaterBodyWeightmapSettings::FalloffWidth' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, EdgeOffset) == 0x000004, "Member 'FWaterBodyWeightmapSettings::EdgeOffset' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, ModulationTexture) == 0x000008, "Member 'FWaterBodyWeightmapSettings::ModulationTexture' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, TextureTiling) == 0x000010, "Member 'FWaterBodyWeightmapSettings::TextureTiling' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, TextureInfluence) == 0x000014, "Member 'FWaterBodyWeightmapSettings::TextureInfluence' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, Midpoint) == 0x000018, "Member 'FWaterBodyWeightmapSettings::Midpoint' has a wrong offset!");
-static_assert(offsetof(FWaterBodyWeightmapSettings, FinalOpacity) == 0x00001C, "Member 'FWaterBodyWeightmapSettings::FinalOpacity' has a wrong offset!");
-
 // ScriptStruct Water.BuoyancyData
 // 0x0090 (0x0090 - 0x0000)
 struct FBuoyancyData final 
@@ -147,7 +147,7 @@ struct FBuoyancyData final
 public:
 	TArray<struct FSphericalPontoon>              Pontoons;                                          // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bCenterPontoonsOnCOM;                              // 0x0010(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167D[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D05[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BuoyancyCoefficient;                               // 0x0014(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BuoyancyDamp;                                      // 0x0018(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BuoyancyDamp2;                                     // 0x001C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -156,13 +156,13 @@ public:
 	float                                         BuoyancyRampMax;                                   // 0x0028(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxBuoyantForce;                                   // 0x002C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyDragForcesInWater;                           // 0x0030(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167E[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D06[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DragCoefficient;                                   // 0x0034(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DragCoefficient2;                                  // 0x0038(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AngularDragCoefficient;                            // 0x003C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxDragSpeed;                                      // 0x0040(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyRiverForces;                                 // 0x0044(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_167F[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D07[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         RiverPontoonIndex;                                 // 0x0048(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WaterShorePushFactor;                              // 0x004C(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RiverTraversalPathWidth;                           // 0x0050(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -172,7 +172,7 @@ public:
 	bool                                          bAlwaysAllowLateralPush;                           // 0x0060(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowCurrentWhenMovingFastUpstream;               // 0x0061(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyDownstreamAngularRotation;                   // 0x0062(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1680[0x5];                                     // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D08[0x5];                                     // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                DownstreamAxisOfRotation;                          // 0x0068(0x0018)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DownstreamRotationStrength;                        // 0x0080(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DownstreamRotationStiffness;                       // 0x0084(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -211,18 +211,57 @@ static_assert(offsetof(FBuoyancyData, DownstreamRotationStiffness) == 0x000084, 
 static_assert(offsetof(FBuoyancyData, DownstreamRotationAngularDamping) == 0x000088, "Member 'FBuoyancyData::DownstreamRotationAngularDamping' has a wrong offset!");
 static_assert(offsetof(FBuoyancyData, DownstreamMaxAcceleration) == 0x00008C, "Member 'FBuoyancyData::DownstreamMaxAcceleration' has a wrong offset!");
 
+// ScriptStruct Water.WaterBodyStaticMeshSettings
+// 0x0010 (0x0010 - 0x0000)
+struct FWaterBodyStaticMeshSettings final 
+{
+public:
+	bool                                          bEnableWaterBodyStaticMesh;                        // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSectionWaterBodyStaticMesh;                       // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D09[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        SectionSize;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWaterBodyStaticMeshSettings) == 0x000008, "Wrong alignment on FWaterBodyStaticMeshSettings");
+static_assert(sizeof(FWaterBodyStaticMeshSettings) == 0x000010, "Wrong size on FWaterBodyStaticMeshSettings");
+static_assert(offsetof(FWaterBodyStaticMeshSettings, bEnableWaterBodyStaticMesh) == 0x000000, "Member 'FWaterBodyStaticMeshSettings::bEnableWaterBodyStaticMesh' has a wrong offset!");
+static_assert(offsetof(FWaterBodyStaticMeshSettings, bSectionWaterBodyStaticMesh) == 0x000001, "Member 'FWaterBodyStaticMeshSettings::bSectionWaterBodyStaticMesh' has a wrong offset!");
+static_assert(offsetof(FWaterBodyStaticMeshSettings, SectionSize) == 0x000008, "Member 'FWaterBodyStaticMeshSettings::SectionSize' has a wrong offset!");
+
+// ScriptStruct Water.WaterBodyWeightmapSettings
+// 0x0020 (0x0020 - 0x0000)
+struct FWaterBodyWeightmapSettings final 
+{
+public:
+	float                                         FalloffWidth;                                      // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EdgeOffset;                                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTexture2D*                             ModulationTexture;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TextureTiling;                                     // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TextureInfluence;                                  // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Midpoint;                                          // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         FinalOpacity;                                      // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FWaterBodyWeightmapSettings) == 0x000008, "Wrong alignment on FWaterBodyWeightmapSettings");
+static_assert(sizeof(FWaterBodyWeightmapSettings) == 0x000020, "Wrong size on FWaterBodyWeightmapSettings");
+static_assert(offsetof(FWaterBodyWeightmapSettings, FalloffWidth) == 0x000000, "Member 'FWaterBodyWeightmapSettings::FalloffWidth' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, EdgeOffset) == 0x000004, "Member 'FWaterBodyWeightmapSettings::EdgeOffset' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, ModulationTexture) == 0x000008, "Member 'FWaterBodyWeightmapSettings::ModulationTexture' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, TextureTiling) == 0x000010, "Member 'FWaterBodyWeightmapSettings::TextureTiling' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, TextureInfluence) == 0x000014, "Member 'FWaterBodyWeightmapSettings::TextureInfluence' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, Midpoint) == 0x000018, "Member 'FWaterBodyWeightmapSettings::Midpoint' has a wrong offset!");
+static_assert(offsetof(FWaterBodyWeightmapSettings, FinalOpacity) == 0x00001C, "Member 'FWaterBodyWeightmapSettings::FinalOpacity' has a wrong offset!");
+
 // ScriptStruct Water.WaterCurveSettings
 // 0x0020 (0x0020 - 0x0000)
 struct FWaterCurveSettings final 
 {
 public:
 	bool                                          bUseCurveChannel;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1681[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            ElevationCurveAsset;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelEdgeOffset;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelDepth;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CurveRampWidth;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1682[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0B[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaterCurveSettings) == 0x000008, "Wrong alignment on FWaterCurveSettings");
 static_assert(sizeof(FWaterCurveSettings) == 0x000020, "Wrong size on FWaterCurveSettings");
@@ -240,7 +279,7 @@ public:
 	float                                         WaveLength;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Amplitude;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Steepness;                                         // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1683[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Direction;                                         // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              WaveVector;                                        // 0x0028(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WaveSpeed;                                         // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -270,7 +309,7 @@ public:
 	float                                         MainDirection;                                     // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SpreadAngle;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUniformSpread;                                    // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1684[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0D[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGerstnerWaveOctave) == 0x000004, "Wrong alignment on FGerstnerWaveOctave");
 static_assert(sizeof(FGerstnerWaveOctave) == 0x000014, "Wrong size on FGerstnerWaveOctave");
@@ -280,36 +319,13 @@ static_assert(offsetof(FGerstnerWaveOctave, MainDirection) == 0x000008, "Member 
 static_assert(offsetof(FGerstnerWaveOctave, SpreadAngle) == 0x00000C, "Member 'FGerstnerWaveOctave::SpreadAngle' has a wrong offset!");
 static_assert(offsetof(FGerstnerWaveOctave, bUniformSpread) == 0x000010, "Member 'FGerstnerWaveOctave::bUniformSpread' has a wrong offset!");
 
-// ScriptStruct Water.UnderwaterPostProcessSettings
-// 0x0700 (0x0700 - 0x0000)
-struct FUnderwaterPostProcessSettings final 
-{
-public:
-	bool                                          bEnabled;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1685[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         Priority;                                          // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendRadius;                                       // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         BlendWeight;                                       // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FPostProcessSettings                   PostProcessSettings;                               // 0x0010(0x06E0)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     UnderwaterPostProcessMaterial;                     // 0x06F0(0x0008)(ZeroConstructor, Deprecated, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1686[0x8];                                     // 0x06F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FUnderwaterPostProcessSettings) == 0x000010, "Wrong alignment on FUnderwaterPostProcessSettings");
-static_assert(sizeof(FUnderwaterPostProcessSettings) == 0x000700, "Wrong size on FUnderwaterPostProcessSettings");
-static_assert(offsetof(FUnderwaterPostProcessSettings, bEnabled) == 0x000000, "Member 'FUnderwaterPostProcessSettings::bEnabled' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, Priority) == 0x000004, "Member 'FUnderwaterPostProcessSettings::Priority' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, BlendRadius) == 0x000008, "Member 'FUnderwaterPostProcessSettings::BlendRadius' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, BlendWeight) == 0x00000C, "Member 'FUnderwaterPostProcessSettings::BlendWeight' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, PostProcessSettings) == 0x000010, "Member 'FUnderwaterPostProcessSettings::PostProcessSettings' has a wrong offset!");
-static_assert(offsetof(FUnderwaterPostProcessSettings, UnderwaterPostProcessMaterial) == 0x0006F0, "Member 'FUnderwaterPostProcessSettings::UnderwaterPostProcessMaterial' has a wrong offset!");
-
 // ScriptStruct Water.WaterFalloffSettings
 // 0x0014 (0x0014 - 0x0000)
 struct FWaterFalloffSettings final 
 {
 public:
 	EWaterBrushFalloffMode                        FalloffMode;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1687[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         FalloffAngle;                                      // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FalloffWidth;                                      // 0x0008(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EdgeOffset;                                        // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -329,7 +345,7 @@ struct FWaterBrushEffectBlurring final
 {
 public:
 	bool                                          bBlurShape;                                        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1688[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Radius;                                            // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FWaterBrushEffectBlurring) == 0x000004, "Wrong alignment on FWaterBrushEffectBlurring");
@@ -417,7 +433,7 @@ public:
 	struct FWaterBrushEffectDisplacement          Displacement;                                      // 0x0018(0x0028)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWaterBrushEffectSmoothBlending        SmoothBlending;                                    // 0x0040(0x0008)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWaterBrushEffectTerracing             Terracing;                                         // 0x0048(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1689[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D10[0x4];                                     // 0x005C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaterBrushEffects) == 0x000008, "Wrong alignment on FWaterBrushEffects");
 static_assert(sizeof(FWaterBrushEffects) == 0x000060, "Wrong size on FWaterBrushEffects");
@@ -434,11 +450,11 @@ struct FWaterBodyHeightmapSettings final
 public:
 	EWaterBrushBlendType                          BlendMode;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInvertShape;                                      // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168A[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D11[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWaterFalloffSettings                  FalloffSettings;                                   // 0x0004(0x0014)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	struct FWaterBrushEffects                     Effects;                                           // 0x0018(0x0060)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         Priority;                                          // 0x0078(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168B[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D12[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaterBodyHeightmapSettings) == 0x000008, "Wrong alignment on FWaterBodyHeightmapSettings");
 static_assert(sizeof(FWaterBodyHeightmapSettings) == 0x000080, "Wrong size on FWaterBodyHeightmapSettings");
@@ -454,12 +470,12 @@ struct FWaterBrushEffectCurves final
 {
 public:
 	bool                                          bUseCurveChannel;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D13[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCurveFloat*                            ElevationCurveAsset;                               // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelEdgeOffset;                                 // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ChannelDepth;                                      // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         CurveRampWidth;                                    // 0x0018(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_168D[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D14[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaterBrushEffectCurves) == 0x000008, "Wrong alignment on FWaterBrushEffectCurves");
 static_assert(sizeof(FWaterBrushEffectCurves) == 0x000020, "Wrong size on FWaterBrushEffectCurves");

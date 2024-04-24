@@ -46,10 +46,10 @@ static_assert(sizeof(UTypedElementSelectionSetLibrary) == 0x000028, "Wrong size 
 class UTypedElementSelectionSet final  : public UObject
 {
 public:
-	uint8                                         Pad_3937[0x800];                                   // 0x0028(0x0800)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1270[0x800];                                   // 0x0028(0x0800)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnPreSelectionChange;                              // 0x0828(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnSelectionChange;                                 // 0x0838(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3938[0x50];                                    // 0x0848(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1271[0x50];                                    // 0x0848(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool ClearSelection(struct FTypedElementSelectionOptions& InSelectionOptions);
@@ -155,6 +155,27 @@ public:
 };
 static_assert(alignof(ITypedElementObjectInterface) == 0x000008, "Wrong alignment on ITypedElementObjectInterface");
 static_assert(sizeof(ITypedElementObjectInterface) == 0x000028, "Wrong size on ITypedElementObjectInterface");
+
+// Class TypedElementRuntime.TypedElementPrimitiveCustomDataInterface
+// 0x0000 (0x0028 - 0x0028)
+class ITypedElementPrimitiveCustomDataInterface final  : public IInterface
+{
+public:
+	void SetCustomData(struct FScriptTypedElementHandle& InElementHandle, TArray<float>& CustomDataFloats, bool bMarkRenderStateDirty);
+	void SetCustomDataValue(struct FScriptTypedElementHandle& InElementHandle, int32 CustomDataIndex, float CustomDataValue, bool bMarkRenderStateDirty);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementPrimitiveCustomDataInterface">();
+	}
+	static class ITypedElementPrimitiveCustomDataInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ITypedElementPrimitiveCustomDataInterface>();
+	}
+};
+static_assert(alignof(ITypedElementPrimitiveCustomDataInterface) == 0x000008, "Wrong alignment on ITypedElementPrimitiveCustomDataInterface");
+static_assert(sizeof(ITypedElementPrimitiveCustomDataInterface) == 0x000028, "Wrong size on ITypedElementPrimitiveCustomDataInterface");
 
 // Class TypedElementRuntime.TypedElementSelectionInterface
 // 0x0000 (0x0028 - 0x0028)

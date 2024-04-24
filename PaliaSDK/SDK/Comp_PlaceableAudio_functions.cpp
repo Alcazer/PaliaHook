@@ -127,7 +127,7 @@ void UComp_PlaceableAudio_C::EnableSpatialAudio(bool Enable)
 // bool                                    K2Node_CustomEvent_Enable                              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(class AHousingOwnershipActor* AHousingOwnershipActor, int32 NewId)>K2Node_CreateDelegate_OutputDelegate                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void(class AHousingOwnershipActor* HousingOwnershipActor, int32 NewId)>K2Node_CreateDelegate_OutputDelegate                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue_3                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAkPortalComponent*               CallFunc_Array_Get_Item                                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue_4                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -137,13 +137,13 @@ void UComp_PlaceableAudio_C::EnableSpatialAudio(bool Enable)
 // TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
 // bool                                    CallFunc_IsValid_ReturnValue_5                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_PostAssociatedAkEvent_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AHousingOwnershipActor*           K2Node_CustomEvent_AHousingOwnershipActor              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AHousingOwnershipActor*           K2Node_CustomEvent_HousingOwnershipActor               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   K2Node_CustomEvent_NewId                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TDelegate<void(class ULevelerComponent* Leveler)>K2Node_CreateDelegate_OutputDelegate_1                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue_6                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Am_I_Visible_On_Plot_ReturnValue_1            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UComp_PlaceableAudio_C::ExecuteUbergraph_Comp_PlaceableAudio(int32 EntryPoint, int32 Temp_int_Array_Index_Variable, bool CallFunc_IsValid_ReturnValue, class ULevelerComponent* K2Node_CustomEvent_Leveler, class AActor* CallFunc_GetOwner_ReturnValue, bool CallFunc_IsAtMaxLevel_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class APawn* CallFunc_GetPlayerPawn_ReturnValue, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character, bool K2Node_DynamicCast_bSuccess, EHousingPermissionLevel CallFunc_GetOccupiedHousingOwnershipActor_permissionLevel, class AHousingOwnershipActor* CallFunc_GetOccupiedHousingOwnershipActor_ReturnValue, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_BooleanOR_ReturnValue, bool CallFunc_Am_I_Visible_On_Plot_ReturnValue, bool CallFunc_IsAtMaxLevel_ReturnValue_1, bool CallFunc_BooleanAND_ReturnValue, bool CallFunc_BooleanOR_ReturnValue_1, bool K2Node_CustomEvent_Enable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, TDelegate<void(class AHousingOwnershipActor* AHousingOwnershipActor, int32 NewId)> K2Node_CreateDelegate_OutputDelegate, bool CallFunc_IsValid_ReturnValue_3, class UAkPortalComponent* CallFunc_Array_Get_Item, bool CallFunc_IsValid_ReturnValue_4, int32 CallFunc_Array_Length_ReturnValue, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, bool CallFunc_Less_IntInt_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, bool CallFunc_IsValid_ReturnValue_5, int32 CallFunc_PostAssociatedAkEvent_ReturnValue, class AHousingOwnershipActor* K2Node_CustomEvent_AHousingOwnershipActor, int32 K2Node_CustomEvent_NewId, TDelegate<void(class ULevelerComponent* Leveler)> K2Node_CreateDelegate_OutputDelegate_1, bool CallFunc_IsValid_ReturnValue_6, bool CallFunc_Am_I_Visible_On_Plot_ReturnValue_1)
+void UComp_PlaceableAudio_C::ExecuteUbergraph_Comp_PlaceableAudio(int32 EntryPoint, int32 Temp_int_Array_Index_Variable, bool CallFunc_IsValid_ReturnValue, class ULevelerComponent* K2Node_CustomEvent_Leveler, class AActor* CallFunc_GetOwner_ReturnValue, bool CallFunc_IsAtMaxLevel_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class APawn* CallFunc_GetPlayerPawn_ReturnValue, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character, bool K2Node_DynamicCast_bSuccess, EHousingPermissionLevel CallFunc_GetOccupiedHousingOwnershipActor_permissionLevel, class AHousingOwnershipActor* CallFunc_GetOccupiedHousingOwnershipActor_ReturnValue, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_BooleanOR_ReturnValue, bool CallFunc_Am_I_Visible_On_Plot_ReturnValue, bool CallFunc_IsAtMaxLevel_ReturnValue_1, bool CallFunc_BooleanAND_ReturnValue, bool CallFunc_BooleanOR_ReturnValue_1, bool K2Node_CustomEvent_Enable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, TDelegate<void(class AHousingOwnershipActor* HousingOwnershipActor, int32 NewId)> K2Node_CreateDelegate_OutputDelegate, bool CallFunc_IsValid_ReturnValue_3, class UAkPortalComponent* CallFunc_Array_Get_Item, bool CallFunc_IsValid_ReturnValue_4, int32 CallFunc_Array_Length_ReturnValue, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, bool CallFunc_Less_IntInt_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, bool CallFunc_IsValid_ReturnValue_5, int32 CallFunc_PostAssociatedAkEvent_ReturnValue, class AHousingOwnershipActor* K2Node_CustomEvent_HousingOwnershipActor, int32 K2Node_CustomEvent_NewId, TDelegate<void(class ULevelerComponent* Leveler)> K2Node_CreateDelegate_OutputDelegate_1, bool CallFunc_IsValid_ReturnValue_6, bool CallFunc_Am_I_Visible_On_Plot_ReturnValue_1)
 {
 	static class UFunction* Func = nullptr;
 
@@ -184,7 +184,7 @@ void UComp_PlaceableAudio_C::ExecuteUbergraph_Comp_PlaceableAudio(int32 EntryPoi
 	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
 	Parms.CallFunc_IsValid_ReturnValue_5 = CallFunc_IsValid_ReturnValue_5;
 	Parms.CallFunc_PostAssociatedAkEvent_ReturnValue = CallFunc_PostAssociatedAkEvent_ReturnValue;
-	Parms.K2Node_CustomEvent_AHousingOwnershipActor = K2Node_CustomEvent_AHousingOwnershipActor;
+	Parms.K2Node_CustomEvent_HousingOwnershipActor = K2Node_CustomEvent_HousingOwnershipActor;
 	Parms.K2Node_CustomEvent_NewId = K2Node_CustomEvent_NewId;
 	Parms.K2Node_CreateDelegate_OutputDelegate_1 = K2Node_CreateDelegate_OutputDelegate_1;
 	Parms.CallFunc_IsValid_ReturnValue_6 = CallFunc_IsValid_ReturnValue_6;
@@ -197,10 +197,10 @@ void UComp_PlaceableAudio_C::ExecuteUbergraph_Comp_PlaceableAudio(int32 EntryPoi
 // Function Comp_PlaceableAudio.Comp_PlaceableAudio_C.HandleOnActiveHousingSlotChanged
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AHousingOwnershipActor*           AHousingOwnershipActor                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AHousingOwnershipActor*           HousingOwnershipActor                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   NewId                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UComp_PlaceableAudio_C::HandleOnActiveHousingSlotChanged(class AHousingOwnershipActor* AHousingOwnershipActor, int32 NewId)
+void UComp_PlaceableAudio_C::HandleOnActiveHousingSlotChanged(class AHousingOwnershipActor* HousingOwnershipActor, int32 NewId)
 {
 	static class UFunction* Func = nullptr;
 
@@ -209,7 +209,7 @@ void UComp_PlaceableAudio_C::HandleOnActiveHousingSlotChanged(class AHousingOwne
 
 	Params::Comp_PlaceableAudio_C_HandleOnActiveHousingSlotChanged Parms{};
 
-	Parms.AHousingOwnershipActor = AHousingOwnershipActor;
+	Parms.HousingOwnershipActor = HousingOwnershipActor;
 	Parms.NewId = NewId;
 
 	UObject::ProcessEvent(Func, &Parms);
@@ -658,9 +658,10 @@ void UComp_PlaceableAudio_C::StopPersistSoundLoop(class UAkComponent* Component,
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // class UAkCulledComponent*               Component                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   FadeDuration                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Set_Remove_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UComp_PlaceableAudio_C::StopPersistSoundLoopCulled(class UAkCulledComponent* Component, bool CallFunc_Set_Remove_ReturnValue)
+void UComp_PlaceableAudio_C::StopPersistSoundLoopCulled(class UAkCulledComponent* Component, int32 FadeDuration, bool CallFunc_Set_Remove_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
@@ -670,6 +671,7 @@ void UComp_PlaceableAudio_C::StopPersistSoundLoopCulled(class UAkCulledComponent
 	Params::Comp_PlaceableAudio_C_StopPersistSoundLoopCulled Parms{};
 
 	Parms.Component = Component;
+	Parms.FadeDuration = FadeDuration;
 	Parms.CallFunc_Set_Remove_ReturnValue = CallFunc_Set_Remove_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);

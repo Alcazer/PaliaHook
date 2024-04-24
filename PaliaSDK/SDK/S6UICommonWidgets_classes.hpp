@@ -11,65 +11,25 @@
 #include "Basic.hpp"
 
 #include "S6UICommonWidgets_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "SlateCore_structs.hpp"
-#include "DeveloperSettings_classes.hpp"
+#include "Slate_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
+#include "DeveloperSettings_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "Slate_structs.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class S6UICommonWidgets.S6UI_EditableRichTextDecorator
-// 0x0000 (0x0028 - 0x0028)
-class US6UI_EditableRichTextDecorator : public UObject
-{
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"S6UI_EditableRichTextDecorator">();
-	}
-	static class US6UI_EditableRichTextDecorator* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<US6UI_EditableRichTextDecorator>();
-	}
-};
-static_assert(alignof(US6UI_EditableRichTextDecorator) == 0x000008, "Wrong alignment on US6UI_EditableRichTextDecorator");
-static_assert(sizeof(US6UI_EditableRichTextDecorator) == 0x000028, "Wrong size on US6UI_EditableRichTextDecorator");
-
-// Class S6UICommonWidgets.S6UI_EditableRichTextDecorator_Image
-// 0x0038 (0x0060 - 0x0028)
-class US6UI_EditableRichTextDecorator_Image : public US6UI_EditableRichTextDecorator
-{
-public:
-	TSoftObjectPtr<class UDataTable>              ImageSet;                                          // 0x0028(0x0030)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USlateBrushAsset*                       ImageBrushAsset;                                   // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"S6UI_EditableRichTextDecorator_Image">();
-	}
-	static class US6UI_EditableRichTextDecorator_Image* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<US6UI_EditableRichTextDecorator_Image>();
-	}
-};
-static_assert(alignof(US6UI_EditableRichTextDecorator_Image) == 0x000008, "Wrong alignment on US6UI_EditableRichTextDecorator_Image");
-static_assert(sizeof(US6UI_EditableRichTextDecorator_Image) == 0x000060, "Wrong size on US6UI_EditableRichTextDecorator_Image");
-static_assert(offsetof(US6UI_EditableRichTextDecorator_Image, ImageSet) == 0x000028, "Member 'US6UI_EditableRichTextDecorator_Image::ImageSet' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichTextDecorator_Image, ImageBrushAsset) == 0x000058, "Member 'US6UI_EditableRichTextDecorator_Image::ImageBrushAsset' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_Settings
 // 0x01D8 (0x0210 - 0x0038)
 class US6UI_Settings final  : public UDeveloperSettings
 {
 public:
-	uint8                                         Pad_18F8[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C14[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6UI_BackgroundBlurSettings           BackgroundBlurSettings;                            // 0x0040(0x0100)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            BackgroundFallbackImage;                           // 0x0140(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 
@@ -89,14 +49,14 @@ static_assert(offsetof(US6UI_Settings, BackgroundBlurSettings) == 0x000040, "Mem
 static_assert(offsetof(US6UI_Settings, BackgroundFallbackImage) == 0x000140, "Member 'US6UI_Settings::BackgroundFallbackImage' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_BackgroundBlur
-// 0x0120 (0x03B0 - 0x0290)
+// 0x0120 (0x03E0 - 0x02C0)
 class US6UI_BackgroundBlur final  : public UBackgroundBlur
 {
 public:
-	bool                                          bOverrideBlurSettings;                             // 0x0290(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_18F9[0xF];                                     // 0x0291(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FS6UI_BackgroundBlurSettings           BlurSettings;                                      // 0x02A0(0x0100)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_18FA[0x10];                                    // 0x03A0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bOverrideBlurSettings;                             // 0x02C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C15[0xF];                                     // 0x02C1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FS6UI_BackgroundBlurSettings           BlurSettings;                                      // 0x02D0(0x0100)(Edit, BlueprintVisible, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C16[0x10];                                    // 0x03D0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -109,9 +69,9 @@ public:
 	}
 };
 static_assert(alignof(US6UI_BackgroundBlur) == 0x000010, "Wrong alignment on US6UI_BackgroundBlur");
-static_assert(sizeof(US6UI_BackgroundBlur) == 0x0003B0, "Wrong size on US6UI_BackgroundBlur");
-static_assert(offsetof(US6UI_BackgroundBlur, bOverrideBlurSettings) == 0x000290, "Member 'US6UI_BackgroundBlur::bOverrideBlurSettings' has a wrong offset!");
-static_assert(offsetof(US6UI_BackgroundBlur, BlurSettings) == 0x0002A0, "Member 'US6UI_BackgroundBlur::BlurSettings' has a wrong offset!");
+static_assert(sizeof(US6UI_BackgroundBlur) == 0x0003E0, "Wrong size on US6UI_BackgroundBlur");
+static_assert(offsetof(US6UI_BackgroundBlur, bOverrideBlurSettings) == 0x0002C0, "Member 'US6UI_BackgroundBlur::bOverrideBlurSettings' has a wrong offset!");
+static_assert(offsetof(US6UI_BackgroundBlur, BlurSettings) == 0x0002D0, "Member 'US6UI_BackgroundBlur::BlurSettings' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_CommonButtonStyle
 // 0x0050 (0x0800 - 0x07B0)
@@ -119,7 +79,7 @@ class US6UI_CommonButtonStyle : public UCommonButtonStyle
 {
 public:
 	bool                                          bDropShadow;                                       // 0x07B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18FB[0x3];                                     // 0x07B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C17[0x3];                                     // 0x07B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         DropShadowCornerRadius;                            // 0x07B4(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ShadowOffset_Normal;                               // 0x07B8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ShadowOffset_Pressed;                              // 0x07C8(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -150,19 +110,19 @@ static_assert(offsetof(US6UI_CommonButtonStyle, ShadowColor_Normal) == 0x0007E0,
 static_assert(offsetof(US6UI_CommonButtonStyle, ShadowColor_Pressed) == 0x0007F0, "Member 'US6UI_CommonButtonStyle::ShadowColor_Pressed' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_CommonButtonInternalBase
-// 0x0070 (0x06D0 - 0x0660)
+// 0x0070 (0x0700 - 0x0690)
 class US6UI_CommonButtonInternalBase final  : public UCommonButtonInternalBase
 {
 public:
-	float                                         DropShadowCornerRadius;                            // 0x0658(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_18FC[0x4];                                     // 0x065C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              ShadowOffset_Normal;                               // 0x0660(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FVector2D                              ShadowOffset_Pressed;                              // 0x0670(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ShadowHardness_Normal;                             // 0x0680(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ShadowHardness_Pressed;                            // 0x0684(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FLinearColor                           ShadowColor_Normal;                                // 0x0688(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FLinearColor                           ShadowColor_Pressed;                               // 0x0698(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_18FD[0x28];                                    // 0x06A8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	float                                         DropShadowCornerRadius;                            // 0x0688(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C18[0x4];                                     // 0x068C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ShadowOffset_Normal;                               // 0x0690(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FVector2D                              ShadowOffset_Pressed;                              // 0x06A0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ShadowHardness_Normal;                             // 0x06B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ShadowHardness_Pressed;                            // 0x06B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FLinearColor                           ShadowColor_Normal;                                // 0x06B8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FLinearColor                           ShadowColor_Pressed;                               // 0x06C8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_2C19[0x28];                                    // 0x06D8(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -175,25 +135,25 @@ public:
 	}
 };
 static_assert(alignof(US6UI_CommonButtonInternalBase) == 0x000010, "Wrong alignment on US6UI_CommonButtonInternalBase");
-static_assert(sizeof(US6UI_CommonButtonInternalBase) == 0x0006D0, "Wrong size on US6UI_CommonButtonInternalBase");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, DropShadowCornerRadius) == 0x000658, "Member 'US6UI_CommonButtonInternalBase::DropShadowCornerRadius' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowOffset_Normal) == 0x000660, "Member 'US6UI_CommonButtonInternalBase::ShadowOffset_Normal' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowOffset_Pressed) == 0x000670, "Member 'US6UI_CommonButtonInternalBase::ShadowOffset_Pressed' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowHardness_Normal) == 0x000680, "Member 'US6UI_CommonButtonInternalBase::ShadowHardness_Normal' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowHardness_Pressed) == 0x000684, "Member 'US6UI_CommonButtonInternalBase::ShadowHardness_Pressed' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowColor_Normal) == 0x000688, "Member 'US6UI_CommonButtonInternalBase::ShadowColor_Normal' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowColor_Pressed) == 0x000698, "Member 'US6UI_CommonButtonInternalBase::ShadowColor_Pressed' has a wrong offset!");
+static_assert(sizeof(US6UI_CommonButtonInternalBase) == 0x000700, "Wrong size on US6UI_CommonButtonInternalBase");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, DropShadowCornerRadius) == 0x000688, "Member 'US6UI_CommonButtonInternalBase::DropShadowCornerRadius' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowOffset_Normal) == 0x000690, "Member 'US6UI_CommonButtonInternalBase::ShadowOffset_Normal' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowOffset_Pressed) == 0x0006A0, "Member 'US6UI_CommonButtonInternalBase::ShadowOffset_Pressed' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowHardness_Normal) == 0x0006B0, "Member 'US6UI_CommonButtonInternalBase::ShadowHardness_Normal' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowHardness_Pressed) == 0x0006B4, "Member 'US6UI_CommonButtonInternalBase::ShadowHardness_Pressed' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowColor_Normal) == 0x0006B8, "Member 'US6UI_CommonButtonInternalBase::ShadowColor_Normal' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButtonInternalBase, ShadowColor_Pressed) == 0x0006C8, "Member 'US6UI_CommonButtonInternalBase::ShadowColor_Pressed' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_CommonButton_Styled
-// 0x0030 (0x1520 - 0x14F0)
+// 0x0030 (0x1570 - 0x1540)
 class US6UI_CommonButton_Styled : public UCommonButtonBase
 {
 public:
-	FMulticastInlineDelegateProperty_             OnButtonPressed;                                   // 0x14F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             OnButtonReleased;                                  // 0x1500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	uint8                                         bTransparent : 1;                                  // 0x1510(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         bFocusRootButton : 1;                              // 0x1510(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
-	uint8                                         Pad_18FE[0xF];                                     // 0x1511(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnButtonPressed;                                   // 0x1540(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             OnButtonReleased;                                  // 0x1550(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	uint8                                         bTransparent : 1;                                  // 0x1560(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, ExposeOnSpawn, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         bFocusRootButton : 1;                              // 0x1560(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected))
+	uint8                                         Pad_2C1A[0xF];                                     // 0x1561(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void SetCommonButtonStyle(TSubclassOf<class US6UI_CommonButtonStyle> InStyle);
@@ -211,79 +171,48 @@ public:
 	}
 };
 static_assert(alignof(US6UI_CommonButton_Styled) == 0x000010, "Wrong alignment on US6UI_CommonButton_Styled");
-static_assert(sizeof(US6UI_CommonButton_Styled) == 0x001520, "Wrong size on US6UI_CommonButton_Styled");
-static_assert(offsetof(US6UI_CommonButton_Styled, OnButtonPressed) == 0x0014F0, "Member 'US6UI_CommonButton_Styled::OnButtonPressed' has a wrong offset!");
-static_assert(offsetof(US6UI_CommonButton_Styled, OnButtonReleased) == 0x001500, "Member 'US6UI_CommonButton_Styled::OnButtonReleased' has a wrong offset!");
-
-// Class S6UICommonWidgets.S6UI_OverlaySwitcher
-// 0x0048 (0x01B0 - 0x0168)
-class US6UI_OverlaySwitcher final  : public UPanelWidget
-{
-public:
-	uint8                                         Pad_18FF[0x28];                                    // 0x0168(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ActiveWidgetIndex;                                 // 0x0190(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1900[0x1C];                                    // 0x0194(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	class US6UI_OverlaySwitcherSlot* AddChildToOverlaySwitcher(class UWidget* Content);
-	void SetActiveWidget(class UWidget* Widget);
-	void SetActiveWidgetIndex(int32 Param_Index);
-
-	class UWidget* GetActiveWidget() const;
-	int32 GetActiveWidgetIndex() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"S6UI_OverlaySwitcher">();
-	}
-	static class US6UI_OverlaySwitcher* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<US6UI_OverlaySwitcher>();
-	}
-};
-static_assert(alignof(US6UI_OverlaySwitcher) == 0x000008, "Wrong alignment on US6UI_OverlaySwitcher");
-static_assert(sizeof(US6UI_OverlaySwitcher) == 0x0001B0, "Wrong size on US6UI_OverlaySwitcher");
-static_assert(offsetof(US6UI_OverlaySwitcher, ActiveWidgetIndex) == 0x000190, "Member 'US6UI_OverlaySwitcher::ActiveWidgetIndex' has a wrong offset!");
+static_assert(sizeof(US6UI_CommonButton_Styled) == 0x001570, "Wrong size on US6UI_CommonButton_Styled");
+static_assert(offsetof(US6UI_CommonButton_Styled, OnButtonPressed) == 0x001540, "Member 'US6UI_CommonButton_Styled::OnButtonPressed' has a wrong offset!");
+static_assert(offsetof(US6UI_CommonButton_Styled, OnButtonReleased) == 0x001550, "Member 'US6UI_CommonButton_Styled::OnButtonReleased' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_EditableRichText
-// 0x06D0 (0x0820 - 0x0150)
+// 0x06D0 (0x0850 - 0x0180)
 class US6UI_EditableRichText : public UWidget
 {
 public:
-	class FText                                   Text;                                              // 0x0150(0x0018)(Edit, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             TextDelegate;                                      // 0x0168(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   HintText;                                          // 0x0178(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TDelegate<void()>                             HintTextDelegate;                                  // 0x0190(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsReadOnly;                                        // 0x01A0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1901[0x3];                                     // 0x01A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         MinimumDesiredWidth;                               // 0x01A4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          IsCaretMovedWhenGainFocus;                         // 0x01A8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SelectAllTextWhenFocused;                          // 0x01A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ShouldClearTextSelectionOnFocusLoss;               // 0x01AA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          RevertTextOnEscape;                                // 0x01AB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ClearKeyboardFocusOnCommit;                        // 0x01AC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          SelectAllTextOnCommit;                             // 0x01AD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          AllowContextMenu;                                  // 0x01AE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowPasteFromClipboard;                          // 0x01AF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVirtualKeyboardType                          KeyboardType;                                      // 0x01B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1902[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVirtualKeyboardOptions                VirtualKeyboardOptions;                            // 0x01B4(0x0008)(Edit, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	EVirtualKeyboardTrigger                       VirtualKeyboardTrigger;                            // 0x01BC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EVirtualKeyboardDismissAction                 VirtualKeyboardDismissAction;                      // 0x01BD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ETextJustify                                  Justification;                                     // 0x01BE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FShapedTextOptions                     ShapedTextOptions;                                 // 0x01BF(0x0003)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1903[0x6];                                     // 0x01C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnTextChanged;                                     // 0x01C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnTextCommitted;                                   // 0x01D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	class UDataTable*                             TextStyleSet;                                      // 0x01E8(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSubclassOf<class US6UI_EditableRichTextDecorator>> DecoratorClasses;                                  // 0x01F0(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	bool                                          bOverrideDefaultStyle;                             // 0x0200(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1904[0xF];                                     // 0x0201(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FEditableTextStyle                     DefaultTextStyleOverride;                          // 0x0210(0x02F0)(Edit, Protected, NativeAccessSpecifierProtected)
-	struct FEditableTextStyle                     DefaultTextStyle;                                  // 0x0500(0x02F0)(Transient, Protected, NativeAccessSpecifierProtected)
-	TArray<class US6UI_EditableRichTextDecorator*> InstanceDecorators;                                // 0x07F0(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1905[0x20];                                    // 0x0800(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class FText                                   Text;                                              // 0x0180(0x0018)(Edit, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             TextDelegate;                                      // 0x0198(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   HintText;                                          // 0x01A8(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TDelegate<void()>                             HintTextDelegate;                                  // 0x01C0(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsReadOnly;                                        // 0x01D0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C1B[0x3];                                     // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         MinimumDesiredWidth;                               // 0x01D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          IsCaretMovedWhenGainFocus;                         // 0x01D8(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SelectAllTextWhenFocused;                          // 0x01D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ShouldClearTextSelectionOnFocusLoss;               // 0x01DA(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          RevertTextOnEscape;                                // 0x01DB(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ClearKeyboardFocusOnCommit;                        // 0x01DC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          SelectAllTextOnCommit;                             // 0x01DD(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          AllowContextMenu;                                  // 0x01DE(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowPasteFromClipboard;                          // 0x01DF(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVirtualKeyboardType                          KeyboardType;                                      // 0x01E0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C1C[0x3];                                     // 0x01E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVirtualKeyboardOptions                VirtualKeyboardOptions;                            // 0x01E4(0x0008)(Edit, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	EVirtualKeyboardTrigger                       VirtualKeyboardTrigger;                            // 0x01EC(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EVirtualKeyboardDismissAction                 VirtualKeyboardDismissAction;                      // 0x01ED(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ETextJustify                                  Justification;                                     // 0x01EE(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FShapedTextOptions                     ShapedTextOptions;                                 // 0x01EF(0x0003)(Edit, BlueprintVisible, BlueprintReadOnly, NoDestructor, AdvancedDisplay, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C1D[0x6];                                     // 0x01F2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnTextChanged;                                     // 0x01F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnTextCommitted;                                   // 0x0208(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	class UDataTable*                             TextStyleSet;                                      // 0x0218(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class US6UI_EditableRichTextDecorator>> DecoratorClasses;                                  // 0x0220(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	bool                                          bOverrideDefaultStyle;                             // 0x0230(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C1E[0xF];                                     // 0x0231(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEditableTextStyle                     DefaultTextStyleOverride;                          // 0x0240(0x02F0)(Edit, Protected, NativeAccessSpecifierProtected)
+	struct FEditableTextStyle                     DefaultTextStyle;                                  // 0x0530(0x02F0)(Transient, Protected, NativeAccessSpecifierProtected)
+	TArray<class US6UI_EditableRichTextDecorator*> InstanceDecorators;                                // 0x0820(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C1F[0x20];                                    // 0x0830(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearAllDefaultStyleOverrides();
@@ -326,35 +255,75 @@ public:
 	}
 };
 static_assert(alignof(US6UI_EditableRichText) == 0x000010, "Wrong alignment on US6UI_EditableRichText");
-static_assert(sizeof(US6UI_EditableRichText) == 0x000820, "Wrong size on US6UI_EditableRichText");
-static_assert(offsetof(US6UI_EditableRichText, Text) == 0x000150, "Member 'US6UI_EditableRichText::Text' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, TextDelegate) == 0x000168, "Member 'US6UI_EditableRichText::TextDelegate' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, HintText) == 0x000178, "Member 'US6UI_EditableRichText::HintText' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, HintTextDelegate) == 0x000190, "Member 'US6UI_EditableRichText::HintTextDelegate' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, IsReadOnly) == 0x0001A0, "Member 'US6UI_EditableRichText::IsReadOnly' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, MinimumDesiredWidth) == 0x0001A4, "Member 'US6UI_EditableRichText::MinimumDesiredWidth' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, IsCaretMovedWhenGainFocus) == 0x0001A8, "Member 'US6UI_EditableRichText::IsCaretMovedWhenGainFocus' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, SelectAllTextWhenFocused) == 0x0001A9, "Member 'US6UI_EditableRichText::SelectAllTextWhenFocused' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, ShouldClearTextSelectionOnFocusLoss) == 0x0001AA, "Member 'US6UI_EditableRichText::ShouldClearTextSelectionOnFocusLoss' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, RevertTextOnEscape) == 0x0001AB, "Member 'US6UI_EditableRichText::RevertTextOnEscape' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, ClearKeyboardFocusOnCommit) == 0x0001AC, "Member 'US6UI_EditableRichText::ClearKeyboardFocusOnCommit' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, SelectAllTextOnCommit) == 0x0001AD, "Member 'US6UI_EditableRichText::SelectAllTextOnCommit' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, AllowContextMenu) == 0x0001AE, "Member 'US6UI_EditableRichText::AllowContextMenu' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, bAllowPasteFromClipboard) == 0x0001AF, "Member 'US6UI_EditableRichText::bAllowPasteFromClipboard' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, KeyboardType) == 0x0001B0, "Member 'US6UI_EditableRichText::KeyboardType' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardOptions) == 0x0001B4, "Member 'US6UI_EditableRichText::VirtualKeyboardOptions' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardTrigger) == 0x0001BC, "Member 'US6UI_EditableRichText::VirtualKeyboardTrigger' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardDismissAction) == 0x0001BD, "Member 'US6UI_EditableRichText::VirtualKeyboardDismissAction' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, Justification) == 0x0001BE, "Member 'US6UI_EditableRichText::Justification' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, ShapedTextOptions) == 0x0001BF, "Member 'US6UI_EditableRichText::ShapedTextOptions' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, OnTextChanged) == 0x0001C8, "Member 'US6UI_EditableRichText::OnTextChanged' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, OnTextCommitted) == 0x0001D8, "Member 'US6UI_EditableRichText::OnTextCommitted' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, TextStyleSet) == 0x0001E8, "Member 'US6UI_EditableRichText::TextStyleSet' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, DecoratorClasses) == 0x0001F0, "Member 'US6UI_EditableRichText::DecoratorClasses' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, bOverrideDefaultStyle) == 0x000200, "Member 'US6UI_EditableRichText::bOverrideDefaultStyle' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, DefaultTextStyleOverride) == 0x000210, "Member 'US6UI_EditableRichText::DefaultTextStyleOverride' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, DefaultTextStyle) == 0x000500, "Member 'US6UI_EditableRichText::DefaultTextStyle' has a wrong offset!");
-static_assert(offsetof(US6UI_EditableRichText, InstanceDecorators) == 0x0007F0, "Member 'US6UI_EditableRichText::InstanceDecorators' has a wrong offset!");
+static_assert(sizeof(US6UI_EditableRichText) == 0x000850, "Wrong size on US6UI_EditableRichText");
+static_assert(offsetof(US6UI_EditableRichText, Text) == 0x000180, "Member 'US6UI_EditableRichText::Text' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, TextDelegate) == 0x000198, "Member 'US6UI_EditableRichText::TextDelegate' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, HintText) == 0x0001A8, "Member 'US6UI_EditableRichText::HintText' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, HintTextDelegate) == 0x0001C0, "Member 'US6UI_EditableRichText::HintTextDelegate' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, IsReadOnly) == 0x0001D0, "Member 'US6UI_EditableRichText::IsReadOnly' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, MinimumDesiredWidth) == 0x0001D4, "Member 'US6UI_EditableRichText::MinimumDesiredWidth' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, IsCaretMovedWhenGainFocus) == 0x0001D8, "Member 'US6UI_EditableRichText::IsCaretMovedWhenGainFocus' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, SelectAllTextWhenFocused) == 0x0001D9, "Member 'US6UI_EditableRichText::SelectAllTextWhenFocused' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, ShouldClearTextSelectionOnFocusLoss) == 0x0001DA, "Member 'US6UI_EditableRichText::ShouldClearTextSelectionOnFocusLoss' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, RevertTextOnEscape) == 0x0001DB, "Member 'US6UI_EditableRichText::RevertTextOnEscape' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, ClearKeyboardFocusOnCommit) == 0x0001DC, "Member 'US6UI_EditableRichText::ClearKeyboardFocusOnCommit' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, SelectAllTextOnCommit) == 0x0001DD, "Member 'US6UI_EditableRichText::SelectAllTextOnCommit' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, AllowContextMenu) == 0x0001DE, "Member 'US6UI_EditableRichText::AllowContextMenu' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, bAllowPasteFromClipboard) == 0x0001DF, "Member 'US6UI_EditableRichText::bAllowPasteFromClipboard' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, KeyboardType) == 0x0001E0, "Member 'US6UI_EditableRichText::KeyboardType' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardOptions) == 0x0001E4, "Member 'US6UI_EditableRichText::VirtualKeyboardOptions' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardTrigger) == 0x0001EC, "Member 'US6UI_EditableRichText::VirtualKeyboardTrigger' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, VirtualKeyboardDismissAction) == 0x0001ED, "Member 'US6UI_EditableRichText::VirtualKeyboardDismissAction' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, Justification) == 0x0001EE, "Member 'US6UI_EditableRichText::Justification' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, ShapedTextOptions) == 0x0001EF, "Member 'US6UI_EditableRichText::ShapedTextOptions' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, OnTextChanged) == 0x0001F8, "Member 'US6UI_EditableRichText::OnTextChanged' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, OnTextCommitted) == 0x000208, "Member 'US6UI_EditableRichText::OnTextCommitted' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, TextStyleSet) == 0x000218, "Member 'US6UI_EditableRichText::TextStyleSet' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, DecoratorClasses) == 0x000220, "Member 'US6UI_EditableRichText::DecoratorClasses' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, bOverrideDefaultStyle) == 0x000230, "Member 'US6UI_EditableRichText::bOverrideDefaultStyle' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, DefaultTextStyleOverride) == 0x000240, "Member 'US6UI_EditableRichText::DefaultTextStyleOverride' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, DefaultTextStyle) == 0x000530, "Member 'US6UI_EditableRichText::DefaultTextStyle' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichText, InstanceDecorators) == 0x000820, "Member 'US6UI_EditableRichText::InstanceDecorators' has a wrong offset!");
+
+// Class S6UICommonWidgets.S6UI_EditableRichTextDecorator
+// 0x0000 (0x0028 - 0x0028)
+class US6UI_EditableRichTextDecorator : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"S6UI_EditableRichTextDecorator">();
+	}
+	static class US6UI_EditableRichTextDecorator* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<US6UI_EditableRichTextDecorator>();
+	}
+};
+static_assert(alignof(US6UI_EditableRichTextDecorator) == 0x000008, "Wrong alignment on US6UI_EditableRichTextDecorator");
+static_assert(sizeof(US6UI_EditableRichTextDecorator) == 0x000028, "Wrong size on US6UI_EditableRichTextDecorator");
+
+// Class S6UICommonWidgets.S6UI_EditableRichTextDecorator_Image
+// 0x0030 (0x0058 - 0x0028)
+class US6UI_EditableRichTextDecorator_Image : public US6UI_EditableRichTextDecorator
+{
+public:
+	TSoftObjectPtr<class UDataTable>              ImageSet;                                          // 0x0028(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USlateBrushAsset*                       ImageBrushAsset;                                   // 0x0050(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"S6UI_EditableRichTextDecorator_Image">();
+	}
+	static class US6UI_EditableRichTextDecorator_Image* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<US6UI_EditableRichTextDecorator_Image>();
+	}
+};
+static_assert(alignof(US6UI_EditableRichTextDecorator_Image) == 0x000008, "Wrong alignment on US6UI_EditableRichTextDecorator_Image");
+static_assert(sizeof(US6UI_EditableRichTextDecorator_Image) == 0x000058, "Wrong size on US6UI_EditableRichTextDecorator_Image");
+static_assert(offsetof(US6UI_EditableRichTextDecorator_Image, ImageSet) == 0x000028, "Member 'US6UI_EditableRichTextDecorator_Image::ImageSet' has a wrong offset!");
+static_assert(offsetof(US6UI_EditableRichTextDecorator_Image, ImageBrushAsset) == 0x000050, "Member 'US6UI_EditableRichTextDecorator_Image::ImageBrushAsset' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_EditableRichTextDecorator_Style
 // 0x0000 (0x0028 - 0x0028)
@@ -374,14 +343,14 @@ static_assert(alignof(US6UI_EditableRichTextDecorator_Style) == 0x000008, "Wrong
 static_assert(sizeof(US6UI_EditableRichTextDecorator_Style) == 0x000028, "Wrong size on US6UI_EditableRichTextDecorator_Style");
 
 // Class S6UICommonWidgets.S6UI_GridPanel
-// 0x0018 (0x01B0 - 0x0198)
+// 0x0018 (0x01E0 - 0x01C8)
 class US6UI_GridPanel final  : public UGridPanel
 {
 public:
-	bool                                          bHasUniformSlotPadding;                            // 0x0198(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1907[0x3];                                     // 0x0199(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMargin                                UniformSlotPadding;                                // 0x019C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1908[0x4];                                     // 0x01AC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	bool                                          bHasUniformSlotPadding;                            // 0x01C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C21[0x3];                                     // 0x01C9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMargin                                UniformSlotPadding;                                // 0x01CC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C22[0x4];                                     // 0x01DC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClearFill();
@@ -397,16 +366,16 @@ public:
 	}
 };
 static_assert(alignof(US6UI_GridPanel) == 0x000008, "Wrong alignment on US6UI_GridPanel");
-static_assert(sizeof(US6UI_GridPanel) == 0x0001B0, "Wrong size on US6UI_GridPanel");
-static_assert(offsetof(US6UI_GridPanel, bHasUniformSlotPadding) == 0x000198, "Member 'US6UI_GridPanel::bHasUniformSlotPadding' has a wrong offset!");
-static_assert(offsetof(US6UI_GridPanel, UniformSlotPadding) == 0x00019C, "Member 'US6UI_GridPanel::UniformSlotPadding' has a wrong offset!");
+static_assert(sizeof(US6UI_GridPanel) == 0x0001E0, "Wrong size on US6UI_GridPanel");
+static_assert(offsetof(US6UI_GridPanel, bHasUniformSlotPadding) == 0x0001C8, "Member 'US6UI_GridPanel::bHasUniformSlotPadding' has a wrong offset!");
+static_assert(offsetof(US6UI_GridPanel, UniformSlotPadding) == 0x0001CC, "Member 'US6UI_GridPanel::UniformSlotPadding' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_OverlaySwitcherSlot
 // 0x0010 (0x0068 - 0x0058)
 class US6UI_OverlaySwitcherSlot final  : public UOverlaySlot
 {
 public:
-	uint8                                         Pad_1909[0x10];                                    // 0x0058(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C23[0x10];                                    // 0x0058(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -421,8 +390,39 @@ public:
 static_assert(alignof(US6UI_OverlaySwitcherSlot) == 0x000008, "Wrong alignment on US6UI_OverlaySwitcherSlot");
 static_assert(sizeof(US6UI_OverlaySwitcherSlot) == 0x000068, "Wrong size on US6UI_OverlaySwitcherSlot");
 
+// Class S6UICommonWidgets.S6UI_OverlaySwitcher
+// 0x0048 (0x01E0 - 0x0198)
+class US6UI_OverlaySwitcher final  : public UPanelWidget
+{
+public:
+	uint8                                         Pad_2C24[0x28];                                    // 0x0198(0x0028)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ActiveWidgetIndex;                                 // 0x01C0(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_2C25[0x1C];                                    // 0x01C4(0x001C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	class US6UI_OverlaySwitcherSlot* AddChildToOverlaySwitcher(class UWidget* Content);
+	void SetActiveWidget(class UWidget* Widget);
+	void SetActiveWidgetIndex(int32 Param_Index);
+
+	class UWidget* GetActiveWidget() const;
+	int32 GetActiveWidgetIndex() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"S6UI_OverlaySwitcher">();
+	}
+	static class US6UI_OverlaySwitcher* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<US6UI_OverlaySwitcher>();
+	}
+};
+static_assert(alignof(US6UI_OverlaySwitcher) == 0x000008, "Wrong alignment on US6UI_OverlaySwitcher");
+static_assert(sizeof(US6UI_OverlaySwitcher) == 0x0001E0, "Wrong size on US6UI_OverlaySwitcher");
+static_assert(offsetof(US6UI_OverlaySwitcher, ActiveWidgetIndex) == 0x0001C0, "Member 'US6UI_OverlaySwitcher::ActiveWidgetIndex' has a wrong offset!");
+
 // Class S6UICommonWidgets.S6UI_RichTextBlock
-// 0x0000 (0x0870 - 0x0870)
+// 0x0000 (0x08A0 - 0x08A0)
 class US6UI_RichTextBlock : public URichTextBlock
 {
 public:
@@ -436,16 +436,16 @@ public:
 	}
 };
 static_assert(alignof(US6UI_RichTextBlock) == 0x000010, "Wrong alignment on US6UI_RichTextBlock");
-static_assert(sizeof(US6UI_RichTextBlock) == 0x000870, "Wrong size on US6UI_RichTextBlock");
+static_assert(sizeof(US6UI_RichTextBlock) == 0x0008A0, "Wrong size on US6UI_RichTextBlock");
 
 // Class S6UICommonWidgets.S6UI_RichTextBlockDecorator_SoftImage
-// 0x0040 (0x0068 - 0x0028)
+// 0x0038 (0x0060 - 0x0028)
 class US6UI_RichTextBlockDecorator_SoftImage : public URichTextBlockDecorator
 {
 public:
-	TSoftObjectPtr<class UDataTable>              ImageSet;                                          // 0x0028(0x0030)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USlateBrushAsset*                       ImageBrushAsset;                                   // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDataTable*                             LoadedImageSet;                                    // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UDataTable>              ImageSet;                                          // 0x0028(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USlateBrushAsset*                       ImageBrushAsset;                                   // 0x0050(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDataTable*                             LoadedImageSet;                                    // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -458,10 +458,10 @@ public:
 	}
 };
 static_assert(alignof(US6UI_RichTextBlockDecorator_SoftImage) == 0x000008, "Wrong alignment on US6UI_RichTextBlockDecorator_SoftImage");
-static_assert(sizeof(US6UI_RichTextBlockDecorator_SoftImage) == 0x000068, "Wrong size on US6UI_RichTextBlockDecorator_SoftImage");
+static_assert(sizeof(US6UI_RichTextBlockDecorator_SoftImage) == 0x000060, "Wrong size on US6UI_RichTextBlockDecorator_SoftImage");
 static_assert(offsetof(US6UI_RichTextBlockDecorator_SoftImage, ImageSet) == 0x000028, "Member 'US6UI_RichTextBlockDecorator_SoftImage::ImageSet' has a wrong offset!");
-static_assert(offsetof(US6UI_RichTextBlockDecorator_SoftImage, ImageBrushAsset) == 0x000058, "Member 'US6UI_RichTextBlockDecorator_SoftImage::ImageBrushAsset' has a wrong offset!");
-static_assert(offsetof(US6UI_RichTextBlockDecorator_SoftImage, LoadedImageSet) == 0x000060, "Member 'US6UI_RichTextBlockDecorator_SoftImage::LoadedImageSet' has a wrong offset!");
+static_assert(offsetof(US6UI_RichTextBlockDecorator_SoftImage, ImageBrushAsset) == 0x000050, "Member 'US6UI_RichTextBlockDecorator_SoftImage::ImageBrushAsset' has a wrong offset!");
+static_assert(offsetof(US6UI_RichTextBlockDecorator_SoftImage, LoadedImageSet) == 0x000058, "Member 'US6UI_RichTextBlockDecorator_SoftImage::LoadedImageSet' has a wrong offset!");
 
 // Class S6UICommonWidgets.S6UI_RichTextBlockDecorator_Style
 // 0x0000 (0x0028 - 0x0028)

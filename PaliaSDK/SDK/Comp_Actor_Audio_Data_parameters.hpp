@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CoreUObject_structs.hpp"
+#include "AkAudio_structs.hpp"
 #include "Struct_DialogBookendConfig_structs.hpp"
 #include "Palia_structs.hpp"
-#include "AkAudio_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK::Params
@@ -52,21 +52,21 @@ struct Comp_Actor_Audio_Data_C_ExecuteUbergraph_Comp_Actor_Audio_Data final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(struct FWeatherStateProperties& State)> K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2462[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44AF[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FClamp_ReturnValue;                       // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue_1;                     // 0x0020(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_True_1;                         // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2463[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B0[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UValeriaWeather*                        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_True;                           // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_WeatherManagerIsRaining_bIsRaining;       // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue_1;                  // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2464[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B1[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FWeatherStateProperties                K2Node_CustomEvent_state;                          // 0x0040(0x0028)(ConstParm)
 	bool                                          CallFunc_LessEqual_DoubleDouble_ReturnValue;       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_WeatherManagerIsRaining_bIsRaining_1;     // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2465[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B2[0x6];                                     // 0x006A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_FClamp_ReturnValue_2;                     // 0x0078(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0080(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -78,17 +78,17 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00B2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00B3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00B4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2466[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B3[0x3];                                     // 0x00B5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2467[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B4[0x7];                                     // 0x00C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDialogueComponent*                     CallFunc_GetComponentByClass_ReturnValue;          // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x00D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2468[0x2];                                     // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B5[0x2];                                     // 0x00D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UDialogueComponent* Diag, class AValeriaCharacter* PlayerParticipant)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x00D4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GreaterEqual_DoubleDouble_ReturnValue;    // 0x00E4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2469[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B6[0x3];                                     // 0x00E5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDialogueComponent*                     K2Node_CustomEvent_diag_1;                         // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      K2Node_CustomEvent_playerParticipant_1;            // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueComponent* Diag, class AValeriaCharacter* PlayerParticipant)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x00F8(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -100,26 +100,26 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0131(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVillager_ReturnValue;                   // 0x0132(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246A[0x5];                                     // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B7[0x5];                                     // 0x0133(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_3;                   // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EAkCallbackType                               K2Node_CustomEvent_CallbackType_1;                 // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246B[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B8[0x7];                                     // 0x0149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkCallbackInfo*                        K2Node_CustomEvent_CallbackInfo_1;                 // 0x0150(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EAkCallbackType                               K2Node_CustomEvent_CallbackType;                   // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246C[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44B9[0x7];                                     // 0x0159(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkCallbackInfo*                        K2Node_CustomEvent_CallbackInfo;                   // 0x0160(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAkComponent*                           CallFunc_Get_Voice_Audio_Component_AkComponent;    // 0x0168(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_Intro;                          // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246D[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BA[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          K2Node_CustomEvent_AkEvent;                        // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0180(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246E[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BB[0x7];                                     // 0x0181(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue_1;      // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0190(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> K2Node_CreateDelegate_OutputDelegate_4;            // 0x01A0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x01B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_246F[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BC[0x3];                                     // 0x01B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> K2Node_Select_Default;                             // 0x01B4(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventComponentCallback_ReturnValue;     // 0x01C4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -193,7 +193,7 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TScriptInterface<class IDialogueable>         K2Node_DynamicCast_AsDialogueable;                 // 0x0010(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2470[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BD[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_BPNE_GetOrCreateVoicePositionAkComponent_ReturnValue; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Actor_Audio_Data_C_Get_Voice_Audio_Component) == 0x000008, "Wrong alignment on Comp_Actor_Audio_Data_C_Get_Voice_Audio_Component");
@@ -210,7 +210,7 @@ struct Comp_Actor_Audio_Data_C_GetDialogBookend final
 {
 public:
 	bool                                          Intro;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2471[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDialogueComponent*                     Dialog;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      Player;                                            // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          DialogEvent;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -220,48 +220,48 @@ public:
 	TArray<struct FStruct_DialogBookendConfig>    Config;                                            // 0x0038(0x0010)(Edit, BlueprintVisible)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2472[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44BF[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2473[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C0[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaVillagerCharacter*              CallFunc_GetVillager_ReturnValue;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVillager_ReturnValue;                   // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2474[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C1[0x6];                                     // 0x0062(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDialogBookendConfig_C*                 K2Node_DynamicCast_AsDialog_Bookend_Config;        // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2475[0x1];                                     // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C2[0x1];                                     // 0x0073(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable_1;        // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2476[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C3[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x0084(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0085(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0086(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2477[0x1];                                     // 0x0087(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C4[0x1];                                     // 0x0087(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x008C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2478[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C5[0x3];                                     // 0x008D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_DialogBookendConfig            CallFunc_Array_Get_Item;                           // 0x0090(0x0140)(HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2479[0x3];                                     // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C6[0x3];                                     // 0x01D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x01D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x01D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247A[0x7];                                     // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C7[0x7];                                     // 0x01D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          CallFunc_GetRandomDialogEvent_DialogEvent;         // 0x01E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247B[0x3];                                     // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C8[0x3];                                     // 0x01E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x01EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247C[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44C9[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_DialogBookendConfig            CallFunc_Array_Get_Item_1;                         // 0x01F8(0x0140)(HasGetValueTypeHash)
 	bool                                          CallFunc_IsDialogueRequirementMetForVillagerId_ReturnValue; // 0x0338(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247D[0x7];                                     // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CA[0x7];                                     // 0x0339(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          CallFunc_GetRandomDialogEvent_DialogEvent_1;       // 0x0340(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsDialogueRequirementMetForWorldVillager_ReturnValue; // 0x0348(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247E[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CB[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FStruct_DialogBookendConfig>    K2Node_Select_Default;                             // 0x0350(0x0010)(ReferenceParm)
 };
 static_assert(alignof(Comp_Actor_Audio_Data_C_GetDialogBookend) == 0x000008, "Wrong alignment on Comp_Actor_Audio_Data_C_GetDialogBookend");
@@ -335,7 +335,7 @@ struct Comp_Actor_Audio_Data_C_IntroAudioFinished final
 {
 public:
 	EAkCallbackType                               CallbackType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_247F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkCallbackInfo*                        CallbackInfo;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Actor_Audio_Data_C_IntroAudioFinished) == 0x000008, "Wrong alignment on Comp_Actor_Audio_Data_C_IntroAudioFinished");
@@ -349,7 +349,7 @@ struct Comp_Actor_Audio_Data_C_OutroAudioFinished final
 {
 public:
 	EAkCallbackType                               CallbackType;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2480[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CD[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkCallbackInfo*                        CallbackInfo;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Actor_Audio_Data_C_OutroAudioFinished) == 0x000008, "Wrong alignment on Comp_Actor_Audio_Data_C_OutroAudioFinished");
@@ -363,7 +363,7 @@ struct Comp_Actor_Audio_Data_C_PlayDialogBookend final
 {
 public:
 	bool                                          Intro;                                             // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2481[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          AkEvent;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Comp_Actor_Audio_Data_C_PlayDialogBookend) == 0x000008, "Wrong alignment on Comp_Actor_Audio_Data_C_PlayDialogBookend");
@@ -427,7 +427,7 @@ struct Comp_Actor_Audio_Data_C_WeatherManagerIsRaining final
 {
 public:
 	bool                                          bIsRaining;                                        // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2482[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_44CF[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UValeriaWeather*                        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FWeatherStateProperties                CallFunc_GetCurrentWorldWeatherState_ReturnValue;  // 0x0010(0x0028)()
 	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

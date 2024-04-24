@@ -75,8 +75,6 @@ void UCV_Cinematic_C::BindToSequencePlayerEvents(bool Bind, TDelegate<void()> K2
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                CallFunc_GetPlayerController_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                CallFunc_GetPlayerController_ReturnValue_1             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            CallFunc_K2_GetPawn_ReturnValue                        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -91,19 +89,17 @@ void UCV_Cinematic_C::BindToSequencePlayerEvents(bool Bind, TDelegate<void()> K2
 // class AValeriaCharacter*                K2Node_DynamicCast_AsValeria_Character_1               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess_1                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                CallFunc_GetPlayerController_ReturnValue_4             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                CallFunc_GetPlayerController_ReturnValue_5             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            CallFunc_K2_GetPawn_ReturnValue_2                      (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UWBP_Cinematic_Overlay_C*         CallFunc_Create_ReturnValue_1                          (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // class AValeriaCharacter*                K2Node_DynamicCast_AsValeria_Character_2               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess_2                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UValeriaCharacterMoveComponent*   CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                CallFunc_GetPlayerController_ReturnValue_5             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UWBP_Cinematic_Overlay_C*         CallFunc_Create_ReturnValue_1                          (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           CallFunc_Array_Get_Item                                (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_Array_Length_ReturnValue_1                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UUserWidget*>              CallFunc_GetAllWidgetsOfClass_FoundWidgets             (ReferenceParm, ContainsInstancedReference)
-// int32                                   CallFunc_Array_Length_ReturnValue_2                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UGameInstance*                    CallFunc_GetGameInstance_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UValeriaGameInstance*             K2Node_DynamicCast_AsValeria_Game_Instance             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -112,40 +108,41 @@ void UCV_Cinematic_C::BindToSequencePlayerEvents(bool Bind, TDelegate<void()> K2
 // class UGameInstance*                    CallFunc_GetGameInstance_ReturnValue_1                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UValeriaGameInstance*             K2Node_DynamicCast_AsValeria_Game_Instance_1           (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess_4                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           CallFunc_Array_Get_Item                                (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<class UUserWidget*>              CallFunc_GetAllWidgetsOfClass_FoundWidgets             (ReferenceParm, ContainsInstancedReference)
+// int32                                   CallFunc_Array_Length_ReturnValue_2                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           K2Node_Event_OverlappedActor                           (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           K2Node_Event_OtherActor                                (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AValeriaCharacter*                K2Node_DynamicCast_AsValeria_Character_3               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess_5                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UPaliaScreenManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPaliaScreenManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue_1        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_AkEventGlobal_ReturnValue                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPaliaScreenManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue_1        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UPaliaScreenManager*              CallFunc_GetGameInstanceSubsystem_ReturnValue_2        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsLoadingScreenVisible_ReturnValue            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UValeriaWeather*                  CallFunc_GetWorldSubsystem_ReturnValue                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // TDelegate<void(class UCinematicSequenceConfig* CinConfig)>K2Node_CreateDelegate_OutputDelegate                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UValeriaWeather*                  CallFunc_GetWorldSubsystem_ReturnValue                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AValEnvironmentManager*           CallFunc_GetCurrentEnvManager_ReturnValue              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(TSoftObjectPtr<class ULevelSequence> LevelSequence)>K2Node_CreateDelegate_OutputDelegate_1                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Loop_Counter_Variable_1                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue_1                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue_1                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TSoftObjectPtr<class ULevelSequence>    K2Node_CustomEvent_LevelSequence                       (UObjectWrapper, HasGetValueTypeHash)
+// TDelegate<void(TSoftObjectPtr<class ULevelSequence> LevelSequence)>K2Node_CreateDelegate_OutputDelegate_1                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APlayerController*                CallFunc_GetPlayerController_ReturnValue_6             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class APawn*                            CallFunc_K2_GetPawn_ReturnValue_3                      (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void()>                       K2Node_CreateDelegate_OutputDelegate_2                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AValeriaCharacter*                K2Node_DynamicCast_AsValeria_Character_4               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess_6                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Client_TryUnequip_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void()>                       K2Node_CreateDelegate_OutputDelegate_2                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_GetTagValue_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Greater_IntInt_ReturnValue                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Variable                                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue_2                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      CallFunc_Array_Get_Item_1                              (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue_2                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ULevelSequencePlayer*             CallFunc_GetSequencePlayer_ReturnValue                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_SetActiveSequence_IsValid                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Variable                                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCinematicSequenceConfig*         K2Node_CustomEvent_CinConfig                           (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Add_IntInt_ReturnValue_1                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      CallFunc_Array_Get_Item_1                              (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue_1                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // float                                   K2Node_Event_DeltaSeconds                              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCinematicManagerComponent*       CallFunc_GetCinematicManager_CinManager                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_GetCinematicManager_isValid                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -153,24 +150,29 @@ void UCV_Cinematic_C::BindToSequencePlayerEvents(bool Bind, TDelegate<void()> K2
 // bool                                    CallFunc_GetCinematicManager_isValid_1                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UCinematicManagerComponent*       CallFunc_GetCinematicManager_CinManager_2              (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_GetCinematicManager_isValid_2                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Array_Index_Variable_1                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           CallFunc_Array_Get_Item_2                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class UUserWidget*>              CallFunc_GetAllWidgetsOfClass_FoundWidgets_1           (ReferenceParm, ContainsInstancedReference)
-// int32                                   CallFunc_Array_Length_ReturnValue_3                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Loop_Counter_Variable_1                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue_2                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Add_IntInt_ReturnValue_2                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValidSoftObjectReference_ReturnValue        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Temp_int_Variable_1                                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue_3                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      CallFunc_Array_Get_Item_3                              (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue_3                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class FText                             CallFunc_GetCurrentSubtitleText_SubtitleText           ()
+// int32                                   CallFunc_Add_IntInt_ReturnValue_3                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Array_Index_Variable_1                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           CallFunc_Array_Get_Item_2                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<class UUserWidget*>              CallFunc_GetAllWidgetsOfClass_FoundWidgets_1           (ReferenceParm, ContainsInstancedReference)
+// class UUserWidget*                      CallFunc_Array_Get_Item_3                              (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Array_Length_ReturnValue_3                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue_3                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // TDelegate<void(EPaliaScreenState State)>K2Node_CreateDelegate_OutputDelegate_3                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // EPaliaScreenState                       K2Node_CustomEvent_state                               (ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Not_PreBool_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                CallFunc_GetPlayerController_ReturnValue_7             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_3                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_1, class APawn* CallFunc_K2_GetPawn_ReturnValue, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character, bool K2Node_DynamicCast_bSuccess, class UCharacterStateMachineComponent* CallFunc_GetCSM_ReturnValue, class UValeriaCharacterMoveComponent* CallFunc_GetValeriaCharacterMovementComponent_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_2, class UUserWidget* CallFunc_Create_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_3, class APawn* CallFunc_K2_GetPawn_ReturnValue_1, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_1, bool K2Node_DynamicCast_bSuccess_1, class APlayerController* CallFunc_GetPlayerController_ReturnValue_4, int32 Temp_int_Array_Index_Variable, class APawn* CallFunc_K2_GetPawn_ReturnValue_2, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_2, bool K2Node_DynamicCast_bSuccess_2, class UValeriaCharacterMoveComponent* CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1, class APlayerController* CallFunc_GetPlayerController_ReturnValue_5, class UWBP_Cinematic_Overlay_C* CallFunc_Create_ReturnValue_1, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue, class UClass* CallFunc_Array_Get_Item, int32 CallFunc_Array_Length_ReturnValue_1, TArray<class UUserWidget*>& CallFunc_GetAllWidgetsOfClass_FoundWidgets, int32 CallFunc_Array_Length_ReturnValue_2, bool CallFunc_IsValid_ReturnValue, class UGameInstance* CallFunc_GetGameInstance_ReturnValue, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance, bool K2Node_DynamicCast_bSuccess_3, EEndPlayReason K2Node_Event_EndPlayReason, class UGameInstance* CallFunc_GetGameInstance_ReturnValue_1, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance_1, bool K2Node_DynamicCast_bSuccess_4, class AActor* K2Node_Event_OverlappedActor, class AActor* K2Node_Event_OtherActor, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_3, bool K2Node_DynamicCast_bSuccess_5, bool CallFunc_IsLocallyControlled_ReturnValue, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue_1, int32 CallFunc_AkEventGlobal_ReturnValue, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue_2, bool CallFunc_IsLoadingScreenVisible_ReturnValue, class UValeriaWeather* CallFunc_GetWorldSubsystem_ReturnValue, TDelegate<void(class UCinematicSequenceConfig* CinConfig)> K2Node_CreateDelegate_OutputDelegate, class AValEnvironmentManager* CallFunc_GetCurrentEnvManager_ReturnValue, TDelegate<void(TSoftObjectPtr<class ULevelSequence> LevelSequence)> K2Node_CreateDelegate_OutputDelegate_1, int32 Temp_int_Loop_Counter_Variable_1, bool CallFunc_Less_IntInt_ReturnValue_1, int32 CallFunc_Add_IntInt_ReturnValue_1, TSoftObjectPtr<class ULevelSequence> K2Node_CustomEvent_LevelSequence, class APlayerController* CallFunc_GetPlayerController_ReturnValue_6, class APawn* CallFunc_K2_GetPawn_ReturnValue_3, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate_2, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_4, bool K2Node_DynamicCast_bSuccess_6, bool CallFunc_Client_TryUnequip_ReturnValue, int32 CallFunc_GetTagValue_ReturnValue, bool CallFunc_Greater_IntInt_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, int32 Temp_int_Variable, int32 CallFunc_Add_IntInt_ReturnValue_2, class UUserWidget* CallFunc_Array_Get_Item_1, bool CallFunc_Less_IntInt_ReturnValue_2, class ULevelSequencePlayer* CallFunc_GetSequencePlayer_ReturnValue, bool CallFunc_SetActiveSequence_IsValid, class UCinematicSequenceConfig* K2Node_CustomEvent_CinConfig, float K2Node_Event_DeltaSeconds, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager, bool CallFunc_GetCinematicManager_isValid, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager_1, bool CallFunc_GetCinematicManager_isValid_1, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager_2, bool CallFunc_GetCinematicManager_isValid_2, int32 Temp_int_Array_Index_Variable_1, class UClass* CallFunc_Array_Get_Item_2, TArray<class UUserWidget*>& CallFunc_GetAllWidgetsOfClass_FoundWidgets_1, int32 CallFunc_Array_Length_ReturnValue_3, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsValidSoftObjectReference_ReturnValue, int32 Temp_int_Variable_1, int32 CallFunc_Add_IntInt_ReturnValue_3, class UUserWidget* CallFunc_Array_Get_Item_3, bool CallFunc_Less_IntInt_ReturnValue_3, class FText CallFunc_GetCurrentSubtitleText_SubtitleText, TDelegate<void(EPaliaScreenState State)> K2Node_CreateDelegate_OutputDelegate_3, EPaliaScreenState K2Node_CustomEvent_state, bool K2Node_SwitchEnum_CmpSuccess, bool CallFunc_Not_PreBool_ReturnValue, bool CallFunc_BooleanAND_ReturnValue)
+void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, class APlayerController* CallFunc_GetPlayerController_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_1, class APawn* CallFunc_K2_GetPawn_ReturnValue, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character, bool K2Node_DynamicCast_bSuccess, class UCharacterStateMachineComponent* CallFunc_GetCSM_ReturnValue, class UValeriaCharacterMoveComponent* CallFunc_GetValeriaCharacterMovementComponent_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_2, class UUserWidget* CallFunc_Create_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_3, class APawn* CallFunc_K2_GetPawn_ReturnValue_1, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_1, bool K2Node_DynamicCast_bSuccess_1, class APlayerController* CallFunc_GetPlayerController_ReturnValue_4, class APlayerController* CallFunc_GetPlayerController_ReturnValue_5, class APawn* CallFunc_K2_GetPawn_ReturnValue_2, class UWBP_Cinematic_Overlay_C* CallFunc_Create_ReturnValue_1, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_2, bool K2Node_DynamicCast_bSuccess_2, class UValeriaCharacterMoveComponent* CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, int32 CallFunc_Array_Length_ReturnValue, int32 CallFunc_Array_Length_ReturnValue_1, bool CallFunc_Less_IntInt_ReturnValue, bool CallFunc_IsValid_ReturnValue, class UGameInstance* CallFunc_GetGameInstance_ReturnValue, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance, bool K2Node_DynamicCast_bSuccess_3, EEndPlayReason K2Node_Event_EndPlayReason, class UGameInstance* CallFunc_GetGameInstance_ReturnValue_1, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance_1, bool K2Node_DynamicCast_bSuccess_4, int32 Temp_int_Array_Index_Variable, class UClass* CallFunc_Array_Get_Item, TArray<class UUserWidget*>& CallFunc_GetAllWidgetsOfClass_FoundWidgets, int32 CallFunc_Array_Length_ReturnValue_2, class AActor* K2Node_Event_OverlappedActor, class AActor* K2Node_Event_OtherActor, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_3, bool K2Node_DynamicCast_bSuccess_5, bool CallFunc_IsLocallyControlled_ReturnValue, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue_1, class UPaliaScreenManager* CallFunc_GetGameInstanceSubsystem_ReturnValue_2, bool CallFunc_IsLoadingScreenVisible_ReturnValue, TDelegate<void(class UCinematicSequenceConfig* CinConfig)> K2Node_CreateDelegate_OutputDelegate, class UValeriaWeather* CallFunc_GetWorldSubsystem_ReturnValue, class AValEnvironmentManager* CallFunc_GetCurrentEnvManager_ReturnValue, TSoftObjectPtr<class ULevelSequence> K2Node_CustomEvent_LevelSequence, TDelegate<void(TSoftObjectPtr<class ULevelSequence> LevelSequence)> K2Node_CreateDelegate_OutputDelegate_1, class APlayerController* CallFunc_GetPlayerController_ReturnValue_6, class APawn* CallFunc_K2_GetPawn_ReturnValue_3, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character_4, bool K2Node_DynamicCast_bSuccess_6, bool CallFunc_Client_TryUnequip_ReturnValue, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate_2, int32 CallFunc_GetTagValue_ReturnValue, bool CallFunc_Greater_IntInt_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class ULevelSequencePlayer* CallFunc_GetSequencePlayer_ReturnValue, bool CallFunc_SetActiveSequence_IsValid, int32 Temp_int_Variable, class UCinematicSequenceConfig* K2Node_CustomEvent_CinConfig, int32 CallFunc_Add_IntInt_ReturnValue_1, class UUserWidget* CallFunc_Array_Get_Item_1, bool CallFunc_Less_IntInt_ReturnValue_1, float K2Node_Event_DeltaSeconds, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager, bool CallFunc_GetCinematicManager_isValid, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager_1, bool CallFunc_GetCinematicManager_isValid_1, class UCinematicManagerComponent* CallFunc_GetCinematicManager_CinManager_2, bool CallFunc_GetCinematicManager_isValid_2, int32 Temp_int_Loop_Counter_Variable_1, bool CallFunc_Less_IntInt_ReturnValue_2, int32 CallFunc_Add_IntInt_ReturnValue_2, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsValidSoftObjectReference_ReturnValue, int32 Temp_int_Variable_1, class FText CallFunc_GetCurrentSubtitleText_SubtitleText, int32 CallFunc_Add_IntInt_ReturnValue_3, int32 Temp_int_Array_Index_Variable_1, class UClass* CallFunc_Array_Get_Item_2, TArray<class UUserWidget*>& CallFunc_GetAllWidgetsOfClass_FoundWidgets_1, class UUserWidget* CallFunc_Array_Get_Item_3, int32 CallFunc_Array_Length_ReturnValue_3, bool CallFunc_Less_IntInt_ReturnValue_3, TDelegate<void(EPaliaScreenState State)> K2Node_CreateDelegate_OutputDelegate_3, EPaliaScreenState K2Node_CustomEvent_state, bool K2Node_SwitchEnum_CmpSuccess, bool CallFunc_Not_PreBool_ReturnValue, bool CallFunc_BooleanAND_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_7, bool CallFunc_IsValid_ReturnValue_3)
 {
 	static class UFunction* Func = nullptr;
 
@@ -180,8 +182,6 @@ void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, int32 Temp
 	Params::CV_Cinematic_C_ExecuteUbergraph_CV_Cinematic Parms{};
 
 	Parms.EntryPoint = EntryPoint;
-	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
-	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
 	Parms.CallFunc_GetPlayerController_ReturnValue = CallFunc_GetPlayerController_ReturnValue;
 	Parms.CallFunc_GetPlayerController_ReturnValue_1 = CallFunc_GetPlayerController_ReturnValue_1;
 	Parms.CallFunc_K2_GetPawn_ReturnValue = CallFunc_K2_GetPawn_ReturnValue;
@@ -196,19 +196,17 @@ void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, int32 Temp
 	Parms.K2Node_DynamicCast_AsValeria_Character_1 = K2Node_DynamicCast_AsValeria_Character_1;
 	Parms.K2Node_DynamicCast_bSuccess_1 = K2Node_DynamicCast_bSuccess_1;
 	Parms.CallFunc_GetPlayerController_ReturnValue_4 = CallFunc_GetPlayerController_ReturnValue_4;
-	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
+	Parms.CallFunc_GetPlayerController_ReturnValue_5 = CallFunc_GetPlayerController_ReturnValue_5;
 	Parms.CallFunc_K2_GetPawn_ReturnValue_2 = CallFunc_K2_GetPawn_ReturnValue_2;
+	Parms.CallFunc_Create_ReturnValue_1 = CallFunc_Create_ReturnValue_1;
 	Parms.K2Node_DynamicCast_AsValeria_Character_2 = K2Node_DynamicCast_AsValeria_Character_2;
 	Parms.K2Node_DynamicCast_bSuccess_2 = K2Node_DynamicCast_bSuccess_2;
 	Parms.CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1 = CallFunc_GetValeriaCharacterMovementComponent_ReturnValue_1;
-	Parms.CallFunc_GetPlayerController_ReturnValue_5 = CallFunc_GetPlayerController_ReturnValue_5;
-	Parms.CallFunc_Create_ReturnValue_1 = CallFunc_Create_ReturnValue_1;
+	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
+	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
 	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
-	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
-	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
 	Parms.CallFunc_Array_Length_ReturnValue_1 = CallFunc_Array_Length_ReturnValue_1;
-	Parms.CallFunc_GetAllWidgetsOfClass_FoundWidgets = std::move(CallFunc_GetAllWidgetsOfClass_FoundWidgets);
-	Parms.CallFunc_Array_Length_ReturnValue_2 = CallFunc_Array_Length_ReturnValue_2;
+	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
 	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
 	Parms.CallFunc_GetGameInstance_ReturnValue = CallFunc_GetGameInstance_ReturnValue;
 	Parms.K2Node_DynamicCast_AsValeria_Game_Instance = K2Node_DynamicCast_AsValeria_Game_Instance;
@@ -217,40 +215,41 @@ void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, int32 Temp
 	Parms.CallFunc_GetGameInstance_ReturnValue_1 = CallFunc_GetGameInstance_ReturnValue_1;
 	Parms.K2Node_DynamicCast_AsValeria_Game_Instance_1 = K2Node_DynamicCast_AsValeria_Game_Instance_1;
 	Parms.K2Node_DynamicCast_bSuccess_4 = K2Node_DynamicCast_bSuccess_4;
+	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
+	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
+	Parms.CallFunc_GetAllWidgetsOfClass_FoundWidgets = std::move(CallFunc_GetAllWidgetsOfClass_FoundWidgets);
+	Parms.CallFunc_Array_Length_ReturnValue_2 = CallFunc_Array_Length_ReturnValue_2;
 	Parms.K2Node_Event_OverlappedActor = K2Node_Event_OverlappedActor;
 	Parms.K2Node_Event_OtherActor = K2Node_Event_OtherActor;
 	Parms.K2Node_DynamicCast_AsValeria_Character_3 = K2Node_DynamicCast_AsValeria_Character_3;
 	Parms.K2Node_DynamicCast_bSuccess_5 = K2Node_DynamicCast_bSuccess_5;
 	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
 	Parms.CallFunc_GetGameInstanceSubsystem_ReturnValue = CallFunc_GetGameInstanceSubsystem_ReturnValue;
-	Parms.CallFunc_GetGameInstanceSubsystem_ReturnValue_1 = CallFunc_GetGameInstanceSubsystem_ReturnValue_1;
 	Parms.CallFunc_AkEventGlobal_ReturnValue = CallFunc_AkEventGlobal_ReturnValue;
+	Parms.CallFunc_GetGameInstanceSubsystem_ReturnValue_1 = CallFunc_GetGameInstanceSubsystem_ReturnValue_1;
 	Parms.CallFunc_GetGameInstanceSubsystem_ReturnValue_2 = CallFunc_GetGameInstanceSubsystem_ReturnValue_2;
 	Parms.CallFunc_IsLoadingScreenVisible_ReturnValue = CallFunc_IsLoadingScreenVisible_ReturnValue;
-	Parms.CallFunc_GetWorldSubsystem_ReturnValue = CallFunc_GetWorldSubsystem_ReturnValue;
 	Parms.K2Node_CreateDelegate_OutputDelegate = K2Node_CreateDelegate_OutputDelegate;
+	Parms.CallFunc_GetWorldSubsystem_ReturnValue = CallFunc_GetWorldSubsystem_ReturnValue;
 	Parms.CallFunc_GetCurrentEnvManager_ReturnValue = CallFunc_GetCurrentEnvManager_ReturnValue;
-	Parms.K2Node_CreateDelegate_OutputDelegate_1 = K2Node_CreateDelegate_OutputDelegate_1;
-	Parms.Temp_int_Loop_Counter_Variable_1 = Temp_int_Loop_Counter_Variable_1;
-	Parms.CallFunc_Less_IntInt_ReturnValue_1 = CallFunc_Less_IntInt_ReturnValue_1;
-	Parms.CallFunc_Add_IntInt_ReturnValue_1 = CallFunc_Add_IntInt_ReturnValue_1;
 	Parms.K2Node_CustomEvent_LevelSequence = K2Node_CustomEvent_LevelSequence;
+	Parms.K2Node_CreateDelegate_OutputDelegate_1 = K2Node_CreateDelegate_OutputDelegate_1;
 	Parms.CallFunc_GetPlayerController_ReturnValue_6 = CallFunc_GetPlayerController_ReturnValue_6;
 	Parms.CallFunc_K2_GetPawn_ReturnValue_3 = CallFunc_K2_GetPawn_ReturnValue_3;
-	Parms.K2Node_CreateDelegate_OutputDelegate_2 = K2Node_CreateDelegate_OutputDelegate_2;
 	Parms.K2Node_DynamicCast_AsValeria_Character_4 = K2Node_DynamicCast_AsValeria_Character_4;
 	Parms.K2Node_DynamicCast_bSuccess_6 = K2Node_DynamicCast_bSuccess_6;
 	Parms.CallFunc_Client_TryUnequip_ReturnValue = CallFunc_Client_TryUnequip_ReturnValue;
+	Parms.K2Node_CreateDelegate_OutputDelegate_2 = K2Node_CreateDelegate_OutputDelegate_2;
 	Parms.CallFunc_GetTagValue_ReturnValue = CallFunc_GetTagValue_ReturnValue;
 	Parms.CallFunc_Greater_IntInt_ReturnValue = CallFunc_Greater_IntInt_ReturnValue;
 	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
-	Parms.Temp_int_Variable = Temp_int_Variable;
-	Parms.CallFunc_Add_IntInt_ReturnValue_2 = CallFunc_Add_IntInt_ReturnValue_2;
-	Parms.CallFunc_Array_Get_Item_1 = CallFunc_Array_Get_Item_1;
-	Parms.CallFunc_Less_IntInt_ReturnValue_2 = CallFunc_Less_IntInt_ReturnValue_2;
 	Parms.CallFunc_GetSequencePlayer_ReturnValue = CallFunc_GetSequencePlayer_ReturnValue;
 	Parms.CallFunc_SetActiveSequence_IsValid = CallFunc_SetActiveSequence_IsValid;
+	Parms.Temp_int_Variable = Temp_int_Variable;
 	Parms.K2Node_CustomEvent_CinConfig = K2Node_CustomEvent_CinConfig;
+	Parms.CallFunc_Add_IntInt_ReturnValue_1 = CallFunc_Add_IntInt_ReturnValue_1;
+	Parms.CallFunc_Array_Get_Item_1 = CallFunc_Array_Get_Item_1;
+	Parms.CallFunc_Less_IntInt_ReturnValue_1 = CallFunc_Less_IntInt_ReturnValue_1;
 	Parms.K2Node_Event_DeltaSeconds = K2Node_Event_DeltaSeconds;
 	Parms.CallFunc_GetCinematicManager_CinManager = CallFunc_GetCinematicManager_CinManager;
 	Parms.CallFunc_GetCinematicManager_isValid = CallFunc_GetCinematicManager_isValid;
@@ -258,22 +257,27 @@ void UCV_Cinematic_C::ExecuteUbergraph_CV_Cinematic(int32 EntryPoint, int32 Temp
 	Parms.CallFunc_GetCinematicManager_isValid_1 = CallFunc_GetCinematicManager_isValid_1;
 	Parms.CallFunc_GetCinematicManager_CinManager_2 = CallFunc_GetCinematicManager_CinManager_2;
 	Parms.CallFunc_GetCinematicManager_isValid_2 = CallFunc_GetCinematicManager_isValid_2;
-	Parms.Temp_int_Array_Index_Variable_1 = Temp_int_Array_Index_Variable_1;
-	Parms.CallFunc_Array_Get_Item_2 = CallFunc_Array_Get_Item_2;
-	Parms.CallFunc_GetAllWidgetsOfClass_FoundWidgets_1 = std::move(CallFunc_GetAllWidgetsOfClass_FoundWidgets_1);
-	Parms.CallFunc_Array_Length_ReturnValue_3 = CallFunc_Array_Length_ReturnValue_3;
+	Parms.Temp_int_Loop_Counter_Variable_1 = Temp_int_Loop_Counter_Variable_1;
+	Parms.CallFunc_Less_IntInt_ReturnValue_2 = CallFunc_Less_IntInt_ReturnValue_2;
+	Parms.CallFunc_Add_IntInt_ReturnValue_2 = CallFunc_Add_IntInt_ReturnValue_2;
 	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
 	Parms.CallFunc_IsValidSoftObjectReference_ReturnValue = CallFunc_IsValidSoftObjectReference_ReturnValue;
 	Parms.Temp_int_Variable_1 = Temp_int_Variable_1;
-	Parms.CallFunc_Add_IntInt_ReturnValue_3 = CallFunc_Add_IntInt_ReturnValue_3;
-	Parms.CallFunc_Array_Get_Item_3 = CallFunc_Array_Get_Item_3;
-	Parms.CallFunc_Less_IntInt_ReturnValue_3 = CallFunc_Less_IntInt_ReturnValue_3;
 	Parms.CallFunc_GetCurrentSubtitleText_SubtitleText = CallFunc_GetCurrentSubtitleText_SubtitleText;
+	Parms.CallFunc_Add_IntInt_ReturnValue_3 = CallFunc_Add_IntInt_ReturnValue_3;
+	Parms.Temp_int_Array_Index_Variable_1 = Temp_int_Array_Index_Variable_1;
+	Parms.CallFunc_Array_Get_Item_2 = CallFunc_Array_Get_Item_2;
+	Parms.CallFunc_GetAllWidgetsOfClass_FoundWidgets_1 = std::move(CallFunc_GetAllWidgetsOfClass_FoundWidgets_1);
+	Parms.CallFunc_Array_Get_Item_3 = CallFunc_Array_Get_Item_3;
+	Parms.CallFunc_Array_Length_ReturnValue_3 = CallFunc_Array_Length_ReturnValue_3;
+	Parms.CallFunc_Less_IntInt_ReturnValue_3 = CallFunc_Less_IntInt_ReturnValue_3;
 	Parms.K2Node_CreateDelegate_OutputDelegate_3 = K2Node_CreateDelegate_OutputDelegate_3;
 	Parms.K2Node_CustomEvent_state = K2Node_CustomEvent_state;
 	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
 	Parms.CallFunc_Not_PreBool_ReturnValue = CallFunc_Not_PreBool_ReturnValue;
 	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
+	Parms.CallFunc_GetPlayerController_ReturnValue_7 = CallFunc_GetPlayerController_ReturnValue_7;
+	Parms.CallFunc_IsValid_ReturnValue_3 = CallFunc_IsValid_ReturnValue_3;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -433,14 +437,16 @@ void UCV_Cinematic_C::GetCurrentSubtitleText(class FText* SubtitleText, const st
 
 
 // Function CV_Cinematic.CV_Cinematic_C.HandleScriptStartRequest
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
 // TSoftObjectPtr<class ULevelSequence>    DesiredSequence                                        (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UObject*                          CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue  (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class ULevelSequence*                   K2Node_DynamicCast_AsLevel_Sequence                    (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class ULevelSequence>    CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue  (UObjectWrapper, HasGetValueTypeHash)
-// bool                                    CallFunc_EqualEqual_SoftObjectReference_ReturnValue    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_EqualEqual_ObjectObject_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCV_Cinematic_C::HandleScriptStartRequest(TSoftObjectPtr<class ULevelSequence> DesiredSequence, bool CallFunc_IsValid_ReturnValue, TSoftObjectPtr<class ULevelSequence> CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue, bool CallFunc_EqualEqual_SoftObjectReference_ReturnValue)
+void UCV_Cinematic_C::HandleScriptStartRequest(TSoftObjectPtr<class ULevelSequence> DesiredSequence, class UObject* CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue, class ULevelSequence* K2Node_DynamicCast_AsLevel_Sequence, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsValid_ReturnValue, bool CallFunc_EqualEqual_ObjectObject_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
@@ -450,9 +456,11 @@ void UCV_Cinematic_C::HandleScriptStartRequest(TSoftObjectPtr<class ULevelSequen
 	Params::CV_Cinematic_C_HandleScriptStartRequest Parms{};
 
 	Parms.DesiredSequence = DesiredSequence;
+	Parms.CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue = CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue;
+	Parms.K2Node_DynamicCast_AsLevel_Sequence = K2Node_DynamicCast_AsLevel_Sequence;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
 	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue = CallFunc_Conv_ObjectToSoftObjectReference_ReturnValue;
-	Parms.CallFunc_EqualEqual_SoftObjectReference_ReturnValue = CallFunc_EqualEqual_SoftObjectReference_ReturnValue;
+	Parms.CallFunc_EqualEqual_ObjectObject_ReturnValue = CallFunc_EqualEqual_ObjectObject_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -755,14 +763,16 @@ void UCV_Cinematic_C::ScheduleCinematic()
 // int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVAL_VisibilityModifierSource    K2Node_MakeStruct_VAL_VisibilityModifierSource         (NoDestructor)
 // TArray<class ABP_ValeriaVillagerCharacter_C*>CallFunc_GetAllActorsOfClass_OutActors                 (ReferenceParm)
+// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           CallFunc_Array_Get_Item                                (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class ABP_ValeriaVillagerCharacter_C*   K2Node_DynamicCast_AsBP_Valeria_Villager_Character     (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Client_RemoveVisibilityModifierSourceByKey_ReturnValue(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UCV_Cinematic_C::Set_NPCVisibility(bool IsVisible, int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, TArray<class ABP_ValeriaVillagerCharacter_C*>& CallFunc_GetAllActorsOfClass_OutActors, class AActor* CallFunc_Array_Get_Item, class ABP_ValeriaVillagerCharacter_C* K2Node_DynamicCast_AsBP_Valeria_Villager_Character, bool K2Node_DynamicCast_bSuccess, int32 CallFunc_Array_Length_ReturnValue, bool CallFunc_Less_IntInt_ReturnValue)
+void UCV_Cinematic_C::Set_NPCVisibility(bool IsVisible, int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, const struct FVAL_VisibilityModifierSource& K2Node_MakeStruct_VAL_VisibilityModifierSource, TArray<class ABP_ValeriaVillagerCharacter_C*>& CallFunc_GetAllActorsOfClass_OutActors, int32 CallFunc_Array_Length_ReturnValue, class AActor* CallFunc_Array_Get_Item, bool CallFunc_Less_IntInt_ReturnValue, class ABP_ValeriaVillagerCharacter_C* K2Node_DynamicCast_AsBP_Valeria_Villager_Character, bool K2Node_DynamicCast_bSuccess, bool CallFunc_Client_RemoveVisibilityModifierSourceByKey_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
@@ -775,12 +785,14 @@ void UCV_Cinematic_C::Set_NPCVisibility(bool IsVisible, int32 Temp_int_Array_Ind
 	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
 	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
 	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
+	Parms.K2Node_MakeStruct_VAL_VisibilityModifierSource = std::move(K2Node_MakeStruct_VAL_VisibilityModifierSource);
 	Parms.CallFunc_GetAllActorsOfClass_OutActors = std::move(CallFunc_GetAllActorsOfClass_OutActors);
+	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
 	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
+	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
 	Parms.K2Node_DynamicCast_AsBP_Valeria_Villager_Character = K2Node_DynamicCast_AsBP_Valeria_Villager_Character;
 	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
-	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
+	Parms.CallFunc_Client_RemoveVisibilityModifierSourceByKey_ReturnValue = CallFunc_Client_RemoveVisibilityModifierSourceByKey_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 
@@ -869,6 +881,20 @@ void UCV_Cinematic_C::Start_Cinematic()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("CV_Cinematic_C", "Start Cinematic");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function CV_Cinematic.CV_Cinematic_C.StartCameraFadeOut
+// (BlueprintCallable, BlueprintEvent)
+
+void UCV_Cinematic_C::StartCameraFadeOut()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CV_Cinematic_C", "StartCameraFadeOut");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

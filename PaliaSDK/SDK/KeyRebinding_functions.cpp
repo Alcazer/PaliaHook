@@ -775,6 +775,34 @@ const class UCommonInputSubsystem* UKeyRebindingUtils::GetCommonInputSystem(clas
 }
 
 
+// Function KeyRebinding.KeyRebindingUtils.GetEnhancedInputSubsystem
+// (Final, BlueprintCosmetic, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UEnhancedInputSubsystemWithKeyRebinding*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UEnhancedInputSubsystemWithKeyRebinding* UKeyRebindingUtils::GetEnhancedInputSubsystem(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("KeyRebindingUtils", "GetEnhancedInputSubsystem");
+
+	Params::KeyRebindingUtils_GetEnhancedInputSubsystem Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function KeyRebinding.KeyRebindingUtils.GetIconForEnhancedInputAction
 // (Final, BlueprintCosmetic, Native, Static, Public, HasOutParams, BlueprintCallable, BlueprintPure)
 // Parameters:

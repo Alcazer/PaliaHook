@@ -10,11 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Enum_core_Scalability_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Palia_structs.hpp"
 #include "Engine_structs.hpp"
-#include "Struct_Physmat_structs.hpp"
 #include "AkAudio_structs.hpp"
+#include "Struct_Physmat_structs.hpp"
+#include "Enum_core_Scalability_structs.hpp"
 
 
 namespace SDK::Params
@@ -27,19 +28,19 @@ struct Ak_SurfaceEffect_C_CheckForWater final
 public:
 	class USkeletalMeshComponent*                 Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4137[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4696[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Location;                                          // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        HalfHeightMinusRad;                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4138[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4697[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaMoveablePawn*                   K2Node_DynamicCast_AsValeria_Moveable_Pawn;        // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4139[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4698[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0050(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413A[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4699[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -48,12 +49,12 @@ public:
 	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x00D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FHitResult>                     CallFunc_SphereTraceMulti_OutHits;                 // 0x00E8(0x0010)(ReferenceParm, ContainsInstancedReference)
 	bool                                          CallFunc_SphereTraceMulti_ReturnValue;             // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413B[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469A[0x7];                                     // 0x00F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHitResult                             CallFunc_Array_Get_Item;                           // 0x0100(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x01EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x01ED(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413C[0x2];                                     // 0x01EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469B[0x2];                                     // 0x01EE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x01F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x01F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -68,14 +69,14 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0288(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413D[0x4];                                     // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469C[0x4];                                     // 0x028C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x02C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x02C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue_1;    // 0x02C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x02C3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413E[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469D[0x4];                                     // 0x02C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Subtract_DoubleDouble_B_ImplicitCast;     // 0x02D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -139,16 +140,16 @@ public:
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ACreatureCharacter*                     K2Node_DynamicCast_AsCreature_Character;           // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_413F[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469E[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UValeriaCharacterMoveComponent*         K2Node_DynamicCast_AsValeria_Character_Move_Component; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4140[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_469F[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_CalculateMaxSpeed_ReturnValue;            // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_GetMaxSpeedAbs_ReturnValue;               // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4141[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A0[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_GetMaxSpeed_ReturnValue;                  // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4142[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A1[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Multiply_DoubleDouble_ReturnValue;        // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_FunctionResult_ReturnValue_ImplicitCast;    // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_FunctionResult_ReturnValue_ImplicitCast_1;  // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -182,7 +183,7 @@ public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPhysmatEffect_C*                       PhysmatEffect;                                     // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_NameName_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4143[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A2[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UComp_CreatureAudio_C*                  CallFunc_GetComponentByClass_ReturnValue;          // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPhysmatEffect_C*                       CallFunc_FindInCreatureSurfaceMap_Value;           // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_FindInCreatureSurfaceMap_Found;           // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -250,7 +251,7 @@ public:
 	class UPhysicalMaterial*                      Material;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Loc;                                               // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Location;                                          // 0x0028(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      Pm;                                                // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PM;                                                // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0048(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetActorForwardVector_ReturnValue;        // 0x0068(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -264,14 +265,14 @@ public:
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_2;          // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FHitResult                             CallFunc_SphereTraceSingle_OutHit;                 // 0x0128(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
 	bool                                          CallFunc_SphereTraceSingle_ReturnValue;            // 0x0210(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4144[0x7];                                     // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A3[0x7];                                     // 0x0211(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue_3;          // 0x0218(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0230(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x0231(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4145[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A4[0x2];                                     // 0x0232(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0238(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4146[0x4];                                     // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A5[0x4];                                     // 0x023C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x0270(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -284,7 +285,7 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x02C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x02CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x02D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4147[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A6[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x02D8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x02F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetTraceParams_Start;                     // 0x0308(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -295,10 +296,10 @@ public:
 	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit_1;            // 0x0439(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap_1;         // 0x043A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4148[0x1];                                     // 0x043B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A7[0x1];                                     // 0x043B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time_1;                    // 0x043C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance_1;                // 0x0440(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4149[0x4];                                     // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A8[0x4];                                     // 0x0444(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_Location_1;                // 0x0448(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_ImpactPoint_1;             // 0x0460(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Normal_1;                  // 0x0478(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -311,7 +312,7 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem_1;                 // 0x04D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex_1;            // 0x04D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex_1;               // 0x04D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414A[0x4];                                     // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46A9[0x4];                                     // 0x04DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart_1;              // 0x04E0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd_1;                // 0x04F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -321,7 +322,7 @@ static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, Mesh) == 0x000
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, Material) == 0x000008, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::Material' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, Loc) == 0x000010, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::Loc' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, Location) == 0x000028, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::Location' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, Pm) == 0x000040, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::Pm' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, PM) == 0x000040, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::PM' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, CallFunc_GetSocketLocation_ReturnValue) == 0x000048, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, CallFunc_GetOwner_ReturnValue) == 0x000060, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, CallFunc_GetActorForwardVector_ReturnValue) == 0x000068, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::CallFunc_GetActorForwardVector_ReturnValue' has a wrong offset!");
@@ -380,298 +381,306 @@ static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, CallFunc_Break
 static_assert(offsetof(Ak_SurfaceEffect_C_PlayerTraceForMaterial, CallFunc_BreakHitResult_TraceEnd_1) == 0x0004F8, "Member 'Ak_SurfaceEffect_C_PlayerTraceForMaterial::CallFunc_BreakHitResult_TraceEnd_1' has a wrong offset!");
 
 // Function Ak_SurfaceEffect.Ak_SurfaceEffect_C.Received_Notify
-// 0x05A8 (0x05A8 - 0x0000)
+// 0x05E8 (0x05E8 - 0x0000)
 struct Ak_SurfaceEffect_C_Received_Notify final 
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414B[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 MeshOwner;                                         // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	class UMovementComponent*                     MovementComp;                                      // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsLocallyControlled;                               // 0x0050(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414C[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        EffectQualityDistanceModifier;                     // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DistanceToAudioListener;                           // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        MinSpeed;                                          // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UComp_Actor_Audio_Data_C*               CompActorAudio;                                    // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SoundOffset;                                       // 0x0080(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Speed;                                             // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        MaxSpeed;                                          // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      DecalMatRight;                                     // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      DecalMatLeft;                                      // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   RowNamePhysmat;                                    // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        DecalComp;                                         // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalFadeOutDuration;                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalFadeOutStartDelay;                            // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalFadeInDuration;                               // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalFadeInStartDelay;                             // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                DecalOffset;                                       // 0x00E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalRandomRotationMax;                            // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalRandomSizeMax;                                // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        DecalSize;                                         // 0x0110(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      DecalMat;                                          // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           SpawnedAkComponent;                                // 0x0120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          Sound;                                             // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UValeriaCharacterMoveComponent*         CharacterMovementComponent;                        // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                SocketLocation;                                    // 0x0138(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      Pm;                                                // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USkeletalMeshComponent*                 Mesh;                                              // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0160(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414D[0x7];                                     // 0x0161(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_RemoteTraceForMaterial_Material;          // 0x0168(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_RemoteTraceForMaterial_Loc;               // 0x0170(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UComp_Actor_Audio_Data_C*               CallFunc_GetComponentByClass_ReturnValue;          // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UMovementComponent*                     CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0190(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0198(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotFromXZ_ReturnValue;                // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414E[0x3];                                     // 0x01F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_BreakRotator_Roll;                        // 0x01F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Pitch;                       // 0x01F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_BreakRotator_Yaw;                         // 0x01FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_414F[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0208(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0210(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0218(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPhysmatEffect_C*                       CallFunc_GetPhysmatEffectData_PhysmatEffect;       // 0x0220(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	Enum_core_Scalability                         CallFunc_GlobalScalabilitySetting_ScalabilitySetting; // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4150[0x6];                                     // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FStruct_Physmat                        CallFunc_GetSurfaceEffect_Value;                   // 0x0230(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
-	bool                                          CallFunc_GetSurfaceEffect_ReturnValue;             // 0x0250(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0251(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4151[0x6];                                     // 0x0252(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_BreakVector_X;                            // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Y;                            // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_BreakVector_Z;                            // 0x0268(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x0270(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x0288(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0290(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x02A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetAkComponent_ComponentCreated;          // 0x02A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4152[0x6];                                     // 0x02AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_GetAkComponent_ReturnValue;               // 0x02B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x02B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x02B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4153[0x6];                                     // 0x02BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x02C0(0x0010)(ConstParm, ReferenceParm)
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutLocation; // 0x02D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutFrontDir; // 0x02E8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutRightDir; // 0x0300(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0318(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4154[0x3];                                     // 0x0329(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x032C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0330(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0348(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_GetRightVector_ReturnValue;               // 0x0360(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x0378(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x0390(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4155[0x4];                                     // 0x0394(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0398(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x03B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03B9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4156[0x6];                                     // 0x03BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UPhysicalMaterial*                      CallFunc_PlayerTraceForMaterial_Material;          // 0x03C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_PlayerTraceForMaterial_Loc;               // 0x03C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4157[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_GetMaxSpeed_ReturnValue;                  // 0x03E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x03F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x03F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0410(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostEventAtLocation_ReturnValue;          // 0x0418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x041C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4158[0x3];                                     // 0x041D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0420(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_2;    // 0x0430(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0448(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x0468(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4159[0x7];                                     // 0x0469(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_GetDisplayName_ReturnValue_1;             // 0x0470(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0480(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x0490(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415A[0x7];                                     // 0x0491(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x0498(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x04A8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x04B8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	double                                        CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x04C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x04D0(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x04E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x04E8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x04EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415B[0x3];                                     // 0x04ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x04F0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0500(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415C[0x7];                                     // 0x0501(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0508(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Contains_ReturnValue_1;                   // 0x0518(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0519(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415D[0x6];                                     // 0x051A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0528(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415E[0x7];                                     // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x0548(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UDecalComponent*                        CallFunc_SpawnDecalAtLocation_ReturnValue;         // 0x0560(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0568(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x0570(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_415F[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x0588(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x058C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x0590(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFadeOut_Duration_ImplicitCast;         // 0x0594(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFadeOut_StartDelay_ImplicitCast;       // 0x0598(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFadeIn_Duaration_ImplicitCast;         // 0x059C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetFadeIn_StartDelay_ImplicitCast;        // 0x05A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AA[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               VFXRotator;                                        // 0x0048(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UVAL_CharacterCustomizationComponent*   ValeriaCharacterCustomizationComponent;            // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 MeshOwner;                                         // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	class UMovementComponent*                     MovementComp;                                      // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsLocallyControlled;                               // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AB[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        EffectQualityDistanceModifier;                     // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DistanceToAudioListener;                           // 0x0088(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        MinSpeed;                                          // 0x0098(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UComp_Actor_Audio_Data_C*               CompActorAudio;                                    // 0x00A0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SoundOffset;                                       // 0x00A8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Speed;                                             // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        MaxSpeed;                                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      DecalMatRight;                                     // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      DecalMatLeft;                                      // 0x00D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   RowNamePhysmat;                                    // 0x00E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        DecalComp;                                         // 0x00E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalFadeOutDuration;                              // 0x00F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalFadeOutStartDelay;                            // 0x00F8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalFadeInDuration;                               // 0x0100(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalFadeInStartDelay;                             // 0x0108(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                DecalOffset;                                       // 0x0110(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalRandomRotationMax;                            // 0x0128(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalRandomSizeMax;                                // 0x0130(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        DecalSize;                                         // 0x0138(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      DecalMat;                                          // 0x0140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           SpawnedAkComponent;                                // 0x0148(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Sound;                                             // 0x0150(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UValeriaCharacterMoveComponent*         CharacterMovementComponent;                        // 0x0158(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                SocketLocation;                                    // 0x0160(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PM;                                                // 0x0178(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USkeletalMeshComponent*                 Mesh;                                              // 0x0180(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetRightVector_ReturnValue;               // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_Conv_VectorToRotator_ReturnValue;         // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x01D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x01E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TryPlayCharacterCustomizationFootstepEffect_ShouldPlayDefaultNiagaraEffect; // 0x01E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AC[0x6];                                     // 0x01EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      CallFunc_RemoteTraceForMaterial_Material;          // 0x01F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_RemoteTraceForMaterial_Loc;               // 0x01F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UComp_Actor_Audio_Data_C*               CallFunc_GetComponentByClass_ReturnValue;          // 0x0210(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UMovementComponent*                     CallFunc_GetComponentByClass_ReturnValue_1;        // 0x0218(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetForwardVector_ReturnValue;             // 0x0228(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetUpVector_ReturnValue;                  // 0x0240(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotFromXZ_ReturnValue;                // 0x0258(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AD[0x3];                                     // 0x0279(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_BreakRotator_Roll;                        // 0x027C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Pitch;                       // 0x0280(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_BreakRotator_Yaw;                         // 0x0284(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0288(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AE[0x7];                                     // 0x0289(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue;             // 0x0290(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Subtract_DoubleDouble_ReturnValue;        // 0x0298(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x02A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPhysmatEffect_C*                       CallFunc_GetPhysmatEffectData_PhysmatEffect;       // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FStruct_Physmat                        CallFunc_GetSurfaceEffect_Value;                   // 0x02B0(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
+	bool                                          CallFunc_GetSurfaceEffect_ReturnValue;             // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	Enum_core_Scalability                         CallFunc_GlobalScalabilitySetting_ScalabilitySetting; // 0x02D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x02D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x02D3(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46AF[0x4];                                     // 0x02D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_BreakVector_X;                            // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Y;                            // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_BreakVector_Z;                            // 0x02E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue;                   // 0x02F0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x0308(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0310(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x0328(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B0[0x7];                                     // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0330(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_GetAkComponent_ComponentCreated;          // 0x0340(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B1[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_GetAkComponent_ReturnValue;               // 0x0348(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue_1;          // 0x0351(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B2[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutLocation; // 0x0358(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutFrontDir; // 0x0370(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetValeriaAudioListenerPosition_OutRightDir; // 0x0388(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x03A0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x03B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B3[0x3];                                     // 0x03B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue;               // 0x03B4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x03B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_1;           // 0x03D0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x03E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B4[0x3];                                     // 0x03F1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Conv_ByteToInt_ReturnValue_1;             // 0x03F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B5[0x7];                                     // 0x03F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UPhysicalMaterial*                      CallFunc_PlayerTraceForMaterial_Material;          // 0x0400(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_PlayerTraceForMaterial_Loc;               // 0x0408(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0420(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B6[0x7];                                     // 0x0421(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_GetMaxSpeed_ReturnValue;                  // 0x0428(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x0430(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0438(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0450(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostEventAtLocation_ReturnValue;          // 0x0458(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x045C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B7[0x3];                                     // 0x045D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_RandomFloatInRange_ReturnValue;           // 0x0460(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_1;           // 0x0468(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_2;    // 0x0470(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               CallFunc_MakeRotator_ReturnValue;                  // 0x0488(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x04A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B8[0x7];                                     // 0x04A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_GetDisplayName_ReturnValue_1;             // 0x04B0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x04C0(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_5;                    // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46B9[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_1;              // 0x04D8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x04E8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x04F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	double                                        CallFunc_RandomFloatInRange_ReturnValue_1;         // 0x0508(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_ReturnValue_2;           // 0x0510(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x0518(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_6;                    // 0x052C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46BA[0x3];                                     // 0x052D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue;            // 0x0530(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue;                     // 0x0540(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46BB[0x7];                                     // 0x0541(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_NameToString_ReturnValue_1;          // 0x0548(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Contains_ReturnValue_1;                   // 0x0558(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0559(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46BC[0x6];                                     // 0x055A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0560(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_MakeVector_ReturnValue_1;                 // 0x0568(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_7;                    // 0x0580(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46BD[0x7];                                     // 0x0581(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_Add_VectorVector_ReturnValue_2;           // 0x0588(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDecalComponent*                        CallFunc_SpawnDecalAtLocation_ReturnValue;         // 0x05A0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x05A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_8;                    // 0x05B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46BE[0x7];                                     // 0x05B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Subtract_DoubleDouble_A_ImplicitCast;     // 0x05B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Add_DoubleDouble_A_ImplicitCast;          // 0x05C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Pitch_ImplicitCast;           // 0x05C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_MakeRotator_Yaw_ImplicitCast;             // 0x05CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x05D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFadeOut_Duration_ImplicitCast;         // 0x05D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFadeOut_StartDelay_ImplicitCast;       // 0x05D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFadeIn_Duration_ImplicitCast;          // 0x05DC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetFadeIn_StartDelay_ImplicitCast;        // 0x05E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Ak_SurfaceEffect_C_Received_Notify) == 0x000008, "Wrong alignment on Ak_SurfaceEffect_C_Received_Notify");
-static_assert(sizeof(Ak_SurfaceEffect_C_Received_Notify) == 0x0005A8, "Wrong size on Ak_SurfaceEffect_C_Received_Notify");
+static_assert(sizeof(Ak_SurfaceEffect_C_Received_Notify) == 0x0005E8, "Wrong size on Ak_SurfaceEffect_C_Received_Notify");
 static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MeshComp) == 0x000000, "Member 'Ak_SurfaceEffect_C_Received_Notify::MeshComp' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Animation) == 0x000008, "Member 'Ak_SurfaceEffect_C_Received_Notify::Animation' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, EventReference) == 0x000010, "Member 'Ak_SurfaceEffect_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, ReturnValue) == 0x000038, "Member 'Ak_SurfaceEffect_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MeshOwner) == 0x000040, "Member 'Ak_SurfaceEffect_C_Received_Notify::MeshOwner' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MovementComp) == 0x000048, "Member 'Ak_SurfaceEffect_C_Received_Notify::MovementComp' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, IsLocallyControlled) == 0x000050, "Member 'Ak_SurfaceEffect_C_Received_Notify::IsLocallyControlled' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, EffectQualityDistanceModifier) == 0x000058, "Member 'Ak_SurfaceEffect_C_Received_Notify::EffectQualityDistanceModifier' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DistanceToAudioListener) == 0x000060, "Member 'Ak_SurfaceEffect_C_Received_Notify::DistanceToAudioListener' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, NiagaraSystem) == 0x000068, "Member 'Ak_SurfaceEffect_C_Received_Notify::NiagaraSystem' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MinSpeed) == 0x000070, "Member 'Ak_SurfaceEffect_C_Received_Notify::MinSpeed' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CompActorAudio) == 0x000078, "Member 'Ak_SurfaceEffect_C_Received_Notify::CompActorAudio' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SoundOffset) == 0x000080, "Member 'Ak_SurfaceEffect_C_Received_Notify::SoundOffset' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Speed) == 0x000098, "Member 'Ak_SurfaceEffect_C_Received_Notify::Speed' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MaxSpeed) == 0x0000A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::MaxSpeed' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMatRight) == 0x0000A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMatRight' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMatLeft) == 0x0000B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMatLeft' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, RowNamePhysmat) == 0x0000B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::RowNamePhysmat' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalComp) == 0x0000C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalComp' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeOutDuration) == 0x0000C8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeOutDuration' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeOutStartDelay) == 0x0000D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeOutStartDelay' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeInDuration) == 0x0000D8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeInDuration' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeInStartDelay) == 0x0000E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeInStartDelay' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalOffset) == 0x0000E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalOffset' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalRandomRotationMax) == 0x000100, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalRandomRotationMax' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalRandomSizeMax) == 0x000108, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalRandomSizeMax' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalSize) == 0x000110, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalSize' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMat) == 0x000118, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMat' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SpawnedAkComponent) == 0x000120, "Member 'Ak_SurfaceEffect_C_Received_Notify::SpawnedAkComponent' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Sound) == 0x000128, "Member 'Ak_SurfaceEffect_C_Received_Notify::Sound' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CharacterMovementComponent) == 0x000130, "Member 'Ak_SurfaceEffect_C_Received_Notify::CharacterMovementComponent' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SocketLocation) == 0x000138, "Member 'Ak_SurfaceEffect_C_Received_Notify::SocketLocation' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Pm) == 0x000150, "Member 'Ak_SurfaceEffect_C_Received_Notify::Pm' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Mesh) == 0x000158, "Member 'Ak_SurfaceEffect_C_Received_Notify::Mesh' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000160, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RemoteTraceForMaterial_Material) == 0x000168, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RemoteTraceForMaterial_Material' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RemoteTraceForMaterial_Loc) == 0x000170, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RemoteTraceForMaterial_Loc' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000188, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000190, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000198, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetForwardVector_ReturnValue) == 0x0001A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetUpVector_ReturnValue) == 0x0001B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotFromXZ_ReturnValue) == 0x0001D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotFromXZ_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_DynamicCast_AsPawn) == 0x0001E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x0001F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Roll) == 0x0001F4, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Roll' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Pitch) == 0x0001F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Pitch' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Yaw) == 0x0001FC, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Yaw' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsLocallyControlled_ReturnValue) == 0x000200, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000208, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000210, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x000218, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetPhysmatEffectData_PhysmatEffect) == 0x000220, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetPhysmatEffectData_PhysmatEffect' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GlobalScalabilitySetting_ScalabilitySetting) == 0x000228, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GlobalScalabilitySetting_ScalabilitySetting' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_SwitchEnum_CmpSuccess) == 0x000229, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSurfaceEffect_Value) == 0x000230, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSurfaceEffect_Value' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSurfaceEffect_ReturnValue) == 0x000250, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSurfaceEffect_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000251, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_X) == 0x000258, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_X' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_Y) == 0x000260, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_Y' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_Z) == 0x000268, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_Z' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeVector_ReturnValue) == 0x000270, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_VSize_ReturnValue) == 0x000288, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000290, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsWithinAttenuation_Within) == 0x0002A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetAkComponent_ComponentCreated) == 0x0002A9, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetAkComponent_ComponentCreated' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetAkComponent_ReturnValue) == 0x0002B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetAkComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0002B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x0002B9, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Temp_struct_Variable) == 0x0002C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutLocation) == 0x0002D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutLocation' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutFrontDir) == 0x0002E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutFrontDir' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutRightDir) == 0x000300, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutRightDir' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetDisplayName_ReturnValue) == 0x000318, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsDedicatedServer_ReturnValue) == 0x000328, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_ByteToInt_ReturnValue) == 0x00032C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSocketLocation_ReturnValue) == 0x000330, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_VectorVector_ReturnValue) == 0x000348, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetRightVector_ReturnValue) == 0x000360, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetRightVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x000378, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x000390, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_ComposeRotators_ReturnValue) == 0x000398, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x0003B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x0003B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_1) == 0x0003B9, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PlayerTraceForMaterial_Material) == 0x0003C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PlayerTraceForMaterial_Material' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PlayerTraceForMaterial_Loc) == 0x0003C8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PlayerTraceForMaterial_Loc' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_2) == 0x0003E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetMaxSpeed_ReturnValue) == 0x0003E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetMaxSpeed_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MapRangeClamped_ReturnValue) == 0x0003F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x0003F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetGameInstance_ReturnValue) == 0x000410, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PostEventAtLocation_ReturnValue) == 0x000418, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PostEventAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_3) == 0x00041C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RandomFloatInRange_ReturnValue) == 0x000420, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000428, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue_2) == 0x000430, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_ReturnValue) == 0x000448, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Vector_Distance_ReturnValue) == 0x000460, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_4) == 0x000468, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetDisplayName_ReturnValue_1) == 0x000470, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetDisplayName_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue) == 0x000480, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_5) == 0x000490, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_1) == 0x000498, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0004A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0004B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RandomFloatInRange_ReturnValue_1) == 0x0004C8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RandomFloatInRange_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Temp_delegate_Variable) == 0x0004D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x0004E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PostAkEvent_ReturnValue) == 0x0004E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_6) == 0x0004EC, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_NameToString_ReturnValue) == 0x0004F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Contains_ReturnValue) == 0x000500, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Contains_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000508, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Contains_ReturnValue_1) == 0x000518, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BooleanOR_ReturnValue) == 0x000519, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000520, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeVector_ReturnValue_1) == 0x000528, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_7) == 0x000540, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_VectorVector_ReturnValue_1) == 0x000548, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnDecalAtLocation_ReturnValue) == 0x000560, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnDecalAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnSystemAttached_ReturnValue) == 0x000568, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_8) == 0x000570, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x000578, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x000580, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x000588, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x00058C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x000590, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeOut_Duration_ImplicitCast) == 0x000594, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeOut_Duration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeOut_StartDelay_ImplicitCast) == 0x000598, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeOut_StartDelay_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeIn_Duaration_ImplicitCast) == 0x00059C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeIn_Duaration_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeIn_StartDelay_ImplicitCast) == 0x0005A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeIn_StartDelay_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, ReturnValue) == 0x000040, "Member 'Ak_SurfaceEffect_C_Received_Notify::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, VFXRotator) == 0x000048, "Member 'Ak_SurfaceEffect_C_Received_Notify::VFXRotator' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, ValeriaCharacterCustomizationComponent) == 0x000060, "Member 'Ak_SurfaceEffect_C_Received_Notify::ValeriaCharacterCustomizationComponent' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MeshOwner) == 0x000068, "Member 'Ak_SurfaceEffect_C_Received_Notify::MeshOwner' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MovementComp) == 0x000070, "Member 'Ak_SurfaceEffect_C_Received_Notify::MovementComp' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, IsLocallyControlled) == 0x000078, "Member 'Ak_SurfaceEffect_C_Received_Notify::IsLocallyControlled' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, EffectQualityDistanceModifier) == 0x000080, "Member 'Ak_SurfaceEffect_C_Received_Notify::EffectQualityDistanceModifier' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DistanceToAudioListener) == 0x000088, "Member 'Ak_SurfaceEffect_C_Received_Notify::DistanceToAudioListener' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, NiagaraSystem) == 0x000090, "Member 'Ak_SurfaceEffect_C_Received_Notify::NiagaraSystem' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MinSpeed) == 0x000098, "Member 'Ak_SurfaceEffect_C_Received_Notify::MinSpeed' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CompActorAudio) == 0x0000A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CompActorAudio' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SoundOffset) == 0x0000A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::SoundOffset' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Speed) == 0x0000C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::Speed' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, MaxSpeed) == 0x0000C8, "Member 'Ak_SurfaceEffect_C_Received_Notify::MaxSpeed' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMatRight) == 0x0000D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMatRight' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMatLeft) == 0x0000D8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMatLeft' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, RowNamePhysmat) == 0x0000E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::RowNamePhysmat' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalComp) == 0x0000E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalComp' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeOutDuration) == 0x0000F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeOutDuration' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeOutStartDelay) == 0x0000F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeOutStartDelay' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeInDuration) == 0x000100, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeInDuration' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalFadeInStartDelay) == 0x000108, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalFadeInStartDelay' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalOffset) == 0x000110, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalOffset' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalRandomRotationMax) == 0x000128, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalRandomRotationMax' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalRandomSizeMax) == 0x000130, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalRandomSizeMax' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalSize) == 0x000138, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalSize' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, DecalMat) == 0x000140, "Member 'Ak_SurfaceEffect_C_Received_Notify::DecalMat' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SpawnedAkComponent) == 0x000148, "Member 'Ak_SurfaceEffect_C_Received_Notify::SpawnedAkComponent' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Sound) == 0x000150, "Member 'Ak_SurfaceEffect_C_Received_Notify::Sound' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CharacterMovementComponent) == 0x000158, "Member 'Ak_SurfaceEffect_C_Received_Notify::CharacterMovementComponent' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, SocketLocation) == 0x000160, "Member 'Ak_SurfaceEffect_C_Received_Notify::SocketLocation' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, PM) == 0x000178, "Member 'Ak_SurfaceEffect_C_Received_Notify::PM' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Mesh) == 0x000180, "Member 'Ak_SurfaceEffect_C_Received_Notify::Mesh' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_VectorVector_ReturnValue) == 0x000188, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetRightVector_ReturnValue) == 0x0001A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetRightVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_VectorToRotator_ReturnValue) == 0x0001B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_VectorToRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_ComposeRotators_ReturnValue) == 0x0001D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x0001E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_TryPlayCharacterCustomizationFootstepEffect_ShouldPlayDefaultNiagaraEffect) == 0x0001E9, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_TryPlayCharacterCustomizationFootstepEffect_ShouldPlayDefaultNiagaraEffect' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RemoteTraceForMaterial_Material) == 0x0001F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RemoteTraceForMaterial_Material' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RemoteTraceForMaterial_Loc) == 0x0001F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RemoteTraceForMaterial_Loc' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue) == 0x000210, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetComponentByClass_ReturnValue_1) == 0x000218, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetComponentByClass_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000220, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetForwardVector_ReturnValue) == 0x000228, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetForwardVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetUpVector_ReturnValue) == 0x000240, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetUpVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotFromXZ_ReturnValue) == 0x000258, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotFromXZ_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_DynamicCast_AsPawn) == 0x000270, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_DynamicCast_AsPawn' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_DynamicCast_bSuccess) == 0x000278, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Roll) == 0x00027C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Roll' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Pitch) == 0x000280, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Pitch' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakRotator_Yaw) == 0x000284, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakRotator_Yaw' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsLocallyControlled_ReturnValue) == 0x000288, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue) == 0x000290, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Subtract_DoubleDouble_ReturnValue) == 0x000298, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Subtract_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetOwner_ReturnValue) == 0x0002A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetPhysmatEffectData_PhysmatEffect) == 0x0002A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetPhysmatEffectData_PhysmatEffect' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSurfaceEffect_Value) == 0x0002B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSurfaceEffect_Value' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSurfaceEffect_ReturnValue) == 0x0002D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSurfaceEffect_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GlobalScalabilitySetting_ScalabilitySetting) == 0x0002D1, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GlobalScalabilitySetting_ScalabilitySetting' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, K2Node_SwitchEnum_CmpSuccess) == 0x0002D2, "Member 'Ak_SurfaceEffect_C_Received_Notify::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x0002D3, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_X) == 0x0002D8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_X' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_Y) == 0x0002E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_Y' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BreakVector_Z) == 0x0002E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BreakVector_Z' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeVector_ReturnValue) == 0x0002F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_VSize_ReturnValue) == 0x000308, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000310, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsWithinAttenuation_Within) == 0x000328, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Temp_struct_Variable) == 0x000330, "Member 'Ak_SurfaceEffect_C_Received_Notify::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetAkComponent_ComponentCreated) == 0x000340, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetAkComponent_ComponentCreated' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetAkComponent_ReturnValue) == 0x000348, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetAkComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Less_DoubleDouble_ReturnValue) == 0x000350, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Less_DoubleDouble_ReturnValue_1) == 0x000351, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Less_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutLocation) == 0x000358, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutLocation' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutFrontDir) == 0x000370, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutFrontDir' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetValeriaAudioListenerPosition_OutRightDir) == 0x000388, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetValeriaAudioListenerPosition_OutRightDir' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetDisplayName_ReturnValue) == 0x0003A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetDisplayName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsDedicatedServer_ReturnValue) == 0x0003B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_ByteToInt_ReturnValue) == 0x0003B4, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_ByteToInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetSocketLocation_ReturnValue) == 0x0003B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_VectorVector_ReturnValue_1) == 0x0003D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_VectorVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnSystemAtLocation_ReturnValue) == 0x0003E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnSystemAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue) == 0x0003F0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_ByteToInt_ReturnValue_1) == 0x0003F4, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_ByteToInt_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_1) == 0x0003F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PlayerTraceForMaterial_Material) == 0x000400, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PlayerTraceForMaterial_Material' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PlayerTraceForMaterial_Loc) == 0x000408, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PlayerTraceForMaterial_Loc' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_2) == 0x000420, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetMaxSpeed_ReturnValue) == 0x000428, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetMaxSpeed_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MapRangeClamped_ReturnValue) == 0x000430, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000438, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetGameInstance_ReturnValue) == 0x000450, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PostEventAtLocation_ReturnValue) == 0x000458, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PostEventAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_3) == 0x00045C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RandomFloatInRange_ReturnValue) == 0x000460, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RandomFloatInRange_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue_1) == 0x000468, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_K2_GetComponentLocation_ReturnValue_2) == 0x000470, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_K2_GetComponentLocation_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_ReturnValue) == 0x000488, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Vector_Distance_ReturnValue) == 0x0004A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_4) == 0x0004A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_4' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_GetDisplayName_ReturnValue_1) == 0x0004B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_GetDisplayName_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue) == 0x0004C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_5) == 0x0004D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_5' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_1) == 0x0004D8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_2) == 0x0004E8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Concat_StrStr_ReturnValue_3) == 0x0004F8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Concat_StrStr_ReturnValue_3' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_RandomFloatInRange_ReturnValue_1) == 0x000508, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_RandomFloatInRange_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_ReturnValue_2) == 0x000510, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, Temp_delegate_Variable) == 0x000518, "Member 'Ak_SurfaceEffect_C_Received_Notify::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_PostAkEvent_ReturnValue) == 0x000528, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_6) == 0x00052C, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_6' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_NameToString_ReturnValue) == 0x000530, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_NameToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Contains_ReturnValue) == 0x000540, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Contains_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Conv_NameToString_ReturnValue_1) == 0x000548, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Conv_NameToString_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Contains_ReturnValue_1) == 0x000558, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Contains_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_BooleanOR_ReturnValue) == 0x000559, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000560, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeVector_ReturnValue_1) == 0x000568, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeVector_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_7) == 0x000580, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_7' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_VectorVector_ReturnValue_2) == 0x000588, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_VectorVector_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnDecalAtLocation_ReturnValue) == 0x0005A0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnDecalAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SpawnSystemAttached_ReturnValue) == 0x0005A8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SpawnSystemAttached_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_IsValid_ReturnValue_8) == 0x0005B0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_IsValid_ReturnValue_8' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Subtract_DoubleDouble_A_ImplicitCast) == 0x0005B8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Subtract_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_Add_DoubleDouble_A_ImplicitCast) == 0x0005C0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_Add_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_Pitch_ImplicitCast) == 0x0005C8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_Pitch_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_MakeRotator_Yaw_ImplicitCast) == 0x0005CC, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_MakeRotator_Yaw_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0005D0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeOut_Duration_ImplicitCast) == 0x0005D4, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeOut_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeOut_StartDelay_ImplicitCast) == 0x0005D8, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeOut_StartDelay_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeIn_Duration_ImplicitCast) == 0x0005DC, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeIn_Duration_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_Received_Notify, CallFunc_SetFadeIn_StartDelay_ImplicitCast) == 0x0005E0, "Member 'Ak_SurfaceEffect_C_Received_Notify::CallFunc_SetFadeIn_StartDelay_ImplicitCast' has a wrong offset!");
 
 // Function Ak_SurfaceEffect.Ak_SurfaceEffect_C.RemoteTraceForMaterial
 // 0x0268 (0x0268 - 0x0000)
@@ -681,7 +690,7 @@ public:
 	class USceneComponent*                        Mesh;                                              // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UPhysicalMaterial*                      Material;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Loc;                                               // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      Pm;                                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PM;                                                // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Location;                                          // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<class AActor*>                         K2Node_MakeArray_Array;                            // 0x0050(0x0010)(ConstParm, ReferenceParm)
@@ -691,10 +700,10 @@ public:
 	bool                                          CallFunc_LineTraceSingle_ReturnValue;              // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bBlockingHit;              // 0x0179(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BreakHitResult_bInitialOverlap;           // 0x017A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4160[0x1];                                     // 0x017B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46BF[0x1];                                     // 0x017B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         CallFunc_BreakHitResult_Time;                      // 0x017C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_BreakHitResult_Distance;                  // 0x0180(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4161[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46C0[0x4];                                     // 0x0184(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_Location;                  // 0x0188(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_ImpactPoint;               // 0x01A0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_Normal;                    // 0x01B8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -707,7 +716,7 @@ public:
 	int32                                         CallFunc_BreakHitResult_HitItem;                   // 0x0210(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_ElementIndex;              // 0x0214(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_BreakHitResult_FaceIndex;                 // 0x0218(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4162[0x4];                                     // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_46C1[0x4];                                     // 0x021C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakHitResult_TraceStart;                // 0x0220(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_BreakHitResult_TraceEnd;                  // 0x0238(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x0250(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -717,7 +726,7 @@ static_assert(sizeof(Ak_SurfaceEffect_C_RemoteTraceForMaterial) == 0x000268, "Wr
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, Mesh) == 0x000000, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::Mesh' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, Material) == 0x000008, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::Material' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, Loc) == 0x000010, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::Loc' has a wrong offset!");
-static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, Pm) == 0x000028, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::Pm' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, PM) == 0x000028, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::PM' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, Location) == 0x000030, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::Location' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, K2Node_MakeArray_Array) == 0x000050, "Member 'Ak_SurfaceEffect_C_RemoteTraceForMaterial::K2Node_MakeArray_Array' has a wrong offset!");
@@ -750,15 +759,48 @@ static_assert(offsetof(Ak_SurfaceEffect_C_RemoteTraceForMaterial, CallFunc_GetSo
 struct Ak_SurfaceEffect_C_SetStoredPhysmat final 
 {
 public:
-	class UPhysicalMaterial*                      Pm;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PM;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UComp_Actor_Audio_Data_C*               AudioData;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Ak_SurfaceEffect_C_SetStoredPhysmat) == 0x000008, "Wrong alignment on Ak_SurfaceEffect_C_SetStoredPhysmat");
 static_assert(sizeof(Ak_SurfaceEffect_C_SetStoredPhysmat) == 0x000018, "Wrong size on Ak_SurfaceEffect_C_SetStoredPhysmat");
-static_assert(offsetof(Ak_SurfaceEffect_C_SetStoredPhysmat, Pm) == 0x000000, "Member 'Ak_SurfaceEffect_C_SetStoredPhysmat::Pm' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_SetStoredPhysmat, PM) == 0x000000, "Member 'Ak_SurfaceEffect_C_SetStoredPhysmat::PM' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_SetStoredPhysmat, AudioData) == 0x000008, "Member 'Ak_SurfaceEffect_C_SetStoredPhysmat::AudioData' has a wrong offset!");
 static_assert(offsetof(Ak_SurfaceEffect_C_SetStoredPhysmat, CallFunc_IsValid_ReturnValue) == 0x000010, "Member 'Ak_SurfaceEffect_C_SetStoredPhysmat::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function Ak_SurfaceEffect.Ak_SurfaceEffect_C.TryPlayCharacterCustomizationFootstepEffect
+// 0x0068 (0x0068 - 0x0000)
+struct Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect final 
+{
+public:
+	struct FVector                                SpawnLocation;                                     // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FRotator                               SpawnRotation;                                     // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	class UObject*                                Object;                                            // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          ShouldPlayDefaultNiagaraEffect;                    // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C2[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_CharacterCustomizationComponent*   ValeriaCharacterCustomizationComponent;            // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character;            // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_46C3[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	EVAL_FootprintEffectType                      CallFunc_SpawnCustomFootprintEffects_ReturnValue;  // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_HasCustomFootprintEffects_ReturnValue;    // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_NotEqual_ByteByte_ReturnValue;            // 0x0062(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect) == 0x000008, "Wrong alignment on Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect");
+static_assert(sizeof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect) == 0x000068, "Wrong size on Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, SpawnLocation) == 0x000000, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::SpawnLocation' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, SpawnRotation) == 0x000018, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::SpawnRotation' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, Object) == 0x000030, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::Object' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, ShouldPlayDefaultNiagaraEffect) == 0x000038, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::ShouldPlayDefaultNiagaraEffect' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, ValeriaCharacterCustomizationComponent) == 0x000040, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::ValeriaCharacterCustomizationComponent' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, K2Node_DynamicCast_AsValeria_Character) == 0x000048, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::K2Node_DynamicCast_AsValeria_Character' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, K2Node_DynamicCast_bSuccess) == 0x000050, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, CallFunc_GetCharacterCustomizationComponent_ReturnValue) == 0x000058, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::CallFunc_GetCharacterCustomizationComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, CallFunc_SpawnCustomFootprintEffects_ReturnValue) == 0x000060, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::CallFunc_SpawnCustomFootprintEffects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, CallFunc_HasCustomFootprintEffects_ReturnValue) == 0x000061, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::CallFunc_HasCustomFootprintEffects_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect, CallFunc_NotEqual_ByteByte_ReturnValue) == 0x000062, "Member 'Ak_SurfaceEffect_C_TryPlayCharacterCustomizationFootstepEffect::CallFunc_NotEqual_ByteByte_ReturnValue' has a wrong offset!");
 
 }
 

@@ -47,12 +47,12 @@ class FString UAk_OneShot_Base_C::GetNotifyName(const class FString& CallFunc_Ge
 // bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAkAudioEvent*                    UsedAkEvent                                            (Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Owner                                                  (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AK                                                     (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     Ak                                                     (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_AkGetComponent_ComponentCreated               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UAkComponent*                     CallFunc_AkGetComponent_AkComponent                    (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_AkEventComponent_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UAk_OneShot_Base_C::PlayAudio(class USkeletalMeshComponent* MeshComp, bool* Success, class UAkAudioEvent* UsedAkEvent, class AActor* Owner, class UAkComponent* AK, bool CallFunc_AkGetComponent_ComponentCreated, class UAkComponent* CallFunc_AkGetComponent_AkComponent, int32 CallFunc_AkEventComponent_ReturnValue) const
+void UAk_OneShot_Base_C::PlayAudio(class USkeletalMeshComponent* MeshComp, bool* Success, class UAkAudioEvent* UsedAkEvent, class AActor* Owner, class UAkComponent* Ak, bool CallFunc_AkGetComponent_ComponentCreated, class UAkComponent* CallFunc_AkGetComponent_AkComponent, int32 CallFunc_AkEventComponent_ReturnValue) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -64,7 +64,7 @@ void UAk_OneShot_Base_C::PlayAudio(class USkeletalMeshComponent* MeshComp, bool*
 	Parms.MeshComp = MeshComp;
 	Parms.UsedAkEvent = UsedAkEvent;
 	Parms.Owner = Owner;
-	Parms.AK = AK;
+	Parms.Ak = Ak;
 	Parms.CallFunc_AkGetComponent_ComponentCreated = CallFunc_AkGetComponent_ComponentCreated;
 	Parms.CallFunc_AkGetComponent_AkComponent = CallFunc_AkGetComponent_AkComponent;
 	Parms.CallFunc_AkEventComponent_ReturnValue = CallFunc_AkEventComponent_ReturnValue;
@@ -83,11 +83,11 @@ void UAk_OneShot_Base_C::PlayAudio(class USkeletalMeshComponent* MeshComp, bool*
 // class UAnimSequenceBase*                Animation                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // struct FAnimNotifyEventReference        EventReference                                         (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AK                                                     (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     Ak                                                     (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_PlayAudio_Success                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_ShouldPlay_Should                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UAk_OneShot_Base_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, struct FAnimNotifyEventReference& EventReference, class UAkComponent* AK, bool CallFunc_PlayAudio_Success, bool CallFunc_ShouldPlay_Should) const
+bool UAk_OneShot_Base_C::Received_Notify(class USkeletalMeshComponent* MeshComp, class UAnimSequenceBase* Animation, struct FAnimNotifyEventReference& EventReference, class UAkComponent* Ak, bool CallFunc_PlayAudio_Success, bool CallFunc_ShouldPlay_Should) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -99,7 +99,7 @@ bool UAk_OneShot_Base_C::Received_Notify(class USkeletalMeshComponent* MeshComp,
 	Parms.MeshComp = MeshComp;
 	Parms.Animation = Animation;
 	Parms.EventReference = std::move(EventReference);
-	Parms.AK = AK;
+	Parms.Ak = Ak;
 	Parms.CallFunc_PlayAudio_Success = CallFunc_PlayAudio_Success;
 	Parms.CallFunc_ShouldPlay_Should = CallFunc_ShouldPlay_Should;
 

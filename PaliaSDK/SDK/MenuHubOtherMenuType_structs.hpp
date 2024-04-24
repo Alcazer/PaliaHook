@@ -15,15 +15,16 @@ namespace SDK
 {
 
 // UserDefinedEnum MenuHubOtherMenuType.MenuHubOtherMenuType
-// NumValues: 0x0006
+// NumValues: 0x0007
 enum class EMenuHubOtherMenuType : uint8
 {
 	NewEnumerator3                           = 0,
 	NewEnumerator0                           = 1,
-	NewEnumerator1                           = 2,
-	NewEnumerator2                           = 3,
-	NewEnumerator4                           = 4,
-	MenuHubOtherMenuType_MAX                 = 5,
+	NewEnumerator5                           = 2,
+	NewEnumerator1                           = 3,
+	NewEnumerator2                           = 4,
+	NewEnumerator4                           = 5,
+	MenuHubOtherMenuType_MAX                 = 6,
 };
 
 }

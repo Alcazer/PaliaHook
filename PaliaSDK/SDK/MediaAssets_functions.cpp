@@ -17,668 +17,8 @@
 namespace SDK
 {
 
-// Function MediaAssets.MediaSource.SetMediaOptionBool
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSource::SetMediaOptionBool(class FName& Key, bool Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "SetMediaOptionBool");
-
-	Params::MediaSource_SetMediaOptionBool Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSource.SetMediaOptionFloat
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSource::SetMediaOptionFloat(class FName& Key, float Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "SetMediaOptionFloat");
-
-	Params::MediaSource_SetMediaOptionFloat Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSource.SetMediaOptionInt64
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSource::SetMediaOptionInt64(class FName& Key, int64 Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "SetMediaOptionInt64");
-
-	Params::MediaSource_SetMediaOptionInt64 Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = Value;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSource.SetMediaOptionString
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSource::SetMediaOptionString(class FName& Key, const class FString& Value)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "SetMediaOptionString");
-
-	Params::MediaSource_SetMediaOptionString Parms{};
-
-	Parms.Key = Key;
-	Parms.Value = std::move(Value);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSource.GetUrl
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class FString UMediaSource::GetUrl() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "GetUrl");
-
-	Params::MediaSource_GetUrl Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSource.Validate
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMediaSource::Validate() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSource", "Validate");
-
-	Params::MediaSource_Validate Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.FileMediaSource.SetFilePath
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UFileMediaSource::SetFilePath(const class FString& Path)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("FileMediaSource", "SetFilePath");
-
-	Params::FileMediaSource_SetFilePath Parms{};
-
-	Parms.Path = std::move(Path);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaTexture.SetMediaPlayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMediaPlayer*                     NewMediaPlayer                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaTexture::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "SetMediaPlayer");
-
-	Params::MediaTexture_SetMediaPlayer Parms{};
-
-	Parms.NewMediaPlayer = NewMediaPlayer;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaTexture.UpdateResource
-// (Native, Public, BlueprintCallable)
-
-void UMediaTexture::UpdateResource()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "UpdateResource");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaTexture.GetAspectRatio
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMediaTexture::GetAspectRatio() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "GetAspectRatio");
-
-	Params::MediaTexture_GetAspectRatio Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaTexture.GetHeight
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMediaTexture::GetHeight() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "GetHeight");
-
-	Params::MediaTexture_GetHeight Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaTexture.GetMediaPlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMediaPlayer* UMediaTexture::GetMediaPlayer() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "GetMediaPlayer");
-
-	Params::MediaTexture_GetMediaPlayer Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaTexture.GetTextureNumMips
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMediaTexture::GetTextureNumMips() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "GetTextureNumMips");
-
-	Params::MediaTexture_GetTextureNumMips Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaTexture.GetWidth
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UMediaTexture::GetWidth() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaTexture", "GetWidth");
-
-	Params::MediaTexture_GetWidth Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FSoundAttenuationSettings        OutAttenuationSettings                                 (Parm, OutParm, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "BP_GetAttenuationSettingsToApply");
-
-	Params::MediaSoundComponent_BP_GetAttenuationSettingsToApply Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (OutAttenuationSettings != nullptr)
-		*OutAttenuationSettings = std::move(Parms.OutAttenuationSettings);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.GetNormalizedSpectralData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FMediaSoundComponentSpectralData>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetNormalizedSpectralData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "GetNormalizedSpectralData");
-
-	Params::MediaSoundComponent_GetNormalizedSpectralData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.GetSpectralData
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<struct FMediaSoundComponentSpectralData>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetSpectralData()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "GetSpectralData");
-
-	Params::MediaSoundComponent_GetSpectralData Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInEnvelopeFollowing                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSoundComponent::SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "SetEnableEnvelopeFollowing");
-
-	Params::MediaSoundComponent_SetEnableEnvelopeFollowing Parms{};
-
-	Parms.bInEnvelopeFollowing = bInEnvelopeFollowing;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInSpectralAnalysisEnabled                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSoundComponent::SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "SetEnableSpectralAnalysis");
-
-	Params::MediaSoundComponent_SetEnableSpectralAnalysis Parms{};
-
-	Parms.bInSpectralAnalysisEnabled = bInSpectralAnalysisEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   AttackTimeMsec                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReleaseTimeMsec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSoundComponent::SetEnvelopeFollowingsettings(int32 AttackTimeMsec, int32 ReleaseTimeMsec)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "SetEnvelopeFollowingsettings");
-
-	Params::MediaSoundComponent_SetEnvelopeFollowingsettings Parms{};
-
-	Parms.AttackTimeMsec = AttackTimeMsec;
-	Parms.ReleaseTimeMsec = ReleaseTimeMsec;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UMediaPlayer*                     NewMediaPlayer                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "SetMediaPlayer");
-
-	Params::MediaSoundComponent_SetMediaPlayer Parms{};
-
-	Parms.NewMediaPlayer = NewMediaPlayer;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// TArray<float>                           InFrequenciesToAnalyze                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-// EMediaSoundComponentFFTSize             InFFTSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UMediaSoundComponent::SetSpectralAnalysisSettings(const TArray<float>& InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "SetSpectralAnalysisSettings");
-
-	Params::MediaSoundComponent_SetSpectralAnalysisSettings Parms{};
-
-	Parms.InFrequenciesToAnalyze = std::move(InFrequenciesToAnalyze);
-	Parms.InFFTSize = InFFTSize;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.GetEnvelopeValue
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UMediaSoundComponent::GetEnvelopeValue() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "GetEnvelopeValue");
-
-	Params::MediaSoundComponent_GetEnvelopeValue Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMediaPlayer* UMediaSoundComponent::GetMediaPlayer() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaSoundComponent", "GetMediaPlayer");
-
-	Params::MediaSoundComponent_GetMediaPlayer Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaComponent.GetMediaPlayer
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMediaPlayer* UMediaComponent::GetMediaPlayer() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaComponent", "GetMediaPlayer");
-
-	Params::MediaComponent_GetMediaPlayer Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function MediaAssets.MediaComponent.GetMediaTexture
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UMediaTexture*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UMediaTexture* UMediaComponent::GetMediaTexture() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("MediaComponent", "GetMediaTexture");
-
-	Params::MediaComponent_GetMediaTexture Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function MediaAssets.MediaPlayer.CanPlaySource
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -706,7 +46,7 @@ bool UMediaPlayer::CanPlaySource(class UMediaSource* MediaSource)
 
 
 // Function MediaAssets.MediaPlayer.CanPlayUrl
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -734,7 +74,7 @@ bool UMediaPlayer::CanPlayUrl(const class FString& URL)
 
 
 // Function MediaAssets.MediaPlayer.Close
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlayer::Close()
 {
@@ -753,7 +93,7 @@ void UMediaPlayer::Close()
 
 
 // Function MediaAssets.MediaPlayer.Next
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -778,7 +118,7 @@ bool UMediaPlayer::Next()
 
 
 // Function MediaAssets.MediaPlayer.OpenFile
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           FilePath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -834,7 +174,7 @@ bool UMediaPlayer::OpenPlaylist(class UMediaPlaylist* InPlaylist)
 
 
 // Function MediaAssets.MediaPlayer.OpenPlaylistIndex
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaPlaylist*                   InPlaylist                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -864,7 +204,7 @@ bool UMediaPlayer::OpenPlaylistIndex(class UMediaPlaylist* InPlaylist, int32 Par
 
 
 // Function MediaAssets.MediaPlayer.OpenSource
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -892,7 +232,7 @@ bool UMediaPlayer::OpenSource(class UMediaSource* MediaSource)
 
 
 // Function MediaAssets.MediaPlayer.OpenSourceLatent
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FLatentActionInfo                LatentInfo                                             (Parm, NoDestructor, NativeAccessSpecifierPublic)
@@ -927,7 +267,7 @@ void UMediaPlayer::OpenSourceLatent(class UObject* WorldContextObject, const str
 
 
 // Function MediaAssets.MediaPlayer.OpenSourceWithOptions
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FMediaPlayerOptions              Options                                                (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
@@ -957,7 +297,7 @@ bool UMediaPlayer::OpenSourceWithOptions(class UMediaSource* MediaSource, struct
 
 
 // Function MediaAssets.MediaPlayer.OpenUrl
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -985,7 +325,7 @@ bool UMediaPlayer::OpenUrl(const class FString& URL)
 
 
 // Function MediaAssets.MediaPlayer.Pause
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1010,7 +350,7 @@ bool UMediaPlayer::Pause()
 
 
 // Function MediaAssets.MediaPlayer.Play
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1035,7 +375,7 @@ bool UMediaPlayer::Play()
 
 
 // Function MediaAssets.MediaPlayer.PlayAndSeek
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UMediaPlayer::PlayAndSeek()
 {
@@ -1054,7 +394,7 @@ void UMediaPlayer::PlayAndSeek()
 
 
 // Function MediaAssets.MediaPlayer.Previous
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1079,7 +419,7 @@ bool UMediaPlayer::Previous()
 
 
 // Function MediaAssets.MediaPlayer.Reopen
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1104,7 +444,7 @@ bool UMediaPlayer::Reopen()
 
 
 // Function MediaAssets.MediaPlayer.Rewind
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1129,7 +469,7 @@ bool UMediaPlayer::Rewind()
 
 
 // Function MediaAssets.MediaPlayer.Seek
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FTimespan                        Time                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1157,7 +497,7 @@ bool UMediaPlayer::Seek(struct FTimespan& Time)
 
 
 // Function MediaAssets.MediaPlayer.SelectTrack
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1187,7 +527,7 @@ bool UMediaPlayer::SelectTrack(EMediaPlayerTrack TrackType, int32 TrackIndex)
 
 
 // Function MediaAssets.MediaPlayer.SetBlockOnTime
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FTimespan                        Time                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1212,7 +552,7 @@ void UMediaPlayer::SetBlockOnTime(struct FTimespan& Time)
 
 
 // Function MediaAssets.MediaPlayer.SetDesiredPlayerName
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FName                             PlayerName                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1237,7 +577,7 @@ void UMediaPlayer::SetDesiredPlayerName(class FName PlayerName)
 
 
 // Function MediaAssets.MediaPlayer.SetLooping
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    Looping                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1265,7 +605,7 @@ bool UMediaPlayer::SetLooping(bool Looping)
 
 
 // Function MediaAssets.MediaPlayer.SetMediaOptions
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     Options                                                (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1290,7 +630,7 @@ void UMediaPlayer::SetMediaOptions(class UMediaSource* Options)
 
 
 // Function MediaAssets.MediaPlayer.SetNativeVolume
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Volume                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1318,7 +658,7 @@ bool UMediaPlayer::SetNativeVolume(float Volume)
 
 
 // Function MediaAssets.MediaPlayer.SetRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Rate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1346,7 +686,7 @@ bool UMediaPlayer::SetRate(float Rate)
 
 
 // Function MediaAssets.MediaPlayer.SetTimeDelay
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FTimespan                        Param_TimeDelay                                        (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1371,7 +711,7 @@ void UMediaPlayer::SetTimeDelay(const struct FTimespan& Param_TimeDelay)
 
 
 // Function MediaAssets.MediaPlayer.SetTrackFormat
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1403,7 +743,7 @@ bool UMediaPlayer::SetTrackFormat(EMediaPlayerTrack TrackType, int32 TrackIndex,
 
 
 // Function MediaAssets.MediaPlayer.SetVideoTrackFrameRate
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1435,7 +775,7 @@ bool UMediaPlayer::SetVideoTrackFrameRate(int32 TrackIndex, int32 FormatIndex, f
 
 
 // Function MediaAssets.MediaPlayer.SetViewField
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   Horizontal                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   Vertical                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1467,7 +807,7 @@ bool UMediaPlayer::SetViewField(float Horizontal, float Vertical, bool Absolute)
 
 
 // Function MediaAssets.MediaPlayer.SetViewRotation
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FRotator                         Rotation                                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 // bool                                    Absolute                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1497,7 +837,7 @@ bool UMediaPlayer::SetViewRotation(struct FRotator& Rotation, bool Absolute)
 
 
 // Function MediaAssets.MediaPlayer.CanPause
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1522,7 +862,7 @@ bool UMediaPlayer::CanPause() const
 
 
 // Function MediaAssets.MediaPlayer.GetAudioTrackChannels
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1552,7 +892,7 @@ int32 UMediaPlayer::GetAudioTrackChannels(int32 TrackIndex, int32 FormatIndex) c
 
 
 // Function MediaAssets.MediaPlayer.GetAudioTrackSampleRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1582,7 +922,7 @@ int32 UMediaPlayer::GetAudioTrackSampleRate(int32 TrackIndex, int32 FormatIndex)
 
 
 // Function MediaAssets.MediaPlayer.GetAudioTrackType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1612,7 +952,7 @@ class FString UMediaPlayer::GetAudioTrackType(int32 TrackIndex, int32 FormatInde
 
 
 // Function MediaAssets.MediaPlayer.GetDesiredPlayerName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1636,8 +976,58 @@ class FName UMediaPlayer::GetDesiredPlayerName() const
 }
 
 
+// Function MediaAssets.MediaPlayer.GetDisplayTime
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FTimespan                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FTimespan UMediaPlayer::GetDisplayTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlayer", "GetDisplayTime");
+
+	Params::MediaPlayer_GetDisplayTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaPlayer.GetDisplayTimeStamp
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaTimeStampInfo*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMediaTimeStampInfo* UMediaPlayer::GetDisplayTimeStamp() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlayer", "GetDisplayTimeStamp");
+
+	Params::MediaPlayer_GetDisplayTimeStamp Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaAssets.MediaPlayer.GetDuration
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FTimespan                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1662,7 +1052,7 @@ struct FTimespan UMediaPlayer::GetDuration() const
 
 
 // Function MediaAssets.MediaPlayer.GetHorizontalFieldOfView
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1686,8 +1076,33 @@ float UMediaPlayer::GetHorizontalFieldOfView() const
 }
 
 
+// Function MediaAssets.MediaPlayer.GetMediaMetadataItems
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TMap<class FString, struct FMediaMetadataItemsBPT>ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+TMap<class FString, struct FMediaMetadataItemsBPT> UMediaPlayer::GetMediaMetadataItems() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaPlayer", "GetMediaMetadataItems");
+
+	Params::MediaPlayer_GetMediaMetadataItems Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaAssets.MediaPlayer.GetMediaName
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FText                             ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -1712,7 +1127,7 @@ class FText UMediaPlayer::GetMediaName() const
 
 
 // Function MediaAssets.MediaPlayer.GetNumTrackFormats
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1742,7 +1157,7 @@ int32 UMediaPlayer::GetNumTrackFormats(EMediaPlayerTrack TrackType, int32 TrackI
 
 
 // Function MediaAssets.MediaPlayer.GetNumTracks
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1770,7 +1185,7 @@ int32 UMediaPlayer::GetNumTracks(EMediaPlayerTrack TrackType) const
 
 
 // Function MediaAssets.MediaPlayer.GetPlayerName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1845,7 +1260,7 @@ int32 UMediaPlayer::GetPlaylistIndex() const
 
 
 // Function MediaAssets.MediaPlayer.GetRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1870,7 +1285,7 @@ float UMediaPlayer::GetRate() const
 
 
 // Function MediaAssets.MediaPlayer.GetSelectedTrack
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1898,7 +1313,7 @@ int32 UMediaPlayer::GetSelectedTrack(EMediaPlayerTrack TrackType) const
 
 
 // Function MediaAssets.MediaPlayer.GetSupportedRates
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FFloatRange>              OutRates                                               (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // bool                                    Unthinned                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -1927,7 +1342,7 @@ void UMediaPlayer::GetSupportedRates(TArray<struct FFloatRange>* OutRates, bool 
 
 
 // Function MediaAssets.MediaPlayer.GetTime
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FTimespan                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1952,7 +1367,7 @@ struct FTimespan UMediaPlayer::GetTime() const
 
 
 // Function MediaAssets.MediaPlayer.GetTimeDelay
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FTimespan                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1977,7 +1392,7 @@ struct FTimespan UMediaPlayer::GetTimeDelay() const
 
 
 // Function MediaAssets.MediaPlayer.GetTimeStamp
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class UMediaTimeStampInfo*              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2002,7 +1417,7 @@ class UMediaTimeStampInfo* UMediaPlayer::GetTimeStamp() const
 
 
 // Function MediaAssets.MediaPlayer.GetTrackDisplayName
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2032,7 +1447,7 @@ class FText UMediaPlayer::GetTrackDisplayName(EMediaPlayerTrack TrackType, int32
 
 
 // Function MediaAssets.MediaPlayer.GetTrackFormat
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2062,7 +1477,7 @@ int32 UMediaPlayer::GetTrackFormat(EMediaPlayerTrack TrackType, int32 TrackIndex
 
 
 // Function MediaAssets.MediaPlayer.GetTrackLanguage
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // EMediaPlayerTrack                       TrackType                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2092,7 +1507,7 @@ class FString UMediaPlayer::GetTrackLanguage(EMediaPlayerTrack TrackType, int32 
 
 
 // Function MediaAssets.MediaPlayer.GetUrl
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2117,7 +1532,7 @@ class FString UMediaPlayer::GetUrl() const
 
 
 // Function MediaAssets.MediaPlayer.GetVerticalFieldOfView
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2142,7 +1557,7 @@ float UMediaPlayer::GetVerticalFieldOfView() const
 
 
 // Function MediaAssets.MediaPlayer.GetVideoTrackAspectRatio
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2172,7 +1587,7 @@ float UMediaPlayer::GetVideoTrackAspectRatio(int32 TrackIndex, int32 FormatIndex
 
 
 // Function MediaAssets.MediaPlayer.GetVideoTrackDimensions
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2202,7 +1617,7 @@ struct FIntPoint UMediaPlayer::GetVideoTrackDimensions(int32 TrackIndex, int32 F
 
 
 // Function MediaAssets.MediaPlayer.GetVideoTrackFrameRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2232,7 +1647,7 @@ float UMediaPlayer::GetVideoTrackFrameRate(int32 TrackIndex, int32 FormatIndex) 
 
 
 // Function MediaAssets.MediaPlayer.GetVideoTrackFrameRates
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2262,7 +1677,7 @@ struct FFloatRange UMediaPlayer::GetVideoTrackFrameRates(int32 TrackIndex, int32
 
 
 // Function MediaAssets.MediaPlayer.GetVideoTrackType
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   TrackIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   FormatIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2292,7 +1707,7 @@ class FString UMediaPlayer::GetVideoTrackType(int32 TrackIndex, int32 FormatInde
 
 
 // Function MediaAssets.MediaPlayer.GetViewRotation
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // struct FRotator                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 
@@ -2317,7 +1732,7 @@ struct FRotator UMediaPlayer::GetViewRotation() const
 
 
 // Function MediaAssets.MediaPlayer.HasError
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2342,7 +1757,7 @@ bool UMediaPlayer::HasError() const
 
 
 // Function MediaAssets.MediaPlayer.IsBuffering
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2367,7 +1782,7 @@ bool UMediaPlayer::IsBuffering() const
 
 
 // Function MediaAssets.MediaPlayer.IsClosed
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2392,7 +1807,7 @@ bool UMediaPlayer::IsClosed() const
 
 
 // Function MediaAssets.MediaPlayer.IsConnecting
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2417,7 +1832,7 @@ bool UMediaPlayer::IsConnecting() const
 
 
 // Function MediaAssets.MediaPlayer.IsLooping
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2442,7 +1857,7 @@ bool UMediaPlayer::IsLooping() const
 
 
 // Function MediaAssets.MediaPlayer.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2467,7 +1882,7 @@ bool UMediaPlayer::IsPaused() const
 
 
 // Function MediaAssets.MediaPlayer.IsPlaying
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2492,7 +1907,7 @@ bool UMediaPlayer::IsPlaying() const
 
 
 // Function MediaAssets.MediaPlayer.IsPreparing
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2517,7 +1932,7 @@ bool UMediaPlayer::IsPreparing() const
 
 
 // Function MediaAssets.MediaPlayer.IsReady
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2542,7 +1957,7 @@ bool UMediaPlayer::IsReady() const
 
 
 // Function MediaAssets.MediaPlayer.SupportsRate
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // float                                   Rate                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    Unthinned                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2572,7 +1987,7 @@ bool UMediaPlayer::SupportsRate(float Rate, bool Unthinned) const
 
 
 // Function MediaAssets.MediaPlayer.SupportsScrubbing
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2597,7 +2012,7 @@ bool UMediaPlayer::SupportsScrubbing() const
 
 
 // Function MediaAssets.MediaPlayer.SupportsSeeking
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -2621,8 +2036,410 @@ bool UMediaPlayer::SupportsSeeking() const
 }
 
 
+// Function MediaAssets.MediaTexture.SetMediaPlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMediaPlayer*                     NewMediaPlayer                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaTexture::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "SetMediaPlayer");
+
+	Params::MediaTexture_SetMediaPlayer Parms{};
+
+	Parms.NewMediaPlayer = NewMediaPlayer;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaTexture.UpdateResource
+// (Native, Public, BlueprintCallable)
+
+void UMediaTexture::UpdateResource()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "UpdateResource");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaTexture.GetAspectRatio
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMediaTexture::GetAspectRatio() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "GetAspectRatio");
+
+	Params::MediaTexture_GetAspectRatio Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaTexture.GetHeight
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMediaTexture::GetHeight() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "GetHeight");
+
+	Params::MediaTexture_GetHeight Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaTexture.GetMediaPlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMediaPlayer* UMediaTexture::GetMediaPlayer() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "GetMediaPlayer");
+
+	Params::MediaTexture_GetMediaPlayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaTexture.GetTextureNumMips
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMediaTexture::GetTextureNumMips() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "GetTextureNumMips");
+
+	Params::MediaTexture_GetTextureNumMips Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaTexture.GetWidth
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UMediaTexture::GetWidth() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaTexture", "GetWidth");
+
+	Params::MediaTexture_GetWidth Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSource.SetMediaOptionBool
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSource::SetMediaOptionBool(class FName& Key, bool Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "SetMediaOptionBool");
+
+	Params::MediaSource_SetMediaOptionBool Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSource.SetMediaOptionFloat
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSource::SetMediaOptionFloat(class FName& Key, float Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "SetMediaOptionFloat");
+
+	Params::MediaSource_SetMediaOptionFloat Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSource.SetMediaOptionInt64
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int64                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSource::SetMediaOptionInt64(class FName& Key, int64 Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "SetMediaOptionInt64");
+
+	Params::MediaSource_SetMediaOptionInt64 Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = Value;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSource.SetMediaOptionString
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             Key                                                    (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           Value                                                  (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSource::SetMediaOptionString(class FName& Key, const class FString& Value)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "SetMediaOptionString");
+
+	Params::MediaSource_SetMediaOptionString Parms{};
+
+	Parms.Key = Key;
+	Parms.Value = std::move(Value);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSource.GetUrl
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString UMediaSource::GetUrl() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "GetUrl");
+
+	Params::MediaSource_GetUrl Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSource.Validate
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMediaSource::Validate() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSource", "Validate");
+
+	Params::MediaSource_Validate Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.FileMediaSource.SetFilePath
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           Path                                                   (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UFileMediaSource::SetFilePath(const class FString& Path)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("FileMediaSource", "SetFilePath");
+
+	Params::FileMediaSource_SetFilePath Parms{};
+
+	Parms.Path = std::move(Path);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaComponent.GetMediaPlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMediaPlayer* UMediaComponent::GetMediaPlayer() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaComponent", "GetMediaPlayer");
+
+	Params::MediaComponent_GetMediaPlayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaComponent.GetMediaTexture
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaTexture*                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMediaTexture* UMediaComponent::GetMediaTexture() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaComponent", "GetMediaTexture");
+
+	Params::MediaComponent_GetMediaTexture Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaAssets.MediaPlaylist.Add
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2650,7 +2467,7 @@ bool UMediaPlaylist::Add(class UMediaSource* MediaSource)
 
 
 // Function MediaAssets.MediaPlaylist.AddFile
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           FilePath                                               (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2678,7 +2495,7 @@ bool UMediaPlaylist::AddFile(const class FString& FilePath)
 
 
 // Function MediaAssets.MediaPlaylist.AddUrl
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class FString                           URL                                                    (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2706,7 +2523,7 @@ bool UMediaPlaylist::AddUrl(const class FString& URL)
 
 
 // Function MediaAssets.MediaPlaylist.Get
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaSource*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2734,7 +2551,7 @@ class UMediaSource* UMediaPlaylist::Get(int32 Param_Index)
 
 
 // Function MediaAssets.MediaPlaylist.GetNext
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32                                   InOutIndex                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaSource*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2763,7 +2580,7 @@ class UMediaSource* UMediaPlaylist::GetNext(int32* InOutIndex)
 
 
 // Function MediaAssets.MediaPlaylist.GetPrevious
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32                                   InOutIndex                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaSource*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2792,7 +2609,7 @@ class UMediaSource* UMediaPlaylist::GetPrevious(int32* InOutIndex)
 
 
 // Function MediaAssets.MediaPlaylist.GetRandom
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // int32                                   OutIndex                                               (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaSource*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2821,7 +2638,7 @@ class UMediaSource* UMediaPlaylist::GetRandom(int32* OutIndex)
 
 
 // Function MediaAssets.MediaPlaylist.Insert
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2873,7 +2690,7 @@ int32 UMediaPlaylist::Num()
 
 
 // Function MediaAssets.MediaPlaylist.Remove
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMediaSource*                     MediaSource                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2901,7 +2718,7 @@ bool UMediaPlaylist::Remove(class UMediaSource* MediaSource)
 
 
 // Function MediaAssets.MediaPlaylist.RemoveAt
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2929,7 +2746,7 @@ bool UMediaPlaylist::RemoveAt(int32 Param_Index)
 
 
 // Function MediaAssets.MediaPlaylist.Replace
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UMediaSource*                     Replacement                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2958,8 +2775,266 @@ bool UMediaPlaylist::Replace(int32 Param_Index, class UMediaSource* Replacement)
 }
 
 
+// Function MediaAssets.MediaSoundComponent.BP_GetAttenuationSettingsToApply
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FSoundAttenuationSettings        OutAttenuationSettings                                 (Parm, OutParm, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UMediaSoundComponent::BP_GetAttenuationSettingsToApply(struct FSoundAttenuationSettings* OutAttenuationSettings)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "BP_GetAttenuationSettingsToApply");
+
+	Params::MediaSoundComponent_BP_GetAttenuationSettingsToApply Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutAttenuationSettings != nullptr)
+		*OutAttenuationSettings = std::move(Parms.OutAttenuationSettings);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.GetNormalizedSpectralData
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FMediaSoundComponentSpectralData>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetNormalizedSpectralData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "GetNormalizedSpectralData");
+
+	Params::MediaSoundComponent_GetNormalizedSpectralData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.GetSpectralData
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<struct FMediaSoundComponentSpectralData>ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMediaSoundComponentSpectralData> UMediaSoundComponent::GetSpectralData()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "GetSpectralData");
+
+	Params::MediaSoundComponent_GetSpectralData Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetEnableEnvelopeFollowing
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInEnvelopeFollowing                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSoundComponent::SetEnableEnvelopeFollowing(bool bInEnvelopeFollowing)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "SetEnableEnvelopeFollowing");
+
+	Params::MediaSoundComponent_SetEnableEnvelopeFollowing Parms{};
+
+	Parms.bInEnvelopeFollowing = bInEnvelopeFollowing;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetEnableSpectralAnalysis
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInSpectralAnalysisEnabled                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSoundComponent::SetEnableSpectralAnalysis(bool bInSpectralAnalysisEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "SetEnableSpectralAnalysis");
+
+	Params::MediaSoundComponent_SetEnableSpectralAnalysis Parms{};
+
+	Parms.bInSpectralAnalysisEnabled = bInSpectralAnalysisEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetEnvelopeFollowingsettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   AttackTimeMsec                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReleaseTimeMsec                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSoundComponent::SetEnvelopeFollowingsettings(int32 AttackTimeMsec, int32 ReleaseTimeMsec)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "SetEnvelopeFollowingsettings");
+
+	Params::MediaSoundComponent_SetEnvelopeFollowingsettings Parms{};
+
+	Parms.AttackTimeMsec = AttackTimeMsec;
+	Parms.ReleaseTimeMsec = ReleaseTimeMsec;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetMediaPlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UMediaPlayer*                     NewMediaPlayer                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSoundComponent::SetMediaPlayer(class UMediaPlayer* NewMediaPlayer)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "SetMediaPlayer");
+
+	Params::MediaSoundComponent_SetMediaPlayer Parms{};
+
+	Parms.NewMediaPlayer = NewMediaPlayer;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.SetSpectralAnalysisSettings
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// TArray<float>                           InFrequenciesToAnalyze                                 (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+// EMediaSoundComponentFFTSize             InFFTSize                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UMediaSoundComponent::SetSpectralAnalysisSettings(const TArray<float>& InFrequenciesToAnalyze, EMediaSoundComponentFFTSize InFFTSize)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "SetSpectralAnalysisSettings");
+
+	Params::MediaSoundComponent_SetSpectralAnalysisSettings Parms{};
+
+	Parms.InFrequenciesToAnalyze = std::move(InFrequenciesToAnalyze);
+	Parms.InFFTSize = InFFTSize;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.GetEnvelopeValue
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UMediaSoundComponent::GetEnvelopeValue() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "GetEnvelopeValue");
+
+	Params::MediaSoundComponent_GetEnvelopeValue Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function MediaAssets.MediaSoundComponent.GetMediaPlayer
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UMediaPlayer*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UMediaPlayer* UMediaSoundComponent::GetMediaPlayer() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("MediaSoundComponent", "GetMediaPlayer");
+
+	Params::MediaSoundComponent_GetMediaPlayer Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateAudioCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FMediaCaptureDevice>      OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2988,7 +3063,7 @@ void UMediaBlueprintFunctionLibrary::EnumerateAudioCaptureDevices(TArray<struct 
 
 
 // Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateVideoCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FMediaCaptureDevice>      OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3017,7 +3092,7 @@ void UMediaBlueprintFunctionLibrary::EnumerateVideoCaptureDevices(TArray<struct 
 
 
 // Function MediaAssets.MediaBlueprintFunctionLibrary.EnumerateWebcamCaptureDevices
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<struct FMediaCaptureDevice>      OutDevices                                             (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // int32                                   Filter                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

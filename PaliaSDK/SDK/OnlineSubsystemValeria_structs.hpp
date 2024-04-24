@@ -10,12 +10,47 @@
 
 #include "Basic.hpp"
 
-#include "ValeriaDTOs_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ValeriaDTOs_structs.hpp"
 
 
 namespace SDK
 {
+
+// Enum OnlineSubsystemValeria.EVAL_UserPrivileges
+// NumValues: 0x0006
+enum class EVAL_UserPrivileges : uint8
+{
+	CanPlay                                  = 0,
+	CanPlayOnline                            = 1,
+	CanCommunicateOnline                     = 2,
+	CanUseUserGeneratedContent               = 3,
+	CanUserCrossPlay                         = 4,
+	EVAL_MAX                                 = 5,
+};
+
+// Enum OnlineSubsystemValeria.EOSSVAL_ChatChannelType
+// NumValues: 0x0007
+enum class EOSSVAL_ChatChannelType : uint8
+{
+	Invalid                                  = 0,
+	Global                                   = 1,
+	Server                                   = 2,
+	Party                                    = 3,
+	PlayerGuild                              = 4,
+	Proximity                                = 5,
+	EOSSVAL_MAX                              = 6,
+};
+
+// Enum OnlineSubsystemValeria.EOSSVAL_MatchmakingRequestType
+// NumValues: 0x0004
+enum class EOSSVAL_MatchmakingRequestType : uint8
+{
+	ServerType                               = 0,
+	Space                                    = 1,
+	ServerSync                               = 2,
+	EOSSVAL_MAX                              = 3,
+};
 
 // Enum OnlineSubsystemValeria.EOSSVAL_MatchmakingFailErrorType
 // NumValues: 0x0011
@@ -40,16 +75,6 @@ enum class EOSSVAL_MatchmakingFailErrorType : uint8
 	EOSSVAL_MAX                              = 16,
 };
 
-// Enum OnlineSubsystemValeria.EOSSVAL_MatchmakingRequestType
-// NumValues: 0x0004
-enum class EOSSVAL_MatchmakingRequestType : uint8
-{
-	ServerType                               = 0,
-	Space                                    = 1,
-	ServerSync                               = 2,
-	EOSSVAL_MAX                              = 3,
-};
-
 // Enum OnlineSubsystemValeria.EControlMessageType
 // NumValues: 0x000A
 enum class EControlMessageType : uint8
@@ -64,19 +89,6 @@ enum class EControlMessageType : uint8
 	FriendRouterType                         = 7,
 	EventBus                                 = 8,
 	EControlMessageType_MAX                  = 9,
-};
-
-// Enum OnlineSubsystemValeria.EOSSVAL_ChatChannelType
-// NumValues: 0x0007
-enum class EOSSVAL_ChatChannelType : uint8
-{
-	Invalid                                  = 0,
-	Global                                   = 1,
-	Server                                   = 2,
-	Party                                    = 3,
-	PlayerGuild                              = 4,
-	Proximity                                = 5,
-	EOSSVAL_MAX                              = 6,
 };
 
 // Enum OnlineSubsystemValeria.EOnlineSystemMessageType
@@ -110,7 +122,7 @@ public:
 	bool                                          bInternalRequest;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bJoinAfterGettingTicket;                           // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOSSVAL_MatchmakingRequestType                Type;                                              // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1B[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8E[0x5];                                     // 0x0003(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ServerType;                                        // 0x0008(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  SpaceId;                                           // 0x0018(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FOSSVAL_MatchmakingRequestPlayer       ServerSyncTargetPlayer;                            // 0x0028(0x0020)(Edit, BlueprintVisible, NoDestructor, NativeAccessSpecifierPublic)
@@ -132,13 +144,29 @@ static_assert(offsetof(FOSSVAL_MatchmakingRequestContext, CurrentPlayer) == 0x00
 static_assert(offsetof(FOSSVAL_MatchmakingRequestContext, PartyLeader) == 0x000078, "Member 'FOSSVAL_MatchmakingRequestContext::PartyLeader' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_MatchmakingRequestContext, PartyMembers) == 0x000098, "Member 'FOSSVAL_MatchmakingRequestContext::PartyMembers' has a wrong offset!");
 
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingErrorResult
+// 0x0020 (0x0020 - 0x0000)
+struct FOSSVAL_MatchmakingErrorResult final 
+{
+public:
+	EOSSVAL_MatchmakingFailErrorType              ErrorType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C8F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ErrorCode;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   ErrorText;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOSSVAL_MatchmakingErrorResult) == 0x000008, "Wrong alignment on FOSSVAL_MatchmakingErrorResult");
+static_assert(sizeof(FOSSVAL_MatchmakingErrorResult) == 0x000020, "Wrong size on FOSSVAL_MatchmakingErrorResult");
+static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorType) == 0x000000, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorType' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorCode) == 0x000004, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorCode' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorText) == 0x000008, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorText' has a wrong offset!");
+
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_ProfanityFilterResponse
 // 0x0018 (0x0018 - 0x0000)
 struct FOSSVAL_ProfanityFilterResponse final 
 {
 public:
 	bool                                          bSuccess;                                          // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C90[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Result;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOSSVAL_ProfanityFilterResponse) == 0x000008, "Wrong alignment on FOSSVAL_ProfanityFilterResponse");
@@ -146,20 +174,22 @@ static_assert(sizeof(FOSSVAL_ProfanityFilterResponse) == 0x000018, "Wrong size o
 static_assert(offsetof(FOSSVAL_ProfanityFilterResponse, bSuccess) == 0x000000, "Member 'FOSSVAL_ProfanityFilterResponse::bSuccess' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_ProfanityFilterResponse, Result) == 0x000008, "Member 'FOSSVAL_ProfanityFilterResponse::Result' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_CharacterNameAndId
-// 0x0030 (0x0030 - 0x0000)
-struct FOSSVAL_CharacterNameAndId final 
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_SelectedCharacter
+// 0x0040 (0x0040 - 0x0000)
+struct FOSSVAL_SelectedCharacter final 
 {
 public:
-	struct FGuid                                  CharacterId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 PreferredName;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 FullName;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  AccountId;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FGuid                                  CharacterId;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 CharacterName;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 PreferredName;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 };
-static_assert(alignof(FOSSVAL_CharacterNameAndId) == 0x000008, "Wrong alignment on FOSSVAL_CharacterNameAndId");
-static_assert(sizeof(FOSSVAL_CharacterNameAndId) == 0x000030, "Wrong size on FOSSVAL_CharacterNameAndId");
-static_assert(offsetof(FOSSVAL_CharacterNameAndId, CharacterId) == 0x000000, "Member 'FOSSVAL_CharacterNameAndId::CharacterId' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_CharacterNameAndId, PreferredName) == 0x000010, "Member 'FOSSVAL_CharacterNameAndId::PreferredName' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_CharacterNameAndId, FullName) == 0x000020, "Member 'FOSSVAL_CharacterNameAndId::FullName' has a wrong offset!");
+static_assert(alignof(FOSSVAL_SelectedCharacter) == 0x000008, "Wrong alignment on FOSSVAL_SelectedCharacter");
+static_assert(sizeof(FOSSVAL_SelectedCharacter) == 0x000040, "Wrong size on FOSSVAL_SelectedCharacter");
+static_assert(offsetof(FOSSVAL_SelectedCharacter, AccountId) == 0x000000, "Member 'FOSSVAL_SelectedCharacter::AccountId' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_SelectedCharacter, CharacterId) == 0x000010, "Member 'FOSSVAL_SelectedCharacter::CharacterId' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_SelectedCharacter, CharacterName) == 0x000020, "Member 'FOSSVAL_SelectedCharacter::CharacterName' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_SelectedCharacter, PreferredName) == 0x000030, "Member 'FOSSVAL_SelectedCharacter::PreferredName' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingTicket
 // 0x0098 (0x0098 - 0x0000)
@@ -174,7 +204,7 @@ public:
 	class FString                                 ServerType;                                        // 0x0058(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ServerVersion;                                     // 0x0068(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         ServerStatus;                                      // 0x0078(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1D[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C91[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ServerAddr;                                        // 0x0080(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ServerPort;                                        // 0x0090(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ServerBeaconPort;                                  // 0x0094(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -193,22 +223,6 @@ static_assert(offsetof(FOSSVAL_MatchmakingTicket, ServerAddr) == 0x000080, "Memb
 static_assert(offsetof(FOSSVAL_MatchmakingTicket, ServerPort) == 0x000090, "Member 'FOSSVAL_MatchmakingTicket::ServerPort' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_MatchmakingTicket, ServerBeaconPort) == 0x000094, "Member 'FOSSVAL_MatchmakingTicket::ServerBeaconPort' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingErrorResult
-// 0x0020 (0x0020 - 0x0000)
-struct FOSSVAL_MatchmakingErrorResult final 
-{
-public:
-	EOSSVAL_MatchmakingFailErrorType              ErrorType;                                         // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1E[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         ErrorCode;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FText                                   ErrorText;                                         // 0x0008(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOSSVAL_MatchmakingErrorResult) == 0x000008, "Wrong alignment on FOSSVAL_MatchmakingErrorResult");
-static_assert(sizeof(FOSSVAL_MatchmakingErrorResult) == 0x000020, "Wrong size on FOSSVAL_MatchmakingErrorResult");
-static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorType) == 0x000000, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorType' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorCode) == 0x000004, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorCode' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_MatchmakingErrorResult, ErrorText) == 0x000008, "Member 'FOSSVAL_MatchmakingErrorResult::ErrorText' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingResult
 // 0x00C0 (0x00C0 - 0x0000)
 struct FOSSVAL_MatchmakingResult final 
@@ -216,7 +230,7 @@ struct FOSSVAL_MatchmakingResult final
 public:
 	bool                                          bSuccess;                                          // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInternalRequest;                                  // 0x0001(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A1F[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C92[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOSSVAL_MatchmakingTicket              Ticket;                                            // 0x0008(0x0098)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 	struct FOSSVAL_MatchmakingErrorResult         ErrorResult;                                       // 0x00A0(0x0020)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
 };
@@ -227,6 +241,89 @@ static_assert(offsetof(FOSSVAL_MatchmakingResult, bInternalRequest) == 0x000001,
 static_assert(offsetof(FOSSVAL_MatchmakingResult, Ticket) == 0x000008, "Member 'FOSSVAL_MatchmakingResult::Ticket' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_MatchmakingResult, ErrorResult) == 0x0000A0, "Member 'FOSSVAL_MatchmakingResult::ErrorResult' has a wrong offset!");
 
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_ChatChannel
+// 0x0028 (0x0028 - 0x0000)
+struct FOSSVAL_ChatChannel final 
+{
+public:
+	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Token;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EOSSVAL_ChatChannelType                       Kind;                                              // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C93[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FOSSVAL_ChatChannel) == 0x000008, "Wrong alignment on FOSSVAL_ChatChannel");
+static_assert(sizeof(FOSSVAL_ChatChannel) == 0x000028, "Wrong size on FOSSVAL_ChatChannel");
+static_assert(offsetof(FOSSVAL_ChatChannel, Name) == 0x000000, "Member 'FOSSVAL_ChatChannel::Name' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_ChatChannel, Token) == 0x000010, "Member 'FOSSVAL_ChatChannel::Token' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_ChatChannel, Kind) == 0x000020, "Member 'FOSSVAL_ChatChannel::Kind' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_GetChannelsResponse
+// 0x0018 (0x0018 - 0x0000)
+struct FOSSVAL_GetChannelsResponse final 
+{
+public:
+	bool                                          bSuccessful;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C94[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FOSSVAL_ChatChannel>            Channels;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOSSVAL_GetChannelsResponse) == 0x000008, "Wrong alignment on FOSSVAL_GetChannelsResponse");
+static_assert(sizeof(FOSSVAL_GetChannelsResponse) == 0x000018, "Wrong size on FOSSVAL_GetChannelsResponse");
+static_assert(offsetof(FOSSVAL_GetChannelsResponse, bSuccessful) == 0x000000, "Member 'FOSSVAL_GetChannelsResponse::bSuccessful' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_GetChannelsResponse, Channels) == 0x000008, "Member 'FOSSVAL_GetChannelsResponse::Channels' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_CharacterNameAndId
+// 0x0030 (0x0030 - 0x0000)
+struct FOSSVAL_CharacterNameAndId final 
+{
+public:
+	struct FGuid                                  CharacterId;                                       // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 PreferredName;                                     // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 FullName;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOSSVAL_CharacterNameAndId) == 0x000008, "Wrong alignment on FOSSVAL_CharacterNameAndId");
+static_assert(sizeof(FOSSVAL_CharacterNameAndId) == 0x000030, "Wrong size on FOSSVAL_CharacterNameAndId");
+static_assert(offsetof(FOSSVAL_CharacterNameAndId, CharacterId) == 0x000000, "Member 'FOSSVAL_CharacterNameAndId::CharacterId' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_CharacterNameAndId, PreferredName) == 0x000010, "Member 'FOSSVAL_CharacterNameAndId::PreferredName' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_CharacterNameAndId, FullName) == 0x000020, "Member 'FOSSVAL_CharacterNameAndId::FullName' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingJoinStatusResult
+// 0x00C8 (0x00C8 - 0x0000)
+struct FOSSVAL_MatchmakingJoinStatusResult final 
+{
+public:
+	int32                                         JoinNumber;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C95[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FOSSVAL_MatchmakingResult              MatchmakingResult;                                 // 0x0008(0x00C0)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FOSSVAL_MatchmakingJoinStatusResult) == 0x000008, "Wrong alignment on FOSSVAL_MatchmakingJoinStatusResult");
+static_assert(sizeof(FOSSVAL_MatchmakingJoinStatusResult) == 0x0000C8, "Wrong size on FOSSVAL_MatchmakingJoinStatusResult");
+static_assert(offsetof(FOSSVAL_MatchmakingJoinStatusResult, JoinNumber) == 0x000000, "Member 'FOSSVAL_MatchmakingJoinStatusResult::JoinNumber' has a wrong offset!");
+static_assert(offsetof(FOSSVAL_MatchmakingJoinStatusResult, MatchmakingResult) == 0x000008, "Member 'FOSSVAL_MatchmakingJoinStatusResult::MatchmakingResult' has a wrong offset!");
+
+// ScriptStruct OnlineSubsystemValeria.ServerStatusUpdate
+// 0x0050 (0x0050 - 0x0000)
+struct FServerStatusUpdate final 
+{
+public:
+	class FString                                 ServerId;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ServerType;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 Ip;                                                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Port;                                              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         BeaconPort;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         AvailableSlots;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C96[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FString>                         PlayerIds;                                         // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FServerStatusUpdate) == 0x000008, "Wrong alignment on FServerStatusUpdate");
+static_assert(sizeof(FServerStatusUpdate) == 0x000050, "Wrong size on FServerStatusUpdate");
+static_assert(offsetof(FServerStatusUpdate, ServerId) == 0x000000, "Member 'FServerStatusUpdate::ServerId' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, ServerType) == 0x000010, "Member 'FServerStatusUpdate::ServerType' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, Ip) == 0x000020, "Member 'FServerStatusUpdate::Ip' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, Port) == 0x000030, "Member 'FServerStatusUpdate::Port' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, BeaconPort) == 0x000034, "Member 'FServerStatusUpdate::BeaconPort' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, AvailableSlots) == 0x000038, "Member 'FServerStatusUpdate::AvailableSlots' has a wrong offset!");
+static_assert(offsetof(FServerStatusUpdate, PlayerIds) == 0x000040, "Member 'FServerStatusUpdate::PlayerIds' has a wrong offset!");
+
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_RegisterCharacterResponse
 // 0x0798 (0x0798 - 0x0000)
 struct FOSSVAL_RegisterCharacterResponse final 
@@ -235,27 +332,13 @@ public:
 	struct FVALDTOS_MetaCharacterFormat           CharacterData;                                     // 0x0000(0x0778)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	class FText                                   ErrorText;                                         // 0x0778(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0790(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A20[0x4];                                     // 0x0794(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C97[0x4];                                     // 0x0794(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOSSVAL_RegisterCharacterResponse) == 0x000008, "Wrong alignment on FOSSVAL_RegisterCharacterResponse");
 static_assert(sizeof(FOSSVAL_RegisterCharacterResponse) == 0x000798, "Wrong size on FOSSVAL_RegisterCharacterResponse");
 static_assert(offsetof(FOSSVAL_RegisterCharacterResponse, CharacterData) == 0x000000, "Member 'FOSSVAL_RegisterCharacterResponse::CharacterData' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_RegisterCharacterResponse, ErrorText) == 0x000778, "Member 'FOSSVAL_RegisterCharacterResponse::ErrorText' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_RegisterCharacterResponse, ErrorCode) == 0x000790, "Member 'FOSSVAL_RegisterCharacterResponse::ErrorCode' has a wrong offset!");
-
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingJoinStatusResult
-// 0x00C8 (0x00C8 - 0x0000)
-struct FOSSVAL_MatchmakingJoinStatusResult final 
-{
-public:
-	int32                                         JoinNumber;                                        // 0x0000(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A21[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FOSSVAL_MatchmakingResult              MatchmakingResult;                                 // 0x0008(0x00C0)(Edit, BlueprintVisible, BlueprintReadOnly, EditConst, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOSSVAL_MatchmakingJoinStatusResult) == 0x000008, "Wrong alignment on FOSSVAL_MatchmakingJoinStatusResult");
-static_assert(sizeof(FOSSVAL_MatchmakingJoinStatusResult) == 0x0000C8, "Wrong size on FOSSVAL_MatchmakingJoinStatusResult");
-static_assert(offsetof(FOSSVAL_MatchmakingJoinStatusResult, JoinNumber) == 0x000000, "Member 'FOSSVAL_MatchmakingJoinStatusResult::JoinNumber' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_MatchmakingJoinStatusResult, MatchmakingResult) == 0x000008, "Member 'FOSSVAL_MatchmakingJoinStatusResult::MatchmakingResult' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemValeria.ValeriaUserDTO
 // 0x0068 (0x0068 - 0x0000)
@@ -280,22 +363,39 @@ static_assert(offsetof(FValeriaUserDTO, LastName) == 0x000040, "Member 'FValeria
 static_assert(offsetof(FValeriaUserDTO, Region) == 0x000050, "Member 'FValeriaUserDTO::Region' has a wrong offset!");
 static_assert(offsetof(FValeriaUserDTO, Birthday) == 0x000060, "Member 'FValeriaUserDTO::Birthday' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_SelectedCharacter
-// 0x0040 (0x0040 - 0x0000)
-struct FOSSVAL_SelectedCharacter final 
+// ScriptStruct OnlineSubsystemValeria.ValeriaOnlineAchievementDefinition
+// 0x00D8 (0x00D8 - 0x0000)
+struct FValeriaOnlineAchievementDefinition final 
 {
 public:
-	struct FGuid                                  AccountId;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FGuid                                  CharacterId;                                       // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 CharacterName;                                     // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class FString                                 PreferredName;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class FString                                 AchievementID;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FText                                   Title;                                             // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
+	class FString                                 GroupID;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 Category;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         Tier;                                              // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C98[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   LockedDesc;                                        // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
+	class FText                                   UnlockedDesc;                                      // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
+	bool                                          bIsHidden;                                         // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C99[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 XBoxId;                                            // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 PlaystationId;                                     // 0x0098(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class FString                                 SteamId;                                           // 0x00A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C9A[0x20];                                    // 0x00B8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(FOSSVAL_SelectedCharacter) == 0x000008, "Wrong alignment on FOSSVAL_SelectedCharacter");
-static_assert(sizeof(FOSSVAL_SelectedCharacter) == 0x000040, "Wrong size on FOSSVAL_SelectedCharacter");
-static_assert(offsetof(FOSSVAL_SelectedCharacter, AccountId) == 0x000000, "Member 'FOSSVAL_SelectedCharacter::AccountId' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_SelectedCharacter, CharacterId) == 0x000010, "Member 'FOSSVAL_SelectedCharacter::CharacterId' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_SelectedCharacter, CharacterName) == 0x000020, "Member 'FOSSVAL_SelectedCharacter::CharacterName' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_SelectedCharacter, PreferredName) == 0x000030, "Member 'FOSSVAL_SelectedCharacter::PreferredName' has a wrong offset!");
+static_assert(alignof(FValeriaOnlineAchievementDefinition) == 0x000008, "Wrong alignment on FValeriaOnlineAchievementDefinition");
+static_assert(sizeof(FValeriaOnlineAchievementDefinition) == 0x0000D8, "Wrong size on FValeriaOnlineAchievementDefinition");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, AchievementID) == 0x000000, "Member 'FValeriaOnlineAchievementDefinition::AchievementID' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, Title) == 0x000010, "Member 'FValeriaOnlineAchievementDefinition::Title' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, GroupID) == 0x000028, "Member 'FValeriaOnlineAchievementDefinition::GroupID' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, Category) == 0x000038, "Member 'FValeriaOnlineAchievementDefinition::Category' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, Tier) == 0x000048, "Member 'FValeriaOnlineAchievementDefinition::Tier' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, LockedDesc) == 0x000050, "Member 'FValeriaOnlineAchievementDefinition::LockedDesc' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, UnlockedDesc) == 0x000068, "Member 'FValeriaOnlineAchievementDefinition::UnlockedDesc' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, bIsHidden) == 0x000080, "Member 'FValeriaOnlineAchievementDefinition::bIsHidden' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, XBoxId) == 0x000088, "Member 'FValeriaOnlineAchievementDefinition::XBoxId' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, PlaystationId) == 0x000098, "Member 'FValeriaOnlineAchievementDefinition::PlaystationId' has a wrong offset!");
+static_assert(offsetof(FValeriaOnlineAchievementDefinition, SteamId) == 0x0000A8, "Member 'FValeriaOnlineAchievementDefinition::SteamId' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_MatchmakingTicketContext
 // 0x0010 (0x0010 - 0x0000)
@@ -335,64 +435,6 @@ static_assert(sizeof(FValeriaOnlineAchievement) == 0x000020, "Wrong size on FVal
 static_assert(offsetof(FValeriaOnlineAchievement, AchievementID) == 0x000000, "Member 'FValeriaOnlineAchievement::AchievementID' has a wrong offset!");
 static_assert(offsetof(FValeriaOnlineAchievement, UnlockTime) == 0x000010, "Member 'FValeriaOnlineAchievement::UnlockTime' has a wrong offset!");
 static_assert(offsetof(FValeriaOnlineAchievement, ClaimTime) == 0x000018, "Member 'FValeriaOnlineAchievement::ClaimTime' has a wrong offset!");
-
-// ScriptStruct OnlineSubsystemValeria.ValeriaOnlineAchievementDefinition
-// 0x00D8 (0x00D8 - 0x0000)
-struct FValeriaOnlineAchievementDefinition final 
-{
-public:
-	class FString                                 AchievementID;                                     // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FText                                   Title;                                             // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	class FString                                 GroupID;                                           // 0x0028(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 Category;                                          // 0x0038(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         Tier;                                              // 0x0048(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A22[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   LockedDesc;                                        // 0x0050(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	class FText                                   UnlockedDesc;                                      // 0x0068(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPrivate)
-	bool                                          bIsHidden;                                         // 0x0080(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A23[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 XBoxId;                                            // 0x0088(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 PlaystationId;                                     // 0x0098(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class FString                                 SteamId;                                           // 0x00A8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3A24[0x20];                                    // 0x00B8(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FValeriaOnlineAchievementDefinition) == 0x000008, "Wrong alignment on FValeriaOnlineAchievementDefinition");
-static_assert(sizeof(FValeriaOnlineAchievementDefinition) == 0x0000D8, "Wrong size on FValeriaOnlineAchievementDefinition");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, AchievementID) == 0x000000, "Member 'FValeriaOnlineAchievementDefinition::AchievementID' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, Title) == 0x000010, "Member 'FValeriaOnlineAchievementDefinition::Title' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, GroupID) == 0x000028, "Member 'FValeriaOnlineAchievementDefinition::GroupID' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, Category) == 0x000038, "Member 'FValeriaOnlineAchievementDefinition::Category' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, Tier) == 0x000048, "Member 'FValeriaOnlineAchievementDefinition::Tier' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, LockedDesc) == 0x000050, "Member 'FValeriaOnlineAchievementDefinition::LockedDesc' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, UnlockedDesc) == 0x000068, "Member 'FValeriaOnlineAchievementDefinition::UnlockedDesc' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, bIsHidden) == 0x000080, "Member 'FValeriaOnlineAchievementDefinition::bIsHidden' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, XBoxId) == 0x000088, "Member 'FValeriaOnlineAchievementDefinition::XBoxId' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, PlaystationId) == 0x000098, "Member 'FValeriaOnlineAchievementDefinition::PlaystationId' has a wrong offset!");
-static_assert(offsetof(FValeriaOnlineAchievementDefinition, SteamId) == 0x0000A8, "Member 'FValeriaOnlineAchievementDefinition::SteamId' has a wrong offset!");
-
-// ScriptStruct OnlineSubsystemValeria.ServerStatusUpdate
-// 0x0050 (0x0050 - 0x0000)
-struct FServerStatusUpdate final 
-{
-public:
-	class FString                                 ServerId;                                          // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ServerType;                                        // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Ip;                                                // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Port;                                              // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         BeaconPort;                                        // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         AvailableSlots;                                    // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A25[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FString>                         PlayerIds;                                         // 0x0040(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FServerStatusUpdate) == 0x000008, "Wrong alignment on FServerStatusUpdate");
-static_assert(sizeof(FServerStatusUpdate) == 0x000050, "Wrong size on FServerStatusUpdate");
-static_assert(offsetof(FServerStatusUpdate, ServerId) == 0x000000, "Member 'FServerStatusUpdate::ServerId' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, ServerType) == 0x000010, "Member 'FServerStatusUpdate::ServerType' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, Ip) == 0x000020, "Member 'FServerStatusUpdate::Ip' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, Port) == 0x000030, "Member 'FServerStatusUpdate::Port' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, BeaconPort) == 0x000034, "Member 'FServerStatusUpdate::BeaconPort' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, AvailableSlots) == 0x000038, "Member 'FServerStatusUpdate::AvailableSlots' has a wrong offset!");
-static_assert(offsetof(FServerStatusUpdate, PlayerIds) == 0x000040, "Member 'FServerStatusUpdate::PlayerIds' has a wrong offset!");
 
 // ScriptStruct OnlineSubsystemValeria.MatchmakingResult
 // 0x0010 (0x0010 - 0x0000)
@@ -442,29 +484,13 @@ static_assert(sizeof(FOSSVAL_OnlineProfile) == 0x000020, "Wrong size on FOSSVAL_
 static_assert(offsetof(FOSSVAL_OnlineProfile, UserName) == 0x000000, "Member 'FOSSVAL_OnlineProfile::UserName' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_OnlineProfile, Password) == 0x000010, "Member 'FOSSVAL_OnlineProfile::Password' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_ChatChannel
-// 0x0028 (0x0028 - 0x0000)
-struct FOSSVAL_ChatChannel final 
-{
-public:
-	class FString                                 Name;                                              // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 Token;                                             // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EOSSVAL_ChatChannelType                       Kind;                                              // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A26[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(FOSSVAL_ChatChannel) == 0x000008, "Wrong alignment on FOSSVAL_ChatChannel");
-static_assert(sizeof(FOSSVAL_ChatChannel) == 0x000028, "Wrong size on FOSSVAL_ChatChannel");
-static_assert(offsetof(FOSSVAL_ChatChannel, Name) == 0x000000, "Member 'FOSSVAL_ChatChannel::Name' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_ChatChannel, Token) == 0x000010, "Member 'FOSSVAL_ChatChannel::Token' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_ChatChannel, Kind) == 0x000020, "Member 'FOSSVAL_ChatChannel::Kind' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_SignInResponse
 // 0x0048 (0x0048 - 0x0000)
 struct FOSSVAL_SignInResponse final 
 {
 public:
 	bool                                          bSuccessful;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A27[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Token;                                             // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Domain;                                            // 0x0018(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Issuer;                                            // 0x0028(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -478,27 +504,13 @@ static_assert(offsetof(FOSSVAL_SignInResponse, Domain) == 0x000018, "Member 'FOS
 static_assert(offsetof(FOSSVAL_SignInResponse, Issuer) == 0x000028, "Member 'FOSSVAL_SignInResponse::Issuer' has a wrong offset!");
 static_assert(offsetof(FOSSVAL_SignInResponse, Endpoint) == 0x000038, "Member 'FOSSVAL_SignInResponse::Endpoint' has a wrong offset!");
 
-// ScriptStruct OnlineSubsystemValeria.OSSVAL_GetChannelsResponse
-// 0x0018 (0x0018 - 0x0000)
-struct FOSSVAL_GetChannelsResponse final 
-{
-public:
-	bool                                          bSuccessful;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A28[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FOSSVAL_ChatChannel>            Channels;                                          // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(FOSSVAL_GetChannelsResponse) == 0x000008, "Wrong alignment on FOSSVAL_GetChannelsResponse");
-static_assert(sizeof(FOSSVAL_GetChannelsResponse) == 0x000018, "Wrong size on FOSSVAL_GetChannelsResponse");
-static_assert(offsetof(FOSSVAL_GetChannelsResponse, bSuccessful) == 0x000000, "Member 'FOSSVAL_GetChannelsResponse::bSuccessful' has a wrong offset!");
-static_assert(offsetof(FOSSVAL_GetChannelsResponse, Channels) == 0x000008, "Member 'FOSSVAL_GetChannelsResponse::Channels' has a wrong offset!");
-
 // ScriptStruct OnlineSubsystemValeria.OSSVAL_ChatCensorResponse
 // 0x0018 (0x0018 - 0x0000)
 struct FOSSVAL_ChatCensorResponse final 
 {
 public:
 	bool                                          bSuccessful;                                       // 0x0000(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A29[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9C[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ErrorCode;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Message;                                           // 0x0008(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -526,11 +538,11 @@ struct FOSSVAL_ControlMessage final
 public:
 	EOnlineSystemMessageType                      RouterType;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlMessageType                           ControlMessageType;                                // 0x0001(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2A[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9D[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Content;                                           // 0x0008(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 FromWorldName;                                     // 0x0018(0x0010)(BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MessageTargetType;                                 // 0x0028(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2B[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9E[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FOSSVAL_ControlMessage) == 0x000008, "Wrong alignment on FOSSVAL_ControlMessage");
 static_assert(sizeof(FOSSVAL_ControlMessage) == 0x000030, "Wrong size on FOSSVAL_ControlMessage");
@@ -546,7 +558,7 @@ struct FOSSVAL_ChatMessage_Context final
 {
 public:
 	int32                                         MessageTargetType;                                 // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A2C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C9F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                SenderWorldLocation;                               // 0x0008(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FOSSVAL_ChatMessage_Context) == 0x000008, "Wrong alignment on FOSSVAL_ChatMessage_Context");

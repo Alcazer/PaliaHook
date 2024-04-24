@@ -114,7 +114,7 @@ enum class ELocalFrameMode : uint32
 };
 
 // Enum MeshModelingTools.EEditMeshPolygonsToolActions
-// NumValues: 0x0024
+// NumValues: 0x0026
 enum class EEditMeshPolygonsToolActions : uint8
 {
 	NoAction                                 = 0,
@@ -145,14 +145,16 @@ enum class EEditMeshPolygonsToolActions : uint8
 	FillHole                                 = 25,
 	BridgeEdges                              = 26,
 	BevelEdges                               = 27,
-	PlanarProjectionUV                       = 28,
-	SimplifyByGroups                         = 29,
-	RegenerateExtraCorners                   = 30,
-	PokeSingleFace                           = 31,
-	SplitSingleEdge                          = 32,
-	FlipSingleEdge                           = 33,
-	CollapseSingleEdge                       = 34,
-	EEditMeshPolygonsToolActions_MAX         = 35,
+	SimplifyAlongEdges                       = 28,
+	PlanarProjectionUV                       = 29,
+	SimplifyByGroups                         = 30,
+	RegenerateExtraCorners                   = 31,
+	PokeSingleFace                           = 32,
+	SplitSingleEdge                          = 33,
+	FlipSingleEdge                           = 34,
+	CollapseSingleEdge                       = 35,
+	BevelAuto                                = 36,
+	EEditMeshPolygonsToolActions_MAX         = 37,
 };
 
 // Enum MeshModelingTools.EEditMeshPolygonsToolSelectionMode

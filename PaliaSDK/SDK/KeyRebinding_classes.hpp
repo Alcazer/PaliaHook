@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
-#include "S6UICore_classes.hpp"
-#include "S6EnhancedInputExtended_classes.hpp"
-#include "GameplayTags_structs.hpp"
 #include "CommonInput_structs.hpp"
+#include "S6UICore_classes.hpp"
+#include "GameplayTags_structs.hpp"
 #include "UMG_classes.hpp"
-#include "KeyRebinding_structs.hpp"
-#include "SlateCore_structs.hpp"
 #include "InputCore_structs.hpp"
+#include "S6EnhancedInputExtended_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "KeyRebinding_structs.hpp"
 #include "Engine_classes.hpp"
 #include "DeveloperSettings_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
@@ -28,52 +28,13 @@
 namespace SDK
 {
 
-// Class KeyRebinding.KeyRebindingDataset
-// 0x0060 (0x0090 - 0x0030)
-class UKeyRebindingDataset final  : public UDataAsset
-{
-public:
-	int32                                         Version;                                           // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECommonInputType                              InputType;                                         // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_188E[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKeyRebind_KeyMappingEntry>     KeyRebindingMappings;                              // 0x0038(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FKey>                           UnAvailableKeySet;                                 // 0x0048(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	class UInputMappingContext*                   IMCOfChordAction;                                  // 0x0058(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         KeySlotNum;                                        // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_188F[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UStringTable*                           GroupTable;                                        // 0x0068(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<struct FKey>                           UnBoundKeys;                                       // 0x0070(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FKey>                           SpecialKeys;                                       // 0x0080(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"KeyRebindingDataset">();
-	}
-	static class UKeyRebindingDataset* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UKeyRebindingDataset>();
-	}
-};
-static_assert(alignof(UKeyRebindingDataset) == 0x000008, "Wrong alignment on UKeyRebindingDataset");
-static_assert(sizeof(UKeyRebindingDataset) == 0x000090, "Wrong size on UKeyRebindingDataset");
-static_assert(offsetof(UKeyRebindingDataset, Version) == 0x000030, "Member 'UKeyRebindingDataset::Version' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, InputType) == 0x000034, "Member 'UKeyRebindingDataset::InputType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, KeyRebindingMappings) == 0x000038, "Member 'UKeyRebindingDataset::KeyRebindingMappings' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, UnAvailableKeySet) == 0x000048, "Member 'UKeyRebindingDataset::UnAvailableKeySet' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, IMCOfChordAction) == 0x000058, "Member 'UKeyRebindingDataset::IMCOfChordAction' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, KeySlotNum) == 0x000060, "Member 'UKeyRebindingDataset::KeySlotNum' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, GroupTable) == 0x000068, "Member 'UKeyRebindingDataset::GroupTable' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, UnBoundKeys) == 0x000070, "Member 'UKeyRebindingDataset::UnBoundKeys' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDataset, SpecialKeys) == 0x000080, "Member 'UKeyRebindingDataset::SpecialKeys' has a wrong offset!");
-
 // Class KeyRebinding.BindingKeyListenerWidget
-// 0x0058 (0x0580 - 0x0528)
+// 0x0058 (0x05B0 - 0x0558)
 class UBindingKeyListenerWidget : public US6UI_ModalWidgetBase
 {
 public:
-	FMulticastInlineDelegateProperty_             OnAnyKeyTriggered;                                 // 0x0528(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1890[0x48];                                    // 0x0538(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnAnyKeyTriggered;                                 // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E20[0x48];                                    // 0x0568(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DisableInput();
@@ -93,20 +54,20 @@ public:
 	}
 };
 static_assert(alignof(UBindingKeyListenerWidget) == 0x000008, "Wrong alignment on UBindingKeyListenerWidget");
-static_assert(sizeof(UBindingKeyListenerWidget) == 0x000580, "Wrong size on UBindingKeyListenerWidget");
-static_assert(offsetof(UBindingKeyListenerWidget, OnAnyKeyTriggered) == 0x000528, "Member 'UBindingKeyListenerWidget::OnAnyKeyTriggered' has a wrong offset!");
+static_assert(sizeof(UBindingKeyListenerWidget) == 0x0005B0, "Wrong size on UBindingKeyListenerWidget");
+static_assert(offsetof(UBindingKeyListenerWidget, OnAnyKeyTriggered) == 0x000558, "Member 'UBindingKeyListenerWidget::OnAnyKeyTriggered' has a wrong offset!");
 
 // Class KeyRebinding.CommonInputActionWidget
-// 0x0030 (0x02A8 - 0x0278)
+// 0x0030 (0x02F0 - 0x02C0)
 class UCommonInputActionWidget : public UUserWidget
 {
 public:
-	class UImage*                                 ChordKeyIcon;                                      // 0x0278(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UPanelWidget*                           ChordKeyPanel;                                     // 0x0280(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UImage*                                 MainKeyIcon;                                       // 0x0288(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UInputMappingContext*                   DefaultIMC;                                        // 0x0290(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	class UInputAction*                           InputAction;                                       // 0x0298(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	struct FGameplayTag                           SpecialGameplayTag;                                // 0x02A0(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UImage*                                 ChordKeyIcon;                                      // 0x02C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UPanelWidget*                           ChordKeyPanel;                                     // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UImage*                                 MainKeyIcon;                                       // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UInputMappingContext*                   DefaultIMC;                                        // 0x02D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UInputAction*                           InputAction;                                       // 0x02E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	struct FGameplayTag                           SpecialGameplayTag;                                // 0x02E8(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void HandleControlMappingsRebuilt();
@@ -128,21 +89,21 @@ public:
 	}
 };
 static_assert(alignof(UCommonInputActionWidget) == 0x000008, "Wrong alignment on UCommonInputActionWidget");
-static_assert(sizeof(UCommonInputActionWidget) == 0x0002A8, "Wrong size on UCommonInputActionWidget");
-static_assert(offsetof(UCommonInputActionWidget, ChordKeyIcon) == 0x000278, "Member 'UCommonInputActionWidget::ChordKeyIcon' has a wrong offset!");
-static_assert(offsetof(UCommonInputActionWidget, ChordKeyPanel) == 0x000280, "Member 'UCommonInputActionWidget::ChordKeyPanel' has a wrong offset!");
-static_assert(offsetof(UCommonInputActionWidget, MainKeyIcon) == 0x000288, "Member 'UCommonInputActionWidget::MainKeyIcon' has a wrong offset!");
-static_assert(offsetof(UCommonInputActionWidget, DefaultIMC) == 0x000290, "Member 'UCommonInputActionWidget::DefaultIMC' has a wrong offset!");
-static_assert(offsetof(UCommonInputActionWidget, InputAction) == 0x000298, "Member 'UCommonInputActionWidget::InputAction' has a wrong offset!");
-static_assert(offsetof(UCommonInputActionWidget, SpecialGameplayTag) == 0x0002A0, "Member 'UCommonInputActionWidget::SpecialGameplayTag' has a wrong offset!");
+static_assert(sizeof(UCommonInputActionWidget) == 0x0002F0, "Wrong size on UCommonInputActionWidget");
+static_assert(offsetof(UCommonInputActionWidget, ChordKeyIcon) == 0x0002C0, "Member 'UCommonInputActionWidget::ChordKeyIcon' has a wrong offset!");
+static_assert(offsetof(UCommonInputActionWidget, ChordKeyPanel) == 0x0002C8, "Member 'UCommonInputActionWidget::ChordKeyPanel' has a wrong offset!");
+static_assert(offsetof(UCommonInputActionWidget, MainKeyIcon) == 0x0002D0, "Member 'UCommonInputActionWidget::MainKeyIcon' has a wrong offset!");
+static_assert(offsetof(UCommonInputActionWidget, DefaultIMC) == 0x0002D8, "Member 'UCommonInputActionWidget::DefaultIMC' has a wrong offset!");
+static_assert(offsetof(UCommonInputActionWidget, InputAction) == 0x0002E0, "Member 'UCommonInputActionWidget::InputAction' has a wrong offset!");
+static_assert(offsetof(UCommonInputActionWidget, SpecialGameplayTag) == 0x0002E8, "Member 'UCommonInputActionWidget::SpecialGameplayTag' has a wrong offset!");
 
 // Class KeyRebinding.EnhancedInputSubsystemWithKeyRebinding
-// 0x0018 (0x0258 - 0x0240)
+// 0x0018 (0x0260 - 0x0248)
 class UEnhancedInputSubsystemWithKeyRebinding final  : public US6EnhancedInputExtendedSubsystem
 {
 public:
-	uint8                                         Pad_1891[0x8];                                     // 0x0240(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputMappingContext*>           AppliedIMC;                                        // 0x0248(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E21[0x8];                                     // 0x0248(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInputMappingContext*>           AppliedIMC;                                        // 0x0250(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
 	static class UClass* StaticClass()
@@ -155,15 +116,15 @@ public:
 	}
 };
 static_assert(alignof(UEnhancedInputSubsystemWithKeyRebinding) == 0x000008, "Wrong alignment on UEnhancedInputSubsystemWithKeyRebinding");
-static_assert(sizeof(UEnhancedInputSubsystemWithKeyRebinding) == 0x000258, "Wrong size on UEnhancedInputSubsystemWithKeyRebinding");
-static_assert(offsetof(UEnhancedInputSubsystemWithKeyRebinding, AppliedIMC) == 0x000248, "Member 'UEnhancedInputSubsystemWithKeyRebinding::AppliedIMC' has a wrong offset!");
+static_assert(sizeof(UEnhancedInputSubsystemWithKeyRebinding) == 0x000260, "Wrong size on UEnhancedInputSubsystemWithKeyRebinding");
+static_assert(offsetof(UEnhancedInputSubsystemWithKeyRebinding, AppliedIMC) == 0x000250, "Member 'UEnhancedInputSubsystemWithKeyRebinding::AppliedIMC' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindingRichTextBlockDecorator_KeyIcon
 // 0x00D8 (0x0100 - 0x0028)
 class UKeyRebindingRichTextBlockDecorator_KeyIcon : public URichTextBlockDecorator
 {
 public:
-	uint8                                         Pad_1892[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E22[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            MissingTexture;                                    // 0x0030(0x00D0)(Edit, Protected, NativeAccessSpecifierProtected)
 
 public:
@@ -198,19 +159,19 @@ static_assert(alignof(UIARichTextBlockImageDecorator) == 0x000010, "Wrong alignm
 static_assert(sizeof(UIARichTextBlockImageDecorator) == 0x000100, "Wrong size on UIARichTextBlockImageDecorator");
 
 // Class KeyRebinding.KeyRebindGroupEntryWidget
-// 0x0060 (0x02D8 - 0x0278)
+// 0x0060 (0x0320 - 0x02C0)
 class UKeyRebindGroupEntryWidget : public UUserWidget
 {
 public:
-	class UInputAction*                           CurrentInputAction;                                // 0x0278(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UInputAction*>                   InputActions;                                      // 0x0280(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-	bool                                          bIsCoreActon;                                      // 0x0290(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputType                              CurrentInputType;                                  // 0x0291(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1893[0x6];                                     // 0x0292(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FKey>                           UnBoundKeys;                                       // 0x0298(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FKey>                           SpecialKeys;                                       // 0x02A8(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class FText                                   ActionDescription;                                 // 0x02B8(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UKeyRebindGroupWidget>   OwnerGroup;                                        // 0x02D0(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	class UInputAction*                           CurrentInputAction;                                // 0x02C0(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UInputAction*>                   InputActions;                                      // 0x02C8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+	bool                                          bIsCoreActon;                                      // 0x02D8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputType                              CurrentInputType;                                  // 0x02D9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E23[0x6];                                     // 0x02DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKey>                           UnBoundKeys;                                       // 0x02E0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FKey>                           SpecialKeys;                                       // 0x02F0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class FText                                   ActionDescription;                                 // 0x0300(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UKeyRebindGroupWidget>   OwnerGroup;                                        // 0x0318(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void BP_OnWidgetCreated();
@@ -235,29 +196,29 @@ public:
 	}
 };
 static_assert(alignof(UKeyRebindGroupEntryWidget) == 0x000008, "Wrong alignment on UKeyRebindGroupEntryWidget");
-static_assert(sizeof(UKeyRebindGroupEntryWidget) == 0x0002D8, "Wrong size on UKeyRebindGroupEntryWidget");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, CurrentInputAction) == 0x000278, "Member 'UKeyRebindGroupEntryWidget::CurrentInputAction' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, InputActions) == 0x000280, "Member 'UKeyRebindGroupEntryWidget::InputActions' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, bIsCoreActon) == 0x000290, "Member 'UKeyRebindGroupEntryWidget::bIsCoreActon' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, CurrentInputType) == 0x000291, "Member 'UKeyRebindGroupEntryWidget::CurrentInputType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, UnBoundKeys) == 0x000298, "Member 'UKeyRebindGroupEntryWidget::UnBoundKeys' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, SpecialKeys) == 0x0002A8, "Member 'UKeyRebindGroupEntryWidget::SpecialKeys' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, ActionDescription) == 0x0002B8, "Member 'UKeyRebindGroupEntryWidget::ActionDescription' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupEntryWidget, OwnerGroup) == 0x0002D0, "Member 'UKeyRebindGroupEntryWidget::OwnerGroup' has a wrong offset!");
+static_assert(sizeof(UKeyRebindGroupEntryWidget) == 0x000320, "Wrong size on UKeyRebindGroupEntryWidget");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, CurrentInputAction) == 0x0002C0, "Member 'UKeyRebindGroupEntryWidget::CurrentInputAction' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, InputActions) == 0x0002C8, "Member 'UKeyRebindGroupEntryWidget::InputActions' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, bIsCoreActon) == 0x0002D8, "Member 'UKeyRebindGroupEntryWidget::bIsCoreActon' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, CurrentInputType) == 0x0002D9, "Member 'UKeyRebindGroupEntryWidget::CurrentInputType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, UnBoundKeys) == 0x0002E0, "Member 'UKeyRebindGroupEntryWidget::UnBoundKeys' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, SpecialKeys) == 0x0002F0, "Member 'UKeyRebindGroupEntryWidget::SpecialKeys' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, ActionDescription) == 0x000300, "Member 'UKeyRebindGroupEntryWidget::ActionDescription' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupEntryWidget, OwnerGroup) == 0x000318, "Member 'UKeyRebindGroupEntryWidget::OwnerGroup' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindGroupWidget
-// 0x0048 (0x02C0 - 0x0278)
+// 0x0048 (0x0308 - 0x02C0)
 class UKeyRebindGroupWidget : public UUserWidget
 {
 public:
-	TSubclassOf<class UKeyRebindGroupEntryWidget> KeyRebindGroupEntryWidgetType;                     // 0x0278(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputType                              CurrentInputType;                                  // 0x0280(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1897[0x7];                                     // 0x0281(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   GroupHeaderText;                                   // 0x0288(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	int32                                         GroupID;                                           // 0x02A0(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1898[0x4];                                     // 0x02A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UKeyRebindGroupEntryWidget*>     KeyRebindGroupEntryWidgets;                        // 0x02A8(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
-	TWeakObjectPtr<class UKeyRebindSettingsWidgetBase> OwnerMenu;                                         // 0x02B8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	TSubclassOf<class UKeyRebindGroupEntryWidget> KeyRebindGroupEntryWidgetType;                     // 0x02C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputType                              CurrentInputType;                                  // 0x02C8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E27[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   GroupHeaderText;                                   // 0x02D0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	int32                                         GroupID;                                           // 0x02E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E28[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UKeyRebindGroupEntryWidget*>     KeyRebindGroupEntryWidgets;                        // 0x02F0(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
+	TWeakObjectPtr<class UKeyRebindSettingsWidgetBase> OwnerMenu;                                         // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	void BP_OnWidgetCreated();
@@ -274,23 +235,64 @@ public:
 	}
 };
 static_assert(alignof(UKeyRebindGroupWidget) == 0x000008, "Wrong alignment on UKeyRebindGroupWidget");
-static_assert(sizeof(UKeyRebindGroupWidget) == 0x0002C0, "Wrong size on UKeyRebindGroupWidget");
-static_assert(offsetof(UKeyRebindGroupWidget, KeyRebindGroupEntryWidgetType) == 0x000278, "Member 'UKeyRebindGroupWidget::KeyRebindGroupEntryWidgetType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupWidget, CurrentInputType) == 0x000280, "Member 'UKeyRebindGroupWidget::CurrentInputType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupWidget, GroupHeaderText) == 0x000288, "Member 'UKeyRebindGroupWidget::GroupHeaderText' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupWidget, GroupID) == 0x0002A0, "Member 'UKeyRebindGroupWidget::GroupID' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupWidget, KeyRebindGroupEntryWidgets) == 0x0002A8, "Member 'UKeyRebindGroupWidget::KeyRebindGroupEntryWidgets' has a wrong offset!");
-static_assert(offsetof(UKeyRebindGroupWidget, OwnerMenu) == 0x0002B8, "Member 'UKeyRebindGroupWidget::OwnerMenu' has a wrong offset!");
+static_assert(sizeof(UKeyRebindGroupWidget) == 0x000308, "Wrong size on UKeyRebindGroupWidget");
+static_assert(offsetof(UKeyRebindGroupWidget, KeyRebindGroupEntryWidgetType) == 0x0002C0, "Member 'UKeyRebindGroupWidget::KeyRebindGroupEntryWidgetType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupWidget, CurrentInputType) == 0x0002C8, "Member 'UKeyRebindGroupWidget::CurrentInputType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupWidget, GroupHeaderText) == 0x0002D0, "Member 'UKeyRebindGroupWidget::GroupHeaderText' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupWidget, GroupID) == 0x0002E8, "Member 'UKeyRebindGroupWidget::GroupID' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupWidget, KeyRebindGroupEntryWidgets) == 0x0002F0, "Member 'UKeyRebindGroupWidget::KeyRebindGroupEntryWidgets' has a wrong offset!");
+static_assert(offsetof(UKeyRebindGroupWidget, OwnerMenu) == 0x000300, "Member 'UKeyRebindGroupWidget::OwnerMenu' has a wrong offset!");
+
+// Class KeyRebinding.KeyRebindingDataset
+// 0x0070 (0x00A0 - 0x0030)
+class UKeyRebindingDataset final  : public UDataAsset
+{
+public:
+	int32                                         Version;                                           // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECommonInputType                              InputType;                                         // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E2A[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FKeyRebind_KeyMappingEntry>     KeyRebindingMappings;                              // 0x0038(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FKey>                           UnAvailableKeySet;                                 // 0x0048(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	class UInputMappingContext*                   IMCOfChordAction;                                  // 0x0058(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         KeySlotNum;                                        // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E2B[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FKeyRebind_InvertControlStickSettings  InvertControlStickSettings;                        // 0x0068(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
+	class UStringTable*                           GroupTable;                                        // 0x0078(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<struct FKey>                           UnBoundKeys;                                       // 0x0080(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FKey>                           SpecialKeys;                                       // 0x0090(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"KeyRebindingDataset">();
+	}
+	static class UKeyRebindingDataset* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UKeyRebindingDataset>();
+	}
+};
+static_assert(alignof(UKeyRebindingDataset) == 0x000008, "Wrong alignment on UKeyRebindingDataset");
+static_assert(sizeof(UKeyRebindingDataset) == 0x0000A0, "Wrong size on UKeyRebindingDataset");
+static_assert(offsetof(UKeyRebindingDataset, Version) == 0x000030, "Member 'UKeyRebindingDataset::Version' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, InputType) == 0x000034, "Member 'UKeyRebindingDataset::InputType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, KeyRebindingMappings) == 0x000038, "Member 'UKeyRebindingDataset::KeyRebindingMappings' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, UnAvailableKeySet) == 0x000048, "Member 'UKeyRebindingDataset::UnAvailableKeySet' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, IMCOfChordAction) == 0x000058, "Member 'UKeyRebindingDataset::IMCOfChordAction' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, KeySlotNum) == 0x000060, "Member 'UKeyRebindingDataset::KeySlotNum' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, InvertControlStickSettings) == 0x000068, "Member 'UKeyRebindingDataset::InvertControlStickSettings' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, GroupTable) == 0x000078, "Member 'UKeyRebindingDataset::GroupTable' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, UnBoundKeys) == 0x000080, "Member 'UKeyRebindingDataset::UnBoundKeys' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDataset, SpecialKeys) == 0x000090, "Member 'UKeyRebindingDataset::SpecialKeys' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindingDatasetSettings
-// 0x0048 (0x0080 - 0x0038)
+// 0x0040 (0x0078 - 0x0038)
 class UKeyRebindingDatasetSettings final  : public UDeveloperSettings
 {
 public:
-	TSoftClassPtr<class UClass>                   CustomKeyMappingDataProviderClass;                 // 0x0038(0x0030)(Edit, Config, NoClear, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         TipDelayTime;                                      // 0x0068(0x0004)(Edit, ZeroConstructor, Config, NoClear, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_189A[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FPerPlatformSettings                   PlatformSettings;                                  // 0x0070(0x0010)(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   CustomKeyMappingDataProviderClass;                 // 0x0038(0x0028)(Edit, Config, NoClear, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         TipDelayTime;                                      // 0x0060(0x0004)(Edit, ZeroConstructor, Config, NoClear, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E2C[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPerPlatformSettings                   PlatformSettings;                                  // 0x0068(0x0010)(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -303,10 +305,10 @@ public:
 	}
 };
 static_assert(alignof(UKeyRebindingDatasetSettings) == 0x000008, "Wrong alignment on UKeyRebindingDatasetSettings");
-static_assert(sizeof(UKeyRebindingDatasetSettings) == 0x000080, "Wrong size on UKeyRebindingDatasetSettings");
+static_assert(sizeof(UKeyRebindingDatasetSettings) == 0x000078, "Wrong size on UKeyRebindingDatasetSettings");
 static_assert(offsetof(UKeyRebindingDatasetSettings, CustomKeyMappingDataProviderClass) == 0x000038, "Member 'UKeyRebindingDatasetSettings::CustomKeyMappingDataProviderClass' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDatasetSettings, TipDelayTime) == 0x000068, "Member 'UKeyRebindingDatasetSettings::TipDelayTime' has a wrong offset!");
-static_assert(offsetof(UKeyRebindingDatasetSettings, PlatformSettings) == 0x000070, "Member 'UKeyRebindingDatasetSettings::PlatformSettings' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDatasetSettings, TipDelayTime) == 0x000060, "Member 'UKeyRebindingDatasetSettings::TipDelayTime' has a wrong offset!");
+static_assert(offsetof(UKeyRebindingDatasetSettings, PlatformSettings) == 0x000068, "Member 'UKeyRebindingDatasetSettings::PlatformSettings' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindingSubsystem
 // 0x00D8 (0x0108 - 0x0030)
@@ -357,6 +359,7 @@ class UKeyRebindingUtils final  : public UBlueprintFunctionLibrary
 {
 public:
 	static const class UCommonInputSubsystem* GetCommonInputSystem(class UObject* WorldContextObject);
+	static class UEnhancedInputSubsystemWithKeyRebinding* GetEnhancedInputSubsystem(class UObject* WorldContextObject);
 	static bool GetIconForEnhancedInputAction(class UObject* WorldContextObject, class UInputAction* InputAction, ECommonInputType InputType, struct FGameplayTag& SpecialTag, struct FSlateBrush* OutMainKeyBrush, struct FSlateBrush* OutChordKeyBrush);
 	static bool GetInputType(class FName IMCInputTypeIdentification, struct FKey& TestKey, ECommonInputType* OutInputTyp);
 	static bool GetKeyIcons(class UObject* WorldContextObject, struct FInputKeys& InputKeys, ECommonInputType InputType, struct FGameplayTag& SpecialTag, struct FSlateBrush* OutMainKeyBrush, struct FSlateBrush* OutChordKeyBrush);
@@ -400,14 +403,14 @@ static_assert(alignof(IKeyRebinding_CustomKeyMappingDataInterface) == 0x000008, 
 static_assert(sizeof(IKeyRebinding_CustomKeyMappingDataInterface) == 0x000028, "Wrong size on IKeyRebinding_CustomKeyMappingDataInterface");
 
 // Class KeyRebinding.KeyRebindPlatformSettings
-// 0x0098 (0x00D8 - 0x0040)
+// 0x0090 (0x00D0 - 0x0040)
 class UKeyRebindPlatformSettings final  : public UPlatformSettings
 {
 public:
 	TArray<TSoftObjectPtr<class UKeyRebindingDataset>> KeyRebindingDatasets;                              // 0x0040(0x0010)(Edit, ZeroConstructor, Config, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TMap<ECommonInputType, class UKeyRebindingDataset*> LoadedKeyRebindingDatasets;                        // 0x0050(0x0050)(Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	class UDataTable*                             LoadedInputKeyDataTable;                           // 0x00A0(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSoftObjectPtr<class UDataTable>              InputKeyDataTable;                                 // 0x00A8(0x0030)(Edit, Config, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftObjectPtr<class UDataTable>              InputKeyDataTable;                                 // 0x00A8(0x0028)(Edit, Config, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -420,27 +423,27 @@ public:
 	}
 };
 static_assert(alignof(UKeyRebindPlatformSettings) == 0x000008, "Wrong alignment on UKeyRebindPlatformSettings");
-static_assert(sizeof(UKeyRebindPlatformSettings) == 0x0000D8, "Wrong size on UKeyRebindPlatformSettings");
+static_assert(sizeof(UKeyRebindPlatformSettings) == 0x0000D0, "Wrong size on UKeyRebindPlatformSettings");
 static_assert(offsetof(UKeyRebindPlatformSettings, KeyRebindingDatasets) == 0x000040, "Member 'UKeyRebindPlatformSettings::KeyRebindingDatasets' has a wrong offset!");
 static_assert(offsetof(UKeyRebindPlatformSettings, LoadedKeyRebindingDatasets) == 0x000050, "Member 'UKeyRebindPlatformSettings::LoadedKeyRebindingDatasets' has a wrong offset!");
 static_assert(offsetof(UKeyRebindPlatformSettings, LoadedInputKeyDataTable) == 0x0000A0, "Member 'UKeyRebindPlatformSettings::LoadedInputKeyDataTable' has a wrong offset!");
 static_assert(offsetof(UKeyRebindPlatformSettings, InputKeyDataTable) == 0x0000A8, "Member 'UKeyRebindPlatformSettings::InputKeyDataTable' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindSettingsWidgetBase
-// 0x0048 (0x0528 - 0x04E0)
+// 0x0048 (0x0558 - 0x0510)
 class UKeyRebindSettingsWidgetBase : public UCommonActivatableWidgetInputExtended
 {
 public:
-	TSubclassOf<class UBindingKeyListenerWidget>  KeyRebindListenerWidgetClass;                      // 0x04E0(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UKeyRebindGroupWidget>      KeyRebindGroupWidgetType;                          // 0x04E8(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECommonInputType                              CurrentInputType;                                  // 0x04F0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18B3[0x7];                                     // 0x04F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UBindingKeyListenerWidget*              KeyRebindListenerWidget;                           // 0x04F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UInputAction*                           CurrentInputAction;                                // 0x0500(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EKeyRebind_KeySlot                            CurrentSlotNum;                                    // 0x0508(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_18B4[0x7];                                     // 0x0509(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UKeyRebindGroupWidget*>          KeyRebindGroupWidgets;                             // 0x0510(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_18B5[0x8];                                     // 0x0520(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSubclassOf<class UBindingKeyListenerWidget>  KeyRebindListenerWidgetClass;                      // 0x0510(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UKeyRebindGroupWidget>      KeyRebindGroupWidgetType;                          // 0x0518(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECommonInputType                              CurrentInputType;                                  // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1E45[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UBindingKeyListenerWidget*              KeyRebindListenerWidget;                           // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UInputAction*                           CurrentInputAction;                                // 0x0530(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EKeyRebind_KeySlot                            CurrentSlotNum;                                    // 0x0538(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E46[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UKeyRebindGroupWidget*>          KeyRebindGroupWidgets;                             // 0x0540(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1E47[0x8];                                     // 0x0550(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ApplyCustomConfig();
@@ -468,14 +471,14 @@ public:
 	}
 };
 static_assert(alignof(UKeyRebindSettingsWidgetBase) == 0x000008, "Wrong alignment on UKeyRebindSettingsWidgetBase");
-static_assert(sizeof(UKeyRebindSettingsWidgetBase) == 0x000528, "Wrong size on UKeyRebindSettingsWidgetBase");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindListenerWidgetClass) == 0x0004E0, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindListenerWidgetClass' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindGroupWidgetType) == 0x0004E8, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindGroupWidgetType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentInputType) == 0x0004F0, "Member 'UKeyRebindSettingsWidgetBase::CurrentInputType' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindListenerWidget) == 0x0004F8, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindListenerWidget' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentInputAction) == 0x000500, "Member 'UKeyRebindSettingsWidgetBase::CurrentInputAction' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentSlotNum) == 0x000508, "Member 'UKeyRebindSettingsWidgetBase::CurrentSlotNum' has a wrong offset!");
-static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindGroupWidgets) == 0x000510, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindGroupWidgets' has a wrong offset!");
+static_assert(sizeof(UKeyRebindSettingsWidgetBase) == 0x000558, "Wrong size on UKeyRebindSettingsWidgetBase");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindListenerWidgetClass) == 0x000510, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindListenerWidgetClass' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindGroupWidgetType) == 0x000518, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindGroupWidgetType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentInputType) == 0x000520, "Member 'UKeyRebindSettingsWidgetBase::CurrentInputType' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindListenerWidget) == 0x000528, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindListenerWidget' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentInputAction) == 0x000530, "Member 'UKeyRebindSettingsWidgetBase::CurrentInputAction' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, CurrentSlotNum) == 0x000538, "Member 'UKeyRebindSettingsWidgetBase::CurrentSlotNum' has a wrong offset!");
+static_assert(offsetof(UKeyRebindSettingsWidgetBase, KeyRebindGroupWidgets) == 0x000540, "Member 'UKeyRebindSettingsWidgetBase::KeyRebindGroupWidgets' has a wrong offset!");
 
 // Class KeyRebinding.KeyRebindValidatorBase
 // 0x0000 (0x0028 - 0x0028)

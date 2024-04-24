@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function GeometryFramework.BaseDynamicMeshComponent.ClearOverrideRenderMaterial
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 
 void UBaseDynamicMeshComponent::ClearOverrideRenderMaterial()
 {
@@ -37,7 +37,7 @@ void UBaseDynamicMeshComponent::ClearOverrideRenderMaterial()
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.ClearSecondaryRenderMaterial
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 
 void UBaseDynamicMeshComponent::ClearSecondaryRenderMaterial()
 {
@@ -81,7 +81,7 @@ class UDynamicMesh* UBaseDynamicMeshComponent::GetDynamicMesh()
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetColorOverrideMode
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EDynamicMeshComponentColorOverrideMode  NewMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -106,7 +106,7 @@ void UBaseDynamicMeshComponent::SetColorOverrideMode(EDynamicMeshComponentColorO
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetConstantOverrideColor
-// (Native, Public, HasDefaults, BlueprintCallable)
+// (RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FColor                           NewColor                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -131,7 +131,7 @@ void UBaseDynamicMeshComponent::SetConstantOverrideColor(const struct FColor& Ne
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetEnableFlatShading
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -156,7 +156,7 @@ void UBaseDynamicMeshComponent::SetEnableFlatShading(bool bEnable)
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetEnableRaytracing
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bSetEnabled                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -206,7 +206,7 @@ void UBaseDynamicMeshComponent::SetEnableWireframeRenderPass(bool bEnable)
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetOverrideRenderMaterial
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*               Material                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -231,7 +231,7 @@ void UBaseDynamicMeshComponent::SetOverrideRenderMaterial(class UMaterialInterfa
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetSecondaryBuffersVisibility
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bSetVisible                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -256,7 +256,7 @@ void UBaseDynamicMeshComponent::SetSecondaryBuffersVisibility(bool bSetVisible)
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetSecondaryRenderMaterial
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UMaterialInterface*               Material                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -281,7 +281,7 @@ void UBaseDynamicMeshComponent::SetSecondaryRenderMaterial(class UMaterialInterf
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.SetShadowsEnabled
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -305,8 +305,33 @@ void UBaseDynamicMeshComponent::SetShadowsEnabled(bool bEnabled)
 }
 
 
+// Function GeometryFramework.BaseDynamicMeshComponent.SetVertexColorSpaceTransformMode
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// EDynamicMeshVertexColorTransformMode    NewMode                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UBaseDynamicMeshComponent::SetVertexColorSpaceTransformMode(EDynamicMeshVertexColorTransformMode NewMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "SetVertexColorSpaceTransformMode");
+
+	Params::BaseDynamicMeshComponent_SetVertexColorSpaceTransformMode Parms{};
+
+	Parms.NewMode = NewMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryFramework.BaseDynamicMeshComponent.SetViewModeOverridesEnabled
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -381,7 +406,7 @@ struct FColor UBaseDynamicMeshComponent::GetConstantOverrideColor() const
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetEnableRaytracing
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -484,7 +509,7 @@ class UMaterialInterface* UBaseDynamicMeshComponent::GetOverrideRenderMaterial(i
 
 
 // Function GeometryFramework.BaseDynamicMeshComponent.GetSecondaryBuffersVisibility
-// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -558,6 +583,31 @@ bool UBaseDynamicMeshComponent::GetShadowsEnabled() const
 }
 
 
+// Function GeometryFramework.BaseDynamicMeshComponent.GetVertexColorSpaceTransformMode
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EDynamicMeshVertexColorTransformMode    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EDynamicMeshVertexColorTransformMode UBaseDynamicMeshComponent::GetVertexColorSpaceTransformMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BaseDynamicMeshComponent", "GetVertexColorSpaceTransformMode");
+
+	Params::BaseDynamicMeshComponent_GetVertexColorSpaceTransformMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryFramework.BaseDynamicMeshComponent.GetViewModeOverridesEnabled
 // (Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
@@ -612,7 +662,7 @@ bool UBaseDynamicMeshComponent::HasOverrideRenderMaterial(int32 K) const
 
 
 // Function GeometryFramework.DynamicMeshComponent.ConfigureMaterialSet
-// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // TArray<class UMaterialInterface*>       NewMaterialSet                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -637,7 +687,7 @@ void UDynamicMeshComponent::ConfigureMaterialSet(TArray<class UMaterialInterface
 
 
 // Function GeometryFramework.DynamicMeshComponent.EnableComplexAsSimpleCollision
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDynamicMeshComponent::EnableComplexAsSimpleCollision()
 {
@@ -655,8 +705,58 @@ void UDynamicMeshComponent::EnableComplexAsSimpleCollision()
 }
 
 
+// Function GeometryFramework.DynamicMeshComponent.NotifyMeshModified
+// (RequiredAPI, Native, Public, BlueprintCallable)
+
+void UDynamicMeshComponent::NotifyMeshModified()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicMeshComponent", "NotifyMeshModified");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GeometryFramework.DynamicMeshComponent.NotifyMeshVertexAttributesModified
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bPositions                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bNormals                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bUVs                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bColors                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDynamicMeshComponent::NotifyMeshVertexAttributesModified(bool bPositions, bool bNormals, bool bUVs, bool bColors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicMeshComponent", "NotifyMeshVertexAttributesModified");
+
+	Params::DynamicMeshComponent_NotifyMeshVertexAttributesModified Parms{};
+
+	Parms.bPositions = bPositions;
+	Parms.bNormals = bNormals;
+	Parms.bUVs = bUVs;
+	Parms.bColors = bColors;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function GeometryFramework.DynamicMeshComponent.SetComplexAsSimpleCollisionEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bImmediateUpdate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -683,7 +783,7 @@ void UDynamicMeshComponent::SetComplexAsSimpleCollisionEnabled(bool bEnabled, bo
 
 
 // Function GeometryFramework.DynamicMeshComponent.SetDeferredCollisionUpdatesEnabled
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bImmediateUpdate                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -710,7 +810,7 @@ void UDynamicMeshComponent::SetDeferredCollisionUpdatesEnabled(bool bEnabled, bo
 
 
 // Function GeometryFramework.DynamicMeshComponent.SetDynamicMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     NewMesh                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -735,7 +835,7 @@ void UDynamicMeshComponent::SetDynamicMesh(class UDynamicMesh* NewMesh)
 
 
 // Function GeometryFramework.DynamicMeshComponent.SetTangentsType
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // EDynamicMeshComponentTangentsMode       NewTangentsType                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -760,7 +860,7 @@ void UDynamicMeshComponent::SetTangentsType(EDynamicMeshComponentTangentsMode Ne
 
 
 // Function GeometryFramework.DynamicMeshComponent.UpdateCollision
-// (Native, Public, BlueprintCallable)
+// (RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bOnlyIfPending                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -785,7 +885,7 @@ void UDynamicMeshComponent::UpdateCollision(bool bOnlyIfPending)
 
 
 // Function GeometryFramework.DynamicMeshComponent.ValidateMaterialSlots
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bCreateIfMissing                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bDeleteExtraSlots                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -839,8 +939,33 @@ EDynamicMeshComponentTangentsMode UDynamicMeshComponent::GetTangentsType() const
 }
 
 
+// Function GeometryFramework.DynamicMeshComponent.GetTangentsTypePure
+// (Final, Native, Private, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// EDynamicMeshComponentTangentsMode       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+EDynamicMeshComponentTangentsMode UDynamicMeshComponent::GetTangentsTypePure() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DynamicMeshComponent", "GetTangentsTypePure");
+
+	Params::DynamicMeshComponent_GetTangentsTypePure Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function GeometryFramework.DynamicMeshActor.AllocateComputeMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -865,7 +990,7 @@ class UDynamicMesh* ADynamicMeshActor::AllocateComputeMesh()
 
 
 // Function GeometryFramework.DynamicMeshActor.FreeAllComputeMeshes
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ADynamicMeshActor::FreeAllComputeMeshes()
 {
@@ -884,7 +1009,7 @@ void ADynamicMeshActor::FreeAllComputeMeshes()
 
 
 // Function GeometryFramework.DynamicMeshActor.GetComputeMeshPool
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMeshPool*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -909,7 +1034,7 @@ class UDynamicMeshPool* ADynamicMeshActor::GetComputeMeshPool()
 
 
 // Function GeometryFramework.DynamicMeshActor.ReleaseAllComputeMeshes
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void ADynamicMeshActor::ReleaseAllComputeMeshes()
 {
@@ -928,7 +1053,7 @@ void ADynamicMeshActor::ReleaseAllComputeMeshes()
 
 
 // Function GeometryFramework.DynamicMeshActor.ReleaseComputeMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     Mesh                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -981,7 +1106,7 @@ class UDynamicMeshComponent* ADynamicMeshActor::GetDynamicMeshComponent() const
 
 
 // Function GeometryFramework.DynamicMesh.Reset
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1006,7 +1131,7 @@ class UDynamicMesh* UDynamicMesh::Reset()
 
 
 // Function GeometryFramework.DynamicMesh.ResetToCube
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1031,7 +1156,7 @@ class UDynamicMesh* UDynamicMesh::ResetToCube()
 
 
 // Function GeometryFramework.DynamicMesh.GetTriangleCount
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1056,7 +1181,7 @@ int32 UDynamicMesh::GetTriangleCount() const
 
 
 // Function GeometryFramework.DynamicMesh.IsEmpty
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1081,7 +1206,7 @@ bool UDynamicMesh::IsEmpty() const
 
 
 // Function GeometryFramework.DynamicMeshPool.FreeAllMeshes
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDynamicMeshPool::FreeAllMeshes()
 {
@@ -1100,7 +1225,7 @@ void UDynamicMeshPool::FreeAllMeshes()
 
 
 // Function GeometryFramework.DynamicMeshPool.RequestMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -1125,7 +1250,7 @@ class UDynamicMesh* UDynamicMeshPool::RequestMesh()
 
 
 // Function GeometryFramework.DynamicMeshPool.ReturnAllMeshes
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UDynamicMeshPool::ReturnAllMeshes()
 {
@@ -1144,7 +1269,7 @@ void UDynamicMeshPool::ReturnAllMeshes()
 
 
 // Function GeometryFramework.DynamicMeshPool.ReturnMesh
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // class UDynamicMesh*                     Mesh                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

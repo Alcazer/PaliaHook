@@ -10,42 +10,32 @@
 
 #include "Basic.hpp"
 
+#include "ValeriaDTOs_structs.hpp"
 #include "Palia_structs.hpp"
 #include "ValeriaUI_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ValeriaDTOs_structs.hpp"
 #include "InputCore_structs.hpp"
-#include "S6Core_structs.hpp"
-#include "EnhancedInput_structs.hpp"
-#include "S6UICommonWidgets_structs.hpp"
 #include "SlateCore_structs.hpp"
+#include "EnhancedInput_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "S6UICommonWidgets_structs.hpp"
 #include "S6PlatformServiceSubsystems_structs.hpp"
+#include "FieldNotification_structs.hpp"
 #include "UMG_structs.hpp"
+#include "S6Core_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function ValeriaUI.VALUI_ExpandableArea_Styled.SetExpandableAreaStyle
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_ExpandableArea_Styled_SetExpandableAreaStyle final 
-{
-public:
-	class UVALUI_ExpandableAreaStyle*             NewStyle;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle) == 0x000008, "Wrong alignment on VALUI_ExpandableArea_Styled_SetExpandableAreaStyle");
-static_assert(sizeof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle) == 0x000008, "Wrong size on VALUI_ExpandableArea_Styled_SetExpandableAreaStyle");
-static_assert(offsetof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle, NewStyle) == 0x000000, "Member 'VALUI_ExpandableArea_Styled_SetExpandableAreaStyle::NewStyle' has a wrong offset!");
-
 // Function ValeriaUI.BaitUserWidget.OnBaitSelected
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct BaitUserWidget_OnBaitSelected final 
 {
 public:
-	struct FValeriaItem                           baitItem;                                          // 0x0000(0x0068)(Parm, NativeAccessSpecifierPublic)
+	struct FValeriaItem                           baitItem;                                          // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BaitUserWidget_OnBaitSelected) == 0x000008, "Wrong alignment on BaitUserWidget_OnBaitSelected");
-static_assert(sizeof(BaitUserWidget_OnBaitSelected) == 0x000068, "Wrong size on BaitUserWidget_OnBaitSelected");
+static_assert(sizeof(BaitUserWidget_OnBaitSelected) == 0x000060, "Wrong size on BaitUserWidget_OnBaitSelected");
 static_assert(offsetof(BaitUserWidget_OnBaitSelected, baitItem) == 0x000000, "Member 'BaitUserWidget_OnBaitSelected::baitItem' has a wrong offset!");
 
 // Function ValeriaUI.BaitUserWidget.OnShown
@@ -70,16 +60,27 @@ static_assert(alignof(BaitUserWidget_ShowAmmoType) == 0x000001, "Wrong alignment
 static_assert(sizeof(BaitUserWidget_ShowAmmoType) == 0x000001, "Wrong size on BaitUserWidget_ShowAmmoType");
 static_assert(offsetof(BaitUserWidget_ShowAmmoType, AmmoType) == 0x000000, "Member 'BaitUserWidget_ShowAmmoType::AmmoType' has a wrong offset!");
 
-// Function ValeriaUI.VALUI_ExtensionPointContainerBase.AddExtensibleWidget
-// 0x0030 (0x0030 - 0x0000)
-struct VALUI_ExtensionPointContainerBase_AddExtensibleWidget final 
+// Function ValeriaUI.VAL_LocalizationUtils.GetGreetingLanguageSuffix
+// 0x0010 (0x0010 - 0x0000)
+struct VAL_LocalizationUtils_GetGreetingLanguageSuffix final 
 {
 public:
-	TSoftClassPtr<class UClass>                   WidgetReference;                                   // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget) == 0x000008, "Wrong alignment on VALUI_ExtensionPointContainerBase_AddExtensibleWidget");
-static_assert(sizeof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget) == 0x000030, "Wrong size on VALUI_ExtensionPointContainerBase_AddExtensibleWidget");
-static_assert(offsetof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget, WidgetReference) == 0x000000, "Member 'VALUI_ExtensionPointContainerBase_AddExtensibleWidget::WidgetReference' has a wrong offset!");
+static_assert(alignof(VAL_LocalizationUtils_GetGreetingLanguageSuffix) == 0x000008, "Wrong alignment on VAL_LocalizationUtils_GetGreetingLanguageSuffix");
+static_assert(sizeof(VAL_LocalizationUtils_GetGreetingLanguageSuffix) == 0x000010, "Wrong size on VAL_LocalizationUtils_GetGreetingLanguageSuffix");
+static_assert(offsetof(VAL_LocalizationUtils_GetGreetingLanguageSuffix, ReturnValue) == 0x000000, "Member 'VAL_LocalizationUtils_GetGreetingLanguageSuffix::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VAL_LocalizationUtils.GetGreetingStorageLocation
+// 0x0010 (0x0010 - 0x0000)
+struct VAL_LocalizationUtils_GetGreetingStorageLocation final 
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VAL_LocalizationUtils_GetGreetingStorageLocation) == 0x000008, "Wrong alignment on VAL_LocalizationUtils_GetGreetingStorageLocation");
+static_assert(sizeof(VAL_LocalizationUtils_GetGreetingStorageLocation) == 0x000010, "Wrong size on VAL_LocalizationUtils_GetGreetingStorageLocation");
+static_assert(offsetof(VAL_LocalizationUtils_GetGreetingStorageLocation, ReturnValue) == 0x000000, "Member 'VAL_LocalizationUtils_GetGreetingStorageLocation::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.BookViewerWidget.MarkPageAsRead
 // 0x0004 (0x0004 - 0x0000)
@@ -98,7 +99,7 @@ struct BookViewerWidget_GetContentForPage final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34B8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C46[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BookViewerWidget_GetContentForPage) == 0x000008, "Wrong alignment on BookViewerWidget_GetContentForPage");
@@ -139,52 +140,173 @@ static_assert(alignof(BookViewerWidget_GetTitle) == 0x000008, "Wrong alignment o
 static_assert(sizeof(BookViewerWidget_GetTitle) == 0x000018, "Wrong size on BookViewerWidget_GetTitle");
 static_assert(offsetof(BookViewerWidget_GetTitle, ReturnValue) == 0x000000, "Member 'BookViewerWidget_GetTitle::ReturnValue' has a wrong offset!");
 
-// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.AddPopupToQueue
-// 0x0030 (0x0030 - 0x0000)
-struct VALUI_GameInteractPopupSubsystem_AddPopupToQueue final 
-{
-public:
-	TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset;                                      // 0x0000(0x0030)(ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue) == 0x000008, "Wrong alignment on VALUI_GameInteractPopupSubsystem_AddPopupToQueue");
-static_assert(sizeof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue) == 0x000030, "Wrong size on VALUI_GameInteractPopupSubsystem_AddPopupToQueue");
-static_assert(offsetof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue, GpPopupAsset) == 0x000000, "Member 'VALUI_GameInteractPopupSubsystem_AddPopupToQueue::GpPopupAsset' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.OnHandlePopupClosed
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed final 
-{
-public:
-	class UGameplayInteractivePopupDataAsset*     GpPopupAsset;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed) == 0x000008, "Wrong alignment on VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed");
-static_assert(sizeof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed) == 0x000008, "Wrong size on VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed");
-static_assert(offsetof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed, GpPopupAsset) == 0x000000, "Member 'VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed::GpPopupAsset' has a wrong offset!");
-
 // Function ValeriaUI.DetailUserWidget.UpdateDetail
-// 0x0038 (0x0038 - 0x0000)
+// 0x0030 (0x0030 - 0x0000)
 struct DetailUserWidget_UpdateDetail final 
 {
 public:
-	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34BC[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C48[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DetailUserWidget_UpdateDetail) == 0x000008, "Wrong alignment on DetailUserWidget_UpdateDetail");
-static_assert(sizeof(DetailUserWidget_UpdateDetail) == 0x000038, "Wrong size on DetailUserWidget_UpdateDetail");
+static_assert(sizeof(DetailUserWidget_UpdateDetail) == 0x000030, "Wrong size on DetailUserWidget_UpdateDetail");
 static_assert(offsetof(DetailUserWidget_UpdateDetail, ItemType) == 0x000000, "Member 'DetailUserWidget_UpdateDetail::ItemType' has a wrong offset!");
-static_assert(offsetof(DetailUserWidget_UpdateDetail, ReturnValue) == 0x000030, "Member 'DetailUserWidget_UpdateDetail::ReturnValue' has a wrong offset!");
+static_assert(offsetof(DetailUserWidget_UpdateDetail, ReturnValue) == 0x000028, "Member 'DetailUserWidget_UpdateDetail::ReturnValue' has a wrong offset!");
 
-// Function ValeriaUI.VALUI_GpInteractivePopupBase.SetInteractivePopupDataAsset
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset final 
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemsChanged__DelegateSignature
+// 0x0020 (0x0020 - 0x0000)
+struct VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature final 
 {
 public:
-	class UGameplayInteractivePopupDataAsset*     InteractivePopupAsset;                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        AddedItems;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        RemovedItems;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset) == 0x000008, "Wrong alignment on VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset");
-static_assert(sizeof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset) == 0x000008, "Wrong size on VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset");
-static_assert(offsetof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset, InteractivePopupAsset) == 0x000000, "Member 'VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset::InteractivePopupAsset' has a wrong offset!");
+static_assert(alignof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature");
+static_assert(sizeof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature) == 0x000020, "Wrong size on VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature");
+static_assert(offsetof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature, AddedItems) == 0x000000, "Member 'VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature::AddedItems' has a wrong offset!");
+static_assert(offsetof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature, RemovedItems) == 0x000010, "Member 'VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature::RemovedItems' has a wrong offset!");
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature
+// 0x0010 (0x0010 - 0x0000)
+struct VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature final 
+{
+public:
+	class UObject*                                Item;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsSelected;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESelectInfo                                   SelectType;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C4C[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
+static_assert(sizeof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000010, "Wrong size on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
+static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, Item) == 0x000000, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::Item' has a wrong offset!");
+static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, bIsSelected) == 0x000008, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::bIsSelected' has a wrong offset!");
+static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, SelectType) == 0x000009, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::SelectType' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ListView_Styled.ResetPoolAndSetListItems
+// 0x0010 (0x0010 - 0x0000)
+struct VALUI_ListView_Styled_ResetPoolAndSetListItems final 
+{
+public:
+	TArray<class UObject*>                        InListItems;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_ResetPoolAndSetListItems) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_ResetPoolAndSetListItems");
+static_assert(sizeof(VALUI_ListView_Styled_ResetPoolAndSetListItems) == 0x000010, "Wrong size on VALUI_ListView_Styled_ResetPoolAndSetListItems");
+static_assert(offsetof(VALUI_ListView_Styled_ResetPoolAndSetListItems, InListItems) == 0x000000, "Member 'VALUI_ListView_Styled_ResetPoolAndSetListItems::InListItems' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ListView_Styled.SetEntryWidgetClass
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_ListView_Styled_SetEntryWidgetClass final 
+{
+public:
+	TSubclassOf<class UUserWidget>                NewWidgetClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_SetEntryWidgetClass) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_SetEntryWidgetClass");
+static_assert(sizeof(VALUI_ListView_Styled_SetEntryWidgetClass) == 0x000008, "Wrong size on VALUI_ListView_Styled_SetEntryWidgetClass");
+static_assert(offsetof(VALUI_ListView_Styled_SetEntryWidgetClass, NewWidgetClass) == 0x000000, "Member 'VALUI_ListView_Styled_SetEntryWidgetClass::NewWidgetClass' has a wrong offset!");
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature final 
+{
+public:
+	float                                         DesiredOffset;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
+static_assert(sizeof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature) == 0x000004, "Wrong size on VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
+static_assert(offsetof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature, DesiredOffset) == 0x000000, "Member 'VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature::DesiredOffset' has a wrong offset!");
+
+// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserScrolled__DelegateSignature
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature final 
+{
+public:
+	float                                         ScrollFraction;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature");
+static_assert(sizeof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature) == 0x000004, "Wrong size on VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature");
+static_assert(offsetof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature, ScrollFraction) == 0x000000, "Member 'VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature::ScrollFraction' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ListView_Styled.GetItemsWithinRange
+// 0x0018 (0x0018 - 0x0000)
+struct VALUI_ListView_Styled_GetItemsWithinRange final 
+{
+public:
+	int32                                         StartingIndex;                                     // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         Range;                                             // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UObject*>                        ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_GetItemsWithinRange) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_GetItemsWithinRange");
+static_assert(sizeof(VALUI_ListView_Styled_GetItemsWithinRange) == 0x000018, "Wrong size on VALUI_ListView_Styled_GetItemsWithinRange");
+static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, StartingIndex) == 0x000000, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::StartingIndex' has a wrong offset!");
+static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, Range) == 0x000004, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::Range' has a wrong offset!");
+static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, ReturnValue) == 0x000008, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ListView_Styled.GetScrollbarDistanceFromBottom
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_ListView_Styled_GetScrollbarDistanceFromBottom final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_GetScrollbarDistanceFromBottom");
+static_assert(sizeof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom) == 0x000004, "Wrong size on VALUI_ListView_Styled_GetScrollbarDistanceFromBottom");
+static_assert(offsetof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom, ReturnValue) == 0x000000, "Member 'VALUI_ListView_Styled_GetScrollbarDistanceFromBottom::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ListView_Styled.ShouldScrollBarBeVisible
+// 0x0001 (0x0001 - 0x0000)
+struct VALUI_ListView_Styled_ShouldScrollBarBeVisible final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ListView_Styled_ShouldScrollBarBeVisible) == 0x000001, "Wrong alignment on VALUI_ListView_Styled_ShouldScrollBarBeVisible");
+static_assert(sizeof(VALUI_ListView_Styled_ShouldScrollBarBeVisible) == 0x000001, "Wrong size on VALUI_ListView_Styled_ShouldScrollBarBeVisible");
+static_assert(offsetof(VALUI_ListView_Styled_ShouldScrollBarBeVisible, ReturnValue) == 0x000000, "Member 'VALUI_ListView_Styled_ShouldScrollBarBeVisible::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_TileView_Styled.SetEntryHeight
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_TileView_Styled_SetEntryHeight final 
+{
+public:
+	float                                         NewHeight;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_TileView_Styled_SetEntryHeight) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_SetEntryHeight");
+static_assert(sizeof(VALUI_TileView_Styled_SetEntryHeight) == 0x000004, "Wrong size on VALUI_TileView_Styled_SetEntryHeight");
+static_assert(offsetof(VALUI_TileView_Styled_SetEntryHeight, NewHeight) == 0x000000, "Member 'VALUI_TileView_Styled_SetEntryHeight::NewHeight' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_TileView_Styled.SetEntryWidth
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_TileView_Styled_SetEntryWidth final 
+{
+public:
+	float                                         NewWidth;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_TileView_Styled_SetEntryWidth) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_SetEntryWidth");
+static_assert(sizeof(VALUI_TileView_Styled_SetEntryWidth) == 0x000004, "Wrong size on VALUI_TileView_Styled_SetEntryWidth");
+static_assert(offsetof(VALUI_TileView_Styled_SetEntryWidth, NewWidth) == 0x000000, "Member 'VALUI_TileView_Styled_SetEntryWidth::NewWidth' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_TileView_Styled.GetEntryHeight
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_TileView_Styled_GetEntryHeight final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_TileView_Styled_GetEntryHeight) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_GetEntryHeight");
+static_assert(sizeof(VALUI_TileView_Styled_GetEntryHeight) == 0x000004, "Wrong size on VALUI_TileView_Styled_GetEntryHeight");
+static_assert(offsetof(VALUI_TileView_Styled_GetEntryHeight, ReturnValue) == 0x000000, "Member 'VALUI_TileView_Styled_GetEntryHeight::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_TileView_Styled.GetEntryWidth
+// 0x0004 (0x0004 - 0x0000)
+struct VALUI_TileView_Styled_GetEntryWidth final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_TileView_Styled_GetEntryWidth) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_GetEntryWidth");
+static_assert(sizeof(VALUI_TileView_Styled_GetEntryWidth) == 0x000004, "Wrong size on VALUI_TileView_Styled_GetEntryWidth");
+static_assert(offsetof(VALUI_TileView_Styled_GetEntryWidth, ReturnValue) == 0x000000, "Member 'VALUI_TileView_Styled_GetEntryWidth::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.HeadlessSteamAccountFlowBase.GetErrorMessageFromResponse
 // 0x0020 (0x0020 - 0x0000)
@@ -199,33 +321,16 @@ static_assert(sizeof(HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse) =
 static_assert(offsetof(HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse, Response) == 0x000000, "Member 'HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse::Response' has a wrong offset!");
 static_assert(offsetof(HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse, ReturnValue) == 0x000010, "Member 'HeadlessSteamAccountFlowBase_GetErrorMessageFromResponse::ReturnValue' has a wrong offset!");
 
-// Function ValeriaUI.HeadlessSteamAccountFlowBase.IsErrorInvalidEmail
-// 0x0020 (0x0020 - 0x0000)
-struct HeadlessSteamAccountFlowBase_IsErrorInvalidEmail final 
-{
-public:
-	int32                                         Code;                                              // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34BD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34BE[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(HeadlessSteamAccountFlowBase_IsErrorInvalidEmail) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_IsErrorInvalidEmail");
-static_assert(sizeof(HeadlessSteamAccountFlowBase_IsErrorInvalidEmail) == 0x000020, "Wrong size on HeadlessSteamAccountFlowBase_IsErrorInvalidEmail");
-static_assert(offsetof(HeadlessSteamAccountFlowBase_IsErrorInvalidEmail, Code) == 0x000000, "Member 'HeadlessSteamAccountFlowBase_IsErrorInvalidEmail::Code' has a wrong offset!");
-static_assert(offsetof(HeadlessSteamAccountFlowBase_IsErrorInvalidEmail, Message) == 0x000008, "Member 'HeadlessSteamAccountFlowBase_IsErrorInvalidEmail::Message' has a wrong offset!");
-static_assert(offsetof(HeadlessSteamAccountFlowBase_IsErrorInvalidEmail, ReturnValue) == 0x000018, "Member 'HeadlessSteamAccountFlowBase_IsErrorInvalidEmail::ReturnValue' has a wrong offset!");
-
 // Function ValeriaUI.HeadlessSteamAccountFlowBase.IsErrorRetriable
 // 0x0020 (0x0020 - 0x0000)
 struct HeadlessSteamAccountFlowBase_IsErrorRetriable final 
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34BF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C4E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C0[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C4F[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_IsErrorRetriable) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_IsErrorRetriable");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_IsErrorRetriable) == 0x000020, "Wrong size on HeadlessSteamAccountFlowBase_IsErrorRetriable");
@@ -239,7 +344,7 @@ struct HeadlessSteamAccountFlowBase_LoginErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C50[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -256,7 +361,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C2[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C51[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure");
@@ -270,7 +375,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C52[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2");
@@ -284,7 +389,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C4[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C53[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure");
@@ -298,7 +403,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C5[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C54[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2");
@@ -311,7 +416,7 @@ struct HeadlessSteamAccountFlowBase_RegistrationErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C55[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -320,33 +425,6 @@ static_assert(sizeof(HeadlessSteamAccountFlowBase_RegistrationErrorMessage) == 0
 static_assert(offsetof(HeadlessSteamAccountFlowBase_RegistrationErrorMessage, Code) == 0x000000, "Member 'HeadlessSteamAccountFlowBase_RegistrationErrorMessage::Code' has a wrong offset!");
 static_assert(offsetof(HeadlessSteamAccountFlowBase_RegistrationErrorMessage, Message) == 0x000008, "Member 'HeadlessSteamAccountFlowBase_RegistrationErrorMessage::Message' has a wrong offset!");
 static_assert(offsetof(HeadlessSteamAccountFlowBase_RegistrationErrorMessage, ReturnValue) == 0x000018, "Member 'HeadlessSteamAccountFlowBase_RegistrationErrorMessage::ReturnValue' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_StartTimer
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_HotPotTurnTimer_BP_StartTimer final 
-{
-public:
-	float                                         SecondsLeft;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EHotPotTurnState                              TurnState;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C7[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000004, "Wrong alignment on VALUI_HotPotTurnTimer_BP_StartTimer");
-static_assert(sizeof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000008, "Wrong size on VALUI_HotPotTurnTimer_BP_StartTimer");
-static_assert(offsetof(VALUI_HotPotTurnTimer_BP_StartTimer, SecondsLeft) == 0x000000, "Member 'VALUI_HotPotTurnTimer_BP_StartTimer::SecondsLeft' has a wrong offset!");
-static_assert(offsetof(VALUI_HotPotTurnTimer_BP_StartTimer, TurnState) == 0x000004, "Member 'VALUI_HotPotTurnTimer_BP_StartTimer::TurnState' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_UpdatePlayerID
-// 0x0020 (0x0020 - 0x0000)
-struct VALUI_HotPotTurnTimer_BP_UpdatePlayerID final 
-{
-public:
-	struct FGuid                                  PlayerId;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGuid                                  CharacterId;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID) == 0x000004, "Wrong alignment on VALUI_HotPotTurnTimer_BP_UpdatePlayerID");
-static_assert(sizeof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID) == 0x000020, "Wrong size on VALUI_HotPotTurnTimer_BP_UpdatePlayerID");
-static_assert(offsetof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID, PlayerId) == 0x000000, "Member 'VALUI_HotPotTurnTimer_BP_UpdatePlayerID::PlayerId' has a wrong offset!");
-static_assert(offsetof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID, CharacterId) == 0x000010, "Member 'VALUI_HotPotTurnTimer_BP_UpdatePlayerID::CharacterId' has a wrong offset!");
 
 // Function ValeriaUI.LinkSteamAccountFlowBase.GetErrorMessageFromResponse
 // 0x0020 (0x0020 - 0x0000)
@@ -367,7 +445,7 @@ struct LinkSteamAccountFlowBase_LinkErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C56[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -384,7 +462,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLinkFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34C9[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C57[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLinkFailure) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLinkFailure");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLinkFailure) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLinkFailure");
@@ -398,7 +476,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLinkFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34CA[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C58[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLinkFailure2) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLinkFailure2");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLinkFailure2) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLinkFailure2");
@@ -412,7 +490,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLoggedInFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34CB[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C59[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure");
@@ -426,7 +504,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34CC[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C5A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2");
@@ -473,7 +551,7 @@ struct MailboxViewerUserWidget_CanAllRewardsBeCollected final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D0[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C5E[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_CanAllRewardsBeCollected) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_CanAllRewardsBeCollected");
 static_assert(sizeof(MailboxViewerUserWidget_CanAllRewardsBeCollected) == 0x000008, "Wrong size on MailboxViewerUserWidget_CanAllRewardsBeCollected");
@@ -565,7 +643,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EValeriaFuncResult                            OutResult;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D1[0x2];                                     // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C5F[0x2];                                     // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_TryCollectAllRewards) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_TryCollectAllRewards");
 static_assert(sizeof(MailboxViewerUserWidget_TryCollectAllRewards) == 0x000008, "Wrong size on MailboxViewerUserWidget_TryCollectAllRewards");
@@ -581,7 +659,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RewardIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D2[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C60[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_TryCollectReward) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_TryCollectReward");
 static_assert(sizeof(MailboxViewerUserWidget_TryCollectReward) == 0x00000C, "Wrong size on MailboxViewerUserWidget_TryCollectReward");
@@ -607,7 +685,7 @@ struct MailboxViewerUserWidget_AreAllRewardsCollected final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D3[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C61[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_AreAllRewardsCollected) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_AreAllRewardsCollected");
 static_assert(sizeof(MailboxViewerUserWidget_AreAllRewardsCollected) == 0x000008, "Wrong size on MailboxViewerUserWidget_AreAllRewardsCollected");
@@ -626,30 +704,30 @@ static_assert(sizeof(MailboxViewerUserWidget_GetCurrentFilter) == 0x000001, "Wro
 static_assert(offsetof(MailboxViewerUserWidget_GetCurrentFilter, ReturnValue) == 0x000000, "Member 'MailboxViewerUserWidget_GetCurrentFilter::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.MailboxViewerUserWidget.GetIndexOfMailMessage
-// 0x0150 (0x0150 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct MailboxViewerUserWidget_GetIndexOfMailMessage final 
 {
 public:
-	struct FMailMessageWidgetData                 Data;                                              // 0x0000(0x0148)(Parm, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0148(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D4[0x4];                                     // 0x014C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FMailMessageWidgetData                 Data;                                              // 0x0000(0x0130)(Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0130(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C62[0x4];                                     // 0x0134(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_GetIndexOfMailMessage) == 0x000008, "Wrong alignment on MailboxViewerUserWidget_GetIndexOfMailMessage");
-static_assert(sizeof(MailboxViewerUserWidget_GetIndexOfMailMessage) == 0x000150, "Wrong size on MailboxViewerUserWidget_GetIndexOfMailMessage");
+static_assert(sizeof(MailboxViewerUserWidget_GetIndexOfMailMessage) == 0x000138, "Wrong size on MailboxViewerUserWidget_GetIndexOfMailMessage");
 static_assert(offsetof(MailboxViewerUserWidget_GetIndexOfMailMessage, Data) == 0x000000, "Member 'MailboxViewerUserWidget_GetIndexOfMailMessage::Data' has a wrong offset!");
-static_assert(offsetof(MailboxViewerUserWidget_GetIndexOfMailMessage, ReturnValue) == 0x000148, "Member 'MailboxViewerUserWidget_GetIndexOfMailMessage::ReturnValue' has a wrong offset!");
+static_assert(offsetof(MailboxViewerUserWidget_GetIndexOfMailMessage, ReturnValue) == 0x000130, "Member 'MailboxViewerUserWidget_GetIndexOfMailMessage::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.MailboxViewerUserWidget.GetMailMessage
-// 0x0150 (0x0150 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct MailboxViewerUserWidget_GetMailMessage final 
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FMailMessageWidgetData                 ReturnValue;                                       // 0x0008(0x0148)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C63[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMailMessageWidgetData                 ReturnValue;                                       // 0x0008(0x0130)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MailboxViewerUserWidget_GetMailMessage) == 0x000008, "Wrong alignment on MailboxViewerUserWidget_GetMailMessage");
-static_assert(sizeof(MailboxViewerUserWidget_GetMailMessage) == 0x000150, "Wrong size on MailboxViewerUserWidget_GetMailMessage");
+static_assert(sizeof(MailboxViewerUserWidget_GetMailMessage) == 0x000138, "Wrong size on MailboxViewerUserWidget_GetMailMessage");
 static_assert(offsetof(MailboxViewerUserWidget_GetMailMessage, Param_Index) == 0x000000, "Member 'MailboxViewerUserWidget_GetMailMessage::Param_Index' has a wrong offset!");
 static_assert(offsetof(MailboxViewerUserWidget_GetMailMessage, ReturnValue) == 0x000008, "Member 'MailboxViewerUserWidget_GetMailMessage::ReturnValue' has a wrong offset!");
 
@@ -683,7 +761,7 @@ struct MailboxViewerUserWidget_GetNumberOfMessagesForFilter final
 {
 public:
 	EMailboxViewerFilter                          Filter;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D6[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C64[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MailboxViewerUserWidget_GetNumberOfMessagesForFilter) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_GetNumberOfMessagesForFilter");
@@ -708,7 +786,7 @@ struct MainLobbyBase_HandleInitialSteamLoginFailure final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C65[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Msg;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MainLobbyBase_HandleInitialSteamLoginFailure) == 0x000008, "Wrong alignment on MainLobbyBase_HandleInitialSteamLoginFailure");
@@ -721,14 +799,11 @@ static_assert(offsetof(MainLobbyBase_HandleInitialSteamLoginFailure, Msg) == 0x0
 struct MainLobbyBase_OnSteamLoginError final 
 {
 public:
-	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34D8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 Msg;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FText                                   Msg;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MainLobbyBase_OnSteamLoginError) == 0x000008, "Wrong alignment on MainLobbyBase_OnSteamLoginError");
 static_assert(sizeof(MainLobbyBase_OnSteamLoginError) == 0x000018, "Wrong size on MainLobbyBase_OnSteamLoginError");
-static_assert(offsetof(MainLobbyBase_OnSteamLoginError, Code) == 0x000000, "Member 'MainLobbyBase_OnSteamLoginError::Code' has a wrong offset!");
-static_assert(offsetof(MainLobbyBase_OnSteamLoginError, Msg) == 0x000008, "Member 'MainLobbyBase_OnSteamLoginError::Msg' has a wrong offset!");
+static_assert(offsetof(MainLobbyBase_OnSteamLoginError, Msg) == 0x000000, "Member 'MainLobbyBase_OnSteamLoginError::Msg' has a wrong offset!");
 
 // Function ValeriaUI.ValeriaViewportClient.HandleOnFadeInBlack
 // 0x0004 (0x0004 - 0x0000)
@@ -751,6 +826,17 @@ public:
 static_assert(alignof(ValeriaViewportClient_HandleOnFadeOutBlack) == 0x000004, "Wrong alignment on ValeriaViewportClient_HandleOnFadeOutBlack");
 static_assert(sizeof(ValeriaViewportClient_HandleOnFadeOutBlack) == 0x000004, "Wrong size on ValeriaViewportClient_HandleOnFadeOutBlack");
 static_assert(offsetof(ValeriaViewportClient_HandleOnFadeOutBlack, DurationSeconds) == 0x000000, "Member 'ValeriaViewportClient_HandleOnFadeOutBlack::DurationSeconds' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_AnnouncementsMessageModalDialog.GetAnnouncementUrl
+// 0x0010 (0x0010 - 0x0000)
+struct VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl final 
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl) == 0x000008, "Wrong alignment on VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl");
+static_assert(sizeof(VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl) == 0x000010, "Wrong size on VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl");
+static_assert(offsetof(VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl, ReturnValue) == 0x000000, "Member 'VALUI_AnnouncementsMessageModalDialog_GetAnnouncementUrl::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_AnnouncementsMessageModalDialog.HandleRefreshedMessageFromWeb
 // 0x0010 (0x0010 - 0x0000)
@@ -799,34 +885,21 @@ static_assert(sizeof(VAL_AsyncActionRequestStorefront_OnRequestStorefrontSuccess
 static_assert(offsetof(VAL_AsyncActionRequestStorefront_OnRequestStorefrontSuccess__DelegateSignature, Response) == 0x000000, "Member 'VAL_AsyncActionRequestStorefront_OnRequestStorefrontSuccess__DelegateSignature::Response' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_AsyncUpdateLoadout.UpdateLoadout
-// 0x0A10 (0x0A10 - 0x0000)
+// 0x0978 (0x0978 - 0x0000)
 struct VALUI_AsyncUpdateLoadout_UpdateLoadout final 
 {
 public:
 	class UVALUI_CharacterCustomizationPanelBase* CustPanel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVAL_CharacterCustomizationLoadout     NewLoadout;                                        // 0x0008(0x0998)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVALUI_CharCustomization_UpdateLoadoutContextPayload ContextPayload;                                    // 0x09A0(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UVALUI_AsyncUpdateLoadout*              ReturnValue;                                       // 0x0A08(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVAL_CharacterCustomizationLoadout     NewLoadout;                                        // 0x0008(0x0900)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVALUI_CharCustomization_UpdateLoadoutContextPayload ContextPayload;                                    // 0x0908(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UVALUI_AsyncUpdateLoadout*              ReturnValue;                                       // 0x0970(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_AsyncUpdateLoadout_UpdateLoadout) == 0x000008, "Wrong alignment on VALUI_AsyncUpdateLoadout_UpdateLoadout");
-static_assert(sizeof(VALUI_AsyncUpdateLoadout_UpdateLoadout) == 0x000A10, "Wrong size on VALUI_AsyncUpdateLoadout_UpdateLoadout");
+static_assert(sizeof(VALUI_AsyncUpdateLoadout_UpdateLoadout) == 0x000978, "Wrong size on VALUI_AsyncUpdateLoadout_UpdateLoadout");
 static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, CustPanel) == 0x000000, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::CustPanel' has a wrong offset!");
 static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, NewLoadout) == 0x000008, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::NewLoadout' has a wrong offset!");
-static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, ContextPayload) == 0x0009A0, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::ContextPayload' has a wrong offset!");
-static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, ReturnValue) == 0x000A08, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::ReturnValue' has a wrong offset!");
-
-// DelegateFunction ValeriaUI.VALUI_AsyncUpdateLoadout.OnUpdateLoadoutCompleted__DelegateSignature
-// 0x0070 (0x0070 - 0x0000)
-struct VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature final 
-{
-public:
-	class UVALUI_CharacterCustomizationPanelBase* CharacterCustomizationPanel;                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_CharCustomization_UpdateLoadoutContextPayload ContextPayload;                                    // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature");
-static_assert(sizeof(VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature) == 0x000070, "Wrong size on VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature");
-static_assert(offsetof(VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature, CharacterCustomizationPanel) == 0x000000, "Member 'VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature::CharacterCustomizationPanel' has a wrong offset!");
-static_assert(offsetof(VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature, ContextPayload) == 0x000008, "Member 'VALUI_AsyncUpdateLoadout_OnUpdateLoadoutCompleted__DelegateSignature::ContextPayload' has a wrong offset!");
+static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, ContextPayload) == 0x000908, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::ContextPayload' has a wrong offset!");
+static_assert(offsetof(VALUI_AsyncUpdateLoadout_UpdateLoadout, ReturnValue) == 0x000970, "Member 'VALUI_AsyncUpdateLoadout_UpdateLoadout::ReturnValue' has a wrong offset!");
 
 // DelegateFunction ValeriaUI.VALUI_AsyncUpdateLoadout.OnUpdateLoadoutFailed__DelegateSignature
 // 0x0068 (0x0068 - 0x0000)
@@ -890,10 +963,10 @@ struct VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation f
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerEvent                                 LatestTriggerEvent;                                // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E4[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C71[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OngoingDuration;                                   // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HoldTimeThreshold;                                 // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34E5[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C72[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation) == 0x000008, "Wrong alignment on VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation");
 static_assert(sizeof(VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation) == 0x000028, "Wrong size on VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation");
@@ -964,7 +1037,7 @@ struct VALUI_Button_Styled_ShowCursor final
 public:
 	class UWidget*                                InCursor;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34ED[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C7A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_Button_Styled_ShowCursor) == 0x000008, "Wrong alignment on VALUI_Button_Styled_ShowCursor");
 static_assert(sizeof(VALUI_Button_Styled_ShowCursor) == 0x000010, "Wrong size on VALUI_Button_Styled_ShowCursor");
@@ -978,7 +1051,7 @@ struct VALUI_NameValidator_IsNameValid final
 public:
 	class FString                                 InCharacterName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F2[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C7F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NameValidator_IsNameValid) == 0x000008, "Wrong alignment on VALUI_NameValidator_IsNameValid");
 static_assert(sizeof(VALUI_NameValidator_IsNameValid) == 0x000018, "Wrong size on VALUI_NameValidator_IsNameValid");
@@ -992,7 +1065,7 @@ struct VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged final
 public:
 	class FText                                   InCharacterName;                                   // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EVAL_CharacterNameType                        InCharacterNameType;                               // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F3[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C80[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged) == 0x000008, "Wrong alignment on VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged");
 static_assert(sizeof(VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged) == 0x000020, "Wrong size on VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged");
@@ -1083,7 +1156,7 @@ struct VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid final
 public:
 	struct FVALUI_CharacterNameValidityResponse   Response;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F4[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C81[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid) == 0x000008, "Wrong alignment on VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid");
 static_assert(sizeof(VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid) == 0x000020, "Wrong size on VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid");
@@ -1091,19 +1164,19 @@ static_assert(offsetof(VALUI_CharacterCreationStatics_IsCharacterNameValidityRes
 static_assert(offsetof(VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid, ReturnValue) == 0x000018, "Member 'VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CharacterCustomizationPanelBase.GenerateItemObject
-// 0x0140 (0x0140 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct VALUI_CharacterCustomizationPanelBase_GenerateItemObject final 
 {
 public:
-	struct FVAL_CharCustomization_AssetData       AssetData;                                         // 0x0000(0x0130)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	class UWidget*                                ViewWidget;                                        // 0x0130(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UObject*                                ReturnValue;                                       // 0x0138(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVAL_CharCustomization_AssetData       AssetData;                                         // 0x0000(0x0128)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	class UWidget*                                ViewWidget;                                        // 0x0128(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                ReturnValue;                                       // 0x0130(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject) == 0x000008, "Wrong alignment on VALUI_CharacterCustomizationPanelBase_GenerateItemObject");
-static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject) == 0x000140, "Wrong size on VALUI_CharacterCustomizationPanelBase_GenerateItemObject");
+static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject) == 0x000138, "Wrong size on VALUI_CharacterCustomizationPanelBase_GenerateItemObject");
 static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject, AssetData) == 0x000000, "Member 'VALUI_CharacterCustomizationPanelBase_GenerateItemObject::AssetData' has a wrong offset!");
-static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject, ViewWidget) == 0x000130, "Member 'VALUI_CharacterCustomizationPanelBase_GenerateItemObject::ViewWidget' has a wrong offset!");
-static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject, ReturnValue) == 0x000138, "Member 'VALUI_CharacterCustomizationPanelBase_GenerateItemObject::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject, ViewWidget) == 0x000128, "Member 'VALUI_CharacterCustomizationPanelBase_GenerateItemObject::ViewWidget' has a wrong offset!");
+static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GenerateItemObject, ReturnValue) == 0x000130, "Member 'VALUI_CharacterCustomizationPanelBase_GenerateItemObject::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CharacterCustomizationPanelBase.HandleLoadoutSlotItemsGenerated
 // 0x0040 (0x0040 - 0x0000)
@@ -1141,14 +1214,14 @@ static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_SetPreviewCharacterAc
 static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_SetPreviewCharacterActor, Actor) == 0x000000, "Member 'VALUI_CharacterCustomizationPanelBase_SetPreviewCharacterActor::Actor' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CharacterCustomizationPanelBase.GetCurrentLoadout
-// 0x0998 (0x0998 - 0x0000)
+// 0x0900 (0x0900 - 0x0000)
 struct VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout final 
 {
 public:
-	struct FVAL_CharacterCustomizationLoadout     ReturnValue;                                       // 0x0000(0x0998)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVAL_CharacterCustomizationLoadout     ReturnValue;                                       // 0x0000(0x0900)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout) == 0x000008, "Wrong alignment on VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout");
-static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout) == 0x000998, "Wrong size on VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout");
+static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout) == 0x000900, "Wrong size on VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout");
 static_assert(offsetof(VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout, ReturnValue) == 0x000000, "Member 'VALUI_CharacterCustomizationPanelBase_GetCurrentLoadout::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CharacterCustomizationPanelBase.GetLoadoutSlotDataFromItemObject
@@ -1160,7 +1233,7 @@ public:
 	class FName                                   LoadoutSlotName;                                   // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_CharCustomization_LoadoutSlotData LoadoutSlotData;                                   // 0x0010(0x0038)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bSuccess;                                          // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F6[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C83[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject) == 0x000008, "Wrong alignment on VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject");
 static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject) == 0x000050, "Wrong size on VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject");
@@ -1178,7 +1251,7 @@ public:
 	float                                         ValidTouchRadius;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MovementValidDistanceTemp;                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WalkBoundaryDistanceTemp;                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34F9[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C86[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack) == 0x000008, "Wrong alignment on VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack");
 static_assert(sizeof(VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack) == 0x000020, "Wrong size on VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack");
@@ -1193,7 +1266,7 @@ struct VALUI_CharacterMovementStick_Mobile_OnUpdateMovmentVirtualStick final
 {
 public:
 	bool                                          TouchControlFlag;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34FA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C87[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Pos;                                               // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ControlVector;                                     // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1237,17 +1310,17 @@ static_assert(sizeof(VALUI_ChatBubbleManager_HandleOnNewChatMessageReceived) == 
 static_assert(offsetof(VALUI_ChatBubbleManager_HandleOnNewChatMessageReceived, Message) == 0x000000, "Member 'VALUI_ChatBubbleManager_HandleOnNewChatMessageReceived::Message' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatEmojiPanel.GetTexture
-// 0x0088 (0x0088 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct VALUI_ChatEmojiPanel_GetTexture final 
 {
 public:
-	struct FS6UI_FRichImageRow_Soft               ImageRow;                                          // 0x0000(0x0058)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0058(0x0030)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FS6UI_FRichImageRow_Soft               ImageRow;                                          // 0x0000(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              ReturnValue;                                       // 0x0050(0x0028)(ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatEmojiPanel_GetTexture) == 0x000008, "Wrong alignment on VALUI_ChatEmojiPanel_GetTexture");
-static_assert(sizeof(VALUI_ChatEmojiPanel_GetTexture) == 0x000088, "Wrong size on VALUI_ChatEmojiPanel_GetTexture");
+static_assert(sizeof(VALUI_ChatEmojiPanel_GetTexture) == 0x000078, "Wrong size on VALUI_ChatEmojiPanel_GetTexture");
 static_assert(offsetof(VALUI_ChatEmojiPanel_GetTexture, ImageRow) == 0x000000, "Member 'VALUI_ChatEmojiPanel_GetTexture::ImageRow' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatEmojiPanel_GetTexture, ReturnValue) == 0x000058, "Member 'VALUI_ChatEmojiPanel_GetTexture::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatEmojiPanel_GetTexture, ReturnValue) == 0x000050, "Member 'VALUI_ChatEmojiPanel_GetTexture::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatInputBar.ChangeMessageTarget
 // 0x0030 (0x0030 - 0x0000)
@@ -1256,7 +1329,7 @@ struct VALUI_ChatInputBar_ChangeMessageTarget final
 public:
 	struct FMessageTarget                         MessageTarget;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_34FF[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C8C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_ChangeMessageTarget) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_ChangeMessageTarget");
 static_assert(sizeof(VALUI_ChatInputBar_ChangeMessageTarget) == 0x000030, "Wrong size on VALUI_ChatInputBar_ChangeMessageTarget");
@@ -1270,7 +1343,7 @@ struct VALUI_ChatInputBar_DisplayActiveCommandHint final
 public:
 	class UVAL_ChatCommand_Base*                  Command;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplay;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3500[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C8D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_DisplayActiveCommandHint) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_DisplayActiveCommandHint");
 static_assert(sizeof(VALUI_ChatInputBar_DisplayActiveCommandHint) == 0x000010, "Wrong size on VALUI_ChatInputBar_DisplayActiveCommandHint");
@@ -1302,14 +1375,14 @@ static_assert(offsetof(VALUI_ChatInputBar_DisplayStringsSuggestions, InString) =
 static_assert(offsetof(VALUI_ChatInputBar_DisplayStringsSuggestions, Suggestions) == 0x000010, "Member 'VALUI_ChatInputBar_DisplayStringsSuggestions::Suggestions' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatInputBar.HandleOnChatChannelSet
-// 0x00B8 (0x00B8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct VALUI_ChatInputBar_HandleOnChatChannelSet final 
 {
 public:
-	struct FVALUI_ChatChannel                     Channel;                                           // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVALUI_ChatChannel                     Channel;                                           // 0x0000(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatInputBar_HandleOnChatChannelSet) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_HandleOnChatChannelSet");
-static_assert(sizeof(VALUI_ChatInputBar_HandleOnChatChannelSet) == 0x0000B8, "Wrong size on VALUI_ChatInputBar_HandleOnChatChannelSet");
+static_assert(sizeof(VALUI_ChatInputBar_HandleOnChatChannelSet) == 0x0000B0, "Wrong size on VALUI_ChatInputBar_HandleOnChatChannelSet");
 static_assert(offsetof(VALUI_ChatInputBar_HandleOnChatChannelSet, Channel) == 0x000000, "Member 'VALUI_ChatInputBar_HandleOnChatChannelSet::Channel' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatInputBar.HandleOnDisplayCharacterNameSuggestions
@@ -1319,7 +1392,7 @@ struct VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions final
 public:
 	class FString                                 CharacterNameSubstr;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxSuggestionsNum;                                 // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3501[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C8E[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions");
 static_assert(sizeof(VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions) == 0x000018, "Wrong size on VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions");
@@ -1355,7 +1428,7 @@ struct VALUI_ChatInputBar_HandleOnTextCommitted final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	ETextCommit                                   InCommitMethod;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3502[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C8F[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_HandleOnTextCommitted) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_HandleOnTextCommitted");
 static_assert(sizeof(VALUI_ChatInputBar_HandleOnTextCommitted) == 0x000020, "Wrong size on VALUI_ChatInputBar_HandleOnTextCommitted");
@@ -1379,7 +1452,7 @@ struct VALUI_ChatInputBar_SwitchToNextChannel final
 {
 public:
 	bool                                          bSwitchUp;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3503[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C90[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMessageTarget                         ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatInputBar_SwitchToNextChannel) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_SwitchToNextChannel");
@@ -1499,17 +1572,17 @@ static_assert(sizeof(VALUI_ChatInputEditableText_StyleSelectedText) == 0x000010,
 static_assert(offsetof(VALUI_ChatInputEditableText_StyleSelectedText, StyleTagString) == 0x000000, "Member 'VALUI_ChatInputEditableText_StyleSelectedText::StyleTagString' has a wrong offset!");
 
 // DelegateFunction ValeriaUI.VALUI_ChatInputEditableText.VALUI_OnSummonContextMenu__DelegateSignature
-// 0x00D8 (0x00D8 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature final 
 {
 public:
-	struct FGeometry                              Geometry;                                          // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPointerEvent                          MouseEvent;                                        // 0x0040(0x0098)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometry                              Geometry;                                          // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          MouseEvent;                                        // 0x0038(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature");
-static_assert(sizeof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature) == 0x0000D8, "Wrong size on VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature");
+static_assert(sizeof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature) == 0x0000B0, "Wrong size on VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature");
 static_assert(offsetof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature, Geometry) == 0x000000, "Member 'VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature::Geometry' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature, MouseEvent) == 0x000040, "Member 'VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature::MouseEvent' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature, MouseEvent) == 0x000038, "Member 'VALUI_ChatInputEditableText_VALUI_OnSummonContextMenu__DelegateSignature::MouseEvent' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatMessage.ColorToHexString
 // 0x0020 (0x0020 - 0x0000)
@@ -1591,7 +1664,7 @@ public:
 	class UWidget*                                MessagePanel;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FValeriaChatMessage                    ChatMessage;                                       // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatMessageConfig               MessageConfig;                                     // 0x0070(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3507[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C94[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleAddMessageToPanel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleAddMessageToPanel");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleAddMessageToPanel) == 0x000080, "Wrong size on VALUI_ChatPanelBase_HandleAddMessageToPanel");
@@ -1635,20 +1708,20 @@ static_assert(sizeof(VALUI_ChatPanelBase_HandleClearMessagePanel) == 0x000008, "
 static_assert(offsetof(VALUI_ChatPanelBase_HandleClearMessagePanel, MessagePanel) == 0x000000, "Member 'VALUI_ChatPanelBase_HandleClearMessagePanel::MessagePanel' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatPanelBase.HandleDisplayChannelGlow
-// 0x00C8 (0x00C8 - 0x0000)
+// 0x00C0 (0x00C0 - 0x0000)
 struct VALUI_ChatPanelBase_HandleDisplayChannelGlow final 
 {
 public:
 	class UWidget*                                SidePanel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_ChatChannel                     Channel;                                           // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	int32                                         ChannelIndex;                                      // 0x00C0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3508[0x4];                                     // 0x00C4(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVALUI_ChatChannel                     Channel;                                           // 0x0008(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         ChannelIndex;                                      // 0x00B8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C95[0x4];                                     // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleDisplayChannelGlow) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleDisplayChannelGlow");
-static_assert(sizeof(VALUI_ChatPanelBase_HandleDisplayChannelGlow) == 0x0000C8, "Wrong size on VALUI_ChatPanelBase_HandleDisplayChannelGlow");
+static_assert(sizeof(VALUI_ChatPanelBase_HandleDisplayChannelGlow) == 0x0000C0, "Wrong size on VALUI_ChatPanelBase_HandleDisplayChannelGlow");
 static_assert(offsetof(VALUI_ChatPanelBase_HandleDisplayChannelGlow, SidePanel) == 0x000000, "Member 'VALUI_ChatPanelBase_HandleDisplayChannelGlow::SidePanel' has a wrong offset!");
 static_assert(offsetof(VALUI_ChatPanelBase_HandleDisplayChannelGlow, Channel) == 0x000008, "Member 'VALUI_ChatPanelBase_HandleDisplayChannelGlow::Channel' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatPanelBase_HandleDisplayChannelGlow, ChannelIndex) == 0x0000C0, "Member 'VALUI_ChatPanelBase_HandleDisplayChannelGlow::ChannelIndex' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatPanelBase_HandleDisplayChannelGlow, ChannelIndex) == 0x0000B8, "Member 'VALUI_ChatPanelBase_HandleDisplayChannelGlow::ChannelIndex' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatPanelBase.HandleDisplayTab
 // 0x0008 (0x0008 - 0x0000)
@@ -1723,7 +1796,7 @@ struct VALUI_ChatPanelBase_HandleRemoveSidePanelChannel final
 public:
 	class UWidget*                                SidePanel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3509[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C96[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleRemoveSidePanelChannel");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel) == 0x000010, "Wrong size on VALUI_ChatPanelBase_HandleRemoveSidePanelChannel");
@@ -1731,20 +1804,20 @@ static_assert(offsetof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel, SidePan
 static_assert(offsetof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel, ChannelIndex) == 0x000008, "Member 'VALUI_ChatPanelBase_HandleRemoveSidePanelChannel::ChannelIndex' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatPanelBase.HandleTabChannelEnabled
-// 0x0128 (0x0128 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct VALUI_ChatPanelBase_HandleTabChannelEnabled final 
 {
 public:
 	struct FVALUI_ChatTab                         Tab;                                               // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVALUI_ChatChannel                     Channel;                                           // 0x0060(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FVALUI_ChatMessageConfig               Config;                                            // 0x0118(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350A[0x4];                                     // 0x0124(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVALUI_ChatChannel                     Channel;                                           // 0x0060(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVALUI_ChatMessageConfig               Config;                                            // 0x0110(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C97[0x4];                                     // 0x011C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleTabChannelEnabled) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleTabChannelEnabled");
-static_assert(sizeof(VALUI_ChatPanelBase_HandleTabChannelEnabled) == 0x000128, "Wrong size on VALUI_ChatPanelBase_HandleTabChannelEnabled");
+static_assert(sizeof(VALUI_ChatPanelBase_HandleTabChannelEnabled) == 0x000120, "Wrong size on VALUI_ChatPanelBase_HandleTabChannelEnabled");
 static_assert(offsetof(VALUI_ChatPanelBase_HandleTabChannelEnabled, Tab) == 0x000000, "Member 'VALUI_ChatPanelBase_HandleTabChannelEnabled::Tab' has a wrong offset!");
 static_assert(offsetof(VALUI_ChatPanelBase_HandleTabChannelEnabled, Channel) == 0x000060, "Member 'VALUI_ChatPanelBase_HandleTabChannelEnabled::Channel' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatPanelBase_HandleTabChannelEnabled, Config) == 0x000118, "Member 'VALUI_ChatPanelBase_HandleTabChannelEnabled::Config' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatPanelBase_HandleTabChannelEnabled, Config) == 0x000110, "Member 'VALUI_ChatPanelBase_HandleTabChannelEnabled::Config' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatPanelBase.HandleToggleTabHost
 // 0x0001 (0x0001 - 0x0000)
@@ -1765,7 +1838,7 @@ public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMessageTarget                         MessageTarget;                                     // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350B[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C98[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_IsTabChannelEnabled) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_IsTabChannelEnabled");
 static_assert(sizeof(VALUI_ChatPanelBase_IsTabChannelEnabled) == 0x000038, "Wrong size on VALUI_ChatPanelBase_IsTabChannelEnabled");
@@ -1791,7 +1864,7 @@ struct VALUI_ChatPanelBase_RemoveTabChannel final
 public:
 	struct FVALUI_ChatTab                         Tab;                                               // 0x0000(0x0060)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0060(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350C[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C99[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_RemoveTabChannel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_RemoveTabChannel");
 static_assert(sizeof(VALUI_ChatPanelBase_RemoveTabChannel) == 0x000068, "Wrong size on VALUI_ChatPanelBase_RemoveTabChannel");
@@ -1869,23 +1942,23 @@ static_assert(sizeof(VALUI_ChatPanelBase_GetCurrentChatState) == 0x000001, "Wron
 static_assert(offsetof(VALUI_ChatPanelBase_GetCurrentChatState, ReturnValue) == 0x000000, "Member 'VALUI_ChatPanelBase_GetCurrentChatState::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatPanelBase.TryGetTabAndChannelFromMessageConfig
-// 0x0130 (0x0130 - 0x0000)
+// 0x0128 (0x0128 - 0x0000)
 struct VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig final 
 {
 public:
 	struct FVALUI_ChatMessageConfig               Config;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C9A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVALUI_ChatTab                         OutTab;                                            // 0x0010(0x0060)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	struct FVALUI_ChatChannel                     OutChannel;                                        // 0x0070(0x00B8)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0128(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350E[0x7];                                     // 0x0129(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVALUI_ChatChannel                     OutChannel;                                        // 0x0070(0x00B0)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9B[0x7];                                     // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig");
-static_assert(sizeof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig) == 0x000130, "Wrong size on VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig");
+static_assert(sizeof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig) == 0x000128, "Wrong size on VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig");
 static_assert(offsetof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig, Config) == 0x000000, "Member 'VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig::Config' has a wrong offset!");
 static_assert(offsetof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig, OutTab) == 0x000010, "Member 'VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig::OutTab' has a wrong offset!");
 static_assert(offsetof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig, OutChannel) == 0x000070, "Member 'VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig::OutChannel' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig, ReturnValue) == 0x000128, "Member 'VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig, ReturnValue) == 0x000120, "Member 'VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatStatics.ConvertValeriaChatMessagesArrayToPlatformChatMessagesArray
 // 0x0020 (0x0020 - 0x0000)
@@ -1914,20 +1987,20 @@ static_assert(offsetof(VALUI_ChatStatics_ConvertValeriaChatMessageToPlatformChat
 static_assert(offsetof(VALUI_ChatStatics_ConvertValeriaChatMessageToPlatformChatMessage, ReturnValue) == 0x000068, "Member 'VALUI_ChatStatics_ConvertValeriaChatMessageToPlatformChatMessage::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatStatics.DoesChannelMatchMessageTarget
-// 0x00E8 (0x00E8 - 0x0000)
+// 0x00E0 (0x00E0 - 0x0000)
 struct VALUI_ChatStatics_DoesChannelMatchMessageTarget final 
 {
 public:
-	struct FVALUI_ChatChannel                     InChannel;                                         // 0x0000(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FMessageTarget                         InMessageTarget;                                   // 0x00B8(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_350F[0x7];                                     // 0x00E1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVALUI_ChatChannel                     InChannel;                                         // 0x0000(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FMessageTarget                         InMessageTarget;                                   // 0x00B0(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9C[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatStatics_DoesChannelMatchMessageTarget) == 0x000008, "Wrong alignment on VALUI_ChatStatics_DoesChannelMatchMessageTarget");
-static_assert(sizeof(VALUI_ChatStatics_DoesChannelMatchMessageTarget) == 0x0000E8, "Wrong size on VALUI_ChatStatics_DoesChannelMatchMessageTarget");
+static_assert(sizeof(VALUI_ChatStatics_DoesChannelMatchMessageTarget) == 0x0000E0, "Wrong size on VALUI_ChatStatics_DoesChannelMatchMessageTarget");
 static_assert(offsetof(VALUI_ChatStatics_DoesChannelMatchMessageTarget, InChannel) == 0x000000, "Member 'VALUI_ChatStatics_DoesChannelMatchMessageTarget::InChannel' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatStatics_DoesChannelMatchMessageTarget, InMessageTarget) == 0x0000B8, "Member 'VALUI_ChatStatics_DoesChannelMatchMessageTarget::InMessageTarget' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatStatics_DoesChannelMatchMessageTarget, ReturnValue) == 0x0000E0, "Member 'VALUI_ChatStatics_DoesChannelMatchMessageTarget::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatStatics_DoesChannelMatchMessageTarget, InMessageTarget) == 0x0000B0, "Member 'VALUI_ChatStatics_DoesChannelMatchMessageTarget::InMessageTarget' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatStatics_DoesChannelMatchMessageTarget, ReturnValue) == 0x0000D8, "Member 'VALUI_ChatStatics_DoesChannelMatchMessageTarget::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatStatics.FetchChatMessages
 // 0x0070 (0x0070 - 0x0000)
@@ -1945,19 +2018,19 @@ static_assert(offsetof(VALUI_ChatStatics_FetchChatMessages, Filter) == 0x000008,
 static_assert(offsetof(VALUI_ChatStatics_FetchChatMessages, ReturnValue) == 0x000060, "Member 'VALUI_ChatStatics_FetchChatMessages::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ChatStatics.GetMessageTargetsOfChannel
-// 0x00D0 (0x00D0 - 0x0000)
+// 0x00C8 (0x00C8 - 0x0000)
 struct VALUI_ChatStatics_GetMessageTargetsOfChannel final 
 {
 public:
 	class UWorld*                                 WorldContext;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_ChatChannel                     InChannel;                                         // 0x0008(0x00B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FMessageTarget>                 ReturnValue;                                       // 0x00C0(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FVALUI_ChatChannel                     InChannel;                                         // 0x0008(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FMessageTarget>                 ReturnValue;                                       // 0x00B8(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatStatics_GetMessageTargetsOfChannel) == 0x000008, "Wrong alignment on VALUI_ChatStatics_GetMessageTargetsOfChannel");
-static_assert(sizeof(VALUI_ChatStatics_GetMessageTargetsOfChannel) == 0x0000D0, "Wrong size on VALUI_ChatStatics_GetMessageTargetsOfChannel");
+static_assert(sizeof(VALUI_ChatStatics_GetMessageTargetsOfChannel) == 0x0000C8, "Wrong size on VALUI_ChatStatics_GetMessageTargetsOfChannel");
 static_assert(offsetof(VALUI_ChatStatics_GetMessageTargetsOfChannel, WorldContext) == 0x000000, "Member 'VALUI_ChatStatics_GetMessageTargetsOfChannel::WorldContext' has a wrong offset!");
 static_assert(offsetof(VALUI_ChatStatics_GetMessageTargetsOfChannel, InChannel) == 0x000008, "Member 'VALUI_ChatStatics_GetMessageTargetsOfChannel::InChannel' has a wrong offset!");
-static_assert(offsetof(VALUI_ChatStatics_GetMessageTargetsOfChannel, ReturnValue) == 0x0000C0, "Member 'VALUI_ChatStatics_GetMessageTargetsOfChannel::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_ChatStatics_GetMessageTargetsOfChannel, ReturnValue) == 0x0000B8, "Member 'VALUI_ChatStatics_GetMessageTargetsOfChannel::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CheckBoxStyle.Apply
 // 0x0008 (0x0008 - 0x0000)
@@ -1982,43 +2055,43 @@ static_assert(sizeof(VALUI_CheckBox_Styled_SetCheckBoxStyle) == 0x000008, "Wrong
 static_assert(offsetof(VALUI_CheckBox_Styled_SetCheckBoxStyle, NewStyle) == 0x000000, "Member 'VALUI_CheckBox_Styled_SetCheckBoxStyle::NewStyle' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CrafterContentWidget.GetCrafterData
-// 0x0140 (0x0140 - 0x0000)
+// 0x0138 (0x0138 - 0x0000)
 struct VALUI_CrafterContentWidget_GetCrafterData final 
 {
 public:
-	struct FCrafterConfig                         CrafterConfig;                                     // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_Crafter                         CrafterData;                                       // 0x00E8(0x0050)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0138(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3510[0x7];                                     // 0x0139(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCrafterConfig                         CrafterConfig;                                     // 0x0000(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVALUI_Crafter                         CrafterData;                                       // 0x00E0(0x0050)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0130(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2C9D[0x7];                                     // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CrafterContentWidget_GetCrafterData) == 0x000008, "Wrong alignment on VALUI_CrafterContentWidget_GetCrafterData");
-static_assert(sizeof(VALUI_CrafterContentWidget_GetCrafterData) == 0x000140, "Wrong size on VALUI_CrafterContentWidget_GetCrafterData");
+static_assert(sizeof(VALUI_CrafterContentWidget_GetCrafterData) == 0x000138, "Wrong size on VALUI_CrafterContentWidget_GetCrafterData");
 static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterData, CrafterConfig) == 0x000000, "Member 'VALUI_CrafterContentWidget_GetCrafterData::CrafterConfig' has a wrong offset!");
-static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterData, CrafterData) == 0x0000E8, "Member 'VALUI_CrafterContentWidget_GetCrafterData::CrafterData' has a wrong offset!");
-static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterData, ReturnValue) == 0x000138, "Member 'VALUI_CrafterContentWidget_GetCrafterData::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterData, CrafterData) == 0x0000E0, "Member 'VALUI_CrafterContentWidget_GetCrafterData::CrafterData' has a wrong offset!");
+static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterData, ReturnValue) == 0x000130, "Member 'VALUI_CrafterContentWidget_GetCrafterData::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CrafterContentWidget.GetCrafterRowName
-// 0x00F0 (0x00F0 - 0x0000)
+// 0x00E8 (0x00E8 - 0x0000)
 struct VALUI_CrafterContentWidget_GetCrafterRowName final 
 {
 public:
-	struct FCrafterConfig                         CrafterConfig;                                     // 0x0000(0x00E8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FCrafterConfig                         CrafterConfig;                                     // 0x0000(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x00E0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_CrafterContentWidget_GetCrafterRowName) == 0x000008, "Wrong alignment on VALUI_CrafterContentWidget_GetCrafterRowName");
-static_assert(sizeof(VALUI_CrafterContentWidget_GetCrafterRowName) == 0x0000F0, "Wrong size on VALUI_CrafterContentWidget_GetCrafterRowName");
+static_assert(sizeof(VALUI_CrafterContentWidget_GetCrafterRowName) == 0x0000E8, "Wrong size on VALUI_CrafterContentWidget_GetCrafterRowName");
 static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterRowName, CrafterConfig) == 0x000000, "Member 'VALUI_CrafterContentWidget_GetCrafterRowName::CrafterConfig' has a wrong offset!");
-static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterRowName, ReturnValue) == 0x0000E8, "Member 'VALUI_CrafterContentWidget_GetCrafterRowName::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_CrafterContentWidget_GetCrafterRowName, ReturnValue) == 0x0000E0, "Member 'VALUI_CrafterContentWidget_GetCrafterRowName::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_CrafterStationsViewWidget.DisplayCrafterStations
-// 0x02F8 (0x02F8 - 0x0000)
+// 0x02B0 (0x02B0 - 0x0000)
 struct VALUI_CrafterStationsViewWidget_DisplayCrafterStations final 
 {
 public:
-	struct FRecipeNeeds                           RecipeNeeds;                                       // 0x0000(0x02F8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FRecipeNeeds                           RecipeNeeds;                                       // 0x0000(0x02B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_CrafterStationsViewWidget_DisplayCrafterStations) == 0x000008, "Wrong alignment on VALUI_CrafterStationsViewWidget_DisplayCrafterStations");
-static_assert(sizeof(VALUI_CrafterStationsViewWidget_DisplayCrafterStations) == 0x0002F8, "Wrong size on VALUI_CrafterStationsViewWidget_DisplayCrafterStations");
+static_assert(sizeof(VALUI_CrafterStationsViewWidget_DisplayCrafterStations) == 0x0002B0, "Wrong size on VALUI_CrafterStationsViewWidget_DisplayCrafterStations");
 static_assert(offsetof(VALUI_CrafterStationsViewWidget_DisplayCrafterStations, RecipeNeeds) == 0x000000, "Member 'VALUI_CrafterStationsViewWidget_DisplayCrafterStations::RecipeNeeds' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_DepthSortedHorizontalBox.SetForemostWidgetIndex
@@ -2033,14 +2106,14 @@ static_assert(sizeof(VALUI_DepthSortedHorizontalBox_SetForemostWidgetIndex) == 0
 static_assert(offsetof(VALUI_DepthSortedHorizontalBox_SetForemostWidgetIndex, Param_Index) == 0x000000, "Member 'VALUI_DepthSortedHorizontalBox_SetForemostWidgetIndex::Param_Index' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_DragDropOperation.DragStarted
-// 0x0098 (0x0098 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct VALUI_DragDropOperation_DragStarted final 
 {
 public:
-	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0098)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          PointerEvent;                                      // 0x0000(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_DragDropOperation_DragStarted) == 0x000008, "Wrong alignment on VALUI_DragDropOperation_DragStarted");
-static_assert(sizeof(VALUI_DragDropOperation_DragStarted) == 0x000098, "Wrong size on VALUI_DragDropOperation_DragStarted");
+static_assert(sizeof(VALUI_DragDropOperation_DragStarted) == 0x000078, "Wrong size on VALUI_DragDropOperation_DragStarted");
 static_assert(offsetof(VALUI_DragDropOperation_DragStarted, PointerEvent) == 0x000000, "Member 'VALUI_DragDropOperation_DragStarted::PointerEvent' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_EditableRichTextStyle.ApplyToTextBlock
@@ -2182,13 +2255,24 @@ public:
 	class UWidget*                                InstigatingWidget;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_ErrorDisplayPayload             ErrorDisplayPayload;                               // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3518[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CA5[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay) == 0x000008, "Wrong alignment on VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay");
 static_assert(sizeof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay) == 0x000028, "Wrong size on VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay");
 static_assert(offsetof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay, InstigatingWidget) == 0x000000, "Member 'VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay::InstigatingWidget' has a wrong offset!");
 static_assert(offsetof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay, ErrorDisplayPayload) == 0x000008, "Member 'VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay::ErrorDisplayPayload' has a wrong offset!");
 static_assert(offsetof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay, ReturnValue) == 0x000020, "Member 'VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay::ReturnValue' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_TextBlockStyle.ApplyToTextBlock
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_TextBlockStyle_ApplyToTextBlock final 
+{
+public:
+	class UTextBlock*                             TextWidget;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_TextBlockStyle_ApplyToTextBlock) == 0x000008, "Wrong alignment on VALUI_TextBlockStyle_ApplyToTextBlock");
+static_assert(sizeof(VALUI_TextBlockStyle_ApplyToTextBlock) == 0x000008, "Wrong size on VALUI_TextBlockStyle_ApplyToTextBlock");
+static_assert(offsetof(VALUI_TextBlockStyle_ApplyToTextBlock, TextWidget) == 0x000000, "Member 'VALUI_TextBlockStyle_ApplyToTextBlock::TextWidget' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ExpandableAreaStyle.Apply
 // 0x0008 (0x0008 - 0x0000)
@@ -2200,6 +2284,99 @@ public:
 static_assert(alignof(VALUI_ExpandableAreaStyle_Apply) == 0x000008, "Wrong alignment on VALUI_ExpandableAreaStyle_Apply");
 static_assert(sizeof(VALUI_ExpandableAreaStyle_Apply) == 0x000008, "Wrong size on VALUI_ExpandableAreaStyle_Apply");
 static_assert(offsetof(VALUI_ExpandableAreaStyle_Apply, ExpandableArea) == 0x000000, "Member 'VALUI_ExpandableAreaStyle_Apply::ExpandableArea' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ExpandableArea_Styled.SetExpandableAreaStyle
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_ExpandableArea_Styled_SetExpandableAreaStyle final 
+{
+public:
+	class UVALUI_ExpandableAreaStyle*             NewStyle;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle) == 0x000008, "Wrong alignment on VALUI_ExpandableArea_Styled_SetExpandableAreaStyle");
+static_assert(sizeof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle) == 0x000008, "Wrong size on VALUI_ExpandableArea_Styled_SetExpandableAreaStyle");
+static_assert(offsetof(VALUI_ExpandableArea_Styled_SetExpandableAreaStyle, NewStyle) == 0x000000, "Member 'VALUI_ExpandableArea_Styled_SetExpandableAreaStyle::NewStyle' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_Slider_Styled.SetSliderStyle
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_Slider_Styled_SetSliderStyle final 
+{
+public:
+	class UVALUI_SliderStyle*                     NewStyle;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_Slider_Styled_SetSliderStyle) == 0x000008, "Wrong alignment on VALUI_Slider_Styled_SetSliderStyle");
+static_assert(sizeof(VALUI_Slider_Styled_SetSliderStyle) == 0x000008, "Wrong size on VALUI_Slider_Styled_SetSliderStyle");
+static_assert(offsetof(VALUI_Slider_Styled_SetSliderStyle, NewStyle) == 0x000000, "Member 'VALUI_Slider_Styled_SetSliderStyle::NewStyle' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_ExtensionPointContainerBase.AddExtensibleWidget
+// 0x0028 (0x0028 - 0x0000)
+struct VALUI_ExtensionPointContainerBase_AddExtensibleWidget final 
+{
+public:
+	TSoftClassPtr<class UClass>                   WidgetReference;                                   // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget) == 0x000008, "Wrong alignment on VALUI_ExtensionPointContainerBase_AddExtensibleWidget");
+static_assert(sizeof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget) == 0x000028, "Wrong size on VALUI_ExtensionPointContainerBase_AddExtensibleWidget");
+static_assert(offsetof(VALUI_ExtensionPointContainerBase_AddExtensibleWidget, WidgetReference) == 0x000000, "Member 'VALUI_ExtensionPointContainerBase_AddExtensibleWidget::WidgetReference' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.AddPopupToQueue
+// 0x0028 (0x0028 - 0x0000)
+struct VALUI_GameInteractPopupSubsystem_AddPopupToQueue final 
+{
+public:
+	TSoftObjectPtr<class UGameplayInteractivePopupDataAsset> GpPopupAsset;                                      // 0x0000(0x0028)(ConstParm, Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue) == 0x000008, "Wrong alignment on VALUI_GameInteractPopupSubsystem_AddPopupToQueue");
+static_assert(sizeof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue) == 0x000028, "Wrong size on VALUI_GameInteractPopupSubsystem_AddPopupToQueue");
+static_assert(offsetof(VALUI_GameInteractPopupSubsystem_AddPopupToQueue, GpPopupAsset) == 0x000000, "Member 'VALUI_GameInteractPopupSubsystem_AddPopupToQueue::GpPopupAsset' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_GameInteractPopupSubsystem.OnHandlePopupClosed
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed final 
+{
+public:
+	class UGameplayInteractivePopupDataAsset*     GpPopupAsset;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed) == 0x000008, "Wrong alignment on VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed");
+static_assert(sizeof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed) == 0x000008, "Wrong size on VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed");
+static_assert(offsetof(VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed, GpPopupAsset) == 0x000000, "Member 'VALUI_GameInteractPopupSubsystem_OnHandlePopupClosed::GpPopupAsset' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_GpInteractivePopupBase.SetInteractivePopupDataAsset
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset final 
+{
+public:
+	class UGameplayInteractivePopupDataAsset*     InteractivePopupAsset;                             // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset) == 0x000008, "Wrong alignment on VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset");
+static_assert(sizeof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset) == 0x000008, "Wrong size on VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset");
+static_assert(offsetof(VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset, InteractivePopupAsset) == 0x000000, "Member 'VALUI_GpInteractivePopupBase_SetInteractivePopupDataAsset::InteractivePopupAsset' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_StartTimer
+// 0x0008 (0x0008 - 0x0000)
+struct VALUI_HotPotTurnTimer_BP_StartTimer final 
+{
+public:
+	float                                         SecondsLeft;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EHotPotTurnState                              TurnState;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CAC[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000004, "Wrong alignment on VALUI_HotPotTurnTimer_BP_StartTimer");
+static_assert(sizeof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000008, "Wrong size on VALUI_HotPotTurnTimer_BP_StartTimer");
+static_assert(offsetof(VALUI_HotPotTurnTimer_BP_StartTimer, SecondsLeft) == 0x000000, "Member 'VALUI_HotPotTurnTimer_BP_StartTimer::SecondsLeft' has a wrong offset!");
+static_assert(offsetof(VALUI_HotPotTurnTimer_BP_StartTimer, TurnState) == 0x000004, "Member 'VALUI_HotPotTurnTimer_BP_StartTimer::TurnState' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_HotPotTurnTimer.BP_UpdatePlayerID
+// 0x0020 (0x0020 - 0x0000)
+struct VALUI_HotPotTurnTimer_BP_UpdatePlayerID final 
+{
+public:
+	struct FGuid                                  PlayerId;                                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGuid                                  CharacterId;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID) == 0x000004, "Wrong alignment on VALUI_HotPotTurnTimer_BP_UpdatePlayerID");
+static_assert(sizeof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID) == 0x000020, "Wrong size on VALUI_HotPotTurnTimer_BP_UpdatePlayerID");
+static_assert(offsetof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID, PlayerId) == 0x000000, "Member 'VALUI_HotPotTurnTimer_BP_UpdatePlayerID::PlayerId' has a wrong offset!");
+static_assert(offsetof(VALUI_HotPotTurnTimer_BP_UpdatePlayerID, CharacterId) == 0x000010, "Member 'VALUI_HotPotTurnTimer_BP_UpdatePlayerID::CharacterId' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ImageStyle.Apply
 // 0x0008 (0x0008 - 0x0000)
@@ -2242,7 +2419,7 @@ public:
 	class FString                                 UserNameInput;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FText>                           OutErrors;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_351C[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CAF[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_InputValidationFunctionLibrary_ValidateUserName) == 0x000008, "Wrong alignment on VALUI_InputValidationFunctionLibrary_ValidateUserName");
 static_assert(sizeof(VALUI_InputValidationFunctionLibrary_ValidateUserName) == 0x000028, "Wrong size on VALUI_InputValidationFunctionLibrary_ValidateUserName");
@@ -2251,25 +2428,25 @@ static_assert(offsetof(VALUI_InputValidationFunctionLibrary_ValidateUserName, Ou
 static_assert(offsetof(VALUI_InputValidationFunctionLibrary_ValidateUserName, ReturnValue) == 0x000020, "Member 'VALUI_InputValidationFunctionLibrary_ValidateUserName::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotificationInterface.AppendAdditionalData
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData final 
 {
 public:
-	struct FValeriaItem                           Item;                                              // 0x0000(0x0068)(Parm, NativeAccessSpecifierPublic)
+	struct FValeriaItem                           Item;                                              // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData) == 0x000008, "Wrong alignment on VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData");
-static_assert(sizeof(VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData) == 0x000068, "Wrong size on VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData");
+static_assert(sizeof(VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData) == 0x000060, "Wrong size on VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData");
 static_assert(offsetof(VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData, Item) == 0x000000, "Member 'VALUI_ItemAcquisitionNotificationInterface_AppendAdditionalData::Item' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotificationInterface.SetInitialData
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct VALUI_ItemAcquisitionNotificationInterface_SetInitialData final 
 {
 public:
-	struct FValeriaItem                           Item;                                              // 0x0000(0x0068)(Parm, NativeAccessSpecifierPublic)
+	struct FValeriaItem                           Item;                                              // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ItemAcquisitionNotificationInterface_SetInitialData) == 0x000008, "Wrong alignment on VALUI_ItemAcquisitionNotificationInterface_SetInitialData");
-static_assert(sizeof(VALUI_ItemAcquisitionNotificationInterface_SetInitialData) == 0x000068, "Wrong size on VALUI_ItemAcquisitionNotificationInterface_SetInitialData");
+static_assert(sizeof(VALUI_ItemAcquisitionNotificationInterface_SetInitialData) == 0x000060, "Wrong size on VALUI_ItemAcquisitionNotificationInterface_SetInitialData");
 static_assert(offsetof(VALUI_ItemAcquisitionNotificationInterface_SetInitialData, Item) == 0x000000, "Member 'VALUI_ItemAcquisitionNotificationInterface_SetInitialData::Item' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotificationInterface.CanAppendAdditionalData
@@ -2284,14 +2461,14 @@ static_assert(sizeof(VALUI_ItemAcquisitionNotificationInterface_CanAppendAdditio
 static_assert(offsetof(VALUI_ItemAcquisitionNotificationInterface_CanAppendAdditionalData, ReturnValue) == 0x000000, "Member 'VALUI_ItemAcquisitionNotificationInterface_CanAppendAdditionalData::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotifier.HandleItemAcquired
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct VALUI_ItemAcquisitionNotifier_HandleItemAcquired final 
 {
 public:
-	struct FValeriaItem                           Item;                                              // 0x0000(0x0068)(Parm, NativeAccessSpecifierPublic)
+	struct FValeriaItem                           Item;                                              // 0x0000(0x0060)(Parm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ItemAcquisitionNotifier_HandleItemAcquired) == 0x000008, "Wrong alignment on VALUI_ItemAcquisitionNotifier_HandleItemAcquired");
-static_assert(sizeof(VALUI_ItemAcquisitionNotifier_HandleItemAcquired) == 0x000068, "Wrong size on VALUI_ItemAcquisitionNotifier_HandleItemAcquired");
+static_assert(sizeof(VALUI_ItemAcquisitionNotifier_HandleItemAcquired) == 0x000060, "Wrong size on VALUI_ItemAcquisitionNotifier_HandleItemAcquired");
 static_assert(offsetof(VALUI_ItemAcquisitionNotifier_HandleItemAcquired, Item) == 0x000000, "Member 'VALUI_ItemAcquisitionNotifier_HandleItemAcquired::Item' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotifier.HandleNotificationDismissed
@@ -2323,140 +2500,30 @@ static_assert(offsetof(VALUI_ItemAcquisitionNotifier_OnCreateItemAcquisitionNoti
 static_assert(offsetof(VALUI_ItemAcquisitionNotifier_OnCreateItemAcquisitionNotification__DelegateSignature, ReturnValue) == 0x000008, "Member 'VALUI_ItemAcquisitionNotifier_OnCreateItemAcquisitionNotification__DelegateSignature::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemAcquisitionNotifier.Setup
-// 0x0040 (0x0040 - 0x0000)
+// 0x0038 (0x0038 - 0x0000)
 struct VALUI_ItemAcquisitionNotifier_Setup final 
 {
 public:
 	class UInventoryComponent*                    SourceInventoryComponent;                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UVALUI_NotificationQueue*               TargetNotificationQueue;                           // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftClassPtr<class UClass>                   InWidgetClass;                                     // 0x0010(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftClassPtr<class UClass>                   InWidgetClass;                                     // 0x0010(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ItemAcquisitionNotifier_Setup) == 0x000008, "Wrong alignment on VALUI_ItemAcquisitionNotifier_Setup");
-static_assert(sizeof(VALUI_ItemAcquisitionNotifier_Setup) == 0x000040, "Wrong size on VALUI_ItemAcquisitionNotifier_Setup");
+static_assert(sizeof(VALUI_ItemAcquisitionNotifier_Setup) == 0x000038, "Wrong size on VALUI_ItemAcquisitionNotifier_Setup");
 static_assert(offsetof(VALUI_ItemAcquisitionNotifier_Setup, SourceInventoryComponent) == 0x000000, "Member 'VALUI_ItemAcquisitionNotifier_Setup::SourceInventoryComponent' has a wrong offset!");
 static_assert(offsetof(VALUI_ItemAcquisitionNotifier_Setup, TargetNotificationQueue) == 0x000008, "Member 'VALUI_ItemAcquisitionNotifier_Setup::TargetNotificationQueue' has a wrong offset!");
 static_assert(offsetof(VALUI_ItemAcquisitionNotifier_Setup, InWidgetClass) == 0x000010, "Member 'VALUI_ItemAcquisitionNotifier_Setup::InWidgetClass' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_ItemDragDrop.GetItem
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct VALUI_ItemDragDrop_GetItem final 
 {
 public:
-	struct FValeriaItem                           ReturnValue;                                       // 0x0000(0x0068)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FValeriaItem                           ReturnValue;                                       // 0x0000(0x0060)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ItemDragDrop_GetItem) == 0x000008, "Wrong alignment on VALUI_ItemDragDrop_GetItem");
-static_assert(sizeof(VALUI_ItemDragDrop_GetItem) == 0x000068, "Wrong size on VALUI_ItemDragDrop_GetItem");
+static_assert(sizeof(VALUI_ItemDragDrop_GetItem) == 0x000060, "Wrong size on VALUI_ItemDragDrop_GetItem");
 static_assert(offsetof(VALUI_ItemDragDrop_GetItem, ReturnValue) == 0x000000, "Member 'VALUI_ItemDragDrop_GetItem::ReturnValue' has a wrong offset!");
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemsChanged__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature final 
-{
-public:
-	TArray<class UObject*>                        AddedItems;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        RemovedItems;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature");
-static_assert(sizeof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature) == 0x000020, "Wrong size on VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature");
-static_assert(offsetof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature, AddedItems) == 0x000000, "Member 'VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature::AddedItems' has a wrong offset!");
-static_assert(offsetof(VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature, RemovedItems) == 0x000010, "Member 'VALUI_ListView_Styled_OnListItemsChanged__DelegateSignature::RemovedItems' has a wrong offset!");
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature
-// 0x0010 (0x0010 - 0x0000)
-struct VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature final 
-{
-public:
-	class UObject*                                Item;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsSelected;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ESelectInfo                                   SelectType;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3527[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
-static_assert(sizeof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000010, "Wrong size on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
-static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, Item) == 0x000000, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::Item' has a wrong offset!");
-static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, bIsSelected) == 0x000008, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::bIsSelected' has a wrong offset!");
-static_assert(offsetof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature, SelectType) == 0x000009, "Member 'VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature::SelectType' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_ListView_Styled.ResetPoolAndSetListItems
-// 0x0010 (0x0010 - 0x0000)
-struct VALUI_ListView_Styled_ResetPoolAndSetListItems final 
-{
-public:
-	TArray<class UObject*>                        InListItems;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_ResetPoolAndSetListItems) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_ResetPoolAndSetListItems");
-static_assert(sizeof(VALUI_ListView_Styled_ResetPoolAndSetListItems) == 0x000010, "Wrong size on VALUI_ListView_Styled_ResetPoolAndSetListItems");
-static_assert(offsetof(VALUI_ListView_Styled_ResetPoolAndSetListItems, InListItems) == 0x000000, "Member 'VALUI_ListView_Styled_ResetPoolAndSetListItems::InListItems' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_ListView_Styled.SetEntryWidgetClass
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_ListView_Styled_SetEntryWidgetClass final 
-{
-public:
-	TSubclassOf<class UUserWidget>                NewWidgetClass;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_SetEntryWidgetClass) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_SetEntryWidgetClass");
-static_assert(sizeof(VALUI_ListView_Styled_SetEntryWidgetClass) == 0x000008, "Wrong size on VALUI_ListView_Styled_SetEntryWidgetClass");
-static_assert(offsetof(VALUI_ListView_Styled_SetEntryWidgetClass, NewWidgetClass) == 0x000000, "Member 'VALUI_ListView_Styled_SetEntryWidgetClass::NewWidgetClass' has a wrong offset!");
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature final 
-{
-public:
-	float                                         DesiredOffset;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
-static_assert(sizeof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature) == 0x000004, "Wrong size on VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature");
-static_assert(offsetof(VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature, DesiredOffset) == 0x000000, "Member 'VALUI_ListView_Styled_VALUI_OnListViewUserMouseWheelScrolled__DelegateSignature::DesiredOffset' has a wrong offset!");
-
-// DelegateFunction ValeriaUI.VALUI_ListView_Styled.VALUI_OnListViewUserScrolled__DelegateSignature
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature final 
-{
-public:
-	float                                         ScrollFraction;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature");
-static_assert(sizeof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature) == 0x000004, "Wrong size on VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature");
-static_assert(offsetof(VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature, ScrollFraction) == 0x000000, "Member 'VALUI_ListView_Styled_VALUI_OnListViewUserScrolled__DelegateSignature::ScrollFraction' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_ListView_Styled.GetItemsWithinRange
-// 0x0018 (0x0018 - 0x0000)
-struct VALUI_ListView_Styled_GetItemsWithinRange final 
-{
-public:
-	int32                                         StartingIndex;                                     // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         Range;                                             // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UObject*>                        ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_GetItemsWithinRange) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_GetItemsWithinRange");
-static_assert(sizeof(VALUI_ListView_Styled_GetItemsWithinRange) == 0x000018, "Wrong size on VALUI_ListView_Styled_GetItemsWithinRange");
-static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, StartingIndex) == 0x000000, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::StartingIndex' has a wrong offset!");
-static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, Range) == 0x000004, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::Range' has a wrong offset!");
-static_assert(offsetof(VALUI_ListView_Styled_GetItemsWithinRange, ReturnValue) == 0x000008, "Member 'VALUI_ListView_Styled_GetItemsWithinRange::ReturnValue' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_ListView_Styled.GetScrollbarDistanceFromBottom
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_ListView_Styled_GetScrollbarDistanceFromBottom final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom) == 0x000004, "Wrong alignment on VALUI_ListView_Styled_GetScrollbarDistanceFromBottom");
-static_assert(sizeof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom) == 0x000004, "Wrong size on VALUI_ListView_Styled_GetScrollbarDistanceFromBottom");
-static_assert(offsetof(VALUI_ListView_Styled_GetScrollbarDistanceFromBottom, ReturnValue) == 0x000000, "Member 'VALUI_ListView_Styled_GetScrollbarDistanceFromBottom::ReturnValue' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_ListView_Styled.ShouldScrollBarBeVisible
-// 0x0001 (0x0001 - 0x0000)
-struct VALUI_ListView_Styled_ShouldScrollBarBeVisible final 
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_ListView_Styled_ShouldScrollBarBeVisible) == 0x000001, "Wrong alignment on VALUI_ListView_Styled_ShouldScrollBarBeVisible");
-static_assert(sizeof(VALUI_ListView_Styled_ShouldScrollBarBeVisible) == 0x000001, "Wrong size on VALUI_ListView_Styled_ShouldScrollBarBeVisible");
-static_assert(offsetof(VALUI_ListView_Styled_ShouldScrollBarBeVisible, ReturnValue) == 0x000000, "Member 'VALUI_ListView_Styled_ShouldScrollBarBeVisible::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_LoadingScreenBlackWidget.FadeFromBlackToNone
 // 0x0004 (0x0004 - 0x0000)
@@ -2589,7 +2656,7 @@ struct VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType final
 {
 public:
 	EVAL_NewsInboxMessageType                     EMessageType;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_352C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CBB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_NewsInboxMessageDataAsset*       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType) == 0x000008, "Wrong alignment on VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType");
@@ -2604,7 +2671,7 @@ struct VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Claimed;                                           // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_352D[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CBC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_NewsInboxMessageDataAsset*       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex) == 0x000008, "Wrong alignment on VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex");
@@ -2651,20 +2718,20 @@ static_assert(offsetof(VALUI_NotificationWidgetInterface_HandleNotificationShown
 static_assert(offsetof(VALUI_NotificationWidgetInterface_HandleNotificationShown, NotificationId) == 0x000008, "Member 'VALUI_NotificationWidgetInterface_HandleNotificationShown::NotificationId' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_NotificationWidgetInterface.MatchesNotification
-// 0x0050 (0x0050 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct VALUI_NotificationWidgetInterface_MatchesNotification final 
 {
 public:
 	class FText                                   NotificationText;                                  // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              NotificationIcon;                                  // 0x0018(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_352E[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UTexture2D>              NotificationIcon;                                  // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CBD[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationWidgetInterface_MatchesNotification) == 0x000008, "Wrong alignment on VALUI_NotificationWidgetInterface_MatchesNotification");
-static_assert(sizeof(VALUI_NotificationWidgetInterface_MatchesNotification) == 0x000050, "Wrong size on VALUI_NotificationWidgetInterface_MatchesNotification");
+static_assert(sizeof(VALUI_NotificationWidgetInterface_MatchesNotification) == 0x000048, "Wrong size on VALUI_NotificationWidgetInterface_MatchesNotification");
 static_assert(offsetof(VALUI_NotificationWidgetInterface_MatchesNotification, NotificationText) == 0x000000, "Member 'VALUI_NotificationWidgetInterface_MatchesNotification::NotificationText' has a wrong offset!");
 static_assert(offsetof(VALUI_NotificationWidgetInterface_MatchesNotification, NotificationIcon) == 0x000018, "Member 'VALUI_NotificationWidgetInterface_MatchesNotification::NotificationIcon' has a wrong offset!");
-static_assert(offsetof(VALUI_NotificationWidgetInterface_MatchesNotification, ReturnValue) == 0x000048, "Member 'VALUI_NotificationWidgetInterface_MatchesNotification::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_NotificationWidgetInterface_MatchesNotification, ReturnValue) == 0x000040, "Member 'VALUI_NotificationWidgetInterface_MatchesNotification::ReturnValue' has a wrong offset!");
 
 // DelegateFunction ValeriaUI.VALUI_NotificationQueue.OnNotificationDismissed__DelegateSignature
 // 0x0020 (0x0020 - 0x0000)
@@ -2725,7 +2792,7 @@ struct VALUI_NotificationQueue_TryDismissNotification final
 public:
 	struct FGuid                                  NotificationId;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3530[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CBF[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationQueue_TryDismissNotification) == 0x000004, "Wrong alignment on VALUI_NotificationQueue_TryDismissNotification");
 static_assert(sizeof(VALUI_NotificationQueue_TryDismissNotification) == 0x000014, "Wrong size on VALUI_NotificationQueue_TryDismissNotification");
@@ -2739,7 +2806,7 @@ struct VALUI_NotificationQueue_TryDismissPendingNotification final
 public:
 	struct FGuid                                  NotificationId;                                    // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3531[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC0[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationQueue_TryDismissPendingNotification) == 0x000004, "Wrong alignment on VALUI_NotificationQueue_TryDismissPendingNotification");
 static_assert(sizeof(VALUI_NotificationQueue_TryDismissPendingNotification) == 0x000014, "Wrong size on VALUI_NotificationQueue_TryDismissPendingNotification");
@@ -2840,33 +2907,6 @@ static_assert(sizeof(VALUI_PaliaPassHUDWidget_HandleOnViewModelHUDStateChanged) 
 static_assert(offsetof(VALUI_PaliaPassHUDWidget_HandleOnViewModelHUDStateChanged, Object) == 0x000000, "Member 'VALUI_PaliaPassHUDWidget_HandleOnViewModelHUDStateChanged::Object' has a wrong offset!");
 static_assert(offsetof(VALUI_PaliaPassHUDWidget_HandleOnViewModelHUDStateChanged, Field) == 0x000008, "Member 'VALUI_PaliaPassHUDWidget_HandleOnViewModelHUDStateChanged::Field' has a wrong offset!");
 
-// Function ValeriaUI.VALUI_PhotoCameraScreenBase.AccumulateLookModeInput
-// 0x00E0 (0x00E0 - 0x0000)
-struct VALUI_PhotoCameraScreenBase_AccumulateLookModeInput final 
-{
-public:
-	struct FGeometry                              InGeometry;                                        // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPointerEvent                          InMouseEvent;                                      // 0x0040(0x0098)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bInvertYAxis;                                      // 0x00D8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3534[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput) == 0x000008, "Wrong alignment on VALUI_PhotoCameraScreenBase_AccumulateLookModeInput");
-static_assert(sizeof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput) == 0x0000E0, "Wrong size on VALUI_PhotoCameraScreenBase_AccumulateLookModeInput");
-static_assert(offsetof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput, InGeometry) == 0x000000, "Member 'VALUI_PhotoCameraScreenBase_AccumulateLookModeInput::InGeometry' has a wrong offset!");
-static_assert(offsetof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput, InMouseEvent) == 0x000040, "Member 'VALUI_PhotoCameraScreenBase_AccumulateLookModeInput::InMouseEvent' has a wrong offset!");
-static_assert(offsetof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput, bInvertYAxis) == 0x0000D8, "Member 'VALUI_PhotoCameraScreenBase_AccumulateLookModeInput::bInvertYAxis' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_PhotoCameraScreenBase.SetLookMode
-// 0x0001 (0x0001 - 0x0000)
-struct VALUI_PhotoCameraScreenBase_SetLookMode final 
-{
-public:
-	EVALUI_PhotoCameraScreenLookMode              Value;                                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_PhotoCameraScreenBase_SetLookMode) == 0x000001, "Wrong alignment on VALUI_PhotoCameraScreenBase_SetLookMode");
-static_assert(sizeof(VALUI_PhotoCameraScreenBase_SetLookMode) == 0x000001, "Wrong size on VALUI_PhotoCameraScreenBase_SetLookMode");
-static_assert(offsetof(VALUI_PhotoCameraScreenBase_SetLookMode, Value) == 0x000000, "Member 'VALUI_PhotoCameraScreenBase_SetLookMode::Value' has a wrong offset!");
-
 // Function ValeriaUI.VALUI_PlayerSupport.DrawToCanvas
 // 0x0030 (0x0030 - 0x0000)
 struct VALUI_PlayerSupport_DrawToCanvas final 
@@ -2876,7 +2916,7 @@ public:
 	struct FVector2D                              ImageDimensions;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 QrData;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3535[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC2[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PlayerSupport_DrawToCanvas) == 0x000008, "Wrong alignment on VALUI_PlayerSupport_DrawToCanvas");
 static_assert(sizeof(VALUI_PlayerSupport_DrawToCanvas) == 0x000030, "Wrong size on VALUI_PlayerSupport_DrawToCanvas");
@@ -2915,7 +2955,7 @@ public:
 	class FString                                 Link;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 QrData;                                            // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3536[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC3[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PlayerSupport_OnQrReceived) == 0x000008, "Wrong alignment on VALUI_PlayerSupport_OnQrReceived");
 static_assert(sizeof(VALUI_PlayerSupport_OnQrReceived) == 0x000028, "Wrong size on VALUI_PlayerSupport_OnQrReceived");
@@ -2931,7 +2971,7 @@ public:
 	class FName                                   CrafterName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCrafterUIState                        OutCrafterUIState;                                 // 0x0008(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3539[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC6[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_GetStoredCrafterUIState) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_GetStoredCrafterUIState");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_GetStoredCrafterUIState) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_GetStoredCrafterUIState");
@@ -2946,23 +2986,12 @@ struct VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOption
 public:
 	class AVAL_TeleporterBase*                    Teleporter;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC7[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions) == 0x000008, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions) == 0x000010, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions");
 static_assert(offsetof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions, Teleporter) == 0x000000, "Member 'VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions::Teleporter' has a wrong offset!");
 static_assert(offsetof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions, ReturnValue) == 0x000008, "Member 'VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions::ReturnValue' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_UIManagerWidgetBase.Implementation_NavigateToCharacterCustomization
-// 0x000F (0x000F - 0x0000)
-struct VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization final 
-{
-public:
-	struct FVAL_CharacterCustomizationModeConfig  Config;                                            // 0x0000(0x000F)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization) == 0x000001, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization");
-static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization) == 0x00000F, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization");
-static_assert(offsetof(VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization, Config) == 0x000000, "Member 'VALUI_UIManagerWidgetBase_Implementation_NavigateToCharacterCustomization::Config' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_UIManagerWidgetBase.Implementation_NavigateToOnlinePhotoAlbum
 // 0x0014 (0x0014 - 0x0000)
@@ -2971,7 +3000,7 @@ struct VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353B[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC8[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum");
@@ -2985,7 +3014,7 @@ struct VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353C[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC9[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos");
@@ -3132,7 +3161,7 @@ public:
 	class AActor*                                 RepairStationActor;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowPurchases;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowRepairKitsFromStorage;                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353D[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCA[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation) == 0x000008, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation) == 0x000010, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation");
@@ -3259,7 +3288,7 @@ struct VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353E[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCB[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum");
@@ -3273,7 +3302,7 @@ struct VALUI_UIManagerWidgetBase_NavigateToRecentPhotos final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_353F[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCC[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_NavigateToRecentPhotos) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_NavigateToRecentPhotos");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_NavigateToRecentPhotos) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_NavigateToRecentPhotos");
@@ -3354,13 +3383,24 @@ struct VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3542[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVALDTOS_MetaCharacterFormat           OutCharacter;                                      // 0x0008(0x0778)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked");
 static_assert(sizeof(VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked) == 0x000780, "Wrong size on VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked");
 static_assert(offsetof(VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked, Param_Index) == 0x000000, "Member 'VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked::Param_Index' has a wrong offset!");
 static_assert(offsetof(VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked, OutCharacter) == 0x000008, "Member 'VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked::OutCharacter' has a wrong offset!");
+
+// Function ValeriaUI.VALUI_PregameUIManager.GetServerStatusUrl
+// 0x0010 (0x0010 - 0x0000)
+struct VALUI_PregameUIManager_GetServerStatusUrl final 
+{
+public:
+	class FString                                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VALUI_PregameUIManager_GetServerStatusUrl) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_GetServerStatusUrl");
+static_assert(sizeof(VALUI_PregameUIManager_GetServerStatusUrl) == 0x000010, "Wrong size on VALUI_PregameUIManager_GetServerStatusUrl");
+static_assert(offsetof(VALUI_PregameUIManager_GetServerStatusUrl, ReturnValue) == 0x000000, "Member 'VALUI_PregameUIManager_GetServerStatusUrl::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_PregameUIManager.GoToCharacterCreationState
 // 0x0001 (0x0001 - 0x0000)
@@ -3494,17 +3534,6 @@ static_assert(alignof(VALUI_PregameUIManager_OnPregameStateChange__DelegateSigna
 static_assert(sizeof(VALUI_PregameUIManager_OnPregameStateChange__DelegateSignature) == 0x000001, "Wrong size on VALUI_PregameUIManager_OnPregameStateChange__DelegateSignature");
 static_assert(offsetof(VALUI_PregameUIManager_OnPregameStateChange__DelegateSignature, State) == 0x000000, "Member 'VALUI_PregameUIManager_OnPregameStateChange__DelegateSignature::State' has a wrong offset!");
 
-// Function ValeriaUI.VALUI_PregameUIManager.SetAnnouncementURL
-// 0x0010 (0x0010 - 0x0000)
-struct VALUI_PregameUIManager_SetAnnouncementURL final 
-{
-public:
-	class FString                                 URL;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_PregameUIManager_SetAnnouncementURL) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_SetAnnouncementURL");
-static_assert(sizeof(VALUI_PregameUIManager_SetAnnouncementURL) == 0x000010, "Wrong size on VALUI_PregameUIManager_SetAnnouncementURL");
-static_assert(offsetof(VALUI_PregameUIManager_SetAnnouncementURL, URL) == 0x000000, "Member 'VALUI_PregameUIManager_SetAnnouncementURL::URL' has a wrong offset!");
-
 // Function ValeriaUI.VALUI_PregameUIManager.StopAutoLogin
 // 0x0001 (0x0001 - 0x0000)
 struct VALUI_PregameUIManager_StopAutoLogin final 
@@ -3523,7 +3552,7 @@ struct VALUI_PregameUIManager_TryGetCachedCharacters final
 public:
 	TArray<struct FVALDTOS_MetaCharacterFormat>   OutOurCharacters;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3543[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD0[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PregameUIManager_TryGetCachedCharacters) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_TryGetCachedCharacters");
 static_assert(sizeof(VALUI_PregameUIManager_TryGetCachedCharacters) == 0x000018, "Wrong size on VALUI_PregameUIManager_TryGetCachedCharacters");
@@ -3605,15 +3634,15 @@ static_assert(offsetof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleCheckoutSes
 struct VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted final 
 {
 public:
-	uint32                                        AppId;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3546[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        AppID;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CD3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	uint64                                        OrderId;                                           // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAuthorized;                                       // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3547[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted) == 0x000008, "Wrong alignment on VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted");
 static_assert(sizeof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted) == 0x000018, "Wrong size on VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted");
-static_assert(offsetof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted, AppId) == 0x000000, "Member 'VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted::AppId' has a wrong offset!");
+static_assert(offsetof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted, AppID) == 0x000000, "Member 'VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted::AppID' has a wrong offset!");
 static_assert(offsetof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted, OrderId) == 0x000008, "Member 'VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted::OrderId' has a wrong offset!");
 static_assert(offsetof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted, bAuthorized) == 0x000010, "Member 'VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted::bAuthorized' has a wrong offset!");
 
@@ -3737,7 +3766,7 @@ struct VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid final
 {
 public:
 	int32                                         WidgetsPerRow;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3549[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVALUI_PremiumStorefrontWidgetModel> Models;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid) == 0x000008, "Wrong alignment on VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid");
@@ -3844,7 +3873,7 @@ struct VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature fina
 public:
 	class UVALUI_PremiumStoreScreenWidgetBase*    StoreWidget;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVALUI_PremiumStoreState                      State;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_354B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD8[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature");
 static_assert(sizeof(VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature) == 0x000010, "Wrong size on VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature");
@@ -3912,7 +3941,7 @@ struct VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile final
 public:
 	struct FVALUI_PremiumStorefrontVariant        Variant;                                           // 0x0000(0x00D8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_354D[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDA[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile) == 0x000008, "Wrong alignment on VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile");
 static_assert(sizeof(VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile) == 0x0000E0, "Wrong size on VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile");
@@ -3970,7 +3999,7 @@ struct VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature final
 public:
 	class UUserWidget*                            ElementWidget;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ElementIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3551[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDE[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature");
 static_assert(sizeof(VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature) == 0x000010, "Wrong size on VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature");
@@ -3997,10 +4026,10 @@ struct VALUI_RadioSlider_OnSliderChanged__DelegateSignature final
 public:
 	class UUserWidget*                            PreviousElementWidget;                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PreviousElementIndex;                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3552[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            NewElementWidget;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewElementIndex;                                   // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3553[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE0[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_OnSliderChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_RadioSlider_OnSliderChanged__DelegateSignature");
 static_assert(sizeof(VALUI_RadioSlider_OnSliderChanged__DelegateSignature) == 0x000020, "Wrong size on VALUI_RadioSlider_OnSliderChanged__DelegateSignature");
@@ -4027,7 +4056,7 @@ struct VALUI_RadioSlider_SetIndex final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSkipSliderAnimation;                              // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3554[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE1[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_SetIndex) == 0x000004, "Wrong alignment on VALUI_RadioSlider_SetIndex");
 static_assert(sizeof(VALUI_RadioSlider_SetIndex) == 0x000008, "Wrong size on VALUI_RadioSlider_SetIndex");
@@ -4086,7 +4115,7 @@ public:
 	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3555[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE2[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_GetIndexFromWidget) == 0x000008, "Wrong alignment on VALUI_RadioSlider_GetIndexFromWidget");
 static_assert(sizeof(VALUI_RadioSlider_GetIndexFromWidget) == 0x000010, "Wrong size on VALUI_RadioSlider_GetIndexFromWidget");
@@ -4111,7 +4140,7 @@ struct VALUI_RadioSlider_GetWidgetAtIndex final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3556[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_RadioSlider_GetWidgetAtIndex) == 0x000008, "Wrong alignment on VALUI_RadioSlider_GetWidgetAtIndex");
@@ -4173,17 +4202,6 @@ public:
 static_assert(alignof(VALUI_SliderStyle_Apply) == 0x000008, "Wrong alignment on VALUI_SliderStyle_Apply");
 static_assert(sizeof(VALUI_SliderStyle_Apply) == 0x000008, "Wrong size on VALUI_SliderStyle_Apply");
 static_assert(offsetof(VALUI_SliderStyle_Apply, Slider) == 0x000000, "Member 'VALUI_SliderStyle_Apply::Slider' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_Slider_Styled.SetSliderStyle
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_Slider_Styled_SetSliderStyle final 
-{
-public:
-	class UVALUI_SliderStyle*                     NewStyle;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_Slider_Styled_SetSliderStyle) == 0x000008, "Wrong alignment on VALUI_Slider_Styled_SetSliderStyle");
-static_assert(sizeof(VALUI_Slider_Styled_SetSliderStyle) == 0x000008, "Wrong size on VALUI_Slider_Styled_SetSliderStyle");
-static_assert(offsetof(VALUI_Slider_Styled_SetSliderStyle, NewStyle) == 0x000000, "Member 'VALUI_Slider_Styled_SetSliderStyle::NewStyle' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_SocialPanelBase.GetDebugSimulationFlag
 // 0x0010 (0x0010 - 0x0000)
@@ -4296,15 +4314,15 @@ static_assert(sizeof(VALUI_StateUserWidget_PregameHUD_SetOwner) == 0x000008, "Wr
 static_assert(offsetof(VALUI_StateUserWidget_PregameHUD_SetOwner, Owner) == 0x000000, "Member 'VALUI_StateUserWidget_PregameHUD_SetOwner::Owner' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.AddTabButton
-// 0x0078 (0x0078 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct VALUI_TabButtonHostBase_AddTabButton final 
 {
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_TabButtonHostBase_AddTabButton) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_AddTabButton");
-static_assert(sizeof(VALUI_TabButtonHostBase_AddTabButton) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_AddTabButton");
+static_assert(sizeof(VALUI_TabButtonHostBase_AddTabButton) == 0x000070, "Wrong size on VALUI_TabButtonHostBase_AddTabButton");
 static_assert(offsetof(VALUI_TabButtonHostBase_AddTabButton, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_AddTabButton::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_AddTabButton, Info) == 0x000008, "Member 'VALUI_TabButtonHostBase_AddTabButton::Info' has a wrong offset!");
 
@@ -4320,15 +4338,15 @@ static_assert(sizeof(VALUI_TabButtonHostBase_HandleDifferentActiveTabSet) == 0x0
 static_assert(offsetof(VALUI_TabButtonHostBase_HandleDifferentActiveTabSet, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_HandleDifferentActiveTabSet::TabName' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.HideTabButton
-// 0x0078 (0x0078 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct VALUI_TabButtonHostBase_HideTabButton final 
 {
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_TabButtonHostBase_HideTabButton) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_HideTabButton");
-static_assert(sizeof(VALUI_TabButtonHostBase_HideTabButton) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_HideTabButton");
+static_assert(sizeof(VALUI_TabButtonHostBase_HideTabButton) == 0x000070, "Wrong size on VALUI_TabButtonHostBase_HideTabButton");
 static_assert(offsetof(VALUI_TabButtonHostBase_HideTabButton, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_HideTabButton::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_HideTabButton, Info) == 0x000008, "Member 'VALUI_TabButtonHostBase_HideTabButton::Info' has a wrong offset!");
 
@@ -4344,7 +4362,7 @@ static_assert(sizeof(VALUI_TabButtonHostBase_OnDifferentActiveTabSet__DelegateSi
 static_assert(offsetof(VALUI_TabButtonHostBase_OnDifferentActiveTabSet__DelegateSignature, TabButtonHost) == 0x000000, "Member 'VALUI_TabButtonHostBase_OnDifferentActiveTabSet__DelegateSignature::TabButtonHost' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.RegisterNewTab
-// 0x0070 (0x0070 - 0x0000)
+// 0x0068 (0x0068 - 0x0000)
 struct VALUI_TabButtonHostBase_RegisterNewTab final 
 {
 public:
@@ -4352,28 +4370,28 @@ public:
 	class FText                                   TabDisplayName;                                    // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class UButton*                                Button;                                            // 0x0020(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidget*                                AssociatedContent;                                 // 0x0028(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0030(0x0030)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              IconSize;                                          // 0x0060(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSoftObjectPtr<class UTexture2D>              IconTexture;                                       // 0x0030(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              IconSize;                                          // 0x0058(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_TabButtonHostBase_RegisterNewTab) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_RegisterNewTab");
-static_assert(sizeof(VALUI_TabButtonHostBase_RegisterNewTab) == 0x000070, "Wrong size on VALUI_TabButtonHostBase_RegisterNewTab");
+static_assert(sizeof(VALUI_TabButtonHostBase_RegisterNewTab) == 0x000068, "Wrong size on VALUI_TabButtonHostBase_RegisterNewTab");
 static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, TabDisplayName) == 0x000008, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::TabDisplayName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, Button) == 0x000020, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::Button' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, AssociatedContent) == 0x000028, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::AssociatedContent' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, IconTexture) == 0x000030, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::IconTexture' has a wrong offset!");
-static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, IconSize) == 0x000060, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::IconSize' has a wrong offset!");
+static_assert(offsetof(VALUI_TabButtonHostBase_RegisterNewTab, IconSize) == 0x000058, "Member 'VALUI_TabButtonHostBase_RegisterNewTab::IconSize' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.RemoveTabButton
-// 0x0078 (0x0078 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct VALUI_TabButtonHostBase_RemoveTabButton final 
 {
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_TabButtonHostBase_RemoveTabButton) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_RemoveTabButton");
-static_assert(sizeof(VALUI_TabButtonHostBase_RemoveTabButton) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_RemoveTabButton");
+static_assert(sizeof(VALUI_TabButtonHostBase_RemoveTabButton) == 0x000070, "Wrong size on VALUI_TabButtonHostBase_RemoveTabButton");
 static_assert(offsetof(VALUI_TabButtonHostBase_RemoveTabButton, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_RemoveTabButton::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_RemoveTabButton, Info) == 0x000008, "Member 'VALUI_TabButtonHostBase_RemoveTabButton::Info' has a wrong offset!");
 
@@ -4384,7 +4402,7 @@ struct VALUI_TabButtonHostBase_SetTabButtonVisibility final
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESlateVisibility                              NewVisibility;                                     // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_355D[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE9[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_SetTabButtonVisibility) == 0x000004, "Wrong alignment on VALUI_TabButtonHostBase_SetTabButtonVisibility");
 static_assert(sizeof(VALUI_TabButtonHostBase_SetTabButtonVisibility) == 0x00000C, "Wrong size on VALUI_TabButtonHostBase_SetTabButtonVisibility");
@@ -4392,15 +4410,15 @@ static_assert(offsetof(VALUI_TabButtonHostBase_SetTabButtonVisibility, TabName) 
 static_assert(offsetof(VALUI_TabButtonHostBase_SetTabButtonVisibility, NewVisibility) == 0x000008, "Member 'VALUI_TabButtonHostBase_SetTabButtonVisibility::NewVisibility' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.ShowTabButton
-// 0x0078 (0x0078 - 0x0000)
+// 0x0070 (0x0070 - 0x0000)
 struct VALUI_TabButtonHostBase_ShowTabButton final 
 {
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	struct FVALUI_InstantiatedTabButtonInfo       Info;                                              // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_TabButtonHostBase_ShowTabButton) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_ShowTabButton");
-static_assert(sizeof(VALUI_TabButtonHostBase_ShowTabButton) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_ShowTabButton");
+static_assert(sizeof(VALUI_TabButtonHostBase_ShowTabButton) == 0x000070, "Wrong size on VALUI_TabButtonHostBase_ShowTabButton");
 static_assert(offsetof(VALUI_TabButtonHostBase_ShowTabButton, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_ShowTabButton::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_ShowTabButton, Info) == 0x000008, "Member 'VALUI_TabButtonHostBase_ShowTabButton::Info' has a wrong offset!");
 
@@ -4412,7 +4430,7 @@ public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceSet;                                         // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_355E[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CEA[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_TrySetActiveTabName) == 0x000004, "Wrong alignment on VALUI_TabButtonHostBase_TrySetActiveTabName");
 static_assert(sizeof(VALUI_TabButtonHostBase_TrySetActiveTabName) == 0x00000C, "Wrong size on VALUI_TabButtonHostBase_TrySetActiveTabName");
@@ -4454,20 +4472,20 @@ static_assert(sizeof(VALUI_TabButtonHostBase_GetTabNames) == 0x000010, "Wrong si
 static_assert(offsetof(VALUI_TabButtonHostBase_GetTabNames, ReturnValue) == 0x000000, "Member 'VALUI_TabButtonHostBase_GetTabNames::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonHostBase.TryGetTabInfo
-// 0x0080 (0x0080 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct VALUI_TabButtonHostBase_TryGetTabInfo final 
 {
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVALUI_InstantiatedTabButtonInfo       OutInfo;                                           // 0x0008(0x0070)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0078(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_355F[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FVALUI_InstantiatedTabButtonInfo       OutInfo;                                           // 0x0008(0x0068)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2CEB[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_TryGetTabInfo) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_TryGetTabInfo");
-static_assert(sizeof(VALUI_TabButtonHostBase_TryGetTabInfo) == 0x000080, "Wrong size on VALUI_TabButtonHostBase_TryGetTabInfo");
+static_assert(sizeof(VALUI_TabButtonHostBase_TryGetTabInfo) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_TryGetTabInfo");
 static_assert(offsetof(VALUI_TabButtonHostBase_TryGetTabInfo, TabName) == 0x000000, "Member 'VALUI_TabButtonHostBase_TryGetTabInfo::TabName' has a wrong offset!");
 static_assert(offsetof(VALUI_TabButtonHostBase_TryGetTabInfo, OutInfo) == 0x000008, "Member 'VALUI_TabButtonHostBase_TryGetTabInfo::OutInfo' has a wrong offset!");
-static_assert(offsetof(VALUI_TabButtonHostBase_TryGetTabInfo, ReturnValue) == 0x000078, "Member 'VALUI_TabButtonHostBase_TryGetTabInfo::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_TabButtonHostBase_TryGetTabInfo, ReturnValue) == 0x000070, "Member 'VALUI_TabButtonHostBase_TryGetTabInfo::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TabButtonInterface.SetIsActiveTabButton
 // 0x0001 (0x0001 - 0x0000)
@@ -4479,17 +4497,6 @@ public:
 static_assert(alignof(VALUI_TabButtonInterface_SetIsActiveTabButton) == 0x000001, "Wrong alignment on VALUI_TabButtonInterface_SetIsActiveTabButton");
 static_assert(sizeof(VALUI_TabButtonInterface_SetIsActiveTabButton) == 0x000001, "Wrong size on VALUI_TabButtonInterface_SetIsActiveTabButton");
 static_assert(offsetof(VALUI_TabButtonInterface_SetIsActiveTabButton, bIsActive) == 0x000000, "Member 'VALUI_TabButtonInterface_SetIsActiveTabButton::bIsActive' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_TextBlockStyle.ApplyToTextBlock
-// 0x0008 (0x0008 - 0x0000)
-struct VALUI_TextBlockStyle_ApplyToTextBlock final 
-{
-public:
-	class UTextBlock*                             TextWidget;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_TextBlockStyle_ApplyToTextBlock) == 0x000008, "Wrong alignment on VALUI_TextBlockStyle_ApplyToTextBlock");
-static_assert(sizeof(VALUI_TextBlockStyle_ApplyToTextBlock) == 0x000008, "Wrong size on VALUI_TextBlockStyle_ApplyToTextBlock");
-static_assert(offsetof(VALUI_TextBlockStyle_ApplyToTextBlock, TextWidget) == 0x000000, "Member 'VALUI_TextBlockStyle_ApplyToTextBlock::TextWidget' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_TextBlock_Styled.SetTextBlockStyle
 // 0x0008 (0x0008 - 0x0000)
@@ -4512,50 +4519,6 @@ public:
 static_assert(alignof(VALUI_TextBlock_Styled_UpdateCrossPlatformStyles) == 0x000008, "Wrong alignment on VALUI_TextBlock_Styled_UpdateCrossPlatformStyles");
 static_assert(sizeof(VALUI_TextBlock_Styled_UpdateCrossPlatformStyles) == 0x000050, "Wrong size on VALUI_TextBlock_Styled_UpdateCrossPlatformStyles");
 static_assert(offsetof(VALUI_TextBlock_Styled_UpdateCrossPlatformStyles, NewCrossPlatformStyles) == 0x000000, "Member 'VALUI_TextBlock_Styled_UpdateCrossPlatformStyles::NewCrossPlatformStyles' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_TileView_Styled.SetEntryHeight
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_TileView_Styled_SetEntryHeight final 
-{
-public:
-	float                                         NewHeight;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_TileView_Styled_SetEntryHeight) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_SetEntryHeight");
-static_assert(sizeof(VALUI_TileView_Styled_SetEntryHeight) == 0x000004, "Wrong size on VALUI_TileView_Styled_SetEntryHeight");
-static_assert(offsetof(VALUI_TileView_Styled_SetEntryHeight, NewHeight) == 0x000000, "Member 'VALUI_TileView_Styled_SetEntryHeight::NewHeight' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_TileView_Styled.SetEntryWidth
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_TileView_Styled_SetEntryWidth final 
-{
-public:
-	float                                         NewWidth;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_TileView_Styled_SetEntryWidth) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_SetEntryWidth");
-static_assert(sizeof(VALUI_TileView_Styled_SetEntryWidth) == 0x000004, "Wrong size on VALUI_TileView_Styled_SetEntryWidth");
-static_assert(offsetof(VALUI_TileView_Styled_SetEntryWidth, NewWidth) == 0x000000, "Member 'VALUI_TileView_Styled_SetEntryWidth::NewWidth' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_TileView_Styled.GetEntryHeight
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_TileView_Styled_GetEntryHeight final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_TileView_Styled_GetEntryHeight) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_GetEntryHeight");
-static_assert(sizeof(VALUI_TileView_Styled_GetEntryHeight) == 0x000004, "Wrong size on VALUI_TileView_Styled_GetEntryHeight");
-static_assert(offsetof(VALUI_TileView_Styled_GetEntryHeight, ReturnValue) == 0x000000, "Member 'VALUI_TileView_Styled_GetEntryHeight::ReturnValue' has a wrong offset!");
-
-// Function ValeriaUI.VALUI_TileView_Styled.GetEntryWidth
-// 0x0004 (0x0004 - 0x0000)
-struct VALUI_TileView_Styled_GetEntryWidth final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(VALUI_TileView_Styled_GetEntryWidth) == 0x000004, "Wrong alignment on VALUI_TileView_Styled_GetEntryWidth");
-static_assert(sizeof(VALUI_TileView_Styled_GetEntryWidth) == 0x000004, "Wrong size on VALUI_TileView_Styled_GetEntryWidth");
-static_assert(offsetof(VALUI_TileView_Styled_GetEntryWidth, ReturnValue) == 0x000000, "Member 'VALUI_TileView_Styled_GetEntryWidth::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_UButtonSlot.SetHorizontalAlignment
 // 0x0001 (0x0001 - 0x0000)
@@ -4591,19 +4554,19 @@ static_assert(sizeof(VALUI_UButtonSlot_SetVerticalAlignment) == 0x000001, "Wrong
 static_assert(offsetof(VALUI_UButtonSlot_SetVerticalAlignment, InVerticalAlignment) == 0x000000, "Member 'VALUI_UButtonSlot_SetVerticalAlignment::InVerticalAlignment' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_UButton_Styled.OnMouseButtonClicked
-// 0x0190 (0x0190 - 0x0000)
+// 0x0168 (0x0168 - 0x0000)
 struct VALUI_UButton_Styled_OnMouseButtonClicked final 
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0040)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FPointerEvent                          InMouseEvent;                                      // 0x0040(0x0098)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FEventReply                            ReturnValue;                                       // 0x00D8(0x00B8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(Parm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FEventReply                            ReturnValue;                                       // 0x00B0(0x00B8)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_UButton_Styled_OnMouseButtonClicked) == 0x000008, "Wrong alignment on VALUI_UButton_Styled_OnMouseButtonClicked");
-static_assert(sizeof(VALUI_UButton_Styled_OnMouseButtonClicked) == 0x000190, "Wrong size on VALUI_UButton_Styled_OnMouseButtonClicked");
+static_assert(sizeof(VALUI_UButton_Styled_OnMouseButtonClicked) == 0x000168, "Wrong size on VALUI_UButton_Styled_OnMouseButtonClicked");
 static_assert(offsetof(VALUI_UButton_Styled_OnMouseButtonClicked, MyGeometry) == 0x000000, "Member 'VALUI_UButton_Styled_OnMouseButtonClicked::MyGeometry' has a wrong offset!");
-static_assert(offsetof(VALUI_UButton_Styled_OnMouseButtonClicked, InMouseEvent) == 0x000040, "Member 'VALUI_UButton_Styled_OnMouseButtonClicked::InMouseEvent' has a wrong offset!");
-static_assert(offsetof(VALUI_UButton_Styled_OnMouseButtonClicked, ReturnValue) == 0x0000D8, "Member 'VALUI_UButton_Styled_OnMouseButtonClicked::ReturnValue' has a wrong offset!");
+static_assert(offsetof(VALUI_UButton_Styled_OnMouseButtonClicked, InMouseEvent) == 0x000038, "Member 'VALUI_UButton_Styled_OnMouseButtonClicked::InMouseEvent' has a wrong offset!");
+static_assert(offsetof(VALUI_UButton_Styled_OnMouseButtonClicked, ReturnValue) == 0x0000B0, "Member 'VALUI_UButton_Styled_OnMouseButtonClicked::ReturnValue' has a wrong offset!");
 
 // Function ValeriaUI.VALUI_UButton_Styled.SetButtonConfig
 // 0x0008 (0x0008 - 0x0000)
@@ -4734,12 +4697,23 @@ struct VAL_PlatformInvitationManager_OnLoginFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3569[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CF3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_PlatformInvitationManager_OnLoginFailure) == 0x000008, "Wrong alignment on VAL_PlatformInvitationManager_OnLoginFailure");
 static_assert(sizeof(VAL_PlatformInvitationManager_OnLoginFailure) == 0x000018, "Wrong size on VAL_PlatformInvitationManager_OnLoginFailure");
 static_assert(offsetof(VAL_PlatformInvitationManager_OnLoginFailure, ErrorMessage) == 0x000000, "Member 'VAL_PlatformInvitationManager_OnLoginFailure::ErrorMessage' has a wrong offset!");
 static_assert(offsetof(VAL_PlatformInvitationManager_OnLoginFailure, ErrorCode) == 0x000010, "Member 'VAL_PlatformInvitationManager_OnLoginFailure::ErrorCode' has a wrong offset!");
+
+// DelegateFunction ValeriaUI.VAL_PlatformInvitationManager.PlatformInvitedFailed_FTUEInProgress__DelegateSignature
+// 0x0018 (0x0018 - 0x0000)
+struct VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature final 
+{
+public:
+	class FText                                   ErrorMessage;                                      // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature) == 0x000008, "Wrong alignment on VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature");
+static_assert(sizeof(VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature) == 0x000018, "Wrong size on VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature");
+static_assert(offsetof(VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature, ErrorMessage) == 0x000000, "Member 'VAL_PlatformInvitationManager_PlatformInvitedFailed_FTUEInProgress__DelegateSignature::ErrorMessage' has a wrong offset!");
 
 }
 

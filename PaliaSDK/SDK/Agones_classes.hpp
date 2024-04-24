@@ -26,10 +26,10 @@ public:
 	bool                                          bDisableAutoConnect;                               // 0x00B4(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableAutoReady;                                 // 0x00B5(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisableAutoHealth;                                // 0x00B6(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DBA[0x1];                                     // 0x00B7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E66[0x1];                                     // 0x00B7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             ConnectedDelegate;                                 // 0x00B8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             ConnectedFailDelegate;                             // 0x00C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DBB[0x48];                                    // 0x00D8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E67[0x48];                                    // 0x00D8(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void Allocate(TDelegate<void(struct FEmptyResponse& Response)> SuccessDelegate, TDelegate<void(struct FAgonesError& Error)> ErrorDelegate);

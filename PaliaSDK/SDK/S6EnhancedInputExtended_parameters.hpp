@@ -18,18 +18,18 @@ namespace SDK::Params
 {
 
 // Function S6EnhancedInputExtended.S6EnhancedInputExtendedSubsystem.AddMappingContextByType
-// 0x0048 (0x0048 - 0x0000)
+// 0x0040 (0x0040 - 0x0000)
 struct S6EnhancedInputExtendedSubsystem_AddMappingContextByType final 
 {
 public:
-	struct FInputMappingPriorityData              InputMappingPriorityData;                          // 0x0000(0x0040)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FModifyContextOptions                  Options;                                           // 0x0040(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17F3[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FInputMappingPriorityData              InputMappingPriorityData;                          // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FModifyContextOptions                  Options;                                           // 0x0038(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1D35[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType) == 0x000008, "Wrong alignment on S6EnhancedInputExtendedSubsystem_AddMappingContextByType");
-static_assert(sizeof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType) == 0x000048, "Wrong size on S6EnhancedInputExtendedSubsystem_AddMappingContextByType");
+static_assert(sizeof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType) == 0x000040, "Wrong size on S6EnhancedInputExtendedSubsystem_AddMappingContextByType");
 static_assert(offsetof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType, InputMappingPriorityData) == 0x000000, "Member 'S6EnhancedInputExtendedSubsystem_AddMappingContextByType::InputMappingPriorityData' has a wrong offset!");
-static_assert(offsetof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType, Options) == 0x000040, "Member 'S6EnhancedInputExtendedSubsystem_AddMappingContextByType::Options' has a wrong offset!");
+static_assert(offsetof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType, Options) == 0x000038, "Member 'S6EnhancedInputExtendedSubsystem_AddMappingContextByType::Options' has a wrong offset!");
 
 // Function S6EnhancedInputExtended.S6EnhancedInputExtendedSubsystem.RemoveMappingContext
 // 0x0010 (0x0010 - 0x0000)
@@ -38,7 +38,7 @@ struct S6EnhancedInputExtendedSubsystem_RemoveMappingContext final
 public:
 	class UInputMappingContext*                   MappingContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_17F4[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D36[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6EnhancedInputExtendedSubsystem_RemoveMappingContext) == 0x000008, "Wrong alignment on S6EnhancedInputExtendedSubsystem_RemoveMappingContext");
 static_assert(sizeof(S6EnhancedInputExtendedSubsystem_RemoveMappingContext) == 0x000010, "Wrong size on S6EnhancedInputExtendedSubsystem_RemoveMappingContext");

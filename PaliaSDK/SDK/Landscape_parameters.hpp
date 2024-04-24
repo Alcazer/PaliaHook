@@ -11,6 +11,7 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Landscape_structs.hpp"
 #include "CoreUObject_structs.hpp"
 
 
@@ -54,7 +55,7 @@ public:
 	int32                                         NumSubdivisions;                                   // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRaiseHeights;                                     // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bLowerHeights;                                     // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3748[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13A9[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class ULandscapeLayerInfoObject*              PaintLayer;                                        // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   EditLayerName;                                     // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -104,7 +105,7 @@ public:
 	bool                                          InExportHeightIntoRGChannel;                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InExportLandscapeProxies;                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3749[0x5];                                     // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13AA[0x5];                                     // 0x000B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget) == 0x000008, "Wrong alignment on LandscapeProxy_LandscapeExportHeightmapToRenderTarget");
 static_assert(sizeof(LandscapeProxy_LandscapeExportHeightmapToRenderTarget) == 0x000010, "Wrong size on LandscapeProxy_LandscapeExportHeightmapToRenderTarget");
@@ -186,7 +187,7 @@ public:
 	struct FVector                                InLocation;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ULandscapeLayerInfoObject*              PaintLayer;                                        // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3750[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13B0[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation) == 0x000008, "Wrong alignment on LandscapeComponent_EditorGetPaintLayerWeightAtLocation");
 static_assert(sizeof(LandscapeComponent_EditorGetPaintLayerWeightAtLocation) == 0x000028, "Wrong size on LandscapeComponent_EditorGetPaintLayerWeightAtLocation");
@@ -202,7 +203,7 @@ public:
 	struct FVector                                InLocation;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   InPaintLayerName;                                  // 0x0018(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3751[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13B1[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation) == 0x000008, "Wrong alignment on LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation");
 static_assert(sizeof(LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation) == 0x000028, "Wrong size on LandscapeComponent_EditorGetPaintLayerWeightByNameAtLocation");
@@ -238,7 +239,7 @@ struct LandscapeComponent_GetMaterialInstanceDynamic final
 {
 public:
 	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3752[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13B2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(LandscapeComponent_GetMaterialInstanceDynamic) == 0x000008, "Wrong alignment on LandscapeComponent_GetMaterialInstanceDynamic");
@@ -300,7 +301,7 @@ struct LandscapeBlueprintBrushBase_Render final
 {
 public:
 	bool                                          InIsHeightmap;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3762[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_13C1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTextureRenderTarget2D*                 InCombinedResult;                                  // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   InWeightmapLayerName;                              // 0x0010(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -311,6 +312,30 @@ static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InIsHeightmap) == 0x0
 static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InCombinedResult) == 0x000008, "Member 'LandscapeBlueprintBrushBase_Render::InCombinedResult' has a wrong offset!");
 static_assert(offsetof(LandscapeBlueprintBrushBase_Render, InWeightmapLayerName) == 0x000010, "Member 'LandscapeBlueprintBrushBase_Render::InWeightmapLayerName' has a wrong offset!");
 static_assert(offsetof(LandscapeBlueprintBrushBase_Render, ReturnValue) == 0x000018, "Member 'LandscapeBlueprintBrushBase_Render::ReturnValue' has a wrong offset!");
+
+// Function Landscape.LandscapeBlueprintBrushBase.RenderLayer
+// 0x0020 (0x0020 - 0x0000)
+struct LandscapeBlueprintBrushBase_RenderLayer final 
+{
+public:
+	struct FLandscapeBrushParameters              InParameters;                                      // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LandscapeBlueprintBrushBase_RenderLayer) == 0x000008, "Wrong alignment on LandscapeBlueprintBrushBase_RenderLayer");
+static_assert(sizeof(LandscapeBlueprintBrushBase_RenderLayer) == 0x000020, "Wrong size on LandscapeBlueprintBrushBase_RenderLayer");
+static_assert(offsetof(LandscapeBlueprintBrushBase_RenderLayer, InParameters) == 0x000000, "Member 'LandscapeBlueprintBrushBase_RenderLayer::InParameters' has a wrong offset!");
+static_assert(offsetof(LandscapeBlueprintBrushBase_RenderLayer, ReturnValue) == 0x000018, "Member 'LandscapeBlueprintBrushBase_RenderLayer::ReturnValue' has a wrong offset!");
+
+// Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
+// 0x0001 (0x0001 - 0x0000)
+struct LandscapeBlueprintBrushBase_RequestLandscapeUpdate final 
+{
+public:
+	bool                                          bInUserTriggered;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(LandscapeBlueprintBrushBase_RequestLandscapeUpdate) == 0x000001, "Wrong alignment on LandscapeBlueprintBrushBase_RequestLandscapeUpdate");
+static_assert(sizeof(LandscapeBlueprintBrushBase_RequestLandscapeUpdate) == 0x000001, "Wrong size on LandscapeBlueprintBrushBase_RequestLandscapeUpdate");
+static_assert(offsetof(LandscapeBlueprintBrushBase_RequestLandscapeUpdate, bInUserTriggered) == 0x000000, "Member 'LandscapeBlueprintBrushBase_RequestLandscapeUpdate::bInUserTriggered' has a wrong offset!");
 
 }
 

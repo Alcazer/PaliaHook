@@ -12,10 +12,127 @@
 
 #include "UMG_structs.hpp"
 #include "ModelViewViewModel_structs.hpp"
+#include "FieldNotification_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function ModelViewViewModel.MVVMConversionLibrary.Conv_BoolToSlateVisibility
+// 0x0004 (0x0004 - 0x0000)
+struct MVVMConversionLibrary_Conv_BoolToSlateVisibility final 
+{
+public:
+	bool                                          bIsVisible;                                        // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlateVisibility                              TrueVisibility;                                    // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlateVisibility                              FalseVisibility;                                   // 0x0002(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ESlateVisibility                              ReturnValue;                                       // 0x0003(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMConversionLibrary_Conv_BoolToSlateVisibility) == 0x000001, "Wrong alignment on MVVMConversionLibrary_Conv_BoolToSlateVisibility");
+static_assert(sizeof(MVVMConversionLibrary_Conv_BoolToSlateVisibility) == 0x000004, "Wrong size on MVVMConversionLibrary_Conv_BoolToSlateVisibility");
+static_assert(offsetof(MVVMConversionLibrary_Conv_BoolToSlateVisibility, bIsVisible) == 0x000000, "Member 'MVVMConversionLibrary_Conv_BoolToSlateVisibility::bIsVisible' has a wrong offset!");
+static_assert(offsetof(MVVMConversionLibrary_Conv_BoolToSlateVisibility, TrueVisibility) == 0x000001, "Member 'MVVMConversionLibrary_Conv_BoolToSlateVisibility::TrueVisibility' has a wrong offset!");
+static_assert(offsetof(MVVMConversionLibrary_Conv_BoolToSlateVisibility, FalseVisibility) == 0x000002, "Member 'MVVMConversionLibrary_Conv_BoolToSlateVisibility::FalseVisibility' has a wrong offset!");
+static_assert(offsetof(MVVMConversionLibrary_Conv_BoolToSlateVisibility, ReturnValue) == 0x000003, "Member 'MVVMConversionLibrary_Conv_BoolToSlateVisibility::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMViewModelContextResolver.K2_CreateInstance
+// 0x0020 (0x0020 - 0x0000)
+struct MVVMViewModelContextResolver_K2_CreateInstance final 
+{
+public:
+	class UClass*                                 ExpectedType;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UUserWidget*                            UserWidget;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class INotifyFieldValueChanged> ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMViewModelContextResolver_K2_CreateInstance) == 0x000008, "Wrong alignment on MVVMViewModelContextResolver_K2_CreateInstance");
+static_assert(sizeof(MVVMViewModelContextResolver_K2_CreateInstance) == 0x000020, "Wrong size on MVVMViewModelContextResolver_K2_CreateInstance");
+static_assert(offsetof(MVVMViewModelContextResolver_K2_CreateInstance, ExpectedType) == 0x000000, "Member 'MVVMViewModelContextResolver_K2_CreateInstance::ExpectedType' has a wrong offset!");
+static_assert(offsetof(MVVMViewModelContextResolver_K2_CreateInstance, UserWidget) == 0x000008, "Member 'MVVMViewModelContextResolver_K2_CreateInstance::UserWidget' has a wrong offset!");
+static_assert(offsetof(MVVMViewModelContextResolver_K2_CreateInstance, ReturnValue) == 0x000010, "Member 'MVVMViewModelContextResolver_K2_CreateInstance::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMGameSubsystem.GetViewModelCollection
+// 0x0008 (0x0008 - 0x0000)
+struct MVVMGameSubsystem_GetViewModelCollection final 
+{
+public:
+	class UMVVMViewModelCollectionObject*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMGameSubsystem_GetViewModelCollection) == 0x000008, "Wrong alignment on MVVMGameSubsystem_GetViewModelCollection");
+static_assert(sizeof(MVVMGameSubsystem_GetViewModelCollection) == 0x000008, "Wrong size on MVVMGameSubsystem_GetViewModelCollection");
+static_assert(offsetof(MVVMGameSubsystem_GetViewModelCollection, ReturnValue) == 0x000000, "Member 'MVVMGameSubsystem_GetViewModelCollection::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMSubsystem.DoesWidgetTreeContainedWidget
+// 0x0018 (0x0018 - 0x0000)
+struct MVVMSubsystem_DoesWidgetTreeContainedWidget final 
+{
+public:
+	class UWidgetTree*                            WidgetTree;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UWidget*                                ViewWidget;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DDE[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000008, "Wrong alignment on MVVMSubsystem_DoesWidgetTreeContainedWidget");
+static_assert(sizeof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000018, "Wrong size on MVVMSubsystem_DoesWidgetTreeContainedWidget");
+static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, WidgetTree) == 0x000000, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::WidgetTree' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, ViewWidget) == 0x000008, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::ViewWidget' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, ReturnValue) == 0x000010, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMSubsystem.GetGlobalViewModelCollection
+// 0x0008 (0x0008 - 0x0000)
+struct MVVMSubsystem_GetGlobalViewModelCollection final 
+{
+public:
+	class UMVVMViewModelCollectionObject*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMSubsystem_GetGlobalViewModelCollection) == 0x000008, "Wrong alignment on MVVMSubsystem_GetGlobalViewModelCollection");
+static_assert(sizeof(MVVMSubsystem_GetGlobalViewModelCollection) == 0x000008, "Wrong size on MVVMSubsystem_GetGlobalViewModelCollection");
+static_assert(offsetof(MVVMSubsystem_GetGlobalViewModelCollection, ReturnValue) == 0x000000, "Member 'MVVMSubsystem_GetGlobalViewModelCollection::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMSubsystem.K2_GetAvailableBinding
+// 0x0028 (0x0028 - 0x0000)
+struct MVVMSubsystem_K2_GetAvailableBinding final 
+{
+public:
+	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMVVMBindingName                       BindingName;                                       // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 Accessor;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FMVVMAvailableBinding                  ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DDF[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MVVMSubsystem_K2_GetAvailableBinding) == 0x000008, "Wrong alignment on MVVMSubsystem_K2_GetAvailableBinding");
+static_assert(sizeof(MVVMSubsystem_K2_GetAvailableBinding) == 0x000028, "Wrong size on MVVMSubsystem_K2_GetAvailableBinding");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBinding, Param_Class) == 0x000000, "Member 'MVVMSubsystem_K2_GetAvailableBinding::Param_Class' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBinding, BindingName) == 0x000008, "Member 'MVVMSubsystem_K2_GetAvailableBinding::BindingName' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBinding, Accessor) == 0x000010, "Member 'MVVMSubsystem_K2_GetAvailableBinding::Accessor' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBinding, ReturnValue) == 0x000018, "Member 'MVVMSubsystem_K2_GetAvailableBinding::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMSubsystem.K2_GetAvailableBindings
+// 0x0020 (0x0020 - 0x0000)
+struct MVVMSubsystem_K2_GetAvailableBindings final 
+{
+public:
+	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UClass*                                 Accessor;                                          // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FMVVMAvailableBinding>          ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMSubsystem_K2_GetAvailableBindings) == 0x000008, "Wrong alignment on MVVMSubsystem_K2_GetAvailableBindings");
+static_assert(sizeof(MVVMSubsystem_K2_GetAvailableBindings) == 0x000020, "Wrong size on MVVMSubsystem_K2_GetAvailableBindings");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBindings, Param_Class) == 0x000000, "Member 'MVVMSubsystem_K2_GetAvailableBindings::Param_Class' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBindings, Accessor) == 0x000008, "Member 'MVVMSubsystem_K2_GetAvailableBindings::Accessor' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetAvailableBindings, ReturnValue) == 0x000010, "Member 'MVVMSubsystem_K2_GetAvailableBindings::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMSubsystem.K2_GetViewFromUserWidget
+// 0x0010 (0x0010 - 0x0000)
+struct MVVMSubsystem_K2_GetViewFromUserWidget final 
+{
+public:
+	class UUserWidget*                            UserWidget;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMVVMView*                              ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMSubsystem_K2_GetViewFromUserWidget) == 0x000008, "Wrong alignment on MVVMSubsystem_K2_GetViewFromUserWidget");
+static_assert(sizeof(MVVMSubsystem_K2_GetViewFromUserWidget) == 0x000010, "Wrong size on MVVMSubsystem_K2_GetViewFromUserWidget");
+static_assert(offsetof(MVVMSubsystem_K2_GetViewFromUserWidget, UserWidget) == 0x000000, "Member 'MVVMSubsystem_K2_GetViewFromUserWidget::UserWidget' has a wrong offset!");
+static_assert(offsetof(MVVMSubsystem_K2_GetViewFromUserWidget, ReturnValue) == 0x000008, "Member 'MVVMSubsystem_K2_GetViewFromUserWidget::ReturnValue' has a wrong offset!");
 
 // Function ModelViewViewModel.MVVMViewModelBase.K2_AddFieldValueChangedDelegate
 // 0x0018 (0x0018 - 0x0000)
@@ -62,102 +179,13 @@ public:
 	int32                                         OldValue;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewValue;                                          // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E0[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE1[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelBase_K2_SetPropertyValue) == 0x000004, "Wrong alignment on MVVMViewModelBase_K2_SetPropertyValue");
 static_assert(sizeof(MVVMViewModelBase_K2_SetPropertyValue) == 0x00000C, "Wrong size on MVVMViewModelBase_K2_SetPropertyValue");
 static_assert(offsetof(MVVMViewModelBase_K2_SetPropertyValue, OldValue) == 0x000000, "Member 'MVVMViewModelBase_K2_SetPropertyValue::OldValue' has a wrong offset!");
 static_assert(offsetof(MVVMViewModelBase_K2_SetPropertyValue, NewValue) == 0x000004, "Member 'MVVMViewModelBase_K2_SetPropertyValue::NewValue' has a wrong offset!");
 static_assert(offsetof(MVVMViewModelBase_K2_SetPropertyValue, ReturnValue) == 0x000008, "Member 'MVVMViewModelBase_K2_SetPropertyValue::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMSubsystem.DoesWidgetTreeContainedWidget
-// 0x0018 (0x0018 - 0x0000)
-struct MVVMSubsystem_DoesWidgetTreeContainedWidget final 
-{
-public:
-	class UWidgetTree*                            WidgetTree;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UWidget*                                ViewWidget;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E1[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000008, "Wrong alignment on MVVMSubsystem_DoesWidgetTreeContainedWidget");
-static_assert(sizeof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000018, "Wrong size on MVVMSubsystem_DoesWidgetTreeContainedWidget");
-static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, WidgetTree) == 0x000000, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::WidgetTree' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, ViewWidget) == 0x000008, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::ViewWidget' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_DoesWidgetTreeContainedWidget, ReturnValue) == 0x000010, "Member 'MVVMSubsystem_DoesWidgetTreeContainedWidget::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMSubsystem.GetAvailableBinding
-// 0x0028 (0x0028 - 0x0000)
-struct MVVMSubsystem_GetAvailableBinding final 
-{
-public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMVVMBindingName                       BindingName;                                       // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 Accessor;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMVVMAvailableBinding                  ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E2[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MVVMSubsystem_GetAvailableBinding) == 0x000008, "Wrong alignment on MVVMSubsystem_GetAvailableBinding");
-static_assert(sizeof(MVVMSubsystem_GetAvailableBinding) == 0x000028, "Wrong size on MVVMSubsystem_GetAvailableBinding");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBinding, Param_Class) == 0x000000, "Member 'MVVMSubsystem_GetAvailableBinding::Param_Class' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBinding, BindingName) == 0x000008, "Member 'MVVMSubsystem_GetAvailableBinding::BindingName' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBinding, Accessor) == 0x000010, "Member 'MVVMSubsystem_GetAvailableBinding::Accessor' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBinding, ReturnValue) == 0x000018, "Member 'MVVMSubsystem_GetAvailableBinding::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMSubsystem.GetAvailableBindings
-// 0x0020 (0x0020 - 0x0000)
-struct MVVMSubsystem_GetAvailableBindings final 
-{
-public:
-	class UClass*                                 Param_Class;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UClass*                                 Accessor;                                          // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<struct FMVVMAvailableBinding>          ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MVVMSubsystem_GetAvailableBindings) == 0x000008, "Wrong alignment on MVVMSubsystem_GetAvailableBindings");
-static_assert(sizeof(MVVMSubsystem_GetAvailableBindings) == 0x000020, "Wrong size on MVVMSubsystem_GetAvailableBindings");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBindings, Param_Class) == 0x000000, "Member 'MVVMSubsystem_GetAvailableBindings::Param_Class' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBindings, Accessor) == 0x000008, "Member 'MVVMSubsystem_GetAvailableBindings::Accessor' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetAvailableBindings, ReturnValue) == 0x000010, "Member 'MVVMSubsystem_GetAvailableBindings::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMSubsystem.GetGlobalViewModelCollection
-// 0x0008 (0x0008 - 0x0000)
-struct MVVMSubsystem_GetGlobalViewModelCollection final 
-{
-public:
-	class UMVVMViewModelCollectionObject*         ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MVVMSubsystem_GetGlobalViewModelCollection) == 0x000008, "Wrong alignment on MVVMSubsystem_GetGlobalViewModelCollection");
-static_assert(sizeof(MVVMSubsystem_GetGlobalViewModelCollection) == 0x000008, "Wrong size on MVVMSubsystem_GetGlobalViewModelCollection");
-static_assert(offsetof(MVVMSubsystem_GetGlobalViewModelCollection, ReturnValue) == 0x000000, "Member 'MVVMSubsystem_GetGlobalViewModelCollection::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMSubsystem.GetViewFromUserWidget
-// 0x0010 (0x0010 - 0x0000)
-struct MVVMSubsystem_GetViewFromUserWidget final 
-{
-public:
-	class UUserWidget*                            UserWidget;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMVVMView*                              ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(MVVMSubsystem_GetViewFromUserWidget) == 0x000008, "Wrong alignment on MVVMSubsystem_GetViewFromUserWidget");
-static_assert(sizeof(MVVMSubsystem_GetViewFromUserWidget) == 0x000010, "Wrong size on MVVMSubsystem_GetViewFromUserWidget");
-static_assert(offsetof(MVVMSubsystem_GetViewFromUserWidget, UserWidget) == 0x000000, "Member 'MVVMSubsystem_GetViewFromUserWidget::UserWidget' has a wrong offset!");
-static_assert(offsetof(MVVMSubsystem_GetViewFromUserWidget, ReturnValue) == 0x000008, "Member 'MVVMSubsystem_GetViewFromUserWidget::ReturnValue' has a wrong offset!");
-
-// Function ModelViewViewModel.MVVMView.SetViewModel
-// 0x0018 (0x0018 - 0x0000)
-struct MVVMView_SetViewModel final 
-{
-public:
-	class FName                                   ViewModelName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMVVMViewModelBase*                     ViewModel;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(MVVMView_SetViewModel) == 0x000008, "Wrong alignment on MVVMView_SetViewModel");
-static_assert(sizeof(MVVMView_SetViewModel) == 0x000018, "Wrong size on MVVMView_SetViewModel");
-static_assert(offsetof(MVVMView_SetViewModel, ViewModelName) == 0x000000, "Member 'MVVMView_SetViewModel::ViewModelName' has a wrong offset!");
-static_assert(offsetof(MVVMView_SetViewModel, ViewModel) == 0x000008, "Member 'MVVMView_SetViewModel::ViewModel' has a wrong offset!");
-static_assert(offsetof(MVVMView_SetViewModel, ReturnValue) == 0x000010, "Member 'MVVMView_SetViewModel::ReturnValue' has a wrong offset!");
 
 // Function ModelViewViewModel.MVVMViewModelCollectionObject.AddViewModelInstance
 // 0x0020 (0x0020 - 0x0000)
@@ -167,7 +195,7 @@ public:
 	struct FMVVMViewModelContext                  Context;                                           // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UMVVMViewModelBase*                     ViewModel;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E5[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE2[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_AddViewModelInstance) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_AddViewModelInstance");
 static_assert(sizeof(MVVMViewModelCollectionObject_AddViewModelInstance) == 0x000020, "Wrong size on MVVMViewModelCollectionObject_AddViewModelInstance");
@@ -182,7 +210,7 @@ struct MVVMViewModelCollectionObject_RemoveAllViewModelInstance final
 public:
 	class UMVVMViewModelBase*                     ViewModel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E6[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE3[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_RemoveAllViewModelInstance) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_RemoveAllViewModelInstance");
 static_assert(sizeof(MVVMViewModelCollectionObject_RemoveAllViewModelInstance) == 0x000010, "Wrong size on MVVMViewModelCollectionObject_RemoveAllViewModelInstance");
@@ -196,12 +224,25 @@ struct MVVMViewModelCollectionObject_RemoveViewModel final
 public:
 	struct FMVVMViewModelContext                  Context;                                           // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_18E7[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_RemoveViewModel) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_RemoveViewModel");
 static_assert(sizeof(MVVMViewModelCollectionObject_RemoveViewModel) == 0x000018, "Wrong size on MVVMViewModelCollectionObject_RemoveViewModel");
 static_assert(offsetof(MVVMViewModelCollectionObject_RemoveViewModel, Context) == 0x000000, "Member 'MVVMViewModelCollectionObject_RemoveViewModel::Context' has a wrong offset!");
 static_assert(offsetof(MVVMViewModelCollectionObject_RemoveViewModel, ReturnValue) == 0x000010, "Member 'MVVMViewModelCollectionObject_RemoveViewModel::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMViewModelCollectionObject.FindFirstViewModelInstanceOfType
+// 0x0010 (0x0010 - 0x0000)
+struct MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType final 
+{
+public:
+	TSubclassOf<class UMVVMViewModelBase>         ViewModelClass;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMVVMViewModelBase*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType");
+static_assert(sizeof(MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType) == 0x000010, "Wrong size on MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType");
+static_assert(offsetof(MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType, ViewModelClass) == 0x000000, "Member 'MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType::ViewModelClass' has a wrong offset!");
+static_assert(offsetof(MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType, ReturnValue) == 0x000008, "Member 'MVVMViewModelCollectionObject_FindFirstViewModelInstanceOfType::ReturnValue' has a wrong offset!");
 
 // Function ModelViewViewModel.MVVMViewModelCollectionObject.FindViewModelInstance
 // 0x0018 (0x0018 - 0x0000)
@@ -215,6 +256,71 @@ static_assert(alignof(MVVMViewModelCollectionObject_FindViewModelInstance) == 0x
 static_assert(sizeof(MVVMViewModelCollectionObject_FindViewModelInstance) == 0x000018, "Wrong size on MVVMViewModelCollectionObject_FindViewModelInstance");
 static_assert(offsetof(MVVMViewModelCollectionObject_FindViewModelInstance, Context) == 0x000000, "Member 'MVVMViewModelCollectionObject_FindViewModelInstance::Context' has a wrong offset!");
 static_assert(offsetof(MVVMViewModelCollectionObject_FindViewModelInstance, ReturnValue) == 0x000010, "Member 'MVVMViewModelCollectionObject_FindViewModelInstance::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMView.SetViewModel
+// 0x0020 (0x0020 - 0x0000)
+struct MVVMView_SetViewModel final 
+{
+public:
+	class FName                                   ViewModelName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class INotifyFieldValueChanged> ViewModel;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DE8[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MVVMView_SetViewModel) == 0x000008, "Wrong alignment on MVVMView_SetViewModel");
+static_assert(sizeof(MVVMView_SetViewModel) == 0x000020, "Wrong size on MVVMView_SetViewModel");
+static_assert(offsetof(MVVMView_SetViewModel, ViewModelName) == 0x000000, "Member 'MVVMView_SetViewModel::ViewModelName' has a wrong offset!");
+static_assert(offsetof(MVVMView_SetViewModel, ViewModel) == 0x000008, "Member 'MVVMView_SetViewModel::ViewModel' has a wrong offset!");
+static_assert(offsetof(MVVMView_SetViewModel, ReturnValue) == 0x000018, "Member 'MVVMView_SetViewModel::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMView.SetViewModelByClass
+// 0x0018 (0x0018 - 0x0000)
+struct MVVMView_SetViewModelByClass final 
+{
+public:
+	TScriptInterface<class INotifyFieldValueChanged> NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DE9[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(MVVMView_SetViewModelByClass) == 0x000008, "Wrong alignment on MVVMView_SetViewModelByClass");
+static_assert(sizeof(MVVMView_SetViewModelByClass) == 0x000018, "Wrong size on MVVMView_SetViewModelByClass");
+static_assert(offsetof(MVVMView_SetViewModelByClass, NewValue) == 0x000000, "Member 'MVVMView_SetViewModelByClass::NewValue' has a wrong offset!");
+static_assert(offsetof(MVVMView_SetViewModelByClass, ReturnValue) == 0x000010, "Member 'MVVMView_SetViewModelByClass::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMView.AreBindingsInitialized
+// 0x0001 (0x0001 - 0x0000)
+struct MVVMView_AreBindingsInitialized final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMView_AreBindingsInitialized) == 0x000001, "Wrong alignment on MVVMView_AreBindingsInitialized");
+static_assert(sizeof(MVVMView_AreBindingsInitialized) == 0x000001, "Wrong size on MVVMView_AreBindingsInitialized");
+static_assert(offsetof(MVVMView_AreBindingsInitialized, ReturnValue) == 0x000000, "Member 'MVVMView_AreBindingsInitialized::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMView.AreSourcesInitialized
+// 0x0001 (0x0001 - 0x0000)
+struct MVVMView_AreSourcesInitialized final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMView_AreSourcesInitialized) == 0x000001, "Wrong alignment on MVVMView_AreSourcesInitialized");
+static_assert(sizeof(MVVMView_AreSourcesInitialized) == 0x000001, "Wrong size on MVVMView_AreSourcesInitialized");
+static_assert(offsetof(MVVMView_AreSourcesInitialized, ReturnValue) == 0x000000, "Member 'MVVMView_AreSourcesInitialized::ReturnValue' has a wrong offset!");
+
+// Function ModelViewViewModel.MVVMView.GetViewModel
+// 0x0018 (0x0018 - 0x0000)
+struct MVVMView_GetViewModel final 
+{
+public:
+	class FName                                   ViewModelName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TScriptInterface<class INotifyFieldValueChanged> ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(MVVMView_GetViewModel) == 0x000008, "Wrong alignment on MVVMView_GetViewModel");
+static_assert(sizeof(MVVMView_GetViewModel) == 0x000018, "Wrong size on MVVMView_GetViewModel");
+static_assert(offsetof(MVVMView_GetViewModel, ViewModelName) == 0x000000, "Member 'MVVMView_GetViewModel::ViewModelName' has a wrong offset!");
+static_assert(offsetof(MVVMView_GetViewModel, ReturnValue) == 0x000008, "Member 'MVVMView_GetViewModel::ReturnValue' has a wrong offset!");
 
 }
 

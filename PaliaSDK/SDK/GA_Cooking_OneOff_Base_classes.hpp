@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "Palia_structs.hpp"
+#include "Engine_structs.hpp"
 #include "GA_MontageEvent_Base_classes.hpp"
 
 
@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame_GA_Cooking_OneOff_Base_C;           // 0x04C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UInteractableComponent*                 CrafterInteractable;                               // 0x04C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               CSM_Locked_State;                                  // 0x04D0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3BB5[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4345[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCrafterComponent*                      CrafterComponent;                                  // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldEnforcePosition;                             // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldEnforceFacingTowardsInteractableOnly;        // 0x04E1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -470,7 +470,7 @@ class UMaterialInstanceDynamic* ULandscapeComponent::GetMaterialInstanceDynamic(
 
 
 // Function Landscape.LandscapeHeightfieldCollisionComponent.GetRenderComponent
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // class ULandscapeComponent*              ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -520,7 +520,7 @@ TArray<class USplineMeshComponent*> ULandscapeSplinesComponent::GetSplineMeshCom
 
 
 // Function Landscape.LandscapeBlueprintBrushBase.GetBlueprintRenderDependencies
-// (Event, Public, HasOutParams, BlueprintEvent)
+// (RequiredAPI, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // TArray<class UObject*>                  OutStreamableAssets                                    (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 
@@ -541,7 +541,7 @@ void ALandscapeBlueprintBrushBase::GetBlueprintRenderDependencies(TArray<class U
 
 
 // Function Landscape.LandscapeBlueprintBrushBase.Initialize
-// (Native, Event, Public, HasOutParams, HasDefaults, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, HasOutParams, HasDefaults, BlueprintEvent)
 // Parameters:
 // struct FTransform                       InLandscapeTransform                                   (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FIntPoint                        InLandscapeSize                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -570,7 +570,7 @@ void ALandscapeBlueprintBrushBase::Initialize(struct FTransform& InLandscapeTran
 
 
 // Function Landscape.LandscapeBlueprintBrushBase.Render
-// (Native, Event, Public, HasOutParams, BlueprintEvent)
+// (RequiredAPI, Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
 // bool                                    InIsHeightmap                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UTextureRenderTarget2D*           InCombinedResult                                       (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -601,20 +601,54 @@ class UTextureRenderTarget2D* ALandscapeBlueprintBrushBase::Render(bool InIsHeig
 }
 
 
-// Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
-// (Final, Native, Public, BlueprintCallable)
+// Function Landscape.LandscapeBlueprintBrushBase.RenderLayer
+// (RequiredAPI, Native, Event, Public, HasOutParams, BlueprintEvent)
+// Parameters:
+// struct FLandscapeBrushParameters        InParameters                                           (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+// class UTextureRenderTarget2D*           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-void ALandscapeBlueprintBrushBase::RequestLandscapeUpdate()
+class UTextureRenderTarget2D* ALandscapeBlueprintBrushBase::RenderLayer(struct FLandscapeBrushParameters& InParameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("LandscapeBlueprintBrushBase", "RenderLayer");
+
+	Params::LandscapeBlueprintBrushBase_RenderLayer Parms{};
+
+	Parms.InParameters = std::move(InParameters);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Landscape.LandscapeBlueprintBrushBase.RequestLandscapeUpdate
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInUserTriggered                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ALandscapeBlueprintBrushBase::RequestLandscapeUpdate(bool bInUserTriggered)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("LandscapeBlueprintBrushBase", "RequestLandscapeUpdate");
 
+	Params::LandscapeBlueprintBrushBase_RequestLandscapeUpdate Parms{};
+
+	Parms.bInUserTriggered = bInUserTriggered;
+
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
 
-	UObject::ProcessEvent(Func, nullptr);
+	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
 }

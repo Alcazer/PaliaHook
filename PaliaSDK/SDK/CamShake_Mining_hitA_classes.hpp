@@ -17,7 +17,7 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass CamShake_Mining_hitA.CamShake_Mining_hitA_C
-// 0x0000 (0x0210 - 0x0210)
+// 0x0000 (0x01F0 - 0x01F0)
 class UCamShake_Mining_hitA_C final  : public ULegacyCameraShake
 {
 public:
@@ -31,7 +31,7 @@ public:
 	}
 };
 static_assert(alignof(UCamShake_Mining_hitA_C) == 0x000010, "Wrong alignment on UCamShake_Mining_hitA_C");
-static_assert(sizeof(UCamShake_Mining_hitA_C) == 0x000210, "Wrong size on UCamShake_Mining_hitA_C");
+static_assert(sizeof(UCamShake_Mining_hitA_C) == 0x0001F0, "Wrong size on UCamShake_Mining_hitA_C");
 
 }
 

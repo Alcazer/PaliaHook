@@ -16,17 +16,6 @@
 namespace SDK
 {
 
-// Enum S6VivoxShared.ES6Vivox_LoginState
-// NumValues: 0x0005
-enum class ES6Vivox_LoginState : uint8
-{
-	LoggedOut                                = 0,
-	LoggingIn                                = 1,
-	LoggedIn                                 = 2,
-	LoggingOut                               = 3,
-	ES6Vivox_MAX                             = 4,
-};
-
 // Enum S6VivoxShared.ES6Vivox_OperationType
 // NumValues: 0x0005
 enum class ES6Vivox_OperationType : uint8
@@ -38,6 +27,17 @@ enum class ES6Vivox_OperationType : uint8
 	ES6Vivox_MAX                             = 4,
 };
 
+// Enum S6VivoxShared.ES6Vivox_LoginState
+// NumValues: 0x0005
+enum class ES6Vivox_LoginState : uint8
+{
+	LoggedOut                                = 0,
+	LoggingIn                                = 1,
+	LoggedIn                                 = 2,
+	LoggingOut                               = 3,
+	ES6Vivox_MAX                             = 4,
+};
+
 // ScriptStruct S6VivoxShared.S6Vivox_AccountId
 // 0x0048 (0x0048 - 0x0000)
 struct FS6Vivox_AccountId final 
@@ -45,16 +45,16 @@ struct FS6Vivox_AccountId final
 public:
 	class FString                                 Domain;                                            // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Issuer;                                            // 0x0010(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 UniqueId;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 UniqueID;                                          // 0x0020(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 DisplayName;                                       // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6Vivox_LoginState                           LoginState;                                        // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3A4B[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3DD1[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6Vivox_AccountId) == 0x000008, "Wrong alignment on FS6Vivox_AccountId");
 static_assert(sizeof(FS6Vivox_AccountId) == 0x000048, "Wrong size on FS6Vivox_AccountId");
 static_assert(offsetof(FS6Vivox_AccountId, Domain) == 0x000000, "Member 'FS6Vivox_AccountId::Domain' has a wrong offset!");
 static_assert(offsetof(FS6Vivox_AccountId, Issuer) == 0x000010, "Member 'FS6Vivox_AccountId::Issuer' has a wrong offset!");
-static_assert(offsetof(FS6Vivox_AccountId, UniqueId) == 0x000020, "Member 'FS6Vivox_AccountId::UniqueId' has a wrong offset!");
+static_assert(offsetof(FS6Vivox_AccountId, UniqueID) == 0x000020, "Member 'FS6Vivox_AccountId::UniqueID' has a wrong offset!");
 static_assert(offsetof(FS6Vivox_AccountId, DisplayName) == 0x000030, "Member 'FS6Vivox_AccountId::DisplayName' has a wrong offset!");
 static_assert(offsetof(FS6Vivox_AccountId, LoginState) == 0x000040, "Member 'FS6Vivox_AccountId::LoginState' has a wrong offset!");
 

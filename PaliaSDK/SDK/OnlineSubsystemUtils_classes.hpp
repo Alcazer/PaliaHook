@@ -10,43 +10,16 @@
 
 #include "Basic.hpp"
 
+#include "OnlineSubsystemUtils_structs.hpp"
 #include "Engine_classes.hpp"
-#include "AudioMixer_classes.hpp"
 #include "OnlineSubsystem_structs.hpp"
 #include "CoreUObject_classes.hpp"
-#include "OnlineSubsystemUtils_structs.hpp"
 #include "DeveloperSettings_classes.hpp"
+#include "AudioMixer_classes.hpp"
 
 
 namespace SDK
 {
-
-// Class OnlineSubsystemUtils.EndTurnCallbackProxy
-// 0x0048 (0x0078 - 0x0030)
-class UEndTurnCallbackProxy final  : public UOnlineBlueprintCallProxyBase
-{
-public:
-	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15DF[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	static class UEndTurnCallbackProxy* EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TScriptInterface<class ITurnBasedMatchInterface> TurnBasedMatchInterface);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"EndTurnCallbackProxy">();
-	}
-	static class UEndTurnCallbackProxy* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<UEndTurnCallbackProxy>();
-	}
-};
-static_assert(alignof(UEndTurnCallbackProxy) == 0x000008, "Wrong alignment on UEndTurnCallbackProxy");
-static_assert(sizeof(UEndTurnCallbackProxy) == 0x000078, "Wrong size on UEndTurnCallbackProxy");
-static_assert(offsetof(UEndTurnCallbackProxy, OnSuccess) == 0x000030, "Member 'UEndTurnCallbackProxy::OnSuccess' has a wrong offset!");
-static_assert(offsetof(UEndTurnCallbackProxy, OnFailure) == 0x000040, "Member 'UEndTurnCallbackProxy::OnFailure' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.AchievementBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -76,7 +49,7 @@ class UAchievementQueryCallbackProxy final  : public UOnlineBlueprintCallProxyBa
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E3[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1C[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UAchievementQueryCallbackProxy* CacheAchievementDescriptions(class UObject* WorldContextObject, class APlayerController* PlayerController);
@@ -104,7 +77,7 @@ class UAchievementWriteCallbackProxy final  : public UOnlineBlueprintCallProxyBa
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E4[0x30];                                    // 0x0050(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1D[0x30];                                    // 0x0050(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UAchievementWriteCallbackProxy* WriteAchievementProgress(class UObject* WorldContextObject, class APlayerController* PlayerController, class FName AchievementName, float Progress, int32 UserTag);
@@ -131,7 +104,7 @@ class UConnectionCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E5[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1E[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UConnectionCallbackProxy* ConnectToService(class UObject* WorldContextObject, class APlayerController* PlayerController);
@@ -158,7 +131,7 @@ class UCreateSessionCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E6[0x48];                                    // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C1F[0x48];                                    // 0x0050(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UCreateSessionCallbackProxy* CreateSession(class UObject* WorldContextObject, class APlayerController* PlayerController, int32 PublicConnections, bool bUseLAN);
@@ -185,7 +158,7 @@ class UDestroySessionCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E8[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C21[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UDestroySessionCallbackProxy* DestroySession(class UObject* WorldContextObject, class APlayerController* PlayerController);
@@ -212,7 +185,7 @@ class UEndMatchCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15E9[0x30];                                    // 0x0050(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C22[0x30];                                    // 0x0050(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UEndMatchCallbackProxy* EndMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, TScriptInterface<class ITurnBasedMatchInterface> MatchActor, const class FString& MatchID, EMPMatchOutcome LocalPlayerOutcome, EMPMatchOutcome OtherPlayersOutcome);
@@ -232,6 +205,33 @@ static_assert(sizeof(UEndMatchCallbackProxy) == 0x000080, "Wrong size on UEndMat
 static_assert(offsetof(UEndMatchCallbackProxy, OnSuccess) == 0x000030, "Member 'UEndMatchCallbackProxy::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UEndMatchCallbackProxy, OnFailure) == 0x000040, "Member 'UEndMatchCallbackProxy::OnFailure' has a wrong offset!");
 
+// Class OnlineSubsystemUtils.EndTurnCallbackProxy
+// 0x0048 (0x0078 - 0x0030)
+class UEndTurnCallbackProxy final  : public UOnlineBlueprintCallProxyBase
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C24[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UEndTurnCallbackProxy* EndTurn(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, TScriptInterface<class ITurnBasedMatchInterface> TurnBasedMatchInterface);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"EndTurnCallbackProxy">();
+	}
+	static class UEndTurnCallbackProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UEndTurnCallbackProxy>();
+	}
+};
+static_assert(alignof(UEndTurnCallbackProxy) == 0x000008, "Wrong alignment on UEndTurnCallbackProxy");
+static_assert(sizeof(UEndTurnCallbackProxy) == 0x000078, "Wrong size on UEndTurnCallbackProxy");
+static_assert(offsetof(UEndTurnCallbackProxy, OnSuccess) == 0x000030, "Member 'UEndTurnCallbackProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UEndTurnCallbackProxy, OnFailure) == 0x000040, "Member 'UEndTurnCallbackProxy::OnFailure' has a wrong offset!");
+
 // Class OnlineSubsystemUtils.FindSessionsCallbackProxy
 // 0x0060 (0x0090 - 0x0030)
 class UFindSessionsCallbackProxy final  : public UOnlineBlueprintCallProxyBase
@@ -239,7 +239,7 @@ class UFindSessionsCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15EB[0x40];                                    // 0x0050(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C25[0x40];                                    // 0x0050(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UFindSessionsCallbackProxy* FindSessions(class UObject* WorldContextObject, class APlayerController* PlayerController, int32 MaxResults, bool bUseLAN);
@@ -270,7 +270,7 @@ class UFindTurnBasedMatchCallbackProxy final  : public UOnlineBlueprintCallProxy
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F0[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2A[0x38];                                    // 0x0050(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UFindTurnBasedMatchCallbackProxy* FindTurnBasedMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, TScriptInterface<class ITurnBasedMatchInterface> MatchActor, int32 MinPlayers, int32 MaxPlayers, int32 PlayerGroup, bool ShowExistingMatches);
@@ -297,7 +297,7 @@ class UInAppPurchaseCallbackProxy2 final  : public UObject
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F2[0x60];                                    // 0x0048(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2C[0x60];                                    // 0x0048(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UInAppPurchaseCallbackProxy2* CreateProxyObjectForInAppPurchase(class APlayerController* PlayerController, struct FInAppPurchaseProductRequest2& ProductRequest);
@@ -319,6 +319,53 @@ static_assert(sizeof(UInAppPurchaseCallbackProxy2) == 0x0000A8, "Wrong size on U
 static_assert(offsetof(UInAppPurchaseCallbackProxy2, OnSuccess) == 0x000028, "Member 'UInAppPurchaseCallbackProxy2::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UInAppPurchaseCallbackProxy2, OnFailure) == 0x000038, "Member 'UInAppPurchaseCallbackProxy2::OnFailure' has a wrong offset!");
 
+// Class OnlineSubsystemUtils.InAppPurchaseCheckoutCallbackProxy
+// 0x0078 (0x00A0 - 0x0028)
+class UInAppPurchaseCheckoutCallbackProxy final  : public UObject
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C2D[0x58];                                    // 0x0048(0x0058)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UInAppPurchaseCheckoutCallbackProxy* CreateProxyObjectForInAppPurchaseCheckout(class APlayerController* PlayerController, struct FInAppPurchaseProductRequest2& ProductRequest);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InAppPurchaseCheckoutCallbackProxy">();
+	}
+	static class UInAppPurchaseCheckoutCallbackProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInAppPurchaseCheckoutCallbackProxy>();
+	}
+};
+static_assert(alignof(UInAppPurchaseCheckoutCallbackProxy) == 0x000008, "Wrong alignment on UInAppPurchaseCheckoutCallbackProxy");
+static_assert(sizeof(UInAppPurchaseCheckoutCallbackProxy) == 0x0000A0, "Wrong size on UInAppPurchaseCheckoutCallbackProxy");
+static_assert(offsetof(UInAppPurchaseCheckoutCallbackProxy, OnSuccess) == 0x000028, "Member 'UInAppPurchaseCheckoutCallbackProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UInAppPurchaseCheckoutCallbackProxy, OnFailure) == 0x000038, "Member 'UInAppPurchaseCheckoutCallbackProxy::OnFailure' has a wrong offset!");
+
+// Class OnlineSubsystemUtils.InAppPurchaseFinalizeProxy
+// 0x0000 (0x0028 - 0x0028)
+class UInAppPurchaseFinalizeProxy final  : public UObject
+{
+public:
+	static class UInAppPurchaseFinalizeProxy* CreateProxyObjectForInAppPurchaseFinalize(struct FInAppPurchaseReceiptInfo2& InAppPurchaseReceipt, class APlayerController* PlayerController);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InAppPurchaseFinalizeProxy">();
+	}
+	static class UInAppPurchaseFinalizeProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInAppPurchaseFinalizeProxy>();
+	}
+};
+static_assert(alignof(UInAppPurchaseFinalizeProxy) == 0x000008, "Wrong alignment on UInAppPurchaseFinalizeProxy");
+static_assert(sizeof(UInAppPurchaseFinalizeProxy) == 0x000028, "Wrong size on UInAppPurchaseFinalizeProxy");
+
 // Class OnlineSubsystemUtils.InAppPurchaseQueryCallbackProxy2
 // 0x0040 (0x0068 - 0x0028)
 class UInAppPurchaseQueryCallbackProxy2 final  : public UObject
@@ -326,7 +373,7 @@ class UInAppPurchaseQueryCallbackProxy2 final  : public UObject
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F3[0x20];                                    // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2E[0x20];                                    // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UInAppPurchaseQueryCallbackProxy2* CreateProxyObjectForInAppPurchaseQuery(class APlayerController* PlayerController, TArray<class FString>& ProductIdentifiers);
@@ -346,6 +393,35 @@ static_assert(sizeof(UInAppPurchaseQueryCallbackProxy2) == 0x000068, "Wrong size
 static_assert(offsetof(UInAppPurchaseQueryCallbackProxy2, OnSuccess) == 0x000028, "Member 'UInAppPurchaseQueryCallbackProxy2::OnSuccess' has a wrong offset!");
 static_assert(offsetof(UInAppPurchaseQueryCallbackProxy2, OnFailure) == 0x000038, "Member 'UInAppPurchaseQueryCallbackProxy2::OnFailure' has a wrong offset!");
 
+// Class OnlineSubsystemUtils.InAppPurchaseReceiptsCallbackProxy
+// 0x0060 (0x0088 - 0x0028)
+class UInAppPurchaseReceiptsCallbackProxy final  : public UObject
+{
+public:
+	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C2F[0x40];                                    // 0x0048(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	static class UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseGetKnownReceipts(class APlayerController* PlayerController);
+	static class UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseQueryOwnedProducts(class APlayerController* PlayerController);
+	static class UInAppPurchaseReceiptsCallbackProxy* CreateProxyObjectForInAppPurchaseRestoreOwnedProducts(class APlayerController* PlayerController);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"InAppPurchaseReceiptsCallbackProxy">();
+	}
+	static class UInAppPurchaseReceiptsCallbackProxy* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UInAppPurchaseReceiptsCallbackProxy>();
+	}
+};
+static_assert(alignof(UInAppPurchaseReceiptsCallbackProxy) == 0x000008, "Wrong alignment on UInAppPurchaseReceiptsCallbackProxy");
+static_assert(sizeof(UInAppPurchaseReceiptsCallbackProxy) == 0x000088, "Wrong size on UInAppPurchaseReceiptsCallbackProxy");
+static_assert(offsetof(UInAppPurchaseReceiptsCallbackProxy, OnSuccess) == 0x000028, "Member 'UInAppPurchaseReceiptsCallbackProxy::OnSuccess' has a wrong offset!");
+static_assert(offsetof(UInAppPurchaseReceiptsCallbackProxy, OnFailure) == 0x000038, "Member 'UInAppPurchaseReceiptsCallbackProxy::OnFailure' has a wrong offset!");
+
 // Class OnlineSubsystemUtils.InAppPurchaseRestoreCallbackProxy2
 // 0x0088 (0x00B0 - 0x0028)
 class UInAppPurchaseRestoreCallbackProxy2 final  : public UObject
@@ -353,7 +429,7 @@ class UInAppPurchaseRestoreCallbackProxy2 final  : public UObject
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F4[0x68];                                    // 0x0048(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C30[0x68];                                    // 0x0048(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UInAppPurchaseRestoreCallbackProxy2* CreateProxyObjectForInAppPurchaseRestore(TArray<struct FInAppPurchaseProductRequest2>& ConsumableProductFlags, class APlayerController* PlayerController);
@@ -374,13 +450,13 @@ static_assert(offsetof(UInAppPurchaseRestoreCallbackProxy2, OnSuccess) == 0x0000
 static_assert(offsetof(UInAppPurchaseRestoreCallbackProxy2, OnFailure) == 0x000038, "Member 'UInAppPurchaseRestoreCallbackProxy2::OnFailure' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.IpConnection
-// 0x0090 (0x33A0 - 0x3310)
+// 0x0090 (0x1E88 - 0x1DF8)
 class UIpConnection final  : public UNetConnection
 {
 public:
-	uint8                                         Pad_15F5[0x74];                                    // 0x3308(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SocketErrorDisconnectDelay;                        // 0x337C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_15F6[0x20];                                    // 0x3380(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C31[0x74];                                    // 0x1DF8(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SocketErrorDisconnectDelay;                        // 0x1E6C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C32[0x18];                                    // 0x1E70(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -392,29 +468,30 @@ public:
 		return GetDefaultObjImpl<UIpConnection>();
 	}
 };
-static_assert(alignof(UIpConnection) == 0x000010, "Wrong alignment on UIpConnection");
-static_assert(sizeof(UIpConnection) == 0x0033A0, "Wrong size on UIpConnection");
-static_assert(offsetof(UIpConnection, SocketErrorDisconnectDelay) == 0x00337C, "Member 'UIpConnection::SocketErrorDisconnectDelay' has a wrong offset!");
+static_assert(alignof(UIpConnection) == 0x000008, "Wrong alignment on UIpConnection");
+static_assert(sizeof(UIpConnection) == 0x001E88, "Wrong size on UIpConnection");
+static_assert(offsetof(UIpConnection, SocketErrorDisconnectDelay) == 0x001E6C, "Member 'UIpConnection::SocketErrorDisconnectDelay' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.IpNetDriver
-// 0x00B0 (0x0840 - 0x0790)
+// 0x00B0 (0x0870 - 0x07C0)
 class UIpNetDriver final  : public UNetDriver
 {
 public:
-	uint8                                         LogPortUnreach : 1;                                // 0x0790(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         AllowPlayerPortUnreach : 1;                        // 0x0790(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_15F7[0x3];                                     // 0x0791(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxPortCountToTry;                                 // 0x0794(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15F8[0x4];                                     // 0x0798(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        ServerDesiredSocketReceiveBufferBytes;             // 0x079C(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ServerDesiredSocketSendBufferBytes;                // 0x07A0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ClientDesiredSocketReceiveBufferBytes;             // 0x07A4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint32                                        ClientDesiredSocketSendBufferBytes;                // 0x07A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_15F9[0x4];                                     // 0x07AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        MaxSecondsInReceive;                               // 0x07B0(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	int32                                         NbPacketsBetweenReceiveTimeTest;                   // 0x07B8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	float                                         ResolutionConnectionTimeout;                       // 0x07BC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_15FA[0x80];                                    // 0x07C0(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         LogPortUnreach : 1;                                // 0x07C0(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         AllowPlayerPortUnreach : 1;                        // 0x07C0(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         bExitOnBindFailure : 1;                            // 0x07C0(0x0001)(BitIndex: 0x02, PropSize: 0x0001 (Config, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
+	uint8                                         Pad_1C33[0x3];                                     // 0x07C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxPortCountToTry;                                 // 0x07C4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1C34[0x4];                                     // 0x07C8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        ServerDesiredSocketReceiveBufferBytes;             // 0x07CC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ServerDesiredSocketSendBufferBytes;                // 0x07D0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ClientDesiredSocketReceiveBufferBytes;             // 0x07D4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint32                                        ClientDesiredSocketSendBufferBytes;                // 0x07D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C35[0x4];                                     // 0x07DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        MaxSecondsInReceive;                               // 0x07E0(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	int32                                         NbPacketsBetweenReceiveTimeTest;                   // 0x07E8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	float                                         ResolutionConnectionTimeout;                       // 0x07EC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C36[0x80];                                    // 0x07F0(0x0080)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -427,15 +504,15 @@ public:
 	}
 };
 static_assert(alignof(UIpNetDriver) == 0x000008, "Wrong alignment on UIpNetDriver");
-static_assert(sizeof(UIpNetDriver) == 0x000840, "Wrong size on UIpNetDriver");
-static_assert(offsetof(UIpNetDriver, MaxPortCountToTry) == 0x000794, "Member 'UIpNetDriver::MaxPortCountToTry' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ServerDesiredSocketReceiveBufferBytes) == 0x00079C, "Member 'UIpNetDriver::ServerDesiredSocketReceiveBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ServerDesiredSocketSendBufferBytes) == 0x0007A0, "Member 'UIpNetDriver::ServerDesiredSocketSendBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ClientDesiredSocketReceiveBufferBytes) == 0x0007A4, "Member 'UIpNetDriver::ClientDesiredSocketReceiveBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ClientDesiredSocketSendBufferBytes) == 0x0007A8, "Member 'UIpNetDriver::ClientDesiredSocketSendBufferBytes' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, MaxSecondsInReceive) == 0x0007B0, "Member 'UIpNetDriver::MaxSecondsInReceive' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, NbPacketsBetweenReceiveTimeTest) == 0x0007B8, "Member 'UIpNetDriver::NbPacketsBetweenReceiveTimeTest' has a wrong offset!");
-static_assert(offsetof(UIpNetDriver, ResolutionConnectionTimeout) == 0x0007BC, "Member 'UIpNetDriver::ResolutionConnectionTimeout' has a wrong offset!");
+static_assert(sizeof(UIpNetDriver) == 0x000870, "Wrong size on UIpNetDriver");
+static_assert(offsetof(UIpNetDriver, MaxPortCountToTry) == 0x0007C4, "Member 'UIpNetDriver::MaxPortCountToTry' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, ServerDesiredSocketReceiveBufferBytes) == 0x0007CC, "Member 'UIpNetDriver::ServerDesiredSocketReceiveBufferBytes' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, ServerDesiredSocketSendBufferBytes) == 0x0007D0, "Member 'UIpNetDriver::ServerDesiredSocketSendBufferBytes' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, ClientDesiredSocketReceiveBufferBytes) == 0x0007D4, "Member 'UIpNetDriver::ClientDesiredSocketReceiveBufferBytes' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, ClientDesiredSocketSendBufferBytes) == 0x0007D8, "Member 'UIpNetDriver::ClientDesiredSocketSendBufferBytes' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, MaxSecondsInReceive) == 0x0007E0, "Member 'UIpNetDriver::MaxSecondsInReceive' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, NbPacketsBetweenReceiveTimeTest) == 0x0007E8, "Member 'UIpNetDriver::NbPacketsBetweenReceiveTimeTest' has a wrong offset!");
+static_assert(offsetof(UIpNetDriver, ResolutionConnectionTimeout) == 0x0007EC, "Member 'UIpNetDriver::ResolutionConnectionTimeout' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.JoinSessionCallbackProxy
 // 0x0168 (0x0198 - 0x0030)
@@ -444,7 +521,7 @@ class UJoinSessionCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15FB[0x148];                                   // 0x0050(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C37[0x148];                                   // 0x0050(0x0148)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UJoinSessionCallbackProxy* JoinSession(class UObject* WorldContextObject, class APlayerController* PlayerController, struct FBlueprintSessionResult& SearchResult);
@@ -491,7 +568,7 @@ class ULeaderboardFlushCallbackProxy final  : public UObject
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15FD[0x20];                                    // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C39[0x20];                                    // 0x0048(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class ULeaderboardFlushCallbackProxy* CreateProxyObjectForFlush(class APlayerController* PlayerController, class FName SessionName);
@@ -518,7 +595,7 @@ class ULeaderboardQueryCallbackProxy final  : public UObject
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0028(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15FE[0x50];                                    // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3A[0x50];                                    // 0x0048(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class ULeaderboardQueryCallbackProxy* CreateProxyObjectForIntQuery(class APlayerController* PlayerController, class FName StatName);
@@ -545,7 +622,7 @@ class ULogoutCallbackProxy final  : public UBlueprintAsyncActionBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_15FF[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3B[0x18];                                    // 0x0050(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class ULogoutCallbackProxy* Logout(class UObject* WorldContextObject, class APlayerController* PlayerController);
@@ -566,15 +643,15 @@ static_assert(offsetof(ULogoutCallbackProxy, OnSuccess) == 0x000030, "Member 'UL
 static_assert(offsetof(ULogoutCallbackProxy, OnFailure) == 0x000040, "Member 'ULogoutCallbackProxy::OnFailure' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.OnlineBeacon
-// 0x0030 (0x02D0 - 0x02A0)
+// 0x0030 (0x02D8 - 0x02A8)
 class AOnlineBeacon : public AActor
 {
 public:
-	uint8                                         Pad_1600[0x8];                                     // 0x02A0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         BeaconConnectionInitialTimeout;                    // 0x02A8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         BeaconConnectionTimeout;                           // 0x02AC(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetDriver*                             NetDriver;                                         // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1601[0x18];                                    // 0x02B8(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3C[0x8];                                     // 0x02A8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         BeaconConnectionInitialTimeout;                    // 0x02B0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         BeaconConnectionTimeout;                           // 0x02B4(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNetDriver*                             NetDriver;                                         // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C3D[0x18];                                    // 0x02C0(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -587,20 +664,20 @@ public:
 	}
 };
 static_assert(alignof(AOnlineBeacon) == 0x000008, "Wrong alignment on AOnlineBeacon");
-static_assert(sizeof(AOnlineBeacon) == 0x0002D0, "Wrong size on AOnlineBeacon");
-static_assert(offsetof(AOnlineBeacon, BeaconConnectionInitialTimeout) == 0x0002A8, "Member 'AOnlineBeacon::BeaconConnectionInitialTimeout' has a wrong offset!");
-static_assert(offsetof(AOnlineBeacon, BeaconConnectionTimeout) == 0x0002AC, "Member 'AOnlineBeacon::BeaconConnectionTimeout' has a wrong offset!");
-static_assert(offsetof(AOnlineBeacon, NetDriver) == 0x0002B0, "Member 'AOnlineBeacon::NetDriver' has a wrong offset!");
+static_assert(sizeof(AOnlineBeacon) == 0x0002D8, "Wrong size on AOnlineBeacon");
+static_assert(offsetof(AOnlineBeacon, BeaconConnectionInitialTimeout) == 0x0002B0, "Member 'AOnlineBeacon::BeaconConnectionInitialTimeout' has a wrong offset!");
+static_assert(offsetof(AOnlineBeacon, BeaconConnectionTimeout) == 0x0002B4, "Member 'AOnlineBeacon::BeaconConnectionTimeout' has a wrong offset!");
+static_assert(offsetof(AOnlineBeacon, NetDriver) == 0x0002B8, "Member 'AOnlineBeacon::NetDriver' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.OnlineBeaconClient
-// 0x0060 (0x0330 - 0x02D0)
+// 0x0060 (0x0338 - 0x02D8)
 class AOnlineBeaconClient : public AOnlineBeacon
 {
 public:
-	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UNetConnection*                         BeaconConnection;                                  // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	EBeaconConnectionState                        ConnectionState;                                   // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1602[0x4F];                                    // 0x02E1(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class AOnlineBeaconHostObject*                BeaconOwner;                                       // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UNetConnection*                         BeaconConnection;                                  // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	EBeaconConnectionState                        ConnectionState;                                   // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C3E[0x4F];                                    // 0x02E9(0x004F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientOnConnected();
@@ -616,23 +693,24 @@ public:
 	}
 };
 static_assert(alignof(AOnlineBeaconClient) == 0x000008, "Wrong alignment on AOnlineBeaconClient");
-static_assert(sizeof(AOnlineBeaconClient) == 0x000330, "Wrong size on AOnlineBeaconClient");
-static_assert(offsetof(AOnlineBeaconClient, BeaconOwner) == 0x0002D0, "Member 'AOnlineBeaconClient::BeaconOwner' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconClient, BeaconConnection) == 0x0002D8, "Member 'AOnlineBeaconClient::BeaconConnection' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconClient, ConnectionState) == 0x0002E0, "Member 'AOnlineBeaconClient::ConnectionState' has a wrong offset!");
+static_assert(sizeof(AOnlineBeaconClient) == 0x000338, "Wrong size on AOnlineBeaconClient");
+static_assert(offsetof(AOnlineBeaconClient, BeaconOwner) == 0x0002D8, "Member 'AOnlineBeaconClient::BeaconOwner' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconClient, BeaconConnection) == 0x0002E0, "Member 'AOnlineBeaconClient::BeaconConnection' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconClient, ConnectionState) == 0x0002E8, "Member 'AOnlineBeaconClient::ConnectionState' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.OnlineBeaconHost
-// 0x0110 (0x03E0 - 0x02D0)
+// 0x0110 (0x03E8 - 0x02D8)
 class AOnlineBeaconHost : public AOnlineBeacon
 {
 public:
-	int32                                         ListenPort;                                        // 0x02D0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAuthRequired;                                     // 0x02D4(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1603[0x3];                                     // 0x02D5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	uint32                                        MaxAuthTokenSize;                                  // 0x02D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1604[0x54];                                    // 0x02DC(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0330(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1605[0xA0];                                    // 0x0340(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         ListenPort;                                        // 0x02D8(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReuseAddressAndPort;                              // 0x02DC(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAuthRequired;                                     // 0x02DD(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C3F[0x2];                                     // 0x02DE(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint32                                        MaxAuthTokenSize;                                  // 0x02E0(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C40[0x54];                                    // 0x02E4(0x0054)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x0338(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1C41[0xA0];                                    // 0x0348(0x00A0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -645,20 +723,21 @@ public:
 	}
 };
 static_assert(alignof(AOnlineBeaconHost) == 0x000008, "Wrong alignment on AOnlineBeaconHost");
-static_assert(sizeof(AOnlineBeaconHost) == 0x0003E0, "Wrong size on AOnlineBeaconHost");
-static_assert(offsetof(AOnlineBeaconHost, ListenPort) == 0x0002D0, "Member 'AOnlineBeaconHost::ListenPort' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, bAuthRequired) == 0x0002D4, "Member 'AOnlineBeaconHost::bAuthRequired' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, MaxAuthTokenSize) == 0x0002D8, "Member 'AOnlineBeaconHost::MaxAuthTokenSize' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHost, ClientActors) == 0x000330, "Member 'AOnlineBeaconHost::ClientActors' has a wrong offset!");
+static_assert(sizeof(AOnlineBeaconHost) == 0x0003E8, "Wrong size on AOnlineBeaconHost");
+static_assert(offsetof(AOnlineBeaconHost, ListenPort) == 0x0002D8, "Member 'AOnlineBeaconHost::ListenPort' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHost, bReuseAddressAndPort) == 0x0002DC, "Member 'AOnlineBeaconHost::bReuseAddressAndPort' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHost, bAuthRequired) == 0x0002DD, "Member 'AOnlineBeaconHost::bAuthRequired' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHost, MaxAuthTokenSize) == 0x0002E0, "Member 'AOnlineBeaconHost::MaxAuthTokenSize' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHost, ClientActors) == 0x000338, "Member 'AOnlineBeaconHost::ClientActors' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.OnlineBeaconHostObject
-// 0x0028 (0x02C8 - 0x02A0)
+// 0x0028 (0x02D0 - 0x02A8)
 class AOnlineBeaconHostObject : public AActor
 {
 public:
-	class FString                                 BeaconTypeName;                                    // 0x02A0(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class AOnlineBeaconClient>        ClientBeaconActorClass;                            // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02B8(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	class FString                                 BeaconTypeName;                                    // 0x02A8(0x0010)(ZeroConstructor, Transient, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class AOnlineBeaconClient>        ClientBeaconActorClass;                            // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class AOnlineBeaconClient*>            ClientActors;                                      // 0x02C0(0x0010)(ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -671,20 +750,20 @@ public:
 	}
 };
 static_assert(alignof(AOnlineBeaconHostObject) == 0x000008, "Wrong alignment on AOnlineBeaconHostObject");
-static_assert(sizeof(AOnlineBeaconHostObject) == 0x0002C8, "Wrong size on AOnlineBeaconHostObject");
-static_assert(offsetof(AOnlineBeaconHostObject, BeaconTypeName) == 0x0002A0, "Member 'AOnlineBeaconHostObject::BeaconTypeName' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHostObject, ClientBeaconActorClass) == 0x0002B0, "Member 'AOnlineBeaconHostObject::ClientBeaconActorClass' has a wrong offset!");
-static_assert(offsetof(AOnlineBeaconHostObject, ClientActors) == 0x0002B8, "Member 'AOnlineBeaconHostObject::ClientActors' has a wrong offset!");
+static_assert(sizeof(AOnlineBeaconHostObject) == 0x0002D0, "Wrong size on AOnlineBeaconHostObject");
+static_assert(offsetof(AOnlineBeaconHostObject, BeaconTypeName) == 0x0002A8, "Member 'AOnlineBeaconHostObject::BeaconTypeName' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHostObject, ClientBeaconActorClass) == 0x0002B8, "Member 'AOnlineBeaconHostObject::ClientBeaconActorClass' has a wrong offset!");
+static_assert(offsetof(AOnlineBeaconHostObject, ClientActors) == 0x0002C0, "Member 'AOnlineBeaconHostObject::ClientActors' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.OnlineEngineInterfaceImpl
 // 0x0160 (0x0188 - 0x0028)
-class UOnlineEngineInterfaceImpl : public UOnlineEngineInterface
+class UOnlineEngineInterfaceImpl final  : public UOnlineEngineInterface
 {
 public:
 	TMap<class FName, class FName>                MappedUniqueNetIdTypes;                            // 0x0028(0x0050)(Config, NativeAccessSpecifierPrivate)
 	TArray<class FName>                           CompatibleUniqueNetIdTypes;                        // 0x0078(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 	class FName                                   VoiceSubsystemNameOverride;                        // 0x0088(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1606[0xF8];                                    // 0x0090(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C42[0xF8];                                    // 0x0090(0x00F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -708,7 +787,7 @@ class UOnlinePIESettings final  : public UDeveloperSettings
 {
 public:
 	bool                                          bOnlinePIEEnabled;                                 // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1607[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C43[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPIELoginSettingsInternal>      Logins;                                            // 0x0040(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 
 public:
@@ -748,10 +827,10 @@ static_assert(sizeof(UOnlineServicesEngineInterfaceImpl) == 0x000028, "Wrong siz
 class UOnlineSessionClient final  : public UOnlineSession
 {
 public:
-	uint8                                         Pad_1608[0x1B0];                                   // 0x0028(0x01B0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C44[0x1B0];                                   // 0x0028(0x01B0)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bIsFromInvite;                                     // 0x01D8(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bHandlingDisconnect;                               // 0x01D9(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1609[0x6];                                     // 0x01DA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C45[0x6];                                     // 0x01DA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -769,17 +848,17 @@ static_assert(offsetof(UOnlineSessionClient, bIsFromInvite) == 0x0001D8, "Member
 static_assert(offsetof(UOnlineSessionClient, bHandlingDisconnect) == 0x0001D9, "Member 'UOnlineSessionClient::bHandlingDisconnect' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.PartyBeaconClient
-// 0x00C8 (0x03F8 - 0x0330)
+// 0x00C8 (0x0400 - 0x0338)
 class APartyBeaconClient final  : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_160A[0x30];                                    // 0x0330(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DestSessionId;                                     // 0x0360(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FPartyReservation                      PendingReservation;                                // 0x0370(0x0058)(Protected, NativeAccessSpecifierProtected)
-	EClientRequestType                            RequestType;                                       // 0x03C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPendingReservationSent;                           // 0x03C9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCancelReservation;                                // 0x03CA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_160B[0x2D];                                    // 0x03CB(0x002D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C46[0x30];                                    // 0x0338(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DestSessionId;                                     // 0x0368(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FPartyReservation                      PendingReservation;                                // 0x0378(0x0058)(Protected, NativeAccessSpecifierProtected)
+	EClientRequestType                            RequestType;                                       // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPendingReservationSent;                           // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCancelReservation;                                // 0x03D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C47[0x2D];                                    // 0x03D3(0x002D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientCancelReservationResponse(EPartyReservationResult ReservationResponse);
@@ -803,25 +882,26 @@ public:
 	}
 };
 static_assert(alignof(APartyBeaconClient) == 0x000008, "Wrong alignment on APartyBeaconClient");
-static_assert(sizeof(APartyBeaconClient) == 0x0003F8, "Wrong size on APartyBeaconClient");
-static_assert(offsetof(APartyBeaconClient, DestSessionId) == 0x000360, "Member 'APartyBeaconClient::DestSessionId' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, PendingReservation) == 0x000370, "Member 'APartyBeaconClient::PendingReservation' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, RequestType) == 0x0003C8, "Member 'APartyBeaconClient::RequestType' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, bPendingReservationSent) == 0x0003C9, "Member 'APartyBeaconClient::bPendingReservationSent' has a wrong offset!");
-static_assert(offsetof(APartyBeaconClient, bCancelReservation) == 0x0003CA, "Member 'APartyBeaconClient::bCancelReservation' has a wrong offset!");
+static_assert(sizeof(APartyBeaconClient) == 0x000400, "Wrong size on APartyBeaconClient");
+static_assert(offsetof(APartyBeaconClient, DestSessionId) == 0x000368, "Member 'APartyBeaconClient::DestSessionId' has a wrong offset!");
+static_assert(offsetof(APartyBeaconClient, PendingReservation) == 0x000378, "Member 'APartyBeaconClient::PendingReservation' has a wrong offset!");
+static_assert(offsetof(APartyBeaconClient, RequestType) == 0x0003D0, "Member 'APartyBeaconClient::RequestType' has a wrong offset!");
+static_assert(offsetof(APartyBeaconClient, bPendingReservationSent) == 0x0003D1, "Member 'APartyBeaconClient::bPendingReservationSent' has a wrong offset!");
+static_assert(offsetof(APartyBeaconClient, bCancelReservation) == 0x0003D2, "Member 'APartyBeaconClient::bCancelReservation' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.PartyBeaconHost
-// 0x0078 (0x0340 - 0x02C8)
+// 0x0078 (0x0348 - 0x02D0)
 class APartyBeaconHost final  : public AOnlineBeaconHostObject
 {
 public:
-	class UPartyBeaconState*                      State;                                             // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_160C[0x60];                                    // 0x02D0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bLogoutOnSessionTimeout;                           // 0x0330(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_160D[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SessionTimeoutSecs;                                // 0x0334(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TravelSessionTimeoutSecs;                          // 0x0338(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_160E[0x4];                                     // 0x033C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class UPartyBeaconState*                      State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C48[0x60];                                    // 0x02D8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bLogoutOnSessionTimeout;                           // 0x0338(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsValidationStrRequired;                          // 0x0339(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C49[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SessionTimeoutSecs;                                // 0x033C(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TravelSessionTimeoutSecs;                          // 0x0340(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C4A[0x4];                                     // 0x0344(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -834,11 +914,12 @@ public:
 	}
 };
 static_assert(alignof(APartyBeaconHost) == 0x000008, "Wrong alignment on APartyBeaconHost");
-static_assert(sizeof(APartyBeaconHost) == 0x000340, "Wrong size on APartyBeaconHost");
-static_assert(offsetof(APartyBeaconHost, State) == 0x0002C8, "Member 'APartyBeaconHost::State' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, bLogoutOnSessionTimeout) == 0x000330, "Member 'APartyBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, SessionTimeoutSecs) == 0x000334, "Member 'APartyBeaconHost::SessionTimeoutSecs' has a wrong offset!");
-static_assert(offsetof(APartyBeaconHost, TravelSessionTimeoutSecs) == 0x000338, "Member 'APartyBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
+static_assert(sizeof(APartyBeaconHost) == 0x000348, "Wrong size on APartyBeaconHost");
+static_assert(offsetof(APartyBeaconHost, State) == 0x0002D0, "Member 'APartyBeaconHost::State' has a wrong offset!");
+static_assert(offsetof(APartyBeaconHost, bLogoutOnSessionTimeout) == 0x000338, "Member 'APartyBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
+static_assert(offsetof(APartyBeaconHost, bIsValidationStrRequired) == 0x000339, "Member 'APartyBeaconHost::bIsValidationStrRequired' has a wrong offset!");
+static_assert(offsetof(APartyBeaconHost, SessionTimeoutSecs) == 0x00033C, "Member 'APartyBeaconHost::SessionTimeoutSecs' has a wrong offset!");
+static_assert(offsetof(APartyBeaconHost, TravelSessionTimeoutSecs) == 0x000340, "Member 'APartyBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.PartyBeaconState
 // 0x0078 (0x00A0 - 0x0028)
@@ -854,13 +935,14 @@ public:
 	int32                                         ReservedHostTeamNum;                               // 0x0048(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         ForceTeamNum;                                      // 0x004C(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bRestrictCrossConsole;                             // 0x0050(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_160F[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4B[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FString>                         PlatformCrossplayRestrictions;                     // 0x0058(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FPartyBeaconCrossplayPlatformMapping> PlatformTypeMapping;                               // 0x0068(0x0010)(ZeroConstructor, Config, Protected, NativeAccessSpecifierProtected)
 	bool                                          bEnableRemovalRequests;                            // 0x0078(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1610[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bRespectCompetitiveIntegrity;                      // 0x0079(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C4C[0x6];                                     // 0x007A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FPartyReservation>              Reservations;                                      // 0x0080(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1611[0x10];                                    // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4D[0x10];                                    // 0x0090(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -886,6 +968,7 @@ static_assert(offsetof(UPartyBeaconState, bRestrictCrossConsole) == 0x000050, "M
 static_assert(offsetof(UPartyBeaconState, PlatformCrossplayRestrictions) == 0x000058, "Member 'UPartyBeaconState::PlatformCrossplayRestrictions' has a wrong offset!");
 static_assert(offsetof(UPartyBeaconState, PlatformTypeMapping) == 0x000068, "Member 'UPartyBeaconState::PlatformTypeMapping' has a wrong offset!");
 static_assert(offsetof(UPartyBeaconState, bEnableRemovalRequests) == 0x000078, "Member 'UPartyBeaconState::bEnableRemovalRequests' has a wrong offset!");
+static_assert(offsetof(UPartyBeaconState, bRespectCompetitiveIntegrity) == 0x000079, "Member 'UPartyBeaconState::bRespectCompetitiveIntegrity' has a wrong offset!");
 static_assert(offsetof(UPartyBeaconState, Reservations) == 0x000080, "Member 'UPartyBeaconState::Reservations' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.QuitMatchCallbackProxy
@@ -895,7 +978,7 @@ class UQuitMatchCallbackProxy final  : public UOnlineBlueprintCallProxyBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1612[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4E[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UQuitMatchCallbackProxy* QuitMatch(class UObject* WorldContextObject, class APlayerController* PlayerController, const class FString& MatchID, EMPMatchOutcome Outcome, int32 TurnTimeoutInSeconds);
@@ -922,7 +1005,7 @@ class UShowLoginUICallbackProxy final  : public UBlueprintAsyncActionBase
 public:
 	FMulticastInlineDelegateProperty_             OnSuccess;                                         // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailure;                                         // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1614[0x10];                                    // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C50[0x10];                                    // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UShowLoginUICallbackProxy* ShowExternalLoginUI(class UObject* WorldContextObject, class APlayerController* InPlayerController);
@@ -943,17 +1026,17 @@ static_assert(offsetof(UShowLoginUICallbackProxy, OnSuccess) == 0x000030, "Membe
 static_assert(offsetof(UShowLoginUICallbackProxy, OnFailure) == 0x000040, "Member 'UShowLoginUICallbackProxy::OnFailure' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.SpectatorBeaconClient
-// 0x00F8 (0x0428 - 0x0330)
+// 0x00F8 (0x0430 - 0x0338)
 class ASpectatorBeaconClient final  : public AOnlineBeaconClient
 {
 public:
-	uint8                                         Pad_1615[0x30];                                    // 0x0330(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 DestSessionId;                                     // 0x0360(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FSpectatorReservation                  PendingReservation;                                // 0x0370(0x0088)(Protected, NativeAccessSpecifierProtected)
-	ESpectatorClientRequestType                   RequestType;                                       // 0x03F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bPendingReservationSent;                           // 0x03F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bCancelReservation;                                // 0x03FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1616[0x2D];                                    // 0x03FB(0x002D)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C51[0x30];                                    // 0x0338(0x0030)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 DestSessionId;                                     // 0x0368(0x0010)(ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FSpectatorReservation                  PendingReservation;                                // 0x0378(0x0088)(Protected, NativeAccessSpecifierProtected)
+	ESpectatorClientRequestType                   RequestType;                                       // 0x0400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bPendingReservationSent;                           // 0x0401(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bCancelReservation;                                // 0x0402(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C52[0x2D];                                    // 0x0403(0x002D)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ClientCancelReservationResponse(ESpectatorReservationResult ReservationResponse);
@@ -974,25 +1057,26 @@ public:
 	}
 };
 static_assert(alignof(ASpectatorBeaconClient) == 0x000008, "Wrong alignment on ASpectatorBeaconClient");
-static_assert(sizeof(ASpectatorBeaconClient) == 0x000428, "Wrong size on ASpectatorBeaconClient");
-static_assert(offsetof(ASpectatorBeaconClient, DestSessionId) == 0x000360, "Member 'ASpectatorBeaconClient::DestSessionId' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, PendingReservation) == 0x000370, "Member 'ASpectatorBeaconClient::PendingReservation' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, RequestType) == 0x0003F8, "Member 'ASpectatorBeaconClient::RequestType' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, bPendingReservationSent) == 0x0003F9, "Member 'ASpectatorBeaconClient::bPendingReservationSent' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconClient, bCancelReservation) == 0x0003FA, "Member 'ASpectatorBeaconClient::bCancelReservation' has a wrong offset!");
+static_assert(sizeof(ASpectatorBeaconClient) == 0x000430, "Wrong size on ASpectatorBeaconClient");
+static_assert(offsetof(ASpectatorBeaconClient, DestSessionId) == 0x000368, "Member 'ASpectatorBeaconClient::DestSessionId' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconClient, PendingReservation) == 0x000378, "Member 'ASpectatorBeaconClient::PendingReservation' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconClient, RequestType) == 0x000400, "Member 'ASpectatorBeaconClient::RequestType' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconClient, bPendingReservationSent) == 0x000401, "Member 'ASpectatorBeaconClient::bPendingReservationSent' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconClient, bCancelReservation) == 0x000402, "Member 'ASpectatorBeaconClient::bCancelReservation' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.SpectatorBeaconHost
-// 0x0078 (0x0340 - 0x02C8)
+// 0x0078 (0x0348 - 0x02D0)
 class ASpectatorBeaconHost final  : public AOnlineBeaconHostObject
 {
 public:
-	class USpectatorBeaconState*                  State;                                             // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1617[0x60];                                    // 0x02D0(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
-	bool                                          bLogoutOnSessionTimeout;                           // 0x0330(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1618[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         SessionTimeoutSecs;                                // 0x0334(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	float                                         TravelSessionTimeoutSecs;                          // 0x0338(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1619[0x4];                                     // 0x033C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	class USpectatorBeaconState*                  State;                                             // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C53[0x60];                                    // 0x02D8(0x0060)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bLogoutOnSessionTimeout;                           // 0x0338(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsValidationStrRequired;                          // 0x0339(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C54[0x2];                                     // 0x033A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         SessionTimeoutSecs;                                // 0x033C(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	float                                         TravelSessionTimeoutSecs;                          // 0x0340(0x0004)(ZeroConstructor, Transient, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1C55[0x4];                                     // 0x0344(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1005,11 +1089,12 @@ public:
 	}
 };
 static_assert(alignof(ASpectatorBeaconHost) == 0x000008, "Wrong alignment on ASpectatorBeaconHost");
-static_assert(sizeof(ASpectatorBeaconHost) == 0x000340, "Wrong size on ASpectatorBeaconHost");
-static_assert(offsetof(ASpectatorBeaconHost, State) == 0x0002C8, "Member 'ASpectatorBeaconHost::State' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, bLogoutOnSessionTimeout) == 0x000330, "Member 'ASpectatorBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, SessionTimeoutSecs) == 0x000334, "Member 'ASpectatorBeaconHost::SessionTimeoutSecs' has a wrong offset!");
-static_assert(offsetof(ASpectatorBeaconHost, TravelSessionTimeoutSecs) == 0x000338, "Member 'ASpectatorBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
+static_assert(sizeof(ASpectatorBeaconHost) == 0x000348, "Wrong size on ASpectatorBeaconHost");
+static_assert(offsetof(ASpectatorBeaconHost, State) == 0x0002D0, "Member 'ASpectatorBeaconHost::State' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconHost, bLogoutOnSessionTimeout) == 0x000338, "Member 'ASpectatorBeaconHost::bLogoutOnSessionTimeout' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconHost, bIsValidationStrRequired) == 0x000339, "Member 'ASpectatorBeaconHost::bIsValidationStrRequired' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconHost, SessionTimeoutSecs) == 0x00033C, "Member 'ASpectatorBeaconHost::SessionTimeoutSecs' has a wrong offset!");
+static_assert(offsetof(ASpectatorBeaconHost, TravelSessionTimeoutSecs) == 0x000340, "Member 'ASpectatorBeaconHost::TravelSessionTimeoutSecs' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.SpectatorBeaconState
 // 0x0038 (0x0060 - 0x0028)
@@ -1020,9 +1105,9 @@ public:
 	int32                                         NumConsumedReservations;                           // 0x0030(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         MaxReservations;                                   // 0x0034(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bRestrictCrossConsole;                             // 0x0038(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_161A[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C56[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSpectatorReservation>          Reservations;                                      // 0x0040(0x0010)(ZeroConstructor, Transient, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_161B[0x10];                                    // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C57[0x10];                                    // 0x0050(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -1043,7 +1128,7 @@ static_assert(offsetof(USpectatorBeaconState, bRestrictCrossConsole) == 0x000038
 static_assert(offsetof(USpectatorBeaconState, Reservations) == 0x000040, "Member 'USpectatorBeaconState::Reservations' has a wrong offset!");
 
 // Class OnlineSubsystemUtils.TestBeaconClient
-// 0x0000 (0x0330 - 0x0330)
+// 0x0000 (0x0338 - 0x0338)
 class ATestBeaconClient final  : public AOnlineBeaconClient
 {
 public:
@@ -1061,10 +1146,10 @@ public:
 	}
 };
 static_assert(alignof(ATestBeaconClient) == 0x000008, "Wrong alignment on ATestBeaconClient");
-static_assert(sizeof(ATestBeaconClient) == 0x000330, "Wrong size on ATestBeaconClient");
+static_assert(sizeof(ATestBeaconClient) == 0x000338, "Wrong size on ATestBeaconClient");
 
 // Class OnlineSubsystemUtils.TestBeaconHost
-// 0x0000 (0x02C8 - 0x02C8)
+// 0x0000 (0x02D0 - 0x02D0)
 class ATestBeaconHost final  : public AOnlineBeaconHostObject
 {
 public:
@@ -1078,7 +1163,7 @@ public:
 	}
 };
 static_assert(alignof(ATestBeaconHost) == 0x000008, "Wrong alignment on ATestBeaconHost");
-static_assert(sizeof(ATestBeaconHost) == 0x0002C8, "Wrong size on ATestBeaconHost");
+static_assert(sizeof(ATestBeaconHost) == 0x0002D0, "Wrong size on ATestBeaconHost");
 
 // Class OnlineSubsystemUtils.TurnBasedBlueprintLibrary
 // 0x0000 (0x0028 - 0x0028)
@@ -1104,11 +1189,11 @@ static_assert(alignof(UTurnBasedBlueprintLibrary) == 0x000008, "Wrong alignment 
 static_assert(sizeof(UTurnBasedBlueprintLibrary) == 0x000028, "Wrong size on UTurnBasedBlueprintLibrary");
 
 // Class OnlineSubsystemUtils.VoipListenerSynthComponent
-// 0x0060 (0x07F0 - 0x0790)
+// 0x0060 (0x0960 - 0x0900)
 class UVoipListenerSynthComponent final  : public USynthComponent
 {
 public:
-	uint8                                         Pad_161F[0x60];                                    // 0x0790(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C5B[0x60];                                    // 0x0900(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool IsIdling();
@@ -1124,7 +1209,7 @@ public:
 	}
 };
 static_assert(alignof(UVoipListenerSynthComponent) == 0x000010, "Wrong alignment on UVoipListenerSynthComponent");
-static_assert(sizeof(UVoipListenerSynthComponent) == 0x0007F0, "Wrong size on UVoipListenerSynthComponent");
+static_assert(sizeof(UVoipListenerSynthComponent) == 0x000960, "Wrong size on UVoipListenerSynthComponent");
 
 }
 

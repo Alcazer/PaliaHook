@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "CommonWidgetInputExtended_classes.hpp"
-#include "S6UICore_structs.hpp"
-#include "CommonUI_classes.hpp"
-#include "SlateCore_structs.hpp"
 #include "Engine_classes.hpp"
-#include "UMG_structs.hpp"
-#include "UMG_classes.hpp"
 #include "CoreUObject_classes.hpp"
+#include "CommonWidgetInputExtended_classes.hpp"
+#include "CommonUI_classes.hpp"
+#include "S6UICore_structs.hpp"
 #include "EnhancedInput_structs.hpp"
 #include "EnhancedInput_classes.hpp"
+#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
+#include "UMG_classes.hpp"
 #include "ModelViewViewModel_structs.hpp"
 #include "ModelViewViewModel_classes.hpp"
 #include "S6EnhancedInputExtended_structs.hpp"
@@ -29,14 +29,14 @@ namespace SDK
 {
 
 // Class S6UICore.S6UI_AsyncAction_OpenModal
-// 0x0058 (0x0088 - 0x0030)
+// 0x0050 (0x0080 - 0x0030)
 class US6UI_AsyncAction_OpenModal final  : public UBlueprintAsyncActionBase
 {
 public:
 	FMulticastInlineDelegateProperty_             OnOpened;                                          // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnFailed;                                          // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1577[0x8];                                     // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TSoftClassPtr<class UClass>                   ModalClass;                                        // 0x0058(0x0030)(Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1DF4[0x8];                                     // 0x0050(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TSoftClassPtr<class UClass>                   ModalClass;                                        // 0x0058(0x0028)(Transient, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
 public:
 	static class US6UI_AsyncAction_OpenModal* OpenModal(class APlayerController* PC, TSoftClassPtr<class UClass> WidgetClass);
@@ -55,47 +55,18 @@ public:
 	}
 };
 static_assert(alignof(US6UI_AsyncAction_OpenModal) == 0x000008, "Wrong alignment on US6UI_AsyncAction_OpenModal");
-static_assert(sizeof(US6UI_AsyncAction_OpenModal) == 0x000088, "Wrong size on US6UI_AsyncAction_OpenModal");
+static_assert(sizeof(US6UI_AsyncAction_OpenModal) == 0x000080, "Wrong size on US6UI_AsyncAction_OpenModal");
 static_assert(offsetof(US6UI_AsyncAction_OpenModal, OnOpened) == 0x000030, "Member 'US6UI_AsyncAction_OpenModal::OnOpened' has a wrong offset!");
 static_assert(offsetof(US6UI_AsyncAction_OpenModal, OnFailed) == 0x000040, "Member 'US6UI_AsyncAction_OpenModal::OnFailed' has a wrong offset!");
 static_assert(offsetof(US6UI_AsyncAction_OpenModal, ModalClass) == 0x000058, "Member 'US6UI_AsyncAction_OpenModal::ModalClass' has a wrong offset!");
 
-// Class S6UICore.S6UI_InputRouterSubsystem
-// 0x01D0 (0x0200 - 0x0030)
-class US6UI_InputRouterSubsystem final  : public ULocalPlayerSubsystem
-{
-public:
-	uint8                                         Pad_1578[0x70];                                    // 0x0030(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UInputMappingContext*>           AppliedInputMappingContexts;                       // 0x00A0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1579[0x150];                                   // 0x00B0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
-
-public:
-	void HandleInputActionHandlingComponentBindingsChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent);
-	void HandleInputActionHandlingComponentEnabledStateChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent);
-	void RegisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler);
-	void UnregisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler);
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"S6UI_InputRouterSubsystem">();
-	}
-	static class US6UI_InputRouterSubsystem* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<US6UI_InputRouterSubsystem>();
-	}
-};
-static_assert(alignof(US6UI_InputRouterSubsystem) == 0x000008, "Wrong alignment on US6UI_InputRouterSubsystem");
-static_assert(sizeof(US6UI_InputRouterSubsystem) == 0x000200, "Wrong size on US6UI_InputRouterSubsystem");
-static_assert(offsetof(US6UI_InputRouterSubsystem, AppliedInputMappingContexts) == 0x0000A0, "Member 'US6UI_InputRouterSubsystem::AppliedInputMappingContexts' has a wrong offset!");
-
 // Class S6UICore.S6UI_InputActionHandlingUserWidget
-// 0x0010 (0x04F0 - 0x04E0)
+// 0x0010 (0x0520 - 0x0510)
 class US6UI_InputActionHandlingUserWidget : public UCommonActivatableWidgetInputExtended
 {
 public:
-	uint8                                         Pad_157A[0x8];                                     // 0x04E0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	class US6UI_InputActionHandlingWidgetComponent* InputActionHandlingWidgetComponent;                // 0x04E8(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DF5[0x8];                                     // 0x0510(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	class US6UI_InputActionHandlingWidgetComponent* InputActionHandlingWidgetComponent;                // 0x0518(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -108,19 +79,19 @@ public:
 	}
 };
 static_assert(alignof(US6UI_InputActionHandlingUserWidget) == 0x000008, "Wrong alignment on US6UI_InputActionHandlingUserWidget");
-static_assert(sizeof(US6UI_InputActionHandlingUserWidget) == 0x0004F0, "Wrong size on US6UI_InputActionHandlingUserWidget");
-static_assert(offsetof(US6UI_InputActionHandlingUserWidget, InputActionHandlingWidgetComponent) == 0x0004E8, "Member 'US6UI_InputActionHandlingUserWidget::InputActionHandlingWidgetComponent' has a wrong offset!");
+static_assert(sizeof(US6UI_InputActionHandlingUserWidget) == 0x000520, "Wrong size on US6UI_InputActionHandlingUserWidget");
+static_assert(offsetof(US6UI_InputActionHandlingUserWidget, InputActionHandlingWidgetComponent) == 0x000518, "Member 'US6UI_InputActionHandlingUserWidget::InputActionHandlingWidgetComponent' has a wrong offset!");
 
 // Class S6UICore.S6UI_ModalWidgetBase
-// 0x0038 (0x0528 - 0x04F0)
+// 0x0038 (0x0558 - 0x0520)
 class US6UI_ModalWidgetBase : public US6UI_InputActionHandlingUserWidget
 {
 public:
-	uint8                                         Pad_157B[0x10];                                    // 0x04F0(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             OnStartedClosing;                                  // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnFinishedClosing;                                 // 0x0510(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	bool                                          bWantsCursor;                                      // 0x0520(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_157C[0x7];                                     // 0x0521(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF6[0x10];                                    // 0x0520(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             OnStartedClosing;                                  // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnFinishedClosing;                                 // 0x0540(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	bool                                          bWantsCursor;                                      // 0x0550(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1DF7[0x7];                                     // 0x0551(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanClose();
@@ -149,19 +120,19 @@ public:
 	}
 };
 static_assert(alignof(US6UI_ModalWidgetBase) == 0x000008, "Wrong alignment on US6UI_ModalWidgetBase");
-static_assert(sizeof(US6UI_ModalWidgetBase) == 0x000528, "Wrong size on US6UI_ModalWidgetBase");
-static_assert(offsetof(US6UI_ModalWidgetBase, OnStartedClosing) == 0x000500, "Member 'US6UI_ModalWidgetBase::OnStartedClosing' has a wrong offset!");
-static_assert(offsetof(US6UI_ModalWidgetBase, OnFinishedClosing) == 0x000510, "Member 'US6UI_ModalWidgetBase::OnFinishedClosing' has a wrong offset!");
-static_assert(offsetof(US6UI_ModalWidgetBase, bWantsCursor) == 0x000520, "Member 'US6UI_ModalWidgetBase::bWantsCursor' has a wrong offset!");
+static_assert(sizeof(US6UI_ModalWidgetBase) == 0x000558, "Wrong size on US6UI_ModalWidgetBase");
+static_assert(offsetof(US6UI_ModalWidgetBase, OnStartedClosing) == 0x000530, "Member 'US6UI_ModalWidgetBase::OnStartedClosing' has a wrong offset!");
+static_assert(offsetof(US6UI_ModalWidgetBase, OnFinishedClosing) == 0x000540, "Member 'US6UI_ModalWidgetBase::OnFinishedClosing' has a wrong offset!");
+static_assert(offsetof(US6UI_ModalWidgetBase, bWantsCursor) == 0x000550, "Member 'US6UI_ModalWidgetBase::bWantsCursor' has a wrong offset!");
 
 // Class S6UICore.S6UI_CommandMenu
-// 0x0090 (0x05B8 - 0x0528)
+// 0x0090 (0x05E8 - 0x0558)
 class US6UI_CommandMenu final  : public US6UI_ModalWidgetBase
 {
 public:
-	TArray<class FName>                           NamespacesToHaveFirst;                             // 0x0528(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
-	class UNativeWidgetHost*                      MenuHost;                                          // 0x0538(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_157D[0x78];                                    // 0x0540(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           NamespacesToHaveFirst;                             // 0x0558(0x0010)(Edit, BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UNativeWidgetHost*                      MenuHost;                                          // 0x0568(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DF8[0x78];                                    // 0x0570(0x0078)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -174,72 +145,40 @@ public:
 	}
 };
 static_assert(alignof(US6UI_CommandMenu) == 0x000008, "Wrong alignment on US6UI_CommandMenu");
-static_assert(sizeof(US6UI_CommandMenu) == 0x0005B8, "Wrong size on US6UI_CommandMenu");
-static_assert(offsetof(US6UI_CommandMenu, NamespacesToHaveFirst) == 0x000528, "Member 'US6UI_CommandMenu::NamespacesToHaveFirst' has a wrong offset!");
-static_assert(offsetof(US6UI_CommandMenu, MenuHost) == 0x000538, "Member 'US6UI_CommandMenu::MenuHost' has a wrong offset!");
-
-// Class S6UICore.S6UI_StateUserWidget
-// 0x0038 (0x0528 - 0x04F0)
-class US6UI_StateUserWidget : public US6UI_InputActionHandlingUserWidget
-{
-public:
-	struct FMVVMViewModelContext                  ViewModelContext;                                  // 0x04F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	class US6UI_StateViewModel*                   ViewModel;                                         // 0x0500(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<TSoftClassPtr<class UClass>>           WidgetClassesToPreload;                            // 0x0508(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	TArray<TSubclassOf<class UWidget>>            LoadedWidgetClasses;                               // 0x0518(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-
-public:
-	struct FS6UI_InputMode GetInputMode() const;
-	class US6UI_StateViewModel* GetViewModel() const;
-	const struct FMVVMViewModelContext GetViewModelContext() const;
-
-public:
-	static class UClass* StaticClass()
-	{
-		return StaticClassImpl<"S6UI_StateUserWidget">();
-	}
-	static class US6UI_StateUserWidget* GetDefaultObj()
-	{
-		return GetDefaultObjImpl<US6UI_StateUserWidget>();
-	}
-};
-static_assert(alignof(US6UI_StateUserWidget) == 0x000008, "Wrong alignment on US6UI_StateUserWidget");
-static_assert(sizeof(US6UI_StateUserWidget) == 0x000528, "Wrong size on US6UI_StateUserWidget");
-static_assert(offsetof(US6UI_StateUserWidget, ViewModelContext) == 0x0004F0, "Member 'US6UI_StateUserWidget::ViewModelContext' has a wrong offset!");
-static_assert(offsetof(US6UI_StateUserWidget, ViewModel) == 0x000500, "Member 'US6UI_StateUserWidget::ViewModel' has a wrong offset!");
-static_assert(offsetof(US6UI_StateUserWidget, WidgetClassesToPreload) == 0x000508, "Member 'US6UI_StateUserWidget::WidgetClassesToPreload' has a wrong offset!");
-static_assert(offsetof(US6UI_StateUserWidget, LoadedWidgetClasses) == 0x000518, "Member 'US6UI_StateUserWidget::LoadedWidgetClasses' has a wrong offset!");
+static_assert(sizeof(US6UI_CommandMenu) == 0x0005E8, "Wrong size on US6UI_CommandMenu");
+static_assert(offsetof(US6UI_CommandMenu, NamespacesToHaveFirst) == 0x000558, "Member 'US6UI_CommandMenu::NamespacesToHaveFirst' has a wrong offset!");
+static_assert(offsetof(US6UI_CommandMenu, MenuHost) == 0x000568, "Member 'US6UI_CommandMenu::MenuHost' has a wrong offset!");
 
 // Class S6UICore.S6UI_CustomNavigationGroup
-// 0x0108 (0x0270 - 0x0168)
+// 0x0108 (0x02A0 - 0x0198)
 class US6UI_CustomNavigationGroup final  : public UPanelWidget
 {
 public:
-	uint8                                         Pad_157E[0x10];                                    // 0x0168(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
-	ES6UI_NavGroupType                            NavGroupType;                                      // 0x0178(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsGroupEnabled;                                   // 0x0179(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bIsNullableNavGroup;                               // 0x017A(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_157F[0x5];                                     // 0x017B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        UINavWidgets;                                      // 0x0180(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FS6UI_NavExplicitData>          NavExplicitDatas;                                  // 0x0190(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	int32                                         FirstSelectIndex;                                  // 0x01A0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	int32                                         GridDimensionX;                                    // 0x01A4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bWrapHorizontalNavigation;                         // 0x01A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	bool                                          bAutoEdgeEscape;                                   // 0x01A9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1580[0x6];                                     // 0x01AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<EUINavigation>                         EdgeEscapeDirections;                              // 0x01B0(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsFocusable;                                      // 0x01C0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1581[0x7];                                     // 0x01C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	FMulticastInlineDelegateProperty_             BP_OnNavigationGroupInitialized;                   // 0x01C8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             BP_FOnNavigated;                                   // 0x01D8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	FMulticastInlineDelegateProperty_             BP_OnGroupEnableChanged;                           // 0x01E8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
-	TDelegate<void(EUINavigation InNavigationType, class US6UI_CustomNavigationGroup* InOriginNavigationGroup, int32 InOriginWidgetIndex, int32 InTargetWidgetIndex)> BP_OnNavigationGroupTransition;                    // 0x01F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TDelegate<void(class UObject* NavObject)>     BP_OnIsWidgetValiedToNavigate;                     // 0x0208(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TArray<class UWidget*>                        InternalUINavWidgets;                              // 0x0218(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1582[0x8];                                     // 0x0228(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FS6UI_NavigationGroupTranstionData> DynamicTransitionDatas;                            // 0x0230(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	TArray<struct FS6UI_NavigationGroupTranstionData> DynamicBoundaryTransitionDatas;                    // 0x0240(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1583[0x20];                                    // 0x0250(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF9[0x10];                                    // 0x0198(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	ES6UI_NavGroupType                            NavGroupType;                                      // 0x01A8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsGroupEnabled;                                   // 0x01A9(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bIsNullableNavGroup;                               // 0x01AA(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DFA[0x5];                                     // 0x01AB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        UINavWidgets;                                      // 0x01B0(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FS6UI_NavExplicitData>          NavExplicitDatas;                                  // 0x01C0(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	int32                                         FirstSelectIndex;                                  // 0x01D0(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	int32                                         GridDimensionX;                                    // 0x01D4(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bWrapHorizontalNavigation;                         // 0x01D8(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	bool                                          bAutoEdgeEscape;                                   // 0x01D9(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DFB[0x6];                                     // 0x01DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<EUINavigation>                         EdgeEscapeDirections;                              // 0x01E0(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsFocusable;                                      // 0x01F0(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DFC[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	FMulticastInlineDelegateProperty_             BP_OnNavigationGroupInitialized;                   // 0x01F8(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             BP_FOnNavigated;                                   // 0x0208(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             BP_OnGroupEnableChanged;                           // 0x0218(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, Protected, NativeAccessSpecifierProtected)
+	TDelegate<void(EUINavigation InNavigationType, class US6UI_CustomNavigationGroup* InOriginNavigationGroup, int32 InOriginWidgetIndex, int32 InTargetWidgetIndex)> BP_OnNavigationGroupTransition;                    // 0x0228(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TDelegate<void(class UObject* NavObject)>     BP_OnIsWidgetValiedToNavigate;                     // 0x0238(0x0010)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<class UWidget*>                        InternalUINavWidgets;                              // 0x0248(0x0010)(ExportObject, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DFD[0x8];                                     // 0x0258(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FS6UI_NavigationGroupTranstionData> DynamicTransitionDatas;                            // 0x0260(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	TArray<struct FS6UI_NavigationGroupTranstionData> DynamicBoundaryTransitionDatas;                    // 0x0270(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Transient, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DFE[0x20];                                    // 0x0280(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ActiveNavigationGroup(bool bDelayActive, int32 InAutoSelectNavWidgetID);
@@ -275,26 +214,26 @@ public:
 	}
 };
 static_assert(alignof(US6UI_CustomNavigationGroup) == 0x000008, "Wrong alignment on US6UI_CustomNavigationGroup");
-static_assert(sizeof(US6UI_CustomNavigationGroup) == 0x000270, "Wrong size on US6UI_CustomNavigationGroup");
-static_assert(offsetof(US6UI_CustomNavigationGroup, NavGroupType) == 0x000178, "Member 'US6UI_CustomNavigationGroup::NavGroupType' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, bIsGroupEnabled) == 0x000179, "Member 'US6UI_CustomNavigationGroup::bIsGroupEnabled' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, bIsNullableNavGroup) == 0x00017A, "Member 'US6UI_CustomNavigationGroup::bIsNullableNavGroup' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, UINavWidgets) == 0x000180, "Member 'US6UI_CustomNavigationGroup::UINavWidgets' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, NavExplicitDatas) == 0x000190, "Member 'US6UI_CustomNavigationGroup::NavExplicitDatas' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, FirstSelectIndex) == 0x0001A0, "Member 'US6UI_CustomNavigationGroup::FirstSelectIndex' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, GridDimensionX) == 0x0001A4, "Member 'US6UI_CustomNavigationGroup::GridDimensionX' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, bWrapHorizontalNavigation) == 0x0001A8, "Member 'US6UI_CustomNavigationGroup::bWrapHorizontalNavigation' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, bAutoEdgeEscape) == 0x0001A9, "Member 'US6UI_CustomNavigationGroup::bAutoEdgeEscape' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, EdgeEscapeDirections) == 0x0001B0, "Member 'US6UI_CustomNavigationGroup::EdgeEscapeDirections' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, bIsFocusable) == 0x0001C0, "Member 'US6UI_CustomNavigationGroup::bIsFocusable' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnNavigationGroupInitialized) == 0x0001C8, "Member 'US6UI_CustomNavigationGroup::BP_OnNavigationGroupInitialized' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, BP_FOnNavigated) == 0x0001D8, "Member 'US6UI_CustomNavigationGroup::BP_FOnNavigated' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnGroupEnableChanged) == 0x0001E8, "Member 'US6UI_CustomNavigationGroup::BP_OnGroupEnableChanged' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnNavigationGroupTransition) == 0x0001F8, "Member 'US6UI_CustomNavigationGroup::BP_OnNavigationGroupTransition' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnIsWidgetValiedToNavigate) == 0x000208, "Member 'US6UI_CustomNavigationGroup::BP_OnIsWidgetValiedToNavigate' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, InternalUINavWidgets) == 0x000218, "Member 'US6UI_CustomNavigationGroup::InternalUINavWidgets' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, DynamicTransitionDatas) == 0x000230, "Member 'US6UI_CustomNavigationGroup::DynamicTransitionDatas' has a wrong offset!");
-static_assert(offsetof(US6UI_CustomNavigationGroup, DynamicBoundaryTransitionDatas) == 0x000240, "Member 'US6UI_CustomNavigationGroup::DynamicBoundaryTransitionDatas' has a wrong offset!");
+static_assert(sizeof(US6UI_CustomNavigationGroup) == 0x0002A0, "Wrong size on US6UI_CustomNavigationGroup");
+static_assert(offsetof(US6UI_CustomNavigationGroup, NavGroupType) == 0x0001A8, "Member 'US6UI_CustomNavigationGroup::NavGroupType' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, bIsGroupEnabled) == 0x0001A9, "Member 'US6UI_CustomNavigationGroup::bIsGroupEnabled' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, bIsNullableNavGroup) == 0x0001AA, "Member 'US6UI_CustomNavigationGroup::bIsNullableNavGroup' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, UINavWidgets) == 0x0001B0, "Member 'US6UI_CustomNavigationGroup::UINavWidgets' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, NavExplicitDatas) == 0x0001C0, "Member 'US6UI_CustomNavigationGroup::NavExplicitDatas' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, FirstSelectIndex) == 0x0001D0, "Member 'US6UI_CustomNavigationGroup::FirstSelectIndex' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, GridDimensionX) == 0x0001D4, "Member 'US6UI_CustomNavigationGroup::GridDimensionX' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, bWrapHorizontalNavigation) == 0x0001D8, "Member 'US6UI_CustomNavigationGroup::bWrapHorizontalNavigation' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, bAutoEdgeEscape) == 0x0001D9, "Member 'US6UI_CustomNavigationGroup::bAutoEdgeEscape' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, EdgeEscapeDirections) == 0x0001E0, "Member 'US6UI_CustomNavigationGroup::EdgeEscapeDirections' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, bIsFocusable) == 0x0001F0, "Member 'US6UI_CustomNavigationGroup::bIsFocusable' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnNavigationGroupInitialized) == 0x0001F8, "Member 'US6UI_CustomNavigationGroup::BP_OnNavigationGroupInitialized' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, BP_FOnNavigated) == 0x000208, "Member 'US6UI_CustomNavigationGroup::BP_FOnNavigated' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnGroupEnableChanged) == 0x000218, "Member 'US6UI_CustomNavigationGroup::BP_OnGroupEnableChanged' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnNavigationGroupTransition) == 0x000228, "Member 'US6UI_CustomNavigationGroup::BP_OnNavigationGroupTransition' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, BP_OnIsWidgetValiedToNavigate) == 0x000238, "Member 'US6UI_CustomNavigationGroup::BP_OnIsWidgetValiedToNavigate' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, InternalUINavWidgets) == 0x000248, "Member 'US6UI_CustomNavigationGroup::InternalUINavWidgets' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, DynamicTransitionDatas) == 0x000260, "Member 'US6UI_CustomNavigationGroup::DynamicTransitionDatas' has a wrong offset!");
+static_assert(offsetof(US6UI_CustomNavigationGroup, DynamicBoundaryTransitionDatas) == 0x000270, "Member 'US6UI_CustomNavigationGroup::DynamicBoundaryTransitionDatas' has a wrong offset!");
 
 // Class S6UICore.S6UI_CustomNavigationWidgetInterface
 // 0x0000 (0x0028 - 0x0028)
@@ -314,7 +253,7 @@ static_assert(alignof(IS6UI_CustomNavigationWidgetInterface) == 0x000008, "Wrong
 static_assert(sizeof(IS6UI_CustomNavigationWidgetInterface) == 0x000028, "Wrong size on IS6UI_CustomNavigationWidgetInterface");
 
 // Class S6UICore.S6UI_GameViewportClient
-// 0x0000 (0x03E0 - 0x03E0)
+// 0x0000 (0x03F0 - 0x03F0)
 class US6UI_GameViewportClient : public UCommonGameViewportClient
 {
 public:
@@ -328,7 +267,7 @@ public:
 	}
 };
 static_assert(alignof(US6UI_GameViewportClient) == 0x000008, "Wrong alignment on US6UI_GameViewportClient");
-static_assert(sizeof(US6UI_GameViewportClient) == 0x0003E0, "Wrong size on US6UI_GameViewportClient");
+static_assert(sizeof(US6UI_GameViewportClient) == 0x0003F0, "Wrong size on US6UI_GameViewportClient");
 
 // Class S6UICore.S6UI_InputActionHandlingWidgetComponent
 // 0x0048 (0x0070 - 0x0028)
@@ -337,7 +276,7 @@ class US6UI_InputActionHandlingWidgetComponent final  : public UObject
 public:
 	bool                                          bIsEnabled;                                        // 0x0028(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBlockAllUnhandledInputActions;                    // 0x0029(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_158C[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E07[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Priority;                                          // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FS6UI_RegisteredInputMappingContext> RegisteredInputMappingContexts;                    // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnInputActionBindingsChanged;                      // 0x0040(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
@@ -410,6 +349,67 @@ public:
 static_assert(alignof(US6UI_InputActionRouter) == 0x000008, "Wrong alignment on US6UI_InputActionRouter");
 static_assert(sizeof(US6UI_InputActionRouter) == 0x000158, "Wrong size on US6UI_InputActionRouter");
 
+// Class S6UICore.S6UI_InputRouterSubsystem
+// 0x01D0 (0x0200 - 0x0030)
+class US6UI_InputRouterSubsystem final  : public ULocalPlayerSubsystem
+{
+public:
+	uint8                                         Pad_1E0A[0x70];                                    // 0x0030(0x0070)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UInputMappingContext*>           AppliedInputMappingContexts;                       // 0x00A0(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
+	uint8                                         Pad_1E0B[0x150];                                   // 0x00B0(0x0150)(Fixing Struct Size After Last Property [ Dumper-7 ])
+
+public:
+	void HandleInputActionHandlingComponentBindingsChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent);
+	void HandleInputActionHandlingComponentEnabledStateChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent);
+	void RegisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler);
+	void UnregisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler);
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"S6UI_InputRouterSubsystem">();
+	}
+	static class US6UI_InputRouterSubsystem* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<US6UI_InputRouterSubsystem>();
+	}
+};
+static_assert(alignof(US6UI_InputRouterSubsystem) == 0x000008, "Wrong alignment on US6UI_InputRouterSubsystem");
+static_assert(sizeof(US6UI_InputRouterSubsystem) == 0x000200, "Wrong size on US6UI_InputRouterSubsystem");
+static_assert(offsetof(US6UI_InputRouterSubsystem, AppliedInputMappingContexts) == 0x0000A0, "Member 'US6UI_InputRouterSubsystem::AppliedInputMappingContexts' has a wrong offset!");
+
+// Class S6UICore.S6UI_StateUserWidget
+// 0x0038 (0x0558 - 0x0520)
+class US6UI_StateUserWidget : public US6UI_InputActionHandlingUserWidget
+{
+public:
+	struct FMVVMViewModelContext                  ViewModelContext;                                  // 0x0520(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
+	class US6UI_StateViewModel*                   ViewModel;                                         // 0x0530(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TArray<TSoftClassPtr<class UClass>>           WidgetClassesToPreload;                            // 0x0538(0x0010)(Edit, ZeroConstructor, DisableEditOnInstance, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TArray<TSubclassOf<class UWidget>>            LoadedWidgetClasses;                               // 0x0548(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+
+public:
+	struct FS6UI_InputMode GetInputMode() const;
+	class US6UI_StateViewModel* GetViewModel() const;
+	const struct FMVVMViewModelContext GetViewModelContext() const;
+
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"S6UI_StateUserWidget">();
+	}
+	static class US6UI_StateUserWidget* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<US6UI_StateUserWidget>();
+	}
+};
+static_assert(alignof(US6UI_StateUserWidget) == 0x000008, "Wrong alignment on US6UI_StateUserWidget");
+static_assert(sizeof(US6UI_StateUserWidget) == 0x000558, "Wrong size on US6UI_StateUserWidget");
+static_assert(offsetof(US6UI_StateUserWidget, ViewModelContext) == 0x000520, "Member 'US6UI_StateUserWidget::ViewModelContext' has a wrong offset!");
+static_assert(offsetof(US6UI_StateUserWidget, ViewModel) == 0x000530, "Member 'US6UI_StateUserWidget::ViewModel' has a wrong offset!");
+static_assert(offsetof(US6UI_StateUserWidget, WidgetClassesToPreload) == 0x000538, "Member 'US6UI_StateUserWidget::WidgetClassesToPreload' has a wrong offset!");
+static_assert(offsetof(US6UI_StateUserWidget, LoadedWidgetClasses) == 0x000548, "Member 'US6UI_StateUserWidget::LoadedWidgetClasses' has a wrong offset!");
+
 // Class S6UICore.S6UI_StateViewModel
 // 0x0010 (0x0078 - 0x0068)
 class US6UI_StateViewModel : public UMVVMViewModelBase
@@ -454,12 +454,12 @@ static_assert(alignof(IS6UI_ToolTipWidgetInterface) == 0x000008, "Wrong alignmen
 static_assert(sizeof(IS6UI_ToolTipWidgetInterface) == 0x000028, "Wrong size on IS6UI_ToolTipWidgetInterface");
 
 // Class S6UICore.S6UI_InputAction
-// 0x0030 (0x00A8 - 0x0078)
+// 0x0030 (0x00B0 - 0x0080)
 class US6UI_InputAction final  : public UInputAction
 {
 public:
-	class FText                                   DisplayName;                                       // 0x0078(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
-	class FText                                   Description;                                       // 0x0090(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   DisplayName;                                       // 0x0080(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
+	class FText                                   Description;                                       // 0x0098(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 
 public:
 	static class UClass* StaticClass()
@@ -472,26 +472,26 @@ public:
 	}
 };
 static_assert(alignof(US6UI_InputAction) == 0x000008, "Wrong alignment on US6UI_InputAction");
-static_assert(sizeof(US6UI_InputAction) == 0x0000A8, "Wrong size on US6UI_InputAction");
-static_assert(offsetof(US6UI_InputAction, DisplayName) == 0x000078, "Member 'US6UI_InputAction::DisplayName' has a wrong offset!");
-static_assert(offsetof(US6UI_InputAction, Description) == 0x000090, "Member 'US6UI_InputAction::Description' has a wrong offset!");
+static_assert(sizeof(US6UI_InputAction) == 0x0000B0, "Wrong size on US6UI_InputAction");
+static_assert(offsetof(US6UI_InputAction, DisplayName) == 0x000080, "Member 'US6UI_InputAction::DisplayName' has a wrong offset!");
+static_assert(offsetof(US6UI_InputAction, Description) == 0x000098, "Member 'US6UI_InputAction::Description' has a wrong offset!");
 
 // Class S6UICore.S6UI_UIManagerWidgetBase
-// 0x00C8 (0x05B8 - 0x04F0)
+// 0x00B8 (0x05D8 - 0x0520)
 class US6UI_UIManagerWidgetBase : public US6UI_InputActionHandlingUserWidget
 {
 public:
-	FMulticastInlineDelegateProperty_             OnInputModeRefreshed;                              // 0x04F0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	FMulticastInlineDelegateProperty_             OnChildWidgetLoadComplete;                         // 0x0500(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
-	class UOverlay*                               Overlay_ModalWidgetLayer;                          // 0x0510(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class USizeBox*                               SizeBox_StateWidget;                               // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	struct FInputMappingPriorityData              DefaultModalInputMappingData;                      // 0x0520(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
-	TSoftClassPtr<class UClass>                   DefaultStateWidgetType;                            // 0x0560(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	TSubclassOf<class US6UI_UIManagerCrossPlatformHelper> CrossPlatformHelperType;                           // 0x0590(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class US6UI_UIManagerCrossPlatformHelper*     CrossPlatformHelper;                               // 0x0598(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class US6UI_StateUserWidget*                  DefaultStateWidgetInstance;                        // 0x05A0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class US6UI_StateUserWidget*                  CurrentStateWidget;                                // 0x05A8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class US6UI_WidgetPoolManager*                WidgetPoolManager;                                 // 0x05B0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	FMulticastInlineDelegateProperty_             OnInputModeRefreshed;                              // 0x0520(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
+	FMulticastInlineDelegateProperty_             OnChildWidgetLoadComplete;                         // 0x0530(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, BlueprintCallable, NativeAccessSpecifierPublic)
+	class UOverlay*                               Overlay_ModalWidgetLayer;                          // 0x0540(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class USizeBox*                               SizeBox_StateWidget;                               // 0x0548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	struct FInputMappingPriorityData              DefaultModalInputMappingData;                      // 0x0550(0x0038)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   DefaultStateWidgetType;                            // 0x0588(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSubclassOf<class US6UI_UIManagerCrossPlatformHelper> CrossPlatformHelperType;                           // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class US6UI_UIManagerCrossPlatformHelper*     CrossPlatformHelper;                               // 0x05B8(0x0008)(BlueprintVisible, ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class US6UI_StateUserWidget*                  DefaultStateWidgetInstance;                        // 0x05C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class US6UI_StateUserWidget*                  CurrentStateWidget;                                // 0x05C8(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class US6UI_WidgetPoolManager*                WidgetPoolManager;                                 // 0x05D0(0x0008)(ZeroConstructor, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
 	static class US6UI_UIManagerWidgetBase* GetUIManagerWidget(class APlayerController* PC);
@@ -527,25 +527,25 @@ public:
 	}
 };
 static_assert(alignof(US6UI_UIManagerWidgetBase) == 0x000008, "Wrong alignment on US6UI_UIManagerWidgetBase");
-static_assert(sizeof(US6UI_UIManagerWidgetBase) == 0x0005B8, "Wrong size on US6UI_UIManagerWidgetBase");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, OnInputModeRefreshed) == 0x0004F0, "Member 'US6UI_UIManagerWidgetBase::OnInputModeRefreshed' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, OnChildWidgetLoadComplete) == 0x000500, "Member 'US6UI_UIManagerWidgetBase::OnChildWidgetLoadComplete' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, Overlay_ModalWidgetLayer) == 0x000510, "Member 'US6UI_UIManagerWidgetBase::Overlay_ModalWidgetLayer' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, SizeBox_StateWidget) == 0x000518, "Member 'US6UI_UIManagerWidgetBase::SizeBox_StateWidget' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultModalInputMappingData) == 0x000520, "Member 'US6UI_UIManagerWidgetBase::DefaultModalInputMappingData' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultStateWidgetType) == 0x000560, "Member 'US6UI_UIManagerWidgetBase::DefaultStateWidgetType' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, CrossPlatformHelperType) == 0x000590, "Member 'US6UI_UIManagerWidgetBase::CrossPlatformHelperType' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, CrossPlatformHelper) == 0x000598, "Member 'US6UI_UIManagerWidgetBase::CrossPlatformHelper' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultStateWidgetInstance) == 0x0005A0, "Member 'US6UI_UIManagerWidgetBase::DefaultStateWidgetInstance' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, CurrentStateWidget) == 0x0005A8, "Member 'US6UI_UIManagerWidgetBase::CurrentStateWidget' has a wrong offset!");
-static_assert(offsetof(US6UI_UIManagerWidgetBase, WidgetPoolManager) == 0x0005B0, "Member 'US6UI_UIManagerWidgetBase::WidgetPoolManager' has a wrong offset!");
+static_assert(sizeof(US6UI_UIManagerWidgetBase) == 0x0005D8, "Wrong size on US6UI_UIManagerWidgetBase");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, OnInputModeRefreshed) == 0x000520, "Member 'US6UI_UIManagerWidgetBase::OnInputModeRefreshed' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, OnChildWidgetLoadComplete) == 0x000530, "Member 'US6UI_UIManagerWidgetBase::OnChildWidgetLoadComplete' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, Overlay_ModalWidgetLayer) == 0x000540, "Member 'US6UI_UIManagerWidgetBase::Overlay_ModalWidgetLayer' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, SizeBox_StateWidget) == 0x000548, "Member 'US6UI_UIManagerWidgetBase::SizeBox_StateWidget' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultModalInputMappingData) == 0x000550, "Member 'US6UI_UIManagerWidgetBase::DefaultModalInputMappingData' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultStateWidgetType) == 0x000588, "Member 'US6UI_UIManagerWidgetBase::DefaultStateWidgetType' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, CrossPlatformHelperType) == 0x0005B0, "Member 'US6UI_UIManagerWidgetBase::CrossPlatformHelperType' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, CrossPlatformHelper) == 0x0005B8, "Member 'US6UI_UIManagerWidgetBase::CrossPlatformHelper' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, DefaultStateWidgetInstance) == 0x0005C0, "Member 'US6UI_UIManagerWidgetBase::DefaultStateWidgetInstance' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, CurrentStateWidget) == 0x0005C8, "Member 'US6UI_UIManagerWidgetBase::CurrentStateWidget' has a wrong offset!");
+static_assert(offsetof(US6UI_UIManagerWidgetBase, WidgetPoolManager) == 0x0005D0, "Member 'US6UI_UIManagerWidgetBase::WidgetPoolManager' has a wrong offset!");
 
 // Class S6UICore.S6UI_UIManagerHUDBase
-// 0x0038 (0x03C8 - 0x0390)
+// 0x0030 (0x03C8 - 0x0398)
 class AS6UI_UIManagerHUDBase : public AHUD
 {
 public:
-	TSoftClassPtr<class UClass>                   RootHUDWidgetType;                                 // 0x0390(0x0030)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	TSoftClassPtr<class UClass>                   RootHUDWidgetType;                                 // 0x0398(0x0028)(Edit, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class US6UI_UIManagerWidgetBase*              RootHUDWidgetInstance;                             // 0x03C0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -563,7 +563,7 @@ public:
 };
 static_assert(alignof(AS6UI_UIManagerHUDBase) == 0x000008, "Wrong alignment on AS6UI_UIManagerHUDBase");
 static_assert(sizeof(AS6UI_UIManagerHUDBase) == 0x0003C8, "Wrong size on AS6UI_UIManagerHUDBase");
-static_assert(offsetof(AS6UI_UIManagerHUDBase, RootHUDWidgetType) == 0x000390, "Member 'AS6UI_UIManagerHUDBase::RootHUDWidgetType' has a wrong offset!");
+static_assert(offsetof(AS6UI_UIManagerHUDBase, RootHUDWidgetType) == 0x000398, "Member 'AS6UI_UIManagerHUDBase::RootHUDWidgetType' has a wrong offset!");
 static_assert(offsetof(AS6UI_UIManagerHUDBase, RootHUDWidgetInstance) == 0x0003C0, "Member 'AS6UI_UIManagerHUDBase::RootHUDWidgetInstance' has a wrong offset!");
 
 // Class S6UICore.S6UI_UIManagerCrossPlatformHelper

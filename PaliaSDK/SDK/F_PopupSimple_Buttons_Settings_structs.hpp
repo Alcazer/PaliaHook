@@ -23,7 +23,7 @@ struct FF_PopupSimple_Buttons_Settings final
 public:
 	bool                                          UsePrimaryButton_4_03410D0F4EDDE15A55D06A91A070C13A; // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseSecondaryButton_5_DE1B51F3426F7DFE554129AD432A3703; // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4400[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4AB9[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SpacingBetweenButtons_7_73DFEFAC40AEB9855A55BE8F1B687EE8; // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                ButtonsPadding_9_17BEA53B448FA23281740A97248B6A71; // 0x0010(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 };

@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass RuntimeISMActor.RuntimeISMActor_C
-// 0x0008 (0x02A8 - 0x02A0)
+// 0x0008 (0x02B0 - 0x02A8)
 class ARuntimeISMActor_C final  : public AActor
 {
 public:
-	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A0(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -34,8 +34,8 @@ public:
 	}
 };
 static_assert(alignof(ARuntimeISMActor_C) == 0x000008, "Wrong alignment on ARuntimeISMActor_C");
-static_assert(sizeof(ARuntimeISMActor_C) == 0x0002A8, "Wrong size on ARuntimeISMActor_C");
-static_assert(offsetof(ARuntimeISMActor_C, DefaultSceneRoot) == 0x0002A0, "Member 'ARuntimeISMActor_C::DefaultSceneRoot' has a wrong offset!");
+static_assert(sizeof(ARuntimeISMActor_C) == 0x0002B0, "Wrong size on ARuntimeISMActor_C");
+static_assert(offsetof(ARuntimeISMActor_C, DefaultSceneRoot) == 0x0002A8, "Member 'ARuntimeISMActor_C::DefaultSceneRoot' has a wrong offset!");
 
 }
 

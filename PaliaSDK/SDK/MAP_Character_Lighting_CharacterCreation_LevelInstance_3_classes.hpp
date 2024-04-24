@@ -18,12 +18,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MAP_Character_Lighting_CharacterCreation_LevelInstance_3.MAP_Character_Lighting_CharacterCreation_C
-// 0x0010 (0x02B8 - 0x02A8)
+// 0x0010 (0x02C0 - 0x02B0)
 class AMAP_Character_Lighting_CharacterCreation_C final  : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class ADirectionalLight*                      DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty; // 0x02B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class ADirectionalLight*                      DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty; // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation(int32 EntryPoint, const struct FVector& CallFunc_GetForwardVector_ReturnValue, const struct FLinearColor& CallFunc_GetLightColor_ReturnValue, const struct FLinearColor& CallFunc_Conv_VectorToLinearColor_ReturnValue, EEndPlayReason K2Node_Event_EndPlayReason);
@@ -41,9 +41,9 @@ public:
 	}
 };
 static_assert(alignof(AMAP_Character_Lighting_CharacterCreation_C) == 0x000008, "Wrong alignment on AMAP_Character_Lighting_CharacterCreation_C");
-static_assert(sizeof(AMAP_Character_Lighting_CharacterCreation_C) == 0x0002B8, "Wrong size on AMAP_Character_Lighting_CharacterCreation_C");
-static_assert(offsetof(AMAP_Character_Lighting_CharacterCreation_C, UberGraphFrame) == 0x0002A8, "Member 'AMAP_Character_Lighting_CharacterCreation_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AMAP_Character_Lighting_CharacterCreation_C, DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty) == 0x0002B0, "Member 'AMAP_Character_Lighting_CharacterCreation_C::DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty' has a wrong offset!");
+static_assert(sizeof(AMAP_Character_Lighting_CharacterCreation_C) == 0x0002C0, "Wrong size on AMAP_Character_Lighting_CharacterCreation_C");
+static_assert(offsetof(AMAP_Character_Lighting_CharacterCreation_C, UberGraphFrame) == 0x0002B0, "Member 'AMAP_Character_Lighting_CharacterCreation_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AMAP_Character_Lighting_CharacterCreation_C, DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty) == 0x0002B8, "Member 'AMAP_Character_Lighting_CharacterCreation_C::DirectionalLight_0_ExecuteUbergraph_MAP_Character_Lighting_CharacterCreation_RefProperty' has a wrong offset!");
 
 }
 

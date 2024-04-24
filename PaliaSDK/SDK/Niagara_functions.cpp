@@ -17,6 +17,807 @@
 namespace SDK
 {
 
+// Function Niagara.NiagaraDataChannelReader.InitAccess
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FNiagaraDataChannelSearchParametersSearchParams                                           (Parm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    bReadPrevFrameData                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataChannelReader::InitAccess(const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPrevFrameData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "InitAccess");
+
+	Params::NiagaraDataChannelReader_InitAccess Parms{};
+
+	Parms.SearchParams = std::move(SearchParams);
+	Parms.bReadPrevFrameData = bReadPrevFrameData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.Num
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraDataChannelReader::Num() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "Num");
+
+	Params::NiagaraDataChannelReader_Num Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadBool
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataChannelReader::ReadBool(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadBool");
+
+	Params::NiagaraDataChannelReader_ReadBool Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadFloat
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+double UNiagaraDataChannelReader::ReadFloat(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadFloat");
+
+	Params::NiagaraDataChannelReader_ReadFloat Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadInt
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraDataChannelReader::ReadInt(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadInt");
+
+	Params::NiagaraDataChannelReader_ReadInt Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadLinearColor
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FLinearColor UNiagaraDataChannelReader::ReadLinearColor(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadLinearColor");
+
+	Params::NiagaraDataChannelReader_ReadLinearColor Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadPosition
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UNiagaraDataChannelReader::ReadPosition(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadPosition");
+
+	Params::NiagaraDataChannelReader_ReadPosition Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadQuat
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FQuat UNiagaraDataChannelReader::ReadQuat(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadQuat");
+
+	Params::NiagaraDataChannelReader_ReadQuat Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadVector
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UNiagaraDataChannelReader::ReadVector(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadVector");
+
+	Params::NiagaraDataChannelReader_ReadVector Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadVector2D
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UNiagaraDataChannelReader::ReadVector2D(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadVector2D");
+
+	Params::NiagaraDataChannelReader_ReadVector2D Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelReader.ReadVector4
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector4 UNiagaraDataChannelReader::ReadVector4(class FName VarName, int32 Param_Index) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelReader", "ReadVector4");
+
+	Params::NiagaraDataChannelReader_ReadVector4 Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.InitWrite
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// struct FNiagaraDataChannelSearchParametersSearchParams                                           (Parm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToGame                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToCPU                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToGPU                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataChannelWriter::InitWrite(const struct FNiagaraDataChannelSearchParameters& SearchParams, int32 Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "InitWrite");
+
+	Params::NiagaraDataChannelWriter_InitWrite Parms{};
+
+	Parms.SearchParams = std::move(SearchParams);
+	Parms.Count = Count;
+	Parms.bVisibleToGame = bVisibleToGame;
+	Parms.bVisibleToCPU = bVisibleToCPU;
+	Parms.bVisibleToGPU = bVisibleToGPU;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteBool
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteBool(class FName VarName, int32 Param_Index, bool InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteBool");
+
+	Params::NiagaraDataChannelWriter_WriteBool Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteFloat
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// double                                  InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteFloat(class FName VarName, int32 Param_Index, double InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteFloat");
+
+	Params::NiagaraDataChannelWriter_WriteFloat Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteInt
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteInt(class FName VarName, int32 Param_Index, int32 InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteInt");
+
+	Params::NiagaraDataChannelWriter_WriteInt Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = InData;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteLinearColor
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteLinearColor(class FName VarName, int32 Param_Index, const struct FLinearColor& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteLinearColor");
+
+	Params::NiagaraDataChannelWriter_WriteLinearColor Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WritePosition
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WritePosition(class FName VarName, int32 Param_Index, const struct FVector& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WritePosition");
+
+	Params::NiagaraDataChannelWriter_WritePosition Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteQuat
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            InData                                                 (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteQuat(class FName VarName, int32 Param_Index, const struct FQuat& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteQuat");
+
+	Params::NiagaraDataChannelWriter_WriteQuat Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteSpawnInfo
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FNiagaraSpawnInfo                InData                                                 (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteSpawnInfo(class FName VarName, int32 Param_Index, const struct FNiagaraSpawnInfo& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteSpawnInfo");
+
+	Params::NiagaraDataChannelWriter_WriteSpawnInfo Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteVector
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteVector(class FName VarName, int32 Param_Index, const struct FVector& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteVector");
+
+	Params::NiagaraDataChannelWriter_WriteVector Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteVector2D
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteVector2D(class FName VarName, int32 Param_Index, const struct FVector2D& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteVector2D");
+
+	Params::NiagaraDataChannelWriter_WriteVector2D Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.WriteVector4
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             VarName                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         InData                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataChannelWriter::WriteVector4(class FName VarName, int32 Param_Index, const struct FVector4& InData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "WriteVector4");
+
+	Params::NiagaraDataChannelWriter_WriteVector4 Parms{};
+
+	Parms.VarName = VarName;
+	Parms.Param_Index = Param_Index;
+	Parms.InData = std::move(InData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataChannelWriter.Num
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraDataChannelWriter::Num() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelWriter", "Num");
+
+	Params::NiagaraDataChannelWriter_Num Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelHandler.GetDataChannelReader
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraDataChannelReader*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataChannelReader* UNiagaraDataChannelHandler::GetDataChannelReader()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelHandler", "GetDataChannelReader");
+
+	Params::NiagaraDataChannelHandler_GetDataChannelReader Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelHandler.GetDataChannelWriter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraDataChannelWriter*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataChannelWriter* UNiagaraDataChannelHandler::GetDataChannelWriter()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataChannelHandler", "GetDataChannelWriter");
+
+	Params::NiagaraDataChannelHandler_GetDataChannelWriter Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraActor.OnNiagaraSystemFinished
+// (Final, RequiredAPI, Native, Private)
+// Parameters:
+// class UNiagaraComponent*                FinishedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ANiagaraActor::OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraActor", "OnNiagaraSystemFinished");
+
+	Params::NiagaraActor_OnNiagaraSystemFinished Parms{};
+
+	Parms.FinishedComponent = FinishedComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraActor.SetDestroyOnSystemFinish
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bShouldDestroyOnSystemFinish                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ANiagaraActor::SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraActor", "SetDestroyOnSystemFinish");
+
+	Params::NiagaraActor_SetDestroyOnSystemFinish Parms{};
+
+	Parms.bShouldDestroyOnSystemFinish = bShouldDestroyOnSystemFinish;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraActor.GetDestroyOnSystemFinish
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool ANiagaraActor::GetDestroyOnSystemFinish() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraActor", "GetDestroyOnSystemFinish");
+
+	Params::NiagaraActor_GetDestroyOnSystemFinish Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Niagara.NiagaraPreviewAxis.ApplyToPreview
 // (Native, Event, Public, HasOutParams, BlueprintEvent)
 // Parameters:
@@ -170,8 +971,37 @@ void ANiagaraPreviewGrid::SetPaused(bool bPaused)
 }
 
 
+// Function Niagara.NiagaraDataInterfaceSceneCapture2D.SetSceneCapture2DManagedShowOnlyActors
+// (Final, RequiredAPI, Native, Static, Protected, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ParameterName                                          (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   ShowOnlyActors                                         (Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceSceneCapture2D::SetSceneCapture2DManagedShowOnlyActors(class UNiagaraComponent* NiagaraSystem, class FName ParameterName, const TArray<class AActor*>& ShowOnlyActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceSceneCapture2D", "SetSceneCapture2DManagedShowOnlyActors");
+
+	Params::NiagaraDataInterfaceSceneCapture2D_SetSceneCapture2DManagedShowOnlyActors Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.ParameterName = ParameterName;
+	Parms.ShowOnlyActors = std::move(ShowOnlyActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Niagara.NiagaraSimCacheFunctionLibrary.CaptureNiagaraSimCacheImmediate
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
 // class UNiagaraSimCache*                 SimCache                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FNiagaraSimCacheCreateParameters CreateParameters                                       (Parm, NativeAccessSpecifierPublic)
@@ -211,7 +1041,7 @@ bool UNiagaraSimCacheFunctionLibrary::CaptureNiagaraSimCacheImmediate(class UNia
 
 
 // Function Niagara.NiagaraSimCacheFunctionLibrary.CreateNiagaraSimCache
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNiagaraSimCache*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -238,8 +1068,37 @@ class UNiagaraSimCache* UNiagaraSimCacheFunctionLibrary::CreateNiagaraSimCache(c
 }
 
 
+// Function Niagara.NiagaraDataInterfaceStaticMesh.SetNiagaraStaticMeshDIInstanceIndex
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             UserParameterName                                      (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   NewInstanceIndex                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceStaticMesh::SetNiagaraStaticMeshDIInstanceIndex(class UNiagaraComponent* NiagaraSystem, class FName UserParameterName, int32 NewInstanceIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceStaticMesh", "SetNiagaraStaticMeshDIInstanceIndex");
+
+	Params::NiagaraDataInterfaceStaticMesh_SetNiagaraStaticMeshDIInstanceIndex Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.UserParameterName = UserParameterName;
+	Parms.NewInstanceIndex = NewInstanceIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function Niagara.NiagaraDataInterfaceStaticMesh.OnSourceEndPlay
-// (Final, Native, Protected)
+// (Final, RequiredAPI, Native, Protected)
 // Parameters:
 // class AActor*                           InSource                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // EEndPlayReason                          Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -291,4902 +1150,6 @@ void UNiagaraDataInterfaceUObjectPropertyReader::SetUObjectReaderPropertyRemap(c
 	Func->FunctionFlags |= 0x400;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraActor.OnNiagaraSystemFinished
-// (Final, Native, Private)
-// Parameters:
-// class UNiagaraComponent*                FinishedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ANiagaraActor::OnNiagaraSystemFinished(class UNiagaraComponent* FinishedComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraActor", "OnNiagaraSystemFinished");
-
-	Params::NiagaraActor_OnNiagaraSystemFinished Parms{};
-
-	Parms.FinishedComponent = FinishedComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraActor.SetDestroyOnSystemFinish
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bShouldDestroyOnSystemFinish                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ANiagaraActor::SetDestroyOnSystemFinish(bool bShouldDestroyOnSystemFinish)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraActor", "SetDestroyOnSystemFinish");
-
-	Params::NiagaraActor_SetDestroyOnSystemFinish Parms{};
-
-	Parms.bShouldDestroyOnSystemFinish = bShouldDestroyOnSystemFinish;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.AdvanceSimulation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   TickCount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TickDeltaSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::AdvanceSimulation(int32 TickCount, float TickDeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "AdvanceSimulation");
-
-	Params::NiagaraComponent_AdvanceSimulation Parms{};
-
-	Parms.TickCount = TickCount;
-	Parms.TickDeltaSeconds = TickDeltaSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.AdvanceSimulationByTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   SimulateTime                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   TickDeltaSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "AdvanceSimulationByTime");
-
-	Params::NiagaraComponent_AdvanceSimulationByTime Parms{};
-
-	Parms.SimulateTime = SimulateTime;
-	Parms.TickDeltaSeconds = TickDeltaSeconds;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.ClearEmitterFixedBounds
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::ClearEmitterFixedBounds(class FName EmitterName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "ClearEmitterFixedBounds");
-
-	Params::NiagaraComponent_ClearEmitterFixedBounds Parms{};
-
-	Parms.EmitterName = EmitterName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.ClearSimCache
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bResetSystem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::ClearSimCache(bool bResetSystem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "ClearSimCache");
-
-	Params::NiagaraComponent_ClearSimCache Parms{};
-
-	Parms.bResetSystem = bResetSystem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.ClearSystemFixedBounds
-// (Final, Native, Public, BlueprintCallable)
-
-void UNiagaraComponent::ClearSystemFixedBounds()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "ClearSystemFixedBounds");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.GetDataInterface
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraDataInterface*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Param_Name)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetDataInterface");
-
-	Params::NiagaraComponent_GetDataInterface Parms{};
-
-	Parms.Param_Name = std::move(Param_Name);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(const class FString& InEmitterName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticlePositions_DebugOnly");
-
-	Params::NiagaraComponent_GetNiagaraParticlePositions_DebugOnly Parms{};
-
-	Parms.InEmitterName = std::move(InEmitterName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           InValueName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticleValues_DebugOnly");
-
-	Params::NiagaraComponent_GetNiagaraParticleValues_DebugOnly Parms{};
-
-	Parms.InEmitterName = std::move(InEmitterName);
-	Parms.InValueName = std::move(InValueName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           InValueName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticleValueVec3_DebugOnly");
-
-	Params::NiagaraComponent_GetNiagaraParticleValueVec3_DebugOnly Parms{};
-
-	Parms.InEmitterName = std::move(InEmitterName);
-	Parms.InValueName = std::move(InValueName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.InitForPerformanceBaseline
-// (Final, Native, Public, BlueprintCallable)
-
-void UNiagaraComponent::InitForPerformanceBaseline()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "InitForPerformanceBaseline");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.ReinitializeSystem
-// (Final, Native, Public, BlueprintCallable)
-
-void UNiagaraComponent::ReinitializeSystem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "ReinitializeSystem");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.ResetSystem
-// (Final, Native, Public, BlueprintCallable)
-
-void UNiagaraComponent::ResetSystem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "ResetSystem");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SeekToDesiredAge
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InDesiredAge                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SeekToDesiredAge(float InDesiredAge)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SeekToDesiredAge");
-
-	Params::NiagaraComponent_SeekToDesiredAge Parms{};
-
-	Parms.InDesiredAge = InDesiredAge;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetAgeUpdateMode
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// ENiagaraAgeUpdateMode                   InAgeUpdateMode                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetAgeUpdateMode");
-
-	Params::NiagaraComponent_SetAgeUpdateMode Parms{};
-
-	Parms.InAgeUpdateMode = InAgeUpdateMode;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetAllowScalability
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bAllow                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetAllowScalability(bool bAllow)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetAllowScalability");
-
-	Params::NiagaraComponent_SetAllowScalability Parms{};
-
-	Parms.bAllow = bAllow;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetAsset
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraSystem*                   InAsset                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bResetExistingOverrideParameters                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetAsset");
-
-	Params::NiagaraComponent_SetAsset Parms{};
-
-	Parms.InAsset = InAsset;
-	Parms.bResetExistingOverrideParameters = bResetExistingOverrideParameters;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetAutoDestroy
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInAutoDestroy                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetAutoDestroy");
-
-	Params::NiagaraComponent_SetAutoDestroy Parms{};
-
-	Parms.bInAutoDestroy = bInAutoDestroy;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetCanRenderWhileSeeking
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInCanRenderWhileSeeking                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetCanRenderWhileSeeking");
-
-	Params::NiagaraComponent_SetCanRenderWhileSeeking Parms{};
-
-	Parms.bInCanRenderWhileSeeking = bInCanRenderWhileSeeking;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetCustomTimeDilation
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   Dilation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetCustomTimeDilation(float Dilation)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetCustomTimeDilation");
-
-	Params::NiagaraComponent_SetCustomTimeDilation Parms{};
-
-	Parms.Dilation = Dilation;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetDesiredAge
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InDesiredAge                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetDesiredAge");
-
-	Params::NiagaraComponent_SetDesiredAge Parms{};
-
-	Parms.InDesiredAge = InDesiredAge;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetEmitterFixedBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBox                             LocalBounds                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetEmitterFixedBounds(class FName EmitterName, const struct FBox& LocalBounds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetEmitterFixedBounds");
-
-	Params::NiagaraComponent_SetEmitterFixedBounds Parms{};
-
-	Parms.EmitterName = EmitterName;
-	Parms.LocalBounds = std::move(LocalBounds);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetForceLocalPlayerEffect
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bIsPlayerEffect                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetForceLocalPlayerEffect(bool bIsPlayerEffect)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetForceLocalPlayerEffect");
-
-	Params::NiagaraComponent_SetForceLocalPlayerEffect Parms{};
-
-	Parms.bIsPlayerEffect = bIsPlayerEffect;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetForceSolo
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInForceSolo                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetForceSolo");
-
-	Params::NiagaraComponent_SetForceSolo Parms{};
-
-	Parms.bInForceSolo = bInForceSolo;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetGpuComputeDebug
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bEnableDebug                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetGpuComputeDebug(bool bEnableDebug)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetGpuComputeDebug");
-
-	Params::NiagaraComponent_SetGpuComputeDebug Parms{};
-
-	Parms.bEnableDebug = bEnableDebug;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bLock                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetLockDesiredAgeDeltaTimeToSeekDelta(bool bLock)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetLockDesiredAgeDeltaTimeToSeekDelta");
-
-	Params::NiagaraComponent_SetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
-
-	Parms.bLock = bLock;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetMaxSimTime
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InMaxTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetMaxSimTime");
-
-	Params::NiagaraComponent_SetMaxSimTime Parms{};
-
-	Parms.InMaxTime = InMaxTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableActor(const class FString& InVariableName, class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableActor");
-
-	Params::NiagaraComponent_SetNiagaraVariableActor Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.Actor = Actor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableBool
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableBool(const class FString& InVariableName, bool InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableBool");
-
-	Params::NiagaraComponent_SetNiagaraVariableBool Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableFloat
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableFloat(const class FString& InVariableName, float InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableFloat");
-
-	Params::NiagaraComponent_SetNiagaraVariableFloat Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableInt
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableInt(const class FString& InVariableName, int32 InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableInt");
-
-	Params::NiagaraComponent_SetNiagaraVariableInt Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableLinearColor(const class FString& InVariableName, struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableLinearColor");
-
-	Params::NiagaraComponent_SetNiagaraVariableLinearColor Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableMatrix
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMatrix                          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableMatrix(const class FString& InVariableName, struct FMatrix& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableMatrix");
-
-	Params::NiagaraComponent_SetNiagaraVariableMatrix Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableObject
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableObject(const class FString& InVariableName, class UObject* Object)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableObject");
-
-	Params::NiagaraComponent_SetNiagaraVariableObject Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.Object = Object;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariablePosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariablePosition(const class FString& InVariableName, const struct FVector& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariablePosition");
-
-	Params::NiagaraComponent_SetNiagaraVariablePosition Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableQuat
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableQuat(const class FString& InVariableName, struct FQuat& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableQuat");
-
-	Params::NiagaraComponent_SetNiagaraVariableQuat Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableVec2
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableVec2(const class FString& InVariableName, const struct FVector2D& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec2");
-
-	Params::NiagaraComponent_SetNiagaraVariableVec2 Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableVec3
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableVec3(const class FString& InVariableName, const struct FVector& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec3");
-
-	Params::NiagaraComponent_SetNiagaraVariableVec3 Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetNiagaraVariableVec4
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetNiagaraVariableVec4(const class FString& InVariableName, struct FVector4& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec4");
-
-	Params::NiagaraComponent_SetNiagaraVariableVec4 Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetPaused
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInPaused                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetPaused(bool bInPaused)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetPaused");
-
-	Params::NiagaraComponent_SetPaused Parms{};
-
-	Parms.bInPaused = bInPaused;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetPreviewLODDistance
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bEnablePreviewLODDistance                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   PreviewLODDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   PreviewMaxDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetPreviewLODDistance");
-
-	Params::NiagaraComponent_SetPreviewLODDistance Parms{};
-
-	Parms.bEnablePreviewLODDistance = bEnablePreviewLODDistance;
-	Parms.PreviewLODDistance = PreviewLODDistance;
-	Parms.PreviewMaxDistance = PreviewMaxDistance;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetRandomSeedOffset
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// int32                                   NewRandomSeedOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetRandomSeedOffset(int32 NewRandomSeedOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetRandomSeedOffset");
-
-	Params::NiagaraComponent_SetRandomSeedOffset Parms{};
-
-	Parms.NewRandomSeedOffset = NewRandomSeedOffset;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetRenderingEnabled
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// bool                                    bInRenderingEnabled                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetRenderingEnabled");
-
-	Params::NiagaraComponent_SetRenderingEnabled Parms{};
-
-	Parms.bInRenderingEnabled = bInRenderingEnabled;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetSeekDelta
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// float                                   InSeekDelta                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetSeekDelta");
-
-	Params::NiagaraComponent_SetSeekDelta Parms{};
-
-	Parms.InSeekDelta = InSeekDelta;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetSimCache
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraSimCache*                 Param_SimCache                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bResetSystem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetSimCache(class UNiagaraSimCache* Param_SimCache, bool bResetSystem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetSimCache");
-
-	Params::NiagaraComponent_SetSimCache Parms{};
-
-	Parms.Param_SimCache = Param_SimCache;
-	Parms.bResetSystem = bResetSystem;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetSystemFixedBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// struct FBox                             LocalBounds                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetSystemFixedBounds(const struct FBox& LocalBounds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetSystemFixedBounds");
-
-	Params::NiagaraComponent_SetSystemFixedBounds Parms{};
-
-	Parms.LocalBounds = std::move(LocalBounds);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetTickBehavior
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// ENiagaraTickBehavior                    NewTickBehavior                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetTickBehavior(ENiagaraTickBehavior NewTickBehavior)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetTickBehavior");
-
-	Params::NiagaraComponent_SetTickBehavior Parms{};
-
-	Parms.NewTickBehavior = NewTickBehavior;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableActor
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableActor(class FName InVariableName, class AActor* Actor)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableActor");
-
-	Params::NiagaraComponent_SetVariableActor Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.Actor = Actor;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableBool
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableBool(class FName InVariableName, bool InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableBool");
-
-	Params::NiagaraComponent_SetVariableBool Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableFloat
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableFloat(class FName InVariableName, float InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableFloat");
-
-	Params::NiagaraComponent_SetVariableFloat Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableInt
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableInt(class FName InVariableName, int32 InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableInt");
-
-	Params::NiagaraComponent_SetVariableInt Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableLinearColor
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableLinearColor(class FName InVariableName, struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableLinearColor");
-
-	Params::NiagaraComponent_SetVariableLinearColor Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableMaterial
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UMaterialInterface*               Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableMaterial(class FName InVariableName, class UMaterialInterface* Object)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableMaterial");
-
-	Params::NiagaraComponent_SetVariableMaterial Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.Object = Object;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableMatrix
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FMatrix                          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableMatrix(class FName InVariableName, struct FMatrix& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableMatrix");
-
-	Params::NiagaraComponent_SetVariableMatrix Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableObject
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableObject(class FName InVariableName, class UObject* Object)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableObject");
-
-	Params::NiagaraComponent_SetVariableObject Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.Object = Object;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariablePosition
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariablePosition(class FName InVariableName, const struct FVector& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariablePosition");
-
-	Params::NiagaraComponent_SetVariablePosition Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableQuat
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableQuat(class FName InVariableName, struct FQuat& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableQuat");
-
-	Params::NiagaraComponent_SetVariableQuat Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableStaticMesh
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMesh*                      InValue                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableStaticMesh(class FName InVariableName, class UStaticMesh* InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableStaticMesh");
-
-	Params::NiagaraComponent_SetVariableStaticMesh Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableTexture
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture*                         Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableTexture(class FName InVariableName, class UTexture* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableTexture");
-
-	Params::NiagaraComponent_SetVariableTexture Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableTextureRenderTarget
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTextureRenderTarget*             TextureRenderTarget                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableTextureRenderTarget(class FName InVariableName, class UTextureRenderTarget* TextureRenderTarget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableTextureRenderTarget");
-
-	Params::NiagaraComponent_SetVariableTextureRenderTarget Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.TextureRenderTarget = TextureRenderTarget;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableVec2
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableVec2(class FName InVariableName, const struct FVector2D& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec2");
-
-	Params::NiagaraComponent_SetVariableVec2 Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableVec3
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableVec3(class FName InVariableName, const struct FVector& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec3");
-
-	Params::NiagaraComponent_SetVariableVec3 Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.SetVariableVec4
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraComponent::SetVariableVec4(class FName InVariableName, struct FVector4& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec4");
-
-	Params::NiagaraComponent_SetVariableVec4 Parms{};
-
-	Parms.InVariableName = InVariableName;
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraComponent.GetAgeUpdateMode
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ENiagaraAgeUpdateMode                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ENiagaraAgeUpdateMode UNiagaraComponent::GetAgeUpdateMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetAgeUpdateMode");
-
-	Params::NiagaraComponent_GetAgeUpdateMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetAllowScalability
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::GetAllowScalability() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetAllowScalability");
-
-	Params::NiagaraComponent_GetAllowScalability Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetAsset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UNiagaraSystem*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraSystem* UNiagaraComponent::GetAsset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetAsset");
-
-	Params::NiagaraComponent_GetAsset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetCustomTimeDilation
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraComponent::GetCustomTimeDilation() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetCustomTimeDilation");
-
-	Params::NiagaraComponent_GetCustomTimeDilation Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetDesiredAge
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraComponent::GetDesiredAge() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetDesiredAge");
-
-	Params::NiagaraComponent_GetDesiredAge Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetEmitterFixedBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBox UNiagaraComponent::GetEmitterFixedBounds(class FName EmitterName) const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetEmitterFixedBounds");
-
-	Params::NiagaraComponent_GetEmitterFixedBounds Parms{};
-
-	Parms.EmitterName = EmitterName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetForceLocalPlayerEffect
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::GetForceLocalPlayerEffect() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetForceLocalPlayerEffect");
-
-	Params::NiagaraComponent_GetForceLocalPlayerEffect Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetForceSolo
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::GetForceSolo() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetForceSolo");
-
-	Params::NiagaraComponent_GetForceSolo Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::GetLockDesiredAgeDeltaTimeToSeekDelta() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetLockDesiredAgeDeltaTimeToSeekDelta");
-
-	Params::NiagaraComponent_GetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetMaxSimTime
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraComponent::GetMaxSimTime() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetMaxSimTime");
-
-	Params::NiagaraComponent_GetMaxSimTime Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetPreviewLODDistance
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraComponent::GetPreviewLODDistance() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetPreviewLODDistance");
-
-	Params::NiagaraComponent_GetPreviewLODDistance Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::GetPreviewLODDistanceEnabled() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetPreviewLODDistanceEnabled");
-
-	Params::NiagaraComponent_GetPreviewLODDistanceEnabled Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetRandomSeedOffset
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNiagaraComponent::GetRandomSeedOffset() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetRandomSeedOffset");
-
-	Params::NiagaraComponent_GetRandomSeedOffset Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetSeekDelta
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraComponent::GetSeekDelta() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetSeekDelta");
-
-	Params::NiagaraComponent_GetSeekDelta Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetSimCache
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class UNiagaraSimCache*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraSimCache* UNiagaraComponent::GetSimCache() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetSimCache");
-
-	Params::NiagaraComponent_GetSimCache Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetSystemFixedBounds
-// (Final, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FBox UNiagaraComponent::GetSystemFixedBounds() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetSystemFixedBounds");
-
-	Params::NiagaraComponent_GetSystemFixedBounds Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.GetTickBehavior
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// ENiagaraTickBehavior                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-ENiagaraTickBehavior UNiagaraComponent::GetTickBehavior() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "GetTickBehavior");
-
-	Params::NiagaraComponent_GetTickBehavior Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraComponent.IsPaused
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraComponent::IsPaused() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraComponent", "IsPaused");
-
-	Params::NiagaraComponent_IsPaused Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<bool>                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayBool");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayBool Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBoolValue
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayBoolValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayBoolValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FLinearColor>             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayColor");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayColor Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColorValue
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FLinearColor UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayColorValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayColorValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayFloat");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayFloat Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloatValue
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayFloatValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayFloatValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayInt32");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayInt32 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32Value
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayInt32Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayInt32Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPosition
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayPosition");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayPosition Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPositionValue
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayPositionValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayPositionValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FQuat>                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayQuat");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayQuat Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuatValue
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FQuat UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayQuatValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayQuatValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayUInt8");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayUInt8 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8Value
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayUInt8Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayUInt8Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector2D>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector2D");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector2D Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2DValue
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector2DValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector2DValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector4>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-
-TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector4");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector4 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4Value
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector4Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector4Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVectorValue
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVectorValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVectorValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<bool>                            ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<bool>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayBool");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayBool Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBoolValue
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, bool& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayBoolValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayBoolValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = Value;
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FLinearColor>             ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FLinearColor>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayColor");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayColor Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColorValue
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FLinearColor& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayColorValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayColorValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<float>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<float>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayFloat");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayFloat Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloatValue
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, float Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayFloatValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayFloatValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = Value;
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<int32>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayInt32");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayInt32 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32Value
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayInt32Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayInt32Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = Value;
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPosition
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayPosition");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayPosition Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPositionValue
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayPositionValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayPositionValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FQuat>                    ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FQuat>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayQuat");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayQuat Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuatValue
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FQuat& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayQuatValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayQuatValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<int32>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<int32>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayUInt8");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayUInt8 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8Value
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayUInt8Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayUInt8Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = Value;
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector>                  ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector2D>                ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector2D>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector2D");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector2D Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2DValue
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector2D& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector2DValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector2DValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<struct FVector4>                 ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector4>& ArrayData)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector4");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector4 Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.ArrayData = std::move(ArrayData);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4Value
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector4& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector4Value");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector4Value Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVectorValue
-// (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector& Value, bool bSizeToFit)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVectorValue");
-
-	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVectorValue Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.Param_Index = Param_Index;
-	Parms.Value = std::move(Value);
-	Parms.bSizeToFit = bSizeToFit;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
-// (Native, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// TArray<struct FBasicParticleData>       Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-// class UNiagaraSystem*                   NiagaraSystem                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          SimulationPositionOffset                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void INiagaraParticleCallbackHandler::ReceiveParticleData(TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, struct FVector& SimulationPositionOffset)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParticleCallbackHandler", "ReceiveParticleData");
-
-	Params::NiagaraParticleCallbackHandler_ReceiveParticleData Parms{};
-
-	Parms.Data = std::move(Data);
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.SimulationPositionOffset = std::move(SimulationPositionOffset);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTextureRenderTarget2D*           Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TilesX                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TilesY                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32* TilesX, int32* TilesY)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "FillRawTexture2D");
-
-	Params::NiagaraDataInterfaceGrid2DCollection_FillRawTexture2D Parms{};
-
-	Parms.Component = Component;
-	Parms.Dest = Dest;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (TilesX != nullptr)
-		*TilesX = Parms.TilesX;
-
-	if (TilesY != nullptr)
-		*TilesY = Parms.TilesY;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTextureRenderTarget2D*           Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   AttributeIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraDataInterfaceGrid2DCollection::FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32 AttributeIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "FillTexture2D");
-
-	Params::NiagaraDataInterfaceGrid2DCollection_FillTexture2D Parms{};
-
-	Parms.Component = Component;
-	Parms.Dest = Dest;
-	Parms.AttributeIndex = AttributeIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceGrid2DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "GetRawTextureSize");
-
-	Params::NiagaraDataInterfaceGrid2DCollection_GetRawTextureSize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SizeX != nullptr)
-		*SizeX = Parms.SizeX;
-
-	if (SizeY != nullptr)
-		*SizeY = Parms.SizeY;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "GetTextureSize");
-
-	Params::NiagaraDataInterfaceGrid2DCollection_GetTextureSize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SizeX != nullptr)
-		*SizeX = Parms.SizeX;
-
-	if (SizeY != nullptr)
-		*SizeY = Parms.SizeY;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UVolumeTexture*                   Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TilesX                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TilesY                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   TileZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32* TilesX, int32* TilesY, int32* TileZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "FillRawVolumeTexture");
-
-	Params::NiagaraDataInterfaceGrid3DCollection_FillRawVolumeTexture Parms{};
-
-	Parms.Component = Component;
-	Parms.Dest = Dest;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (TilesX != nullptr)
-		*TilesX = Parms.TilesX;
-
-	if (TilesY != nullptr)
-		*TilesY = Parms.TilesY;
-
-	if (TileZ != nullptr)
-		*TileZ = Parms.TileZ;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
-// (Native, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UVolumeTexture*                   Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   AttributeIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraDataInterfaceGrid3DCollection::FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32 AttributeIndex)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "FillVolumeTexture");
-
-	Params::NiagaraDataInterfaceGrid3DCollection_FillVolumeTexture Parms{};
-
-	Parms.Component = Component;
-	Parms.Dest = Dest;
-	Parms.AttributeIndex = AttributeIndex;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceGrid3DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY, int32* SizeZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "GetRawTextureSize");
-
-	Params::NiagaraDataInterfaceGrid3DCollection_GetRawTextureSize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SizeX != nullptr)
-		*SizeX = Parms.SizeX;
-
-	if (SizeY != nullptr)
-		*SizeY = Parms.SizeY;
-
-	if (SizeZ != nullptr)
-		*SizeZ = Parms.SizeZ;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
-// (Native, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   SizeZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY, int32* SizeZ)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "GetTextureSize");
-
-	Params::NiagaraDataInterfaceGrid3DCollection_GetTextureSize Parms{};
-
-	Parms.Component = Component;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SizeX != nullptr)
-		*SizeX = Parms.SizeX;
-
-	if (SizeY != nullptr)
-		*SizeY = Parms.SizeY;
-
-	if (SizeZ != nullptr)
-		*SizeZ = Parms.SizeZ;
-}
-
-
-// Function Niagara.NiagaraDIRigidMeshCollisionFunctionLibrary.SetSourceActors
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class AActor*>                   SourceActors                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraDIRigidMeshCollisionFunctionLibrary::SetSourceActors(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<class AActor*>& SourceActors)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraDIRigidMeshCollisionFunctionLibrary", "SetSourceActors");
-
-	Params::NiagaraDIRigidMeshCollisionFunctionLibrary_SetSourceActors Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = OverrideName;
-	Parms.SourceActors = std::move(SourceActors);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraDataInterfaceSkeletalMesh.OnSourceEndPlay
-// (Final, Native, Protected)
-// Parameters:
-// class AActor*                           InSource                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// EEndPlayReason                          Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraDataInterfaceSkeletalMesh::OnSourceEndPlay(class AActor* InSource, EEndPlayReason Reason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraDataInterfaceSkeletalMesh", "OnSourceEndPlay");
-
-	Params::NiagaraDataInterfaceSkeletalMesh_OnSourceEndPlay Parms{};
-
-	Parms.InSource = InSource;
-	Parms.Reason = Reason;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.AcquireNiagaraGPURayTracedCollisionGroup
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNiagaraFunctionLibrary::AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "AcquireNiagaraGPURayTracedCollisionGroup");
-
-	Params::NiagaraFunctionLibrary_AcquireNiagaraGPURayTracedCollisionGroup Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraParameterCollection*      Collection                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraParameterCollectionInstance*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "GetNiagaraParameterCollection");
-
-	Params::NiagaraFunctionLibrary_GetNiagaraParameterCollection Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Collection = Collection;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableSkeletalMeshComponent");
-
-	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableSkeletalMeshComponent Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMesh*                      StaticMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableStaticMesh");
-
-	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableStaticMesh Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.StaticMesh = StaticMesh;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UStaticMeshComponent*             StaticMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableStaticMeshComponent");
-
-	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableStaticMeshComponent Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.StaticMeshComponent = StaticMeshComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.ReleaseNiagaraGPURayTracedCollisionGroup
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32 CollisionGroup)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "ReleaseNiagaraGPURayTracedCollisionGroup");
-
-	Params::NiagaraFunctionLibrary_ReleaseNiagaraGPURayTracedCollisionGroup Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.CollisionGroup = CollisionGroup;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetActorNiagaraGPURayTracedCollisionGroup
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32 CollisionGroup)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetActorNiagaraGPURayTracedCollisionGroup");
-
-	Params::NiagaraFunctionLibrary_SetActorNiagaraGPURayTracedCollisionGroup Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Actor = Actor;
-	Parms.CollisionGroup = CollisionGroup;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetComponentNiagaraGPURayTracedCollisionGroup
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UPrimitiveComponent*              Primitive                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32 CollisionGroup)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetComponentNiagaraGPURayTracedCollisionGroup");
-
-	Params::NiagaraFunctionLibrary_SetComponentNiagaraGPURayTracedCollisionGroup Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.Primitive = Primitive;
-	Parms.CollisionGroup = CollisionGroup;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredBones
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     FilteredBones                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& FilteredBones)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceFilteredBones");
-
-	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceFilteredBones Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.FilteredBones = std::move(FilteredBones);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredSockets
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     FilteredSockets                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& FilteredSockets)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceFilteredSockets");
-
-	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceFilteredSockets Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.FilteredSockets = std::move(FilteredSockets);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<class FName>                     SamplingRegions                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& SamplingRegions)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceSamplingRegions");
-
-	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceSamplingRegions Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.SamplingRegions = std::move(SamplingRegions);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetTexture2DArrayObject
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture2DArray*                  Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture2DArray* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetTexture2DArrayObject");
-
-	Params::NiagaraFunctionLibrary_SetTexture2DArrayObject Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetTextureObject
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UTexture*                         Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetTextureObject");
-
-	Params::NiagaraFunctionLibrary_SetTextureObject Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UVolumeTexture*                   Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraFunctionLibrary::SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetVolumeTextureObject");
-
-	Params::NiagaraFunctionLibrary_SetVolumeTextureObject Parms{};
-
-	Parms.NiagaraSystem = NiagaraSystem;
-	Parms.OverrideName = std::move(OverrideName);
-	Parms.Texture = Texture;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraSystem*                   SystemTemplate                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// struct FVector                          Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAutoDestroy                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAutoActivate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ENCPoolMethod                           PoolingMethod                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPreCullCheck                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAtLocation");
-
-	Params::NiagaraFunctionLibrary_SpawnSystemAtLocation Parms{};
-
-	Parms.WorldContextObject = WorldContextObject;
-	Parms.SystemTemplate = SystemTemplate;
-	Parms.Location = std::move(Location);
-	Parms.Rotation = std::move(Rotation);
-	Parms.Scale = std::move(Scale);
-	Parms.bAutoDestroy = bAutoDestroy;
-	Parms.bAutoActivate = bAutoActivate;
-	Parms.PoolingMethod = PoolingMethod;
-	Parms.bPreCullCheck = bPreCullCheck;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocationWithParams
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FFXSystemSpawnParameters         SpawnParams                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocationWithParams(struct FFXSystemSpawnParameters* SpawnParams)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAtLocationWithParams");
-
-	Params::NiagaraFunctionLibrary_SpawnSystemAtLocationWithParams Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpawnParams != nullptr)
-		*SpawnParams = std::move(Parms.SpawnParams);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
-// (Final, Native, Static, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class UNiagaraSystem*                   SystemTemplate                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class USceneComponent*                  AttachToComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             AttachPointName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FRotator                         Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-// EAttachLocation                         LocationType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAutoDestroy                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bAutoActivate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// ENCPoolMethod                           PoolingMethod                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    bPreCullCheck                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, class FName AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAttached");
-
-	Params::NiagaraFunctionLibrary_SpawnSystemAttached Parms{};
-
-	Parms.SystemTemplate = SystemTemplate;
-	Parms.AttachToComponent = AttachToComponent;
-	Parms.AttachPointName = AttachPointName;
-	Parms.Location = std::move(Location);
-	Parms.Rotation = std::move(Rotation);
-	Parms.LocationType = LocationType;
-	Parms.bAutoDestroy = bAutoDestroy;
-	Parms.bAutoActivate = bAutoActivate;
-	Parms.PoolingMethod = PoolingMethod;
-	Parms.bPreCullCheck = bPreCullCheck;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttachedWithParams
-// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
-// Parameters:
-// struct FFXSystemSpawnParameters         SpawnParams                                            (Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
-// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttachedWithParams(struct FFXSystemSpawnParameters* SpawnParams)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAttachedWithParams");
-
-	Params::NiagaraFunctionLibrary_SpawnSystemAttachedWithParams Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	if (SpawnParams != nullptr)
-		*SpawnParams = std::move(Parms.SpawnParams);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraParameterCollectionInstance::GetBoolParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetBoolParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetBoolParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetColorParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetColorParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetColorParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-float UNiagaraParameterCollectionInstance::GetFloatParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetFloatParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetFloatParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetIntParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-int32 UNiagaraParameterCollectionInstance::GetIntParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetIntParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetIntParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetQuatParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetQuatParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVector2DParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetVector2DParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVector4Parameter");
-
-	Params::NiagaraParameterCollectionInstance_GetVector4Parameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const class FString& InVariableName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVectorParameter");
-
-	Params::NiagaraParameterCollectionInstance_GetVectorParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetBoolParameter(const class FString& InVariableName, bool InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetBoolParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetBoolParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetColorParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetColorParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetColorParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetFloatParameter(const class FString& InVariableName, float InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetFloatParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetFloatParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetIntParameter
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetIntParameter(const class FString& InVariableName, int32 InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetIntParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetIntParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = InValue;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetQuatParameter(const class FString& InVariableName, struct FQuat& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetQuatParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetQuatParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVector2DParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetVector2DParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetVector4Parameter(const class FString& InVariableName, struct FVector4& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVector4Parameter");
-
-	Params::NiagaraParameterCollectionInstance_SetVector4Parameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
-// Parameters:
-// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraParameterCollectionInstance::SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVectorParameter");
-
-	Params::NiagaraParameterCollectionInstance_SetVectorParameter Parms{};
-
-	Parms.InVariableName = std::move(InVariableName);
-	Parms.InValue = std::move(InValue);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraBaselineController.GetSystem
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class UNiagaraSystem*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UNiagaraSystem* UNiagaraBaselineController::GetSystem()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraBaselineController", "GetSystem");
-
-	Params::NiagaraBaselineController_GetSystem Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraBaselineController.OnBeginTest
-// (Native, Event, Public, BlueprintEvent)
-
-void UNiagaraBaselineController::OnBeginTest()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraBaselineController", "OnBeginTest");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraBaselineController.OnEndTest
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FNiagaraPerfBaselineStats        Stats                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
-
-void UNiagaraBaselineController::OnEndTest(const struct FNiagaraPerfBaselineStats& Stats)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraBaselineController", "OnEndTest");
-
-	Params::NiagaraBaselineController_OnEndTest Parms{};
-
-	Parms.Stats = std::move(Stats);
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraBaselineController.OnOwnerTick
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void UNiagaraBaselineController::OnOwnerTick(float DeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraBaselineController", "OnOwnerTick");
-
-	Params::NiagaraBaselineController_OnOwnerTick Parms{};
-
-	Parms.DeltaTime = DeltaTime;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function Niagara.NiagaraBaselineController.OnTickTest
-// (Native, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-bool UNiagaraBaselineController::OnTickTest()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraBaselineController", "OnTickTest");
-
-	Params::NiagaraBaselineController_OnTickTest Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Niagara.NiagaraPreviewBase.SetLabelText
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class FText                             InXAxisText                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-// class FText                             InYAxisText                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-
-void ANiagaraPreviewBase::SetLabelText(class FText& InXAxisText, class FText& InYAxisText)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraPreviewBase", "SetLabelText");
-
-	Params::NiagaraPreviewBase_SetLabelText Parms{};
-
-	Parms.InXAxisText = InXAxisText;
-	Parms.InYAxisText = InYAxisText;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Niagara.NiagaraPreviewBase.SetSystem
-// (Event, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UNiagaraSystem*                   InSystem                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraPreviewBase", "SetSystem");
-
-	Params::NiagaraPreviewBase_SetSystem Parms{};
-
-	Parms.InSystem = InSystem;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
-// (Final, Native, Public)
-
-void UNiagaraScript::RaiseOnGPUCompilationComplete()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("NiagaraScript", "RaiseOnGPUCompilationComplete");
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, nullptr);
 
 	Func->FunctionFlags = Flgs;
 }
@@ -5246,7 +1209,7 @@ class FName UNiagaraSimCache::GetEmitterName(int32 EmitterIndex) const
 
 
 // Function Niagara.NiagaraSimCache.GetEmitterNames
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 
@@ -5396,7 +1359,7 @@ bool UNiagaraSimCache::IsEmpty() const
 
 
 // Function Niagara.NiagaraSimCache.ReadColorAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FLinearColor>             OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5429,7 +1392,7 @@ void UNiagaraSimCache::ReadColorAttribute(TArray<struct FLinearColor>* OutValues
 
 
 // Function Niagara.NiagaraSimCache.ReadFloatAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<float>                           OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5461,8 +1424,41 @@ void UNiagaraSimCache::ReadFloatAttribute(TArray<float>* OutValues, class FName 
 }
 
 
+// Function Niagara.NiagaraSimCache.ReadIDAttribute
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<struct FNiagaraID>               OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+// class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   FrameIndex                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraSimCache::ReadIDAttribute(TArray<struct FNiagaraID>* OutValues, class FName AttributeName, class FName EmitterName, int32 FrameIndex) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraSimCache", "ReadIDAttribute");
+
+	Params::NiagaraSimCache_ReadIDAttribute Parms{};
+
+	Parms.AttributeName = AttributeName;
+	Parms.EmitterName = EmitterName;
+	Parms.FrameIndex = FrameIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutValues != nullptr)
+		*OutValues = std::move(Parms.OutValues);
+}
+
+
 // Function Niagara.NiagaraSimCache.ReadIntAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<int32>                           OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5495,7 +1491,7 @@ void UNiagaraSimCache::ReadIntAttribute(TArray<int32>* OutValues, class FName At
 
 
 // Function Niagara.NiagaraSimCache.ReadPositionAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FVector>                  OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5530,7 +1526,7 @@ void UNiagaraSimCache::ReadPositionAttribute(TArray<struct FVector>* OutValues, 
 
 
 // Function Niagara.NiagaraSimCache.ReadPositionAttributeWithRebase
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FVector>                  OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // struct FTransform                       Transform                                              (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5565,7 +1561,7 @@ void UNiagaraSimCache::ReadPositionAttributeWithRebase(TArray<struct FVector>* O
 
 
 // Function Niagara.NiagaraSimCache.ReadQuatAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FQuat>                    OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5600,7 +1596,7 @@ void UNiagaraSimCache::ReadQuatAttribute(TArray<struct FQuat>* OutValues, class 
 
 
 // Function Niagara.NiagaraSimCache.ReadQuatAttributeWithRebase
-// (Final, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FQuat>                    OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // struct FQuat                            Quat                                                   (Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5635,7 +1631,7 @@ void UNiagaraSimCache::ReadQuatAttributeWithRebase(TArray<struct FQuat>* OutValu
 
 
 // Function Niagara.NiagaraSimCache.ReadVector2Attribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FVector2D>                OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5668,7 +1664,7 @@ void UNiagaraSimCache::ReadVector2Attribute(TArray<struct FVector2D>* OutValues,
 
 
 // Function Niagara.NiagaraSimCache.ReadVector4Attribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FVector4>                 OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5701,7 +1697,7 @@ void UNiagaraSimCache::ReadVector4Attribute(TArray<struct FVector4>* OutValues, 
 
 
 // Function Niagara.NiagaraSimCache.ReadVectorAttribute
-// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// (Final, RequiredAPI, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
 // Parameters:
 // TArray<struct FVector>                  OutValues                                              (Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 // class FName                             AttributeName                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5733,6 +1729,5174 @@ void UNiagaraSimCache::ReadVectorAttribute(TArray<struct FVector>* OutValues, cl
 }
 
 
+// Function Niagara.NiagaraComponent.AdvanceSimulation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   TickCount                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TickDeltaSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::AdvanceSimulation(int32 TickCount, float TickDeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "AdvanceSimulation");
+
+	Params::NiagaraComponent_AdvanceSimulation Parms{};
+
+	Parms.TickCount = TickCount;
+	Parms.TickDeltaSeconds = TickDeltaSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.AdvanceSimulationByTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   SimulateTime                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   TickDeltaSeconds                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::AdvanceSimulationByTime(float SimulateTime, float TickDeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "AdvanceSimulationByTime");
+
+	Params::NiagaraComponent_AdvanceSimulationByTime Parms{};
+
+	Parms.SimulateTime = SimulateTime;
+	Parms.TickDeltaSeconds = TickDeltaSeconds;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.ClearEmitterFixedBounds
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::ClearEmitterFixedBounds(class FName EmitterName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "ClearEmitterFixedBounds");
+
+	Params::NiagaraComponent_ClearEmitterFixedBounds Parms{};
+
+	Parms.EmitterName = EmitterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.ClearSimCache
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bResetSystem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::ClearSimCache(bool bResetSystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "ClearSimCache");
+
+	Params::NiagaraComponent_ClearSimCache Parms{};
+
+	Parms.bResetSystem = bResetSystem;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.ClearSystemFixedBounds
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNiagaraComponent::ClearSystemFixedBounds()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "ClearSystemFixedBounds");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.GetDataInterface
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           Param_Name                                             (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataInterface*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataInterface* UNiagaraComponent::GetDataInterface(const class FString& Param_Name)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetDataInterface");
+
+	Params::NiagaraComponent_GetDataInterface Parms{};
+
+	Parms.Param_Name = std::move(Param_Name);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetNiagaraParticlePositions_DebugOnly
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector> UNiagaraComponent::GetNiagaraParticlePositions_DebugOnly(const class FString& InEmitterName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticlePositions_DebugOnly");
+
+	Params::NiagaraComponent_GetNiagaraParticlePositions_DebugOnly Parms{};
+
+	Parms.InEmitterName = std::move(InEmitterName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetNiagaraParticleValues_DebugOnly
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           InValueName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UNiagaraComponent::GetNiagaraParticleValues_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticleValues_DebugOnly");
+
+	Params::NiagaraComponent_GetNiagaraParticleValues_DebugOnly Parms{};
+
+	Parms.InEmitterName = std::move(InEmitterName);
+	Parms.InValueName = std::move(InValueName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetNiagaraParticleValueVec3_DebugOnly
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InEmitterName                                          (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           InValueName                                            (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector> UNiagaraComponent::GetNiagaraParticleValueVec3_DebugOnly(const class FString& InEmitterName, const class FString& InValueName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetNiagaraParticleValueVec3_DebugOnly");
+
+	Params::NiagaraComponent_GetNiagaraParticleValueVec3_DebugOnly Parms{};
+
+	Parms.InEmitterName = std::move(InEmitterName);
+	Parms.InValueName = std::move(InValueName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.InitForPerformanceBaseline
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNiagaraComponent::InitForPerformanceBaseline()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "InitForPerformanceBaseline");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.ReinitializeSystem
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNiagaraComponent::ReinitializeSystem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "ReinitializeSystem");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.ResetSystem
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+
+void UNiagaraComponent::ResetSystem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "ResetSystem");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SeekToDesiredAge
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InDesiredAge                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SeekToDesiredAge(float InDesiredAge)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SeekToDesiredAge");
+
+	Params::NiagaraComponent_SeekToDesiredAge Parms{};
+
+	Parms.InDesiredAge = InDesiredAge;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetAgeUpdateMode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// ENiagaraAgeUpdateMode                   InAgeUpdateMode                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetAgeUpdateMode(ENiagaraAgeUpdateMode InAgeUpdateMode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetAgeUpdateMode");
+
+	Params::NiagaraComponent_SetAgeUpdateMode Parms{};
+
+	Parms.InAgeUpdateMode = InAgeUpdateMode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetAllowScalability
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bAllow                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetAllowScalability(bool bAllow)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetAllowScalability");
+
+	Params::NiagaraComponent_SetAllowScalability Parms{};
+
+	Parms.bAllow = bAllow;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetAsset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraSystem*                   InAsset                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bResetExistingOverrideParameters                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetAsset(class UNiagaraSystem* InAsset, bool bResetExistingOverrideParameters)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetAsset");
+
+	Params::NiagaraComponent_SetAsset Parms{};
+
+	Parms.InAsset = InAsset;
+	Parms.bResetExistingOverrideParameters = bResetExistingOverrideParameters;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetAutoDestroy
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInAutoDestroy                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetAutoDestroy(bool bInAutoDestroy)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetAutoDestroy");
+
+	Params::NiagaraComponent_SetAutoDestroy Parms{};
+
+	Parms.bInAutoDestroy = bInAutoDestroy;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetCanRenderWhileSeeking
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInCanRenderWhileSeeking                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetCanRenderWhileSeeking(bool bInCanRenderWhileSeeking)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetCanRenderWhileSeeking");
+
+	Params::NiagaraComponent_SetCanRenderWhileSeeking Parms{};
+
+	Parms.bInCanRenderWhileSeeking = bInCanRenderWhileSeeking;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetCustomTimeDilation
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   Dilation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetCustomTimeDilation(float Dilation)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetCustomTimeDilation");
+
+	Params::NiagaraComponent_SetCustomTimeDilation Parms{};
+
+	Parms.Dilation = Dilation;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetDesiredAge
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InDesiredAge                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetDesiredAge(float InDesiredAge)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetDesiredAge");
+
+	Params::NiagaraComponent_SetDesiredAge Parms{};
+
+	Parms.InDesiredAge = InDesiredAge;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetEmitterFixedBounds
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBox                             LocalBounds                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetEmitterFixedBounds(class FName EmitterName, const struct FBox& LocalBounds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetEmitterFixedBounds");
+
+	Params::NiagaraComponent_SetEmitterFixedBounds Parms{};
+
+	Parms.EmitterName = EmitterName;
+	Parms.LocalBounds = std::move(LocalBounds);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetForceLocalPlayerEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bIsPlayerEffect                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetForceLocalPlayerEffect(bool bIsPlayerEffect)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetForceLocalPlayerEffect");
+
+	Params::NiagaraComponent_SetForceLocalPlayerEffect Parms{};
+
+	Parms.bIsPlayerEffect = bIsPlayerEffect;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetForceSolo
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInForceSolo                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetForceSolo(bool bInForceSolo)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetForceSolo");
+
+	Params::NiagaraComponent_SetForceSolo Parms{};
+
+	Parms.bInForceSolo = bInForceSolo;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetGpuComputeDebug
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bEnableDebug                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetGpuComputeDebug(bool bEnableDebug)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetGpuComputeDebug");
+
+	Params::NiagaraComponent_SetGpuComputeDebug Parms{};
+
+	Parms.bEnableDebug = bEnableDebug;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetLockDesiredAgeDeltaTimeToSeekDelta
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bLock                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetLockDesiredAgeDeltaTimeToSeekDelta(bool bLock)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetLockDesiredAgeDeltaTimeToSeekDelta");
+
+	Params::NiagaraComponent_SetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
+
+	Parms.bLock = bLock;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetMaxSimTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InMaxTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetMaxSimTime(float InMaxTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetMaxSimTime");
+
+	Params::NiagaraComponent_SetMaxSimTime Parms{};
+
+	Parms.InMaxTime = InMaxTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableActor
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableActor(const class FString& InVariableName, class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableActor");
+
+	Params::NiagaraComponent_SetNiagaraVariableActor Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableBool
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableBool(const class FString& InVariableName, bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableBool");
+
+	Params::NiagaraComponent_SetNiagaraVariableBool Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableFloat
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableFloat(const class FString& InVariableName, float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableFloat");
+
+	Params::NiagaraComponent_SetNiagaraVariableFloat Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableInt
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableInt(const class FString& InVariableName, int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableInt");
+
+	Params::NiagaraComponent_SetNiagaraVariableInt Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableLinearColor
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableLinearColor(const class FString& InVariableName, struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableLinearColor");
+
+	Params::NiagaraComponent_SetNiagaraVariableLinearColor Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableMatrix
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMatrix                          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableMatrix(const class FString& InVariableName, struct FMatrix& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableMatrix");
+
+	Params::NiagaraComponent_SetNiagaraVariableMatrix Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableObject
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableObject(const class FString& InVariableName, class UObject* Object)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableObject");
+
+	Params::NiagaraComponent_SetNiagaraVariableObject Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.Object = Object;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariablePosition
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariablePosition(const class FString& InVariableName, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariablePosition");
+
+	Params::NiagaraComponent_SetNiagaraVariablePosition Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableQuat
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableQuat(const class FString& InVariableName, struct FQuat& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableQuat");
+
+	Params::NiagaraComponent_SetNiagaraVariableQuat Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableVec2
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableVec2(const class FString& InVariableName, const struct FVector2D& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec2");
+
+	Params::NiagaraComponent_SetNiagaraVariableVec2 Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableVec3
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableVec3(const class FString& InVariableName, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec3");
+
+	Params::NiagaraComponent_SetNiagaraVariableVec3 Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetNiagaraVariableVec4
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetNiagaraVariableVec4(const class FString& InVariableName, struct FVector4& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetNiagaraVariableVec4");
+
+	Params::NiagaraComponent_SetNiagaraVariableVec4 Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetOcclusionQueryMode
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// ENiagaraOcclusionQueryMode              Mode                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetOcclusionQueryMode(ENiagaraOcclusionQueryMode Mode)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetOcclusionQueryMode");
+
+	Params::NiagaraComponent_SetOcclusionQueryMode Parms{};
+
+	Parms.Mode = Mode;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetPaused
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInPaused                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetPaused(bool bInPaused)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetPaused");
+
+	Params::NiagaraComponent_SetPaused Parms{};
+
+	Parms.bInPaused = bInPaused;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetPreviewLODDistance
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bEnablePreviewLODDistance                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PreviewLODDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   PreviewMaxDistance                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetPreviewLODDistance(bool bEnablePreviewLODDistance, float PreviewLODDistance, float PreviewMaxDistance)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetPreviewLODDistance");
+
+	Params::NiagaraComponent_SetPreviewLODDistance Parms{};
+
+	Parms.bEnablePreviewLODDistance = bEnablePreviewLODDistance;
+	Parms.PreviewLODDistance = PreviewLODDistance;
+	Parms.PreviewMaxDistance = PreviewMaxDistance;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetRandomSeedOffset
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// int32                                   NewRandomSeedOffset                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetRandomSeedOffset(int32 NewRandomSeedOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetRandomSeedOffset");
+
+	Params::NiagaraComponent_SetRandomSeedOffset Parms{};
+
+	Parms.NewRandomSeedOffset = NewRandomSeedOffset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetRenderingEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// bool                                    bInRenderingEnabled                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetRenderingEnabled(bool bInRenderingEnabled)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetRenderingEnabled");
+
+	Params::NiagaraComponent_SetRenderingEnabled Parms{};
+
+	Parms.bInRenderingEnabled = bInRenderingEnabled;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetSeekDelta
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InSeekDelta                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetSeekDelta(float InSeekDelta)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetSeekDelta");
+
+	Params::NiagaraComponent_SetSeekDelta Parms{};
+
+	Parms.InSeekDelta = InSeekDelta;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetSimCache
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraSimCache*                 Param_SimCache                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bResetSystem                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetSimCache(class UNiagaraSimCache* Param_SimCache, bool bResetSystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetSimCache");
+
+	Params::NiagaraComponent_SetSimCache Parms{};
+
+	Parms.Param_SimCache = Param_SimCache;
+	Parms.bResetSystem = bResetSystem;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetSystemFixedBounds
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// struct FBox                             LocalBounds                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetSystemFixedBounds(const struct FBox& LocalBounds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetSystemFixedBounds");
+
+	Params::NiagaraComponent_SetSystemFixedBounds Parms{};
+
+	Parms.LocalBounds = std::move(LocalBounds);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetTickBehavior
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// ENiagaraTickBehavior                    NewTickBehavior                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetTickBehavior(ENiagaraTickBehavior NewTickBehavior)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetTickBehavior");
+
+	Params::NiagaraComponent_SetTickBehavior Parms{};
+
+	Parms.NewTickBehavior = NewTickBehavior;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableActor
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableActor(class FName InVariableName, class AActor* Actor)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableActor");
+
+	Params::NiagaraComponent_SetVariableActor Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.Actor = Actor;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableBool
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableBool(class FName InVariableName, bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableBool");
+
+	Params::NiagaraComponent_SetVariableBool Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableFloat
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableFloat(class FName InVariableName, float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableFloat");
+
+	Params::NiagaraComponent_SetVariableFloat Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableInt
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableInt(class FName InVariableName, int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableInt");
+
+	Params::NiagaraComponent_SetVariableInt Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableLinearColor
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableLinearColor(class FName InVariableName, struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableLinearColor");
+
+	Params::NiagaraComponent_SetVariableLinearColor Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableMaterial
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UMaterialInterface*               Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableMaterial(class FName InVariableName, class UMaterialInterface* Object)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableMaterial");
+
+	Params::NiagaraComponent_SetVariableMaterial Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.Object = Object;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableMatrix
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMatrix                          InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableMatrix(class FName InVariableName, struct FMatrix& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableMatrix");
+
+	Params::NiagaraComponent_SetVariableMatrix Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableObject
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UObject*                          Object                                                 (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableObject(class FName InVariableName, class UObject* Object)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableObject");
+
+	Params::NiagaraComponent_SetVariableObject Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.Object = Object;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariablePosition
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariablePosition(class FName InVariableName, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariablePosition");
+
+	Params::NiagaraComponent_SetVariablePosition Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableQuat
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableQuat(class FName InVariableName, struct FQuat& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableQuat");
+
+	Params::NiagaraComponent_SetVariableQuat Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableStaticMesh
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMesh*                      InValue                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableStaticMesh(class FName InVariableName, class UStaticMesh* InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableStaticMesh");
+
+	Params::NiagaraComponent_SetVariableStaticMesh Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableTexture
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture*                         Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableTexture(class FName InVariableName, class UTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableTexture");
+
+	Params::NiagaraComponent_SetVariableTexture Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableTextureRenderTarget
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTextureRenderTarget*             TextureRenderTarget                                    (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableTextureRenderTarget(class FName InVariableName, class UTextureRenderTarget* TextureRenderTarget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableTextureRenderTarget");
+
+	Params::NiagaraComponent_SetVariableTextureRenderTarget Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.TextureRenderTarget = TextureRenderTarget;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableVec2
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableVec2(class FName InVariableName, const struct FVector2D& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec2");
+
+	Params::NiagaraComponent_SetVariableVec2 Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableVec3
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableVec3(class FName InVariableName, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec3");
+
+	Params::NiagaraComponent_SetVariableVec3 Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.SetVariableVec4
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraComponent::SetVariableVec4(class FName InVariableName, struct FVector4& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "SetVariableVec4");
+
+	Params::NiagaraComponent_SetVariableVec4 Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraComponent.GetAgeUpdateMode
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ENiagaraAgeUpdateMode                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ENiagaraAgeUpdateMode UNiagaraComponent::GetAgeUpdateMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetAgeUpdateMode");
+
+	Params::NiagaraComponent_GetAgeUpdateMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetAllowScalability
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetAllowScalability() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetAllowScalability");
+
+	Params::NiagaraComponent_GetAllowScalability Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetAsset
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UNiagaraSystem*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraSystem* UNiagaraComponent::GetAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetAsset");
+
+	Params::NiagaraComponent_GetAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetCustomTimeDilation
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraComponent::GetCustomTimeDilation() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetCustomTimeDilation");
+
+	Params::NiagaraComponent_GetCustomTimeDilation Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetDesiredAge
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraComponent::GetDesiredAge() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetDesiredAge");
+
+	Params::NiagaraComponent_GetDesiredAge Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetEmitterFixedBounds
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             EmitterName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox UNiagaraComponent::GetEmitterFixedBounds(class FName EmitterName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetEmitterFixedBounds");
+
+	Params::NiagaraComponent_GetEmitterFixedBounds Parms{};
+
+	Parms.EmitterName = EmitterName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetForceLocalPlayerEffect
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetForceLocalPlayerEffect() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetForceLocalPlayerEffect");
+
+	Params::NiagaraComponent_GetForceLocalPlayerEffect Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetForceSolo
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetForceSolo() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetForceSolo");
+
+	Params::NiagaraComponent_GetForceSolo Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetLockDesiredAgeDeltaTimeToSeekDelta
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetLockDesiredAgeDeltaTimeToSeekDelta() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetLockDesiredAgeDeltaTimeToSeekDelta");
+
+	Params::NiagaraComponent_GetLockDesiredAgeDeltaTimeToSeekDelta Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetMaxSimTime
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraComponent::GetMaxSimTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetMaxSimTime");
+
+	Params::NiagaraComponent_GetMaxSimTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetOcclusionQueryMode
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ENiagaraOcclusionQueryMode              ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ENiagaraOcclusionQueryMode UNiagaraComponent::GetOcclusionQueryMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetOcclusionQueryMode");
+
+	Params::NiagaraComponent_GetOcclusionQueryMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetPreviewLODDistance
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraComponent::GetPreviewLODDistance() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetPreviewLODDistance");
+
+	Params::NiagaraComponent_GetPreviewLODDistance Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetPreviewLODDistanceEnabled
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::GetPreviewLODDistanceEnabled() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetPreviewLODDistanceEnabled");
+
+	Params::NiagaraComponent_GetPreviewLODDistanceEnabled Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetRandomSeedOffset
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraComponent::GetRandomSeedOffset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetRandomSeedOffset");
+
+	Params::NiagaraComponent_GetRandomSeedOffset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetSeekDelta
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraComponent::GetSeekDelta() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetSeekDelta");
+
+	Params::NiagaraComponent_GetSeekDelta Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetSimCache
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UNiagaraSimCache*                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraSimCache* UNiagaraComponent::GetSimCache() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetSimCache");
+
+	Params::NiagaraComponent_GetSimCache Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetSystemFixedBounds
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// struct FBox                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FBox UNiagaraComponent::GetSystemFixedBounds() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetSystemFixedBounds");
+
+	Params::NiagaraComponent_GetSystemFixedBounds Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.GetTickBehavior
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// ENiagaraTickBehavior                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+ENiagaraTickBehavior UNiagaraComponent::GetTickBehavior() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "GetTickBehavior");
+
+	Params::NiagaraComponent_GetTickBehavior Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraComponent.IsPaused
+// (Final, RequiredAPI, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraComponent::IsPaused() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraComponent", "IsPaused");
+
+	Params::NiagaraComponent_IsPaused Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelLibrary.GetNiagaraDataChannel
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelAsset*         Channel                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelHandler*       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataChannelHandler* UNiagaraDataChannelLibrary::GetNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataChannelLibrary", "GetNiagaraDataChannel");
+
+	Params::NiagaraDataChannelLibrary_GetNiagaraDataChannel Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Channel = Channel;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelLibrary.ReadFromNiagaraDataChannel
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelAsset*         Channel                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FNiagaraDataChannelSearchParametersSearchParams                                           (Parm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// bool                                    bReadPreviousFrame                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelReader*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataChannelReader* UNiagaraDataChannelLibrary::ReadFromNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, bool bReadPreviousFrame)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataChannelLibrary", "ReadFromNiagaraDataChannel");
+
+	Params::NiagaraDataChannelLibrary_ReadFromNiagaraDataChannel Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Channel = Channel;
+	Parms.SearchParams = std::move(SearchParams);
+	Parms.bReadPreviousFrame = bReadPreviousFrame;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataChannelLibrary.WriteToNiagaraDataChannel
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelAsset*         Channel                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FNiagaraDataChannelSearchParametersSearchParams                                           (Parm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// int32                                   Count                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToGame                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToCPU                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bVisibleToGPU                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraDataChannelWriter*        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraDataChannelWriter* UNiagaraDataChannelLibrary::WriteToNiagaraDataChannel(class UObject* WorldContextObject, class UNiagaraDataChannelAsset* Channel, const struct FNiagaraDataChannelSearchParameters& SearchParams, int32 Count, bool bVisibleToGame, bool bVisibleToCPU, bool bVisibleToGPU)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataChannelLibrary", "WriteToNiagaraDataChannel");
+
+	Params::NiagaraDataChannelLibrary_WriteToNiagaraDataChannel Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Channel = Channel;
+	Parms.SearchParams = std::move(SearchParams);
+	Parms.Count = Count;
+	Parms.bVisibleToGame = bVisibleToGame;
+	Parms.bVisibleToCPU = bVisibleToCPU;
+	Parms.bVisibleToGPU = bVisibleToGPU;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBool
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<bool>                            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<bool> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayBool");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayBool Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayBoolValue
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayBoolValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayBoolValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColor
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FLinearColor>             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FLinearColor> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayColor");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayColor Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayColorValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FLinearColor UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayColorValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayColorValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloat
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<float> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayFloat");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayFloat Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayFloatValue
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayFloatValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayFloatValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayInt32");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayInt32 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayInt32Value
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayInt32Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayInt32Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayMatrix
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMatrix>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FMatrix> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, bool bApplyLWCRebase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayMatrix");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayMatrix Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.bApplyLWCRebase = bApplyLWCRebase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayMatrixValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMatrix                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FMatrix UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, bool bApplyLWCRebase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayMatrixValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayMatrixValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.bApplyLWCRebase = bApplyLWCRebase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPosition
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayPosition");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayPosition Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayPositionValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayPositionValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayPositionValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuat
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FQuat>                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FQuat> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayQuat");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayQuat Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayQuatValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FQuat UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayQuatValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayQuatValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<int32> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayUInt8");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayUInt8 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayUInt8Value
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayUInt8Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayUInt8Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2D
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>                ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector2D> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector2D");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector2D Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector2DValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector2DValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector2DValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector4>                 ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<struct FVector4> UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector4");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector4 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVector4Value
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector4 UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVector4Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVector4Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.GetNiagaraArrayVectorValue
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UNiagaraDataInterfaceArrayFunctionLibrary::GetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "GetNiagaraArrayVectorValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_GetNiagaraArrayVectorValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBool
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<bool>                            ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBool(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<bool>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayBool");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayBool Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayBoolValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayBoolValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, bool& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayBoolValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayBoolValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = Value;
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColor
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FLinearColor>             ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColor(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FLinearColor>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayColor");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayColor Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayColorValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayColorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FLinearColor& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayColorValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayColorValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloat
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<float>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<float>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayFloat");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayFloat Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayFloatValue
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayFloatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, float Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayFloatValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayFloatValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = Value;
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<int32>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayInt32");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayInt32 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayInt32Value
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayInt32Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayInt32Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayInt32Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = Value;
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayMatrix
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FMatrix>                  ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrix(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FMatrix>& ArrayData, bool bApplyLWCRebase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayMatrix");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayMatrix Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+	Parms.bApplyLWCRebase = bApplyLWCRebase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayMatrixValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FMatrix                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bApplyLWCRebase                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayMatrixValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FMatrix& Value, bool bSizeToFit, bool bApplyLWCRebase)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayMatrixValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayMatrixValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+	Parms.bApplyLWCRebase = bApplyLWCRebase;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPosition
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPosition(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayPosition");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayPosition Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayPositionValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayPositionValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayPositionValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayPositionValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuat
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FQuat>                    ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuat(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FQuat>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayQuat");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayQuat Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayQuatValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            Value                                                  (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayQuatValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FQuat& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayQuatValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayQuatValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<int32>                           ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<int32>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayUInt8");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayUInt8 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayUInt8Value
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Value                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayUInt8Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, int32 Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayUInt8Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayUInt8Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = Value;
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector>                  ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2D
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector2D>                ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2D(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector2D>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector2D");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector2D Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector2DValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector2DValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector2D& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector2DValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector2DValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<struct FVector4>                 ArrayData                                              (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<struct FVector4>& ArrayData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector4");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector4 Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.ArrayData = std::move(ArrayData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVector4Value
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVector4Value(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector4& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVector4Value");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVector4Value Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceArrayFunctionLibrary.SetNiagaraArrayVectorValue
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Value                                                  (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSizeToFit                                             (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceArrayFunctionLibrary::SetNiagaraArrayVectorValue(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, int32 Param_Index, struct FVector& Value, bool bSizeToFit)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDataInterfaceArrayFunctionLibrary", "SetNiagaraArrayVectorValue");
+
+	Params::NiagaraDataInterfaceArrayFunctionLibrary_SetNiagaraArrayVectorValue Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.Param_Index = Param_Index;
+	Parms.Value = std::move(Value);
+	Parms.bSizeToFit = bSizeToFit;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParticleCallbackHandler.ReceiveParticleData
+// (Native, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// TArray<struct FBasicParticleData>       Data                                                   (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+// class UNiagaraSystem*                   NiagaraSystem                                          (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          SimulationPositionOffset                               (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void INiagaraParticleCallbackHandler::ReceiveParticleData(TArray<struct FBasicParticleData>& Data, class UNiagaraSystem* NiagaraSystem, struct FVector& SimulationPositionOffset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParticleCallbackHandler", "ReceiveParticleData");
+
+	Params::NiagaraParticleCallbackHandler_ReceiveParticleData Parms{};
+
+	Parms.Data = std::move(Data);
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.SimulationPositionOffset = std::move(SimulationPositionOffset);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraBaselineController.GetSystem
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraSystem*                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraSystem* UNiagaraBaselineController::GetSystem()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraBaselineController", "GetSystem");
+
+	Params::NiagaraBaselineController_GetSystem Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraBaselineController.OnBeginTest
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
+
+void UNiagaraBaselineController::OnBeginTest()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraBaselineController", "OnBeginTest");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraBaselineController.OnEndTest
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FNiagaraPerfBaselineStats        Stats                                                  (Parm, NoDestructor, NativeAccessSpecifierPublic)
+
+void UNiagaraBaselineController::OnEndTest(const struct FNiagaraPerfBaselineStats& Stats)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraBaselineController", "OnEndTest");
+
+	Params::NiagaraBaselineController_OnEndTest Parms{};
+
+	Parms.Stats = std::move(Stats);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraBaselineController.OnOwnerTick
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaTime                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraBaselineController::OnOwnerTick(float DeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraBaselineController", "OnOwnerTick");
+
+	Params::NiagaraBaselineController_OnOwnerTick Parms{};
+
+	Parms.DeltaTime = DeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraBaselineController.OnTickTest
+// (RequiredAPI, Native, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraBaselineController::OnTickTest()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraBaselineController", "OnTickTest");
+
+	Params::NiagaraBaselineController_OnTickTest Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillRawTexture2D
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTextureRenderTarget2D*           Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TilesX                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TilesY                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataInterfaceGrid2DCollection::FillRawTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32* TilesX, int32* TilesY)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "FillRawTexture2D");
+
+	Params::NiagaraDataInterfaceGrid2DCollection_FillRawTexture2D Parms{};
+
+	Parms.Component = Component;
+	Parms.Dest = Dest;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (TilesX != nullptr)
+		*TilesX = Parms.TilesX;
+
+	if (TilesY != nullptr)
+		*TilesY = Parms.TilesY;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid2DCollection.FillTexture2D
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTextureRenderTarget2D*           Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   AttributeIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataInterfaceGrid2DCollection::FillTexture2D(class UNiagaraComponent* Component, class UTextureRenderTarget2D* Dest, int32 AttributeIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "FillTexture2D");
+
+	Params::NiagaraDataInterfaceGrid2DCollection_FillTexture2D Parms{};
+
+	Parms.Component = Component;
+	Parms.Dest = Dest;
+	Parms.AttributeIndex = AttributeIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetRawTextureSize
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceGrid2DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "GetRawTextureSize");
+
+	Params::NiagaraDataInterfaceGrid2DCollection_GetRawTextureSize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SizeX != nullptr)
+		*SizeX = Parms.SizeX;
+
+	if (SizeY != nullptr)
+		*SizeY = Parms.SizeY;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid2DCollection.GetTextureSize
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceGrid2DCollection::GetTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid2DCollection", "GetTextureSize");
+
+	Params::NiagaraDataInterfaceGrid2DCollection_GetTextureSize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SizeX != nullptr)
+		*SizeX = Parms.SizeX;
+
+	if (SizeY != nullptr)
+		*SizeY = Parms.SizeY;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillRawVolumeTexture
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UVolumeTexture*                   Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TilesX                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TilesY                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   TileZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataInterfaceGrid3DCollection::FillRawVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32* TilesX, int32* TilesY, int32* TileZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "FillRawVolumeTexture");
+
+	Params::NiagaraDataInterfaceGrid3DCollection_FillRawVolumeTexture Parms{};
+
+	Parms.Component = Component;
+	Parms.Dest = Dest;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (TilesX != nullptr)
+		*TilesX = Parms.TilesX;
+
+	if (TilesY != nullptr)
+		*TilesY = Parms.TilesY;
+
+	if (TileZ != nullptr)
+		*TileZ = Parms.TileZ;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid3DCollection.FillVolumeTexture
+// (RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UVolumeTexture*                   Dest                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   AttributeIndex                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraDataInterfaceGrid3DCollection::FillVolumeTexture(class UNiagaraComponent* Component, class UVolumeTexture* Dest, int32 AttributeIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "FillVolumeTexture");
+
+	Params::NiagaraDataInterfaceGrid3DCollection_FillVolumeTexture Parms{};
+
+	Parms.Component = Component;
+	Parms.Dest = Dest;
+	Parms.AttributeIndex = AttributeIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetRawTextureSize
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceGrid3DCollection::GetRawTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY, int32* SizeZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "GetRawTextureSize");
+
+	Params::NiagaraDataInterfaceGrid3DCollection_GetRawTextureSize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SizeX != nullptr)
+		*SizeX = Parms.SizeX;
+
+	if (SizeY != nullptr)
+		*SizeY = Parms.SizeY;
+
+	if (SizeZ != nullptr)
+		*SizeZ = Parms.SizeZ;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceGrid3DCollection.GetTextureSize
+// (RequiredAPI, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                Component                                              (ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeX                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeY                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   SizeZ                                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceGrid3DCollection::GetTextureSize(class UNiagaraComponent* Component, int32* SizeX, int32* SizeY, int32* SizeZ)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceGrid3DCollection", "GetTextureSize");
+
+	Params::NiagaraDataInterfaceGrid3DCollection_GetTextureSize Parms{};
+
+	Parms.Component = Component;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (SizeX != nullptr)
+		*SizeX = Parms.SizeX;
+
+	if (SizeY != nullptr)
+		*SizeY = Parms.SizeY;
+
+	if (SizeZ != nullptr)
+		*SizeZ = Parms.SizeZ;
+}
+
+
+// Function Niagara.NiagaraDIRigidMeshCollisionFunctionLibrary.SetSourceActors
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             OverrideName                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class AActor*>                   SourceActors                                           (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraDIRigidMeshCollisionFunctionLibrary::SetSourceActors(class UNiagaraComponent* NiagaraSystem, class FName OverrideName, TArray<class AActor*>& SourceActors)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraDIRigidMeshCollisionFunctionLibrary", "SetSourceActors");
+
+	Params::NiagaraDIRigidMeshCollisionFunctionLibrary_SetSourceActors Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = OverrideName;
+	Parms.SourceActors = std::move(SourceActors);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraDataInterfaceSkeletalMesh.OnSourceEndPlay
+// (Final, RequiredAPI, Native, Protected)
+// Parameters:
+// class AActor*                           InSource                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EEndPlayReason                          Reason                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraDataInterfaceSkeletalMesh::OnSourceEndPlay(class AActor* InSource, EEndPlayReason Reason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraDataInterfaceSkeletalMesh", "OnSourceEndPlay");
+
+	Params::NiagaraDataInterfaceSkeletalMesh_OnSourceEndPlay Parms{};
+
+	Parms.InSource = InSource;
+	Parms.Reason = Reason;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.AcquireNiagaraGPURayTracedCollisionGroup
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraFunctionLibrary::AcquireNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "AcquireNiagaraGPURayTracedCollisionGroup");
+
+	Params::NiagaraFunctionLibrary_AcquireNiagaraGPURayTracedCollisionGroup Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.GetNiagaraParameterCollection
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraParameterCollection*      Collection                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraParameterCollectionInstance*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraParameterCollectionInstance* UNiagaraFunctionLibrary::GetNiagaraParameterCollection(class UObject* WorldContextObject, class UNiagaraParameterCollection* Collection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "GetNiagaraParameterCollection");
+
+	Params::NiagaraFunctionLibrary_GetNiagaraParameterCollection Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Collection = Collection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableSkeletalMeshComponent
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USkeletalMeshComponent*           SkeletalMeshComponent                                  (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::OverrideSystemUserVariableSkeletalMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class USkeletalMeshComponent* SkeletalMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableSkeletalMeshComponent");
+
+	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableSkeletalMeshComponent Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.SkeletalMeshComponent = SkeletalMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMesh
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMesh*                      StaticMesh                                             (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMesh(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMesh* StaticMesh)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableStaticMesh");
+
+	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableStaticMesh Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.StaticMesh = StaticMesh;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.OverrideSystemUserVariableStaticMeshComponent
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UStaticMeshComponent*             StaticMeshComponent                                    (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::OverrideSystemUserVariableStaticMeshComponent(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UStaticMeshComponent* StaticMeshComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "OverrideSystemUserVariableStaticMeshComponent");
+
+	Params::NiagaraFunctionLibrary_OverrideSystemUserVariableStaticMeshComponent Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.StaticMeshComponent = StaticMeshComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.ReleaseNiagaraGPURayTracedCollisionGroup
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::ReleaseNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, int32 CollisionGroup)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "ReleaseNiagaraGPURayTracedCollisionGroup");
+
+	Params::NiagaraFunctionLibrary_ReleaseNiagaraGPURayTracedCollisionGroup Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.CollisionGroup = CollisionGroup;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetActorNiagaraGPURayTracedCollisionGroup
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class AActor*                           Actor                                                  (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetActorNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class AActor* Actor, int32 CollisionGroup)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetActorNiagaraGPURayTracedCollisionGroup");
+
+	Params::NiagaraFunctionLibrary_SetActorNiagaraGPURayTracedCollisionGroup Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Actor = Actor;
+	Parms.CollisionGroup = CollisionGroup;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetComponentNiagaraGPURayTracedCollisionGroup
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UPrimitiveComponent*              Primitive                                              (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CollisionGroup                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetComponentNiagaraGPURayTracedCollisionGroup(class UObject* WorldContextObject, class UPrimitiveComponent* Primitive, int32 CollisionGroup)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetComponentNiagaraGPURayTracedCollisionGroup");
+
+	Params::NiagaraFunctionLibrary_SetComponentNiagaraGPURayTracedCollisionGroup Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.Primitive = Primitive;
+	Parms.CollisionGroup = CollisionGroup;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredBones
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     FilteredBones                                          (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceFilteredBones(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& FilteredBones)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceFilteredBones");
+
+	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceFilteredBones Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.FilteredBones = std::move(FilteredBones);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceFilteredSockets
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     FilteredSockets                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceFilteredSockets(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& FilteredSockets)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceFilteredSockets");
+
+	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceFilteredSockets Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.FilteredSockets = std::move(FilteredSockets);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetSkeletalMeshDataInterfaceSamplingRegions
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class FName>                     SamplingRegions                                        (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetSkeletalMeshDataInterfaceSamplingRegions(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, TArray<class FName>& SamplingRegions)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetSkeletalMeshDataInterfaceSamplingRegions");
+
+	Params::NiagaraFunctionLibrary_SetSkeletalMeshDataInterfaceSamplingRegions Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.SamplingRegions = std::move(SamplingRegions);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetTexture2DArrayObject
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture2DArray*                  Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetTexture2DArrayObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture2DArray* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetTexture2DArrayObject");
+
+	Params::NiagaraFunctionLibrary_SetTexture2DArrayObject Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetTextureObject
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UTexture*                         Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetTextureObject");
+
+	Params::NiagaraFunctionLibrary_SetTextureObject Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SetVolumeTextureObject
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UNiagaraComponent*                NiagaraSystem                                          (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           OverrideName                                           (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UVolumeTexture*                   Texture                                                (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraFunctionLibrary::SetVolumeTextureObject(class UNiagaraComponent* NiagaraSystem, const class FString& OverrideName, class UVolumeTexture* Texture)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SetVolumeTextureObject");
+
+	Params::NiagaraFunctionLibrary_SetVolumeTextureObject Parms{};
+
+	Parms.NiagaraSystem = NiagaraSystem;
+	Parms.OverrideName = std::move(OverrideName);
+	Parms.Texture = Texture;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocation
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraSystem*                   SystemTemplate                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// struct FVector                          Scale                                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoDestroy                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoActivate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ENCPoolMethod                           PoolingMethod                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPreCullCheck                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocation(class UObject* WorldContextObject, class UNiagaraSystem* SystemTemplate, const struct FVector& Location, const struct FRotator& Rotation, const struct FVector& Scale, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAtLocation");
+
+	Params::NiagaraFunctionLibrary_SpawnSystemAtLocation Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.SystemTemplate = SystemTemplate;
+	Parms.Location = std::move(Location);
+	Parms.Rotation = std::move(Rotation);
+	Parms.Scale = std::move(Scale);
+	Parms.bAutoDestroy = bAutoDestroy;
+	Parms.bAutoActivate = bAutoActivate;
+	Parms.PoolingMethod = PoolingMethod;
+	Parms.bPreCullCheck = bPreCullCheck;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAtLocationWithParams
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FFXSystemSpawnParameters         SpawnParams                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAtLocationWithParams(struct FFXSystemSpawnParameters& SpawnParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAtLocationWithParams");
+
+	Params::NiagaraFunctionLibrary_SpawnSystemAtLocationWithParams Parms{};
+
+	Parms.SpawnParams = std::move(SpawnParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttached
+// (Final, RequiredAPI, Native, Static, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class UNiagaraSystem*                   SystemTemplate                                         (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class USceneComponent*                  AttachToComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             AttachPointName                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          Location                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FRotator                         Rotation                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+// EAttachLocation                         LocationType                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoDestroy                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAutoActivate                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// ENCPoolMethod                           PoolingMethod                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bPreCullCheck                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttached(class UNiagaraSystem* SystemTemplate, class USceneComponent* AttachToComponent, class FName AttachPointName, const struct FVector& Location, const struct FRotator& Rotation, EAttachLocation LocationType, bool bAutoDestroy, bool bAutoActivate, ENCPoolMethod PoolingMethod, bool bPreCullCheck)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAttached");
+
+	Params::NiagaraFunctionLibrary_SpawnSystemAttached Parms{};
+
+	Parms.SystemTemplate = SystemTemplate;
+	Parms.AttachToComponent = AttachToComponent;
+	Parms.AttachPointName = AttachPointName;
+	Parms.Location = std::move(Location);
+	Parms.Rotation = std::move(Rotation);
+	Parms.LocationType = LocationType;
+	Parms.bAutoDestroy = bAutoDestroy;
+	Parms.bAutoActivate = bAutoActivate;
+	Parms.PoolingMethod = PoolingMethod;
+	Parms.bPreCullCheck = bPreCullCheck;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraFunctionLibrary.SpawnSystemAttachedWithParams
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// struct FFXSystemSpawnParameters         SpawnParams                                            (ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
+// class UNiagaraComponent*                ReturnValue                                            (ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UNiagaraComponent* UNiagaraFunctionLibrary::SpawnSystemAttachedWithParams(struct FFXSystemSpawnParameters& SpawnParams)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("NiagaraFunctionLibrary", "SpawnSystemAttachedWithParams");
+
+	Params::NiagaraFunctionLibrary_SpawnSystemAttachedWithParams Parms{};
+
+	Parms.SpawnParams = std::move(SpawnParams);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetBoolParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool UNiagaraParameterCollectionInstance::GetBoolParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetBoolParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetBoolParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetColorParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FLinearColor UNiagaraParameterCollectionInstance::GetColorParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetColorParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetColorParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetFloatParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float UNiagaraParameterCollectionInstance::GetFloatParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetFloatParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetFloatParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetIntParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+int32 UNiagaraParameterCollectionInstance::GetIntParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetIntParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetIntParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetQuatParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            ReturnValue                                            (Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FQuat UNiagaraParameterCollectionInstance::GetQuatParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetQuatParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetQuatParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetVector2DParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector2D UNiagaraParameterCollectionInstance::GetVector2DParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVector2DParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetVector2DParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetVector4Parameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector4 UNiagaraParameterCollectionInstance::GetVector4Parameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVector4Parameter");
+
+	Params::NiagaraParameterCollectionInstance_GetVector4Parameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.GetVectorParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+struct FVector UNiagaraParameterCollectionInstance::GetVectorParameter(const class FString& InVariableName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "GetVectorParameter");
+
+	Params::NiagaraParameterCollectionInstance_GetVectorParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetBoolParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetBoolParameter(const class FString& InVariableName, bool InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetBoolParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetBoolParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetColorParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FLinearColor                     InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetColorParameter(const class FString& InVariableName, const struct FLinearColor& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetColorParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetColorParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetFloatParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetFloatParameter(const class FString& InVariableName, float InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetFloatParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetFloatParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetIntParameter
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetIntParameter(const class FString& InVariableName, int32 InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetIntParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetIntParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = InValue;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetQuatParameter
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FQuat                            InValue                                                (ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetQuatParameter(const class FString& InVariableName, struct FQuat& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetQuatParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetQuatParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetVector2DParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector2D                        InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetVector2DParameter(const class FString& InVariableName, const struct FVector2D& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVector2DParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetVector2DParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetVector4Parameter
+// (Final, RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector4                         InValue                                                (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetVector4Parameter(const class FString& InVariableName, struct FVector4& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVector4Parameter");
+
+	Params::NiagaraParameterCollectionInstance_SetVector4Parameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraParameterCollectionInstance.SetVectorParameter
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
+// Parameters:
+// class FString                           InVariableName                                         (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FVector                          InValue                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UNiagaraParameterCollectionInstance::SetVectorParameter(const class FString& InVariableName, const struct FVector& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraParameterCollectionInstance", "SetVectorParameter");
+
+	Params::NiagaraParameterCollectionInstance_SetVectorParameter Parms{};
+
+	Parms.InVariableName = std::move(InVariableName);
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.NiagaraPreviewBase.SetLabelText
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class FText                             InXAxisText                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+// class FText                             InYAxisText                                            (ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+void ANiagaraPreviewBase::SetLabelText(class FText& InXAxisText, class FText& InYAxisText)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraPreviewBase", "SetLabelText");
+
+	Params::NiagaraPreviewBase_SetLabelText Parms{};
+
+	Parms.InXAxisText = InXAxisText;
+	Parms.InYAxisText = InYAxisText;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Niagara.NiagaraPreviewBase.SetSystem
+// (Event, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UNiagaraSystem*                   InSystem                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void ANiagaraPreviewBase::SetSystem(class UNiagaraSystem* InSystem)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraPreviewBase", "SetSystem");
+
+	Params::NiagaraPreviewBase_SetSystem Parms{};
+
+	Parms.InSystem = InSystem;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function Niagara.NiagaraScript.RaiseOnGPUCompilationComplete
+// (Final, Native, Public)
+
+void UNiagaraScript::RaiseOnGPUCompilationComplete()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("NiagaraScript", "RaiseOnGPUCompilationComplete");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCache
+// (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class UNiagaraSimCache*                 SimCache                                               (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FNiagaraSimCacheCreateParameters CreateParameters                                       (Parm, NativeAccessSpecifierPublic)
+// class UNiagaraComponent*                NiagaraComponent                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FNiagaraSimCacheCaptureParametersCaptureParameters                                      (Parm, NoDestructor, NativeAccessSpecifierPublic)
+// class UNiagaraSimCache*                 OutSimCache                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UAsyncNiagaraCaptureSimCache*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagaraSimCache(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, const struct FNiagaraSimCacheCaptureParameters& CaptureParameters, class UNiagaraSimCache** OutSimCache)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AsyncNiagaraCaptureSimCache", "CaptureNiagaraSimCache");
+
+	Params::AsyncNiagaraCaptureSimCache_CaptureNiagaraSimCache Parms{};
+
+	Parms.SimCache = SimCache;
+	Parms.CreateParameters = std::move(CreateParameters);
+	Parms.NiagaraComponent = NiagaraComponent;
+	Parms.CaptureParameters = std::move(CaptureParameters);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	if (OutSimCache != nullptr)
+		*OutSimCache = Parms.OutSimCache;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function Niagara.AsyncNiagaraCaptureSimCache.CaptureNiagaraSimCacheMultiFrame
 // (Final, Native, Static, Public, HasOutParams, BlueprintCallable)
 // Parameters:
@@ -5741,12 +6905,12 @@ void UNiagaraSimCache::ReadVectorAttribute(TArray<struct FVector>* OutValues, cl
 // class UNiagaraComponent*                NiagaraComponent                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNiagaraSimCache*                 OutSimCache                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // int32                                   NumFrames                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   CaptureRate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Param_bAdvanceSimulation                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Param_AdvanceDeltaTime                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CaptureRate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAdvanceSimulation                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdvanceDeltaTime                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAsyncNiagaraCaptureSimCache*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 NumFrames, int32 CaptureRate, bool Param_bAdvanceSimulation, float Param_AdvanceDeltaTime)
+class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagaraSimCacheMultiFrame(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 NumFrames, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5760,8 +6924,8 @@ class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagara
 	Parms.NiagaraComponent = NiagaraComponent;
 	Parms.NumFrames = NumFrames;
 	Parms.CaptureRate = CaptureRate;
-	Parms.Param_bAdvanceSimulation = Param_bAdvanceSimulation;
-	Parms.Param_AdvanceDeltaTime = Param_AdvanceDeltaTime;
+	Parms.bAdvanceSimulation = bAdvanceSimulation;
+	Parms.AdvanceDeltaTime = AdvanceDeltaTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -5784,12 +6948,12 @@ class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagara
 // struct FNiagaraSimCacheCreateParameters CreateParameters                                       (Parm, NativeAccessSpecifierPublic)
 // class UNiagaraComponent*                NiagaraComponent                                       (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UNiagaraSimCache*                 OutSimCache                                            (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// int32                                   CaptureRate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// bool                                    Param_bAdvanceSimulation                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// float                                   Param_AdvanceDeltaTime                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   CaptureRate                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bAdvanceSimulation                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   AdvanceDeltaTime                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UAsyncNiagaraCaptureSimCache*     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 CaptureRate, bool Param_bAdvanceSimulation, float Param_AdvanceDeltaTime)
+class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagaraSimCacheUntilComplete(class UNiagaraSimCache* SimCache, const struct FNiagaraSimCacheCreateParameters& CreateParameters, class UNiagaraComponent* NiagaraComponent, class UNiagaraSimCache** OutSimCache, int32 CaptureRate, bool bAdvanceSimulation, float AdvanceDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -5802,8 +6966,8 @@ class UAsyncNiagaraCaptureSimCache* UAsyncNiagaraCaptureSimCache::CaptureNiagara
 	Parms.CreateParameters = std::move(CreateParameters);
 	Parms.NiagaraComponent = NiagaraComponent;
 	Parms.CaptureRate = CaptureRate;
-	Parms.Param_bAdvanceSimulation = Param_bAdvanceSimulation;
-	Parms.Param_AdvanceDeltaTime = Param_AdvanceDeltaTime;
+	Parms.bAdvanceSimulation = bAdvanceSimulation;
+	Parms.AdvanceDeltaTime = AdvanceDeltaTime;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

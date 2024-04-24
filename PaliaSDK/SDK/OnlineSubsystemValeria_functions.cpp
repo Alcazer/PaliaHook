@@ -425,15 +425,67 @@ void UOSSVAL_AsyncActionProfanityFilterString::OnResultObtained__DelegateSignatu
 }
 
 
+// Function OnlineSubsystemValeria.OSSVAL_AsyncActionQueryUserPrivileges.QueryUserPrivileges
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          WorldContextObject                                     (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InUserIndex                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// EVAL_UserPrivileges                     InPrivilegesType                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UOSSVAL_AsyncActionQueryUserPrivileges*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UOSSVAL_AsyncActionQueryUserPrivileges* UOSSVAL_AsyncActionQueryUserPrivileges::QueryUserPrivileges(class UObject* WorldContextObject, int32 InUserIndex, EVAL_UserPrivileges InPrivilegesType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("OSSVAL_AsyncActionQueryUserPrivileges", "QueryUserPrivileges");
+
+	Params::OSSVAL_AsyncActionQueryUserPrivileges_QueryUserPrivileges Parms{};
+
+	Parms.WorldContextObject = WorldContextObject;
+	Parms.InUserIndex = InUserIndex;
+	Parms.InPrivilegesType = InPrivilegesType;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// DelegateFunction OnlineSubsystemValeria.OSSVAL_AsyncActionQueryUserPrivileges.OnQueryUserPrivilegesComplete__DelegateSignature
+// (MulticastDelegate, Public, Delegate)
+// Parameters:
+// bool                                    bQueryResult                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UOSSVAL_AsyncActionQueryUserPrivileges::OnQueryUserPrivilegesComplete__DelegateSignature(bool bQueryResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("OSSVAL_AsyncActionQueryUserPrivileges", "OnQueryUserPrivilegesComplete__DelegateSignature");
+
+	Params::OSSVAL_AsyncActionQueryUserPrivileges_OnQueryUserPrivilegesComplete__DelegateSignature Parms{};
+
+	Parms.bQueryResult = bQueryResult;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
 // Function OnlineSubsystemValeria.OSSVAL_BeaconClient.RpcClient_SendTicketValidationResponse
 // (Net, NetReliable, Native, Event, Public, HasDefaults, NetClient)
 // Parameters:
-// struct FGuid                            RequestId                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            RequestID                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bAccepted                                              (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FOSSVAL_MatchmakingTicket        Ticket                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FOSSVAL_MatchmakingTicketContext Context                                                (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void AOSSVAL_BeaconClient::RpcClient_SendTicketValidationResponse(struct FGuid& RequestId, bool bAccepted, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context)
+void AOSSVAL_BeaconClient::RpcClient_SendTicketValidationResponse(struct FGuid& RequestID, bool bAccepted, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context)
 {
 	static class UFunction* Func = nullptr;
 
@@ -442,7 +494,7 @@ void AOSSVAL_BeaconClient::RpcClient_SendTicketValidationResponse(struct FGuid& 
 
 	Params::OSSVAL_BeaconClient_RpcClient_SendTicketValidationResponse Parms{};
 
-	Parms.RequestId = std::move(RequestId);
+	Parms.RequestID = std::move(RequestID);
 	Parms.bAccepted = bAccepted;
 	Parms.Ticket = std::move(Ticket);
 	Parms.Context = std::move(Context);
@@ -459,11 +511,11 @@ void AOSSVAL_BeaconClient::RpcClient_SendTicketValidationResponse(struct FGuid& 
 // Function OnlineSubsystemValeria.OSSVAL_BeaconClient.RpcServer_ValidateTicket
 // (Net, NetReliable, Native, Event, Public, NetServer, HasDefaults)
 // Parameters:
-// struct FGuid                            RequestId                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// struct FGuid                            RequestID                                              (ConstParm, Parm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FOSSVAL_MatchmakingTicket        Ticket                                                 (ConstParm, Parm, ReferenceParm, NativeAccessSpecifierPublic)
 // struct FOSSVAL_MatchmakingTicketContext Context                                                (ConstParm, Parm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 
-void AOSSVAL_BeaconClient::RpcServer_ValidateTicket(struct FGuid& RequestId, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context)
+void AOSSVAL_BeaconClient::RpcServer_ValidateTicket(struct FGuid& RequestID, struct FOSSVAL_MatchmakingTicket& Ticket, struct FOSSVAL_MatchmakingTicketContext& Context)
 {
 	static class UFunction* Func = nullptr;
 
@@ -472,7 +524,7 @@ void AOSSVAL_BeaconClient::RpcServer_ValidateTicket(struct FGuid& RequestId, str
 
 	Params::OSSVAL_BeaconClient_RpcServer_ValidateTicket Parms{};
 
-	Parms.RequestId = std::move(RequestId);
+	Parms.RequestID = std::move(RequestID);
 	Parms.Ticket = std::move(Ticket);
 	Parms.Context = std::move(Context);
 

@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Palia_classes.hpp"
 #include "E_VoiceEffortEvent_structs.hpp"
+#include "Palia_classes.hpp"
 
 
 namespace SDK

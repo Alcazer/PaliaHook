@@ -81,106 +81,6 @@ void US6UI_AsyncAction_OpenModal::OnOpened__DelegateSignature(class US6UI_ModalW
 }
 
 
-// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentBindingsChanged
-// (Final, Native, Private)
-// Parameters:
-// class US6UI_InputActionHandlingWidgetComponent*AffectedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_InputRouterSubsystem::HandleInputActionHandlingComponentBindingsChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "HandleInputActionHandlingComponentBindingsChanged");
-
-	Params::S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged Parms{};
-
-	Parms.AffectedComponent = AffectedComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentEnabledStateChanged
-// (Final, Native, Private)
-// Parameters:
-// class US6UI_InputActionHandlingWidgetComponent*AffectedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_InputRouterSubsystem::HandleInputActionHandlingComponentEnabledStateChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "HandleInputActionHandlingComponentEnabledStateChanged");
-
-	Params::S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged Parms{};
-
-	Parms.AffectedComponent = AffectedComponent;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function S6UICore.S6UI_InputRouterSubsystem.RegisterInputActionHandler
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class US6UI_InputActionHandlingWidgetComponent*InputActionHandler                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_InputRouterSubsystem::RegisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "RegisterInputActionHandler");
-
-	Params::S6UI_InputRouterSubsystem_RegisterInputActionHandler Parms{};
-
-	Parms.InputActionHandler = InputActionHandler;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
-// Function S6UICore.S6UI_InputRouterSubsystem.UnregisterInputActionHandler
-// (Final, Native, Public, BlueprintCallable)
-// Parameters:
-// class US6UI_InputActionHandlingWidgetComponent*InputActionHandler                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-void US6UI_InputRouterSubsystem::UnregisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "UnregisterInputActionHandler");
-
-	Params::S6UI_InputRouterSubsystem_UnregisterInputActionHandler Parms{};
-
-	Parms.InputActionHandler = InputActionHandler;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-}
-
-
 // Function S6UICore.S6UI_ModalWidgetBase.CanClose
 // (Native, Event, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -446,81 +346,6 @@ ES6UI_ModalWidgetState US6UI_ModalWidgetBase::GetModalWidgetState() const
 		Func = Class->GetFunction("S6UI_ModalWidgetBase", "GetModalWidgetState");
 
 	Params::S6UI_ModalWidgetBase_GetModalWidgetState Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function S6UICore.S6UI_StateUserWidget.GetInputMode
-// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
-// Parameters:
-// struct FS6UI_InputMode                  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-
-struct FS6UI_InputMode US6UI_StateUserWidget::GetInputMode() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_StateUserWidget", "GetInputMode");
-
-	Params::S6UI_StateUserWidget_GetInputMode Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function S6UICore.S6UI_StateUserWidget.GetViewModel
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// class US6UI_StateViewModel*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class US6UI_StateViewModel* US6UI_StateUserWidget::GetViewModel() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_StateUserWidget", "GetViewModel");
-
-	Params::S6UI_StateUserWidget_GetViewModel Parms{};
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function S6UICore.S6UI_StateUserWidget.GetViewModelContext
-// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
-// Parameters:
-// const struct FMVVMViewModelContext      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-
-const struct FMVVMViewModelContext US6UI_StateUserWidget::GetViewModelContext() const
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("S6UI_StateUserWidget", "GetViewModelContext");
-
-	Params::S6UI_StateUserWidget_GetViewModelContext Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;
@@ -1180,6 +1005,181 @@ class US6UI_InputActionHandlingWidgetComponent* IS6UI_InputActionHandlingWidgetI
 		Func = Class->GetFunction("S6UI_InputActionHandlingWidgetInterface", "GetInputActionHandlingComponent");
 
 	Params::S6UI_InputActionHandlingWidgetInterface_GetInputActionHandlingComponent Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentBindingsChanged
+// (Final, Native, Private)
+// Parameters:
+// class US6UI_InputActionHandlingWidgetComponent*AffectedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_InputRouterSubsystem::HandleInputActionHandlingComponentBindingsChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "HandleInputActionHandlingComponentBindingsChanged");
+
+	Params::S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentBindingsChanged Parms{};
+
+	Parms.AffectedComponent = AffectedComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICore.S6UI_InputRouterSubsystem.HandleInputActionHandlingComponentEnabledStateChanged
+// (Final, Native, Private)
+// Parameters:
+// class US6UI_InputActionHandlingWidgetComponent*AffectedComponent                                      (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_InputRouterSubsystem::HandleInputActionHandlingComponentEnabledStateChanged(class US6UI_InputActionHandlingWidgetComponent* AffectedComponent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "HandleInputActionHandlingComponentEnabledStateChanged");
+
+	Params::S6UI_InputRouterSubsystem_HandleInputActionHandlingComponentEnabledStateChanged Parms{};
+
+	Parms.AffectedComponent = AffectedComponent;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICore.S6UI_InputRouterSubsystem.RegisterInputActionHandler
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class US6UI_InputActionHandlingWidgetComponent*InputActionHandler                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_InputRouterSubsystem::RegisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "RegisterInputActionHandler");
+
+	Params::S6UI_InputRouterSubsystem_RegisterInputActionHandler Parms{};
+
+	Parms.InputActionHandler = InputActionHandler;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICore.S6UI_InputRouterSubsystem.UnregisterInputActionHandler
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class US6UI_InputActionHandlingWidgetComponent*InputActionHandler                                     (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void US6UI_InputRouterSubsystem::UnregisterInputActionHandler(class US6UI_InputActionHandlingWidgetComponent* InputActionHandler)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_InputRouterSubsystem", "UnregisterInputActionHandler");
+
+	Params::S6UI_InputRouterSubsystem_UnregisterInputActionHandler Parms{};
+
+	Parms.InputActionHandler = InputActionHandler;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function S6UICore.S6UI_StateUserWidget.GetInputMode
+// (Native, Event, Public, BlueprintCallable, BlueprintEvent, BlueprintPure, Const)
+// Parameters:
+// struct FS6UI_InputMode                  ReturnValue                                            (Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+
+struct FS6UI_InputMode US6UI_StateUserWidget::GetInputMode() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_StateUserWidget", "GetInputMode");
+
+	Params::S6UI_StateUserWidget_GetInputMode Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function S6UICore.S6UI_StateUserWidget.GetViewModel
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class US6UI_StateViewModel*             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class US6UI_StateViewModel* US6UI_StateUserWidget::GetViewModel() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_StateUserWidget", "GetViewModel");
+
+	Params::S6UI_StateUserWidget_GetViewModel Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function S6UICore.S6UI_StateUserWidget.GetViewModelContext
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const struct FMVVMViewModelContext      ReturnValue                                            (ConstParm, Parm, OutParm, ReturnParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
+
+const struct FMVVMViewModelContext US6UI_StateUserWidget::GetViewModelContext() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("S6UI_StateUserWidget", "GetViewModelContext");
+
+	Params::S6UI_StateUserWidget_GetViewModelContext Parms{};
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

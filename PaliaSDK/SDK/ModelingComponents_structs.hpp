@@ -18,6 +18,63 @@
 namespace SDK
 {
 
+// Enum ModelingComponents.EBakeTextureResolution
+// NumValues: 0x000B
+enum class EBakeTextureResolution : uint16
+{
+	Resolution16                             = 16,
+	Resolution32                             = 32,
+	Resolution64                             = 64,
+	Resolution128                            = 128,
+	Resolution256                            = 256,
+	Resolution512                            = 512,
+	Resolution1024                           = 1024,
+	Resolution2048                           = 2048,
+	Resolution4096                           = 4096,
+	Resolution8192                           = 8192,
+	EBakeTextureResolution_MAX               = 8193,
+};
+
+// Enum ModelingComponents.EBakeTextureBitDepth
+// NumValues: 0x0003
+enum class EBakeTextureBitDepth : uint8
+{
+	ChannelBits8                             = 0,
+	ChannelBits16                            = 1,
+	EBakeTextureBitDepth_MAX                 = 2,
+};
+
+// Enum ModelingComponents.EBakeTextureSamplesPerPixel
+// NumValues: 0x0006
+enum class EBakeTextureSamplesPerPixel : uint16
+{
+	Sample1                                  = 1,
+	Sample4                                  = 4,
+	Sample16                                 = 16,
+	Sample64                                 = 64,
+	Sample256                                = 256,
+	EBakeTextureSamplesPerPixel_MAX          = 257,
+};
+
+// Enum ModelingComponents.EGeometrySelectionElementType
+// NumValues: 0x0004
+enum class EGeometrySelectionElementType : uint8
+{
+	Vertex                                   = 1,
+	Edge                                     = 2,
+	Face                                     = 4,
+	EGeometrySelectionElementType_MAX        = 5,
+};
+
+// Enum ModelingComponents.EGeometrySelectionTopologyType
+// NumValues: 0x0003
+enum class EGeometrySelectionTopologyType : uint8
+{
+	Triangle                                 = 1,
+	Polygroup                                = 2,
+	EGeometrySelectionTopologyType_MAX       = 3,
+};
+
 // Enum ModelingComponents.EBaseCreateFromSelectedTargetType
 // NumValues: 0x0004
 enum class EBaseCreateFromSelectedTargetType : uint32
@@ -65,8 +122,18 @@ enum class ESpaceCurveControlPointFalloffType : uint32
 	ESpaceCurveControlPointFalloffType_MAX   = 2,
 };
 
+// Enum ModelingComponents.EModelingComponentsPlaneVisualizationMode
+// NumValues: 0x0004
+enum class EModelingComponentsPlaneVisualizationMode : uint8
+{
+	SimpleGrid                               = 0,
+	HierarchicalGrid                         = 1,
+	FixedScreenAreaGrid                      = 2,
+	EModelingComponentsPlaneVisualizationMode_MAX = 3,
+};
+
 // Enum ModelingComponents.ECreateModelingObjectResult
-// NumValues: 0x000A
+// NumValues: 0x000B
 enum class ECreateModelingObjectResult : uint8
 {
 	Ok                                       = 0,
@@ -78,7 +145,8 @@ enum class ECreateModelingObjectResult : uint8
 	Failed_InvalidTexture                    = 6,
 	Failed_AssetCreationFailed               = 7,
 	Failed_ActorCreationFailed               = 8,
-	ECreateModelingObjectResult_MAX          = 9,
+	Failed_InvalidMaterial                   = 9,
+	ECreateModelingObjectResult_MAX          = 10,
 };
 
 // Enum ModelingComponents.ECreateMeshObjectSourceMeshType
@@ -137,6 +205,23 @@ static_assert(offsetof(FModelingToolsAxisFilter, bAxisX) == 0x000000, "Member 'F
 static_assert(offsetof(FModelingToolsAxisFilter, bAxisY) == 0x000001, "Member 'FModelingToolsAxisFilter::bAxisY' has a wrong offset!");
 static_assert(offsetof(FModelingToolsAxisFilter, bAxisZ) == 0x000002, "Member 'FModelingToolsAxisFilter::bAxisZ' has a wrong offset!");
 
+// ScriptStruct ModelingComponents.ModelingToolsColorChannelFilter
+// 0x0004 (0x0004 - 0x0000)
+struct FModelingToolsColorChannelFilter final 
+{
+public:
+	bool                                          bRed;                                              // 0x0000(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGreen;                                            // 0x0001(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bBlue;                                             // 0x0002(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAlpha;                                            // 0x0003(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FModelingToolsColorChannelFilter) == 0x000001, "Wrong alignment on FModelingToolsColorChannelFilter");
+static_assert(sizeof(FModelingToolsColorChannelFilter) == 0x000004, "Wrong size on FModelingToolsColorChannelFilter");
+static_assert(offsetof(FModelingToolsColorChannelFilter, bRed) == 0x000000, "Member 'FModelingToolsColorChannelFilter::bRed' has a wrong offset!");
+static_assert(offsetof(FModelingToolsColorChannelFilter, bGreen) == 0x000001, "Member 'FModelingToolsColorChannelFilter::bGreen' has a wrong offset!");
+static_assert(offsetof(FModelingToolsColorChannelFilter, bBlue) == 0x000002, "Member 'FModelingToolsColorChannelFilter::bBlue' has a wrong offset!");
+static_assert(offsetof(FModelingToolsColorChannelFilter, bAlpha) == 0x000003, "Member 'FModelingToolsColorChannelFilter::bAlpha' has a wrong offset!");
+
 // ScriptStruct ModelingComponents.RenderableTriangleVertex
 // 0x0048 (0x0048 - 0x0000)
 struct FRenderableTriangleVertex final 
@@ -146,7 +231,7 @@ public:
 	struct FVector2D                              UV;                                                // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Normal;                                            // 0x0028(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FColor                                 Color;                                             // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC8[0x4];                                     // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_115A[0x4];                                     // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FRenderableTriangleVertex) == 0x000008, "Wrong alignment on FRenderableTriangleVertex");
 static_assert(sizeof(FRenderableTriangleVertex) == 0x000048, "Wrong size on FRenderableTriangleVertex");
@@ -173,35 +258,38 @@ static_assert(offsetof(FRenderableTriangle, Vertex1) == 0x000050, "Member 'FRend
 static_assert(offsetof(FRenderableTriangle, Vertex2) == 0x000098, "Member 'FRenderableTriangle::Vertex2' has a wrong offset!");
 
 // ScriptStruct ModelingComponents.CreateMeshObjectParams
-// 0x05E0 (0x05E0 - 0x0000)
+// 0x0670 (0x0670 - 0x0000)
 struct FCreateMeshObjectParams final 
 {
 public:
 	class UPrimitiveComponent*                    SourceComponent;                                   // 0x0000(0x0008)(Edit, ExportObject, ZeroConstructor, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECreateObjectTypeHint                         TypeHint;                                          // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CC9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_115B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UObject>                    TypeHintClass;                                     // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TypeHintExtended;                                  // 0x0018(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCA[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_115C[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWorld*                                 TargetWorld;                                       // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCB[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_115D[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0030(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BaseName;                                          // 0x0090(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             Materials;                                         // 0x00A0(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	TArray<class UMaterialInterface*>             AssetMaterials;                                    // 0x00B0(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bEnableCollision;                                  // 0x00C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECollisionTraceFlag                           CollisionMode;                                     // 0x00C1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableRaytracingSupport;                          // 0x00C2(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableRecomputeNormals;                           // 0x00C3(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableRecomputeTangents;                          // 0x00C4(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bEnableNanite;                                     // 0x00C5(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCC[0x2];                                     // 0x00C6(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         NaniteProxyTrianglePercent;                        // 0x00C8(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FMeshNaniteSettings                    NaniteSettings;                                    // 0x00CC(0x001C)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCD[0x4F8];                                   // 0x00E8(0x04F8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_115E[0x5E];                                    // 0x00C2(0x005E)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bEnableRaytracingSupport;                          // 0x0120(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGenerateLightmapUVs;                              // 0x0121(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableRecomputeNormals;                           // 0x0122(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableRecomputeTangents;                          // 0x0123(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bEnableNanite;                                     // 0x0124(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_115F[0x3];                                     // 0x0125(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         NaniteProxyTrianglePercent;                        // 0x0128(0x0004)(ZeroConstructor, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1160[0x4];                                     // 0x012C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FMeshNaniteSettings                    NaniteSettings;                                    // 0x0130(0x0040)(Edit, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1161[0x500];                                   // 0x0170(0x0500)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCreateMeshObjectParams) == 0x000010, "Wrong alignment on FCreateMeshObjectParams");
-static_assert(sizeof(FCreateMeshObjectParams) == 0x0005E0, "Wrong size on FCreateMeshObjectParams");
+static_assert(sizeof(FCreateMeshObjectParams) == 0x000670, "Wrong size on FCreateMeshObjectParams");
 static_assert(offsetof(FCreateMeshObjectParams, SourceComponent) == 0x000000, "Member 'FCreateMeshObjectParams::SourceComponent' has a wrong offset!");
 static_assert(offsetof(FCreateMeshObjectParams, TypeHint) == 0x000008, "Member 'FCreateMeshObjectParams::TypeHint' has a wrong offset!");
 static_assert(offsetof(FCreateMeshObjectParams, TypeHintClass) == 0x000010, "Member 'FCreateMeshObjectParams::TypeHintClass' has a wrong offset!");
@@ -213,12 +301,13 @@ static_assert(offsetof(FCreateMeshObjectParams, Materials) == 0x0000A0, "Member 
 static_assert(offsetof(FCreateMeshObjectParams, AssetMaterials) == 0x0000B0, "Member 'FCreateMeshObjectParams::AssetMaterials' has a wrong offset!");
 static_assert(offsetof(FCreateMeshObjectParams, bEnableCollision) == 0x0000C0, "Member 'FCreateMeshObjectParams::bEnableCollision' has a wrong offset!");
 static_assert(offsetof(FCreateMeshObjectParams, CollisionMode) == 0x0000C1, "Member 'FCreateMeshObjectParams::CollisionMode' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, bEnableRaytracingSupport) == 0x0000C2, "Member 'FCreateMeshObjectParams::bEnableRaytracingSupport' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, bEnableRecomputeNormals) == 0x0000C3, "Member 'FCreateMeshObjectParams::bEnableRecomputeNormals' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, bEnableRecomputeTangents) == 0x0000C4, "Member 'FCreateMeshObjectParams::bEnableRecomputeTangents' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, bEnableNanite) == 0x0000C5, "Member 'FCreateMeshObjectParams::bEnableNanite' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, NaniteProxyTrianglePercent) == 0x0000C8, "Member 'FCreateMeshObjectParams::NaniteProxyTrianglePercent' has a wrong offset!");
-static_assert(offsetof(FCreateMeshObjectParams, NaniteSettings) == 0x0000CC, "Member 'FCreateMeshObjectParams::NaniteSettings' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, bEnableRaytracingSupport) == 0x000120, "Member 'FCreateMeshObjectParams::bEnableRaytracingSupport' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, bGenerateLightmapUVs) == 0x000121, "Member 'FCreateMeshObjectParams::bGenerateLightmapUVs' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, bEnableRecomputeNormals) == 0x000122, "Member 'FCreateMeshObjectParams::bEnableRecomputeNormals' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, bEnableRecomputeTangents) == 0x000123, "Member 'FCreateMeshObjectParams::bEnableRecomputeTangents' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, bEnableNanite) == 0x000124, "Member 'FCreateMeshObjectParams::bEnableNanite' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, NaniteProxyTrianglePercent) == 0x000128, "Member 'FCreateMeshObjectParams::NaniteProxyTrianglePercent' has a wrong offset!");
+static_assert(offsetof(FCreateMeshObjectParams, NaniteSettings) == 0x000130, "Member 'FCreateMeshObjectParams::NaniteSettings' has a wrong offset!");
 
 // ScriptStruct ModelingComponents.CreateMeshObjectResult
 // 0x0020 (0x0020 - 0x0000)
@@ -226,7 +315,7 @@ struct FCreateMeshObjectResult final
 {
 public:
 	ECreateModelingObjectResult                   ResultCode;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCE[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1162[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 NewActor;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimitiveComponent*                    NewComponent;                                      // 0x0010(0x0008)(Edit, ExportObject, ZeroConstructor, EditConst, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                NewAsset;                                          // 0x0018(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -244,7 +333,7 @@ struct FCreateTextureObjectParams final
 {
 public:
 	int32                                         TypeHintExtended;                                  // 0x0000(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CCF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1163[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWorld*                                 TargetWorld;                                       // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                StoreRelativeToObject;                             // 0x0010(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 BaseName;                                          // 0x0018(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -264,13 +353,77 @@ struct FCreateTextureObjectResult final
 {
 public:
 	ECreateModelingObjectResult                   ResultCode;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CD0[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1164[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                NewAsset;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FCreateTextureObjectResult) == 0x000008, "Wrong alignment on FCreateTextureObjectResult");
 static_assert(sizeof(FCreateTextureObjectResult) == 0x000010, "Wrong size on FCreateTextureObjectResult");
 static_assert(offsetof(FCreateTextureObjectResult, ResultCode) == 0x000000, "Member 'FCreateTextureObjectResult::ResultCode' has a wrong offset!");
 static_assert(offsetof(FCreateTextureObjectResult, NewAsset) == 0x000008, "Member 'FCreateTextureObjectResult::NewAsset' has a wrong offset!");
+
+// ScriptStruct ModelingComponents.CreateMaterialObjectParams
+// 0x0028 (0x0028 - 0x0000)
+struct FCreateMaterialObjectParams final 
+{
+public:
+	class UWorld*                                 TargetWorld;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UObject*                                StoreRelativeToObject;                             // 0x0008(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BaseName;                                          // 0x0010(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     MaterialToDuplicate;                               // 0x0020(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCreateMaterialObjectParams) == 0x000008, "Wrong alignment on FCreateMaterialObjectParams");
+static_assert(sizeof(FCreateMaterialObjectParams) == 0x000028, "Wrong size on FCreateMaterialObjectParams");
+static_assert(offsetof(FCreateMaterialObjectParams, TargetWorld) == 0x000000, "Member 'FCreateMaterialObjectParams::TargetWorld' has a wrong offset!");
+static_assert(offsetof(FCreateMaterialObjectParams, StoreRelativeToObject) == 0x000008, "Member 'FCreateMaterialObjectParams::StoreRelativeToObject' has a wrong offset!");
+static_assert(offsetof(FCreateMaterialObjectParams, BaseName) == 0x000010, "Member 'FCreateMaterialObjectParams::BaseName' has a wrong offset!");
+static_assert(offsetof(FCreateMaterialObjectParams, MaterialToDuplicate) == 0x000020, "Member 'FCreateMaterialObjectParams::MaterialToDuplicate' has a wrong offset!");
+
+// ScriptStruct ModelingComponents.CreateMaterialObjectResult
+// 0x0010 (0x0010 - 0x0000)
+struct FCreateMaterialObjectResult final 
+{
+public:
+	ECreateModelingObjectResult                   ResultCode;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1165[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                NewAsset;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCreateMaterialObjectResult) == 0x000008, "Wrong alignment on FCreateMaterialObjectResult");
+static_assert(sizeof(FCreateMaterialObjectResult) == 0x000010, "Wrong size on FCreateMaterialObjectResult");
+static_assert(offsetof(FCreateMaterialObjectResult, ResultCode) == 0x000000, "Member 'FCreateMaterialObjectResult::ResultCode' has a wrong offset!");
+static_assert(offsetof(FCreateMaterialObjectResult, NewAsset) == 0x000008, "Member 'FCreateMaterialObjectResult::NewAsset' has a wrong offset!");
+
+// ScriptStruct ModelingComponents.CreateActorParams
+// 0x0090 (0x0090 - 0x0000)
+struct FCreateActorParams final 
+{
+public:
+	class UWorld*                                 TargetWorld;                                       // 0x0000(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 BaseName;                                          // 0x0008(0x0010)(Edit, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1166[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0020(0x0060)(Edit, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class AActor*                                 TemplateActor;                                     // 0x0080(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1167[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(FCreateActorParams) == 0x000010, "Wrong alignment on FCreateActorParams");
+static_assert(sizeof(FCreateActorParams) == 0x000090, "Wrong size on FCreateActorParams");
+static_assert(offsetof(FCreateActorParams, TargetWorld) == 0x000000, "Member 'FCreateActorParams::TargetWorld' has a wrong offset!");
+static_assert(offsetof(FCreateActorParams, BaseName) == 0x000008, "Member 'FCreateActorParams::BaseName' has a wrong offset!");
+static_assert(offsetof(FCreateActorParams, Transform) == 0x000020, "Member 'FCreateActorParams::Transform' has a wrong offset!");
+static_assert(offsetof(FCreateActorParams, TemplateActor) == 0x000080, "Member 'FCreateActorParams::TemplateActor' has a wrong offset!");
+
+// ScriptStruct ModelingComponents.CreateActorResult
+// 0x0010 (0x0010 - 0x0000)
+struct FCreateActorResult final 
+{
+public:
+	ECreateModelingObjectResult                   ResultCode;                                        // 0x0000(0x0001)(Edit, ZeroConstructor, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_1168[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 NewActor;                                          // 0x0008(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(FCreateActorResult) == 0x000008, "Wrong alignment on FCreateActorResult");
+static_assert(sizeof(FCreateActorResult) == 0x000010, "Wrong size on FCreateActorResult");
+static_assert(offsetof(FCreateActorResult, ResultCode) == 0x000000, "Member 'FCreateActorResult::ResultCode' has a wrong offset!");
+static_assert(offsetof(FCreateActorResult, NewActor) == 0x000008, "Member 'FCreateActorResult::NewActor' has a wrong offset!");
 
 }
 

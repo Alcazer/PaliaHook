@@ -707,7 +707,7 @@ void UTypedElementListLibrary::Shrink(const struct FScriptTypedElementListProxy&
 
 
 // Function TypedElementFramework.TypedElementRegistry.GetInstance
-// (Final, Native, Static, Public, BlueprintCallable, BlueprintPure)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable, BlueprintPure)
 // Parameters:
 // class UTypedElementRegistry*            ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

@@ -63,7 +63,7 @@ public:
 	class UWBP_BasicTooltip_C*                    BasicTooltip;                                      // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C04[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_512A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetWidgetFromPool_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_BasicTooltip_C*                    K2Node_DynamicCast_AsWBP_Basic_Tooltip;            // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -87,7 +87,7 @@ public:
 	class UWBP_ItemTooltip_C*                     ItemTooltip;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C05[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_512B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetWidgetFromPool_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_ItemTooltip_C*                     K2Node_DynamicCast_AsWBP_Item_Tooltip;             // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -128,51 +128,51 @@ static_assert(offsetof(TooltipFunctionLibrary_C_OpenBasicTooltip, __WorldContext
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenBasicTooltip, CallFunc_IsValid_ReturnValue) == 0x000058, "Member 'TooltipFunctionLibrary_C_OpenBasicTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function TooltipFunctionLibrary.TooltipFunctionLibrary_C.OpenItemTooltip
-// 0x0098 (0x0098 - 0x0000)
+// 0x0090 (0x0090 - 0x0000)
 struct TooltipFunctionLibrary_C_OpenItemTooltip final 
 {
 public:
 	class UWidget*                                Context;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_ItemTooltip_C*                     ItemTooltip;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UMenuAnchor*                            MenuAnchor;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FValeriaItem                           ValeriaItem;                                       // 0x0018(0x0068)(BlueprintVisible, BlueprintReadOnly, Parm)
-	int32                                         RecipeConfigId;                                    // 0x0080(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          bShowDestroyWarning;                               // 0x0084(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C06[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0088(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FValeriaItem                           ValeriaItem;                                       // 0x0018(0x0060)(BlueprintVisible, BlueprintReadOnly, Parm)
+	int32                                         RecipeConfigId;                                    // 0x0078(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowDestroyWarning;                               // 0x007C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_512C[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0080(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(TooltipFunctionLibrary_C_OpenItemTooltip) == 0x000008, "Wrong alignment on TooltipFunctionLibrary_C_OpenItemTooltip");
-static_assert(sizeof(TooltipFunctionLibrary_C_OpenItemTooltip) == 0x000098, "Wrong size on TooltipFunctionLibrary_C_OpenItemTooltip");
+static_assert(sizeof(TooltipFunctionLibrary_C_OpenItemTooltip) == 0x000090, "Wrong size on TooltipFunctionLibrary_C_OpenItemTooltip");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, Context) == 0x000000, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::Context' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, ItemTooltip) == 0x000008, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::ItemTooltip' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, MenuAnchor) == 0x000010, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::MenuAnchor' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, ValeriaItem) == 0x000018, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::ValeriaItem' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, RecipeConfigId) == 0x000080, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::RecipeConfigId' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, bShowDestroyWarning) == 0x000084, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::bShowDestroyWarning' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, __WorldContext) == 0x000088, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, CallFunc_IsValid_ReturnValue) == 0x000090, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, RecipeConfigId) == 0x000078, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::RecipeConfigId' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, bShowDestroyWarning) == 0x00007C, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::bShowDestroyWarning' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, __WorldContext) == 0x000080, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::__WorldContext' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenItemTooltip, CallFunc_IsValid_ReturnValue) == 0x000088, "Member 'TooltipFunctionLibrary_C_OpenItemTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function TooltipFunctionLibrary.TooltipFunctionLibrary_C.OpenStoreItemTooltip
-// 0x0130 (0x0130 - 0x0000)
+// 0x0120 (0x0120 - 0x0000)
 struct TooltipFunctionLibrary_C_OpenStoreItemTooltip final 
 {
 public:
 	class UWidget*                                Context;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_ItemTooltip_C*                     ItemTooltip;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, InstancedReference, ReferenceParm, NoDestructor, HasGetValueTypeHash)
 	class UMenuAnchor*                            MenuAnchor;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FStoreItem                             StoreItem;                                         // 0x0018(0x0108)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UObject*                                __WorldContext;                                    // 0x0120(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0128(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FStoreItem                             StoreItem;                                         // 0x0018(0x00F8)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UObject*                                __WorldContext;                                    // 0x0110(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(TooltipFunctionLibrary_C_OpenStoreItemTooltip) == 0x000008, "Wrong alignment on TooltipFunctionLibrary_C_OpenStoreItemTooltip");
-static_assert(sizeof(TooltipFunctionLibrary_C_OpenStoreItemTooltip) == 0x000130, "Wrong size on TooltipFunctionLibrary_C_OpenStoreItemTooltip");
+static_assert(sizeof(TooltipFunctionLibrary_C_OpenStoreItemTooltip) == 0x000120, "Wrong size on TooltipFunctionLibrary_C_OpenStoreItemTooltip");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, Context) == 0x000000, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::Context' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, ItemTooltip) == 0x000008, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::ItemTooltip' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, MenuAnchor) == 0x000010, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::MenuAnchor' has a wrong offset!");
 static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, StoreItem) == 0x000018, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::StoreItem' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, __WorldContext) == 0x000120, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::__WorldContext' has a wrong offset!");
-static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, CallFunc_IsValid_ReturnValue) == 0x000128, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, __WorldContext) == 0x000110, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::__WorldContext' has a wrong offset!");
+static_assert(offsetof(TooltipFunctionLibrary_C_OpenStoreItemTooltip, CallFunc_IsValid_ReturnValue) == 0x000118, "Member 'TooltipFunctionLibrary_C_OpenStoreItemTooltip::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
 // Function TooltipFunctionLibrary.TooltipFunctionLibrary_C.ReturnBasicTooltipToPool
 // 0x0020 (0x0020 - 0x0000)

@@ -30,9 +30,9 @@ public:
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UDataTable*                             CallFunc_Map_Find_Value;                           // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E0F[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4675[0x3];                                     // 0x0069(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x006C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E10[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4676[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAudioMappingConfig                    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0078(0x0038)()
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x00B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -74,44 +74,44 @@ public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAttachLocation                               AttachRule;                                        // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E11[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4677[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AttachOffset;                                      // 0x0010(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   SocketName;                                        // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          AkEvent;                                           // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAbilityAnimationComponent*             AbilityAnimComp;                                   // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          SuccessfulPlay;                                    // 0x0040(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E12[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4678[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0044(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      K2Node_DynamicCast_AsValeria_Character;            // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E13[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4679[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAbilityAnimationComponent*             CallFunc_GetAbilityAnimation_ReturnValue;          // 0x0060(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E14[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467A[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0078(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x007C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AkGetComponent_ComponentCreated;          // 0x007D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E15[0x2];                                     // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467B[0x2];                                     // 0x007E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkGetComponent_AkComponent;               // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventComponent_ReturnValue;             // 0x0088(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E16[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467C[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x0090(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E17[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467D[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x00F8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0110(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0128(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                CallFunc_Add_VectorVector_ReturnValue;             // 0x0140(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAkComponent*                           CallFunc_AkEventLocationWithActor_AkComponent;     // 0x0158(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventLocationWithActor_Playing_ID;      // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E18[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467E[0x4];                                     // 0x0164(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetEnumeratorUserFriendlyName_ReturnValue; // 0x0168(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FName                                   CallFunc_Conv_StringToName_ReturnValue;            // 0x0178(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FAudioMappingConfig                    CallFunc_GetDataTableRowFromName_OutRow;           // 0x0180(0x0038)()
 	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E19[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_467F[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_Map_Keys_Keys;                            // 0x01C0(0x0010)(ReferenceParm)
 	class FName                                   CallFunc_Array_Get_Item;                           // 0x01D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x01D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -172,20 +172,20 @@ public:
 	class FName                                   MappingQualifier;                                  // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAttachLocation                               AttachRule;                                        // 0x0019(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1A[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4680[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                AttachOffset;                                      // 0x0020(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FName                                   SocketName;                                        // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          AkEvent;                                           // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FAudioMappingConfig                    CallFunc_FindAudioMapping_ReturnValue;             // 0x0048(0x0038)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1B[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4681[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AkGetComponent_ComponentCreated;          // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1C[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4682[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkGetComponent_AkComponent;               // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FTransform                             CallFunc_GetSocketTransform_ReturnValue;           // 0x00A0(0x0060)(IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventComponent_ReturnValue;             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3E1D[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4683[0x4];                                     // 0x0104(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                CallFunc_BreakTransform_Location;                  // 0x0108(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FRotator                               CallFunc_BreakTransform_Rotation;                  // 0x0120(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FVector                                CallFunc_BreakTransform_Scale;                     // 0x0138(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -218,25 +218,25 @@ static_assert(offsetof(Ak_OneShotByMapping_C_PlayAudioMappingHelper, CallFunc_Ak
 static_assert(offsetof(Ak_OneShotByMapping_C_PlayAudioMappingHelper, CallFunc_AkEventLocationWithActor_Playing_ID) == 0x000170, "Member 'Ak_OneShotByMapping_C_PlayAudioMappingHelper::CallFunc_AkEventLocationWithActor_Playing_ID' has a wrong offset!");
 
 // Function Ak_OneShotByMapping.Ak_OneShotByMapping_C.Received_Notify
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct Ak_OneShotByMapping_C_Received_Notify final 
 {
 public:
 	class USkeletalMeshComponent*                 MeshComp;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAnimSequenceBase*                      Animation;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0028)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	bool                                          ReturnValue;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayAudio_Success;                        // 0x003A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FAnimNotifyEventReference              EventReference;                                    // 0x0010(0x0030)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0041(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayAudio_Success;                        // 0x0042(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Ak_OneShotByMapping_C_Received_Notify) == 0x000008, "Wrong alignment on Ak_OneShotByMapping_C_Received_Notify");
-static_assert(sizeof(Ak_OneShotByMapping_C_Received_Notify) == 0x000040, "Wrong size on Ak_OneShotByMapping_C_Received_Notify");
+static_assert(sizeof(Ak_OneShotByMapping_C_Received_Notify) == 0x000048, "Wrong size on Ak_OneShotByMapping_C_Received_Notify");
 static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, MeshComp) == 0x000000, "Member 'Ak_OneShotByMapping_C_Received_Notify::MeshComp' has a wrong offset!");
 static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, Animation) == 0x000008, "Member 'Ak_OneShotByMapping_C_Received_Notify::Animation' has a wrong offset!");
 static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, EventReference) == 0x000010, "Member 'Ak_OneShotByMapping_C_Received_Notify::EventReference' has a wrong offset!");
-static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, ReturnValue) == 0x000038, "Member 'Ak_OneShotByMapping_C_Received_Notify::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, CallFunc_IsDedicatedServer_ReturnValue) == 0x000039, "Member 'Ak_OneShotByMapping_C_Received_Notify::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, CallFunc_PlayAudio_Success) == 0x00003A, "Member 'Ak_OneShotByMapping_C_Received_Notify::CallFunc_PlayAudio_Success' has a wrong offset!");
+static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, ReturnValue) == 0x000040, "Member 'Ak_OneShotByMapping_C_Received_Notify::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, CallFunc_IsDedicatedServer_ReturnValue) == 0x000041, "Member 'Ak_OneShotByMapping_C_Received_Notify::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Ak_OneShotByMapping_C_Received_Notify, CallFunc_PlayAudio_Success) == 0x000042, "Member 'Ak_OneShotByMapping_C_Received_Notify::CallFunc_PlayAudio_Success' has a wrong offset!");
 
 }
 

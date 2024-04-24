@@ -11,476 +11,111 @@
 #include "Basic.hpp"
 
 #include "CoreUObject_structs.hpp"
-#include "PhysicsCore_structs.hpp"
 #include "Engine_structs.hpp"
-#include "E_Footwear_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "Palia_structs.hpp"
+#include "PhysicsCore_structs.hpp"
+#include "E_Footwear_structs.hpp"
 
 
 namespace SDK::Params
 {
 
-// Function Lib_Audio.Lib_Audio_C.Ak Music Switch
-// 0x0050 (0x0050 - 0x0000)
-struct Lib_Audio_C_Ak_Music_Switch final 
+// Function Lib_Audio.Lib_Audio_C.ReturnToAreaMusic
+// 0x0060 (0x0060 - 0x0000)
+struct Lib_Audio_C_ReturnToAreaMusic final 
 {
 public:
-	class UAkSwitchValue*                         SwitchValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          IgnoreTimeOfDay;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27D6[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27D7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_MusicManager_C*                     CallFunc_GetMusicManager_AsBP_Music_Manager;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27D8[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UComp_Listener_Padding_C*               CallFunc_GetComponentByClass_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AValeriaSpatialAudioVolume*             LHighestVolume;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+	float                                         LHighestPriority;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_444F[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UAkRoomComponent*>               CallFunc_GetAudioRoomComponents_ReturnValue;       // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4450[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkRoomComponent*                       CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UComp_CV_Local_Music_C*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4451[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_Ak_Music_Switch) == 0x000008, "Wrong alignment on Lib_Audio_C_Ak_Music_Switch");
-static_assert(sizeof(Lib_Audio_C_Ak_Music_Switch) == 0x000050, "Wrong size on Lib_Audio_C_Ak_Music_Switch");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, SwitchValue) == 0x000000, "Member 'Lib_Audio_C_Ak_Music_Switch::SwitchValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, IgnoreTimeOfDay) == 0x000008, "Member 'Lib_Audio_C_Ak_Music_Switch::IgnoreTimeOfDay' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_Ak_Music_Switch::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetMusicManager_AsBP_Music_Manager) == 0x000030, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetMusicManager_AsBP_Music_Manager' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetComponentByClass_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue_2) == 0x000048, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_ReturnToAreaMusic) == 0x000008, "Wrong alignment on Lib_Audio_C_ReturnToAreaMusic");
+static_assert(sizeof(Lib_Audio_C_ReturnToAreaMusic) == 0x000060, "Wrong size on Lib_Audio_C_ReturnToAreaMusic");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, __WorldContext) == 0x000000, "Member 'Lib_Audio_C_ReturnToAreaMusic::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, LHighestVolume) == 0x000008, "Member 'Lib_Audio_C_ReturnToAreaMusic::LHighestVolume' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, LHighestPriority) == 0x000010, "Member 'Lib_Audio_C_ReturnToAreaMusic::LHighestPriority' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_bool_True_if_break_was_hit_Variable) == 0x000014, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetAudioRoomComponents_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetAudioRoomComponents_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Length_ReturnValue_1) == 0x00002C, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Greater_IntInt_ReturnValue) == 0x000031, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_int_Array_Index_Variable) == 0x000034, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Get_Item) == 0x000038, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetOwner_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Less_IntInt_ReturnValue) == 0x000054, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Add_IntInt_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_BooleanAND_ReturnValue) == 0x00005C, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_IsValid_ReturnValue) == 0x00005D, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.Ak Object Velocity
-// 0x00F8 (0x00F8 - 0x0000)
-struct Lib_Audio_C_Ak_Object_Velocity final 
-{
-public:
-	class UAkComponent*                           AK;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        VectorLengthMax;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Delta_Time;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Get_Previous_Location;                             // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InterpTimeMs;                                      // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27D9[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Set_Previous_Location;                             // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VectorLength;                                      // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VectorLengthClamped;                               // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        LengthClamped;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Length;                                            // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   Object_velocity;                                   // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        VectorMax;                                         // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DA[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_VSize_ReturnValue;                        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_Ak_Object_Velocity) == 0x000008, "Wrong alignment on Lib_Audio_C_Ak_Object_Velocity");
-static_assert(sizeof(Lib_Audio_C_Ak_Object_Velocity) == 0x0000F8, "Wrong size on Lib_Audio_C_Ak_Object_Velocity");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, AK) == 0x000000, "Member 'Lib_Audio_C_Ak_Object_Velocity::AK' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLengthMax) == 0x000008, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLengthMax' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Delta_Time) == 0x000010, "Member 'Lib_Audio_C_Ak_Object_Velocity::Delta_Time' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Get_Previous_Location) == 0x000018, "Member 'Lib_Audio_C_Ak_Object_Velocity::Get_Previous_Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, InterpTimeMs) == 0x000030, "Member 'Lib_Audio_C_Ak_Object_Velocity::InterpTimeMs' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, __WorldContext) == 0x000038, "Member 'Lib_Audio_C_Ak_Object_Velocity::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Set_Previous_Location) == 0x000040, "Member 'Lib_Audio_C_Ak_Object_Velocity::Set_Previous_Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLength) == 0x000058, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLength' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLengthClamped) == 0x000060, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLengthClamped' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, LengthClamped) == 0x000068, "Member 'Lib_Audio_C_Ak_Object_Velocity::LengthClamped' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Length) == 0x000070, "Member 'Lib_Audio_C_Ak_Object_Velocity::Length' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Object_velocity) == 0x000078, "Member 'Lib_Audio_C_Ak_Object_Velocity::Object_velocity' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorMax) == 0x000080, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorMax' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_IsDedicatedServer_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_IsValid_ReturnValue) == 0x000089, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000090, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x0000A8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0000C0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_VSize_ReturnValue) == 0x0000D8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_VSize_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_MapRangeClamped_ReturnValue) == 0x0000E0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000F0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventActor
-// 0x00A8 (0x00A8 - 0x0000)
-struct Lib_Audio_C_AkEventActor final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DB[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LocallyControlled;                                 // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DD[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_AkGetComponent_ComponentCreated;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DE[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AkGetComponent_AkComponent;               // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x005C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27DF[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0070(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E0[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventActor) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventActor");
-static_assert(sizeof(Lib_Audio_C_AkEventActor) == 0x0000A8, "Wrong size on Lib_Audio_C_AkEventActor");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventActor::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, Actor) == 0x000008, "Member 'Lib_Audio_C_AkEventActor::Actor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_AkEventActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, ReturnValue) == 0x000018, "Member 'Lib_Audio_C_AkEventActor::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, LocallyControlled) == 0x000020, "Member 'Lib_Audio_C_AkEventActor::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, K2Node_DynamicCast_AsPawn) == 0x000030, "Member 'Lib_Audio_C_AkEventActor::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'Lib_Audio_C_AkEventActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsLocallyControlled_ReturnValue) == 0x000039, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_AkEventActor::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_AkGetComponent_ComponentCreated) == 0x000048, "Member 'Lib_Audio_C_AkEventActor::CallFunc_AkGetComponent_ComponentCreated' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_AkGetComponent_AkComponent) == 0x000050, "Member 'Lib_Audio_C_AkEventActor::CallFunc_AkGetComponent_AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000058, "Member 'Lib_Audio_C_AkEventActor::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue) == 0x000059, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00005A, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue_1) == 0x00005B, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, Temp_delegate_Variable) == 0x00005C, "Member 'Lib_Audio_C_AkEventActor::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, Temp_struct_Variable) == 0x000070, "Member 'Lib_Audio_C_AkEventActor::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_PostAkEvent_ReturnValue) == 0x000080, "Member 'Lib_Audio_C_AkEventActor::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_AkEventActor::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsWithinAttenuation_Within) == 0x0000A0, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue_2) == 0x0000A1, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventComponent
+// Function Lib_Audio.Lib_Audio_C.GetMusicManager
 // 0x0040 (0x0040 - 0x0000)
-struct Lib_Audio_C_AkEventComponent final 
+struct Lib_Audio_C_GetMusicManager final 
 {
 public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_MusicManager_C*                     AsBP_Music_Manager;                                // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UValeriaGameInstance*                   K2Node_DynamicCast_AsValeria_Game_Instance;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4452[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMusicManager*                          CallFunc_GetMusicManager_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_MusicManager_C*                     K2Node_DynamicCast_AsBP_Music_Manager;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_GetMusicManager) == 0x000008, "Wrong alignment on Lib_Audio_C_GetMusicManager");
+static_assert(sizeof(Lib_Audio_C_GetMusicManager) == 0x000040, "Wrong size on Lib_Audio_C_GetMusicManager");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, __WorldContext) == 0x000000, "Member 'Lib_Audio_C_GetMusicManager::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, AsBP_Music_Manager) == 0x000008, "Member 'Lib_Audio_C_GetMusicManager::AsBP_Music_Manager' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'Lib_Audio_C_GetMusicManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_AsValeria_Game_Instance) == 0x000018, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_AsValeria_Game_Instance' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, CallFunc_GetMusicManager_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_GetMusicManager::CallFunc_GetMusicManager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_AsBP_Music_Manager) == 0x000030, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_AsBP_Music_Manager' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.Try to Propagate Rtpcs
+// 0x0030 (0x0030 - 0x0000)
+struct Lib_Audio_C_Try_to_Propagate_Rtpcs final 
+{
+public:
+	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAkComponent*                           AkComponent;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetRtpcFromOwner;                                  // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E1[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E2[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LocallyControlled;                                 // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_VAkEventComponent_ReturnValue;            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventComponent) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventComponent");
-static_assert(sizeof(Lib_Audio_C_AkEventComponent) == 0x000040, "Wrong size on Lib_Audio_C_AkEventComponent");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventComponent::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, AkComponent) == 0x000008, "Member 'Lib_Audio_C_AkEventComponent::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, GetRtpcFromOwner) == 0x000010, "Member 'Lib_Audio_C_AkEventComponent::GetRtpcFromOwner' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_AkEventComponent::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, ReturnValue) == 0x000020, "Member 'Lib_Audio_C_AkEventComponent::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, LocallyControlled) == 0x000028, "Member 'Lib_Audio_C_AkEventComponent::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_GetOwner_ReturnValue) == 0x000030, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_VAkEventComponent_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_VAkEventComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x00003C, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventComponentCallback
-// 0x00B0 (0x00B0 - 0x0000)
-struct Lib_Audio_C_AkEventComponentCallback final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComponent;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallbackMask;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> PostEventCallback;                                 // 0x0014(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-	bool                                          CheckAttenuation;                                  // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetRtpcFromOwner;                                  // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E3[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E4[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        LocallyControlled;                                 // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E5[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_GetAutoDestroy_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E6[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E7[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VIsWithinAttenuation_ReturnValue;         // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E8[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0090(0x0010)(ConstParm, ReferenceParm)
-	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27E9[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventComponentCallback) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventComponentCallback");
-static_assert(sizeof(Lib_Audio_C_AkEventComponentCallback) == 0x0000B0, "Wrong size on Lib_Audio_C_AkEventComponentCallback");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventComponentCallback::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, AkComponent) == 0x000008, "Member 'Lib_Audio_C_AkEventComponentCallback::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallbackMask) == 0x000010, "Member 'Lib_Audio_C_AkEventComponentCallback::CallbackMask' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, PostEventCallback) == 0x000014, "Member 'Lib_Audio_C_AkEventComponentCallback::PostEventCallback' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CheckAttenuation) == 0x000024, "Member 'Lib_Audio_C_AkEventComponentCallback::CheckAttenuation' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, GetRtpcFromOwner) == 0x000025, "Member 'Lib_Audio_C_AkEventComponentCallback::GetRtpcFromOwner' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_AkEventComponentCallback::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, ReturnValue) == 0x000030, "Member 'Lib_Audio_C_AkEventComponentCallback::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, LocallyControlled) == 0x000038, "Member 'Lib_Audio_C_AkEventComponentCallback::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsDedicatedServer_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000050, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetAutoDestroy_ReturnValue) == 0x000051, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetAutoDestroy_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetOwner_ReturnValue_1) == 0x000058, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, K2Node_DynamicCast_AsPawn) == 0x000060, "Member 'Lib_Audio_C_AkEventComponentCallback::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'Lib_Audio_C_AkEventComponentCallback::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsLocallyControlled_ReturnValue) == 0x000069, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue) == 0x00006A, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00006B, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue_1) == 0x00006C, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000070, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_VIsWithinAttenuation_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_VIsWithinAttenuation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, Temp_struct_Variable) == 0x000090, "Member 'Lib_Audio_C_AkEventComponentCallback::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue_2) == 0x0000A0, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_PostAkEvent_ReturnValue) == 0x0000A4, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000A8, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventGlobal
-// 0x0020 (0x0020 - 0x0000)
-struct Lib_Audio_C_AkEventGlobal final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27EA[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_PostGlobalEvent_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventGlobal) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventGlobal");
-static_assert(sizeof(Lib_Audio_C_AkEventGlobal) == 0x000020, "Wrong size on Lib_Audio_C_AkEventGlobal");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventGlobal::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, __WorldContext) == 0x000008, "Member 'Lib_Audio_C_AkEventGlobal::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, ReturnValue) == 0x000010, "Member 'Lib_Audio_C_AkEventGlobal::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_IsDedicatedServer_ReturnValue) == 0x000014, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_IsValid_ReturnValue) == 0x000015, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_PostGlobalEvent_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_PostGlobalEvent_ReturnValue' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventLocation
-// 0x0068 (0x0068 - 0x0000)
-struct Lib_Audio_C_AkEventLocation final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Instigator;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetRtpcsFromInstigator;                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27EB[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComponent;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Playing_ID;                                        // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayingID;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComp;                                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        LocallyControlled;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           CallFunc_VAkEventLocation_OutComponent;            // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_VAkEventLocation_ReturnValue;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventLocation) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventLocation");
-static_assert(sizeof(Lib_Audio_C_AkEventLocation) == 0x000068, "Wrong size on Lib_Audio_C_AkEventLocation");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventLocation::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, Location) == 0x000008, "Member 'Lib_Audio_C_AkEventLocation::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, Instigator) == 0x000020, "Member 'Lib_Audio_C_AkEventLocation::Instigator' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, GetRtpcsFromInstigator) == 0x000028, "Member 'Lib_Audio_C_AkEventLocation::GetRtpcsFromInstigator' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, __WorldContext) == 0x000030, "Member 'Lib_Audio_C_AkEventLocation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkComponent) == 0x000038, "Member 'Lib_Audio_C_AkEventLocation::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, Playing_ID) == 0x000040, "Member 'Lib_Audio_C_AkEventLocation::Playing_ID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, PlayingID) == 0x000044, "Member 'Lib_Audio_C_AkEventLocation::PlayingID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkComp) == 0x000048, "Member 'Lib_Audio_C_AkEventLocation::AkComp' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, LocallyControlled) == 0x000050, "Member 'Lib_Audio_C_AkEventLocation::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_VAkEventLocation_OutComponent) == 0x000058, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_VAkEventLocation_OutComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_VAkEventLocation_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_VAkEventLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000064, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventLocationWithActor
-// 0x00A8 (0x00A8 - 0x0000)
-struct Lib_Audio_C_AkEventLocationWithActor final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Actor;                                             // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetRtpcFromActor;                                  // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27EC[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComponent;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Playing_ID;                                        // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27ED[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           AkComp;                                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        LocallyControlled;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27EE[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x005C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27EF[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F0[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AkSpawnAtLocation_ReturnValue;            // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0088(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F1[0x2];                                     // 0x009E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventLocationWithActor) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventLocationWithActor");
-static_assert(sizeof(Lib_Audio_C_AkEventLocationWithActor) == 0x0000A8, "Wrong size on Lib_Audio_C_AkEventLocationWithActor");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Location) == 0x000008, "Member 'Lib_Audio_C_AkEventLocationWithActor::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Actor) == 0x000020, "Member 'Lib_Audio_C_AkEventLocationWithActor::Actor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, GetRtpcFromActor) == 0x000028, "Member 'Lib_Audio_C_AkEventLocationWithActor::GetRtpcFromActor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, __WorldContext) == 0x000030, "Member 'Lib_Audio_C_AkEventLocationWithActor::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkComponent) == 0x000038, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Playing_ID) == 0x000040, "Member 'Lib_Audio_C_AkEventLocationWithActor::Playing_ID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkComp) == 0x000048, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkComp' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, LocallyControlled) == 0x000050, "Member 'Lib_Audio_C_AkEventLocationWithActor::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Temp_delegate_Variable) == 0x00005C, "Member 'Lib_Audio_C_AkEventLocationWithActor::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x00006C, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, K2Node_DynamicCast_AsPawn) == 0x000070, "Member 'Lib_Audio_C_AkEventLocationWithActor::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'Lib_Audio_C_AkEventLocationWithActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsValid_ReturnValue) == 0x000079, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsLocallyControlled_ReturnValue) == 0x00007A, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00007B, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_AkSpawnAtLocation_ReturnValue) == 0x000080, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_AkSpawnAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Temp_struct_Variable) == 0x000088, "Member 'Lib_Audio_C_AkEventLocationWithActor::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_PostAkEvent_ReturnValue) == 0x000098, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsWithinAttenuation_Within) == 0x00009C, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsValid_ReturnValue_1) == 0x00009D, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000A0, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkEventSpawnAttached
-// 0x0100 (0x0100 - 0x0000)
-struct Lib_Audio_C_AkEventSpawnAttached final 
-{
-public:
-	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 Instigator;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class USceneComponent*                        Owner;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class FName                                   SocketName;                                        // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          AutoDestroy;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          GetRtpcFromOwner;                                  // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F2[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AK;                                                // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         ID;                                                // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         PlayingID;                                         // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComponent;                                       // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	double                                        LocallyControlled;                                 // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F3[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F4[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F5[0x6];                                     // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F6[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x00C4(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F7[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_SpawnAkComponentAtLocation_ReturnValue;   // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F8[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x00E8(0x0010)(ConstParm, ReferenceParm)
-	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_AkEventSpawnAttached) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventSpawnAttached");
-static_assert(sizeof(Lib_Audio_C_AkEventSpawnAttached) == 0x000100, "Wrong size on Lib_Audio_C_AkEventSpawnAttached");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventSpawnAttached::AkEvent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Instigator) == 0x000008, "Member 'Lib_Audio_C_AkEventSpawnAttached::Instigator' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Owner) == 0x000010, "Member 'Lib_Audio_C_AkEventSpawnAttached::Owner' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, SocketName) == 0x000018, "Member 'Lib_Audio_C_AkEventSpawnAttached::SocketName' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AutoDestroy) == 0x000020, "Member 'Lib_Audio_C_AkEventSpawnAttached::AutoDestroy' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, GetRtpcFromOwner) == 0x000021, "Member 'Lib_Audio_C_AkEventSpawnAttached::GetRtpcFromOwner' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_AkEventSpawnAttached::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AK) == 0x000030, "Member 'Lib_Audio_C_AkEventSpawnAttached::AK' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, ID) == 0x000038, "Member 'Lib_Audio_C_AkEventSpawnAttached::ID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, PlayingID) == 0x00003C, "Member 'Lib_Audio_C_AkEventSpawnAttached::PlayingID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AkComponent) == 0x000040, "Member 'Lib_Audio_C_AkEventSpawnAttached::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, LocallyControlled) == 0x000048, "Member 'Lib_Audio_C_AkEventSpawnAttached::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsDedicatedServer_ReturnValue) == 0x000050, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsValid_ReturnValue) == 0x000051, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000078, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000080, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, K2Node_DynamicCast_AsPawn) == 0x000098, "Member 'Lib_Audio_C_AkEventSpawnAttached::K2Node_DynamicCast_AsPawn' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'Lib_Audio_C_AkEventSpawnAttached::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000A1, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_GetSocketLocation_ReturnValue) == 0x0000A8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsWithinAttenuation_Within) == 0x0000C0, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Temp_delegate_Variable) == 0x0000C4, "Member 'Lib_Audio_C_AkEventSpawnAttached::Temp_delegate_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_SpawnAkComponentAtLocation_ReturnValue) == 0x0000D8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_SpawnAkComponentAtLocation_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0000E0, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Temp_struct_Variable) == 0x0000E8, "Member 'Lib_Audio_C_AkEventSpawnAttached::Temp_struct_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_PostAkEvent_ReturnValue) == 0x0000F8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000FC, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.AkExecuteActionOnPlayingID
-// 0x0018 (0x0018 - 0x0000)
-struct Lib_Audio_C_AkExecuteActionOnPlayingID final 
-{
-public:
-	EAkActionOnEventType                          ActionType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27F9[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         PlayingID;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         TransitionDuration;                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EAkCurveInterpolation                         FadeCurve;                                         // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FA[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4453[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UComp_RtpcTracker_C*                    Tracker;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TryToPropagateRtpcs_ReturnValue;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_AkExecuteActionOnPlayingID) == 0x000008, "Wrong alignment on Lib_Audio_C_AkExecuteActionOnPlayingID");
-static_assert(sizeof(Lib_Audio_C_AkExecuteActionOnPlayingID) == 0x000018, "Wrong size on Lib_Audio_C_AkExecuteActionOnPlayingID");
-static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, ActionType) == 0x000000, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::ActionType' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, PlayingID) == 0x000004, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::PlayingID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, TransitionDuration) == 0x000008, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::TransitionDuration' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, FadeCurve) == 0x00000C, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::FadeCurve' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::__WorldContext' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_Try_to_Propagate_Rtpcs) == 0x000008, "Wrong alignment on Lib_Audio_C_Try_to_Propagate_Rtpcs");
+static_assert(sizeof(Lib_Audio_C_Try_to_Propagate_Rtpcs) == 0x000030, "Wrong size on Lib_Audio_C_Try_to_Propagate_Rtpcs");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Actor) == 0x000000, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Actor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, AkComponent) == 0x000008, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Success) == 0x000018, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Success' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Tracker) == 0x000020, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Tracker' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, CallFunc_TryToPropagateRtpcs_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::CallFunc_TryToPropagateRtpcs_ReturnValue' has a wrong offset!");
 
 // Function Lib_Audio.Lib_Audio_C.AkGetComponent
 // 0x0058 (0x0058 - 0x0000)
@@ -492,13 +127,13 @@ public:
 	struct FVector                                Location;                                          // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EAttachLocation                               LocationType;                                      // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bAutoDestroy;                                      // 0x0029(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FB[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4454[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ComponentCreated;                                  // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FC[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4455[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           AkComponent;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_VAkGetComponent_ComponentCreated;         // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FD[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4456[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_VAkGetComponent_ReturnValue;              // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(Lib_Audio_C_AkGetComponent) == 0x000008, "Wrong alignment on Lib_Audio_C_AkGetComponent");
@@ -514,112 +149,51 @@ static_assert(offsetof(Lib_Audio_C_AkGetComponent, AkComponent) == 0x000040, "Me
 static_assert(offsetof(Lib_Audio_C_AkGetComponent, CallFunc_VAkGetComponent_ComponentCreated) == 0x000048, "Member 'Lib_Audio_C_AkGetComponent::CallFunc_VAkGetComponent_ComponentCreated' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_AkGetComponent, CallFunc_VAkGetComponent_ReturnValue) == 0x000050, "Member 'Lib_Audio_C_AkGetComponent::CallFunc_VAkGetComponent_ReturnValue' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.AkSetRTPC
-// 0x0048 (0x0048 - 0x0000)
-struct Lib_Audio_C_AkSetRTPC final 
+// Function Lib_Audio.Lib_Audio_C.AkExecuteActionOnPlayingID
+// 0x0018 (0x0018 - 0x0000)
+struct Lib_Audio_C_AkExecuteActionOnPlayingID final 
 {
 public:
-	class UAkRtpc*                                RTPCValue;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         InterpolationTimeMs;                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FE[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Actor;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAkComponent*>                   AkComponents;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
-	class UComp_RtpcTracker_C*                    RtpcTracker;                                       // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_AkSetRTPC_Value_ImplicitCast;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAkActionOnEventType                          ActionType;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4457[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PlayingID;                                         // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         TransitionDuration;                                // 0x0008(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EAkCurveInterpolation                         FadeCurve;                                         // 0x000C(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4458[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_AkSetRTPC) == 0x000008, "Wrong alignment on Lib_Audio_C_AkSetRTPC");
-static_assert(sizeof(Lib_Audio_C_AkSetRTPC) == 0x000048, "Wrong size on Lib_Audio_C_AkSetRTPC");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, RTPCValue) == 0x000000, "Member 'Lib_Audio_C_AkSetRTPC::RTPCValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, Value) == 0x000008, "Member 'Lib_Audio_C_AkSetRTPC::Value' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, InterpolationTimeMs) == 0x000010, "Member 'Lib_Audio_C_AkSetRTPC::InterpolationTimeMs' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, Actor) == 0x000018, "Member 'Lib_Audio_C_AkSetRTPC::Actor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_AkSetRTPC::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, AkComponents) == 0x000028, "Member 'Lib_Audio_C_AkSetRTPC::AkComponents' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, RtpcTracker) == 0x000038, "Member 'Lib_Audio_C_AkSetRTPC::RtpcTracker' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_AkSetRTPC, CallFunc_K2_AkSetRTPC_Value_ImplicitCast) == 0x000040, "Member 'Lib_Audio_C_AkSetRTPC::CallFunc_K2_AkSetRTPC_Value_ImplicitCast' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_AkExecuteActionOnPlayingID) == 0x000008, "Wrong alignment on Lib_Audio_C_AkExecuteActionOnPlayingID");
+static_assert(sizeof(Lib_Audio_C_AkExecuteActionOnPlayingID) == 0x000018, "Wrong size on Lib_Audio_C_AkExecuteActionOnPlayingID");
+static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, ActionType) == 0x000000, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::ActionType' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, PlayingID) == 0x000004, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::PlayingID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, TransitionDuration) == 0x000008, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::TransitionDuration' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, FadeCurve) == 0x00000C, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::FadeCurve' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkExecuteActionOnPlayingID, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_AkExecuteActionOnPlayingID::__WorldContext' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.Broadcast Ak Event Location
-// 0x0090 (0x0090 - 0x0000)
-struct Lib_Audio_C_Broadcast_Ak_Event_Location final 
+// Function Lib_Audio.Lib_Audio_C.IsWet
+// 0x0068 (0x0068 - 0x0000)
+struct Lib_Audio_C_IsWet final 
 {
 public:
-	class AActor*                                 ActorHit;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          WasDamaged;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_27FF[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 Instigator;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         Search_Radius;                                     // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2800[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class APlayerController*                      PCT_To_Exclude;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> Held_ItemType;                                     // 0x0028(0x0030)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0058(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        LocallyControlled;                                 // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class AValeriaPlayerController*               K2Node_DynamicCast_AsValeria_Player_Controller;    // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2801[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0078(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Param_IsWet;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4459[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaWeather*                        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsInside_IsInside;                        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_445A[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FWeatherStateProperties                CallFunc_GetCurrentWorldWeatherState_ReturnValue;  // 0x0038(0x0028)()
+	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_Broadcast_Ak_Event_Location) == 0x000008, "Wrong alignment on Lib_Audio_C_Broadcast_Ak_Event_Location");
-static_assert(sizeof(Lib_Audio_C_Broadcast_Ak_Event_Location) == 0x000090, "Wrong size on Lib_Audio_C_Broadcast_Ak_Event_Location");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, ActorHit) == 0x000000, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::ActorHit' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, WasDamaged) == 0x000008, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::WasDamaged' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Instigator) == 0x000010, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Instigator' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Search_Radius) == 0x000018, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Search_Radius' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, PCT_To_Exclude) == 0x000020, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::PCT_To_Exclude' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Held_ItemType) == 0x000028, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Held_ItemType' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, __WorldContext) == 0x000058, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, LocallyControlled) == 0x000060, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::LocallyControlled' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, K2Node_DynamicCast_AsValeria_Player_Controller) == 0x000068, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::K2Node_DynamicCast_AsValeria_Player_Controller' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, K2Node_DynamicCast_bSuccess) == 0x000070, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000078, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.FindClosestVector
-// 0x00B8 (0x00B8 - 0x0000)
-struct Lib_Audio_C_FindClosestVector final 
-{
-public:
-	TArray<struct FVector>                        InVectors;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-	struct FVector                                ReferencePoint;                                    // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ClosestVector;                                     // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Param_Index;                                       // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2802[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        IterateDistance;                                   // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         ClosestInd;                                        // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2803[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                ClosestVect;                                       // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        Distance;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2804[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2805[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_FindClosestVector) == 0x000008, "Wrong alignment on Lib_Audio_C_FindClosestVector");
-static_assert(sizeof(Lib_Audio_C_FindClosestVector) == 0x0000B8, "Wrong size on Lib_Audio_C_FindClosestVector");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, InVectors) == 0x000000, "Member 'Lib_Audio_C_FindClosestVector::InVectors' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, ReferencePoint) == 0x000010, "Member 'Lib_Audio_C_FindClosestVector::ReferencePoint' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_FindClosestVector::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestVector) == 0x000030, "Member 'Lib_Audio_C_FindClosestVector::ClosestVector' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, Param_Index) == 0x000048, "Member 'Lib_Audio_C_FindClosestVector::Param_Index' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, IterateDistance) == 0x000050, "Member 'Lib_Audio_C_FindClosestVector::IterateDistance' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestInd) == 0x000058, "Member 'Lib_Audio_C_FindClosestVector::ClosestInd' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestVect) == 0x000060, "Member 'Lib_Audio_C_FindClosestVector::ClosestVect' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, Distance) == 0x000078, "Member 'Lib_Audio_C_FindClosestVector::Distance' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, Temp_int_Array_Index_Variable) == 0x000080, "Member 'Lib_Audio_C_FindClosestVector::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Array_Length_ReturnValue) == 0x000084, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Array_Get_Item) == 0x000088, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, Temp_int_Loop_Counter_Variable) == 0x0000A0, "Member 'Lib_Audio_C_FindClosestVector::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0000AC, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Vector_Distance_ReturnValue) == 0x0000B0, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_IsWet) == 0x000008, "Wrong alignment on Lib_Audio_C_IsWet");
+static_assert(sizeof(Lib_Audio_C_IsWet) == 0x000068, "Wrong size on Lib_Audio_C_IsWet");
+static_assert(offsetof(Lib_Audio_C_IsWet, Location) == 0x000000, "Member 'Lib_Audio_C_IsWet::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_IsWet::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, Param_IsWet) == 0x000020, "Member 'Lib_Audio_C_IsWet::Param_IsWet' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_IsWet::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_IsInside_IsInside) == 0x000030, "Member 'Lib_Audio_C_IsWet::CallFunc_IsInside_IsInside' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_GetCurrentWorldWeatherState_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_IsWet::CallFunc_GetCurrentWorldWeatherState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_HasTag_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_IsWet::CallFunc_HasTag_ReturnValue' has a wrong offset!");
 
 // Function Lib_Audio.Lib_Audio_C.GetAkAudioRoomAtLocation
 // 0x0170 (0x0170 - 0x0000)
@@ -648,38 +222,38 @@ public:
 	class UAkRoomComponent*                       CallFunc_Array_Get_Item;                           // 0x0088(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0094(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2806[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_445B[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         Temp_object_Variable;                              // 0x0098(0x0010)(ConstParm, ReferenceParm)
 	TArray<class AActor*>                         Temp_object_Variable_1;                            // 0x00A8(0x0010)(ConstParm, ReferenceParm)
 	TArray<EObjectTypeQuery>                      K2Node_MakeArray_Array;                            // 0x00B8(0x0010)(ConstParm, ReferenceParm)
 	TArray<class UPrimitiveComponent*>            CallFunc_SphereOverlapComponents_OutComponents;    // 0x00C8(0x0010)(ReferenceParm, ContainsInstancedReference)
 	bool                                          CallFunc_SphereOverlapComponents_ReturnValue;      // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x00D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2807[0x6];                                     // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_445C[0x6];                                     // 0x00DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrimitiveComponent*                    CallFunc_Array_Get_Item_1;                         // 0x00E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class USceneComponent*>                CallFunc_GetChildrenComponents_Children;           // 0x00E8(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2808[0x4];                                     // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_445D[0x4];                                     // 0x00FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USceneComponent*                        CallFunc_Array_Get_Item_2;                         // 0x0100(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2809[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_445E[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkRoomComponent*                       K2Node_DynamicCast_AsAk_Room_Component;            // 0x0110(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0118(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280A[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_445F[0x3];                                     // 0x0119(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue;              // 0x011C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x0120(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280B[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4460[0x4];                                     // 0x0124(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class AActor*>                         CallFunc_SphereOverlapActors_OutActors;            // 0x0128(0x0010)(ReferenceParm)
 	bool                                          CallFunc_SphereOverlapActors_ReturnValue;          // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x0139(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280C[0x6];                                     // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4461[0x6];                                     // 0x013A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_Array_Get_Item_3;                         // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaSpatialAudioVolume*             K2Node_DynamicCast_AsValeria_Spatial_Audio_Volume; // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0150(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280D[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4462[0x3];                                     // 0x0151(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_3;               // 0x0154(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_3;                // 0x0158(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280E[0x3];                                     // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4463[0x3];                                     // 0x0159(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_AddUnique_ReturnValue_1;            // 0x015C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_Greater_DoubleDouble_A_ImplicitCast;      // 0x0160(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        K2Node_VariableSet_LHighestPriority_ImplicitCast;  // 0x0168(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -735,75 +309,32 @@ static_assert(offsetof(Lib_Audio_C_GetAkAudioRoomAtLocation, CallFunc_Array_AddU
 static_assert(offsetof(Lib_Audio_C_GetAkAudioRoomAtLocation, CallFunc_Greater_DoubleDouble_A_ImplicitCast) == 0x000160, "Member 'Lib_Audio_C_GetAkAudioRoomAtLocation::CallFunc_Greater_DoubleDouble_A_ImplicitCast' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_GetAkAudioRoomAtLocation, K2Node_VariableSet_LHighestPriority_ImplicitCast) == 0x000168, "Member 'Lib_Audio_C_GetAkAudioRoomAtLocation::K2Node_VariableSet_LHighestPriority_ImplicitCast' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.GetMusicManager
+// Function Lib_Audio.Lib_Audio_C.PlayTempBeep
 // 0x0040 (0x0040 - 0x0000)
-struct Lib_Audio_C_GetMusicManager final 
+struct Lib_Audio_C_PlayTempBeep final 
 {
 public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_MusicManager_C*                     AsBP_Music_Manager;                                // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UGameInstance*                          CallFunc_GetGameInstance_ReturnValue;              // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UValeriaGameInstance*                   K2Node_DynamicCast_AsValeria_Game_Instance;        // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_280F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMusicManager*                          CallFunc_GetMusicManager_ReturnValue;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UBP_MusicManager_C*                     K2Node_DynamicCast_AsBP_Music_Manager;             // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_GetMusicManager) == 0x000008, "Wrong alignment on Lib_Audio_C_GetMusicManager");
-static_assert(sizeof(Lib_Audio_C_GetMusicManager) == 0x000040, "Wrong size on Lib_Audio_C_GetMusicManager");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, __WorldContext) == 0x000000, "Member 'Lib_Audio_C_GetMusicManager::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, AsBP_Music_Manager) == 0x000008, "Member 'Lib_Audio_C_GetMusicManager::AsBP_Music_Manager' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, CallFunc_GetGameInstance_ReturnValue) == 0x000010, "Member 'Lib_Audio_C_GetMusicManager::CallFunc_GetGameInstance_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_AsValeria_Game_Instance) == 0x000018, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_AsValeria_Game_Instance' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_bSuccess) == 0x000020, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, CallFunc_GetMusicManager_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_GetMusicManager::CallFunc_GetMusicManager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_AsBP_Music_Manager) == 0x000030, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_AsBP_Music_Manager' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_GetMusicManager, K2Node_DynamicCast_bSuccess_1) == 0x000038, "Member 'Lib_Audio_C_GetMusicManager::K2Node_DynamicCast_bSuccess_1' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.IsWet
-// 0x0068 (0x0068 - 0x0000)
-struct Lib_Audio_C_IsWet final 
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_IsWet;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2810[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaWeather*                        CallFunc_GetWorldSubsystem_ReturnValue;            // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsInside_IsInside;                        // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2811[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FWeatherStateProperties                CallFunc_GetCurrentWorldWeatherState_ReturnValue;  // 0x0038(0x0028)()
-	bool                                          CallFunc_HasTag_ReturnValue;                       // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_IsWet) == 0x000008, "Wrong alignment on Lib_Audio_C_IsWet");
-static_assert(sizeof(Lib_Audio_C_IsWet) == 0x000068, "Wrong size on Lib_Audio_C_IsWet");
-static_assert(offsetof(Lib_Audio_C_IsWet, Location) == 0x000000, "Member 'Lib_Audio_C_IsWet::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_IsWet::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, Param_IsWet) == 0x000020, "Member 'Lib_Audio_C_IsWet::Param_IsWet' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_GetWorldSubsystem_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_IsWet::CallFunc_GetWorldSubsystem_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_IsInside_IsInside) == 0x000030, "Member 'Lib_Audio_C_IsWet::CallFunc_IsInside_IsInside' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_GetCurrentWorldWeatherState_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_IsWet::CallFunc_GetCurrentWorldWeatherState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWet, CallFunc_HasTag_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_IsWet::CallFunc_HasTag_ReturnValue' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.IsWithinAttenuation
-// 0x0030 (0x0030 - 0x0000)
-struct Lib_Audio_C_IsWithinAttenuation final 
-{
-public:
-	class UAkAudioEvent*                          Event;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Global;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4464[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Within;                                            // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_VIsWithinAttenuation_ReturnValue;         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BuildIsShipping_ReturnValue;              // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4465[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent;              // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventLocation_Playing_ID;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_IsWithinAttenuation) == 0x000008, "Wrong alignment on Lib_Audio_C_IsWithinAttenuation");
-static_assert(sizeof(Lib_Audio_C_IsWithinAttenuation) == 0x000030, "Wrong size on Lib_Audio_C_IsWithinAttenuation");
-static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Event) == 0x000000, "Member 'Lib_Audio_C_IsWithinAttenuation::Event' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Location) == 0x000008, "Member 'Lib_Audio_C_IsWithinAttenuation::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_IsWithinAttenuation::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Within) == 0x000028, "Member 'Lib_Audio_C_IsWithinAttenuation::Within' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, CallFunc_VIsWithinAttenuation_ReturnValue) == 0x000029, "Member 'Lib_Audio_C_IsWithinAttenuation::CallFunc_VIsWithinAttenuation_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_PlayTempBeep) == 0x000008, "Wrong alignment on Lib_Audio_C_PlayTempBeep");
+static_assert(sizeof(Lib_Audio_C_PlayTempBeep) == 0x000040, "Wrong size on Lib_Audio_C_PlayTempBeep");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, Global) == 0x000000, "Member 'Lib_Audio_C_PlayTempBeep::Global' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, Location) == 0x000008, "Member 'Lib_Audio_C_PlayTempBeep::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_PlayTempBeep::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, ReturnValue) == 0x000028, "Member 'Lib_Audio_C_PlayTempBeep::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_BuildIsShipping_ReturnValue) == 0x00002C, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_BuildIsShipping_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventLocation_AkComponent) == 0x000030, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventLocation_AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventLocation_Playing_ID) == 0x000038, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventLocation_Playing_ID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventGlobal_ReturnValue) == 0x00003C, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
 
 // Function Lib_Audio.Lib_Audio_C.LoadAudioUserSettings
 // 0x0070 (0x0070 - 0x0000)
@@ -815,10 +346,10 @@ public:
 	class UAkStateValue*                          Temp_object_Variable_1;                            // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAkStateValue*                          Temp_object_Variable_2;                            // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EAudioMixProfiles                             Temp_byte_Variable;                                // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2812[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4466[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UValeriaGameUserSettings*               CallFunc_GetValeriaGameUserSettings_ReturnValue;   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2813[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4467[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkStateValue*                          K2Node_Select_Default;                             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_SelectFloat_ReturnValue;                  // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_AkSetRTPC_Value_ImplicitCast;             // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -844,125 +375,222 @@ static_assert(offsetof(Lib_Audio_C_LoadAudioUserSettings, CallFunc_AkSetRTPC_Val
 static_assert(offsetof(Lib_Audio_C_LoadAudioUserSettings, CallFunc_AkSetRTPC_Value_ImplicitCast_3) == 0x000060, "Member 'Lib_Audio_C_LoadAudioUserSettings::CallFunc_AkSetRTPC_Value_ImplicitCast_3' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_LoadAudioUserSettings, CallFunc_SelectFloat_A_ImplicitCast) == 0x000068, "Member 'Lib_Audio_C_LoadAudioUserSettings::CallFunc_SelectFloat_A_ImplicitCast' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.PlayTempBeep
-// 0x0040 (0x0040 - 0x0000)
-struct Lib_Audio_C_PlayTempBeep final 
+// Function Lib_Audio.Lib_Audio_C.Ak Music Switch
+// 0x0050 (0x0050 - 0x0000)
+struct Lib_Audio_C_Ak_Music_Switch final 
 {
 public:
-	bool                                          Global;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2814[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkSwitchValue*                         SwitchValue;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          IgnoreTimeOfDay;                                   // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4468[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4469[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  CallFunc_K2_GetPawn_ReturnValue;                   // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UBP_MusicManager_C*                     CallFunc_GetMusicManager_AsBP_Music_Manager;       // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446A[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UComp_Listener_Padding_C*               CallFunc_GetComponentByClass_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_Ak_Music_Switch) == 0x000008, "Wrong alignment on Lib_Audio_C_Ak_Music_Switch");
+static_assert(sizeof(Lib_Audio_C_Ak_Music_Switch) == 0x000050, "Wrong size on Lib_Audio_C_Ak_Music_Switch");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, SwitchValue) == 0x000000, "Member 'Lib_Audio_C_Ak_Music_Switch::SwitchValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, IgnoreTimeOfDay) == 0x000008, "Member 'Lib_Audio_C_Ak_Music_Switch::IgnoreTimeOfDay' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_Ak_Music_Switch::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsDedicatedServer_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetPlayerController_ReturnValue) == 0x000020, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetPlayerController_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_K2_GetPawn_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_K2_GetPawn_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetMusicManager_AsBP_Music_Manager) == 0x000030, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetMusicManager_AsBP_Music_Manager' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue_1) == 0x000039, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_GetComponentByClass_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_IsValid_ReturnValue_2) == 0x000048, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Music_Switch, CallFunc_Not_PreBool_ReturnValue) == 0x000049, "Member 'Lib_Audio_C_Ak_Music_Switch::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.FindClosestVector
+// 0x00B8 (0x00B8 - 0x0000)
+struct Lib_Audio_C_FindClosestVector final 
+{
+public:
+	TArray<struct FVector>                        InVectors;                                         // 0x0000(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+	struct FVector                                ReferencePoint;                                    // 0x0010(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ClosestVector;                                     // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Param_Index;                                       // 0x0048(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446B[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        IterateDistance;                                   // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         ClosestInd;                                        // 0x0058(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446C[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ClosestVect;                                       // 0x0060(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Distance;                                          // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0084(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Array_Get_Item;                           // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x00A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446D[0x3];                                     // 0x00A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_DoubleDouble_ReturnValue;            // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446E[0x3];                                     // 0x00AD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Vector_Distance_ReturnValue;              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_FindClosestVector) == 0x000008, "Wrong alignment on Lib_Audio_C_FindClosestVector");
+static_assert(sizeof(Lib_Audio_C_FindClosestVector) == 0x0000B8, "Wrong size on Lib_Audio_C_FindClosestVector");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, InVectors) == 0x000000, "Member 'Lib_Audio_C_FindClosestVector::InVectors' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, ReferencePoint) == 0x000010, "Member 'Lib_Audio_C_FindClosestVector::ReferencePoint' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_FindClosestVector::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestVector) == 0x000030, "Member 'Lib_Audio_C_FindClosestVector::ClosestVector' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, Param_Index) == 0x000048, "Member 'Lib_Audio_C_FindClosestVector::Param_Index' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, IterateDistance) == 0x000050, "Member 'Lib_Audio_C_FindClosestVector::IterateDistance' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestInd) == 0x000058, "Member 'Lib_Audio_C_FindClosestVector::ClosestInd' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, ClosestVect) == 0x000060, "Member 'Lib_Audio_C_FindClosestVector::ClosestVect' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, Distance) == 0x000078, "Member 'Lib_Audio_C_FindClosestVector::Distance' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, Temp_int_Array_Index_Variable) == 0x000080, "Member 'Lib_Audio_C_FindClosestVector::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Array_Length_ReturnValue) == 0x000084, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Array_Get_Item) == 0x000088, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, Temp_int_Loop_Counter_Variable) == 0x0000A0, "Member 'Lib_Audio_C_FindClosestVector::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Less_IntInt_ReturnValue) == 0x0000A4, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Add_IntInt_ReturnValue) == 0x0000A8, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Less_DoubleDouble_ReturnValue) == 0x0000AC, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Less_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_FindClosestVector, CallFunc_Vector_Distance_ReturnValue) == 0x0000B0, "Member 'Lib_Audio_C_FindClosestVector::CallFunc_Vector_Distance_ReturnValue' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkSetRTPC
+// 0x0048 (0x0048 - 0x0000)
+struct Lib_Audio_C_AkSetRTPC final 
+{
+public:
+	class UAkRtpc*                                RTPCValue;                                         // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        Value;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InterpolationTimeMs;                               // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_446F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Actor;                                             // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	int32                                         ReturnValue;                                       // 0x0028(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BuildIsShipping_ReturnValue;              // 0x002C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2815[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent;              // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventLocation_Playing_ID;               // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAkComponent*>                   AkComponents;                                      // 0x0028(0x0010)(Edit, BlueprintVisible, ContainsInstancedReference)
+	class UComp_RtpcTracker_C*                    RtpcTracker;                                       // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_AkSetRTPC_Value_ImplicitCast;          // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_PlayTempBeep) == 0x000008, "Wrong alignment on Lib_Audio_C_PlayTempBeep");
-static_assert(sizeof(Lib_Audio_C_PlayTempBeep) == 0x000040, "Wrong size on Lib_Audio_C_PlayTempBeep");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, Global) == 0x000000, "Member 'Lib_Audio_C_PlayTempBeep::Global' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, Location) == 0x000008, "Member 'Lib_Audio_C_PlayTempBeep::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_PlayTempBeep::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, ReturnValue) == 0x000028, "Member 'Lib_Audio_C_PlayTempBeep::ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_BuildIsShipping_ReturnValue) == 0x00002C, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_BuildIsShipping_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventLocation_AkComponent) == 0x000030, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventLocation_AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventLocation_Playing_ID) == 0x000038, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventLocation_Playing_ID' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_PlayTempBeep, CallFunc_AkEventGlobal_ReturnValue) == 0x00003C, "Member 'Lib_Audio_C_PlayTempBeep::CallFunc_AkEventGlobal_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_AkSetRTPC) == 0x000008, "Wrong alignment on Lib_Audio_C_AkSetRTPC");
+static_assert(sizeof(Lib_Audio_C_AkSetRTPC) == 0x000048, "Wrong size on Lib_Audio_C_AkSetRTPC");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, RTPCValue) == 0x000000, "Member 'Lib_Audio_C_AkSetRTPC::RTPCValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, Value) == 0x000008, "Member 'Lib_Audio_C_AkSetRTPC::Value' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, InterpolationTimeMs) == 0x000010, "Member 'Lib_Audio_C_AkSetRTPC::InterpolationTimeMs' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, Actor) == 0x000018, "Member 'Lib_Audio_C_AkSetRTPC::Actor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_AkSetRTPC::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, AkComponents) == 0x000028, "Member 'Lib_Audio_C_AkSetRTPC::AkComponents' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, RtpcTracker) == 0x000038, "Member 'Lib_Audio_C_AkSetRTPC::RtpcTracker' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkSetRTPC, CallFunc_K2_AkSetRTPC_Value_ImplicitCast) == 0x000040, "Member 'Lib_Audio_C_AkSetRTPC::CallFunc_K2_AkSetRTPC_Value_ImplicitCast' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.ReturnToAreaMusic
-// 0x0060 (0x0060 - 0x0000)
-struct Lib_Audio_C_ReturnToAreaMusic final 
+// Function Lib_Audio.Lib_Audio_C.Broadcast Ak Event Location
+// 0x0088 (0x0088 - 0x0000)
+struct Lib_Audio_C_Broadcast_Ak_Event_Location final 
 {
 public:
-	class UObject*                                __WorldContext;                                    // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AValeriaSpatialAudioVolume*             LHighestVolume;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-	float                                         LHighestPriority;                                  // 0x0010(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2816[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UAkRoomComponent*>               CallFunc_GetAudioRoomComponents_ReturnValue;       // 0x0018(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0028(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x002C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2817[0x2];                                     // 0x0032(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0034(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UAkRoomComponent*                       CallFunc_Array_Get_Item;                           // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UComp_CV_Local_Music_C*                 CallFunc_GetComponentByClass_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0054(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2818[0x3];                                     // 0x0055(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x005C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x005D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 ActorHit;                                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          WasDamaged;                                        // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4470[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 Instigator;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         Search_Radius;                                     // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4471[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class APlayerController*                      PCT_To_Exclude;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> Held_ItemType;                                     // 0x0028(0x0028)(BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0050(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	double                                        LocallyControlled;                                 // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AValeriaPlayerController*               K2Node_DynamicCast_AsValeria_Player_Controller;    // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4472[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_ReturnToAreaMusic) == 0x000008, "Wrong alignment on Lib_Audio_C_ReturnToAreaMusic");
-static_assert(sizeof(Lib_Audio_C_ReturnToAreaMusic) == 0x000060, "Wrong size on Lib_Audio_C_ReturnToAreaMusic");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, __WorldContext) == 0x000000, "Member 'Lib_Audio_C_ReturnToAreaMusic::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, LHighestVolume) == 0x000008, "Member 'Lib_Audio_C_ReturnToAreaMusic::LHighestVolume' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, LHighestPriority) == 0x000010, "Member 'Lib_Audio_C_ReturnToAreaMusic::LHighestPriority' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_bool_True_if_break_was_hit_Variable) == 0x000014, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetAudioRoomComponents_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetAudioRoomComponents_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Length_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Length_ReturnValue_1) == 0x00002C, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Length_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Not_PreBool_ReturnValue) == 0x000030, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Greater_IntInt_ReturnValue) == 0x000031, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Greater_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_int_Array_Index_Variable) == 0x000034, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Array_Get_Item) == 0x000038, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetOwner_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_GetComponentByClass_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_GetComponentByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, Temp_int_Loop_Counter_Variable) == 0x000050, "Member 'Lib_Audio_C_ReturnToAreaMusic::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Less_IntInt_ReturnValue) == 0x000054, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_Add_IntInt_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_BooleanAND_ReturnValue) == 0x00005C, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_ReturnToAreaMusic, CallFunc_IsValid_ReturnValue) == 0x00005D, "Member 'Lib_Audio_C_ReturnToAreaMusic::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_Broadcast_Ak_Event_Location) == 0x000008, "Wrong alignment on Lib_Audio_C_Broadcast_Ak_Event_Location");
+static_assert(sizeof(Lib_Audio_C_Broadcast_Ak_Event_Location) == 0x000088, "Wrong size on Lib_Audio_C_Broadcast_Ak_Event_Location");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, ActorHit) == 0x000000, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::ActorHit' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, WasDamaged) == 0x000008, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::WasDamaged' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Instigator) == 0x000010, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Instigator' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Search_Radius) == 0x000018, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Search_Radius' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, PCT_To_Exclude) == 0x000020, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::PCT_To_Exclude' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, Held_ItemType) == 0x000028, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::Held_ItemType' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, __WorldContext) == 0x000050, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, LocallyControlled) == 0x000058, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, K2Node_DynamicCast_AsValeria_Player_Controller) == 0x000060, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::K2Node_DynamicCast_AsValeria_Player_Controller' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Broadcast_Ak_Event_Location, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000070, "Member 'Lib_Audio_C_Broadcast_Ak_Event_Location::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.Surface DT
-// 0x0080 (0x0080 - 0x0000)
-struct Lib_Audio_C_Surface_DT final 
+// Function Lib_Audio.Lib_Audio_C.AkEventSpawnAttached
+// 0x0100 (0x0100 - 0x0000)
+struct Lib_Audio_C_AkEventSpawnAttached final 
 {
 public:
-	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UDataTable*                             DataTable;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      PhysMat;                                           // 0x0010(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          Sound;                                             // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      Decal_Left_Foot;                                   // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      Decal_Right_Foot;                                  // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UNiagaraSystem*                         NS;                                                // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	E_Footwear                                    FootwearDebug;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2819[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   Footwear;                                          // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281A[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UMaterialInstance*                      DR;                                                // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UMaterialInstance*                      DL;                                                // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkAudioEvent*                          S;                                                 // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class FName                                   RowNamePhysmat;                                    // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPhysicalSurface                              DefaultPhysmatEditorAudition;                      // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EPhysicalSurface                              DefaultPhysmatInGame;                              // 0x0079(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Instigator;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class USceneComponent*                        Owner;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class FName                                   SocketName;                                        // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          AutoDestroy;                                       // 0x0020(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetRtpcFromOwner;                                  // 0x0021(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4473[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           Ak;                                                // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         ID;                                                // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayingID;                                         // 0x003C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComponent;                                       // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        LocallyControlled;                                 // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4474[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0060(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4475[0x7];                                     // 0x0079(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x0080(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4476[0x6];                                     // 0x00A2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_GetSocketLocation_ReturnValue;            // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4477[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x00C4(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4478[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_SpawnAkComponentAtLocation_ReturnValue;   // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_AttachToComponent_ReturnValue;         // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4479[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x00E8(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_Surface_DT) == 0x000008, "Wrong alignment on Lib_Audio_C_Surface_DT");
-static_assert(sizeof(Lib_Audio_C_Surface_DT) == 0x000080, "Wrong size on Lib_Audio_C_Surface_DT");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, Actor) == 0x000000, "Member 'Lib_Audio_C_Surface_DT::Actor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, DataTable) == 0x000008, "Member 'Lib_Audio_C_Surface_DT::DataTable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, PhysMat) == 0x000010, "Member 'Lib_Audio_C_Surface_DT::PhysMat' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_Surface_DT::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, Sound) == 0x000020, "Member 'Lib_Audio_C_Surface_DT::Sound' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, Decal_Left_Foot) == 0x000028, "Member 'Lib_Audio_C_Surface_DT::Decal_Left_Foot' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, Decal_Right_Foot) == 0x000030, "Member 'Lib_Audio_C_Surface_DT::Decal_Right_Foot' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, NiagaraSystem) == 0x000038, "Member 'Lib_Audio_C_Surface_DT::NiagaraSystem' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, NS) == 0x000040, "Member 'Lib_Audio_C_Surface_DT::NS' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, FootwearDebug) == 0x000048, "Member 'Lib_Audio_C_Surface_DT::FootwearDebug' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, Footwear) == 0x00004C, "Member 'Lib_Audio_C_Surface_DT::Footwear' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, DR) == 0x000058, "Member 'Lib_Audio_C_Surface_DT::DR' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, DL) == 0x000060, "Member 'Lib_Audio_C_Surface_DT::DL' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, S) == 0x000068, "Member 'Lib_Audio_C_Surface_DT::S' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, RowNamePhysmat) == 0x000070, "Member 'Lib_Audio_C_Surface_DT::RowNamePhysmat' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, DefaultPhysmatEditorAudition) == 0x000078, "Member 'Lib_Audio_C_Surface_DT::DefaultPhysmatEditorAudition' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Surface_DT, DefaultPhysmatInGame) == 0x000079, "Member 'Lib_Audio_C_Surface_DT::DefaultPhysmatInGame' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_AkEventSpawnAttached) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventSpawnAttached");
+static_assert(sizeof(Lib_Audio_C_AkEventSpawnAttached) == 0x000100, "Wrong size on Lib_Audio_C_AkEventSpawnAttached");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventSpawnAttached::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Instigator) == 0x000008, "Member 'Lib_Audio_C_AkEventSpawnAttached::Instigator' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Owner) == 0x000010, "Member 'Lib_Audio_C_AkEventSpawnAttached::Owner' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, SocketName) == 0x000018, "Member 'Lib_Audio_C_AkEventSpawnAttached::SocketName' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AutoDestroy) == 0x000020, "Member 'Lib_Audio_C_AkEventSpawnAttached::AutoDestroy' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, GetRtpcFromOwner) == 0x000021, "Member 'Lib_Audio_C_AkEventSpawnAttached::GetRtpcFromOwner' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_AkEventSpawnAttached::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Ak) == 0x000030, "Member 'Lib_Audio_C_AkEventSpawnAttached::Ak' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, ID) == 0x000038, "Member 'Lib_Audio_C_AkEventSpawnAttached::ID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, PlayingID) == 0x00003C, "Member 'Lib_Audio_C_AkEventSpawnAttached::PlayingID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, AkComponent) == 0x000040, "Member 'Lib_Audio_C_AkEventSpawnAttached::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, LocallyControlled) == 0x000048, "Member 'Lib_Audio_C_AkEventSpawnAttached::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsDedicatedServer_ReturnValue) == 0x000050, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsValid_ReturnValue) == 0x000051, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_GetOwner_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000078, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x000080, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, K2Node_DynamicCast_AsPawn) == 0x000098, "Member 'Lib_Audio_C_AkEventSpawnAttached::K2Node_DynamicCast_AsPawn' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, K2Node_DynamicCast_bSuccess) == 0x0000A0, "Member 'Lib_Audio_C_AkEventSpawnAttached::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsLocallyControlled_ReturnValue) == 0x0000A1, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_GetSocketLocation_ReturnValue) == 0x0000A8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_GetSocketLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_IsWithinAttenuation_Within) == 0x0000C0, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Temp_delegate_Variable) == 0x0000C4, "Member 'Lib_Audio_C_AkEventSpawnAttached::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_SpawnAkComponentAtLocation_ReturnValue) == 0x0000D8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_SpawnAkComponentAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_K2_AttachToComponent_ReturnValue) == 0x0000E0, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_K2_AttachToComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, Temp_struct_Variable) == 0x0000E8, "Member 'Lib_Audio_C_AkEventSpawnAttached::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_PostAkEvent_ReturnValue) == 0x0000F8, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventSpawnAttached, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000FC, "Member 'Lib_Audio_C_AkEventSpawnAttached::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
 
 // Function Lib_Audio.Lib_Audio_C.SurfaceDTPM
 // 0x0058 (0x0058 - 0x0000)
@@ -995,27 +623,463 @@ static_assert(offsetof(Lib_Audio_C_SurfaceDTPM, DefaultInGamePhysmat) == 0x00004
 static_assert(offsetof(Lib_Audio_C_SurfaceDTPM, RowNamePhysmat) == 0x000048, "Member 'Lib_Audio_C_SurfaceDTPM::RowNamePhysmat' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_SurfaceDTPM, DefaultPhysmatEditorAudition) == 0x000050, "Member 'Lib_Audio_C_SurfaceDTPM::DefaultPhysmatEditorAudition' has a wrong offset!");
 
-// Function Lib_Audio.Lib_Audio_C.Try to Propagate Rtpcs
-// 0x0030 (0x0030 - 0x0000)
-struct Lib_Audio_C_Try_to_Propagate_Rtpcs final 
+// Function Lib_Audio.Lib_Audio_C.Surface DT
+// 0x0080 (0x0080 - 0x0000)
+struct Lib_Audio_C_Surface_DT final 
 {
 public:
 	class AActor*                                 Actor;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UAkComponent*                           AkComponent;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Success;                                           // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281B[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UComp_RtpcTracker_C*                    Tracker;                                           // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TryToPropagateRtpcs_ReturnValue;          // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UDataTable*                             DataTable;                                         // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PhysMat;                                           // 0x0010(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          Sound;                                             // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      Decal_Left_Foot;                                   // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      Decal_Right_Foot;                                  // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NiagaraSystem;                                     // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UNiagaraSystem*                         NS;                                                // 0x0040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	E_Footwear                                    FootwearDebug;                                     // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447A[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class FName                                   Footwear;                                          // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447B[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UMaterialInstance*                      DR;                                                // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UMaterialInstance*                      DL;                                                // 0x0060(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkAudioEvent*                          S;                                                 // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FName                                   RowNamePhysmat;                                    // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPhysicalSurface                              DefaultPhysmatEditorAudition;                      // 0x0078(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EPhysicalSurface                              DefaultPhysmatInGame;                              // 0x0079(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(Lib_Audio_C_Try_to_Propagate_Rtpcs) == 0x000008, "Wrong alignment on Lib_Audio_C_Try_to_Propagate_Rtpcs");
-static_assert(sizeof(Lib_Audio_C_Try_to_Propagate_Rtpcs) == 0x000030, "Wrong size on Lib_Audio_C_Try_to_Propagate_Rtpcs");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Actor) == 0x000000, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Actor' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, AkComponent) == 0x000008, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::AkComponent' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Success) == 0x000018, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Success' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, Tracker) == 0x000020, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::Tracker' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_Try_to_Propagate_Rtpcs, CallFunc_TryToPropagateRtpcs_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_Try_to_Propagate_Rtpcs::CallFunc_TryToPropagateRtpcs_ReturnValue' has a wrong offset!");
+static_assert(alignof(Lib_Audio_C_Surface_DT) == 0x000008, "Wrong alignment on Lib_Audio_C_Surface_DT");
+static_assert(sizeof(Lib_Audio_C_Surface_DT) == 0x000080, "Wrong size on Lib_Audio_C_Surface_DT");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, Actor) == 0x000000, "Member 'Lib_Audio_C_Surface_DT::Actor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, DataTable) == 0x000008, "Member 'Lib_Audio_C_Surface_DT::DataTable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, PhysMat) == 0x000010, "Member 'Lib_Audio_C_Surface_DT::PhysMat' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_Surface_DT::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, Sound) == 0x000020, "Member 'Lib_Audio_C_Surface_DT::Sound' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, Decal_Left_Foot) == 0x000028, "Member 'Lib_Audio_C_Surface_DT::Decal_Left_Foot' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, Decal_Right_Foot) == 0x000030, "Member 'Lib_Audio_C_Surface_DT::Decal_Right_Foot' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, NiagaraSystem) == 0x000038, "Member 'Lib_Audio_C_Surface_DT::NiagaraSystem' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, NS) == 0x000040, "Member 'Lib_Audio_C_Surface_DT::NS' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, FootwearDebug) == 0x000048, "Member 'Lib_Audio_C_Surface_DT::FootwearDebug' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, Footwear) == 0x00004C, "Member 'Lib_Audio_C_Surface_DT::Footwear' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, DR) == 0x000058, "Member 'Lib_Audio_C_Surface_DT::DR' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, DL) == 0x000060, "Member 'Lib_Audio_C_Surface_DT::DL' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, S) == 0x000068, "Member 'Lib_Audio_C_Surface_DT::S' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, RowNamePhysmat) == 0x000070, "Member 'Lib_Audio_C_Surface_DT::RowNamePhysmat' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, DefaultPhysmatEditorAudition) == 0x000078, "Member 'Lib_Audio_C_Surface_DT::DefaultPhysmatEditorAudition' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Surface_DT, DefaultPhysmatInGame) == 0x000079, "Member 'Lib_Audio_C_Surface_DT::DefaultPhysmatInGame' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.IsWithinAttenuation
+// 0x0030 (0x0030 - 0x0000)
+struct Lib_Audio_C_IsWithinAttenuation final 
+{
+public:
+	class UAkAudioEvent*                          Event;                                             // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Within;                                            // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VIsWithinAttenuation_ReturnValue;         // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_IsWithinAttenuation) == 0x000008, "Wrong alignment on Lib_Audio_C_IsWithinAttenuation");
+static_assert(sizeof(Lib_Audio_C_IsWithinAttenuation) == 0x000030, "Wrong size on Lib_Audio_C_IsWithinAttenuation");
+static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Event) == 0x000000, "Member 'Lib_Audio_C_IsWithinAttenuation::Event' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Location) == 0x000008, "Member 'Lib_Audio_C_IsWithinAttenuation::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, __WorldContext) == 0x000020, "Member 'Lib_Audio_C_IsWithinAttenuation::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, Within) == 0x000028, "Member 'Lib_Audio_C_IsWithinAttenuation::Within' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsWithinAttenuation, CallFunc_VIsWithinAttenuation_ReturnValue) == 0x000029, "Member 'Lib_Audio_C_IsWithinAttenuation::CallFunc_VIsWithinAttenuation_ReturnValue' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventLocationWithActor
+// 0x00A8 (0x00A8 - 0x0000)
+struct Lib_Audio_C_AkEventLocationWithActor final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetRtpcFromActor;                                  // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447C[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComponent;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Playing_ID;                                        // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447D[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           AkComp;                                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        LocallyControlled;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447E[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x005C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_447F[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0070(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0079(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x007A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x007B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4480[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_AkSpawnAtLocation_ReturnValue;            // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0088(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x0098(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x009C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x009D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4481[0x2];                                     // 0x009E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventLocationWithActor) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventLocationWithActor");
+static_assert(sizeof(Lib_Audio_C_AkEventLocationWithActor) == 0x0000A8, "Wrong size on Lib_Audio_C_AkEventLocationWithActor");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Location) == 0x000008, "Member 'Lib_Audio_C_AkEventLocationWithActor::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Actor) == 0x000020, "Member 'Lib_Audio_C_AkEventLocationWithActor::Actor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, GetRtpcFromActor) == 0x000028, "Member 'Lib_Audio_C_AkEventLocationWithActor::GetRtpcFromActor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, __WorldContext) == 0x000030, "Member 'Lib_Audio_C_AkEventLocationWithActor::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkComponent) == 0x000038, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Playing_ID) == 0x000040, "Member 'Lib_Audio_C_AkEventLocationWithActor::Playing_ID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, AkComp) == 0x000048, "Member 'Lib_Audio_C_AkEventLocationWithActor::AkComp' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, LocallyControlled) == 0x000050, "Member 'Lib_Audio_C_AkEventLocationWithActor::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x000058, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Temp_delegate_Variable) == 0x00005C, "Member 'Lib_Audio_C_AkEventLocationWithActor::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x00006C, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, K2Node_DynamicCast_AsPawn) == 0x000070, "Member 'Lib_Audio_C_AkEventLocationWithActor::K2Node_DynamicCast_AsPawn' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, K2Node_DynamicCast_bSuccess) == 0x000078, "Member 'Lib_Audio_C_AkEventLocationWithActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsValid_ReturnValue) == 0x000079, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsLocallyControlled_ReturnValue) == 0x00007A, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00007B, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_AkSpawnAtLocation_ReturnValue) == 0x000080, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_AkSpawnAtLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, Temp_struct_Variable) == 0x000088, "Member 'Lib_Audio_C_AkEventLocationWithActor::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_PostAkEvent_ReturnValue) == 0x000098, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsWithinAttenuation_Within) == 0x00009C, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_IsValid_ReturnValue_1) == 0x00009D, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocationWithActor, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000A0, "Member 'Lib_Audio_C_AkEventLocationWithActor::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventLocation
+// 0x0068 (0x0068 - 0x0000)
+struct Lib_Audio_C_AkEventLocation final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Location;                                          // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Instigator;                                        // 0x0020(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetRtpcsFromInstigator;                            // 0x0028(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4482[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComponent;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         Playing_ID;                                        // 0x0040(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         PlayingID;                                         // 0x0044(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComp;                                            // 0x0048(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        LocallyControlled;                                 // 0x0050(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           CallFunc_VAkEventLocation_OutComponent;            // 0x0058(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_VAkEventLocation_ReturnValue;             // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0064(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventLocation) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventLocation");
+static_assert(sizeof(Lib_Audio_C_AkEventLocation) == 0x000068, "Wrong size on Lib_Audio_C_AkEventLocation");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventLocation::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, Location) == 0x000008, "Member 'Lib_Audio_C_AkEventLocation::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, Instigator) == 0x000020, "Member 'Lib_Audio_C_AkEventLocation::Instigator' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, GetRtpcsFromInstigator) == 0x000028, "Member 'Lib_Audio_C_AkEventLocation::GetRtpcsFromInstigator' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, __WorldContext) == 0x000030, "Member 'Lib_Audio_C_AkEventLocation::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkComponent) == 0x000038, "Member 'Lib_Audio_C_AkEventLocation::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, Playing_ID) == 0x000040, "Member 'Lib_Audio_C_AkEventLocation::Playing_ID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, PlayingID) == 0x000044, "Member 'Lib_Audio_C_AkEventLocation::PlayingID' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, AkComp) == 0x000048, "Member 'Lib_Audio_C_AkEventLocation::AkComp' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, LocallyControlled) == 0x000050, "Member 'Lib_Audio_C_AkEventLocation::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_VAkEventLocation_OutComponent) == 0x000058, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_VAkEventLocation_OutComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_VAkEventLocation_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_VAkEventLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventLocation, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000064, "Member 'Lib_Audio_C_AkEventLocation::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventComponentCallback
+// 0x00B0 (0x00B0 - 0x0000)
+struct Lib_Audio_C_AkEventComponentCallback final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComponent;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallbackMask;                                      // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> PostEventCallback;                                 // 0x0014(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+	bool                                          CheckAttenuation;                                  // 0x0024(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetRtpcFromOwner;                                  // 0x0025(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4483[0x2];                                     // 0x0026(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0028(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4484[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LocallyControlled;                                 // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4485[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0050(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_GetAutoDestroy_ReturnValue;               // 0x0051(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4486[0x6];                                     // 0x0052(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x006A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x006B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x006C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4487[0x3];                                     // 0x006D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0070(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_VIsWithinAttenuation_ReturnValue;         // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4488[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0090(0x0010)(ConstParm, ReferenceParm)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4489[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00A8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventComponentCallback) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventComponentCallback");
+static_assert(sizeof(Lib_Audio_C_AkEventComponentCallback) == 0x0000B0, "Wrong size on Lib_Audio_C_AkEventComponentCallback");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventComponentCallback::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, AkComponent) == 0x000008, "Member 'Lib_Audio_C_AkEventComponentCallback::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallbackMask) == 0x000010, "Member 'Lib_Audio_C_AkEventComponentCallback::CallbackMask' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, PostEventCallback) == 0x000014, "Member 'Lib_Audio_C_AkEventComponentCallback::PostEventCallback' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CheckAttenuation) == 0x000024, "Member 'Lib_Audio_C_AkEventComponentCallback::CheckAttenuation' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, GetRtpcFromOwner) == 0x000025, "Member 'Lib_Audio_C_AkEventComponentCallback::GetRtpcFromOwner' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, __WorldContext) == 0x000028, "Member 'Lib_Audio_C_AkEventComponentCallback::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, ReturnValue) == 0x000030, "Member 'Lib_Audio_C_AkEventComponentCallback::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, LocallyControlled) == 0x000038, "Member 'Lib_Audio_C_AkEventComponentCallback::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsDedicatedServer_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000050, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetAutoDestroy_ReturnValue) == 0x000051, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetAutoDestroy_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_GetOwner_ReturnValue_1) == 0x000058, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_GetOwner_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, K2Node_DynamicCast_AsPawn) == 0x000060, "Member 'Lib_Audio_C_AkEventComponentCallback::K2Node_DynamicCast_AsPawn' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, K2Node_DynamicCast_bSuccess) == 0x000068, "Member 'Lib_Audio_C_AkEventComponentCallback::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsLocallyControlled_ReturnValue) == 0x000069, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue) == 0x00006A, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00006B, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue_1) == 0x00006C, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000070, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_VIsWithinAttenuation_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_VIsWithinAttenuation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, Temp_struct_Variable) == 0x000090, "Member 'Lib_Audio_C_AkEventComponentCallback::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_IsValid_ReturnValue_2) == 0x0000A0, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_PostAkEvent_ReturnValue) == 0x0000A4, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponentCallback, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000A8, "Member 'Lib_Audio_C_AkEventComponentCallback::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventComponent
+// 0x0040 (0x0040 - 0x0000)
+struct Lib_Audio_C_AkEventComponent final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UAkComponent*                           AkComponent;                                       // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          GetRtpcFromOwner;                                  // 0x0010(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448A[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448B[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LocallyControlled;                                 // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_VAkEventComponent_ReturnValue;            // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventComponent) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventComponent");
+static_assert(sizeof(Lib_Audio_C_AkEventComponent) == 0x000040, "Wrong size on Lib_Audio_C_AkEventComponent");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventComponent::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, AkComponent) == 0x000008, "Member 'Lib_Audio_C_AkEventComponent::AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, GetRtpcFromOwner) == 0x000010, "Member 'Lib_Audio_C_AkEventComponent::GetRtpcFromOwner' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_AkEventComponent::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, ReturnValue) == 0x000020, "Member 'Lib_Audio_C_AkEventComponent::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, LocallyControlled) == 0x000028, "Member 'Lib_Audio_C_AkEventComponent::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_GetOwner_ReturnValue) == 0x000030, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_VAkEventComponent_ReturnValue) == 0x000038, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_VAkEventComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventComponent, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x00003C, "Member 'Lib_Audio_C_AkEventComponent::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventActor
+// 0x00A8 (0x00A8 - 0x0000)
+struct Lib_Audio_C_AkEventActor final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 Actor;                                             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448C[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        LocallyControlled;                                 // 0x0020(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448D[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class APawn*                                  K2Node_DynamicCast_AsPawn;                         // 0x0030(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue;          // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448E[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class USceneComponent*                        CallFunc_K2_GetRootComponent_ReturnValue;          // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_AkGetComponent_ComponentCreated;          // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_448F[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkComponent*                           CallFunc_AkGetComponent_AkComponent;               // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Try_to_Propagate_Rtpcs_Success;           // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsLocallyControlled_ReturnValue_1;        // 0x005A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x005B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable;                            // 0x005C(0x0010)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4490[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FAkExternalSourceInfo>          Temp_struct_Variable;                              // 0x0070(0x0010)(ConstParm, ReferenceParm)
+	int32                                         CallFunc_PostAkEvent_ReturnValue;                  // 0x0080(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4491[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetActorLocation_ReturnValue;          // 0x0088(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsWithinAttenuation_Within;               // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00A1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventActor) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventActor");
+static_assert(sizeof(Lib_Audio_C_AkEventActor) == 0x0000A8, "Wrong size on Lib_Audio_C_AkEventActor");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventActor::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, Actor) == 0x000008, "Member 'Lib_Audio_C_AkEventActor::Actor' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, __WorldContext) == 0x000010, "Member 'Lib_Audio_C_AkEventActor::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, ReturnValue) == 0x000018, "Member 'Lib_Audio_C_AkEventActor::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, LocallyControlled) == 0x000020, "Member 'Lib_Audio_C_AkEventActor::LocallyControlled' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsDedicatedServer_ReturnValue) == 0x000028, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, K2Node_DynamicCast_AsPawn) == 0x000030, "Member 'Lib_Audio_C_AkEventActor::K2Node_DynamicCast_AsPawn' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, K2Node_DynamicCast_bSuccess) == 0x000038, "Member 'Lib_Audio_C_AkEventActor::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsLocallyControlled_ReturnValue) == 0x000039, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsLocallyControlled_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_K2_GetRootComponent_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_AkEventActor::CallFunc_K2_GetRootComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_AkGetComponent_ComponentCreated) == 0x000048, "Member 'Lib_Audio_C_AkEventActor::CallFunc_AkGetComponent_ComponentCreated' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_AkGetComponent_AkComponent) == 0x000050, "Member 'Lib_Audio_C_AkEventActor::CallFunc_AkGetComponent_AkComponent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_Try_to_Propagate_Rtpcs_Success) == 0x000058, "Member 'Lib_Audio_C_AkEventActor::CallFunc_Try_to_Propagate_Rtpcs_Success' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue) == 0x000059, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsLocallyControlled_ReturnValue_1) == 0x00005A, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsLocallyControlled_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue_1) == 0x00005B, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, Temp_delegate_Variable) == 0x00005C, "Member 'Lib_Audio_C_AkEventActor::Temp_delegate_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, Temp_struct_Variable) == 0x000070, "Member 'Lib_Audio_C_AkEventActor::Temp_struct_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_PostAkEvent_ReturnValue) == 0x000080, "Member 'Lib_Audio_C_AkEventActor::CallFunc_PostAkEvent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_K2_GetActorLocation_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_AkEventActor::CallFunc_K2_GetActorLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsWithinAttenuation_Within) == 0x0000A0, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsWithinAttenuation_Within' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventActor, CallFunc_IsValid_ReturnValue_2) == 0x0000A1, "Member 'Lib_Audio_C_AkEventActor::CallFunc_IsValid_ReturnValue_2' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.AkEventGlobal
+// 0x0020 (0x0020 - 0x0000)
+struct Lib_Audio_C_AkEventGlobal final 
+{
+public:
+	class UAkAudioEvent*                          AkEvent;                                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0015(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4492[0x2];                                     // 0x0016(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_PostGlobalEvent_ReturnValue;              // 0x0018(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_AkEventGlobal) == 0x000008, "Wrong alignment on Lib_Audio_C_AkEventGlobal");
+static_assert(sizeof(Lib_Audio_C_AkEventGlobal) == 0x000020, "Wrong size on Lib_Audio_C_AkEventGlobal");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, AkEvent) == 0x000000, "Member 'Lib_Audio_C_AkEventGlobal::AkEvent' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, __WorldContext) == 0x000008, "Member 'Lib_Audio_C_AkEventGlobal::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, ReturnValue) == 0x000010, "Member 'Lib_Audio_C_AkEventGlobal::ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_IsDedicatedServer_ReturnValue) == 0x000014, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_IsValid_ReturnValue) == 0x000015, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_AkEventGlobal, CallFunc_PostGlobalEvent_ReturnValue) == 0x000018, "Member 'Lib_Audio_C_AkEventGlobal::CallFunc_PostGlobalEvent_ReturnValue' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.Ak Object Velocity
+// 0x00F8 (0x00F8 - 0x0000)
+struct Lib_Audio_C_Ak_Object_Velocity final 
+{
+public:
+	class UAkComponent*                           Ak;                                                // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	double                                        VectorLengthMax;                                   // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Delta_Time;                                        // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Get_Previous_Location;                             // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         InterpTimeMs;                                      // 0x0030(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4493[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UObject*                                __WorldContext;                                    // 0x0038(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                Set_Previous_Location;                             // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VectorLength;                                      // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VectorLengthClamped;                               // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        LengthClamped;                                     // 0x0068(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        Length;                                            // 0x0070(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   Object_velocity;                                   // 0x0078(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        VectorMax;                                         // 0x0080(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsDedicatedServer_ReturnValue;            // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4494[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue;      // 0x0090(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_K2_GetComponentLocation_ReturnValue_1;    // 0x00A8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                CallFunc_Subtract_VectorVector_ReturnValue;        // 0x00C0(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_VSize_ReturnValue;                        // 0x00D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_MapRangeClamped_ReturnValue;              // 0x00E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x00E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetRTPCValue_Value_ImplicitCast;          // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_Ak_Object_Velocity) == 0x000008, "Wrong alignment on Lib_Audio_C_Ak_Object_Velocity");
+static_assert(sizeof(Lib_Audio_C_Ak_Object_Velocity) == 0x0000F8, "Wrong size on Lib_Audio_C_Ak_Object_Velocity");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Ak) == 0x000000, "Member 'Lib_Audio_C_Ak_Object_Velocity::Ak' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLengthMax) == 0x000008, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLengthMax' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Delta_Time) == 0x000010, "Member 'Lib_Audio_C_Ak_Object_Velocity::Delta_Time' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Get_Previous_Location) == 0x000018, "Member 'Lib_Audio_C_Ak_Object_Velocity::Get_Previous_Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, InterpTimeMs) == 0x000030, "Member 'Lib_Audio_C_Ak_Object_Velocity::InterpTimeMs' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, __WorldContext) == 0x000038, "Member 'Lib_Audio_C_Ak_Object_Velocity::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Set_Previous_Location) == 0x000040, "Member 'Lib_Audio_C_Ak_Object_Velocity::Set_Previous_Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLength) == 0x000058, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLength' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorLengthClamped) == 0x000060, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorLengthClamped' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, LengthClamped) == 0x000068, "Member 'Lib_Audio_C_Ak_Object_Velocity::LengthClamped' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Length) == 0x000070, "Member 'Lib_Audio_C_Ak_Object_Velocity::Length' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, Object_velocity) == 0x000078, "Member 'Lib_Audio_C_Ak_Object_Velocity::Object_velocity' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, VectorMax) == 0x000080, "Member 'Lib_Audio_C_Ak_Object_Velocity::VectorMax' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_IsDedicatedServer_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_IsValid_ReturnValue) == 0x000089, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_K2_GetComponentLocation_ReturnValue) == 0x000090, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_K2_GetComponentLocation_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_K2_GetComponentLocation_ReturnValue_1) == 0x0000A8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_K2_GetComponentLocation_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_Subtract_VectorVector_ReturnValue) == 0x0000C0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_Subtract_VectorVector_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_VSize_ReturnValue) == 0x0000D8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_VSize_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_MapRangeClamped_ReturnValue) == 0x0000E0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_MapRangeClamped_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x0000E8, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_Ak_Object_Velocity, CallFunc_SetRTPCValue_Value_ImplicitCast) == 0x0000F0, "Member 'Lib_Audio_C_Ak_Object_Velocity::CallFunc_SetRTPCValue_Value_ImplicitCast' has a wrong offset!");
+
+// Function Lib_Audio.Lib_Audio_C.IsInside
+// 0x00A0 (0x00A0 - 0x0000)
+struct Lib_Audio_C_IsInside final 
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          Param_IsInside;                                    // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Inside;                                            // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4495[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UAkRoomComponent*                       CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	TArray<class UAkRoomComponent*>               CallFunc_GetAkAudioRoomAtLocation_AllRooms;        // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4496[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class AAkSpatialAudioVolume*                  K2Node_DynamicCast_AsAk_Spatial_Audio_Volume;      // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4497[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UComp_CV_Local_RTPC_C*>          CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0060(0x0010)(ReferenceParm, ContainsInstancedReference)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4498[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_4499[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UComp_CV_Local_RTPC_C*                  CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449A[0x1];                                     // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_449B[0x3];                                     // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(Lib_Audio_C_IsInside) == 0x000008, "Wrong alignment on Lib_Audio_C_IsInside");
+static_assert(sizeof(Lib_Audio_C_IsInside) == 0x0000A0, "Wrong size on Lib_Audio_C_IsInside");
+static_assert(offsetof(Lib_Audio_C_IsInside, Location) == 0x000000, "Member 'Lib_Audio_C_IsInside::Location' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_IsInside::__WorldContext' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, Param_IsInside) == 0x000020, "Member 'Lib_Audio_C_IsInside::Param_IsInside' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, Inside) == 0x000021, "Member 'Lib_Audio_C_IsInside::Inside' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, Temp_bool_True_if_break_was_hit_Variable) == 0x000022, "Member 'Lib_Audio_C_IsInside::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom) == 0x000028, "Member 'Lib_Audio_C_IsInside::CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetAkAudioRoomAtLocation_AllRooms) == 0x000030, "Member 'Lib_Audio_C_IsInside::CallFunc_GetAkAudioRoomAtLocation_AllRooms' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_IsInside::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_IsInside::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, K2Node_DynamicCast_AsAk_Spatial_Audio_Volume) == 0x000050, "Member 'Lib_Audio_C_IsInside::K2Node_DynamicCast_AsAk_Spatial_Audio_Volume' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'Lib_Audio_C_IsInside::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_IsInside::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'Lib_Audio_C_IsInside::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'Lib_Audio_C_IsInside::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Not_PreBool_ReturnValue) == 0x000078, "Member 'Lib_Audio_C_IsInside::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, Temp_int_Array_Index_Variable) == 0x00007C, "Member 'Lib_Audio_C_IsInside::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Array_Get_Item) == 0x000080, "Member 'Lib_Audio_C_IsInside::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_IsInside::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000089, "Member 'Lib_Audio_C_IsInside::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_BooleanAND_ReturnValue) == 0x00008A, "Member 'Lib_Audio_C_IsInside::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, Temp_int_Loop_Counter_Variable) == 0x00008C, "Member 'Lib_Audio_C_IsInside::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'Lib_Audio_C_IsInside::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Add_IntInt_ReturnValue) == 0x000094, "Member 'Lib_Audio_C_IsInside::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_BooleanAND_ReturnValue_1) == 0x000098, "Member 'Lib_Audio_C_IsInside::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 // Function Lib_Audio.Lib_Audio_C.GetDopplerPitchMultiplier
 // 0x0128 (0x0128 - 0x0000)
@@ -1075,70 +1139,6 @@ static_assert(offsetof(Lib_Audio_C_GetDopplerPitchMultiplier, CallFunc_Subtract_
 static_assert(offsetof(Lib_Audio_C_GetDopplerPitchMultiplier, CallFunc_Normal_ReturnValue) == 0x000100, "Member 'Lib_Audio_C_GetDopplerPitchMultiplier::CallFunc_Normal_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_GetDopplerPitchMultiplier, CallFunc_Dot_VectorVector_ReturnValue) == 0x000118, "Member 'Lib_Audio_C_GetDopplerPitchMultiplier::CallFunc_Dot_VectorVector_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Lib_Audio_C_GetDopplerPitchMultiplier, CallFunc_Dot_VectorVector_ReturnValue_1) == 0x000120, "Member 'Lib_Audio_C_GetDopplerPitchMultiplier::CallFunc_Dot_VectorVector_ReturnValue_1' has a wrong offset!");
-
-// Function Lib_Audio.Lib_Audio_C.IsInside
-// 0x00A0 (0x00A0 - 0x0000)
-struct Lib_Audio_C_IsInside final 
-{
-public:
-	struct FVector                                Location;                                          // 0x0000(0x0018)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UObject*                                __WorldContext;                                    // 0x0018(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          Param_IsInside;                                    // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Inside;                                            // 0x0021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x0022(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281C[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UAkRoomComponent*                       CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom; // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	TArray<class UAkRoomComponent*>               CallFunc_GetAkAudioRoomAtLocation_AllRooms;        // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281D[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0048(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class AAkSpatialAudioVolume*                  K2Node_DynamicCast_AsAk_Spatial_Audio_Volume;      // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281E[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UComp_CV_Local_RTPC_C*>          CallFunc_K2_GetComponentsByClass_ReturnValue;      // 0x0060(0x0010)(ReferenceParm, ContainsInstancedReference)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_281F[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0074(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2820[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UComp_CV_Local_RTPC_C*                  CallFunc_Array_Get_Item;                           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_DoubleDouble_ReturnValue;      // 0x0088(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0089(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x008A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2821[0x1];                                     // 0x008B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x008C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0090(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2822[0x3];                                     // 0x0091(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x0098(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Lib_Audio_C_IsInside) == 0x000008, "Wrong alignment on Lib_Audio_C_IsInside");
-static_assert(sizeof(Lib_Audio_C_IsInside) == 0x0000A0, "Wrong size on Lib_Audio_C_IsInside");
-static_assert(offsetof(Lib_Audio_C_IsInside, Location) == 0x000000, "Member 'Lib_Audio_C_IsInside::Location' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, __WorldContext) == 0x000018, "Member 'Lib_Audio_C_IsInside::__WorldContext' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, Param_IsInside) == 0x000020, "Member 'Lib_Audio_C_IsInside::Param_IsInside' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, Inside) == 0x000021, "Member 'Lib_Audio_C_IsInside::Inside' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, Temp_bool_True_if_break_was_hit_Variable) == 0x000022, "Member 'Lib_Audio_C_IsInside::Temp_bool_True_if_break_was_hit_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom) == 0x000028, "Member 'Lib_Audio_C_IsInside::CallFunc_GetAkAudioRoomAtLocation_HighestPriorityRoom' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetAkAudioRoomAtLocation_AllRooms) == 0x000030, "Member 'Lib_Audio_C_IsInside::CallFunc_GetAkAudioRoomAtLocation_AllRooms' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_IsValid_ReturnValue) == 0x000040, "Member 'Lib_Audio_C_IsInside::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_GetOwner_ReturnValue) == 0x000048, "Member 'Lib_Audio_C_IsInside::CallFunc_GetOwner_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, K2Node_DynamicCast_AsAk_Spatial_Audio_Volume) == 0x000050, "Member 'Lib_Audio_C_IsInside::K2Node_DynamicCast_AsAk_Spatial_Audio_Volume' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, K2Node_DynamicCast_bSuccess) == 0x000058, "Member 'Lib_Audio_C_IsInside::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_K2_GetComponentsByClass_ReturnValue) == 0x000060, "Member 'Lib_Audio_C_IsInside::CallFunc_K2_GetComponentsByClass_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_IsValid_ReturnValue_1) == 0x000070, "Member 'Lib_Audio_C_IsInside::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Array_Length_ReturnValue) == 0x000074, "Member 'Lib_Audio_C_IsInside::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Not_PreBool_ReturnValue) == 0x000078, "Member 'Lib_Audio_C_IsInside::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, Temp_int_Array_Index_Variable) == 0x00007C, "Member 'Lib_Audio_C_IsInside::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Array_Get_Item) == 0x000080, "Member 'Lib_Audio_C_IsInside::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_EqualEqual_DoubleDouble_ReturnValue) == 0x000088, "Member 'Lib_Audio_C_IsInside::CallFunc_EqualEqual_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_EqualEqual_ObjectObject_ReturnValue) == 0x000089, "Member 'Lib_Audio_C_IsInside::CallFunc_EqualEqual_ObjectObject_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_BooleanAND_ReturnValue) == 0x00008A, "Member 'Lib_Audio_C_IsInside::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, Temp_int_Loop_Counter_Variable) == 0x00008C, "Member 'Lib_Audio_C_IsInside::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Less_IntInt_ReturnValue) == 0x000090, "Member 'Lib_Audio_C_IsInside::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_Add_IntInt_ReturnValue) == 0x000094, "Member 'Lib_Audio_C_IsInside::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(Lib_Audio_C_IsInside, CallFunc_BooleanAND_ReturnValue_1) == 0x000098, "Member 'Lib_Audio_C_IsInside::CallFunc_BooleanAND_ReturnValue_1' has a wrong offset!");
 
 }
 

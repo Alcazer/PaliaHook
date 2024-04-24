@@ -10,448 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "GeometryScriptingCore_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "GeometryScriptingCore_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.CombineMeshSelections
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections final 
-{
-public:
-	struct FGeometryScriptMeshSelection           SelectionA;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           SelectionB;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           ResultSelection;                                   // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EGeometryScriptCombineSelectionMode           CombineMode;                                       // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B00[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, SelectionA) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::SelectionA' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, SelectionB) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::SelectionB' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, ResultSelection) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::ResultSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, CombineMode) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::CombineMode' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexArrayToMeshSelection
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<int32>                                 IndexArray;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B01[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, IndexArray) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::IndexArray' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, SelectionType) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexListToMeshSelection
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptIndexList               IndexList;                                         // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B02[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0028(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, IndexList) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::IndexList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, SelectionType) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, Selection) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexSetToMeshSelection
-// 0x0078 (0x0078 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSet<int32>                                   IndexSet;                                          // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B03[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0060(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection) == 0x000078, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, IndexSet) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::IndexSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, SelectionType) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, Selection) == 0x000060, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelection
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           FromSelection;                                     // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           ToSelection;                                       // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              NewType;                                           // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAllowPartialInclusion;                            // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B04[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, FromSelection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::FromSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, ToSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::ToSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, NewType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::NewType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, bAllowPartialInclusion) == 0x000029, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::bAllowPartialInclusion' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelectionToIndexArray
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	TArray<int32>                                 IndexArray;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B05[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, IndexArray) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::IndexArray' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, SelectionType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelectionToIndexList
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptIndexList               IndexList;                                         // 0x0018(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EGeometryScriptIndexType                      ResultListType;                                    // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptIndexType                      ConvertToType;                                     // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B06[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, IndexList) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::IndexList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ResultListType) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ResultListType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ConvertToType) == 0x000031, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ConvertToType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.CreateSelectAllMeshSelection
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B07[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, SelectionType) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.DebugPrintMeshSelection
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection final 
-{
-public:
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	bool                                          bDisable;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B08[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection, Selection) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection, bDisable) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection::bDisable' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ExpandContractMeshSelection
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	int32                                         Iterations;                                        // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bContract;                                         // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyExpandToFaceNeighbours;                       // 0x002D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B09[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::NewSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, Iterations) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::Iterations' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, bContract) == 0x00002C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::bContract' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, bOnlyExpandToFaceNeighbours) == 0x00002D, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::bOnlyExpandToFaceNeighbours' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ExpandMeshSelectionToConnected
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	EGeometryScriptTopologyConnectionType         ConnectionType;                                    // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::NewSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, ConnectionType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::ConnectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.GetMeshSelectionInfo
-// 0x0018 (0x0018 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo final 
-{
-public:
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0B[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumSelected;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, Selection) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, SelectionType) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, NumSelected) == 0x000014, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::NumSelected' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.InvertMeshSelection
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          bOnlyToConnected;                                  // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0C[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::NewSelection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, bOnlyToConnected) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::bOnlyToConnected' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsByNormalAngle
-// 0x0048 (0x0048 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVector                                Normal;                                            // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        MaxAngleDeg;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0D[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinNumTrianglePoints;                              // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, Normal) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::Normal' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, MaxAngleDeg) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::MaxAngleDeg' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, SelectionType) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, bInvert) == 0x000039, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::bInvert' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, MinNumTrianglePoints) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::MinNumTrianglePoints' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInBox
-// 0x0060 (0x0060 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FBox                                   Box;                                               // 0x0018(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0051(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0E[0x2];                                     // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinNumTrianglePoints;                              // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox) == 0x000060, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, Box) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::Box' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, SelectionType) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, bInvert) == 0x000051, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::bInvert' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, MinNumTrianglePoints) == 0x000054, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::MinNumTrianglePoints' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInsideMesh
-// 0x00B0 (0x00B0 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           SelectionMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FTransform                             SelectionMeshTransform;                            // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B0F[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        ShellDistance;                                     // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        WindingThreshold;                                  // 0x0090(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         MinNumTrianglePoints;                              // 0x0098(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B10[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B11[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh) == 0x0000B0, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionMesh) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, Selection) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionMeshTransform) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionMeshTransform' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionType) == 0x000080, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, bInvert) == 0x000081, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::bInvert' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, ShellDistance) == 0x000088, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::ShellDistance' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, WindingThreshold) == 0x000090, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::WindingThreshold' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, MinNumTrianglePoints) == 0x000098, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::MinNumTrianglePoints' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInSphere
-// 0x0048 (0x0048 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVector                                SphereOrigin;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        SphereRadius;                                      // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B12[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinNumTrianglePoints;                              // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SphereOrigin) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SphereOrigin' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SphereRadius) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SphereRadius' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SelectionType) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, bInvert) == 0x000039, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::bInvert' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, MinNumTrianglePoints) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::MinNumTrianglePoints' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsWithPlane
-// 0x0058 (0x0058 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	struct FVector                                PlaneOrigin;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                PlaneNormal;                                       // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvert;                                           // 0x0049(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B13[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         MinNumTrianglePoints;                              // 0x004C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane) == 0x000058, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, PlaneOrigin) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::PlaneOrigin' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, PlaneNormal) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::PlaneNormal' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, SelectionType) == 0x000048, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::SelectionType' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, bInvert) == 0x000049, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::bInvert' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, MinNumTrianglePoints) == 0x00004C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::MinNumTrianglePoints' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions.GetMeshSelectionBoundaryLoops
-// 0x0050 (0x0050 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	TArray<struct FGeometryScriptIndexList>       IndexLoops;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FGeometryScriptPolyPath>        PathLoops;                                         // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-	int32                                         NumLoops;                                          // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFoundErrors;                                      // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B14[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, IndexLoops) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::IndexLoops' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, PathLoops) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::PathLoops' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, NumLoops) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::NumLoops' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, bFoundErrors) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::bFoundErrors' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions.GetMeshSelectionBoundingBox
-// 0x0068 (0x0068 - 0x0000)
-struct GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	struct FBox                                   SelectionBounds;                                   // 0x0018(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsEmpty;                                          // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B15[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0058(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox");
-static_assert(sizeof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox) == 0x000068, "Wrong size on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, SelectionBounds) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::SelectionBounds' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, bIsEmpty) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::bIsEmpty' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, Debug) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, ReturnValue) == 0x000060, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_CollisionFunctions.ResetDynamicMeshCollision
 // 0x0018 (0x0018 - 0x0000)
@@ -460,7 +24,7 @@ struct GeometryScriptLibrary_CollisionFunctions_ResetDynamicMeshCollision final
 public:
 	class UDynamicMeshComponent*                  Component;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEmitTransaction;                                  // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B16[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3037[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_CollisionFunctions_ResetDynamicMeshCollision) == 0x000008, "Wrong alignment on GeometryScriptLibrary_CollisionFunctions_ResetDynamicMeshCollision");
@@ -496,7 +60,7 @@ public:
 	class UStaticMesh*                            StaticMeshAsset;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UPrimitiveComponent*                    SourceComponent;                                   // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSetSimpleCollisionOptions Options;                                           // 0x0010(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B17[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3038[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_CollisionFunctions_SetStaticMeshCollisionFromComponent) == 0x000008, "Wrong alignment on GeometryScriptLibrary_CollisionFunctions_SetStaticMeshCollisionFromComponent");
@@ -556,7 +120,7 @@ public:
 	class UDynamicMesh*                           CopyToMeshOut;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0018(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptConvexHullOptions       Options;                                           // 0x0028(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B18[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3039[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -578,12 +142,12 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           CopyToMesh;                                        // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           CopyToMeshOut;                                     // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B19[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303A[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ProjectionFrame;                                   // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSweptHullOptions        Options;                                           // 0x0080(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0098(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1A[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303B[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ContainmentFunctions_ComputeMeshSweptHull) == 0x000010, "Wrong alignment on GeometryScriptLibrary_ContainmentFunctions_ComputeMeshSweptHull");
 static_assert(sizeof(GeometryScriptLibrary_ContainmentFunctions_ComputeMeshSweptHull) == 0x0000B0, "Wrong size on GeometryScriptLibrary_ContainmentFunctions_ComputeMeshSweptHull");
@@ -615,7 +179,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_ClearIndexList final
 public:
 	struct FGeometryScriptIndexList               IndexList;                                         // 0x0000(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ClearValue;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1B[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303C[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_ClearIndexList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_ClearIndexList");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_ClearIndexList) == 0x000020, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_ClearIndexList");
@@ -682,7 +246,7 @@ public:
 	TArray<int32>                                 IndexArray;                                        // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               IndexList;                                         // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	EGeometryScriptIndexType                      IndexType;                                         // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303D[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_ConvertArrayToIndexList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_ConvertArrayToIndexList");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_ConvertArrayToIndexList) == 0x000030, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_ConvertArrayToIndexList");
@@ -893,7 +457,7 @@ public:
 	struct FGeometryScriptColorList               ColorList;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1D[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303E[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannel) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannel");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannel) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannel");
@@ -911,7 +475,7 @@ public:
 	int32                                         XChannelIndex;                                     // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         YChannelIndex;                                     // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ZChannelIndex;                                     // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1E[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_303F[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannels) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannels");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannels) == 0x000030, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_ExtractColorListChannels");
@@ -929,7 +493,7 @@ public:
 	struct FGeometryScriptColorList               ColorList;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B1F[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3040[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetColorListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetColorListItem");
@@ -946,7 +510,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetColorListLastIndex final
 public:
 	struct FGeometryScriptColorList               ColorList;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B20[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3041[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetColorListLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetColorListLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetColorListLastIndex) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetColorListLastIndex");
@@ -960,7 +524,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetColorListLength final
 public:
 	struct FGeometryScriptColorList               ColorList;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B21[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3042[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetColorListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetColorListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetColorListLength) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetColorListLength");
@@ -975,9 +539,9 @@ public:
 	struct FGeometryScriptIndexList               IndexList;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B22[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3043[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B23[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3044[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListItem) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListItem");
@@ -993,7 +557,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLastIndex final
 public:
 	struct FGeometryScriptIndexList               IndexList;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B24[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3045[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLastIndex) == 0x000020, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLastIndex");
@@ -1007,7 +571,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLength final
 public:
 	struct FGeometryScriptIndexList               IndexList;                                         // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B25[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3046[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLength) == 0x000020, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetIndexListLength");
@@ -1022,7 +586,7 @@ public:
 	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B26[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3047[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetScalarListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetScalarListItem");
@@ -1039,7 +603,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLastIndex final
 public:
 	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B27[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3048[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLastIndex) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLastIndex");
@@ -1053,7 +617,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLength final
 public:
 	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B28[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3049[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLength) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetScalarListLength");
@@ -1068,9 +632,9 @@ public:
 	struct FGeometryScriptTriangleList            TriangleList;                                      // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Triangle;                                          // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B29[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304A[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntVector                             ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2A[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304B[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListItem) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListItem");
@@ -1086,7 +650,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLastTriangle fi
 public:
 	struct FGeometryScriptTriangleList            TriangleList;                                      // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2B[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304C[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLastTriangle) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLastTriangle");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLastTriangle) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLastTriangle");
@@ -1100,7 +664,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLength final
 public:
 	struct FGeometryScriptTriangleList            TriangleList;                                      // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2C[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304D[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLength) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetTriangleListLength");
@@ -1115,7 +679,7 @@ public:
 	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2D[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304E[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetUVListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetUVListItem");
@@ -1132,7 +696,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetUVListLastIndex final
 public:
 	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2E[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_304F[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetUVListLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetUVListLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetUVListLastIndex) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetUVListLastIndex");
@@ -1146,7 +710,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetUVListLength final
 public:
 	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B2F[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3050[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetUVListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetUVListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetUVListLength) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetUVListLength");
@@ -1161,7 +725,7 @@ public:
 	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B30[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3051[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetVectorListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetVectorListItem");
@@ -1178,7 +742,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLastIndex final
 public:
 	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B31[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3052[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLastIndex) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLastIndex");
@@ -1192,7 +756,7 @@ struct GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLength final
 public:
 	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B32[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3053[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLength");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLength) == 0x000018, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_GetVectorListLength");
@@ -1208,7 +772,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FLinearColor                           NewColor;                                          // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B33[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3054[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_SetColorListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_SetColorListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_SetColorListItem) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_SetColorListItem");
@@ -1226,7 +790,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewValue;                                          // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B34[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3055[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_SetIndexListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_SetIndexListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_SetIndexListItem) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_SetIndexListItem");
@@ -1242,10 +806,10 @@ struct GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem final
 public:
 	struct FGeometryScriptScalarList              ScalarList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B35[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3056[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        NewValue;                                          // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B36[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3057[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem) == 0x000028, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_SetScalarListItem");
@@ -1261,10 +825,10 @@ struct GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem final
 public:
 	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B37[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3058[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              NewUV;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B38[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3059[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem) == 0x000030, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_SetUVListItem");
@@ -1280,10 +844,10 @@ struct GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem final
 public:
 	struct FGeometryScriptVectorList              VectorList;                                        // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B39[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                NewValue;                                          // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3A[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305B[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem) == 0x000008, "Wrong alignment on GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem");
 static_assert(sizeof(GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem) == 0x000038, "Wrong size on GeometryScriptLibrary_ListUtilityFunctions_SetVectorListItem");
@@ -1300,10 +864,10 @@ public:
 	class USkeletalMesh*                          FromSkeletalMeshAsset;                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptCopyMeshFromAssetOptions AssetOptions;                                      // 0x0010(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3B[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305C[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshReadLOD             RequestedLOD;                                      // 0x0014(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	EGeometryScriptOutcomePins                    Outcome;                                           // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3C[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305D[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1325,10 +889,10 @@ public:
 	class UStaticMesh*                            FromStaticMeshAsset;                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptCopyMeshFromAssetOptions AssetOptions;                                      // 0x0010(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3D[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305E[0x1];                                     // 0x0013(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshReadLOD             RequestedLOD;                                      // 0x0014(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	EGeometryScriptOutcomePins                    Outcome;                                           // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3E[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_305F[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1343,52 +907,52 @@ static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshFromSta
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshFromStaticMesh, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshFromStaticMesh::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.CopyMeshToSkeletalMesh
-// 0x0088 (0x0088 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh final 
 {
 public:
 	class UDynamicMesh*                           FromDynamicMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class USkeletalMesh*                          ToSkeletalMeshAsset;                               // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x0058)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x0068(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B3F[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x0080)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x0090(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0098(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3060[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00A0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh");
-static_assert(sizeof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh) == 0x000088, "Wrong size on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh");
+static_assert(sizeof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh) == 0x0000B0, "Wrong size on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, FromDynamicMesh) == 0x000000, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::FromDynamicMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, ToSkeletalMeshAsset) == 0x000008, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::ToSkeletalMeshAsset' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, Options) == 0x000010, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, TargetLod) == 0x000068, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::TargetLod' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, Outcome) == 0x000070, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::Outcome' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, Debug) == 0x000078, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, ReturnValue) == 0x000080, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, TargetLod) == 0x000090, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::TargetLod' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, Outcome) == 0x000098, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::Outcome' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, Debug) == 0x0000A0, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh, ReturnValue) == 0x0000A8, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToSkeletalMesh::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.CopyMeshToStaticMesh
-// 0x0088 (0x0088 - 0x0000)
+// 0x00B0 (0x00B0 - 0x0000)
 struct GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh final 
 {
 public:
 	class UDynamicMesh*                           FromDynamicMesh;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UStaticMesh*                            ToStaticMeshAsset;                                 // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x0058)(Parm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x0068(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B40[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCopyMeshToAssetOptions  Options;                                           // 0x0010(0x0080)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshWriteLOD            TargetLod;                                         // 0x0090(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0098(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3061[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00A0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh");
-static_assert(sizeof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh) == 0x000088, "Wrong size on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh");
+static_assert(sizeof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh) == 0x0000B0, "Wrong size on GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, FromDynamicMesh) == 0x000000, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::FromDynamicMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, ToStaticMeshAsset) == 0x000008, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::ToStaticMeshAsset' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, Options) == 0x000010, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, TargetLod) == 0x000068, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::TargetLod' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, Outcome) == 0x000070, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::Outcome' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, Debug) == 0x000078, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, ReturnValue) == 0x000080, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, TargetLod) == 0x000090, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::TargetLod' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, Outcome) == 0x000098, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::Outcome' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, Debug) == 0x0000A0, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh, ReturnValue) == 0x0000A8, "Member 'GeometryScriptLibrary_StaticMeshFunctions_CopyMeshToStaticMesh::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_StaticMeshFunctions.GetSectionMaterialListFromStaticMesh
 // 0x0040 (0x0040 - 0x0000)
@@ -1400,7 +964,7 @@ public:
 	TArray<class UMaterialInterface*>             MaterialList;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<int32>                                 MaterialIndex;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B41[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3062[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_StaticMeshFunctions_GetSectionMaterialListFromStaticMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_StaticMeshFunctions_GetSectionMaterialListFromStaticMesh");
@@ -1413,25 +977,26 @@ static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_GetSectionMater
 static_assert(offsetof(GeometryScriptLibrary_StaticMeshFunctions_GetSectionMaterialListFromStaticMesh, Debug) == 0x000038, "Member 'GeometryScriptLibrary_StaticMeshFunctions_GetSectionMaterialListFromStaticMesh::Debug' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.BakeTexture
-// 0x0130 (0x0130 - 0x0000)
+// 0x0140 (0x0140 - 0x0000)
 struct GeometryScriptLibrary_MeshBakeFunctions_BakeTexture final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B42[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3063[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TargetTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeTargetMeshOptions   TargetOptions;                                     // 0x0070(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B43[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3064[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           SourceMesh;                                        // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             SourceTransform;                                   // 0x0080(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeSourceMeshOptions   SourceOptions;                                     // 0x00E0(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	TArray<struct FGeometryScriptBakeTypeOptions> BakeTypes;                                         // 0x00F0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	struct FGeometryScriptBakeTextureOptions      BakeOptions;                                       // 0x0100(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0118(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UTexture2D*>                     ReturnValue;                                       // 0x0120(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBakeTextureOptions      BakeOptions;                                       // 0x0100(0x0020)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0120(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UTexture2D*>                     ReturnValue;                                       // 0x0128(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3065[0x8];                                     // 0x0138(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_BakeTexture");
-static_assert(sizeof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture) == 0x000130, "Wrong size on GeometryScriptLibrary_MeshBakeFunctions_BakeTexture");
+static_assert(sizeof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture) == 0x000140, "Wrong size on GeometryScriptLibrary_MeshBakeFunctions_BakeTexture");
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::TargetMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, TargetTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::TargetTransform' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, TargetOptions) == 0x000070, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::TargetOptions' has a wrong offset!");
@@ -1440,8 +1005,34 @@ static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, Sour
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, SourceOptions) == 0x0000E0, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::SourceOptions' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, BakeTypes) == 0x0000F0, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::BakeTypes' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, BakeOptions) == 0x000100, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::BakeOptions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, Debug) == 0x000118, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, ReturnValue) == 0x000120, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::ReturnValue' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, Debug) == 0x000120, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTexture, ReturnValue) == 0x000128, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTexture::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.BakeTextureFromRenderCaptures
+// 0x0150 (0x0150 - 0x0000)
+struct GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3066[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             TargetLocalToWorld;                                // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBakeTargetMeshOptions   TargetOptions;                                     // 0x0070(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3067[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class AActor*>                         SourceActors;                                      // 0x0078(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBakeRenderCaptureOptions BakeOptions;                                       // 0x0088(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00B0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptRenderCaptureTextures   ReturnValue;                                       // 0x00B8(0x0090)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3068[0x8];                                     // 0x0148(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures");
+static_assert(sizeof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures) == 0x000150, "Wrong size on GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, TargetLocalToWorld) == 0x000010, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::TargetLocalToWorld' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, TargetOptions) == 0x000070, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::TargetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, SourceActors) == 0x000078, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::SourceActors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, BakeOptions) == 0x000088, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::BakeOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, Debug) == 0x0000B0, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures, ReturnValue) == 0x0000B8, "Member 'GeometryScriptLibrary_MeshBakeFunctions_BakeTextureFromRenderCaptures::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshBakeFunctions.BakeVertex
 // 0x0190 (0x0190 - 0x0000)
@@ -1449,16 +1040,16 @@ struct GeometryScriptLibrary_MeshBakeFunctions_BakeVertex final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B44[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3069[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TargetTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeTargetMeshOptions   TargetOptions;                                     // 0x0070(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B45[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306A[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           SourceMesh;                                        // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FTransform                             SourceTransform;                                   // 0x0080(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeSourceMeshOptions   SourceOptions;                                     // 0x00E0(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeOutputType          BakeTypes;                                         // 0x00F0(0x0080)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBakeVertexOptions       BakeOptions;                                       // 0x0170(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B46[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306B[0x4];                                     // 0x017C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0180(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0188(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1502,7 +1093,7 @@ public:
 	int32                                         OcclusionRays;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MaxDistance;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         SpreadAngle;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B47[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBakeTypeOptions         ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeBentNormal) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeBentNormal");
@@ -1519,11 +1110,11 @@ struct GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeCurvature final
 public:
 	EGeometryScriptBakeCurvatureTypeMode          CurvatureType;                                     // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeCurvatureColorMode         ColorMapping;                                      // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B48[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306D[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         ColorRangeMultiplier;                              // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MinRangeMultiplier;                                // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBakeCurvatureClampMode         Clamping;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B49[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306E[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBakeTypeOptions         ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeCurvature) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeCurvature");
@@ -1564,7 +1155,7 @@ struct GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeMultiTexture final
 public:
 	TArray<class UTexture2D*>                     MaterialIDSourceTextures;                          // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         SourceUVLayer;                                     // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_306F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBakeTypeOptions         ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeMultiTexture) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeMultiTexture");
@@ -1613,7 +1204,7 @@ struct GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeTexture final
 public:
 	class UTexture2D*                             SourceTexture;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         SourceUVLayer;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3070[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptBakeTypeOptions         ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeTexture) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBakeFunctions_MakeBakeTypeTexture");
@@ -1643,7 +1234,7 @@ public:
 	struct FGeometryScriptIndexList               NewIndicesList;                                    // 0x0018(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	int32                                         NewTriangleGroupID;                                // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0034(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4C[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3071[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1667,7 +1258,7 @@ public:
 	int32                                         NewTriangleIndex;                                  // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewTriangleGroupID;                                // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4D[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3072[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1690,7 +1281,7 @@ public:
 	struct FVector                                NewPosition;                                       // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewVertexIndex;                                    // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4E[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3073[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_AddVertexToMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_AddVertexToMesh");
@@ -1710,7 +1301,7 @@ public:
 	struct FGeometryScriptVectorList              NewPositionsList;                                  // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               NewIndicesList;                                    // 0x0018(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B4F[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3074[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_AddVerticesToMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_AddVerticesToMesh");
@@ -1731,7 +1322,7 @@ public:
 	struct FGeometryScriptIndexList               NewTriangleIndicesList;                            // 0x00D8(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	int32                                         MaterialID;                                        // 0x00F0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x00F4(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B50[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3075[0x3];                                     // 0x00F5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00F8(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0100(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1755,10 +1346,10 @@ public:
 	struct FTransform                             AppendTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptAppendMeshOptions       AppendOptions;                                     // 0x0071(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B51[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3076[0x6];                                     // 0x0072(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B52[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3077[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMesh) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMesh");
@@ -1782,10 +1373,10 @@ public:
 	bool                                          bApplyTransformToFirstInstance;                    // 0x0074(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0075(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptAppendMeshOptions       AppendOptions;                                     // 0x0076(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B53[0x1];                                     // 0x0077(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3078[0x1];                                     // 0x0077(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B54[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3079[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshRepeated) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshRepeated");
 static_assert(sizeof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshRepeated) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshRepeated");
@@ -1811,10 +1402,10 @@ public:
 	bool                                          bConstantTransformIsRelative;                      // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptAppendMeshOptions       AppendOptions;                                     // 0x0082(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B55[0x5];                                     // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307A[0x5];                                     // 0x0083(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B56[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307B[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshTransformed) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshTransformed");
 static_assert(sizeof(GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshTransformed) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshBasicEditFunctions_AppendMeshTransformed");
@@ -1837,7 +1428,7 @@ public:
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         NumDeleted;                                        // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B57[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307C[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DeleteSelectedTrianglesFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DeleteSelectedTrianglesFromMesh");
@@ -1857,7 +1448,7 @@ public:
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasTriangleDeleted;                               // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B58[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307D[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DeleteTriangleFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DeleteTriangleFromMesh");
@@ -1877,7 +1468,7 @@ public:
 	struct FGeometryScriptIndexList               TriangleList;                                      // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         NumDeleted;                                        // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B59[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307E[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DeleteTrianglesFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DeleteTrianglesFromMesh");
@@ -1897,7 +1488,7 @@ public:
 	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWasVertexDeleted;                                 // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5A[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_307F[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DeleteVertexFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DeleteVertexFromMesh");
@@ -1917,7 +1508,7 @@ public:
 	struct FGeometryScriptIndexList               VertexList;                                        // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         NumDeleted;                                        // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5B[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3080[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DeleteVerticesFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DeleteVerticesFromMesh");
@@ -1935,7 +1526,7 @@ struct GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3081[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes");
@@ -1944,6 +1535,23 @@ static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshA
 static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes, bDeferChangeNotifications) == 0x000008, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes::bDeferChangeNotifications' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_DiscardMeshAttributes::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBasicEditFunctions.SetAllMeshVertexPositions
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              PositionList;                                      // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions");
+static_assert(sizeof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions");
+static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions, PositionList) == 0x000008, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions::PositionList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetAllMeshVertexPositions::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshBasicEditFunctions.SetVertexPosition
 // 0x0038 (0x0038 - 0x0000)
 struct GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition final 
@@ -1951,11 +1559,11 @@ struct GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3082[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                NewPosition;                                       // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidVertex;                                    // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5E[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3083[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition");
@@ -1967,21 +1575,342 @@ static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPos
 static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition, bDeferChangeNotifications) == 0x000029, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition::bDeferChangeNotifications' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshBasicEditFunctions_SetVertexPosition::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.ComputeSmoothBoneWeights
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class USkeleton*                              Skeleton;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSmoothBoneWeightsOptions Options;                                           // 0x0010(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0020(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, Skeleton) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::Skeleton' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, Options) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, Profile) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_ComputeSmoothBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.CopyBonesFromMesh
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh final 
+{
+public:
+	class UDynamicMesh*                           SourceMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh, SourceMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh::SourceMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh, TargetMesh) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_CopyBonesFromMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.DiscardBonesFromMesh
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh, Debug) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_DiscardBonesFromMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetAllBonesInfo
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptBoneInfo>        BonesInfo;                                         // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo, BonesInfo) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo::BonesInfo' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetAllBonesInfo::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetBoneChildren
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecursive;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidBoneName;                                  // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3084[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGeometryScriptBoneInfo>        ChildrenInfo;                                      // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, BoneName) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::BoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, bRecursive) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::bRecursive' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, bIsValidBoneName) == 0x000011, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::bIsValidBoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, ChildrenInfo) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::ChildrenInfo' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneChildren::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetBoneIndex
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidBoneName;                                  // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3085[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         BoneIndex;                                         // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, BoneName) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::BoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, bIsValidBoneName) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::bIsValidBoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, BoneIndex) == 0x000014, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::BoneIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneIndex::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetBoneInfo
+// 0x0110 (0x0110 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidBoneName;                                  // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3086[0xF];                                     // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneInfo                BoneInfo;                                          // 0x0020(0x00E0)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0100(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0108(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo) == 0x000110, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, BoneName) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::BoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, bIsValidBoneName) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::bIsValidBoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, BoneInfo) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::BoneInfo' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, Debug) == 0x000100, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo, ReturnValue) == 0x000108, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetBoneInfo::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetLargestVertexBoneWeight
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBoneWeight              BoneWeight;                                        // 0x000C(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bHasValidBoneWeights;                              // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3087[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0018(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, BoneWeight) == 0x00000C, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::BoneWeight' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, bHasValidBoneWeights) == 0x000014, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::bHasValidBoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, Profile) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetLargestVertexBoneWeight::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetMaxBoneWeightIndex
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasBoneWeights;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3088[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MaxBoneIndex;                                      // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex, bHasBoneWeights) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex::bHasBoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex, MaxBoneIndex) == 0x00000C, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex::MaxBoneIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex, Profile) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetMaxBoneWeightIndex::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetRootBoneName
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   BoneName;                                          // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName, BoneName) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName::BoneName' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetRootBoneName::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.GetVertexBoneWeights
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3089[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGeometryScriptBoneWeight>      BoneWeights;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHasValidBoneWeights;                              // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308A[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0024(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308B[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, BoneWeights) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::BoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, bHasValidBoneWeights) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::bHasValidBoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, Profile) == 0x000024, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_GetVertexBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.MeshCreateBoneWeights
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bProfileExisted;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bReplaceExistingProfile;                           // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308C[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x000C(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights, bProfileExisted) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights::bProfileExisted' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights, bReplaceExistingProfile) == 0x000009, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights::bReplaceExistingProfile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights, Profile) == 0x00000C, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshCreateBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.MeshHasBoneWeights
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasBoneWeights;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308E[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x000C(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_308F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights, bHasBoneWeights) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights::bHasBoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights, Profile) == 0x00000C, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_MeshHasBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.SetAllVertexBoneWeights
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptBoneWeight>      BoneWeights;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0018(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights, BoneWeights) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights::BoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights, Profile) == 0x000018, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetAllVertexBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.SetVertexBoneWeights
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3090[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FGeometryScriptBoneWeight>      BoneWeights;                                       // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidVertexID;                                  // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3091[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptBoneWeightProfile       Profile;                                           // 0x0024(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3092[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, BoneWeights) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::BoneWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, bIsValidVertexID) == 0x000020, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::bIsValidVertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, Profile) == 0x000024, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::Profile' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_SetVertexBoneWeights::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshBoneWeightFunctions.TransferBoneWeightsFromMesh
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh final 
+{
+public:
+	class UDynamicMesh*                           SourceMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptTransferBoneWeightsOptions Options;                                           // 0x0010(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh");
+static_assert(sizeof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh) == 0x000060, "Wrong size on GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh, SourceMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh::SourceMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh, TargetMesh) == 0x000008, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh, Options) == 0x000010, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh, Debug) == 0x000050, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_MeshBoneWeightFunctions_TransferBoneWeightsFromMesh::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshBooleanFunctions.ApplyMeshBoolean
 // 0x0100 (0x0100 - 0x0000)
 struct GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshBoolean final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B5F[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3093[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TargetTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ToolMesh;                                          // 0x0070(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B60[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3094[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ToolTransform;                                     // 0x0080(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptBooleanOperation               Operation;                                         // 0x00E0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B61[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3095[0x3];                                     // 0x00E1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshBooleanOptions      Options;                                           // 0x00E4(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B62[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3096[0x4];                                     // 0x00EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00F0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00F8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2002,13 +1931,13 @@ struct GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshMirror final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B63[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3097[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             MirrorFrame;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshMirrorOptions       Options;                                           // 0x0070(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B64[0x5];                                     // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3098[0x5];                                     // 0x0073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B65[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3099[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshMirror) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshMirror");
 static_assert(sizeof(GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshMirror) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshMirror");
@@ -2024,12 +1953,12 @@ struct GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneCut final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B66[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309A[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CutFrame;                                          // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshPlaneCutOptions     Options;                                           // 0x0070(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B67[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309B[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneCut) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneCut");
 static_assert(sizeof(GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneCut) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneCut");
@@ -2045,10 +1974,10 @@ struct GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshPlaneSlice final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B68[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309C[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             CutFrame;                                          // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshPlaneSliceOptions   Options;                                           // 0x0070(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B69[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309D[0x4];                                     // 0x007C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2067,7 +1996,7 @@ struct GeometryScriptLibrary_MeshBooleanFunctions_ApplyMeshSelfUnion final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelfUnionOptions    Options;                                           // 0x0008(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2084,16 +2013,16 @@ struct GeometryScriptLibrary_MeshComparisonFunctions_IsIntersectingMesh final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6B[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_309F[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TargetTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           OtherMesh;                                         // 0x0070(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6C[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A0[0x8];                                     // 0x0078(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OtherTransform;                                    // 0x0080(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsIntersecting;                                   // 0x00E0(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6D[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A1[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00E8(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00F0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6E[0x8];                                     // 0x00F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A2[0x8];                                     // 0x00F8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshComparisonFunctions_IsIntersectingMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshComparisonFunctions_IsIntersectingMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshComparisonFunctions_IsIntersectingMesh) == 0x000100, "Wrong size on GeometryScriptLibrary_MeshComparisonFunctions_IsIntersectingMesh");
@@ -2114,7 +2043,7 @@ public:
 	class UDynamicMesh*                           OtherMesh;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIsSameMeshOptions       Options;                                           // 0x0010(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bIsSameMesh;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B6F[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A3[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2135,7 +2064,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           OtherMesh;                                         // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeasureMeshDistanceOptions Options;                                           // 0x0010(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B70[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A4[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        MaxDistance;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        MinDistance;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        AverageDistance;                                   // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2166,7 +2095,7 @@ public:
 	class UDynamicMesh*                           StoreToSubmeshOut;                                 // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAppendToExisting;                                 // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPreserveGroupIDs;                                 // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B71[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A5[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2291,13 +2220,13 @@ struct GeometryScriptLibrary_MeshDeformFunctions_ApplyBendWarpToMesh final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptBendWarpOptions         Options;                                           // 0x0008(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B72[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A6[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             BendOrientation;                                   // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BendAngle;                                         // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BendExtent;                                        // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B73[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A7[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshDeformFunctions_ApplyBendWarpToMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshDeformFunctions_ApplyBendWarpToMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshDeformFunctions_ApplyBendWarpToMesh) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshDeformFunctions_ApplyBendWarpToMesh");
@@ -2318,7 +2247,7 @@ public:
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptVectorList              VectorList;                                        // 0x0018(0x0010)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         Magnitude;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B74[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A8[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2341,7 +2270,7 @@ public:
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptDisplaceFromTextureOptions Options;                                           // 0x0020(0x0038)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         UVLayer;                                           // 0x0058(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B75[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30A9[0x4];                                     // 0x005C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0060(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2362,12 +2291,12 @@ struct GeometryScriptLibrary_MeshDeformFunctions_ApplyFlareWarpToMesh final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptFlareWarpOptions        Options;                                           // 0x0008(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B76[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AA[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             FlareOrientation;                                  // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FlarePercentX;                                     // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FlarePercentY;                                     // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FlareExtent;                                       // 0x0088(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B77[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AB[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2390,7 +2319,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIterativeMeshSmoothingOptions Options;                                           // 0x0018(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B78[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AC[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2408,10 +2337,10 @@ struct GeometryScriptLibrary_MeshDeformFunctions_ApplyMathWarpToMesh final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B79[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AD[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             WarpOrientation;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptMathWarpType                   WarpType;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7A[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AE[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMathWarpOptions         Options;                                           // 0x0074(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2451,13 +2380,13 @@ struct GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptTwistWarpOptions        Options;                                           // 0x0008(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7B[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30AF[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             TwistOrientation;                                  // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TwistAngle;                                        // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TwistExtent;                                       // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7C[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30B0[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh");
@@ -2469,6 +2398,90 @@ static_assert(offsetof(GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpT
 static_assert(offsetof(GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshDeformFunctions_ApplyTwistWarpToMesh::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions.CreateSurfacePath
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StartTriangleID;                                   // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B1[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StartBaryCoords;                                   // 0x0028(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         MaxPathLength;                                     // 0x0040(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B2[0x4];                                     // 0x0044(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptPolyPath                SurfacePath;                                       // 0x0048(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bFoundErrors;                                      // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B3[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0068(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath");
+static_assert(sizeof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath) == 0x000078, "Wrong size on GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, Direction) == 0x000008, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::Direction' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, StartTriangleID) == 0x000020, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::StartTriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, StartBaryCoords) == 0x000028, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::StartBaryCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, MaxPathLength) == 0x000040, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::MaxPathLength' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, SurfacePath) == 0x000048, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::SurfacePath' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, bFoundErrors) == 0x000060, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::bFoundErrors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, Debug) == 0x000068, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_CreateSurfacePath::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions.GetShortestSurfacePath
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StartTriangleID;                                   // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B4[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                StartBaryCoords;                                   // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EndTriangleID;                                     // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B5[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                EndBaryCoords;                                     // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolyPath                ShortestPath;                                      // 0x0048(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bFoundErrors;                                      // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B6[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0068(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath");
+static_assert(sizeof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath) == 0x000078, "Wrong size on GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, StartTriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::StartTriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, StartBaryCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::StartBaryCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, EndTriangleID) == 0x000028, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::EndTriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, EndBaryCoords) == 0x000030, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::EndBaryCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, ShortestPath) == 0x000048, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::ShortestPath' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, bFoundErrors) == 0x000060, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::bFoundErrors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, Debug) == 0x000068, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestSurfacePath::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshGeodesicFunctions.GetShortestVertexPath
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StartVertexID;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         EndVertexID;                                       // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               VertexIDList;                                      // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bFoundErrors;                                      // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30B7[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath");
+static_assert(sizeof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, StartVertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::StartVertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, EndVertexID) == 0x00000C, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::EndVertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, VertexIDList) == 0x000010, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::VertexIDList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, bFoundErrors) == 0x000028, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::bFoundErrors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshGeodesicFunctions_GetShortestVertexPath::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshMaterialFunctions.ClearMaterialIDs
 // 0x0020 (0x0020 - 0x0000)
 struct GeometryScriptLibrary_MeshMaterialFunctions_ClearMaterialIDs final 
@@ -2476,7 +2489,7 @@ struct GeometryScriptLibrary_MeshMaterialFunctions_ClearMaterialIDs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ClearValue;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30B8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2515,7 +2528,7 @@ public:
 	int32                                         MaterialID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumDeleted;                                        // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30B9[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2551,7 +2564,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               MaterialIDList;                                    // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bHasMaterialIDs;                                   // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B7F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BA[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshMaterialFunctions_GetAllTriangleMaterialIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshMaterialFunctions_GetAllTriangleMaterialIDs");
@@ -2587,7 +2600,7 @@ struct GeometryScriptLibrary_MeshMaterialFunctions_GetMaxMaterialID final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasMaterialIDs;                                   // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B80[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BB[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshMaterialFunctions_GetMaxMaterialID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshMaterialFunctions_GetMaxMaterialID");
@@ -2604,9 +2617,9 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B81[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BC[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B82[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BD[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshMaterialFunctions_GetTriangleMaterialID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshMaterialFunctions_GetTriangleMaterialID");
 static_assert(sizeof(GeometryScriptLibrary_MeshMaterialFunctions_GetTriangleMaterialID) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshMaterialFunctions_GetTriangleMaterialID");
@@ -2622,7 +2635,7 @@ struct GeometryScriptLibrary_MeshMaterialFunctions_GetTrianglesByMaterialID fina
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaterialID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B83[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BE[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptIndexList               TriangleIDList;                                    // 0x0010(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2662,7 +2675,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               TriangleMaterialIDList;                            // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B84[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30BF[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2683,7 +2696,7 @@ public:
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	int32                                         MaterialID;                                        // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B85[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C0[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2705,7 +2718,7 @@ public:
 	struct FGeometryScriptIndexList               TriangleIDList;                                    // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         MaterialID;                                        // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B86[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C1[0x3];                                     // 0x0025(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2729,7 +2742,7 @@ public:
 	int32                                         MaterialID;                                        // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidPolygroupID;                               // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B87[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C2[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2754,7 +2767,7 @@ public:
 	int32                                         MaterialID;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B88[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C3[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshMaterialFunctions_SetTriangleMaterialID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshMaterialFunctions_SetTriangleMaterialID");
@@ -2774,7 +2787,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	EGeometryScriptMeshBevelSelectionMode         BevelMode;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B89[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C4[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshBevelSelectionOptions BevelOptions;                                      // 0x001C(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2796,7 +2809,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bAllowBowtiesInOutput;                             // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C5[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -2926,7 +2939,7 @@ struct GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshPolygroupBevel final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8B[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C6[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptMeshBevelOptions        Options;                                           // 0x0010(0x00C0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00D0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00D8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -2955,6 +2968,41 @@ static_assert(offsetof(GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshShel
 static_assert(offsetof(GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshShell, Debug) == 0x000020, "Member 'GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshShell::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshShell, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_MeshModelingFunctions_ApplyMeshShell::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions.ApplyMeshMorphology
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMorphologyOptions       Options;                                           // 0x0008(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30C7[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology");
+static_assert(sizeof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions.ApplyMeshSolidify
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSolidifyOptions         Options;                                           // 0x0008(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify");
+static_assert(sizeof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.AutoRepairNormals
 // 0x0018 (0x0018 - 0x0000)
 struct GeometryScriptLibrary_MeshNormalsFunctions_AutoRepairNormals final 
@@ -2978,7 +3026,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSplitNormalsOptions     SplitOptions;                                      // 0x0008(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	struct FGeometryScriptCalculateNormalsOptions CalculateOptions;                                  // 0x001C(0x0002)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8C[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30C8[0x2];                                     // 0x001E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3007,6 +3055,21 @@ static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_ComputeTangent
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_ComputeTangents, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_ComputeTangents::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_ComputeTangents, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_ComputeTangents::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.DiscardTangents
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents, Debug) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_DiscardTangents::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.FlipNormals
 // 0x0018 (0x0018 - 0x0000)
 struct GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals final 
@@ -3022,6 +3085,24 @@ static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals, T
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals, Debug) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_FlipNormals::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.GetMeshHasTangents
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasTangents;                                      // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30C9[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents, bHasTangents) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents::bHasTangents' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshHasTangents::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.GetMeshPerVertexNormals
 // 0x0028 (0x0028 - 0x0000)
 struct GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals final 
@@ -3032,7 +3113,7 @@ public:
 	bool                                          bIsValidNormalSet;                                 // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasVertexIDGaps;                                  // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAverageSplitVertexValues;                         // 0x001A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8D[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30CA[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals");
@@ -3044,6 +3125,30 @@ static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVert
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals, bAverageSplitVertexValues) == 0x00001A, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals::bAverageSplitVertexValues' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexNormals::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.GetMeshPerVertexTangents
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              TangentXList;                                      // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              TangentYList;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidTangentSet;                                // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasVertexIDGaps;                                  // 0x0029(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAverageSplitVertexValues;                         // 0x002A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30CB[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, TangentXList) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::TangentXList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, TangentYList) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::TangentYList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, bIsValidTangentSet) == 0x000028, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::bIsValidTangentSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, bHasVertexIDGaps) == 0x000029, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::bHasVertexIDGaps' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, bAverageSplitVertexValues) == 0x00002A, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::bAverageSplitVertexValues' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_GetMeshPerVertexTangents::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.RecomputeNormals
 // 0x0020 (0x0020 - 0x0000)
 struct GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals final 
@@ -3051,7 +3156,8 @@ struct GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptCalculateNormalsOptions CalculateOptions;                                  // 0x0008(0x0002)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8E[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	bool                                          bDeferChangeNotifications;                         // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30CC[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3059,8 +3165,67 @@ static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormal
 static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals::TargetMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals, CalculateOptions) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals::CalculateOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals, bDeferChangeNotifications) == 0x00000A, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals::bDeferChangeNotifications' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormals::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.RecomputeNormalsForMeshSelection
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptCalculateNormalsOptions CalculateOptions;                                  // 0x0018(0x0002)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bDeferChangeNotifications;                         // 0x001A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30CD[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection) == 0x000030, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, CalculateOptions) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::CalculateOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, bDeferChangeNotifications) == 0x00001A, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::bDeferChangeNotifications' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, Debug) == 0x000020, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_RecomputeNormalsForMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.SetMeshPerVertexNormals
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              VertexNormalList;                                  // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals, VertexNormalList) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals::VertexNormalList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexNormals::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.SetMeshPerVertexTangents
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              TangentXList;                                      // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptVectorList              TangentYList;                                      // 0x0018(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents, TangentXList) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents::TangentXList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents, TangentYList) == 0x000018, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents::TangentYList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetMeshPerVertexTangents::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.SetMeshTriangleNormals
 // 0x0068 (0x0068 - 0x0000)
@@ -3069,11 +3234,11 @@ struct GeometryScriptLibrary_MeshNormalsFunctions_SetMeshTriangleNormals final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B8F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30CE[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptTriangle                Normals;                                           // 0x0010(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0059(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B90[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30CF[0x6];                                     // 0x005A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_SetMeshTriangleNormals) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_SetMeshTriangleNormals");
@@ -3115,6 +3280,40 @@ static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetPerVertexNo
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetPerVertexNormals, Debug) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetPerVertexNormals::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_SetPerVertexNormals, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_SetPerVertexNormals::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshNormalsFunctions.UpdateVertexNormal
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateNormal;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30D0[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                NewNormal;                                         // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUpdateTangents;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30D1[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                NewTangentX;                                       // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                NewTangentY;                                       // 0x0048(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidVertex;                                    // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMergeSplitValues;                                 // 0x0061(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeferChangeNotifications;                         // 0x0062(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30D2[0x5];                                     // 0x0063(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal");
+static_assert(sizeof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal) == 0x000070, "Wrong size on GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, bUpdateNormal) == 0x00000C, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::bUpdateNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, NewNormal) == 0x000010, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::NewNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, bUpdateTangents) == 0x000028, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::bUpdateTangents' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, NewTangentX) == 0x000030, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::NewTangentX' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, NewTangentY) == 0x000048, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::NewTangentY' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, bIsValidVertex) == 0x000060, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::bIsValidVertex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, bMergeSplitValues) == 0x000061, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::bMergeSplitValues' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, bDeferChangeNotifications) == 0x000062, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::bDeferChangeNotifications' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal, ReturnValue) == 0x000068, "Member 'GeometryScriptLibrary_MeshNormalsFunctions_UpdateVertexNormal::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshPolygroupFunctions.ClearPolygroups
 // 0x0028 (0x0028 - 0x0000)
 struct GeometryScriptLibrary_MeshPolygroupFunctions_ClearPolygroups final 
@@ -3123,7 +3322,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         ClearValue;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B91[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3165,11 +3364,11 @@ public:
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bRespectUVSeams;                                   // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bRespectHardNormals;                               // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B92[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D4[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        QuadAdjacencyWeight;                               // 0x0018(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	double                                        QuadMetricClamp;                                   // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxSearchRounds;                                   // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B93[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D5[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3210,7 +3409,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         UVLayer;                                           // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B94[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D6[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3251,7 +3450,7 @@ public:
 	int32                                         PolygroupID;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumDeleted;                                        // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B95[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D7[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3323,9 +3522,9 @@ public:
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B96[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D8[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B97[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30D9[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPolygroupFunctions_GetTrianglePolygroupID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshPolygroupFunctions_GetTrianglePolygroupID");
 static_assert(sizeof(GeometryScriptLibrary_MeshPolygroupFunctions_GetTrianglePolygroupID) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshPolygroupFunctions_GetTrianglePolygroupID");
@@ -3343,7 +3542,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         PolygroupID;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B98[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30DA[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptIndexList               TriangleIDsOut;                                    // 0x0018(0x0018)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3362,7 +3561,7 @@ struct GeometryScriptLibrary_MeshPolygroupFunctions_SetNumExtendedPolygroupLayer
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumLayers;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B99[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30DB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3385,7 +3584,7 @@ public:
 	int32                                         SetPolygroupID;                                    // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bGenerateNewPolygroup;                             // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDeferChangeNotifications;                         // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9A[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30DC[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection");
@@ -3399,6 +3598,132 @@ static_assert(offsetof(GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroup
 static_assert(offsetof(GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection, bDeferChangeNotifications) == 0x000029, "Member 'GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection::bDeferChangeNotifications' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshPolygroupFunctions_SetPolygroupForMeshSelection::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToPlanar
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPlanarSimplifyOptions   Options;                                           // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar");
+static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToPolygroupTopology
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygroupSimplifyOptions Options;                                           // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology");
+static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, GroupLayer) == 0x000010, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::GroupLayer' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToTolerance
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Tolerance;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30DD[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance");
+static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Tolerance) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Tolerance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToTriangleCount
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30DE[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount");
+static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, TriangleCount) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::TriangleCount' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToVertexCount
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexCount;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30DF[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount");
+static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, VertexCount) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::VertexCount' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendBoundingBox
+// 0x00D0 (0x00D0 - 0x0000)
+struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30E0[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   Box;                                               // 0x0070(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         StepsX;                                            // 0x00A8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StepsY;                                            // 0x00AC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         StepsZ;                                            // 0x00B0(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30E1[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00B8(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00C0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30E2[0x8];                                     // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox");
+static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox) == 0x0000D0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, PrimitiveOptions) == 0x000008, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::PrimitiveOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, Transform) == 0x000010, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, Box) == 0x000070, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, StepsX) == 0x0000A8, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::StepsX' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, StepsY) == 0x0000AC, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::StepsY' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, StepsZ) == 0x0000B0, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::StepsZ' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, Debug) == 0x0000B8, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox, ReturnValue) == 0x0000C0, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBoundingBox::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendBox
 // 0x00A0 (0x00A0 - 0x0000)
 struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBox final 
@@ -3406,7 +3731,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendBox final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9B[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E3[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionX;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionY;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3415,7 +3740,7 @@ public:
 	int32                                         StepsY;                                            // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsZ;                                            // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0088(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9C[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E4[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3441,17 +3766,17 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCapsule final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9D[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E5[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         LineLength;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         HemisphereSteps;                                   // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         CircleSteps;                                       // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9E[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E6[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1B9F[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E7[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCapsule) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCapsule");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCapsule) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCapsule");
@@ -3473,7 +3798,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCone final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA0[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E8[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BaseRadius;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TopRadius;                                         // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3482,10 +3807,10 @@ public:
 	int32                                         HeightSteps;                                       // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0084(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0085(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA1[0x2];                                     // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30E9[0x2];                                     // 0x0086(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA2[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30EA[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCone) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCone");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCone) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCone");
@@ -3509,7 +3834,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCurvedStairs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA3[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30EB[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StepWidth;                                         // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StepHeight;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3517,10 +3842,10 @@ public:
 	float                                         CurveAngle;                                        // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSteps;                                          // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFloating;                                         // 0x0084(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA4[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30EC[0x3];                                     // 0x0085(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA5[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30ED[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCurvedStairs) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCurvedStairs");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCurvedStairs) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCurvedStairs");
@@ -3543,7 +3868,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA6[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30EE[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Height;                                            // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3551,10 +3876,10 @@ public:
 	int32                                         HeightSteps;                                       // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA7[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30EF[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA8[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F0[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder");
@@ -3570,6 +3895,38 @@ static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylind
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendCylinder::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendDelaunayTriangulation2D
+// 0x00C0 (0x00C0 - 0x0000)
+struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30F1[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      VertexPositions;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FIntPoint>                      ConstrainedEdges;                                  // 0x0080(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptConstrainedDelaunayTriangulationOptions TriangulationOptions;                              // 0x0090(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30F2[0x5];                                     // 0x0093(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 PositionsToVertexIDs;                              // 0x0098(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHasDuplicateVertices;                             // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30F3[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x00B0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D");
+static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D) == 0x0000C0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, PrimitiveOptions) == 0x000008, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::PrimitiveOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, Transform) == 0x000010, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, VertexPositions) == 0x000070, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::VertexPositions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, ConstrainedEdges) == 0x000080, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::ConstrainedEdges' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, TriangulationOptions) == 0x000090, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::TriangulationOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, PositionsToVertexIDs) == 0x000098, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::PositionsToVertexIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, bHasDuplicateVertices) == 0x0000A8, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::bHasDuplicateVertices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, Debug) == 0x0000B0, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D, ReturnValue) == 0x0000B8, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDelaunayTriangulation2D::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendDisc
 // 0x00A0 (0x00A0 - 0x0000)
 struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc final 
@@ -3577,7 +3934,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BA9[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F4[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         AngleSteps;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3587,7 +3944,7 @@ public:
 	float                                         HoleRadius;                                        // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAA[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F5[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendDisc");
@@ -3610,17 +3967,17 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAB[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F6[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StepWidth;                                         // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StepHeight;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         StepDepth;                                         // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumSteps;                                          // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFloating;                                         // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAC[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F7[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAD[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30F8[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs");
@@ -3635,6 +3992,34 @@ static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinear
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendLinearStairs::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendPolygonListTriangulation
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30F9[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygonsTriangulationOptions TriangulationOptions;                              // 0x0080(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bTriangulationError;                               // 0x0081(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30FA[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_30FB[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation");
+static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, PrimitiveOptions) == 0x000008, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::PrimitiveOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, Transform) == 0x000010, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, PolygonList) == 0x000070, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, TriangulationOptions) == 0x000080, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::TriangulationOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, bTriangulationError) == 0x000081, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::bTriangulationError' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendPolygonListTriangulation::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshPrimitiveFunctions.AppendRectangle_Compatibility_5_0
 // 0x0090 (0x0090 - 0x0000)
 struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRectangle_Compatibility_5_0 final 
@@ -3642,7 +4027,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRectangle_Compatibilit
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAE[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30FC[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionX;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionY;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3670,7 +4055,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRectangleXY final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BAF[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30FD[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionX;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionY;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3698,13 +4083,13 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRevolvePath final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB0[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30FE[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PathVertices;                                      // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRevolveOptions          RevolveOptions;                                    // 0x0080(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	int32                                         Steps;                                             // 0x0094(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0098(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB1[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_30FF[0x7];                                     // 0x0099(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00A0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3727,13 +4112,13 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRevolvePolygon final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB2[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3100[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRevolveOptions          RevolveOptions;                                    // 0x0080(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0094(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Steps;                                             // 0x0098(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB3[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3101[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00A0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3756,7 +4141,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangle_Compati
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB4[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3102[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionX;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionY;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3766,7 +4151,7 @@ public:
 	int32                                         StepsRound;                                        // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB5[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3103[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangle_Compatibility_5_0) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangle_Compatibility_5_0");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangle_Compatibility_5_0) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangle_Compatibility_5_0");
@@ -3789,7 +4174,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangleXY final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB6[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3104[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionX;                                        // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         DimensionY;                                        // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3799,7 +4184,7 @@ public:
 	int32                                         StepsRound;                                        // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB7[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3105[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangleXY) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangleXY");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangleXY) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendRoundRectangleXY");
@@ -3822,14 +4207,14 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSimpleExtrudePolygon f
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB8[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3106[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	float                                         Height;                                            // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         HeightSteps;                                       // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0088(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0089(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BB9[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3107[0x6];                                     // 0x008A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3853,16 +4238,16 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSimpleSweptPolygon fin
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBA[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3108[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FVector>                        SweepPath;                                         // 0x0080(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0091(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBB[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3109[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartScale;                                        // 0x0094(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndScale;                                          // 0x0098(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBC[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310A[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00A0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00A8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3887,17 +4272,17 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereBox final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBD[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310B[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsX;                                            // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsY;                                            // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsZ;                                            // 0x007C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBE[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310C[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BBF[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310D[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereBox) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereBox");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereBox) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereBox");
@@ -3919,13 +4304,13 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSphereLatLong final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC0[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310E[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Radius;                                            // 0x0070(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsPhi;                                          // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         StepsTheta;                                        // 0x0078(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x007C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC1[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_310F[0x3];                                     // 0x007D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -3948,7 +4333,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSpiralRevolvePolygon f
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC2[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3110[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRevolveOptions          RevolveOptions;                                    // 0x0080(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
@@ -3978,13 +4363,13 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSweepPolygon final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC3[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3111[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FTransform>                     SweepPath;                                         // 0x0080(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bCapped;                                           // 0x0091(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC4[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3112[0x2];                                     // 0x0092(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartScale;                                        // 0x0094(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndScale;                                          // 0x0098(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationAngleDeg;                                  // 0x009C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4013,14 +4398,14 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendSweepPolyline final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC5[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3113[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolylineVertices;                                  // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<struct FTransform>                     SweepPath;                                         // 0x0080(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<float>                                 PolylineTexParamU;                                 // 0x0090(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<float>                                 SweepPathTexParamV;                                // 0x00A0(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bLoop;                                             // 0x00B0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC6[0x3];                                     // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3114[0x3];                                     // 0x00B1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         StartScale;                                        // 0x00B4(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndScale;                                          // 0x00B8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         RotationAngleDeg;                                  // 0x00BC(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4050,7 +4435,7 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTorus final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC7[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3115[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRevolveOptions          RevolveOptions;                                    // 0x0070(0x0014)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	float                                         MajorRadius;                                       // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4058,10 +4443,10 @@ public:
 	int32                                         MajorSteps;                                        // 0x008C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MinorSteps;                                        // 0x0090(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptPrimitiveOriginMode            Origin;                                            // 0x0094(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC8[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3116[0x3];                                     // 0x0095(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0098(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BC9[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3117[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTorus) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTorus");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTorus) == 0x0000B0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTorus");
@@ -4084,14 +4469,14 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon fi
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCA[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3118[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      PolygonVertices;                                   // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bAllowSelfIntersections;                           // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCB[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3119[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCC[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_311A[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendTriangulatedPolygon");
@@ -4110,13 +4495,13 @@ struct GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPrimitiveOptions        PrimitiveOptions;                                  // 0x0008(0x0003)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCD[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_311B[0x5];                                     // 0x000B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FVector2D>                      VoronoiSites;                                      // 0x0070(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptVoronoiOptions          VoronoiOptions;                                    // 0x0080(0x0058)(Parm, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00D8(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00E0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCE[0x8];                                     // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_311C[0x8];                                     // 0x00E8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D");
 static_assert(sizeof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D) == 0x0000F0, "Wrong size on GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D");
@@ -4128,6 +4513,58 @@ static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVorono
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D, Debug) == 0x0000D8, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D, ReturnValue) == 0x0000E0, "Member 'GeometryScriptLibrary_MeshPrimitiveFunctions_AppendVoronoiDiagram2D::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.ComputeTriangleBarycentricCoords
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidTriangle;                                  // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_311D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Point;                                             // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Vertex1;                                           // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Vertex2;                                           // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Vertex3;                                           // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BarycentricCoords;                                 // 0x0070(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, bIsValidTriangle) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::bIsValidTriangle' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, Point) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, Vertex1) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::Vertex1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, Vertex2) == 0x000040, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::Vertex2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, Vertex3) == 0x000058, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::Vertex3' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, BarycentricCoords) == 0x000070, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords, ReturnValue) == 0x000088, "Member 'GeometryScriptLibrary_MeshQueryFunctions_ComputeTriangleBarycentricCoords::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetAllSplitUVsAtVertex
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 ElementIDs;                                        // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      ElementUVs;                                        // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bHaveValidUVs;                                     // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_311E[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, VertexID) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, ElementIDs) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::ElementIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, ElementUVs) == 0x000020, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::ElementUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, bHaveValidUVs) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::bHaveValidUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetAllSplitUVsAtVertex::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetAllTriangleIDs
 // 0x0030 (0x0030 - 0x0000)
 struct GeometryScriptLibrary_MeshQueryFunctions_GetAllTriangleIDs final 
@@ -4136,7 +4573,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               TriangleIDList;                                    // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bHasTriangleIDGaps;                                // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BCF[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_311F[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetAllTriangleIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetAllTriangleIDs");
@@ -4155,7 +4592,7 @@ public:
 	struct FGeometryScriptTriangleList            TriangleList;                                      // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bSkipGaps;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasTriangleIDGaps;                                // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD0[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3120[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetAllTriangleIndices) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetAllTriangleIndices");
@@ -4174,7 +4611,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptIndexList               VertexIDList;                                      // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bHasVertexIDGaps;                                  // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD1[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3121[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetAllVertexIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetAllVertexIDs");
@@ -4193,7 +4630,7 @@ public:
 	struct FGeometryScriptVectorList              PositionList;                                      // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bSkipGaps;                                         // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasVertexIDGaps;                                  // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD2[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3122[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetAllVertexPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetAllVertexPositions");
@@ -4211,7 +4648,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetHasMaterialIDs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD3[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3123[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasMaterialIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasMaterialIDs");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasMaterialIDs) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasMaterialIDs");
@@ -4225,7 +4662,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetHasPolygroups final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD4[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3124[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasPolygroups) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasPolygroups");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasPolygroups) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasPolygroups");
@@ -4239,12 +4676,40 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD5[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3125[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps::TargetMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps, ReturnValue) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleIDGaps::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetHasTriangleNormals
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3126[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals, ReturnValue) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasTriangleNormals::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetHasVertexColors
+// 0x0010 (0x0010 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3127[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors, ReturnValue) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexColors::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetHasVertexIDGaps
 // 0x0010 (0x0010 - 0x0000)
@@ -4253,12 +4718,135 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD6[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3128[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps::TargetMesh' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps, ReturnValue) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetHasVertexIDGaps::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetInterpolatedTriangleNormal
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3129[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BarycentricCoords;                                 // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidNormals;                               // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312A[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InterpolatedNormal;                                // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, BarycentricCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, bTriHasValidNormals) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::bTriHasValidNormals' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, InterpolatedNormal) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::InterpolatedNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormal::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetInterpolatedTriangleNormalTangents
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BarycentricCoords;                                 // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidElements;                              // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312C[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InterpolatedNormal;                                // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InterpolatedTangent;                               // 0x0048(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                InterpolatedBiTangent;                             // 0x0060(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents) == 0x000080, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, BarycentricCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, bTriHasValidElements) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::bTriHasValidElements' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, InterpolatedNormal) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::InterpolatedNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, InterpolatedTangent) == 0x000048, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::InterpolatedTangent' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, InterpolatedBiTangent) == 0x000060, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::InterpolatedBiTangent' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents, ReturnValue) == 0x000078, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleNormalTangents::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetInterpolatedTrianglePosition
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BarycentricCoords;                                 // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidTriangle;                                  // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312E[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InterpolatedPosition;                              // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, BarycentricCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, bIsValidTriangle) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::bIsValidTriangle' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, InterpolatedPosition) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::InterpolatedPosition' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTrianglePosition::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetInterpolatedTriangleUV
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                BarycentricCoords;                                 // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidUVs;                                   // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_312F[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              InterpolatedUV;                                    // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, TriangleID) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, BarycentricCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, bTriHasValidUVs) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::bTriHasValidUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, InterpolatedUV) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::InterpolatedUV' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleUV::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetInterpolatedTriangleVertexColor
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3130[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                BarycentricCoords;                                 // 0x0010(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           DefaultColor;                                      // 0x0028(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidVertexColors;                          // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3131[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FLinearColor                           InterpolatedColor;                                 // 0x003C(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3132[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor) == 0x000058, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, BarycentricCoords) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::BarycentricCoords' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, DefaultColor) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::DefaultColor' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, bTriHasValidVertexColors) == 0x000038, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::bTriHasValidVertexColors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, InterpolatedColor) == 0x00003C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::InterpolatedColor' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetInterpolatedTriangleVertexColor::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetIsClosedMesh
 // 0x0010 (0x0010 - 0x0000)
@@ -4267,7 +4855,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetIsClosedMesh final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD7[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3133[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetIsClosedMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetIsClosedMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetIsClosedMesh) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetIsClosedMesh");
@@ -4281,7 +4869,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetIsDenseMesh final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD8[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3134[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetIsDenseMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetIsDenseMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetIsDenseMesh) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetIsDenseMesh");
@@ -4308,7 +4896,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetMeshHasAttributeSet final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BD9[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3135[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshHasAttributeSet) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetMeshHasAttributeSet");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshHasAttributeSet) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetMeshHasAttributeSet");
@@ -4343,6 +4931,23 @@ static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAre
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeArea, SurfaceArea) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeArea::SurfaceArea' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeArea, Volume) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeArea::Volume' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetMeshVolumeAreaCenter
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         SurfaceArea;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Volume;                                            // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CenterOfMass;                                      // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter, SurfaceArea) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter::SurfaceArea' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter, Volume) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter::Volume' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter, CenterOfMass) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetMeshVolumeAreaCenter::CenterOfMass' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetNumConnectedComponents
 // 0x0010 (0x0010 - 0x0000)
 struct GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents final 
@@ -4350,7 +4955,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDA[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3136[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumConnectedComponents");
@@ -4364,7 +4969,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumExtendedPolygroupLayers fi
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDB[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3137[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumExtendedPolygroupLayers) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumExtendedPolygroupLayers");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumExtendedPolygroupLayers) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumExtendedPolygroupLayers");
@@ -4378,7 +4983,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderEdges final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDC[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3138[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderEdges) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderEdges");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderEdges) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderEdges");
@@ -4392,7 +4997,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderLoops final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAmbiguousTopologyFound;                           // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDD[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3139[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderLoops) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumOpenBorderLoops");
@@ -4408,7 +5013,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumTriangleIDs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDE[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313A[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumTriangleIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumTriangleIDs");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumTriangleIDs) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumTriangleIDs");
@@ -4422,7 +5027,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumUVSets final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BDF[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313B[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumUVSets) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumUVSets");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumUVSets) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumUVSets");
@@ -4436,7 +5041,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetNumVertexIDs final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE0[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313C[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetNumVertexIDs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetNumVertexIDs");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetNumVertexIDs) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetNumVertexIDs");
@@ -4451,7 +5056,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE1[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleFaceNormal) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleFaceNormal");
@@ -4469,9 +5074,9 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE2[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313E[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FIntVector                             ReturnValue;                                       // 0x0010(0x000C)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE3[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_313F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices");
@@ -4479,6 +5084,55 @@ static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndic
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices::TriangleID' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices, bIsValidTriangle) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices::bIsValidTriangle' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleIndices::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetTriangleNormals
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3140[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                Normal1;                                           // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal2;                                           // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Normal3;                                           // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidNormals;                               // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3141[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals) == 0x000068, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, Normal1) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::Normal1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, Normal2) == 0x000028, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::Normal2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, Normal3) == 0x000040, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::Normal3' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, bTriHasValidNormals) == 0x000058, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::bTriHasValidNormals' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals, ReturnValue) == 0x000060, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormals::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetTriangleNormalTangents
+// 0x00F0 (0x00F0 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidElements;                              // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3142[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptTriangle                Normals;                                           // 0x0010(0x0048)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptTriangle                Tangents;                                          // 0x0058(0x0048)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptTriangle                BiTangents;                                        // 0x00A0(0x0048)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00E8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents) == 0x0000F0, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, bTriHasValidElements) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::bTriHasValidElements' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, Normals) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::Normals' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, Tangents) == 0x000058, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::Tangents' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, BiTangents) == 0x0000A0, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::BiTangents' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents, ReturnValue) == 0x0000E8, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleNormalTangents::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetTrianglePositions
 // 0x0058 (0x0058 - 0x0000)
@@ -4488,7 +5142,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidTriangle;                                  // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE4[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3143[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                Vertex1;                                           // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Vertex2;                                           // 0x0028(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Vertex3;                                           // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -4514,7 +5168,7 @@ public:
 	struct FVector2D                              UV2;                                               // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              UV3;                                               // 0x0030(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHaveValidUVs;                                     // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE5[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3144[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs");
@@ -4526,6 +5180,30 @@ static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs, 
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs, UV3) == 0x000030, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs::UV3' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs, bHaveValidUVs) == 0x000040, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleUVs::bHaveValidUVs' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetTriangleVertexColors
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color1;                                            // 0x000C(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color2;                                            // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           Color3;                                            // 0x002C(0x0010)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTriHasValidVertexColors;                          // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3145[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, TriangleID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, Color1) == 0x00000C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::Color1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, Color2) == 0x00001C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::Color2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, Color3) == 0x00002C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::Color3' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, bTriHasValidVertexColors) == 0x00003C, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::bTriHasValidVertexColors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetTriangleVertexColors::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetUVSetBoundingBox
 // 0x0038 (0x0038 - 0x0000)
 struct GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox final 
@@ -4535,7 +5213,7 @@ public:
 	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidUVSet;                                     // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUVSetIsEmpty;                                     // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE6[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3146[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBox2D                                 ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox");
@@ -4546,6 +5224,42 @@ static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBounding
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox, bUVSetIsEmpty) == 0x00000D, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox::bUVSetIsEmpty' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetUVSetBoundingBox::ReturnValue' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetVertexConnectedTriangles
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3147[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Triangles;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles, Triangles) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles::Triangles' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedTriangles::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetVertexConnectedVertices
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3148[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 Vertices;                                          // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices");
+static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices, VertexID) == 0x000008, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices::VertexID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices, Vertices) == 0x000010, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices::Vertices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshQueryFunctions_GetVertexConnectedVertices::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshQueryFunctions.GetVertexCount
 // 0x0010 (0x0010 - 0x0000)
 struct GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount final 
@@ -4553,7 +5267,7 @@ struct GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE7[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3149[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_GetVertexCount");
@@ -4568,7 +5282,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidVertex;                                    // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE8[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314A[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_GetVertexPosition) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_GetVertexPosition");
@@ -4586,7 +5300,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TriangleID;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BE9[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_IsValidTriangleID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_IsValidTriangleID");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_IsValidTriangleID) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_IsValidTriangleID");
@@ -4602,7 +5316,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         VertexID;                                          // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BEA[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314C[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshQueryFunctions_IsValidVertexID) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshQueryFunctions_IsValidVertexID");
 static_assert(sizeof(GeometryScriptLibrary_MeshQueryFunctions_IsValidVertexID) == 0x000010, "Wrong size on GeometryScriptLibrary_MeshQueryFunctions_IsValidVertexID");
@@ -4651,10 +5365,10 @@ struct GeometryScriptLibrary_MeshRepairFunctions_FillAllMeshHoles final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptFillHolesOptions        FillOptions;                                       // 0x0008(0x0002)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BEB[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314D[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         NumFilledHoles;                                    // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NumFailedHoleFills;                                // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BEC[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4674,7 +5388,7 @@ struct GeometryScriptLibrary_MeshRepairFunctions_RemoveHiddenTriangles final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRemoveHiddenTrianglesOptions Options;                                           // 0x0008(0x001C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BED[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_314F[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4692,7 +5406,7 @@ struct GeometryScriptLibrary_MeshRepairFunctions_RemoveSmallComponents final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptRemoveSmallComponentOptions Options;                                           // 0x0008(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BEE[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3150[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4727,7 +5441,7 @@ struct GeometryScriptLibrary_MeshRepairFunctions_ResolveMeshTJunctions final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptResolveTJunctionOptions ResolveOptions;                                    // 0x0008(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BEF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3151[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4746,7 +5460,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bMeshBowties;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAttributeBowties;                                 // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF0[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3152[0x6];                                     // 0x000A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4775,101 +5489,948 @@ static_assert(offsetof(GeometryScriptLibrary_MeshRepairFunctions_WeldMeshEdges, 
 static_assert(offsetof(GeometryScriptLibrary_MeshRepairFunctions_WeldMeshEdges, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshRepairFunctions_WeldMeshEdges::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshRepairFunctions_WeldMeshEdges, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshRepairFunctions_WeldMeshEdges::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToPlanar
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AutoGeneratePatchBuilderMeshUVs
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPlanarSimplifyOptions   Options;                                           // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPatchBuilderOptions     Options;                                           // 0x000C(0x0034)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AutoGenerateXAtlasMeshUVs
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptXAtlasOptions           Options;                                           // 0x000C(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar");
-static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPlanar::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToPolygroupTopology
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.ComputeMeshLocalUVParam
+// 0x0088 (0x0088 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPolygroupSimplifyOptions Options;                                           // 0x0008(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptGroupLayer              GroupLayer;                                        // 0x0010(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                CenterPoint;                                       // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         CenterPointTriangleID;                             // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3153[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 VertexIDs;                                         // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      VertexUVs;                                         // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	double                                        Radius;                                            // 0x0048(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bUseInterpolatedNormal;                            // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3154[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                TangentYDirection;                                 // 0x0058(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        UVRotationDeg;                                     // 0x0070(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology");
-static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, GroupLayer) == 0x000010, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::GroupLayer' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToPolygroupTopology::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam) == 0x000088, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, CenterPoint) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::CenterPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, CenterPointTriangleID) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::CenterPointTriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, VertexIDs) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::VertexIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, VertexUVs) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::VertexUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, Radius) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::Radius' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, bUseInterpolatedNormal) == 0x000050, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::bUseInterpolatedNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, TangentYDirection) == 0x000058, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::TangentYDirection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, UVRotationDeg) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::UVRotationDeg' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, Debug) == 0x000078, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam, ReturnValue) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_ComputeMeshLocalUVParam::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToTolerance
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyMeshToMeshUVLayer
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer final 
+{
+public:
+	class UDynamicMesh*                           CopyFromUVMesh;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ToUVSetIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3155[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           CopyToMesh;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           CopyToMeshOut;                                     // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFoundTopologyErrors;                              // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidUVSet;                                     // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyUVPositions;                                  // 0x0022(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3156[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyFromUVMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyFromUVMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, ToUVSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::ToUVSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyToMesh) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyToMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyToMeshOut) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyToMeshOut' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bFoundTopologyErrors) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bFoundTopologyErrors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bIsValidUVSet) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bIsValidUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bOnlyUVPositions) == 0x000022, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bOnlyUVPositions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyMeshUVLayerToMesh
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh final 
+{
+public:
+	class UDynamicMesh*                           CopyFromMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3157[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           CopyToUVMesh;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           CopyToUVMeshOut;                                   // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvalidTopology;                                  // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsValidUVSet;                                     // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3158[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyFromMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyFromMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyToUVMesh) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyToUVMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyToUVMeshOut) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyToUVMeshOut' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, bInvalidTopology) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::bInvalidTopology' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, bIsValidUVSet) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::bIsValidUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyUVSet
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_CopyUVSet final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Tolerance;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF1[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         FromUVSet;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ToUVSet;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance");
-static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Tolerance) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Tolerance' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTolerance::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyUVSet");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyUVSet");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, FromUVSet) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::FromUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, ToUVSet) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::ToUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToTriangleCount
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshPerVertexUVs
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TriangleCount;                                     // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF2[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3159[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptUVList                  UVList;                                            // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidUVSet;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasVertexIDGaps;                                  // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bHasSplitUVs;                                      // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315A[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount");
-static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, TriangleCount) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::TriangleCount' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToTriangleCount::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, UVList) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::UVList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bIsValidUVSet) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bIsValidUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bHasVertexIDGaps) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bHasVertexIDGaps' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bHasSplitUVs) == 0x000022, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bHasSplitUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSimplifyFunctions.ApplySimplifyToVertexCount
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshUVSizeInfo
+// 0x00A8 (0x00A8 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         VertexCount;                                       // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSimplifyMeshOptions     Options;                                           // 0x000C(0x0007)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF3[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        MeshArea;                                          // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        UVArea;                                            // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   MeshBounds;                                        // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox2D                                 UVBounds;                                          // 0x0068(0x0028)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsValidUVSet;                                     // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFoundUnsetUVs;                                    // 0x0091(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyIncludeValidUVTris;                           // 0x0092(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315C[0x5];                                     // 0x0093(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0098(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo) == 0x0000A8, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, Selection) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, MeshArea) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::MeshArea' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UVArea) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UVArea' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, MeshBounds) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::MeshBounds' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UVBounds) == 0x000068, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UVBounds' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bIsValidUVSet) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bIsValidUVSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bFoundUnsetUVs) == 0x000091, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bFoundUnsetUVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bOnlyIncludeValidUVTris) == 0x000092, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bOnlyIncludeValidUVTris' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, Debug) == 0x000098, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RecomputeMeshUVs
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptRecomputeUVsOptions     Options;                                           // 0x000C(0x001C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0028(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Selection) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Debug) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RepackMeshUVs
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptRepackUVsOptions        RepackOptions;                                     // 0x000C(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount");
-static_assert(sizeof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, VertexCount) == 0x000008, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::VertexCount' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSimplifyFunctions_ApplySimplifyToVertexCount::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, RepackOptions) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::RepackOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RotateMeshUVs
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         RotationAngle;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              RotationOrigin;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, RotationAngle) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::RotationAngle' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, RotationOrigin) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::RotationOrigin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.ScaleMeshUVs
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Scale;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ScaleOrigin;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0030(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Scale) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Scale' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, ScaleOrigin) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::ScaleOrigin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Selection) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshTriangleUVs
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         TriangleID;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptUVTriangle              UVs;                                               // 0x0010(0x0030)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsValidTriangle;                                  // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDeferChangeNotifications;                         // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_315F[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, TriangleID) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::TriangleID' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, UVs) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::UVs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, bIsValidTriangle) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::bIsValidTriangle' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, bDeferChangeNotifications) == 0x000041, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::bDeferChangeNotifications' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromBoxProjection
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3160[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             BoxTransform;                                      // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         MinIslandTriCount;                                 // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3161[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3162[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, BoxTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::BoxTransform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, MinIslandTriCount) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::MinIslandTriCount' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromCylinderProjection
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3163[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             CylinderTransform;                                 // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
+	float                                         SplitAngle;                                        // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3164[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3165[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, CylinderTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::CylinderTransform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, SplitAngle) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::SplitAngle' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromPlanarProjection
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3166[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             PlaneTransform;                                    // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, PlaneTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::PlaneTransform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, Debug) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, ReturnValue) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetNumUVSets
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         NumUVSets;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3167[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, NumUVSets) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::NumUVSets' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.TranslateMeshUVs
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3168[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Translation;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs");
+static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::UvSetIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Translation) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Translation' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions.ComputeNonUniformPointSampling
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshPointSamplingOptions Options;                                           // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptNonUniformPointSamplingOptions NonUniformOptions;                                 // 0x0020(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Samples;                                           // 0x0038(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<double>                                SampleRadii;                                       // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               TriangleIDs;                                       // 0x0058(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0070(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0078(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling");
+static_assert(sizeof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling) == 0x000080, "Wrong size on GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, NonUniformOptions) == 0x000020, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::NonUniformOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, Samples) == 0x000038, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::Samples' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, SampleRadii) == 0x000048, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::SampleRadii' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, TriangleIDs) == 0x000058, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::TriangleIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, Debug) == 0x000070, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling, ReturnValue) == 0x000078, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeNonUniformPointSampling::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions.ComputePointSampling
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshPointSamplingOptions Options;                                           // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Samples;                                           // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               TriangleIDs;                                       // 0x0030(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0048(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling");
+static_assert(sizeof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling) == 0x000058, "Wrong size on GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, Samples) == 0x000020, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::Samples' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, TriangleIDs) == 0x000030, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::TriangleIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, Debug) == 0x000048, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputePointSampling::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSamplingFunctions.ComputeVertexWeightedPointSampling
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshPointSamplingOptions Options;                                           // 0x0008(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptNonUniformPointSamplingOptions NonUniformOptions;                                 // 0x0020(0x0018)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptScalarList              VertexWeights;                                     // 0x0038(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FTransform>                     Samples;                                           // 0x0048(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<double>                                SampleRadii;                                       // 0x0058(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               TriangleIDs;                                       // 0x0068(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling");
+static_assert(sizeof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, NonUniformOptions) == 0x000020, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::NonUniformOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, VertexWeights) == 0x000038, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::VertexWeights' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, Samples) == 0x000048, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::Samples' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, SampleRadii) == 0x000058, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::SampleRadii' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, TriangleIDs) == 0x000068, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::TriangleIDs' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, Debug) == 0x000080, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling, ReturnValue) == 0x000088, "Member 'GeometryScriptLibrary_MeshSamplingFunctions_ComputeVertexWeightedPointSampling::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.CombineMeshSelections
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections final 
+{
+public:
+	struct FGeometryScriptMeshSelection           SelectionA;                                        // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           SelectionB;                                        // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           ResultSelection;                                   // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptCombineSelectionMode           CombineMode;                                       // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3169[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, SelectionA) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::SelectionA' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, SelectionB) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::SelectionB' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, ResultSelection) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::ResultSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections, CombineMode) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CombineMeshSelections::CombineMode' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexArrayToMeshSelection
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<int32>                                 IndexArray;                                        // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316A[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, IndexArray) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::IndexArray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, SelectionType) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexArrayToMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexListToMeshSelection
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               IndexList;                                         // 0x0008(0x0018)(Parm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316B[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0028(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, IndexList) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::IndexList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, SelectionType) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, Selection) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexListToMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertIndexSetToMeshSelection
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSet<int32>                                   IndexSet;                                          // 0x0008(0x0050)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0058(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316C[0x7];                                     // 0x0059(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0060(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection) == 0x000078, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, IndexSet) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::IndexSet' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, SelectionType) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, Selection) == 0x000060, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertIndexSetToMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelection
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           FromSelection;                                     // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           ToSelection;                                       // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              NewType;                                           // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAllowPartialInclusion;                            // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316D[0x6];                                     // 0x002A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, FromSelection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::FromSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, ToSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::ToSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, NewType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::NewType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, bAllowPartialInclusion) == 0x000029, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::bAllowPartialInclusion' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelectionToIndexArray
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<int32>                                 IndexArray;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316E[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, IndexArray) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::IndexArray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, SelectionType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexArray::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ConvertMeshSelectionToIndexList
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptIndexList               IndexList;                                         // 0x0018(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptIndexType                      ResultListType;                                    // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptIndexType                      ConvertToType;                                     // 0x0031(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_316F[0x6];                                     // 0x0032(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, IndexList) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::IndexList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ResultListType) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ResultListType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ConvertToType) == 0x000031, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ConvertToType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ConvertMeshSelectionToIndexList::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.CreateSelectAllMeshSelection
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3170[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, SelectionType) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_CreateSelectAllMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.DebugPrintMeshSelection
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection final 
+{
+public:
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bDisable;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3171[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection, Selection) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection, bDisable) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_DebugPrintMeshSelection::bDisable' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ExpandContractMeshSelection
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	int32                                         Iterations;                                        // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bContract;                                         // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOnlyExpandToFaceNeighbours;                       // 0x002D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3172[0x2];                                     // 0x002E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::NewSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, Iterations) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::Iterations' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, bContract) == 0x00002C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::bContract' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, bOnlyExpandToFaceNeighbours) == 0x00002D, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::bOnlyExpandToFaceNeighbours' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandContractMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.ExpandMeshSelectionToConnected
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptTopologyConnectionType         ConnectionType;                                    // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3173[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::NewSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, ConnectionType) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::ConnectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_ExpandMeshSelectionToConnected::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.GetMeshSelectionInfo
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo final 
+{
+public:
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3174[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         NumSelected;                                       // 0x0014(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo) == 0x000018, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, Selection) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, SelectionType) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo, NumSelected) == 0x000014, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_GetMeshSelectionInfo::NumSelected' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.InvertMeshSelection
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           NewSelection;                                      // 0x0018(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	bool                                          bOnlyToConnected;                                  // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3175[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, NewSelection) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::NewSelection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, bOnlyToConnected) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::bOnlyToConnected' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_InvertMeshSelection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsByNormalAngle
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVector                                Normal;                                            // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        MaxAngleDeg;                                       // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3176[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumTrianglePoints;                              // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, Normal) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::Normal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, MaxAngleDeg) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::MaxAngleDeg' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, SelectionType) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, bInvert) == 0x000039, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, MinNumTrianglePoints) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsByNormalAngle::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInBox
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FBox                                   Box;                                               // 0x0018(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0051(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3177[0x2];                                     // 0x0052(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumTrianglePoints;                              // 0x0054(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox) == 0x000060, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, Box) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, SelectionType) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, bInvert) == 0x000051, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, MinNumTrianglePoints) == 0x000054, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInBox::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInsideMesh
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           SelectionMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FTransform                             SelectionMeshTransform;                            // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3178[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        ShellDistance;                                     // 0x0088(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        WindingThreshold;                                  // 0x0090(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         MinNumTrianglePoints;                              // 0x0098(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3179[0x4];                                     // 0x009C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_317A[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh) == 0x0000B0, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionMesh) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, Selection) == 0x000010, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionMeshTransform) == 0x000020, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionMeshTransform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, SelectionType) == 0x000080, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, bInvert) == 0x000081, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, ShellDistance) == 0x000088, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::ShellDistance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, WindingThreshold) == 0x000090, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::WindingThreshold' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, MinNumTrianglePoints) == 0x000098, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInsideMesh::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsInSphere
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVector                                SphereOrigin;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SphereRadius;                                      // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_317B[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumTrianglePoints;                              // 0x003C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SphereOrigin) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SphereOrigin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SphereRadius) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SphereRadius' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, SelectionType) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, bInvert) == 0x000039, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, MinNumTrianglePoints) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsInSphere::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionFunctions.SelectMeshElementsWithPlane
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FVector                                PlaneOrigin;                                       // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PlaneNormal;                                       // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0049(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_317C[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumTrianglePoints;                              // 0x004C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane) == 0x000058, "Wrong size on GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, PlaneOrigin) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::PlaneOrigin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, PlaneNormal) == 0x000030, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::PlaneNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, SelectionType) == 0x000048, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, bInvert) == 0x000049, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, MinNumTrianglePoints) == 0x00004C, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionFunctions_SelectMeshElementsWithPlane::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions.GetMeshSelectionBoundaryLoops
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptIndexList>       IndexLoops;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptPolyPath>        PathLoops;                                         // 0x0028(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	int32                                         NumLoops;                                          // 0x0038(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFoundErrors;                                      // 0x003C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_317D[0x3];                                     // 0x003D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, IndexLoops) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::IndexLoops' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, PathLoops) == 0x000028, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::PathLoops' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, NumLoops) == 0x000038, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::NumLoops' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, bFoundErrors) == 0x00003C, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::bFoundErrors' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundaryLoops::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSelectionQueryFunctions.GetMeshSelectionBoundingBox
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FBox                                   SelectionBounds;                                   // 0x0018(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsEmpty;                                          // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_317E[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0058(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox");
+static_assert(sizeof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox) == 0x000068, "Wrong size on GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, SelectionBounds) == 0x000018, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::SelectionBounds' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, bIsEmpty) == 0x000050, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::bIsEmpty' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, Debug) == 0x000058, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox, ReturnValue) == 0x000060, "Member 'GeometryScriptLibrary_MeshSelectionQueryFunctions_GetMeshSelectionBoundingBox::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial.BuildBVHForMesh
 // 0x0038 (0x0038 - 0x0000)
@@ -4897,10 +6458,10 @@ public:
 	struct FGeometryScriptDynamicMeshBVH          QueryBVH;                                          // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVector                                QueryPoint;                                        // 0x0028(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSpatialQueryOptions     Options;                                           // 0x0040(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF4[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_317F[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptTrianglePoint           NearestResult;                                     // 0x0050(0x0038)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	EGeometryScriptSearchOutcomePins              Outcome;                                           // 0x0088(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF5[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3180[0x7];                                     // 0x0089(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0090(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4925,10 +6486,10 @@ public:
 	struct FVector                                RayOrigin;                                         // 0x0028(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                RayDirection;                                      // 0x0040(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSpatialQueryOptions     Options;                                           // 0x0058(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF6[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3181[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptRayHitResult            HitResult;                                         // 0x0068(0x0040)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	EGeometryScriptSearchOutcomePins              Outcome;                                           // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF7[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3182[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x00B0(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x00B8(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4952,7 +6513,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptDynamicMeshBVH          TestBVH;                                           // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bIsValid;                                          // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF8[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3183[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4975,7 +6536,7 @@ public:
 	struct FGeometryScriptSpatialQueryOptions     Options;                                           // 0x0040(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bIsInside;                                         // 0x004C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptContainmentOutcomePins         Outcome;                                           // 0x004D(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BF9[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3184[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -4998,7 +6559,7 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptDynamicMeshBVH          UpdateBVH;                                         // 0x0008(0x0020)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bOnlyIfInvalid;                                    // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFA[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3185[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5021,6 +6582,35 @@ static_assert(alignof(GeometryScriptLibrary_MeshSpatial_ResetBVH) == 0x000008, "
 static_assert(sizeof(GeometryScriptLibrary_MeshSpatial_ResetBVH) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshSpatial_ResetBVH");
 static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_ResetBVH, Param_ResetBVH) == 0x000000, "Member 'GeometryScriptLibrary_MeshSpatial_ResetBVH::Param_ResetBVH' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSpatial.SelectMeshElementsInBoxWithBVH
+// 0x0098 (0x0098 - 0x0000)
+struct GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH final 
+{
+public:
+	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptDynamicMeshBVH          QueryBVH;                                          // 0x0008(0x0020)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FBox                                   QueryBox;                                          // 0x0028(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSpatialQueryOptions     Options;                                           // 0x0060(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3186[0x4];                                     // 0x006C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	EGeometryScriptMeshSelectionType              SelectionType;                                     // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3187[0x3];                                     // 0x0081(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         MinNumTrianglePoints;                              // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH");
+static_assert(sizeof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH) == 0x000098, "Wrong size on GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, QueryBVH) == 0x000008, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::QueryBVH' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, QueryBox) == 0x000028, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::QueryBox' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, Options) == 0x000060, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, SelectionType) == 0x000080, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::SelectionType' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, MinNumTrianglePoints) == 0x000084, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::MinNumTrianglePoints' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshSpatial_SelectMeshElementsInBoxWithBVH::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions.ApplyPNTessellation
 // 0x0020 (0x0020 - 0x0000)
 struct GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation final 
@@ -5028,7 +6618,7 @@ struct GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPNTessellateOptions     Options;                                           // 0x0008(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFB[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3188[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TessellationLevel;                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5041,26 +6631,6 @@ static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTesse
 static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyPNTessellation::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions.ApplyRecursivePNTessellation
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPNTessellateOptions     Options;                                           // 0x0008(0x0001)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFC[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         NumIterations;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation");
-static_assert(sizeof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation");
-static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation, NumIterations) == 0x00000C, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation::NumIterations' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshSubdivideFunctions_ApplyRecursivePNTessellation::ReturnValue' has a wrong offset!");
-
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshSubdivideFunctions.ApplySelectiveTessellation
 // 0x0038 (0x0038 - 0x0000)
 struct GeometryScriptLibrary_MeshSubdivideFunctions_ApplySelectiveTessellation final 
@@ -5069,10 +6639,10 @@ public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSelectiveTessellateOptions Options;                                           // 0x0018(0x0002)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFD[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3189[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         TessellationLevel;                                 // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESelectiveTessellatePatternType               PatternType;                                       // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFE[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318A[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5093,7 +6663,7 @@ struct GeometryScriptLibrary_MeshSubdivideFunctions_ApplyUniformTessellation fin
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TessellationLevel;                                 // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1BFF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5153,7 +6723,7 @@ public:
 	struct FVector                                Scale;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                ScaleOrigin;                                       // 0x0020(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFixOrientationForNegativeScale;                   // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C00[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318C[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5193,13 +6763,13 @@ struct GeometryScriptLibrary_MeshTransformFunctions_TransformMesh final
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C01[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bFixOrientationForNegativeScale;                   // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C02[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318E[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0078(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C03[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_318F[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_MeshTransformFunctions_TransformMesh) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshTransformFunctions_TransformMesh");
 static_assert(sizeof(GeometryScriptLibrary_MeshTransformFunctions_TransformMesh) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshTransformFunctions_TransformMesh");
@@ -5216,7 +6786,7 @@ struct GeometryScriptLibrary_MeshTransformFunctions_TransformMeshSelection final
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C04[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3190[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -5265,406 +6835,49 @@ static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslateMes
 static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslateMeshSelection, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslateMeshSelection::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslateMeshSelection, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslateMeshSelection::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AutoGeneratePatchBuilderMeshUVs
-// 0x0050 (0x0050 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshTransformFunctions.TranslatePivotToLocation
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptPatchBuilderOptions     Options;                                           // 0x000C(0x0034)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                PivotLocation;                                     // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGeneratePatchBuilderMeshUVs::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation");
+static_assert(sizeof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation) == 0x000030, "Wrong size on GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation");
+static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, PivotLocation) == 0x000008, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::PivotLocation' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, Debug) == 0x000020, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_MeshTransformFunctions_TranslatePivotToLocation::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.AutoGenerateXAtlasMeshUVs
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptXAtlasOptions           Options;                                           // 0x000C(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_AutoGenerateXAtlasMeshUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyMeshToMeshUVLayer
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer final 
-{
-public:
-	class UDynamicMesh*                           CopyFromUVMesh;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ToUVSetIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C05[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           CopyToMesh;                                        // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           CopyToMeshOut;                                     // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFoundTopologyErrors;                              // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsValidUVSet;                                     // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyUVPositions;                                  // 0x0022(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C06[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyFromUVMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyFromUVMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, ToUVSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::ToUVSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyToMesh) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyToMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, CopyToMeshOut) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::CopyToMeshOut' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bFoundTopologyErrors) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bFoundTopologyErrors' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bIsValidUVSet) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bIsValidUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, bOnlyUVPositions) == 0x000022, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::bOnlyUVPositions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshToMeshUVLayer::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyMeshUVLayerToMesh
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh final 
-{
-public:
-	class UDynamicMesh*                           CopyFromMesh;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C07[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           CopyToUVMesh;                                      // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           CopyToUVMeshOut;                                   // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInvalidTopology;                                  // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsValidUVSet;                                     // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C08[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyFromMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyFromMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyToUVMesh) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyToUVMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, CopyToUVMeshOut) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::CopyToUVMeshOut' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, bInvalidTopology) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::bInvalidTopology' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, bIsValidUVSet) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::bIsValidUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyMeshUVLayerToMesh::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.CopyUVSet
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_CopyUVSet final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         FromUVSet;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ToUVSet;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_CopyUVSet");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_CopyUVSet");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, FromUVSet) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::FromUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, ToUVSet) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::ToUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_CopyUVSet, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_CopyUVSet::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshPerVertexUVs
-// 0x0038 (0x0038 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C09[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptUVList                  UVList;                                            // 0x0010(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
-	bool                                          bIsValidUVSet;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasVertexIDGaps;                                  // 0x0021(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bHasSplitUVs;                                      // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0A[0x5];                                     // 0x0023(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0028(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0030(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs) == 0x000038, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, UVList) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::UVList' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bIsValidUVSet) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bIsValidUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bHasVertexIDGaps) == 0x000021, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bHasVertexIDGaps' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, bHasSplitUVs) == 0x000022, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::bHasSplitUVs' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, Debug) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshPerVertexUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.GetMeshUVSizeInfo
-// 0x00A8 (0x00A8 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
-	double                                        MeshArea;                                          // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	double                                        UVArea;                                            // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FBox                                   MeshBounds;                                        // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FBox2D                                 UVBounds;                                          // 0x0068(0x0028)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsValidUVSet;                                     // 0x0090(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFoundUnsetUVs;                                    // 0x0091(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bOnlyIncludeValidUVTris;                           // 0x0092(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0C[0x5];                                     // 0x0093(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0098(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo) == 0x0000A8, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, Selection) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, MeshArea) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::MeshArea' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UVArea) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UVArea' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, MeshBounds) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::MeshBounds' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, UVBounds) == 0x000068, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::UVBounds' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bIsValidUVSet) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bIsValidUVSet' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bFoundUnsetUVs) == 0x000091, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bFoundUnsetUVs' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, bOnlyIncludeValidUVTris) == 0x000092, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::bOnlyIncludeValidUVTris' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, Debug) == 0x000098, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_MeshUVFunctions_GetMeshUVSizeInfo::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RecomputeMeshUVs
-// 0x0048 (0x0048 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptRecomputeUVsOptions     Options;                                           // 0x000C(0x001C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0028(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0038(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs) == 0x000048, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Options) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Selection) == 0x000028, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, Debug) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_RecomputeMeshUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RepackMeshUVs
-// 0x0028 (0x0028 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptRepackUVsOptions        RepackOptions;                                     // 0x000C(0x0008)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0018(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs) == 0x000028, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, RepackOptions) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::RepackOptions' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, Debug) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_RepackMeshUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.RotateMeshUVs
+// Function GeometryScriptingCore.GeometryScriptLibrary_MeshVertexColorFunctions.BlurMeshVertexColors
 // 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs final 
+struct GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors final 
 {
 public:
 	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         RotationAngle;                                     // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              RotationOrigin;                                    // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0008(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         NumIterations;                                     // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3191[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        Strength;                                          // 0x0020(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptBlurColorMode                  BlurMode;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptBlurMeshVertexColorsOptions Options;                                           // 0x0029(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3192[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, RotationAngle) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::RotationAngle' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, RotationOrigin) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::RotationOrigin' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_RotateMeshUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.ScaleMeshUVs
-// 0x0050 (0x0050 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Scale;                                             // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector2D                              ScaleOrigin;                                       // 0x0020(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0030(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0040(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Scale) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Scale' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, ScaleOrigin) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::ScaleOrigin' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Selection) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, Debug) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_ScaleMeshUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshTriangleUVs
-// 0x0050 (0x0050 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         TriangleID;                                        // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptUVTriangle              UVs;                                               // 0x0010(0x0030)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bIsValidTriangle;                                  // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bDeferChangeNotifications;                         // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C0F[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs) == 0x000050, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, TriangleID) == 0x00000C, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::TriangleID' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, UVs) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::UVs' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, bIsValidTriangle) == 0x000040, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::bIsValidTriangle' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, bDeferChangeNotifications) == 0x000041, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::bDeferChangeNotifications' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshTriangleUVs::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromBoxProjection
-// 0x00A0 (0x00A0 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C10[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             BoxTransform;                                      // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
-	int32                                         MinIslandTriCount;                                 // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C11[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C12[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, BoxTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::BoxTransform' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, MinIslandTriCount) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::MinIslandTriCount' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromBoxProjection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromCylinderProjection
-// 0x00A0 (0x00A0 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C13[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             CylinderTransform;                                 // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
-	float                                         SplitAngle;                                        // 0x0080(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C14[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C15[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection) == 0x0000A0, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, CylinderTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::CylinderTransform' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, SplitAngle) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::SplitAngle' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, Debug) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection, ReturnValue) == 0x000090, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromCylinderProjection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetMeshUVsFromPlanarProjection
-// 0x0090 (0x0090 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C16[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             PlaneTransform;                                    // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0070(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0080(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0088(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection) == 0x000090, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, PlaneTransform) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::PlaneTransform' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, Selection) == 0x000070, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, Debug) == 0x000080, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection, ReturnValue) == 0x000088, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetMeshUVsFromPlanarProjection::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.SetNumUVSets
-// 0x0020 (0x0020 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         NumUVSets;                                         // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C17[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets) == 0x000020, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, NumUVSets) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::NumUVSets' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, Debug) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_MeshUVFunctions_SetNumUVSets::ReturnValue' has a wrong offset!");
-
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshUVFunctions.TranslateMeshUVs
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs final 
-{
-public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         UvSetIndex;                                        // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C18[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              Translation;                                       // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMeshSelection           Selection;                                         // 0x0020(0x0010)(Parm, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs");
-static_assert(sizeof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, UvSetIndex) == 0x000008, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::UvSetIndex' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Translation) == 0x000010, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Translation' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Selection) == 0x000020, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Selection' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshUVFunctions_TranslateMeshUVs::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors");
+static_assert(sizeof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::TargetMesh' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, Selection) == 0x000008, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::Selection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, NumIterations) == 0x000018, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::NumIterations' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, Strength) == 0x000020, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::Strength' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, BlurMode) == 0x000028, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::BlurMode' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, Options) == 0x000029, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::Options' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::Debug' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_BlurMeshVertexColors::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_MeshVertexColorFunctions.ConvertMeshVertexColorsLinearToSRGB
 // 0x0018 (0x0018 - 0x0000)
@@ -5706,7 +6919,7 @@ public:
 	bool                                          bIsValidColorSet;                                  // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHasVertexIDGaps;                                  // 0x0019(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBlendSplitVertexValues;                           // 0x001A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C19[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3193[0x5];                                     // 0x001B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_MeshVertexColorFunctions_GetMeshPerVertexColors) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVertexColorFunctions_GetMeshPerVertexColors");
@@ -5727,7 +6940,7 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptColorFlags              Param_Flags;                                       // 0x0018(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bClearExisting;                                    // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1A[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3194[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0020(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0028(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5767,7 +6980,7 @@ public:
 	struct FLinearColor                           Color;                                             // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptColorFlags              Param_Flags;                                       // 0x0028(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bCreateColorSeam;                                  // 0x002C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1B[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3195[0x3];                                     // 0x002D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -5781,40 +6994,637 @@ static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_SetMeshSel
 static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_SetMeshSelectionVertexColor, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_SetMeshSelectionVertexColor::Debug' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_MeshVertexColorFunctions_SetMeshSelectionVertexColor, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVertexColorFunctions_SetMeshSelectionVertexColor::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions.ApplyMeshMorphology
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.AddPolygonVertex
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex final 
 {
 public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptMorphologyOptions       Options;                                           // 0x0008(0x0024)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1C[0x4];                                     // 0x002C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FVector2D                              Position;                                          // 0x0010(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0020(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3196[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology");
-static_assert(sizeof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshMorphology::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex) == 0x000028, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex, Position) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex::Position' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_AddPolygonVertex::ReturnValue' has a wrong offset!");
 
-// Function GeometryScriptingCore.GeometryScriptLibrary_MeshVoxelFunctions.ApplyMeshSolidify
-// 0x0040 (0x0040 - 0x0000)
-struct GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify final 
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.Conv_ArrayOfVector2DToGeometryScriptSimplePolygon
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon final 
 {
 public:
-	class UDynamicMesh*                           TargetMesh;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FGeometryScriptSolidifyOptions         Options;                                           // 0x0008(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	class UGeometryScriptDebug*                   Debug;                                             // 0x0030(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UDynamicMesh*                           ReturnValue;                                       // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplePolygon           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify) == 0x000008, "Wrong alignment on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify");
-static_assert(sizeof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify) == 0x000040, "Wrong size on GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, TargetMesh) == 0x000000, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::TargetMesh' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, Options) == 0x000008, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::Options' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, Debug) == 0x000030, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::Debug' has a wrong offset!");
-static_assert(offsetof(GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_MeshVoxelFunctions_ApplyMeshSolidify::ReturnValue' has a wrong offset!");
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon) == 0x000020, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon, PathVertices) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon::PathVertices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayOfVector2DToGeometryScriptSimplePolygon::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.Conv_ArrayToGeometryScriptSimplePolygon
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon final 
+{
+public:
+	TArray<struct FVector>                        PathVertices;                                      // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplePolygon           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon) == 0x000020, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon, PathVertices) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon::PathVertices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_ArrayToGeometryScriptSimplePolygon::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.Conv_GeometryScriptSimplePolygonToArray
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector>                        ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray) == 0x000020, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArray::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.Conv_GeometryScriptSimplePolygonToArrayOfVector2D
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D) == 0x000020, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_Conv_GeometryScriptSimplePolygonToArrayOfVector2D::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.ConvertSplineToPolygon
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon final 
+{
+public:
+	class USplineComponent*                       Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0008(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0018(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           DropAxis;                                          // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3197[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon) == 0x000028, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon, Spline) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon::Spline' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon, Polygon) == 0x000008, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon, SamplingOptions) == 0x000018, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon::SamplingOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon, DropAxis) == 0x000024, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_ConvertSplineToPolygon::DropAxis' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonArcLength
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength) == 0x000018, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArcLength::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonArea
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea) == 0x000018, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonArea::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonBounds
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FBox2D                                 ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds) == 0x000038, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonBounds::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonTangent
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         VertexIndex;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPolygonIsEmpty;                                   // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3198[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent) == 0x000028, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent, VertexIndex) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent::VertexIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent, bPolygonIsEmpty) == 0x000014, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent::bPolygonIsEmpty' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonTangent::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonVertex
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         VertexIndex;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPolygonIsEmpty;                                   // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3199[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex) == 0x000028, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex, VertexIndex) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex::VertexIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex, bPolygonIsEmpty) == 0x000014, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex::bPolygonIsEmpty' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertex::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.GetPolygonVertexCount
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount) == 0x000018, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_GetPolygonVertexCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_SimplePolygonFunctions.SetPolygonVertex
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           Polygon;                                           // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	int32                                         VertexIndex;                                       // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              Position;                                          // 0x0018(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPolygonIsEmpty;                                   // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex");
+static_assert(sizeof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex) == 0x000030, "Wrong size on GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, Polygon) == 0x000000, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::Polygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, VertexIndex) == 0x000010, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::VertexIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, Position) == 0x000018, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::Position' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex, bPolygonIsEmpty) == 0x000028, "Member 'GeometryScriptLibrary_SimplePolygonFunctions_SetPolygonVertex::bPolygonIsEmpty' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.AddPolygonToList
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSimplePolygon           OuterPolygon;                                      // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptSimplePolygon>   HolePolygons;                                      // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bFixHoleOrientations;                              // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319D[0x3];                                     // 0x0031(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x0034(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList) == 0x000038, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList, OuterPolygon) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList::OuterPolygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList, HolePolygons) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList::HolePolygons' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList, bFixHoleOrientations) == 0x000030, "Member 'GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList::bFixHoleOrientations' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList, ReturnValue) == 0x000034, "Member 'GeometryScriptLibrary_PolygonListFunctions_AddPolygonToList::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.AppendPolygonList
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      PolygonsToAppend;                                  // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList) == 0x000020, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList, PolygonsToAppend) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_AppendPolygonList::PolygonsToAppend' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.CreatePolygonListFromSimplePolygons
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons final 
+{
+public:
+	TArray<struct FGeometryScriptSimplePolygon>   OuterPolygons;                                     // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons) == 0x000020, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons, OuterPolygons) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons::OuterPolygons' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSimplePolygons::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.CreatePolygonListFromSinglePolygon
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon final 
+{
+public:
+	struct FGeometryScriptSimplePolygon           OuterPolygon;                                      // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FGeometryScriptSimplePolygon>   HolePolygons;                                      // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bFixHoleOrientations;                              // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0028(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon) == 0x000038, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon, OuterPolygon) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon::OuterPolygon' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon, HolePolygons) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon::HolePolygons' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon, bFixHoleOrientations) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon::bFixHoleOrientations' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon, ReturnValue) == 0x000028, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonListFromSinglePolygon::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.CreatePolygonsFromOpenPolyPathsOffset
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset final 
+{
+public:
+	TArray<struct FGeometryScriptPolyPath>        PolyPaths;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptOpenPathOffsetOptions   OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_319F[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset) == 0x000058, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, PolyPaths) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::PolyPaths' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, Offset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::Offset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, bOperationSuccess) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, bCopyInputOnFailure) == 0x000041, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromOpenPolyPathsOffset::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.CreatePolygonsFromPathOffset
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset final 
+{
+public:
+	TArray<struct FVector2D>                      Path;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptOpenPathOffsetOptions   OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A0[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset) == 0x000058, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, Path) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::Path' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, Offset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::Offset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, bOperationSuccess) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, bCopyInputOnFailure) == 0x000041, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_CreatePolygonsFromPathOffset::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonArea
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bValidIndex;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A1[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea) == 0x000020, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea, bValidIndex) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea::bValidIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea, PolygonIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonArea::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonBounds
+// 0x0040 (0x0040 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bValidIndex;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A2[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox2D                                 ReturnValue;                                       // 0x0018(0x0028)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds) == 0x000040, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds, bValidIndex) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds::bValidIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds, PolygonIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonBounds::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonCount
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0010(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount) == 0x000018, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonHoleCount
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bValidIndex;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A4[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A5[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount) == 0x000020, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount, bValidIndex) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount::bValidIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount, PolygonIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonHoleCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonListArea
+// 0x0018 (0x0018 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea) == 0x000018, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonListArea::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonListBounds
+// 0x0038 (0x0038 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FBox2D                                 ReturnValue;                                       // 0x0010(0x0028)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds) == 0x000038, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds, ReturnValue) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonListBounds::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonVertex
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bIsValidVertex;                                    // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A6[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         VertexIndex;                                       // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         PolygonIndex;                                      // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HoleIndex;                                         // 0x001C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector2D                              ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, bIsValidVertex) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::bIsValidVertex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, VertexIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::VertexIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, PolygonIndex) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, HoleIndex) == 0x00001C, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::HoleIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertex::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonVertexCount
+// 0x0020 (0x0020 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bValidIndices;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A7[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HoleIndex;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x001C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount) == 0x000020, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount, bValidIndices) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount::bValidIndices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount, PolygonIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount, HoleIndex) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount::HoleIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount, ReturnValue) == 0x00001C, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertexCount::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetPolygonVertices
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	TArray<struct FVector2D>                      OutVertices;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bValidIndices;                                     // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A8[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0024(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HoleIndex;                                         // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31A9[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices, OutVertices) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices::OutVertices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices, bValidIndices) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices::bValidIndices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices, PolygonIndex) == 0x000024, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices, HoleIndex) == 0x000028, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetPolygonVertices::HoleIndex' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.GetSimplePolygon
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bValidIndices;                                     // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AA[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         PolygonIndex;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         HoleIndex;                                         // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AB[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptSimplePolygon           ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon, bValidIndices) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon::bValidIndices' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon, PolygonIndex) == 0x000014, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon::PolygonIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon, HoleIndex) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon::HoleIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_GetSimplePolygon::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsDifference
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      PolygonsToSubtract;                                // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference, PolygonsToSubtract) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference::PolygonsToSubtract' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsDifference::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsExclusiveOr
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      PolygonsToExclusiveOr;                             // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr, PolygonsToExclusiveOr) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr::PolygonsToExclusiveOr' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsExclusiveOr::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsIntersection
+// 0x0030 (0x0030 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      PolygonsToIntersect;                               // 0x0010(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0020(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection) == 0x000030, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection, PolygonsToIntersect) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection::PolygonsToIntersect' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection, ReturnValue) == 0x000020, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsMorphologyClose
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygonOffsetOptions    OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AC[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose) == 0x000058, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, Offset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::Offset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, bOperationSuccess) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, bCopyInputOnFailure) == 0x000041, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyClose::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsMorphologyOpen
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygonOffsetOptions    OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AD[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen) == 0x000058, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, Offset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::Offset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, bOperationSuccess) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, bCopyInputOnFailure) == 0x000041, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsMorphologyOpen::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsOffset
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygonOffsetOptions    OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Offset;                                            // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0041(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AE[0x6];                                     // 0x0042(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0048(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset) == 0x000058, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, Offset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::Offset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, bOperationSuccess) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, bCopyInputOnFailure) == 0x000041, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffset::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsOffsets
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	struct FGeometryScriptPolygonOffsetOptions    OffsetOptions;                                     // 0x0010(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        FirstOffset;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SecondOffset;                                      // 0x0040(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bOperationSuccess;                                 // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0049(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31AF[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0050(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets) == 0x000060, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, OffsetOptions) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::OffsetOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, FirstOffset) == 0x000038, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::FirstOffset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, SecondOffset) == 0x000040, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::SecondOffset' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, bOperationSuccess) == 0x000048, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::bOperationSuccess' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, bCopyInputOnFailure) == 0x000049, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsOffsets::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_PolygonListFunctions.PolygonsUnion
+// 0x0028 (0x0028 - 0x0000)
+struct GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion final 
+{
+public:
+	struct FGeometryScriptGeneralPolygonList      PolygonList;                                       // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	bool                                          bCopyInputOnFailure;                               // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31B0[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FGeometryScriptGeneralPolygonList      ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion");
+static_assert(sizeof(GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion) == 0x000028, "Wrong size on GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion, PolygonList) == 0x000000, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion::PolygonList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion, bCopyInputOnFailure) == 0x000010, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion::bCopyInputOnFailure' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion, ReturnValue) == 0x000018, "Member 'GeometryScriptLibrary_PolygonListFunctions_PolygonsUnion::ReturnValue' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_PolyPathFunctions.Conv_ArrayOfVector2DToGeometryScriptPolyPath
 // 0x0028 (0x0028 - 0x0000)
@@ -5928,7 +7738,7 @@ public:
 	class USplineComponent*                       Spline;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0008(0x0018)(Parm, OutParm, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0020(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1D[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B1[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath) == 0x000030, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_ConvertSplineToPolyPath");
@@ -5968,7 +7778,7 @@ public:
 	float                                         StartAngle;                                        // 0x0068(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         EndAngle;                                          // 0x006C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0070(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1E[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B2[0x8];                                     // 0x0088(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D) == 0x000010, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D) == 0x000090, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_CreateArcPath3D");
@@ -6020,7 +7830,7 @@ struct GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis final
 public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	EGeometryScriptAxis                           DropAxis;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C1F[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B3[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometryScriptPolyPath                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_FlattenTo2DOnAxis");
@@ -6037,7 +7847,7 @@ public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	struct FVector                                Point;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C20[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B4[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex) == 0x000038, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_GetNearestVertexIndex");
@@ -6065,7 +7875,7 @@ struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex final
 public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C21[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B5[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex) == 0x000020, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathLastIndex");
@@ -6079,7 +7889,7 @@ struct GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices final
 public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C22[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B6[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices) == 0x000020, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathNumVertices");
@@ -6094,7 +7904,7 @@ public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C23[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B7[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathTangent");
@@ -6112,7 +7922,7 @@ public:
 	struct FGeometryScriptPolyPath                PolyPath;                                          // 0x0000(0x0018)(Parm, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsValidIndex;                                     // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C24[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B8[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0020(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex) == 0x000008, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_GetPolyPathVertex");
@@ -6131,10 +7941,10 @@ public:
 	TArray<struct FTransform>                     Frames;                                            // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<double>                                FrameTimes;                                        // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	struct FGeometryScriptSplineSamplingOptions   SamplingOptions;                                   // 0x0028(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C25[0xC];                                     // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31B9[0xC];                                     // 0x0034(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             RelativeTransform;                                 // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIncludeScale;                                     // 0x00A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C26[0xF];                                     // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BA[0xF];                                     // 0x00A1(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms) == 0x000010, "Wrong alignment on GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms");
 static_assert(sizeof(GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms) == 0x0000B0, "Wrong size on GeometryScriptLibrary_PolyPathFunctions_SampleSplineToTransforms");
@@ -6153,15 +7963,15 @@ public:
 	class UObject*                                FromObject;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTransformToWorld;                                 // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C27[0xF];                                     // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BB[0xF];                                     // 0x0011(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseComplexCollision;                              // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C28[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BC[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SphereResolution;                                  // 0x0084(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C29[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BD[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
 static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyCollisionMeshesFromObject");
@@ -6184,13 +7994,13 @@ public:
 	class UDynamicMesh*                           ToDynamicMesh;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGeometryScriptCopyMeshFromComponentOptions Options;                                           // 0x0010(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          bTransformToWorld;                                 // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C2A[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BE[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             LocalToWorld;                                      // 0x0020(0x0060)(Parm, OutParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EGeometryScriptOutcomePins                    Outcome;                                           // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C2B[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31BF[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGeometryScriptDebug*                   Debug;                                             // 0x0088(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UDynamicMesh*                           ReturnValue;                                       // 0x0090(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C2C[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_31C0[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x000010, "Wrong alignment on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
 static_assert(sizeof(GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent) == 0x0000A0, "Wrong size on GeometryScriptLibrary_SceneUtilityFunctions_CopyMeshFromComponent");
@@ -6229,6 +8039,571 @@ static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentM
 static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, MaterialList) == 0x000008, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::MaterialList' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList, Debug) == 0x000018, "Member 'GeometryScriptLibrary_SceneUtilityFunctions_SetComponentMaterialList::Debug' has a wrong offset!");
 
+// Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.GetTransformAxisPlane
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane final 
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           Axis;                                              // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C1[0xF];                                     // 0x0061(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FPlane                                 ReturnValue;                                       // 0x0070(0x0020)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane) == 0x000010, "Wrong alignment on GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane");
+static_assert(sizeof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane) == 0x000090, "Wrong size on GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane, Transform) == 0x000000, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane, Axis) == 0x000060, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane::Axis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisPlane::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.GetTransformAxisRay
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay final 
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           Axis;                                              // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C2[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRay                                   ReturnValue;                                       // 0x0068(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C3[0x8];                                     // 0x0098(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay) == 0x000010, "Wrong alignment on GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay");
+static_assert(sizeof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay) == 0x0000A0, "Wrong size on GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay, Transform) == 0x000000, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay, Axis) == 0x000060, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay::Axis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay, ReturnValue) == 0x000068, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisRay::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.GetTransformAxisVector
+// 0x0080 (0x0080 - 0x0000)
+struct GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector final 
+{
+public:
+	struct FTransform                             Transform;                                         // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EGeometryScriptAxis                           Axis;                                              // 0x0060(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C4[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector) == 0x000010, "Wrong alignment on GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector");
+static_assert(sizeof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector) == 0x000080, "Wrong size on GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector, Transform) == 0x000000, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector, Axis) == 0x000060, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector::Axis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector, ReturnValue) == 0x000068, "Member 'GeometryScriptLibrary_TransformFunctions_GetTransformAxisVector::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.MakeTransformFromAxes
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes final 
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ZAxis;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                TangentAxis;                                       // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bTangentIsX;                                       // 0x0048(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C5[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0050(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes) == 0x000010, "Wrong alignment on GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes");
+static_assert(sizeof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes) == 0x0000B0, "Wrong size on GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes, Location) == 0x000000, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes::Location' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes, ZAxis) == 0x000018, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes::ZAxis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes, TangentAxis) == 0x000030, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes::TangentAxis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes, bTangentIsX) == 0x000048, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes::bTangentIsX' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromAxes::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TransformFunctions.MakeTransformFromZAxis
+// 0x0090 (0x0090 - 0x0000)
+struct GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis final 
+{
+public:
+	struct FVector                                Location;                                          // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ZAxis;                                             // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ReturnValue;                                       // 0x0030(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis) == 0x000010, "Wrong alignment on GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis");
+static_assert(sizeof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis) == 0x000090, "Wrong size on GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis, Location) == 0x000000, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis::Location' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis, ZAxis) == 0x000018, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis::ZAxis' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_TransformFunctions_MakeTransformFromZAxis::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayBoxIntersection
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box;                                               // 0x0030(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        HitDistance;                                       // 0x0068(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C6[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection) == 0x000078, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection, Box) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection, HitDistance) == 0x000068, "Member 'GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection::HitDistance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_RayFunctions_GetRayBoxIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayClosestPoint
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayClosestPoint final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0048(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayClosestPoint) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayClosestPoint");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayClosestPoint) == 0x000060, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayClosestPoint");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayClosestPoint, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayClosestPoint::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayClosestPoint, Point) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayClosestPoint::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayClosestPoint, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRayClosestPoint::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayLineClosestPoint
+// 0x00A8 (0x00A8 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                LineOrigin;                                        // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LineDirection;                                     // 0x0048(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        RayParameter;                                      // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RayPoint;                                          // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        LineParameter;                                     // 0x0080(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                LinePoint;                                         // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x00A0(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint) == 0x0000A8, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, LineOrigin) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::LineOrigin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, LineDirection) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::LineDirection' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, RayParameter) == 0x000060, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::RayParameter' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, RayPoint) == 0x000068, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::RayPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, LineParameter) == 0x000080, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::LineParameter' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, LinePoint) == 0x000088, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::LinePoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_RayFunctions_GetRayLineClosestPoint::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayParameter
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayParameter final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayParameter) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayParameter");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayParameter) == 0x000050, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayParameter");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayParameter, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayParameter::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayParameter, Point) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayParameter::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayParameter, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRayParameter::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayPlaneIntersection
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FPlane                                 Plane;                                             // 0x0030(0x0020)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        HitDistance;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C7[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection) == 0x000010, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection) == 0x000060, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection, Plane) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection::Plane' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection, HitDistance) == 0x000050, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection::HitDistance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPlaneIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayPoint
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayPoint final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Distance;                                          // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayPoint) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayPoint");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayPoint) == 0x000050, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayPoint");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPoint, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPoint::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPoint, Distance) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPoint::Distance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPoint, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPoint::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayPointDistance
+// 0x0050 (0x0050 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayPointDistance final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0048(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayPointDistance) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayPointDistance");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayPointDistance) == 0x000050, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayPointDistance");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPointDistance, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPointDistance::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPointDistance, Point) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPointDistance::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayPointDistance, ReturnValue) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRayPointDistance::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRaySegmentClosestPoint
+// 0x00A0 (0x00A0 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                SegStartPoint;                                     // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SegEndPoint;                                       // 0x0048(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        RayParameter;                                      // 0x0060(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                RayPoint;                                          // 0x0068(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                SegPoint;                                          // 0x0080(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0098(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint) == 0x0000A0, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, SegStartPoint) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::SegStartPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, SegEndPoint) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::SegEndPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, RayParameter) == 0x000060, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::RayParameter' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, RayPoint) == 0x000068, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::RayPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, SegPoint) == 0x000080, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::SegPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint, ReturnValue) == 0x000098, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySegmentClosestPoint::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRaySphereIntersection
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                SphereCenter;                                      // 0x0030(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SphereRadius;                                      // 0x0048(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Distance1;                                         // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        Distance2;                                         // 0x0058(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0060(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C8[0x7];                                     // 0x0061(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection) == 0x000068, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, SphereCenter) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::SphereCenter' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, SphereRadius) == 0x000048, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::SphereRadius' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, Distance1) == 0x000050, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::Distance1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, Distance2) == 0x000058, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::Distance2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection, ReturnValue) == 0x000060, "Member 'GeometryScriptLibrary_RayFunctions_GetRaySphereIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetRayStartEnd
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetRayStartEnd final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        StartDistance;                                     // 0x0030(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        EndDistance;                                       // 0x0038(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                StartPoint;                                        // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Endpoint;                                          // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetRayStartEnd");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd) == 0x000070, "Wrong size on GeometryScriptLibrary_RayFunctions_GetRayStartEnd");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetRayStartEnd::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd, StartDistance) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetRayStartEnd::StartDistance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd, EndDistance) == 0x000038, "Member 'GeometryScriptLibrary_RayFunctions_GetRayStartEnd::EndDistance' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd, StartPoint) == 0x000040, "Member 'GeometryScriptLibrary_RayFunctions_GetRayStartEnd::StartPoint' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetRayStartEnd, Endpoint) == 0x000058, "Member 'GeometryScriptLibrary_RayFunctions_GetRayStartEnd::Endpoint' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.GetTransformedRay
+// 0x00D0 (0x00D0 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_GetTransformedRay final 
+{
+public:
+	struct FRay                                   Ray;                                               // 0x0000(0x0030)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FTransform                             Transform;                                         // 0x0030(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInvert;                                           // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31C9[0x7];                                     // 0x0091(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRay                                   ReturnValue;                                       // 0x0098(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CA[0x8];                                     // 0x00C8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_GetTransformedRay) == 0x000010, "Wrong alignment on GeometryScriptLibrary_RayFunctions_GetTransformedRay");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_GetTransformedRay) == 0x0000D0, "Wrong size on GeometryScriptLibrary_RayFunctions_GetTransformedRay");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetTransformedRay, Ray) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_GetTransformedRay::Ray' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetTransformedRay, Transform) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_GetTransformedRay::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetTransformedRay, bInvert) == 0x000090, "Member 'GeometryScriptLibrary_RayFunctions_GetTransformedRay::bInvert' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_GetTransformedRay, ReturnValue) == 0x000098, "Member 'GeometryScriptLibrary_RayFunctions_GetTransformedRay::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.MakeRayFromPointDirection
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection final 
+{
+public:
+	struct FVector                                Origin;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Direction;                                         // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bDirectionIsNormalized;                            // 0x0030(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CB[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRay                                   ReturnValue;                                       // 0x0038(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection) == 0x000068, "Wrong size on GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection, Origin) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection::Origin' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection, Direction) == 0x000018, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection::Direction' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection, bDirectionIsNormalized) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection::bDirectionIsNormalized' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection, ReturnValue) == 0x000038, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPointDirection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_RayFunctions.MakeRayFromPoints
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_RayFunctions_MakeRayFromPoints final 
+{
+public:
+	struct FVector                                A;                                                 // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                B;                                                 // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRay                                   ReturnValue;                                       // 0x0030(0x0030)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_RayFunctions_MakeRayFromPoints) == 0x000008, "Wrong alignment on GeometryScriptLibrary_RayFunctions_MakeRayFromPoints");
+static_assert(sizeof(GeometryScriptLibrary_RayFunctions_MakeRayFromPoints) == 0x000060, "Wrong size on GeometryScriptLibrary_RayFunctions_MakeRayFromPoints");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPoints, A) == 0x000000, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPoints::A' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPoints, B) == 0x000018, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPoints::B' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_RayFunctions_MakeRayFromPoints, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_RayFunctions_MakeRayFromPoints::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindBoxBoxIntersection
+// 0x00B0 (0x00B0 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection final 
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bIsIntersecting;                                   // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CC[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FBox                                   ReturnValue;                                       // 0x0078(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection) == 0x0000B0, "Wrong size on GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection, Box1) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection::Box1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection, Box2) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection::Box2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection, bIsIntersecting) == 0x000070, "Member 'GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection::bIsIntersecting' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection, ReturnValue) == 0x000078, "Member 'GeometryScriptLibrary_BoxFunctions_FindBoxBoxIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.FindClosestPointOnBox
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsInside;                                         // 0x0050(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CD[0x7];                                     // 0x0051(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox) == 0x000070, "Wrong size on GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox, Point) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox, bIsInside) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox::bIsInside' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_BoxFunctions_FindClosestPointOnBox::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxBoxDistance
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance final 
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0070(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance) == 0x000078, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance, Box1) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance::Box1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance, Box2) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance::Box2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxBoxDistance::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCenterSize
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Center;                                            // 0x0038(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Dimensions;                                        // 0x0050(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize) == 0x000068, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize, Center) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize::Center' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize, Dimensions) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCenterSize::Dimensions' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxCorner
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxCorner final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         CornerIndex;                                       // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CE[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxCorner) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxCorner");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxCorner) == 0x000058, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxCorner");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCorner, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCorner::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCorner, CornerIndex) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCorner::CornerIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxCorner, ReturnValue) == 0x000040, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxCorner::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxFaceCenter
+// 0x0070 (0x0070 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         FaceIndex;                                         // 0x0038(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31CF[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                FaceNormal;                                        // 0x0040(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0058(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter) == 0x000070, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter, FaceIndex) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter::FaceIndex' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter, FaceNormal) == 0x000040, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter::FaceNormal' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxFaceCenter::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxPointDistance
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        ReturnValue;                                       // 0x0050(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance) == 0x000058, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance, Point) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxPointDistance::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetBoxVolumeArea
+// 0x0048 (0x0048 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	double                                        Volume;                                            // 0x0038(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SurfaceArea;                                       // 0x0040(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea) == 0x000048, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea, Volume) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea::Volume' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea, SurfaceArea) == 0x000040, "Member 'GeometryScriptLibrary_BoxFunctions_GetBoxVolumeArea::SurfaceArea' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetExpandedBox
+// 0x0088 (0x0088 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetExpandedBox final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                ExpandBy;                                          // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0050(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetExpandedBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetExpandedBox");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetExpandedBox) == 0x000088, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetExpandedBox");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetExpandedBox, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetExpandedBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetExpandedBox, ExpandBy) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_GetExpandedBox::ExpandBy' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetExpandedBox, ReturnValue) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_GetExpandedBox::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.GetTransformedBox
+// 0x00E0 (0x00E0 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_GetTransformedBox final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31D0[0x8];                                     // 0x0038(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             Transform;                                         // 0x0040(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x00A0(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31D1[0x8];                                     // 0x00D8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_GetTransformedBox) == 0x000010, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_GetTransformedBox");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_GetTransformedBox) == 0x0000E0, "Wrong size on GeometryScriptLibrary_BoxFunctions_GetTransformedBox");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetTransformedBox, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_GetTransformedBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetTransformedBox, Transform) == 0x000040, "Member 'GeometryScriptLibrary_BoxFunctions_GetTransformedBox::Transform' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_GetTransformedBox, ReturnValue) == 0x0000A0, "Member 'GeometryScriptLibrary_BoxFunctions_GetTransformedBox::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterExtents
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents final 
+{
+public:
+	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Extents;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents) == 0x000068, "Wrong size on GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents, Center) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents::Center' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents, Extents) == 0x000018, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents::Extents' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterExtents::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.MakeBoxFromCenterSize
+// 0x0068 (0x0068 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize final 
+{
+public:
+	struct FVector                                Center;                                            // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                Dimensions;                                        // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FBox                                   ReturnValue;                                       // 0x0030(0x0038)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize) == 0x000068, "Wrong size on GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize, Center) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize::Center' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize, Dimensions) == 0x000018, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize::Dimensions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize, ReturnValue) == 0x000030, "Member 'GeometryScriptLibrary_BoxFunctions_MakeBoxFromCenterSize::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxBoxIntersection
+// 0x0078 (0x0078 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection final 
+{
+public:
+	struct FBox                                   Box1;                                              // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FBox                                   Box2;                                              // 0x0038(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31D2[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection) == 0x000078, "Wrong size on GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection, Box1) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection::Box1' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection, Box2) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection::Box2' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection, ReturnValue) == 0x000070, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxBoxIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestBoxSphereIntersection
+// 0x0060 (0x0060 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                SphereCenter;                                      // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        SphereRadius;                                      // 0x0050(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0058(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31D3[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection) == 0x000060, "Wrong size on GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection, SphereCenter) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection::SphereCenter' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection, SphereRadius) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection::SphereRadius' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection, ReturnValue) == 0x000058, "Member 'GeometryScriptLibrary_BoxFunctions_TestBoxSphereIntersection::ReturnValue' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_BoxFunctions.TestPointInsideBox
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_BoxFunctions_TestPointInsideBox final 
+{
+public:
+	struct FBox                                   Box;                                               // 0x0000(0x0038)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FVector                                Point;                                             // 0x0038(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bConsiderOnBoxAsInside;                            // 0x0050(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0051(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_31D4[0x6];                                     // 0x0052(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox) == 0x000008, "Wrong alignment on GeometryScriptLibrary_BoxFunctions_TestPointInsideBox");
+static_assert(sizeof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox) == 0x000058, "Wrong size on GeometryScriptLibrary_BoxFunctions_TestPointInsideBox");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, Box) == 0x000000, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::Box' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, Point) == 0x000038, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::Point' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, bConsiderOnBoxAsInside) == 0x000050, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::bConsiderOnBoxAsInside' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_BoxFunctions_TestPointInsideBox, ReturnValue) == 0x000051, "Member 'GeometryScriptLibrary_BoxFunctions_TestPointInsideBox::ReturnValue' has a wrong offset!");
+
 // Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTexture2DAtUVPositions
 // 0x0058 (0x0058 - 0x0000)
 struct GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions final 
@@ -6247,6 +8622,25 @@ static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2D
 static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::SampleOptions' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::ColorList' has a wrong offset!");
 static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTexture2DAtUVPositions::Debug' has a wrong offset!");
+
+// Function GeometryScriptingCore.GeometryScriptLibrary_TextureMapFunctions.SampleTextureRenderTarget2DAtUVPositions
+// 0x0058 (0x0058 - 0x0000)
+struct GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions final 
+{
+public:
+	struct FGeometryScriptUVList                  UVList;                                            // 0x0000(0x0010)(Parm, NativeAccessSpecifierPublic)
+	class UTextureRenderTarget2D*                 Texture;                                           // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FGeometryScriptSampleTextureOptions    SampleOptions;                                     // 0x0018(0x0028)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FGeometryScriptColorList               ColorList;                                         // 0x0040(0x0010)(Parm, OutParm, NativeAccessSpecifierPublic)
+	class UGeometryScriptDebug*                   Debug;                                             // 0x0050(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000008, "Wrong alignment on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
+static_assert(sizeof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions) == 0x000058, "Wrong size on GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, UVList) == 0x000000, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::UVList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Texture) == 0x000010, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Texture' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, SampleOptions) == 0x000018, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::SampleOptions' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, ColorList) == 0x000040, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::ColorList' has a wrong offset!");
+static_assert(offsetof(GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions, Debug) == 0x000050, "Member 'GeometryScriptLibrary_TextureMapFunctions_SampleTextureRenderTarget2DAtUVPositions::Debug' has a wrong offset!");
 
 // Function GeometryScriptingCore.GeometryScriptLibrary_VectorMathFunctions.ConstantScalarMultiply
 // 0x0028 (0x0028 - 0x0000)

@@ -19,26 +19,26 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MAP_CharacterCreation_LevelInstance_1.MAP_CharacterCreation_C
-// 0x0080 (0x0328 - 0x02A8)
+// 0x0080 (0x0330 - 0x02B0)
 class AMAP_CharacterCreation_C final  : public ALevelScriptActor
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02A8(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class FName                                   CinematicActorKeyName_Intro;                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CinematicActorKeyName_Outro;                       // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class ABP_CinematicSequenceActor_C*           BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty; // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_CinematicSequenceActor_C*           BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ABP_ValeriaCharacter_C*                 BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty; // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty; // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty; // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty; // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty; // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty; // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty; // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ANiagaraActor*                          NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty; // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty; // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty; // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class ACineCameraActor*                       CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty; // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02B0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class FName                                   CinematicActorKeyName_Intro;                       // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CinematicActorKeyName_Outro;                       // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class ABP_CinematicSequenceActor_C*           BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_CinematicSequenceActor_C*           BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty; // 0x02D0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ABP_ValeriaCharacter_C*                 BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty; // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty; // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty; // 0x02E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty; // 0x02F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty; // 0x02F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty; // 0x0300(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty; // 0x0308(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ANiagaraActor*                          NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty; // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty; // 0x0318(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty; // 0x0320(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class ACineCameraActor*                       CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty; // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_MAP_CharacterCreation(int32 EntryPoint, EEndPlayReason K2Node_Event_EndPlayReason, class APlayerController* CallFunc_GetPlayerController_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue_1, class UCharacterCustomManager* CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue, class UCharacterCustomManager* CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue_1, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class AVAL_CharacterRenderStudio* CallFunc_GetCharacterRenderStudio_ReturnValue, class AVAL_CharacterRenderStudio* CallFunc_GetCharacterRenderStudio_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsValid_ReturnValue_3, bool CallFunc_IsValid_ReturnValue_4, bool CallFunc_IsValid_ReturnValue_5, bool CallFunc_IsPackagedForDistribution_ReturnValue);
@@ -63,23 +63,23 @@ public:
 	}
 };
 static_assert(alignof(AMAP_CharacterCreation_C) == 0x000008, "Wrong alignment on AMAP_CharacterCreation_C");
-static_assert(sizeof(AMAP_CharacterCreation_C) == 0x000328, "Wrong size on AMAP_CharacterCreation_C");
-static_assert(offsetof(AMAP_CharacterCreation_C, UberGraphFrame) == 0x0002A8, "Member 'AMAP_CharacterCreation_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CinematicActorKeyName_Intro) == 0x0002B0, "Member 'AMAP_CharacterCreation_C::CinematicActorKeyName_Intro' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CinematicActorKeyName_Outro) == 0x0002B8, "Member 'AMAP_CharacterCreation_C::CinematicActorKeyName_Outro' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty) == 0x0002C0, "Member 'AMAP_CharacterCreation_C::BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty) == 0x0002C8, "Member 'AMAP_CharacterCreation_C::BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty) == 0x0002D0, "Member 'AMAP_CharacterCreation_C::BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty) == 0x0002D8, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty) == 0x0002E0, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty) == 0x0002E8, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty) == 0x0002F0, "Member 'AMAP_CharacterCreation_C::CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty) == 0x0002F8, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty) == 0x000300, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty) == 0x000308, "Member 'AMAP_CharacterCreation_C::NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty) == 0x000310, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty) == 0x000318, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_C, CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty) == 0x000320, "Member 'AMAP_CharacterCreation_C::CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(sizeof(AMAP_CharacterCreation_C) == 0x000330, "Wrong size on AMAP_CharacterCreation_C");
+static_assert(offsetof(AMAP_CharacterCreation_C, UberGraphFrame) == 0x0002B0, "Member 'AMAP_CharacterCreation_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CinematicActorKeyName_Intro) == 0x0002B8, "Member 'AMAP_CharacterCreation_C::CinematicActorKeyName_Intro' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CinematicActorKeyName_Outro) == 0x0002C0, "Member 'AMAP_CharacterCreation_C::CinematicActorKeyName_Outro' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty) == 0x0002C8, "Member 'AMAP_CharacterCreation_C::BP_CinematicSequenceActor_Outro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty) == 0x0002D0, "Member 'AMAP_CharacterCreation_C::BP_CinematicSequenceActor_Intro_ExecuteUbergraph_MAP_CharacterCreation_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty) == 0x0002D8, "Member 'AMAP_CharacterCreation_C::BP_ValeriaCharacter_2_GetCharacter_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty) == 0x0002E0, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetDefaultCameraActor_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty) == 0x0002E8, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_0_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty) == 0x0002F0, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty) == 0x0002F8, "Member 'AMAP_CharacterCreation_C::CineCameraActor_50_GetAllCameraActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty) == 0x000300, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Face_Male_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty) == 0x000308, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Face_Main_GetCameraActorForCosmeticAsset_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty) == 0x000310, "Member 'AMAP_CharacterCreation_C::NiagaraActor_1_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty) == 0x000318, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_0_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty) == 0x000320, "Member 'AMAP_CharacterCreation_C::CharacterSelect_Body_Main_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_C, CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty) == 0x000328, "Member 'AMAP_CharacterCreation_C::CineCameraActor_50_GetAllTaggedActors_MERGED_RefProperty' has a wrong offset!");
 
 }
 

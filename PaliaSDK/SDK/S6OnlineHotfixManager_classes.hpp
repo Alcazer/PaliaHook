@@ -17,11 +17,11 @@ namespace SDK
 {
 
 // Class S6OnlineHotfixManager.S6OnlineHotfixManager
-// 0x0010 (0x0248 - 0x0238)
+// 0x0010 (0x0278 - 0x0268)
 class US6OnlineHotfixManager final  : public UOnlineHotfixManager
 {
 public:
-	uint8                                         Pad_1E49[0x10];                                    // 0x0238(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32D9[0x10];                                    // 0x0268(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -34,7 +34,7 @@ public:
 	}
 };
 static_assert(alignof(US6OnlineHotfixManager) == 0x000008, "Wrong alignment on US6OnlineHotfixManager");
-static_assert(sizeof(US6OnlineHotfixManager) == 0x000248, "Wrong size on US6OnlineHotfixManager");
+static_assert(sizeof(US6OnlineHotfixManager) == 0x000278, "Wrong size on US6OnlineHotfixManager");
 
 }
 

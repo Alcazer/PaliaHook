@@ -10,16 +10,16 @@
 
 #include "Basic.hpp"
 
-#include "Engine_structs.hpp"
 #include "LevelSequence_classes.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK
 {
 
-// BlueprintGeneratedClass Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010 (Director BP)_C
+// BlueprintGeneratedClass Seq_CharSelect_Outro_010.Seq_CharSelect_Outro_010_DirectorBP_C
 // 0x0008 (0x0040 - 0x0038)
-class USeq_CharSelect_Outro_010__Director_BP__C final  : public ULevelSequenceDirector
+class USeq_CharSelect_Outro_010_DirectorBP_C final  : public ULevelSequenceDirector
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0038(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
@@ -32,16 +32,16 @@ public:
 public:
 	static class UClass* StaticClass()
 	{
-		return StaticBPGeneratedClassImpl<"Seq_CharSelect_Outro_010 (Director BP)_C">();
+		return StaticBPGeneratedClassImpl<"Seq_CharSelect_Outro_010_DirectorBP_C">();
 	}
-	static class USeq_CharSelect_Outro_010__Director_BP__C* GetDefaultObj()
+	static class USeq_CharSelect_Outro_010_DirectorBP_C* GetDefaultObj()
 	{
-		return GetDefaultObjImpl<USeq_CharSelect_Outro_010__Director_BP__C>();
+		return GetDefaultObjImpl<USeq_CharSelect_Outro_010_DirectorBP_C>();
 	}
 };
-static_assert(alignof(USeq_CharSelect_Outro_010__Director_BP__C) == 0x000008, "Wrong alignment on USeq_CharSelect_Outro_010__Director_BP__C");
-static_assert(sizeof(USeq_CharSelect_Outro_010__Director_BP__C) == 0x000040, "Wrong size on USeq_CharSelect_Outro_010__Director_BP__C");
-static_assert(offsetof(USeq_CharSelect_Outro_010__Director_BP__C, UberGraphFrame) == 0x000038, "Member 'USeq_CharSelect_Outro_010__Director_BP__C::UberGraphFrame' has a wrong offset!");
+static_assert(alignof(USeq_CharSelect_Outro_010_DirectorBP_C) == 0x000008, "Wrong alignment on USeq_CharSelect_Outro_010_DirectorBP_C");
+static_assert(sizeof(USeq_CharSelect_Outro_010_DirectorBP_C) == 0x000040, "Wrong size on USeq_CharSelect_Outro_010_DirectorBP_C");
+static_assert(offsetof(USeq_CharSelect_Outro_010_DirectorBP_C, UberGraphFrame) == 0x000038, "Member 'USeq_CharSelect_Outro_010_DirectorBP_C::UberGraphFrame' has a wrong offset!");
 
 }
 

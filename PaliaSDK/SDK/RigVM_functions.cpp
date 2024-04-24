@@ -50,10 +50,11 @@ int32 URigVM::AddRigVMFunction(class UScriptStruct* InRigVMStruct, class FName& 
 // Function RigVM.RigVM.Execute
 // (Native, Public, HasOutParams, BlueprintCallable)
 // Parameters:
+// struct FRigVMExtendedExecuteContext     Context                                                (Parm, OutParm, NativeAccessSpecifierPublic)
 // class FName                             InEntryName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-bool URigVM::Execute(class FName& InEntryName)
+bool URigVM::Execute(struct FRigVMExtendedExecuteContext* Context, class FName& InEntryName)
 {
 	static class UFunction* Func = nullptr;
 
@@ -70,6 +71,9 @@ bool URigVM::Execute(class FName& InEntryName)
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+
+	if (Context != nullptr)
+		*Context = std::move(Parms.Context);
 
 	return Parms.ReturnValue;
 }
@@ -718,6 +722,56 @@ struct FRigVMStatistics URigVM::GetStatistics() const
 }
 
 
+// Function RigVM.DataAssetLink.SetDataAsset
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// class UDataAsset*                       InDataAsset                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void UDataAssetLink::SetDataAsset(class UDataAsset* InDataAsset)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataAssetLink", "SetDataAsset");
+
+	Params::DataAssetLink_SetDataAsset Parms{};
+
+	Parms.InDataAsset = InDataAsset;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.DataAssetLink.GetDataAsset
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class UDataAsset*                       ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UDataAsset* UDataAssetLink::GetDataAsset() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("DataAssetLink", "GetDataAsset");
+
+	Params::DataAssetLink_GetDataAsset Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function RigVM.RigVMUserWorkflowOptions.ReportError
 // (Final, Native, Public, BlueprintCallable)
 // Parameters:
@@ -831,6 +885,584 @@ bool URigVMUserWorkflowOptions::RequiresDialog() const
 		Func = Class->GetFunction("RigVMUserWorkflowOptions", "RequiresDialog");
 
 	Params::RigVMUserWorkflowOptions_RequiresDialog Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.FindRigVMHosts
+// (Final, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// class UObject*                          Param_Outer                                            (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class URigVMHost>           OptionalClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<class URigVMHost*>               ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class URigVMHost*> URigVMHost::FindRigVMHosts(class UObject* Param_Outer, TSubclassOf<class URigVMHost> OptionalClass)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("RigVMHost", "FindRigVMHosts");
+
+	Params::RigVMHost_FindRigVMHosts Parms{};
+
+	Parms.Param_Outer = Param_Outer;
+	Parms.OptionalClass = OptionalClass;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.Execute
+// (Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::Execute(class FName& InEventName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "Execute");
+
+	Params::RigVMHost_Execute Parms{};
+
+	Parms.InEventName = InEventName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.ExecuteEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::ExecuteEvent(class FName& InEventName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "ExecuteEvent");
+
+	Params::RigVMHost_ExecuteEvent Parms{};
+
+	Parms.InEventName = InEventName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetExtendedExecuteContext
+// (Native, Public, BlueprintCallable)
+// Parameters:
+// struct FRigVMExtendedExecuteContext     ReturnValue                                            (Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+
+struct FRigVMExtendedExecuteContext URigVMHost::GetExtendedExecuteContext()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetExtendedExecuteContext");
+
+	Params::RigVMHost_GetExtendedExecuteContext Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetVM
+// (Final, Native, Public, BlueprintCallable, BlueprintPure)
+// Parameters:
+// class URigVM*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class URigVM* URigVMHost::GetVM()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetVM");
+
+	Params::RigVMHost_GetVM Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.RemoveRunOnceEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::RemoveRunOnceEvent(class FName& InEventName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "RemoveRunOnceEvent");
+
+	Params::RigVMHost_RemoveRunOnceEvent Parms{};
+
+	Parms.InEventName = InEventName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.RequestInit
+// (Native, Public, BlueprintCallable)
+
+void URigVMHost::RequestInit()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "RequestInit");
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, nullptr);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.RequestRunOnceEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// int32                                   InEventIndex                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigVMHost::RequestRunOnceEvent(class FName& InEventName, int32 InEventIndex)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "RequestRunOnceEvent");
+
+	Params::RigVMHost_RequestRunOnceEvent Parms{};
+
+	Parms.InEventName = InEventName;
+	Parms.InEventIndex = InEventIndex;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.SetAbsoluteAndDeltaTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigVMHost::SetAbsoluteAndDeltaTime(float InAbsoluteTime, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SetAbsoluteAndDeltaTime");
+
+	Params::RigVMHost_SetAbsoluteAndDeltaTime Parms{};
+
+	Parms.InAbsoluteTime = InAbsoluteTime;
+	Parms.InDeltaTime = InDeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.SetAbsoluteTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InAbsoluteTime                                         (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    InSetDeltaTimeZero                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigVMHost::SetAbsoluteTime(float InAbsoluteTime, bool InSetDeltaTimeZero)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SetAbsoluteTime");
+
+	Params::RigVMHost_SetAbsoluteTime Parms{};
+
+	Parms.InAbsoluteTime = InAbsoluteTime;
+	Parms.InSetDeltaTimeZero = InSetDeltaTimeZero;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.SetDeltaTime
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InDeltaTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigVMHost::SetDeltaTime(float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SetDeltaTime");
+
+	Params::RigVMHost_SetDeltaTime Parms{};
+
+	Parms.InDeltaTime = InDeltaTime;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.SetFramesPerSecond
+// (Final, Native, Public, BlueprintCallable)
+// Parameters:
+// float                                   InFramesPerSecond                                      (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void URigVMHost::SetFramesPerSecond(float InFramesPerSecond)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SetFramesPerSecond");
+
+	Params::RigVMHost_SetFramesPerSecond Parms{};
+
+	Parms.InFramesPerSecond = InFramesPerSecond;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function RigVM.RigVMHost.SetVariableFromString
+// (Final, Native, Public, HasOutParams, BlueprintCallable)
+// Parameters:
+// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           InValue                                                (Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::SetVariableFromString(class FName& InVariableName, const class FString& InValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SetVariableFromString");
+
+	Params::RigVMHost_SetVariableFromString Parms{};
+
+	Parms.InVariableName = InVariableName;
+	Parms.InValue = std::move(InValue);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.CanExecute
+// (Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::CanExecute() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "CanExecute");
+
+	Params::RigVMHost_CanExecute Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetAbsoluteTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float URigVMHost::GetAbsoluteTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetAbsoluteTime");
+
+	Params::RigVMHost_GetAbsoluteTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetCurrentFramesPerSecond
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float URigVMHost::GetCurrentFramesPerSecond() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetCurrentFramesPerSecond");
+
+	Params::RigVMHost_GetCurrentFramesPerSecond Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetDeltaTime
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// float                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+float URigVMHost::GetDeltaTime() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetDeltaTime");
+
+	Params::RigVMHost_GetDeltaTime Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetScriptAccessibleVariables
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// TArray<class FName>                     ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+
+TArray<class FName> URigVMHost::GetScriptAccessibleVariables() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetScriptAccessibleVariables");
+
+	Params::RigVMHost_GetScriptAccessibleVariables Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetSupportedEvents
+// (Final, Native, Public, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// const TArray<class FName>               ReturnValue                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+
+const TArray<class FName> URigVMHost::GetSupportedEvents() const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetSupportedEvents");
+
+	Params::RigVMHost_GetSupportedEvents Parms{};
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetVariableAsString
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FString                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FString URigVMHost::GetVariableAsString(class FName& InVariableName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetVariableAsString");
+
+	Params::RigVMHost_GetVariableAsString Parms{};
+
+	Parms.InVariableName = InVariableName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.GetVariableType
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InVariableName                                         (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class FName URigVMHost::GetVariableType(class FName& InVariableName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "GetVariableType");
+
+	Params::RigVMHost_GetVariableType Parms{};
+
+	Parms.InVariableName = InVariableName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function RigVM.RigVMHost.SupportsEvent
+// (Final, Native, Public, HasOutParams, BlueprintCallable, BlueprintPure, Const)
+// Parameters:
+// class FName                             InEventName                                            (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+bool URigVMHost::SupportsEvent(class FName& InEventName) const
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("RigVMHost", "SupportsEvent");
+
+	Params::RigVMHost_SupportsEvent Parms{};
+
+	Parms.InEventName = InEventName;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

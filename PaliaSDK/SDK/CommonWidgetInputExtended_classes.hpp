@@ -10,26 +10,26 @@
 
 #include "Basic.hpp"
 
+#include "CommonUI_classes.hpp"
 #include "CommonInput_structs.hpp"
 #include "S6EnhancedInputExtended_structs.hpp"
-#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // Class CommonWidgetInputExtended.CommonActivatableWidgetInputExtended
-// 0x0108 (0x04E0 - 0x03D8)
+// 0x0100 (0x0510 - 0x0410)
 class UCommonActivatableWidgetInputExtended : public UCommonActivatableWidget
 {
 public:
-	TMap<class UInputAction*, float>              StartOrCompleteSecondsMap;                         // 0x03D8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x0428(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsPersistentBinding;                              // 0x0478(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECommonInputMode                              InputModeOverride;                                 // 0x0479(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1880[0x16];                                    // 0x047A(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FInputMappingPriorityData              InputMappingData;                                  // 0x0490(0x0040)(Edit, Protected, NativeAccessSpecifierProtected)
-	TArray<class UInputMappingContext*>           AdditionInputMappings;                             // 0x04D0(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
+	TMap<class UInputAction*, float>              StartOrCompleteSecondsMap;                         // 0x0410(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x0460(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsPersistentBinding;                              // 0x04B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECommonInputMode                              InputModeOverride;                                 // 0x04B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DD1[0x16];                                    // 0x04B2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FInputMappingPriorityData              InputMappingData;                                  // 0x04C8(0x0038)(Edit, Protected, NativeAccessSpecifierProtected)
+	TArray<class UInputMappingContext*>           AdditionInputMappings;                             // 0x0500(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
 public:
 	static class UClass* StaticClass()
@@ -42,16 +42,16 @@ public:
 	}
 };
 static_assert(alignof(UCommonActivatableWidgetInputExtended) == 0x000008, "Wrong alignment on UCommonActivatableWidgetInputExtended");
-static_assert(sizeof(UCommonActivatableWidgetInputExtended) == 0x0004E0, "Wrong size on UCommonActivatableWidgetInputExtended");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, StartOrCompleteSecondsMap) == 0x0003D8, "Member 'UCommonActivatableWidgetInputExtended::StartOrCompleteSecondsMap' has a wrong offset!");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, StartFlagMap) == 0x000428, "Member 'UCommonActivatableWidgetInputExtended::StartFlagMap' has a wrong offset!");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, bIsPersistentBinding) == 0x000478, "Member 'UCommonActivatableWidgetInputExtended::bIsPersistentBinding' has a wrong offset!");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, InputModeOverride) == 0x000479, "Member 'UCommonActivatableWidgetInputExtended::InputModeOverride' has a wrong offset!");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, InputMappingData) == 0x000490, "Member 'UCommonActivatableWidgetInputExtended::InputMappingData' has a wrong offset!");
-static_assert(offsetof(UCommonActivatableWidgetInputExtended, AdditionInputMappings) == 0x0004D0, "Member 'UCommonActivatableWidgetInputExtended::AdditionInputMappings' has a wrong offset!");
+static_assert(sizeof(UCommonActivatableWidgetInputExtended) == 0x000510, "Wrong size on UCommonActivatableWidgetInputExtended");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, StartOrCompleteSecondsMap) == 0x000410, "Member 'UCommonActivatableWidgetInputExtended::StartOrCompleteSecondsMap' has a wrong offset!");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, StartFlagMap) == 0x000460, "Member 'UCommonActivatableWidgetInputExtended::StartFlagMap' has a wrong offset!");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, bIsPersistentBinding) == 0x0004B0, "Member 'UCommonActivatableWidgetInputExtended::bIsPersistentBinding' has a wrong offset!");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, InputModeOverride) == 0x0004B1, "Member 'UCommonActivatableWidgetInputExtended::InputModeOverride' has a wrong offset!");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, InputMappingData) == 0x0004C8, "Member 'UCommonActivatableWidgetInputExtended::InputMappingData' has a wrong offset!");
+static_assert(offsetof(UCommonActivatableWidgetInputExtended, AdditionInputMappings) == 0x000500, "Member 'UCommonActivatableWidgetInputExtended::AdditionInputMappings' has a wrong offset!");
 
 // Class CommonWidgetInputExtended.CommonButtonBaseInputExtended
-// 0x0000 (0x14F0 - 0x14F0)
+// 0x0000 (0x1540 - 0x1540)
 class UCommonButtonBaseInputExtended : public UCommonButtonBase
 {
 public:
@@ -65,18 +65,18 @@ public:
 	}
 };
 static_assert(alignof(UCommonButtonBaseInputExtended) == 0x000010, "Wrong alignment on UCommonButtonBaseInputExtended");
-static_assert(sizeof(UCommonButtonBaseInputExtended) == 0x0014F0, "Wrong size on UCommonButtonBaseInputExtended");
+static_assert(sizeof(UCommonButtonBaseInputExtended) == 0x001540, "Wrong size on UCommonButtonBaseInputExtended");
 
 // Class CommonWidgetInputExtended.CommonUserWidgetInputExtended
-// 0x00B8 (0x0358 - 0x02A0)
+// 0x00B8 (0x03A0 - 0x02E8)
 class UCommonUserWidgetInputExtended : public UCommonUserWidget
 {
 public:
-	TMap<class UInputAction*, float>              StartOrCompleteSecondsMap;                         // 0x02A0(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x02F0(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
-	bool                                          bIsPersistentBinding;                              // 0x0340(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	ECommonInputMode                              InputModeOverride;                                 // 0x0341(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1881[0x16];                                    // 0x0342(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TMap<class UInputAction*, float>              StartOrCompleteSecondsMap;                         // 0x02E8(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x0338(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
+	bool                                          bIsPersistentBinding;                              // 0x0388(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	ECommonInputMode                              InputModeOverride;                                 // 0x0389(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1DD2[0x16];                                    // 0x038A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -89,11 +89,11 @@ public:
 	}
 };
 static_assert(alignof(UCommonUserWidgetInputExtended) == 0x000008, "Wrong alignment on UCommonUserWidgetInputExtended");
-static_assert(sizeof(UCommonUserWidgetInputExtended) == 0x000358, "Wrong size on UCommonUserWidgetInputExtended");
-static_assert(offsetof(UCommonUserWidgetInputExtended, StartOrCompleteSecondsMap) == 0x0002A0, "Member 'UCommonUserWidgetInputExtended::StartOrCompleteSecondsMap' has a wrong offset!");
-static_assert(offsetof(UCommonUserWidgetInputExtended, StartFlagMap) == 0x0002F0, "Member 'UCommonUserWidgetInputExtended::StartFlagMap' has a wrong offset!");
-static_assert(offsetof(UCommonUserWidgetInputExtended, bIsPersistentBinding) == 0x000340, "Member 'UCommonUserWidgetInputExtended::bIsPersistentBinding' has a wrong offset!");
-static_assert(offsetof(UCommonUserWidgetInputExtended, InputModeOverride) == 0x000341, "Member 'UCommonUserWidgetInputExtended::InputModeOverride' has a wrong offset!");
+static_assert(sizeof(UCommonUserWidgetInputExtended) == 0x0003A0, "Wrong size on UCommonUserWidgetInputExtended");
+static_assert(offsetof(UCommonUserWidgetInputExtended, StartOrCompleteSecondsMap) == 0x0002E8, "Member 'UCommonUserWidgetInputExtended::StartOrCompleteSecondsMap' has a wrong offset!");
+static_assert(offsetof(UCommonUserWidgetInputExtended, StartFlagMap) == 0x000338, "Member 'UCommonUserWidgetInputExtended::StartFlagMap' has a wrong offset!");
+static_assert(offsetof(UCommonUserWidgetInputExtended, bIsPersistentBinding) == 0x000388, "Member 'UCommonUserWidgetInputExtended::bIsPersistentBinding' has a wrong offset!");
+static_assert(offsetof(UCommonUserWidgetInputExtended, InputModeOverride) == 0x000389, "Member 'UCommonUserWidgetInputExtended::InputModeOverride' has a wrong offset!");
 
 }
 

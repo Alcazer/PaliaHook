@@ -17,12 +17,12 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MAP_CharacterCreation_Sequence_LevelInstance_2.MAP_CharacterCreation_Sequence_C
-// 0x0010 (0x02B8 - 0x02A8)
+// 0x0010 (0x02C0 - 0x02B0)
 class AMAP_CharacterCreation_Sequence_C final  : public ALevelScriptActor
 {
 public:
-	class FName                                   CinematicActorKeyName_Intro;                       // 0x02A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class FName                                   CinematicActorKeyName_Outro;                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CinematicActorKeyName_Intro;                       // 0x02B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class FName                                   CinematicActorKeyName_Outro;                       // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -35,9 +35,9 @@ public:
 	}
 };
 static_assert(alignof(AMAP_CharacterCreation_Sequence_C) == 0x000008, "Wrong alignment on AMAP_CharacterCreation_Sequence_C");
-static_assert(sizeof(AMAP_CharacterCreation_Sequence_C) == 0x0002B8, "Wrong size on AMAP_CharacterCreation_Sequence_C");
-static_assert(offsetof(AMAP_CharacterCreation_Sequence_C, CinematicActorKeyName_Intro) == 0x0002A8, "Member 'AMAP_CharacterCreation_Sequence_C::CinematicActorKeyName_Intro' has a wrong offset!");
-static_assert(offsetof(AMAP_CharacterCreation_Sequence_C, CinematicActorKeyName_Outro) == 0x0002B0, "Member 'AMAP_CharacterCreation_Sequence_C::CinematicActorKeyName_Outro' has a wrong offset!");
+static_assert(sizeof(AMAP_CharacterCreation_Sequence_C) == 0x0002C0, "Wrong size on AMAP_CharacterCreation_Sequence_C");
+static_assert(offsetof(AMAP_CharacterCreation_Sequence_C, CinematicActorKeyName_Intro) == 0x0002B0, "Member 'AMAP_CharacterCreation_Sequence_C::CinematicActorKeyName_Intro' has a wrong offset!");
+static_assert(offsetof(AMAP_CharacterCreation_Sequence_C, CinematicActorKeyName_Outro) == 0x0002B8, "Member 'AMAP_CharacterCreation_Sequence_C::CinematicActorKeyName_Outro' has a wrong offset!");
 
 }
 

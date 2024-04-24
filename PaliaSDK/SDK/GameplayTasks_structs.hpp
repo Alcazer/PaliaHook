@@ -25,18 +25,6 @@ enum class ETaskResourceOverlapPolicy : uint8
 	ETaskResourceOverlapPolicy_MAX           = 4,
 };
 
-// Enum GameplayTasks.EGameplayTaskRunResult
-// NumValues: 0x0006
-enum class EGameplayTaskRunResult : uint8
-{
-	Error                                    = 0,
-	Failed                                   = 1,
-	Success_Paused                           = 2,
-	Success_Active                           = 3,
-	Success_Finished                         = 4,
-	EGameplayTaskRunResult_MAX               = 5,
-};
-
 // Enum GameplayTasks.EGameplayTaskState
 // NumValues: 0x0006
 enum class EGameplayTaskState : uint8
@@ -49,12 +37,24 @@ enum class EGameplayTaskState : uint8
 	EGameplayTaskState_MAX                   = 5,
 };
 
+// Enum GameplayTasks.EGameplayTaskRunResult
+// NumValues: 0x0006
+enum class EGameplayTaskRunResult : uint8
+{
+	Error                                    = 0,
+	Failed                                   = 1,
+	Success_Paused                           = 2,
+	Success_Active                           = 3,
+	Success_Finished                         = 4,
+	EGameplayTaskRunResult_MAX               = 5,
+};
+
 // ScriptStruct GameplayTasks.GameplayResourceSet
 // 0x0002 (0x0002 - 0x0000)
 struct alignas(0x02) FGameplayResourceSet final 
 {
 public:
-	uint8                                         Pad_100A[0x2];                                     // 0x0000(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BF5[0x2];                                     // 0x0000(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameplayResourceSet) == 0x000002, "Wrong alignment on FGameplayResourceSet");
 static_assert(sizeof(FGameplayResourceSet) == 0x000002, "Wrong size on FGameplayResourceSet");

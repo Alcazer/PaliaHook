@@ -16,6 +16,74 @@
 namespace SDK
 {
 
+// Class TypedElementFramework.TypedElementDataStorageCompatibilityInterface
+// 0x0000 (0x0028 - 0x0028)
+class ITypedElementDataStorageCompatibilityInterface final  : public IInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementDataStorageCompatibilityInterface">();
+	}
+	static class ITypedElementDataStorageCompatibilityInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ITypedElementDataStorageCompatibilityInterface>();
+	}
+};
+static_assert(alignof(ITypedElementDataStorageCompatibilityInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageCompatibilityInterface");
+static_assert(sizeof(ITypedElementDataStorageCompatibilityInterface) == 0x000028, "Wrong size on ITypedElementDataStorageCompatibilityInterface");
+
+// Class TypedElementFramework.TypedElementDataStorageFactory
+// 0x0000 (0x0028 - 0x0028)
+class UTypedElementDataStorageFactory final  : public UObject
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementDataStorageFactory">();
+	}
+	static class UTypedElementDataStorageFactory* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<UTypedElementDataStorageFactory>();
+	}
+};
+static_assert(alignof(UTypedElementDataStorageFactory) == 0x000008, "Wrong alignment on UTypedElementDataStorageFactory");
+static_assert(sizeof(UTypedElementDataStorageFactory) == 0x000028, "Wrong size on UTypedElementDataStorageFactory");
+
+// Class TypedElementFramework.TypedElementDataStorageInterface
+// 0x0000 (0x0028 - 0x0028)
+class ITypedElementDataStorageInterface final  : public IInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementDataStorageInterface">();
+	}
+	static class ITypedElementDataStorageInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ITypedElementDataStorageInterface>();
+	}
+};
+static_assert(alignof(ITypedElementDataStorageInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageInterface");
+static_assert(sizeof(ITypedElementDataStorageInterface) == 0x000028, "Wrong size on ITypedElementDataStorageInterface");
+
+// Class TypedElementFramework.TypedElementDataStorageUiInterface
+// 0x0000 (0x0028 - 0x0028)
+class ITypedElementDataStorageUiInterface final  : public IInterface
+{
+public:
+	static class UClass* StaticClass()
+	{
+		return StaticClassImpl<"TypedElementDataStorageUiInterface">();
+	}
+	static class ITypedElementDataStorageUiInterface* GetDefaultObj()
+	{
+		return GetDefaultObjImpl<ITypedElementDataStorageUiInterface>();
+	}
+};
+static_assert(alignof(ITypedElementDataStorageUiInterface) == 0x000008, "Wrong alignment on ITypedElementDataStorageUiInterface");
+static_assert(sizeof(ITypedElementDataStorageUiInterface) == 0x000028, "Wrong size on ITypedElementDataStorageUiInterface");
+
 // Class TypedElementFramework.TypedElementHandleLibrary
 // 0x0000 (0x0028 - 0x0028)
 class UTypedElementHandleLibrary final  : public UObject
@@ -96,11 +164,11 @@ static_assert(alignof(ITypedElementCounterInterface) == 0x000008, "Wrong alignme
 static_assert(sizeof(ITypedElementCounterInterface) == 0x000028, "Wrong size on ITypedElementCounterInterface");
 
 // Class TypedElementFramework.TypedElementRegistry
-// 0x0920 (0x0948 - 0x0028)
+// 0x0950 (0x0978 - 0x0028)
 class UTypedElementRegistry final  : public UObject
 {
 public:
-	uint8                                         Pad_36E4[0x920];                                   // 0x0028(0x0920)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1263[0x950];                                   // 0x0028(0x0950)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UTypedElementRegistry* GetInstance();
@@ -118,7 +186,7 @@ public:
 	}
 };
 static_assert(alignof(UTypedElementRegistry) == 0x000008, "Wrong alignment on UTypedElementRegistry");
-static_assert(sizeof(UTypedElementRegistry) == 0x000948, "Wrong size on UTypedElementRegistry");
+static_assert(sizeof(UTypedElementRegistry) == 0x000978, "Wrong size on UTypedElementRegistry");
 
 // Class TypedElementFramework.TestTypedElementInterfaceA
 // 0x0000 (0x0028 - 0x0028)
@@ -186,7 +254,7 @@ static_assert(sizeof(ITestTypedElementInterfaceC) == 0x000028, "Wrong size on IT
 class UTestTypedElementInterfaceA_ImplTyped final  : public UObject
 {
 public:
-	uint8                                         Pad_36E8[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1267[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -206,7 +274,7 @@ static_assert(sizeof(UTestTypedElementInterfaceA_ImplTyped) == 0x000030, "Wrong 
 class UTestTypedElementInterfaceA_ImplUntyped final  : public UObject
 {
 public:
-	uint8                                         Pad_36E9[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1268[0x8];                                     // 0x0028(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -226,7 +294,7 @@ static_assert(sizeof(UTestTypedElementInterfaceA_ImplUntyped) == 0x000030, "Wron
 class UTestTypedElementInterfaceBAndC_Typed final  : public UObject
 {
 public:
-	uint8                                         Pad_36EA[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1269[0x10];                                    // 0x0028(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

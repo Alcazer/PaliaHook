@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function ChaosCloth.ChaosClothingInteractor.ResetAndTeleport
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bReset                                                 (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bTeleport                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -45,7 +45,7 @@ void UChaosClothingInteractor::ResetAndTeleport(bool bReset, bool bTeleport)
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetAerodynamics
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // float                                   DragCoefficient                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   LiftCoefficient                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -74,7 +74,7 @@ void UChaosClothingInteractor::SetAerodynamics(float DragCoefficient, float Lift
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetAnimDrive
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector2D                        AnimDriveStiffness                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        AnimDriveDamping                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -101,7 +101,7 @@ void UChaosClothingInteractor::SetAnimDrive(const struct FVector2D& AnimDriveSti
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetAnimDriveLinear
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   AnimDriveStiffness                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -126,7 +126,7 @@ void UChaosClothingInteractor::SetAnimDriveLinear(float AnimDriveStiffness)
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetBackstop
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // bool                                    bEnabled                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -151,7 +151,7 @@ void UChaosClothingInteractor::SetBackstop(bool bEnabled)
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetCollision
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   CollisionThickness                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   FrictionCoefficient                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -182,7 +182,7 @@ void UChaosClothingInteractor::SetCollision(float CollisionThickness, float Fric
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetDamping
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   DampingCoefficient                                     (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   LocalDampingCoefficient                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -209,7 +209,7 @@ void UChaosClothingInteractor::SetDamping(float DampingCoefficient, float LocalD
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetGravity
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // float                                   GravityScale                                           (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIsGravityOverridden                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -238,7 +238,7 @@ void UChaosClothingInteractor::SetGravity(float GravityScale, bool bIsGravityOve
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetLongRangeAttachment
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector2D                        TetherStiffness                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        TetherScale                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -265,7 +265,7 @@ void UChaosClothingInteractor::SetLongRangeAttachment(const struct FVector2D& Te
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetLongRangeAttachmentLinear
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   TetherStiffness                                        (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   TetherScale                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -292,7 +292,7 @@ void UChaosClothingInteractor::SetLongRangeAttachmentLinear(float TetherStiffnes
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetMaterial
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector2D                        EdgeStiffness                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        BendingStiffness                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -321,7 +321,7 @@ void UChaosClothingInteractor::SetMaterial(const struct FVector2D& EdgeStiffness
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetMaterialLinear
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // float                                   EdgeStiffness                                          (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   BendingStiffness                                       (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -350,7 +350,7 @@ void UChaosClothingInteractor::SetMaterialLinear(float EdgeStiffness, float Bend
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetPressure
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector2D                        Pressure                                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -375,7 +375,7 @@ void UChaosClothingInteractor::SetPressure(const struct FVector2D& Pressure)
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetVelocityScale
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector                          LinearVelocityScale                                    (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // float                                   AngularVelocityScale                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -404,7 +404,7 @@ void UChaosClothingInteractor::SetVelocityScale(const struct FVector& LinearVelo
 
 
 // Function ChaosCloth.ChaosClothingInteractor.SetWind
-// (Final, Native, Public, HasDefaults, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, HasDefaults, BlueprintCallable)
 // Parameters:
 // struct FVector2D                        Drag                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FVector2D                        Lift                                                   (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)

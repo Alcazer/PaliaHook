@@ -47,6 +47,34 @@ struct FAssetData UAssetRegistryHelpers::CreateAssetData(class UObject* InAsset,
 }
 
 
+// Function AssetRegistry.AssetRegistryHelpers.FindAssetNativeClass
+// (Final, RequiredAPI, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
+// Parameters:
+// struct FAssetData                       AssetData                                              (ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UClass*                           ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UClass* UAssetRegistryHelpers::FindAssetNativeClass(struct FAssetData& AssetData)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("AssetRegistryHelpers", "FindAssetNativeClass");
+
+	Params::AssetRegistryHelpers_FindAssetNativeClass Parms{};
+
+	Parms.AssetData = std::move(AssetData);
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
 // Function AssetRegistry.AssetRegistryHelpers.GetAsset
 // (Final, Native, Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintPure)
 // Parameters:
@@ -1056,13 +1084,14 @@ bool IAssetRegistry::IsSearchAsync() const
 
 
 // Function AssetRegistry.AssetRegistry.K2_GetAssetByObjectPath
-// (Native, Public, HasOutParams, HasDefaults, BlueprintCallable, Const)
+// (RequiredAPI, Native, Public, HasOutParams, HasDefaults, BlueprintCallable, Const)
 // Parameters:
 // struct FSoftObjectPath                  ObjectPath                                             (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // bool                                    bIncludeOnlyOnDiskAssets                               (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bSkipARFilteredAssets                                  (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // struct FAssetData                       ReturnValue                                            (Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
-struct FAssetData IAssetRegistry::K2_GetAssetByObjectPath(struct FSoftObjectPath& ObjectPath, bool bIncludeOnlyOnDiskAssets) const
+struct FAssetData IAssetRegistry::K2_GetAssetByObjectPath(struct FSoftObjectPath& ObjectPath, bool bIncludeOnlyOnDiskAssets, bool bSkipARFilteredAssets) const
 {
 	static class UFunction* Func = nullptr;
 
@@ -1073,6 +1102,7 @@ struct FAssetData IAssetRegistry::K2_GetAssetByObjectPath(struct FSoftObjectPath
 
 	Parms.ObjectPath = std::move(ObjectPath);
 	Parms.bIncludeOnlyOnDiskAssets = bIncludeOnlyOnDiskAssets;
+	Parms.bSkipARFilteredAssets = bSkipARFilteredAssets;
 
 	auto Flgs = Func->FunctionFlags;
 	Func->FunctionFlags |= 0x400;

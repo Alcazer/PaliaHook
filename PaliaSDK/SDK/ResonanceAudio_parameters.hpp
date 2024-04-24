@@ -17,30 +17,6 @@
 namespace SDK::Params
 {
 
-// Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
-// 0x0008 (0x0008 - 0x0000)
-struct ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity final 
-{
-public:
-	float                                         InPattern;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InSharpness;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity) == 0x000004, "Wrong alignment on ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity");
-static_assert(sizeof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity) == 0x000008, "Wrong size on ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity");
-static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity, InPattern) == 0x000000, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity::InPattern' has a wrong offset!");
-static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity, InSharpness) == 0x000004, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity::InSharpness' has a wrong offset!");
-
-// Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceSpread
-// 0x0004 (0x0004 - 0x0000)
-struct ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread final 
-{
-public:
-	float                                         InSpread;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread) == 0x000004, "Wrong alignment on ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread");
-static_assert(sizeof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread) == 0x000004, "Wrong size on ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread");
-static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread, InSpread) == 0x000000, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread::InSpread' has a wrong offset!");
-
 // Function ResonanceAudio.ResonanceAudioBlueprintFunctionLibrary.GetGlobalReverbPreset
 // 0x0008 (0x0008 - 0x0000)
 struct ResonanceAudioBlueprintFunctionLibrary_GetGlobalReverbPreset final 
@@ -161,6 +137,30 @@ public:
 static_assert(alignof(ResonanceAudioReverbPluginPreset_SetRoomRotation) == 0x000010, "Wrong alignment on ResonanceAudioReverbPluginPreset_SetRoomRotation");
 static_assert(sizeof(ResonanceAudioReverbPluginPreset_SetRoomRotation) == 0x000020, "Wrong size on ResonanceAudioReverbPluginPreset_SetRoomRotation");
 static_assert(offsetof(ResonanceAudioReverbPluginPreset_SetRoomRotation, InRotation) == 0x000000, "Member 'ResonanceAudioReverbPluginPreset_SetRoomRotation::InRotation' has a wrong offset!");
+
+// Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceDirectivity
+// 0x0008 (0x0008 - 0x0000)
+struct ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity final 
+{
+public:
+	float                                         InPattern;                                         // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InSharpness;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity) == 0x000004, "Wrong alignment on ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity");
+static_assert(sizeof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity) == 0x000008, "Wrong size on ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity");
+static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity, InPattern) == 0x000000, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity::InPattern' has a wrong offset!");
+static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity, InSharpness) == 0x000004, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceDirectivity::InSharpness' has a wrong offset!");
+
+// Function ResonanceAudio.ResonanceAudioSpatializationSourceSettings.SetSoundSourceSpread
+// 0x0004 (0x0004 - 0x0000)
+struct ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread final 
+{
+public:
+	float                                         InSpread;                                          // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread) == 0x000004, "Wrong alignment on ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread");
+static_assert(sizeof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread) == 0x000004, "Wrong size on ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread");
+static_assert(offsetof(ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread, InSpread) == 0x000000, "Member 'ResonanceAudioSpatializationSourceSettings_SetSoundSourceSpread::InSpread' has a wrong offset!");
 
 }
 

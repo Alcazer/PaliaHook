@@ -29,7 +29,7 @@ public:
 	TArray<struct FDirectoryPath>                 DirectoriesToScan;                                 // 0x0038(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	bool                                          bInitializeAllLoadedRegistries;                    // 0x0048(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIgnoreMissingCookedAssetRegistryData;             // 0x0049(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_155C[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE1[0x6];                                     // 0x004A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -59,7 +59,7 @@ public:
 	TArray<class UDataRegistrySource*>            RuntimeSources;                                    // 0x0050(0x0010)(Edit, ExportObject, ZeroConstructor, Transient, DisableEditOnInstance, EditConst, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	float                                         TimerUpdateFrequency;                              // 0x0060(0x0004)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	struct FDataRegistryCachePolicy               DefaultCachePolicy;                                // 0x0064(0x0014)(Edit, DisableEditOnInstance, NoDestructor, Protected, NativeAccessSpecifierProtected)
-	uint8                                         Pad_155D[0x48];                                    // 0x0078(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE2[0x48];                                    // 0x0078(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -86,7 +86,7 @@ static_assert(offsetof(UDataRegistry, DefaultCachePolicy) == 0x000064, "Member '
 class UDataRegistrySource : public UObject
 {
 public:
-	uint8                                         Pad_155E[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE3[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDataRegistrySource*                    ParentSource;                                      // 0x0030(0x0008)(ExportObject, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 
 public:
@@ -109,10 +109,10 @@ class UMetaDataRegistrySource : public UDataRegistrySource
 {
 public:
 	EMetaDataRegistrySourceAssetUsage             AssetUsage;                                        // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_155F[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE4[0x7];                                     // 0x0039(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAssetManagerSearchRules               SearchRules;                                       // 0x0040(0x0050)(Edit, NativeAccessSpecifierPublic)
 	TMap<class FName, class UDataRegistrySource*> RuntimeChildren;                                   // 0x0090(0x0050)(ExportObject, Transient, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1560[0x28];                                    // 0x00E0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE5[0x28];                                    // 0x00E0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -131,15 +131,15 @@ static_assert(offsetof(UMetaDataRegistrySource, SearchRules) == 0x000040, "Membe
 static_assert(offsetof(UMetaDataRegistrySource, RuntimeChildren) == 0x000090, "Member 'UMetaDataRegistrySource::RuntimeChildren' has a wrong offset!");
 
 // Class DataRegistry.DataRegistrySource_CurveTable
-// 0x0070 (0x00A8 - 0x0038)
+// 0x0068 (0x00A0 - 0x0038)
 class UDataRegistrySource_CurveTable final  : public UDataRegistrySource
 {
 public:
-	TSoftObjectPtr<class UCurveTable>             SourceTable;                                       // 0x0038(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataRegistrySource_DataTableRules     TableRules;                                        // 0x0068(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UCurveTable*                            CachedTable;                                       // 0x0070(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UCurveTable*                            PreloadTable;                                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1561[0x28];                                    // 0x0080(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UCurveTable>             SourceTable;                                       // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDataRegistrySource_DataTableRules     TableRules;                                        // 0x0060(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UCurveTable*                            CachedTable;                                       // 0x0068(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UCurveTable*                            PreloadTable;                                      // 0x0070(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1BE6[0x28];                                    // 0x0078(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -152,11 +152,11 @@ public:
 	}
 };
 static_assert(alignof(UDataRegistrySource_CurveTable) == 0x000008, "Wrong alignment on UDataRegistrySource_CurveTable");
-static_assert(sizeof(UDataRegistrySource_CurveTable) == 0x0000A8, "Wrong size on UDataRegistrySource_CurveTable");
+static_assert(sizeof(UDataRegistrySource_CurveTable) == 0x0000A0, "Wrong size on UDataRegistrySource_CurveTable");
 static_assert(offsetof(UDataRegistrySource_CurveTable, SourceTable) == 0x000038, "Member 'UDataRegistrySource_CurveTable::SourceTable' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_CurveTable, TableRules) == 0x000068, "Member 'UDataRegistrySource_CurveTable::TableRules' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_CurveTable, CachedTable) == 0x000070, "Member 'UDataRegistrySource_CurveTable::CachedTable' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_CurveTable, PreloadTable) == 0x000078, "Member 'UDataRegistrySource_CurveTable::PreloadTable' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_CurveTable, TableRules) == 0x000060, "Member 'UDataRegistrySource_CurveTable::TableRules' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_CurveTable, CachedTable) == 0x000068, "Member 'UDataRegistrySource_CurveTable::CachedTable' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_CurveTable, PreloadTable) == 0x000070, "Member 'UDataRegistrySource_CurveTable::PreloadTable' has a wrong offset!");
 
 // Class DataRegistry.MetaDataRegistrySource_CurveTable
 // 0x0010 (0x0118 - 0x0108)
@@ -182,15 +182,15 @@ static_assert(offsetof(UMetaDataRegistrySource_CurveTable, CreatedSource) == 0x0
 static_assert(offsetof(UMetaDataRegistrySource_CurveTable, TableRules) == 0x000110, "Member 'UMetaDataRegistrySource_CurveTable::TableRules' has a wrong offset!");
 
 // Class DataRegistry.DataRegistrySource_DataTable
-// 0x0070 (0x00A8 - 0x0038)
+// 0x0068 (0x00A0 - 0x0038)
 class UDataRegistrySource_DataTable final  : public UDataRegistrySource
 {
 public:
-	TSoftObjectPtr<class UDataTable>              SourceTable;                                       // 0x0038(0x0030)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FDataRegistrySource_DataTableRules     TableRules;                                        // 0x0068(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
-	class UDataTable*                             CachedTable;                                       // 0x0070(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	class UDataTable*                             PreloadTable;                                      // 0x0078(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1562[0x28];                                    // 0x0080(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	TSoftObjectPtr<class UDataTable>              SourceTable;                                       // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FDataRegistrySource_DataTableRules     TableRules;                                        // 0x0060(0x0008)(Edit, NoDestructor, NativeAccessSpecifierPublic)
+	class UDataTable*                             CachedTable;                                       // 0x0068(0x0008)(ZeroConstructor, Transient, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	class UDataTable*                             PreloadTable;                                      // 0x0070(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
+	uint8                                         Pad_1BE7[0x28];                                    // 0x0078(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -203,11 +203,11 @@ public:
 	}
 };
 static_assert(alignof(UDataRegistrySource_DataTable) == 0x000008, "Wrong alignment on UDataRegistrySource_DataTable");
-static_assert(sizeof(UDataRegistrySource_DataTable) == 0x0000A8, "Wrong size on UDataRegistrySource_DataTable");
+static_assert(sizeof(UDataRegistrySource_DataTable) == 0x0000A0, "Wrong size on UDataRegistrySource_DataTable");
 static_assert(offsetof(UDataRegistrySource_DataTable, SourceTable) == 0x000038, "Member 'UDataRegistrySource_DataTable::SourceTable' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_DataTable, TableRules) == 0x000068, "Member 'UDataRegistrySource_DataTable::TableRules' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_DataTable, CachedTable) == 0x000070, "Member 'UDataRegistrySource_DataTable::CachedTable' has a wrong offset!");
-static_assert(offsetof(UDataRegistrySource_DataTable, PreloadTable) == 0x000078, "Member 'UDataRegistrySource_DataTable::PreloadTable' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_DataTable, TableRules) == 0x000060, "Member 'UDataRegistrySource_DataTable::TableRules' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_DataTable, CachedTable) == 0x000068, "Member 'UDataRegistrySource_DataTable::CachedTable' has a wrong offset!");
+static_assert(offsetof(UDataRegistrySource_DataTable, PreloadTable) == 0x000070, "Member 'UDataRegistrySource_DataTable::PreloadTable' has a wrong offset!");
 
 // Class DataRegistry.MetaDataRegistrySource_DataTable
 // 0x0010 (0x0118 - 0x0108)
@@ -237,7 +237,7 @@ static_assert(offsetof(UMetaDataRegistrySource_DataTable, TableRules) == 0x00011
 class UDataRegistrySubsystem final  : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1563[0x98];                                    // 0x0030(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BE8[0x98];                                    // 0x0030(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static bool AcquireItemBP(const struct FDataRegistryId& ItemId, TDelegate<void(const struct FDataRegistryId& ItemId, const struct FDataRegistryLookup& ResolvedLookup, EDataRegistryAcquireStatus Status)> AcquireCallback);

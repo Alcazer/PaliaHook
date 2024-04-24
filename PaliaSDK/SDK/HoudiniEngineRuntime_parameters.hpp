@@ -24,7 +24,7 @@ struct HoudiniAssetBlueprintComponent_HasParameter final
 public:
 	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1962[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DAB[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HoudiniAssetBlueprintComponent_HasParameter) == 0x000008, "Wrong alignment on HoudiniAssetBlueprintComponent_HasParameter");
 static_assert(sizeof(HoudiniAssetBlueprintComponent_HasParameter) == 0x000018, "Wrong size on HoudiniAssetBlueprintComponent_HasParameter");
@@ -53,7 +53,7 @@ struct HoudiniAssetBlueprintComponent_SetToggleValueAt final
 public:
 	class FString                                 Param_Name;                                        // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1963[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DAC[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Param_Index;                                       // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniAssetBlueprintComponent_SetToggleValueAt) == 0x000008, "Wrong alignment on HoudiniAssetBlueprintComponent_SetToggleValueAt");
@@ -69,7 +69,7 @@ struct HoudiniStaticMesh_AddStaticMaterial final
 public:
 	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0000(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 	uint32                                        ReturnValue;                                       // 0x0030(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D8[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E13[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HoudiniStaticMesh_AddStaticMaterial) == 0x000008, "Wrong alignment on HoudiniStaticMesh_AddStaticMaterial");
 static_assert(sizeof(HoudiniStaticMesh_AddStaticMaterial) == 0x000038, "Wrong size on HoudiniStaticMesh_AddStaticMaterial");
@@ -104,7 +104,7 @@ struct HoudiniStaticMesh_GetMaterial final
 {
 public:
 	int32                                         InMaterialIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19D9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E14[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UMaterialInterface*                     ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_GetMaterial) == 0x000008, "Wrong alignment on HoudiniStaticMesh_GetMaterial");
@@ -209,7 +209,7 @@ struct HoudiniStaticMesh_SetStaticMaterial final
 {
 public:
 	uint32                                        InMaterialIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E15[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStaticMaterial                        InStaticMaterial;                                  // 0x0008(0x0030)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_SetStaticMaterial) == 0x000008, "Wrong alignment on HoudiniStaticMesh_SetStaticMaterial");
@@ -237,7 +237,7 @@ struct HoudiniStaticMesh_SetTriangleVertexColor final
 public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InTriangleVertexIndex;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DB[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E16[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FColor                                 InColor;                                           // 0x0008(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexColor) == 0x000004, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexColor");
@@ -266,7 +266,7 @@ struct HoudiniStaticMesh_SetTriangleVertexNormal final
 public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InTriangleVertexIndex;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E17[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InNormal;                                          // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexNormal) == 0x000004, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexNormal");
@@ -282,7 +282,7 @@ struct HoudiniStaticMesh_SetTriangleVertexUTangent final
 public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InTriangleVertexIndex;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DD[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E18[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InUTangent;                                        // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexUTangent) == 0x000004, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexUTangent");
@@ -292,18 +292,18 @@ static_assert(offsetof(HoudiniStaticMesh_SetTriangleVertexUTangent, InTriangleVe
 static_assert(offsetof(HoudiniStaticMesh_SetTriangleVertexUTangent, InUTangent) == 0x000008, "Member 'HoudiniStaticMesh_SetTriangleVertexUTangent::InUTangent' has a wrong offset!");
 
 // Function HoudiniEngineRuntime.HoudiniStaticMesh.SetTriangleVertexUV
-// 0x0018 (0x0018 - 0x0000)
+// 0x0010 (0x0010 - 0x0000)
 struct HoudiniStaticMesh_SetTriangleVertexUV final 
 {
 public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InTriangleVertexIndex;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InUVLayer;                                         // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DE[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector2D                              InUV;                                              // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E19[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2f                              InUV;                                              // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexUV) == 0x000008, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexUV");
-static_assert(sizeof(HoudiniStaticMesh_SetTriangleVertexUV) == 0x000018, "Wrong size on HoudiniStaticMesh_SetTriangleVertexUV");
+static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexUV) == 0x000004, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexUV");
+static_assert(sizeof(HoudiniStaticMesh_SetTriangleVertexUV) == 0x000010, "Wrong size on HoudiniStaticMesh_SetTriangleVertexUV");
 static_assert(offsetof(HoudiniStaticMesh_SetTriangleVertexUV, InTriangleIndex) == 0x000000, "Member 'HoudiniStaticMesh_SetTriangleVertexUV::InTriangleIndex' has a wrong offset!");
 static_assert(offsetof(HoudiniStaticMesh_SetTriangleVertexUV, InTriangleVertexIndex) == 0x000004, "Member 'HoudiniStaticMesh_SetTriangleVertexUV::InTriangleVertexIndex' has a wrong offset!");
 static_assert(offsetof(HoudiniStaticMesh_SetTriangleVertexUV, InUVLayer) == 0x000005, "Member 'HoudiniStaticMesh_SetTriangleVertexUV::InUVLayer' has a wrong offset!");
@@ -316,7 +316,7 @@ struct HoudiniStaticMesh_SetTriangleVertexVTangent final
 public:
 	uint32                                        InTriangleIndex;                                   // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         InTriangleVertexIndex;                             // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_19DF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E1A[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector3f                              InVTangent;                                        // 0x0008(0x000C)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_SetTriangleVertexVTangent) == 0x000004, "Wrong alignment on HoudiniStaticMesh_SetTriangleVertexVTangent");
@@ -488,7 +488,7 @@ static_assert(offsetof(HoudiniStaticMesh_GetVertexInstanceUTangents, ReturnValue
 struct HoudiniStaticMesh_GetVertexInstanceUVs final 
 {
 public:
-	TArray<struct FVector2D>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FVector2f>                      ReturnValue;                                       // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReturnParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(HoudiniStaticMesh_GetVertexInstanceUVs) == 0x000008, "Wrong alignment on HoudiniStaticMesh_GetVertexInstanceUVs");
 static_assert(sizeof(HoudiniStaticMesh_GetVertexInstanceUVs) == 0x000010, "Wrong size on HoudiniStaticMesh_GetVertexInstanceUVs");
@@ -616,6 +616,62 @@ public:
 static_assert(alignof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong alignment on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
 static_assert(sizeof(HoudiniStaticMeshComponent_IsHoudiniIconVisible) == 0x000001, "Wrong size on HoudiniStaticMeshComponent_IsHoudiniIconVisible");
 static_assert(offsetof(HoudiniStaticMeshComponent_IsHoudiniIconVisible, ReturnValue) == 0x000000, "Member 'HoudiniStaticMeshComponent_IsHoudiniIconVisible::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONData
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_PopulateFromJSONData final 
+{
+public:
+	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E1D[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(HoudiniToolData_PopulateFromJSONData) == 0x000008, "Wrong alignment on HoudiniToolData_PopulateFromJSONData");
+static_assert(sizeof(HoudiniToolData_PopulateFromJSONData) == 0x000018, "Wrong size on HoudiniToolData_PopulateFromJSONData");
+static_assert(offsetof(HoudiniToolData_PopulateFromJSONData, JSONData) == 0x000000, "Member 'HoudiniToolData_PopulateFromJSONData::JSONData' has a wrong offset!");
+static_assert(offsetof(HoudiniToolData_PopulateFromJSONData, ReturnValue) == 0x000010, "Member 'HoudiniToolData_PopulateFromJSONData::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniToolData.PopulateFromJSONFile
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_PopulateFromJSONFile final 
+{
+public:
+	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E1E[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(HoudiniToolData_PopulateFromJSONFile) == 0x000008, "Wrong alignment on HoudiniToolData_PopulateFromJSONFile");
+static_assert(sizeof(HoudiniToolData_PopulateFromJSONFile) == 0x000018, "Wrong size on HoudiniToolData_PopulateFromJSONFile");
+static_assert(offsetof(HoudiniToolData_PopulateFromJSONFile, JsonFilePath) == 0x000000, "Member 'HoudiniToolData_PopulateFromJSONFile::JsonFilePath' has a wrong offset!");
+static_assert(offsetof(HoudiniToolData_PopulateFromJSONFile, ReturnValue) == 0x000010, "Member 'HoudiniToolData_PopulateFromJSONFile::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniToolData.SaveToJSONFile
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_SaveToJSONFile final 
+{
+public:
+	class FString                                 JsonFilePath;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E1F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(HoudiniToolData_SaveToJSONFile) == 0x000008, "Wrong alignment on HoudiniToolData_SaveToJSONFile");
+static_assert(sizeof(HoudiniToolData_SaveToJSONFile) == 0x000018, "Wrong size on HoudiniToolData_SaveToJSONFile");
+static_assert(offsetof(HoudiniToolData_SaveToJSONFile, JsonFilePath) == 0x000000, "Member 'HoudiniToolData_SaveToJSONFile::JsonFilePath' has a wrong offset!");
+static_assert(offsetof(HoudiniToolData_SaveToJSONFile, ReturnValue) == 0x000010, "Member 'HoudiniToolData_SaveToJSONFile::ReturnValue' has a wrong offset!");
+
+// Function HoudiniEngineRuntime.HoudiniToolData.ConvertToJSONData
+// 0x0018 (0x0018 - 0x0000)
+struct HoudiniToolData_ConvertToJSONData final 
+{
+public:
+	class FString                                 JSONData;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E20[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(HoudiniToolData_ConvertToJSONData) == 0x000008, "Wrong alignment on HoudiniToolData_ConvertToJSONData");
+static_assert(sizeof(HoudiniToolData_ConvertToJSONData) == 0x000018, "Wrong size on HoudiniToolData_ConvertToJSONData");
+static_assert(offsetof(HoudiniToolData_ConvertToJSONData, JSONData) == 0x000000, "Member 'HoudiniToolData_ConvertToJSONData::JSONData' has a wrong offset!");
+static_assert(offsetof(HoudiniToolData_ConvertToJSONData, ReturnValue) == 0x000010, "Member 'HoudiniToolData_ConvertToJSONData::ReturnValue' has a wrong offset!");
 
 }
 

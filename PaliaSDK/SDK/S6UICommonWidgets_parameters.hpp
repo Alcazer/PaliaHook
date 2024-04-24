@@ -50,63 +50,6 @@ static_assert(alignof(S6UI_CommonButton_Styled_ToggleRootButtonFocuseState) == 0
 static_assert(sizeof(S6UI_CommonButton_Styled_ToggleRootButtonFocuseState) == 0x000001, "Wrong size on S6UI_CommonButton_Styled_ToggleRootButtonFocuseState");
 static_assert(offsetof(S6UI_CommonButton_Styled_ToggleRootButtonFocuseState, bEnable) == 0x000000, "Member 'S6UI_CommonButton_Styled_ToggleRootButtonFocuseState::bEnable' has a wrong offset!");
 
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.AddChildToOverlaySwitcher
-// 0x0010 (0x0010 - 0x0000)
-struct S6UI_OverlaySwitcher_AddChildToOverlaySwitcher final 
-{
-public:
-	class UWidget*                                Content;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class US6UI_OverlaySwitcherSlot*              ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_AddChildToOverlaySwitcher");
-static_assert(sizeof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher) == 0x000010, "Wrong size on S6UI_OverlaySwitcher_AddChildToOverlaySwitcher");
-static_assert(offsetof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher, Content) == 0x000000, "Member 'S6UI_OverlaySwitcher_AddChildToOverlaySwitcher::Content' has a wrong offset!");
-static_assert(offsetof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher, ReturnValue) == 0x000008, "Member 'S6UI_OverlaySwitcher_AddChildToOverlaySwitcher::ReturnValue' has a wrong offset!");
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidget
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_OverlaySwitcher_SetActiveWidget final 
-{
-public:
-	class UWidget*                                Widget;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_OverlaySwitcher_SetActiveWidget) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_SetActiveWidget");
-static_assert(sizeof(S6UI_OverlaySwitcher_SetActiveWidget) == 0x000008, "Wrong size on S6UI_OverlaySwitcher_SetActiveWidget");
-static_assert(offsetof(S6UI_OverlaySwitcher_SetActiveWidget, Widget) == 0x000000, "Member 'S6UI_OverlaySwitcher_SetActiveWidget::Widget' has a wrong offset!");
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidgetIndex
-// 0x0004 (0x0004 - 0x0000)
-struct S6UI_OverlaySwitcher_SetActiveWidgetIndex final 
-{
-public:
-	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_OverlaySwitcher_SetActiveWidgetIndex) == 0x000004, "Wrong alignment on S6UI_OverlaySwitcher_SetActiveWidgetIndex");
-static_assert(sizeof(S6UI_OverlaySwitcher_SetActiveWidgetIndex) == 0x000004, "Wrong size on S6UI_OverlaySwitcher_SetActiveWidgetIndex");
-static_assert(offsetof(S6UI_OverlaySwitcher_SetActiveWidgetIndex, Param_Index) == 0x000000, "Member 'S6UI_OverlaySwitcher_SetActiveWidgetIndex::Param_Index' has a wrong offset!");
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidget
-// 0x0008 (0x0008 - 0x0000)
-struct S6UI_OverlaySwitcher_GetActiveWidget final 
-{
-public:
-	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_OverlaySwitcher_GetActiveWidget) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_GetActiveWidget");
-static_assert(sizeof(S6UI_OverlaySwitcher_GetActiveWidget) == 0x000008, "Wrong size on S6UI_OverlaySwitcher_GetActiveWidget");
-static_assert(offsetof(S6UI_OverlaySwitcher_GetActiveWidget, ReturnValue) == 0x000000, "Member 'S6UI_OverlaySwitcher_GetActiveWidget::ReturnValue' has a wrong offset!");
-
-// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidgetIndex
-// 0x0004 (0x0004 - 0x0000)
-struct S6UI_OverlaySwitcher_GetActiveWidgetIndex final 
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(S6UI_OverlaySwitcher_GetActiveWidgetIndex) == 0x000004, "Wrong alignment on S6UI_OverlaySwitcher_GetActiveWidgetIndex");
-static_assert(sizeof(S6UI_OverlaySwitcher_GetActiveWidgetIndex) == 0x000004, "Wrong size on S6UI_OverlaySwitcher_GetActiveWidgetIndex");
-static_assert(offsetof(S6UI_OverlaySwitcher_GetActiveWidgetIndex, ReturnValue) == 0x000000, "Member 'S6UI_OverlaySwitcher_GetActiveWidgetIndex::ReturnValue' has a wrong offset!");
-
 // Function S6UICommonWidgets.S6UI_EditableRichText.GetDecoratorByClass
 // 0x0010 (0x0010 - 0x0000)
 struct S6UI_EditableRichText_GetDecoratorByClass final 
@@ -149,7 +92,7 @@ struct S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignatur
 public:
 	class FText                                   Param_Text;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1906[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C20[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature");
 static_assert(sizeof(S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature");
@@ -320,6 +263,63 @@ public:
 static_assert(alignof(S6UI_EditableRichText_GetText) == 0x000008, "Wrong alignment on S6UI_EditableRichText_GetText");
 static_assert(sizeof(S6UI_EditableRichText_GetText) == 0x000018, "Wrong size on S6UI_EditableRichText_GetText");
 static_assert(offsetof(S6UI_EditableRichText_GetText, ReturnValue) == 0x000000, "Member 'S6UI_EditableRichText_GetText::ReturnValue' has a wrong offset!");
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.AddChildToOverlaySwitcher
+// 0x0010 (0x0010 - 0x0000)
+struct S6UI_OverlaySwitcher_AddChildToOverlaySwitcher final 
+{
+public:
+	class UWidget*                                Content;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class US6UI_OverlaySwitcherSlot*              ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_AddChildToOverlaySwitcher");
+static_assert(sizeof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher) == 0x000010, "Wrong size on S6UI_OverlaySwitcher_AddChildToOverlaySwitcher");
+static_assert(offsetof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher, Content) == 0x000000, "Member 'S6UI_OverlaySwitcher_AddChildToOverlaySwitcher::Content' has a wrong offset!");
+static_assert(offsetof(S6UI_OverlaySwitcher_AddChildToOverlaySwitcher, ReturnValue) == 0x000008, "Member 'S6UI_OverlaySwitcher_AddChildToOverlaySwitcher::ReturnValue' has a wrong offset!");
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidget
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_OverlaySwitcher_SetActiveWidget final 
+{
+public:
+	class UWidget*                                Widget;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_OverlaySwitcher_SetActiveWidget) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_SetActiveWidget");
+static_assert(sizeof(S6UI_OverlaySwitcher_SetActiveWidget) == 0x000008, "Wrong size on S6UI_OverlaySwitcher_SetActiveWidget");
+static_assert(offsetof(S6UI_OverlaySwitcher_SetActiveWidget, Widget) == 0x000000, "Member 'S6UI_OverlaySwitcher_SetActiveWidget::Widget' has a wrong offset!");
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.SetActiveWidgetIndex
+// 0x0004 (0x0004 - 0x0000)
+struct S6UI_OverlaySwitcher_SetActiveWidgetIndex final 
+{
+public:
+	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_OverlaySwitcher_SetActiveWidgetIndex) == 0x000004, "Wrong alignment on S6UI_OverlaySwitcher_SetActiveWidgetIndex");
+static_assert(sizeof(S6UI_OverlaySwitcher_SetActiveWidgetIndex) == 0x000004, "Wrong size on S6UI_OverlaySwitcher_SetActiveWidgetIndex");
+static_assert(offsetof(S6UI_OverlaySwitcher_SetActiveWidgetIndex, Param_Index) == 0x000000, "Member 'S6UI_OverlaySwitcher_SetActiveWidgetIndex::Param_Index' has a wrong offset!");
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidget
+// 0x0008 (0x0008 - 0x0000)
+struct S6UI_OverlaySwitcher_GetActiveWidget final 
+{
+public:
+	class UWidget*                                ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_OverlaySwitcher_GetActiveWidget) == 0x000008, "Wrong alignment on S6UI_OverlaySwitcher_GetActiveWidget");
+static_assert(sizeof(S6UI_OverlaySwitcher_GetActiveWidget) == 0x000008, "Wrong size on S6UI_OverlaySwitcher_GetActiveWidget");
+static_assert(offsetof(S6UI_OverlaySwitcher_GetActiveWidget, ReturnValue) == 0x000000, "Member 'S6UI_OverlaySwitcher_GetActiveWidget::ReturnValue' has a wrong offset!");
+
+// Function S6UICommonWidgets.S6UI_OverlaySwitcher.GetActiveWidgetIndex
+// 0x0004 (0x0004 - 0x0000)
+struct S6UI_OverlaySwitcher_GetActiveWidgetIndex final 
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(S6UI_OverlaySwitcher_GetActiveWidgetIndex) == 0x000004, "Wrong alignment on S6UI_OverlaySwitcher_GetActiveWidgetIndex");
+static_assert(sizeof(S6UI_OverlaySwitcher_GetActiveWidgetIndex) == 0x000004, "Wrong size on S6UI_OverlaySwitcher_GetActiveWidgetIndex");
+static_assert(offsetof(S6UI_OverlaySwitcher_GetActiveWidgetIndex, ReturnValue) == 0x000000, "Member 'S6UI_OverlaySwitcher_GetActiveWidgetIndex::ReturnValue' has a wrong offset!");
 
 }
 

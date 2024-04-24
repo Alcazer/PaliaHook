@@ -16,6 +16,17 @@
 namespace SDK::Params
 {
 
+// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
+// 0x0008 (0x0008 - 0x0000)
+struct CameraRig_Rail_GetRailSplineComponent final 
+{
+public:
+	class USplineComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CameraRig_Rail_GetRailSplineComponent) == 0x000008, "Wrong alignment on CameraRig_Rail_GetRailSplineComponent");
+static_assert(sizeof(CameraRig_Rail_GetRailSplineComponent) == 0x000008, "Wrong size on CameraRig_Rail_GetRailSplineComponent");
+static_assert(offsetof(CameraRig_Rail_GetRailSplineComponent, ReturnValue) == 0x000000, "Member 'CameraRig_Rail_GetRailSplineComponent::ReturnValue' has a wrong offset!");
+
 // Function CinematicCamera.CineCameraActor.GetCineCameraComponent
 // 0x0008 (0x0008 - 0x0000)
 struct CineCameraActor_GetCineCameraComponent final 
@@ -93,6 +104,17 @@ static_assert(alignof(CineCameraComponent_SetCurrentFocalLength) == 0x000004, "W
 static_assert(sizeof(CineCameraComponent_SetCurrentFocalLength) == 0x000004, "Wrong size on CineCameraComponent_SetCurrentFocalLength");
 static_assert(offsetof(CineCameraComponent_SetCurrentFocalLength, InFocalLength) == 0x000000, "Member 'CineCameraComponent_SetCurrentFocalLength::InFocalLength' has a wrong offset!");
 
+// Function CinematicCamera.CineCameraComponent.SetCustomNearClippingPlane
+// 0x0004 (0x0004 - 0x0000)
+struct CineCameraComponent_SetCustomNearClippingPlane final 
+{
+public:
+	float                                         NewCustomNearClippingPlane;                        // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(CineCameraComponent_SetCustomNearClippingPlane) == 0x000004, "Wrong alignment on CineCameraComponent_SetCustomNearClippingPlane");
+static_assert(sizeof(CineCameraComponent_SetCustomNearClippingPlane) == 0x000004, "Wrong size on CineCameraComponent_SetCustomNearClippingPlane");
+static_assert(offsetof(CineCameraComponent_SetCustomNearClippingPlane, NewCustomNearClippingPlane) == 0x000000, "Member 'CineCameraComponent_SetCustomNearClippingPlane::NewCustomNearClippingPlane' has a wrong offset!");
+
 // Function CinematicCamera.CineCameraComponent.SetFilmback
 // 0x000C (0x000C - 0x0000)
 struct CineCameraComponent_SetFilmback final 
@@ -116,14 +138,14 @@ static_assert(sizeof(CineCameraComponent_SetFilmbackPresetByName) == 0x000010, "
 static_assert(offsetof(CineCameraComponent_SetFilmbackPresetByName, InPresetName) == 0x000000, "Member 'CineCameraComponent_SetFilmbackPresetByName::InPresetName' has a wrong offset!");
 
 // Function CinematicCamera.CineCameraComponent.SetFocusSettings
-// 0x0068 (0x0068 - 0x0000)
+// 0x0060 (0x0060 - 0x0000)
 struct CineCameraComponent_SetFocusSettings final 
 {
 public:
-	struct FCameraFocusSettings                   NewFocusSettings;                                  // 0x0000(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	struct FCameraFocusSettings                   NewFocusSettings;                                  // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(CineCameraComponent_SetFocusSettings) == 0x000008, "Wrong alignment on CineCameraComponent_SetFocusSettings");
-static_assert(sizeof(CineCameraComponent_SetFocusSettings) == 0x000068, "Wrong size on CineCameraComponent_SetFocusSettings");
+static_assert(sizeof(CineCameraComponent_SetFocusSettings) == 0x000060, "Wrong size on CineCameraComponent_SetFocusSettings");
 static_assert(offsetof(CineCameraComponent_SetFocusSettings, NewFocusSettings) == 0x000000, "Member 'CineCameraComponent_SetFocusSettings::NewFocusSettings' has a wrong offset!");
 
 // Function CinematicCamera.CineCameraComponent.SetLensPresetByName
@@ -233,7 +255,7 @@ public:
 	class FString                                 PresetName;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FPlateCropSettings                     CropSettings;                                      // 0x0010(0x0004)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_342F[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17CE[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CineCameraSettings_GetCropPresetByName) == 0x000008, "Wrong alignment on CineCameraSettings_GetCropPresetByName");
 static_assert(sizeof(CineCameraSettings_GetCropPresetByName) == 0x000018, "Wrong size on CineCameraSettings_GetCropPresetByName");
@@ -249,7 +271,7 @@ public:
 	class FString                                 PresetName;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraFilmbackSettings                FilmbackSettings;                                  // 0x0010(0x000C)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3430[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17CF[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CineCameraSettings_GetFilmbackPresetByName) == 0x000008, "Wrong alignment on CineCameraSettings_GetFilmbackPresetByName");
 static_assert(sizeof(CineCameraSettings_GetFilmbackPresetByName) == 0x000020, "Wrong size on CineCameraSettings_GetFilmbackPresetByName");
@@ -265,7 +287,7 @@ public:
 	class FString                                 PresetName;                                        // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCameraLensSettings                    LensSettings;                                      // 0x0010(0x001C)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x002C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_3431[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_17D0[0x3];                                     // 0x002D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CineCameraSettings_GetLensPresetByName) == 0x000008, "Wrong alignment on CineCameraSettings_GetLensPresetByName");
 static_assert(sizeof(CineCameraSettings_GetLensPresetByName) == 0x000030, "Wrong size on CineCameraSettings_GetLensPresetByName");
@@ -393,17 +415,6 @@ public:
 static_assert(alignof(CineCameraSettings_GetLensPresetNames) == 0x000008, "Wrong alignment on CineCameraSettings_GetLensPresetNames");
 static_assert(sizeof(CineCameraSettings_GetLensPresetNames) == 0x000010, "Wrong size on CineCameraSettings_GetLensPresetNames");
 static_assert(offsetof(CineCameraSettings_GetLensPresetNames, ReturnValue) == 0x000000, "Member 'CineCameraSettings_GetLensPresetNames::ReturnValue' has a wrong offset!");
-
-// Function CinematicCamera.CameraRig_Rail.GetRailSplineComponent
-// 0x0008 (0x0008 - 0x0000)
-struct CameraRig_Rail_GetRailSplineComponent final 
-{
-public:
-	class USplineComponent*                       ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(CameraRig_Rail_GetRailSplineComponent) == 0x000008, "Wrong alignment on CameraRig_Rail_GetRailSplineComponent");
-static_assert(sizeof(CameraRig_Rail_GetRailSplineComponent) == 0x000008, "Wrong size on CameraRig_Rail_GetRailSplineComponent");
-static_assert(offsetof(CameraRig_Rail_GetRailSplineComponent, ReturnValue) == 0x000000, "Member 'CameraRig_Rail_GetRailSplineComponent::ReturnValue' has a wrong offset!");
 
 }
 

@@ -18,15 +18,15 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass ListEntry_CharacterCustomization_VariantOption.ListEntry_CharacterCustomization_VariantOption_C
-// 0x00B8 (0x00E0 - 0x0028)
+// 0x00B0 (0x00D8 - 0x0028)
 class UListEntry_CharacterCustomization_VariantOption_C final  : public UObject
 {
 public:
-	struct FVAL_CharacterCustomizationVariantOptionBase VariantOptionBase;                                 // 0x0028(0x00A0)(Edit, BlueprintVisible, ExposeOnSpawn)
-	class UVAL_CharacterCustomizationItemBase*    Item;                                              // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	class FName                                   VariantChannelName;                                // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	bool                                          Selected;                                          // 0x00D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	EVAL_CharacterBodyType                        BodyType;                                          // 0x00D9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	struct FVAL_CharacterCustomizationVariantOptionBase VariantOptionBase;                                 // 0x0028(0x0098)(Edit, BlueprintVisible, ExposeOnSpawn)
+	class UVAL_CharacterCustomizationItemBase*    Item;                                              // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	class FName                                   VariantChannelName;                                // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	bool                                          Selected;                                          // 0x00D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
+	EVAL_CharacterBodyType                        BodyType;                                          // 0x00D1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 
 public:
 	static class UClass* StaticClass()
@@ -39,12 +39,12 @@ public:
 	}
 };
 static_assert(alignof(UListEntry_CharacterCustomization_VariantOption_C) == 0x000008, "Wrong alignment on UListEntry_CharacterCustomization_VariantOption_C");
-static_assert(sizeof(UListEntry_CharacterCustomization_VariantOption_C) == 0x0000E0, "Wrong size on UListEntry_CharacterCustomization_VariantOption_C");
+static_assert(sizeof(UListEntry_CharacterCustomization_VariantOption_C) == 0x0000D8, "Wrong size on UListEntry_CharacterCustomization_VariantOption_C");
 static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, VariantOptionBase) == 0x000028, "Member 'UListEntry_CharacterCustomization_VariantOption_C::VariantOptionBase' has a wrong offset!");
-static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, Item) == 0x0000C8, "Member 'UListEntry_CharacterCustomization_VariantOption_C::Item' has a wrong offset!");
-static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, VariantChannelName) == 0x0000D0, "Member 'UListEntry_CharacterCustomization_VariantOption_C::VariantChannelName' has a wrong offset!");
-static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, Selected) == 0x0000D8, "Member 'UListEntry_CharacterCustomization_VariantOption_C::Selected' has a wrong offset!");
-static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, BodyType) == 0x0000D9, "Member 'UListEntry_CharacterCustomization_VariantOption_C::BodyType' has a wrong offset!");
+static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, Item) == 0x0000C0, "Member 'UListEntry_CharacterCustomization_VariantOption_C::Item' has a wrong offset!");
+static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, VariantChannelName) == 0x0000C8, "Member 'UListEntry_CharacterCustomization_VariantOption_C::VariantChannelName' has a wrong offset!");
+static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, Selected) == 0x0000D0, "Member 'UListEntry_CharacterCustomization_VariantOption_C::Selected' has a wrong offset!");
+static_assert(offsetof(UListEntry_CharacterCustomization_VariantOption_C, BodyType) == 0x0000D1, "Member 'UListEntry_CharacterCustomization_VariantOption_C::BodyType' has a wrong offset!");
 
 }
 

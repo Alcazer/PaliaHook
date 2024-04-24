@@ -17,8 +17,62 @@
 namespace SDK
 {
 
+// Function ChaosCaching.ChaosCacheManager.EnablePlayback
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// Parameters:
+// int32                                   Param_Index                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::EnablePlayback(int32 Param_Index, bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "EnablePlayback");
+
+	Params::ChaosCacheManager_EnablePlayback Parms{};
+
+	Parms.Param_Index = Param_Index;
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
+// Function ChaosCaching.ChaosCacheManager.EnablePlaybackByCache
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// Parameters:
+// class FName                             InCacheName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// bool                                    bEnable                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::EnablePlaybackByCache(class FName InCacheName, bool bEnable)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "EnablePlaybackByCache");
+
+	Params::ChaosCacheManager_EnablePlaybackByCache Parms{};
+
+	Parms.InCacheName = InCacheName;
+	Parms.bEnable = bEnable;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosCaching.ChaosCacheManager.ResetAllComponentTransforms
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void AChaosCacheManager::ResetAllComponentTransforms()
 {
@@ -37,7 +91,7 @@ void AChaosCacheManager::ResetAllComponentTransforms()
 
 
 // Function ChaosCaching.ChaosCacheManager.ResetSingleTransform
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 // Parameters:
 // int32                                   InIndex                                                (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -61,8 +115,33 @@ void AChaosCacheManager::ResetSingleTransform(int32 InIndex)
 }
 
 
+// Function ChaosCaching.ChaosCacheManager.SetCacheCollection
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
+// Parameters:
+// class UChaosCacheCollection*            InCacheCollection                                      (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+void AChaosCacheManager::SetCacheCollection(class UChaosCacheCollection* InCacheCollection)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("ChaosCacheManager", "SetCacheCollection");
+
+	Params::ChaosCacheManager_SetCacheCollection Parms{};
+
+	Parms.InCacheCollection = InCacheCollection;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+}
+
+
 // Function ChaosCaching.ChaosCacheManager.SetStartTime
-// (Final, Native, Public)
+// (Final, RequiredAPI, Native, Public)
 // Parameters:
 // float                                   InStartTime                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -87,7 +166,7 @@ void AChaosCacheManager::SetStartTime(float InStartTime)
 
 
 // Function ChaosCaching.ChaosCacheManager.TriggerAll
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 
 void AChaosCacheManager::TriggerAll()
 {
@@ -106,7 +185,7 @@ void AChaosCacheManager::TriggerAll()
 
 
 // Function ChaosCaching.ChaosCacheManager.TriggerComponent
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 // Parameters:
 // class UPrimitiveComponent*              InComponent                                            (Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 
@@ -131,7 +210,7 @@ void AChaosCacheManager::TriggerComponent(class UPrimitiveComponent* InComponent
 
 
 // Function ChaosCaching.ChaosCacheManager.TriggerComponentByCache
-// (Final, Native, Protected, BlueprintCallable)
+// (Final, RequiredAPI, Native, Protected, BlueprintCallable)
 // Parameters:
 // class FName                             InCacheName                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 

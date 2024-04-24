@@ -12,12 +12,2740 @@
 
 #include "ControlRig_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "RigVM_structs.hpp"
 #include "AnimationCore_structs.hpp"
+#include "RigVM_structs.hpp"
 
 
 namespace SDK::Params
 {
+
+// Function ControlRig.ControlRigShapeLibraryLink.SetShapeLibrary
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRigShapeLibraryLink_SetShapeLibrary final 
+{
+public:
+	class UControlRigShapeLibrary*                InShapeLibrary;                                    // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigShapeLibraryLink_SetShapeLibrary) == 0x000008, "Wrong alignment on ControlRigShapeLibraryLink_SetShapeLibrary");
+static_assert(sizeof(ControlRigShapeLibraryLink_SetShapeLibrary) == 0x000008, "Wrong size on ControlRigShapeLibraryLink_SetShapeLibrary");
+static_assert(offsetof(ControlRigShapeLibraryLink_SetShapeLibrary, InShapeLibrary) == 0x000000, "Member 'ControlRigShapeLibraryLink_SetShapeLibrary::InShapeLibrary' has a wrong offset!");
+
+// Function ControlRig.ControlRigShapeLibraryLink.GetShapeLibrary
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRigShapeLibraryLink_GetShapeLibrary final 
+{
+public:
+	class UControlRigShapeLibrary*                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigShapeLibraryLink_GetShapeLibrary) == 0x000008, "Wrong alignment on ControlRigShapeLibraryLink_GetShapeLibrary");
+static_assert(sizeof(ControlRigShapeLibraryLink_GetShapeLibrary) == 0x000008, "Wrong size on ControlRigShapeLibraryLink_GetShapeLibrary");
+static_assert(offsetof(ControlRigShapeLibraryLink_GetShapeLibrary, ReturnValue) == 0x000000, "Member 'ControlRigShapeLibraryLink_GetShapeLibrary::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetEulerTransformFromControlValue
+// 0x00D0 (0x00D0 - 0x0000)
+struct RigHierarchy_GetEulerTransformFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CA[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FEulerTransform                        ReturnValue;                                       // 0x0088(0x0048)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetEulerTransformFromControlValue) == 0x000008, "Wrong alignment on RigHierarchy_GetEulerTransformFromControlValue");
+static_assert(sizeof(RigHierarchy_GetEulerTransformFromControlValue) == 0x0000D0, "Wrong size on RigHierarchy_GetEulerTransformFromControlValue");
+static_assert(offsetof(RigHierarchy_GetEulerTransformFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetEulerTransformFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetEulerTransformFromControlValue, ReturnValue) == 0x000088, "Member 'RigHierarchy_GetEulerTransformFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetFloatFromControlValue
+// 0x0088 (0x0088 - 0x0000)
+struct RigHierarchy_GetFloatFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0084(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetFloatFromControlValue) == 0x000004, "Wrong alignment on RigHierarchy_GetFloatFromControlValue");
+static_assert(sizeof(RigHierarchy_GetFloatFromControlValue) == 0x000088, "Wrong size on RigHierarchy_GetFloatFromControlValue");
+static_assert(offsetof(RigHierarchy_GetFloatFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetFloatFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatFromControlValue, ReturnValue) == 0x000084, "Member 'RigHierarchy_GetFloatFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetIntFromControlValue
+// 0x0088 (0x0088 - 0x0000)
+struct RigHierarchy_GetIntFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0084(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetIntFromControlValue) == 0x000004, "Wrong alignment on RigHierarchy_GetIntFromControlValue");
+static_assert(sizeof(RigHierarchy_GetIntFromControlValue) == 0x000088, "Wrong size on RigHierarchy_GetIntFromControlValue");
+static_assert(offsetof(RigHierarchy_GetIntFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetIntFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetIntFromControlValue, ReturnValue) == 0x000084, "Member 'RigHierarchy_GetIntFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRotatorFromControlValue
+// 0x00A0 (0x00A0 - 0x0000)
+struct RigHierarchy_GetRotatorFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CB[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRotatorFromControlValue) == 0x000008, "Wrong alignment on RigHierarchy_GetRotatorFromControlValue");
+static_assert(sizeof(RigHierarchy_GetRotatorFromControlValue) == 0x0000A0, "Wrong size on RigHierarchy_GetRotatorFromControlValue");
+static_assert(offsetof(RigHierarchy_GetRotatorFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetRotatorFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorFromControlValue, ReturnValue) == 0x000088, "Member 'RigHierarchy_GetRotatorFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetTransformFromControlValue
+// 0x00F0 (0x00F0 - 0x0000)
+struct RigHierarchy_GetTransformFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CC[0xC];                                     // 0x0084(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0090(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetTransformFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformFromControlValue");
+static_assert(sizeof(RigHierarchy_GetTransformFromControlValue) == 0x0000F0, "Wrong size on RigHierarchy_GetTransformFromControlValue");
+static_assert(offsetof(RigHierarchy_GetTransformFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetTransformFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformFromControlValue, ReturnValue) == 0x000090, "Member 'RigHierarchy_GetTransformFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetTransformNoScaleFromControlValue
+// 0x00D0 (0x00D0 - 0x0000)
+struct RigHierarchy_GetTransformNoScaleFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CD[0xC];                                     // 0x0084(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransformNoScale                      ReturnValue;                                       // 0x0090(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetTransformNoScaleFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformNoScaleFromControlValue");
+static_assert(sizeof(RigHierarchy_GetTransformNoScaleFromControlValue) == 0x0000D0, "Wrong size on RigHierarchy_GetTransformNoScaleFromControlValue");
+static_assert(offsetof(RigHierarchy_GetTransformNoScaleFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetTransformNoScaleFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformNoScaleFromControlValue, ReturnValue) == 0x000090, "Member 'RigHierarchy_GetTransformNoScaleFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetVector2DFromControlValue
+// 0x0098 (0x0098 - 0x0000)
+struct RigHierarchy_GetVector2DFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CE[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0088(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetVector2DFromControlValue) == 0x000008, "Wrong alignment on RigHierarchy_GetVector2DFromControlValue");
+static_assert(sizeof(RigHierarchy_GetVector2DFromControlValue) == 0x000098, "Wrong size on RigHierarchy_GetVector2DFromControlValue");
+static_assert(offsetof(RigHierarchy_GetVector2DFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetVector2DFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVector2DFromControlValue, ReturnValue) == 0x000088, "Member 'RigHierarchy_GetVector2DFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetVectorFromControlValue
+// 0x00A0 (0x00A0 - 0x0000)
+struct RigHierarchy_GetVectorFromControlValue final 
+{
+public:
+	struct FRigControlValue                       InValue;                                           // 0x0000(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36CF[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0088(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetVectorFromControlValue) == 0x000008, "Wrong alignment on RigHierarchy_GetVectorFromControlValue");
+static_assert(sizeof(RigHierarchy_GetVectorFromControlValue) == 0x0000A0, "Wrong size on RigHierarchy_GetVectorFromControlValue");
+static_assert(offsetof(RigHierarchy_GetVectorFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetVectorFromControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorFromControlValue, ReturnValue) == 0x000088, "Member 'RigHierarchy_GetVectorFromControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromBool
+// 0x0088 (0x0088 - 0x0000)
+struct RigHierarchy_MakeControlValueFromBool final 
+{
+public:
+	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D0[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlValue                       ReturnValue;                                       // 0x0004(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromBool) == 0x000004, "Wrong alignment on RigHierarchy_MakeControlValueFromBool");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromBool) == 0x000088, "Wrong size on RigHierarchy_MakeControlValueFromBool");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromBool, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromBool::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromBool, ReturnValue) == 0x000004, "Member 'RigHierarchy_MakeControlValueFromBool::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromEulerTransform
+// 0x00D0 (0x00D0 - 0x0000)
+struct RigHierarchy_MakeControlValueFromEulerTransform final 
+{
+public:
+	struct FEulerTransform                        InValue;                                           // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0048(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D1[0x4];                                     // 0x00CC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromEulerTransform) == 0x000008, "Wrong alignment on RigHierarchy_MakeControlValueFromEulerTransform");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromEulerTransform) == 0x0000D0, "Wrong size on RigHierarchy_MakeControlValueFromEulerTransform");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromEulerTransform, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromEulerTransform::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromEulerTransform, ReturnValue) == 0x000048, "Member 'RigHierarchy_MakeControlValueFromEulerTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromFloat
+// 0x0088 (0x0088 - 0x0000)
+struct RigHierarchy_MakeControlValueFromFloat final 
+{
+public:
+	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0004(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromFloat) == 0x000004, "Wrong alignment on RigHierarchy_MakeControlValueFromFloat");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromFloat) == 0x000088, "Wrong size on RigHierarchy_MakeControlValueFromFloat");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromFloat, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromFloat::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromFloat, ReturnValue) == 0x000004, "Member 'RigHierarchy_MakeControlValueFromFloat::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromInt
+// 0x0088 (0x0088 - 0x0000)
+struct RigHierarchy_MakeControlValueFromInt final 
+{
+public:
+	int32                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0004(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromInt) == 0x000004, "Wrong alignment on RigHierarchy_MakeControlValueFromInt");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromInt) == 0x000088, "Wrong size on RigHierarchy_MakeControlValueFromInt");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromInt, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromInt::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromInt, ReturnValue) == 0x000004, "Member 'RigHierarchy_MakeControlValueFromInt::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromRotator
+// 0x00A0 (0x00A0 - 0x0000)
+struct RigHierarchy_MakeControlValueFromRotator final 
+{
+public:
+	struct FRotator                               InValue;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0018(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D2[0x4];                                     // 0x009C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromRotator) == 0x000008, "Wrong alignment on RigHierarchy_MakeControlValueFromRotator");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromRotator) == 0x0000A0, "Wrong size on RigHierarchy_MakeControlValueFromRotator");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromRotator, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromRotator::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromRotator, ReturnValue) == 0x000018, "Member 'RigHierarchy_MakeControlValueFromRotator::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromTransform
+// 0x00F0 (0x00F0 - 0x0000)
+struct RigHierarchy_MakeControlValueFromTransform final 
+{
+public:
+	struct FTransform                             InValue;                                           // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0060(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D3[0xC];                                     // 0x00E4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromTransform) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromTransform");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromTransform) == 0x0000F0, "Wrong size on RigHierarchy_MakeControlValueFromTransform");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromTransform, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromTransform::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromTransform, ReturnValue) == 0x000060, "Member 'RigHierarchy_MakeControlValueFromTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromTransformNoScale
+// 0x00D0 (0x00D0 - 0x0000)
+struct RigHierarchy_MakeControlValueFromTransformNoScale final 
+{
+public:
+	struct FTransformNoScale                      InValue;                                           // 0x0000(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0040(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D4[0xC];                                     // 0x00C4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromTransformNoScale) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromTransformNoScale");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromTransformNoScale) == 0x0000D0, "Wrong size on RigHierarchy_MakeControlValueFromTransformNoScale");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromTransformNoScale, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromTransformNoScale::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromTransformNoScale, ReturnValue) == 0x000040, "Member 'RigHierarchy_MakeControlValueFromTransformNoScale::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromVector
+// 0x00A0 (0x00A0 - 0x0000)
+struct RigHierarchy_MakeControlValueFromVector final 
+{
+public:
+	struct FVector                                InValue;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0018(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D5[0x4];                                     // 0x009C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromVector) == 0x000008, "Wrong alignment on RigHierarchy_MakeControlValueFromVector");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromVector) == 0x0000A0, "Wrong size on RigHierarchy_MakeControlValueFromVector");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromVector, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromVector::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromVector, ReturnValue) == 0x000018, "Member 'RigHierarchy_MakeControlValueFromVector::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.MakeControlValueFromVector2D
+// 0x0098 (0x0098 - 0x0000)
+struct RigHierarchy_MakeControlValueFromVector2D final 
+{
+public:
+	struct FVector2D                              InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D6[0x4];                                     // 0x0094(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_MakeControlValueFromVector2D) == 0x000008, "Wrong alignment on RigHierarchy_MakeControlValueFromVector2D");
+static_assert(sizeof(RigHierarchy_MakeControlValueFromVector2D) == 0x000098, "Wrong size on RigHierarchy_MakeControlValueFromVector2D");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromVector2D, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromVector2D::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_MakeControlValueFromVector2D, ReturnValue) == 0x000010, "Member 'RigHierarchy_MakeControlValueFromVector2D::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.CopyHierarchy
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_CopyHierarchy final 
+{
+public:
+	class URigHierarchy*                          InHierarchy;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_CopyHierarchy) == 0x000008, "Wrong alignment on RigHierarchy_CopyHierarchy");
+static_assert(sizeof(RigHierarchy_CopyHierarchy) == 0x000008, "Wrong size on RigHierarchy_CopyHierarchy");
+static_assert(offsetof(RigHierarchy_CopyHierarchy, InHierarchy) == 0x000000, "Member 'RigHierarchy_CopyHierarchy::InHierarchy' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.CopyPose
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_CopyPose final 
+{
+public:
+	class URigHierarchy*                          InHierarchy;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bCurrent;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWeights;                                          // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bMatchPoseInGlobalIfNeeded;                        // 0x000B(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D7[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_CopyPose) == 0x000008, "Wrong alignment on RigHierarchy_CopyPose");
+static_assert(sizeof(RigHierarchy_CopyPose) == 0x000010, "Wrong size on RigHierarchy_CopyPose");
+static_assert(offsetof(RigHierarchy_CopyPose, InHierarchy) == 0x000000, "Member 'RigHierarchy_CopyPose::InHierarchy' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_CopyPose, bCurrent) == 0x000008, "Member 'RigHierarchy_CopyPose::bCurrent' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_CopyPose, bInitial) == 0x000009, "Member 'RigHierarchy_CopyPose::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_CopyPose, bWeights) == 0x00000A, "Member 'RigHierarchy_CopyPose::bWeights' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_CopyPose, bMatchPoseInGlobalIfNeeded) == 0x00000B, "Member 'RigHierarchy_CopyPose::bMatchPoseInGlobalIfNeeded' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetController
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetController final 
+{
+public:
+	bool                                          bCreateIfNeeded;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class URigHierarchyController*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetController) == 0x000008, "Wrong alignment on RigHierarchy_GetController");
+static_assert(sizeof(RigHierarchy_GetController) == 0x000010, "Wrong size on RigHierarchy_GetController");
+static_assert(offsetof(RigHierarchy_GetController, bCreateIfNeeded) == 0x000000, "Member 'RigHierarchy_GetController::bCreateIfNeeded' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetController, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetController::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetMetadataNames
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetMetadataNames final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36D9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetMetadataNames) == 0x000008, "Wrong alignment on RigHierarchy_GetMetadataNames");
+static_assert(sizeof(RigHierarchy_GetMetadataNames) == 0x000020, "Wrong size on RigHierarchy_GetMetadataNames");
+static_assert(offsetof(RigHierarchy_GetMetadataNames, InItem) == 0x000000, "Member 'RigHierarchy_GetMetadataNames::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetMetadataNames, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetMetadataNames::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetMetadataType
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetMetadataType final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERigMetadataType                              ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DA[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_GetMetadataType) == 0x000004, "Wrong alignment on RigHierarchy_GetMetadataType");
+static_assert(sizeof(RigHierarchy_GetMetadataType) == 0x000018, "Wrong size on RigHierarchy_GetMetadataType");
+static_assert(offsetof(RigHierarchy_GetMetadataType, InItem) == 0x000000, "Member 'RigHierarchy_GetMetadataType::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetMetadataType, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetMetadataType::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetMetadataType, ReturnValue) == 0x000014, "Member 'RigHierarchy_GetMetadataType::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.RemoveAllMetadata
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_RemoveAllMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DB[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_RemoveAllMetadata) == 0x000004, "Wrong alignment on RigHierarchy_RemoveAllMetadata");
+static_assert(sizeof(RigHierarchy_RemoveAllMetadata) == 0x000010, "Wrong size on RigHierarchy_RemoveAllMetadata");
+static_assert(offsetof(RigHierarchy_RemoveAllMetadata, InItem) == 0x000000, "Member 'RigHierarchy_RemoveAllMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_RemoveAllMetadata, ReturnValue) == 0x00000C, "Member 'RigHierarchy_RemoveAllMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.RemoveMetadata
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_RemoveMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DC[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_RemoveMetadata) == 0x000004, "Wrong alignment on RigHierarchy_RemoveMetadata");
+static_assert(sizeof(RigHierarchy_RemoveMetadata) == 0x000018, "Wrong size on RigHierarchy_RemoveMetadata");
+static_assert(offsetof(RigHierarchy_RemoveMetadata, InItem) == 0x000000, "Member 'RigHierarchy_RemoveMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_RemoveMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_RemoveMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_RemoveMetadata, ReturnValue) == 0x000014, "Member 'RigHierarchy_RemoveMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.ResetPoseToInitial
+// 0x0001 (0x0001 - 0x0000)
+struct RigHierarchy_ResetPoseToInitial final 
+{
+public:
+	ERigElementType                               InTypeFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_ResetPoseToInitial) == 0x000001, "Wrong alignment on RigHierarchy_ResetPoseToInitial");
+static_assert(sizeof(RigHierarchy_ResetPoseToInitial) == 0x000001, "Wrong size on RigHierarchy_ResetPoseToInitial");
+static_assert(offsetof(RigHierarchy_ResetPoseToInitial, InTypeFilter) == 0x000000, "Member 'RigHierarchy_ResetPoseToInitial::InTypeFilter' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SendAutoKeyEvent
+// 0x0014 (0x0014 - 0x0000)
+struct RigHierarchy_SendAutoKeyEvent final 
+{
+public:
+	struct FRigElementKey                         InElement;                                         // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InOffsetInSeconds;                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAsynchronous;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DD[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SendAutoKeyEvent) == 0x000004, "Wrong alignment on RigHierarchy_SendAutoKeyEvent");
+static_assert(sizeof(RigHierarchy_SendAutoKeyEvent) == 0x000014, "Wrong size on RigHierarchy_SendAutoKeyEvent");
+static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, InElement) == 0x000000, "Member 'RigHierarchy_SendAutoKeyEvent::InElement' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, InOffsetInSeconds) == 0x00000C, "Member 'RigHierarchy_SendAutoKeyEvent::InOffsetInSeconds' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, bAsynchronous) == 0x000010, "Member 'RigHierarchy_SendAutoKeyEvent::bAsynchronous' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetBoolArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetBoolArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DE[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36DF[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetBoolArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetBoolArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetBoolArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetBoolArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetBoolArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetBoolArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetBoolArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetBoolArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetBoolMetadata
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_SetBoolMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          InValue;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E0[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetBoolMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetBoolMetadata");
+static_assert(sizeof(RigHierarchy_SetBoolMetadata) == 0x000018, "Wrong size on RigHierarchy_SetBoolMetadata");
+static_assert(offsetof(RigHierarchy_SetBoolMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetBoolMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetBoolMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetBoolMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetBoolMetadata, ReturnValue) == 0x000015, "Member 'RigHierarchy_SetBoolMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlOffsetTransform
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetControlOffsetTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E1[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E2[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlOffsetTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetControlOffsetTransform");
+static_assert(sizeof(RigHierarchy_SetControlOffsetTransform) == 0x000080, "Wrong size on RigHierarchy_SetControlOffsetTransform");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetControlOffsetTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlOffsetTransform::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlOffsetTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetControlOffsetTransform::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetControlOffsetTransform::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetControlOffsetTransform::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlOffsetTransformByIndex
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetControlOffsetTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E3[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E4[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlOffsetTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlOffsetTransformByIndex");
+static_assert(sizeof(RigHierarchy_SetControlOffsetTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetControlOffsetTransformByIndex");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredEulerAngles
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetControlPreferredEulerAngles final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E5[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InEulerAngles;                                     // 0x0010(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFixEulerFlips;                                    // 0x002A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E6[0x5];                                     // 0x002B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredEulerAngles) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredEulerAngles");
+static_assert(sizeof(RigHierarchy_SetControlPreferredEulerAngles) == 0x000030, "Wrong size on RigHierarchy_SetControlPreferredEulerAngles");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAngles, InKey) == 0x000000, "Member 'RigHierarchy_SetControlPreferredEulerAngles::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAngles, InEulerAngles) == 0x000010, "Member 'RigHierarchy_SetControlPreferredEulerAngles::InEulerAngles' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAngles, InRotationOrder) == 0x000028, "Member 'RigHierarchy_SetControlPreferredEulerAngles::InRotationOrder' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAngles, bInitial) == 0x000029, "Member 'RigHierarchy_SetControlPreferredEulerAngles::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAngles, bFixEulerFlips) == 0x00002A, "Member 'RigHierarchy_SetControlPreferredEulerAngles::bFixEulerFlips' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredEulerAnglesByIndex
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_SetControlPreferredEulerAnglesByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InEulerAngles;                                     // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFixEulerFlips;                                    // 0x0022(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E8[0x5];                                     // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredEulerAnglesByIndex) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredEulerAnglesByIndex");
+static_assert(sizeof(RigHierarchy_SetControlPreferredEulerAnglesByIndex) == 0x000028, "Wrong size on RigHierarchy_SetControlPreferredEulerAnglesByIndex");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAnglesByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlPreferredEulerAnglesByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAnglesByIndex, InEulerAngles) == 0x000008, "Member 'RigHierarchy_SetControlPreferredEulerAnglesByIndex::InEulerAngles' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAnglesByIndex, InRotationOrder) == 0x000020, "Member 'RigHierarchy_SetControlPreferredEulerAnglesByIndex::InRotationOrder' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAnglesByIndex, bInitial) == 0x000021, "Member 'RigHierarchy_SetControlPreferredEulerAnglesByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredEulerAnglesByIndex, bFixEulerFlips) == 0x000022, "Member 'RigHierarchy_SetControlPreferredEulerAnglesByIndex::bFixEulerFlips' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotationOrder
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_SetControlPreferredRotationOrder final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36E9[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredRotationOrder) == 0x000004, "Wrong alignment on RigHierarchy_SetControlPreferredRotationOrder");
+static_assert(sizeof(RigHierarchy_SetControlPreferredRotationOrder) == 0x000010, "Wrong size on RigHierarchy_SetControlPreferredRotationOrder");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotationOrder, InKey) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotationOrder::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotationOrder, InRotationOrder) == 0x00000C, "Member 'RigHierarchy_SetControlPreferredRotationOrder::InRotationOrder' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotationOrderByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_SetControlPreferredRotationOrderByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36EA[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredRotationOrderByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetControlPreferredRotationOrderByIndex");
+static_assert(sizeof(RigHierarchy_SetControlPreferredRotationOrderByIndex) == 0x000008, "Wrong size on RigHierarchy_SetControlPreferredRotationOrderByIndex");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotationOrderByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotationOrderByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotationOrderByIndex, InRotationOrder) == 0x000004, "Member 'RigHierarchy_SetControlPreferredRotationOrderByIndex::InRotationOrder' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotator
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetControlPreferredRotator final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36EB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               InRotator;                                         // 0x0010(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFixEulerFlips;                                    // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36EC[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredRotator) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredRotator");
+static_assert(sizeof(RigHierarchy_SetControlPreferredRotator) == 0x000030, "Wrong size on RigHierarchy_SetControlPreferredRotator");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, InKey) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotator::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, InRotator) == 0x000010, "Member 'RigHierarchy_SetControlPreferredRotator::InRotator' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, bInitial) == 0x000028, "Member 'RigHierarchy_SetControlPreferredRotator::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, bFixEulerFlips) == 0x000029, "Member 'RigHierarchy_SetControlPreferredRotator::bFixEulerFlips' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlPreferredRotatorByIndex
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_SetControlPreferredRotatorByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36ED[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               InRotator;                                         // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFixEulerFlips;                                    // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36EE[0x6];                                     // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlPreferredRotatorByIndex) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredRotatorByIndex");
+static_assert(sizeof(RigHierarchy_SetControlPreferredRotatorByIndex) == 0x000028, "Wrong size on RigHierarchy_SetControlPreferredRotatorByIndex");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, InRotator) == 0x000008, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::InRotator' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, bInitial) == 0x000020, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, bFixEulerFlips) == 0x000021, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::bFixEulerFlips' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlSettings
+// 0x01D0 (0x01D0 - 0x0000)
+struct RigHierarchy_SetControlSettings final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36EF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    InSettings;                                        // 0x0010(0x01B8)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x01C8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForce;                                            // 0x01C9(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x01CA(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F0[0x5];                                     // 0x01CB(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlSettings) == 0x000008, "Wrong alignment on RigHierarchy_SetControlSettings");
+static_assert(sizeof(RigHierarchy_SetControlSettings) == 0x0001D0, "Wrong size on RigHierarchy_SetControlSettings");
+static_assert(offsetof(RigHierarchy_SetControlSettings, InKey) == 0x000000, "Member 'RigHierarchy_SetControlSettings::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettings, InSettings) == 0x000010, "Member 'RigHierarchy_SetControlSettings::InSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettings, bSetupUndo) == 0x0001C8, "Member 'RigHierarchy_SetControlSettings::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettings, bForce) == 0x0001C9, "Member 'RigHierarchy_SetControlSettings::bForce' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettings, bPrintPythonCommands) == 0x0001CA, "Member 'RigHierarchy_SetControlSettings::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlSettingsByIndex
+// 0x01C8 (0x01C8 - 0x0000)
+struct RigHierarchy_SetControlSettingsByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    InSettings;                                        // 0x0008(0x01B8)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x01C0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bForce;                                            // 0x01C1(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x01C2(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F2[0x5];                                     // 0x01C3(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlSettingsByIndex) == 0x000008, "Wrong alignment on RigHierarchy_SetControlSettingsByIndex");
+static_assert(sizeof(RigHierarchy_SetControlSettingsByIndex) == 0x0001C8, "Wrong size on RigHierarchy_SetControlSettingsByIndex");
+static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlSettingsByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, InSettings) == 0x000008, "Member 'RigHierarchy_SetControlSettingsByIndex::InSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bSetupUndo) == 0x0001C0, "Member 'RigHierarchy_SetControlSettingsByIndex::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bForce) == 0x0001C1, "Member 'RigHierarchy_SetControlSettingsByIndex::bForce' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bPrintPythonCommands) == 0x0001C2, "Member 'RigHierarchy_SetControlSettingsByIndex::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlShapeTransform
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetControlShapeTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F3[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F4[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetControlShapeTransform");
+static_assert(sizeof(RigHierarchy_SetControlShapeTransform) == 0x000080, "Wrong size on RigHierarchy_SetControlShapeTransform");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetControlShapeTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlShapeTransform::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlShapeTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransform, bSetupUndo) == 0x000071, "Member 'RigHierarchy_SetControlShapeTransform::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlShapeTransformByIndex
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetControlShapeTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F5[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F6[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlShapeTransformByIndex");
+static_assert(sizeof(RigHierarchy_SetControlShapeTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetControlShapeTransformByIndex");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlShapeTransformByIndex::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlShapeTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, bSetupUndo) == 0x000071, "Member 'RigHierarchy_SetControlShapeTransformByIndex::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlValue
+// 0x0094 (0x0094 - 0x0000)
+struct RigHierarchy_SetControlValue final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       InValue;                                           // 0x000C(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	ERigControlValueType                          InValueType;                                       // 0x0090(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0091(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x0092(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F7[0x1];                                     // 0x0093(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlValue) == 0x000004, "Wrong alignment on RigHierarchy_SetControlValue");
+static_assert(sizeof(RigHierarchy_SetControlValue) == 0x000094, "Wrong size on RigHierarchy_SetControlValue");
+static_assert(offsetof(RigHierarchy_SetControlValue, InKey) == 0x000000, "Member 'RigHierarchy_SetControlValue::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValue, InValue) == 0x00000C, "Member 'RigHierarchy_SetControlValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValue, InValueType) == 0x000090, "Member 'RigHierarchy_SetControlValue::InValueType' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValue, bSetupUndo) == 0x000091, "Member 'RigHierarchy_SetControlValue::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValue, bPrintPythonCommands) == 0x000092, "Member 'RigHierarchy_SetControlValue::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlValueByIndex
+// 0x008C (0x008C - 0x0000)
+struct RigHierarchy_SetControlValueByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       InValue;                                           // 0x0004(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	ERigControlValueType                          InValueType;                                       // 0x0088(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0089(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x008A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F8[0x1];                                     // 0x008B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetControlValueByIndex");
+static_assert(sizeof(RigHierarchy_SetControlValueByIndex) == 0x00008C, "Wrong size on RigHierarchy_SetControlValueByIndex");
+static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlValueByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InValue) == 0x000004, "Member 'RigHierarchy_SetControlValueByIndex::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InValueType) == 0x000088, "Member 'RigHierarchy_SetControlValueByIndex::InValueType' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValueByIndex, bSetupUndo) == 0x000089, "Member 'RigHierarchy_SetControlValueByIndex::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlValueByIndex, bPrintPythonCommands) == 0x00008A, "Member 'RigHierarchy_SetControlValueByIndex::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlVisibility
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_SetControlVisibility final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisibility;                                       // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36F9[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlVisibility) == 0x000004, "Wrong alignment on RigHierarchy_SetControlVisibility");
+static_assert(sizeof(RigHierarchy_SetControlVisibility) == 0x000010, "Wrong size on RigHierarchy_SetControlVisibility");
+static_assert(offsetof(RigHierarchy_SetControlVisibility, InKey) == 0x000000, "Member 'RigHierarchy_SetControlVisibility::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlVisibility, bVisibility) == 0x00000C, "Member 'RigHierarchy_SetControlVisibility::bVisibility' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetControlVisibilityByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_SetControlVisibilityByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bVisibility;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FA[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetControlVisibilityByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetControlVisibilityByIndex");
+static_assert(sizeof(RigHierarchy_SetControlVisibilityByIndex) == 0x000008, "Wrong size on RigHierarchy_SetControlVisibilityByIndex");
+static_assert(offsetof(RigHierarchy_SetControlVisibilityByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlVisibilityByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetControlVisibilityByIndex, bVisibility) == 0x000004, "Member 'RigHierarchy_SetControlVisibilityByIndex::bVisibility' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetCurveValue
+// 0x0014 (0x0014 - 0x0000)
+struct RigHierarchy_SetCurveValue final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FB[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_SetCurveValue");
+static_assert(sizeof(RigHierarchy_SetCurveValue) == 0x000014, "Wrong size on RigHierarchy_SetCurveValue");
+static_assert(offsetof(RigHierarchy_SetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_SetCurveValue::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetCurveValue, InValue) == 0x00000C, "Member 'RigHierarchy_SetCurveValue::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetCurveValue, bSetupUndo) == 0x000010, "Member 'RigHierarchy_SetCurveValue::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetCurveValueByIndex
+// 0x000C (0x000C - 0x0000)
+struct RigHierarchy_SetCurveValueByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FC[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetCurveValueByIndex");
+static_assert(sizeof(RigHierarchy_SetCurveValueByIndex) == 0x00000C, "Wrong size on RigHierarchy_SetCurveValueByIndex");
+static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetCurveValueByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, InValue) == 0x000004, "Member 'RigHierarchy_SetCurveValueByIndex::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, bSetupUndo) == 0x000008, "Member 'RigHierarchy_SetCurveValueByIndex::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetFloatArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetFloatArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FD[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FE[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetFloatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetFloatArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetFloatArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetFloatArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetFloatArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetFloatArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetFloatArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetFloatArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetFloatMetadata
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_SetFloatMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_36FF[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetFloatMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetFloatMetadata");
+static_assert(sizeof(RigHierarchy_SetFloatMetadata) == 0x00001C, "Wrong size on RigHierarchy_SetFloatMetadata");
+static_assert(offsetof(RigHierarchy_SetFloatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetFloatMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetFloatMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetFloatMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetFloatMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_SetFloatMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetGlobalTransform
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetGlobalTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3700[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommand;                               // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3701[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetGlobalTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetGlobalTransform");
+static_assert(sizeof(RigHierarchy_SetGlobalTransform) == 0x000080, "Wrong size on RigHierarchy_SetGlobalTransform");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetGlobalTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetGlobalTransform::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetGlobalTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetGlobalTransform::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetGlobalTransform::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransform, bPrintPythonCommand) == 0x000073, "Member 'RigHierarchy_SetGlobalTransform::bPrintPythonCommand' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetGlobalTransformByIndex
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetGlobalTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3702[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommand;                               // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3703[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetGlobalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetGlobalTransformByIndex");
+static_assert(sizeof(RigHierarchy_SetGlobalTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetGlobalTransformByIndex");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetGlobalTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetGlobalTransformByIndex::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetGlobalTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetGlobalTransformByIndex::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetGlobalTransformByIndex::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bPrintPythonCommand) == 0x000073, "Member 'RigHierarchy_SetGlobalTransformByIndex::bPrintPythonCommand' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetInt32ArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetInt32ArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3704[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3705[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetInt32ArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetInt32ArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetInt32ArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetInt32ArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetInt32ArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetInt32ArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetInt32ArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetInt32ArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetInt32Metadata
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_SetInt32Metadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3706[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetInt32Metadata) == 0x000004, "Wrong alignment on RigHierarchy_SetInt32Metadata");
+static_assert(sizeof(RigHierarchy_SetInt32Metadata) == 0x00001C, "Wrong size on RigHierarchy_SetInt32Metadata");
+static_assert(offsetof(RigHierarchy_SetInt32Metadata, InItem) == 0x000000, "Member 'RigHierarchy_SetInt32Metadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32Metadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetInt32Metadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32Metadata, InValue) == 0x000014, "Member 'RigHierarchy_SetInt32Metadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetInt32Metadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_SetInt32Metadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetLinearColorArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetLinearColorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3707[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3708[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetLinearColorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetLinearColorArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetLinearColorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetLinearColorArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetLinearColorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetLinearColorMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_SetLinearColorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           InValue;                                           // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3709[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetLinearColorMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetLinearColorMetadata");
+static_assert(sizeof(RigHierarchy_SetLinearColorMetadata) == 0x000028, "Wrong size on RigHierarchy_SetLinearColorMetadata");
+static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetLinearColorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetLinearColorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetLinearColorMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, ReturnValue) == 0x000024, "Member 'RigHierarchy_SetLinearColorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetLocalTransform
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetLocalTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370B[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetLocalTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetLocalTransform");
+static_assert(sizeof(RigHierarchy_SetLocalTransform) == 0x000080, "Wrong size on RigHierarchy_SetLocalTransform");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetLocalTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetLocalTransform::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetLocalTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetLocalTransform::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetLocalTransform::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransform, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetLocalTransform::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetLocalTransformByIndex
+// 0x0080 (0x0080 - 0x0000)
+struct RigHierarchy_SetLocalTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370C[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370D[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetLocalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetLocalTransformByIndex");
+static_assert(sizeof(RigHierarchy_SetLocalTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetLocalTransformByIndex");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetLocalTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetLocalTransformByIndex::InTransform' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetLocalTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetLocalTransformByIndex::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetLocalTransformByIndex::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetLocalTransformByIndex::bPrintPythonCommands' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetNameArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetNameArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_370F[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetNameArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetNameArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetNameArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetNameArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetNameArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetNameArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetNameArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetNameArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetNameMetadata
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_SetNameMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InValue;                                           // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3710[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetNameMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetNameMetadata");
+static_assert(sizeof(RigHierarchy_SetNameMetadata) == 0x000020, "Wrong size on RigHierarchy_SetNameMetadata");
+static_assert(offsetof(RigHierarchy_SetNameMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetNameMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetNameMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetNameMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetNameMetadata, ReturnValue) == 0x00001C, "Member 'RigHierarchy_SetNameMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetParentWeight
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_SetParentWeight final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementWeight                      InWeight;                                          // 0x0018(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0026(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3711[0x1];                                     // 0x0027(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetParentWeight) == 0x000004, "Wrong alignment on RigHierarchy_SetParentWeight");
+static_assert(sizeof(RigHierarchy_SetParentWeight) == 0x000028, "Wrong size on RigHierarchy_SetParentWeight");
+static_assert(offsetof(RigHierarchy_SetParentWeight, InChild) == 0x000000, "Member 'RigHierarchy_SetParentWeight::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeight, InParent) == 0x00000C, "Member 'RigHierarchy_SetParentWeight::InParent' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeight, InWeight) == 0x000018, "Member 'RigHierarchy_SetParentWeight::InWeight' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeight, bInitial) == 0x000024, "Member 'RigHierarchy_SetParentWeight::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeight, bAffectChildren) == 0x000025, "Member 'RigHierarchy_SetParentWeight::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeight, ReturnValue) == 0x000026, "Member 'RigHierarchy_SetParentWeight::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetParentWeightArray
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_SetParentWeightArray final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3712[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementWeight>              InWeights;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3713[0x5];                                     // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetParentWeightArray) == 0x000008, "Wrong alignment on RigHierarchy_SetParentWeightArray");
+static_assert(sizeof(RigHierarchy_SetParentWeightArray) == 0x000028, "Wrong size on RigHierarchy_SetParentWeightArray");
+static_assert(offsetof(RigHierarchy_SetParentWeightArray, InChild) == 0x000000, "Member 'RigHierarchy_SetParentWeightArray::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeightArray, InWeights) == 0x000010, "Member 'RigHierarchy_SetParentWeightArray::InWeights' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeightArray, bInitial) == 0x000020, "Member 'RigHierarchy_SetParentWeightArray::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeightArray, bAffectChildren) == 0x000021, "Member 'RigHierarchy_SetParentWeightArray::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetParentWeightArray, ReturnValue) == 0x000022, "Member 'RigHierarchy_SetParentWeightArray::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetPose_ForBlueprint
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_SetPose_ForBlueprint final 
+{
+public:
+	struct FRigPose                               InPose;                                            // 0x0000(0x0070)(Parm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_SetPose_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchy_SetPose_ForBlueprint");
+static_assert(sizeof(RigHierarchy_SetPose_ForBlueprint) == 0x000070, "Wrong size on RigHierarchy_SetPose_ForBlueprint");
+static_assert(offsetof(RigHierarchy_SetPose_ForBlueprint, InPose) == 0x000000, "Member 'RigHierarchy_SetPose_ForBlueprint::InPose' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetQuatArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetQuatArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3714[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FQuat>                          InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3715[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetQuatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetQuatArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetQuatArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetQuatArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetQuatArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetQuatArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetQuatArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetQuatArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetQuatMetadata
+// 0x0050 (0x0050 - 0x0000)
+struct RigHierarchy_SetQuatMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3716[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  InValue;                                           // 0x0020(0x0020)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3717[0xF];                                     // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetQuatMetadata) == 0x000010, "Wrong alignment on RigHierarchy_SetQuatMetadata");
+static_assert(sizeof(RigHierarchy_SetQuatMetadata) == 0x000050, "Wrong size on RigHierarchy_SetQuatMetadata");
+static_assert(offsetof(RigHierarchy_SetQuatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetQuatMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetQuatMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatMetadata, InValue) == 0x000020, "Member 'RigHierarchy_SetQuatMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetQuatMetadata, ReturnValue) == 0x000040, "Member 'RigHierarchy_SetQuatMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetRigElementKeyArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetRigElementKeyArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3718[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3719[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetRigElementKeyArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRigElementKeyArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetRigElementKeyArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetRigElementKeyArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetRigElementKeyMetadata
+// 0x0024 (0x0024 - 0x0000)
+struct RigHierarchy_SetRigElementKeyMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         InValue;                                           // 0x0014(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371A[0x3];                                     // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetRigElementKeyMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetRigElementKeyMetadata");
+static_assert(sizeof(RigHierarchy_SetRigElementKeyMetadata) == 0x000024, "Wrong size on RigHierarchy_SetRigElementKeyMetadata");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRigElementKeyMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRigElementKeyMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetRigElementKeyMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, ReturnValue) == 0x000020, "Member 'RigHierarchy_SetRigElementKeyMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetRotatorArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetRotatorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRotator>                       InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetRotatorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRotatorArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetRotatorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetRotatorArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRotatorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRotatorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRotatorArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetRotatorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetRotatorMetadata
+// 0x0038 (0x0038 - 0x0000)
+struct RigHierarchy_SetRotatorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               InValue;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371E[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetRotatorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRotatorMetadata");
+static_assert(sizeof(RigHierarchy_SetRotatorMetadata) == 0x000038, "Wrong size on RigHierarchy_SetRotatorMetadata");
+static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRotatorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRotatorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRotatorMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetRotatorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_SetRotatorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetTag
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_SetTag final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InTag;                                             // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_371F[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetTag) == 0x000004, "Wrong alignment on RigHierarchy_SetTag");
+static_assert(sizeof(RigHierarchy_SetTag) == 0x000018, "Wrong size on RigHierarchy_SetTag");
+static_assert(offsetof(RigHierarchy_SetTag, InItem) == 0x000000, "Member 'RigHierarchy_SetTag::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTag, InTag) == 0x00000C, "Member 'RigHierarchy_SetTag::InTag' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTag, ReturnValue) == 0x000014, "Member 'RigHierarchy_SetTag::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetTransformArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetTransformArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3720[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3721[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetTransformArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetTransformArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetTransformArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetTransformArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetTransformArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetTransformArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetTransformArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetTransformArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetTransformMetadata
+// 0x0090 (0x0090 - 0x0000)
+struct RigHierarchy_SetTransformMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3722[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             InValue;                                           // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3723[0xF];                                     // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetTransformMetadata) == 0x000010, "Wrong alignment on RigHierarchy_SetTransformMetadata");
+static_assert(sizeof(RigHierarchy_SetTransformMetadata) == 0x000090, "Wrong size on RigHierarchy_SetTransformMetadata");
+static_assert(offsetof(RigHierarchy_SetTransformMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetTransformMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetTransformMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformMetadata, InValue) == 0x000020, "Member 'RigHierarchy_SetTransformMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetTransformMetadata, ReturnValue) == 0x000080, "Member 'RigHierarchy_SetTransformMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetVectorArrayMetadata
+// 0x0030 (0x0030 - 0x0000)
+struct RigHierarchy_SetVectorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3724[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3725[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetVectorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetVectorArrayMetadata");
+static_assert(sizeof(RigHierarchy_SetVectorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetVectorArrayMetadata");
+static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetVectorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetVectorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetVectorArrayMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetVectorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SetVectorMetadata
+// 0x0038 (0x0038 - 0x0000)
+struct RigHierarchy_SetVectorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3726[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                InValue;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3727[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SetVectorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetVectorMetadata");
+static_assert(sizeof(RigHierarchy_SetVectorMetadata) == 0x000038, "Wrong size on RigHierarchy_SetVectorMetadata");
+static_assert(offsetof(RigHierarchy_SetVectorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetVectorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetVectorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetVectorMetadata::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SetVectorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_SetVectorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SwitchToDefaultParent
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_SwitchToDefaultParent final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3728[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SwitchToDefaultParent) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToDefaultParent");
+static_assert(sizeof(RigHierarchy_SwitchToDefaultParent) == 0x000010, "Wrong size on RigHierarchy_SwitchToDefaultParent");
+static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToDefaultParent::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, bInitial) == 0x00000C, "Member 'RigHierarchy_SwitchToDefaultParent::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, bAffectChildren) == 0x00000D, "Member 'RigHierarchy_SwitchToDefaultParent::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, ReturnValue) == 0x00000E, "Member 'RigHierarchy_SwitchToDefaultParent::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SwitchToParent
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_SwitchToParent final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x001A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3729[0x1];                                     // 0x001B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SwitchToParent) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToParent");
+static_assert(sizeof(RigHierarchy_SwitchToParent) == 0x00001C, "Wrong size on RigHierarchy_SwitchToParent");
+static_assert(offsetof(RigHierarchy_SwitchToParent, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToParent::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToParent, InParent) == 0x00000C, "Member 'RigHierarchy_SwitchToParent::InParent' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToParent, bInitial) == 0x000018, "Member 'RigHierarchy_SwitchToParent::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToParent, bAffectChildren) == 0x000019, "Member 'RigHierarchy_SwitchToParent::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToParent, ReturnValue) == 0x00001A, "Member 'RigHierarchy_SwitchToParent::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SwitchToWorldSpace
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_SwitchToWorldSpace final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bAffectChildren;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372A[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_SwitchToWorldSpace) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToWorldSpace");
+static_assert(sizeof(RigHierarchy_SwitchToWorldSpace) == 0x000010, "Wrong size on RigHierarchy_SwitchToWorldSpace");
+static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToWorldSpace::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, bInitial) == 0x00000C, "Member 'RigHierarchy_SwitchToWorldSpace::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, bAffectChildren) == 0x00000D, "Member 'RigHierarchy_SwitchToWorldSpace::bAffectChildren' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, ReturnValue) == 0x00000E, "Member 'RigHierarchy_SwitchToWorldSpace::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.UnsetCurveValue
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_UnsetCurveValue final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_UnsetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_UnsetCurveValue");
+static_assert(sizeof(RigHierarchy_UnsetCurveValue) == 0x000010, "Wrong size on RigHierarchy_UnsetCurveValue");
+static_assert(offsetof(RigHierarchy_UnsetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_UnsetCurveValue::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_UnsetCurveValue, bSetupUndo) == 0x00000C, "Member 'RigHierarchy_UnsetCurveValue::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.UnsetCurveValueByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_UnsetCurveValueByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372C[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_UnsetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_UnsetCurveValueByIndex");
+static_assert(sizeof(RigHierarchy_UnsetCurveValueByIndex) == 0x000008, "Wrong size on RigHierarchy_UnsetCurveValueByIndex");
+static_assert(offsetof(RigHierarchy_UnsetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_UnsetCurveValueByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_UnsetCurveValueByIndex, bSetupUndo) == 0x000004, "Member 'RigHierarchy_UnsetCurveValueByIndex::bSetupUndo' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.Contains_ForBlueprint
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_Contains_ForBlueprint final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372D[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_Contains_ForBlueprint) == 0x000004, "Wrong alignment on RigHierarchy_Contains_ForBlueprint");
+static_assert(sizeof(RigHierarchy_Contains_ForBlueprint) == 0x000010, "Wrong size on RigHierarchy_Contains_ForBlueprint");
+static_assert(offsetof(RigHierarchy_Contains_ForBlueprint, InKey) == 0x000000, "Member 'RigHierarchy_Contains_ForBlueprint::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_Contains_ForBlueprint, ReturnValue) == 0x00000C, "Member 'RigHierarchy_Contains_ForBlueprint::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.FindBone_ForBlueprintOnly
+// 0x02F0 (0x02F0 - 0x0000)
+struct RigHierarchy_FindBone_ForBlueprintOnly final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigBoneElement                        ReturnValue;                                       // 0x0010(0x02E0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_FindBone_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindBone_ForBlueprintOnly");
+static_assert(sizeof(RigHierarchy_FindBone_ForBlueprintOnly) == 0x0002F0, "Wrong size on RigHierarchy_FindBone_ForBlueprintOnly");
+static_assert(offsetof(RigHierarchy_FindBone_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindBone_ForBlueprintOnly::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_FindBone_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindBone_ForBlueprintOnly::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.FindControl_ForBlueprintOnly
+// 0x0920 (0x0920 - 0x0000)
+struct RigHierarchy_FindControl_ForBlueprintOnly final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_372F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlElement                     ReturnValue;                                       // 0x0010(0x0910)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_FindControl_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindControl_ForBlueprintOnly");
+static_assert(sizeof(RigHierarchy_FindControl_ForBlueprintOnly) == 0x000920, "Wrong size on RigHierarchy_FindControl_ForBlueprintOnly");
+static_assert(offsetof(RigHierarchy_FindControl_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindControl_ForBlueprintOnly::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_FindControl_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindControl_ForBlueprintOnly::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.FindNull_ForBlueprintOnly
+// 0x03E0 (0x03E0 - 0x0000)
+struct RigHierarchy_FindNull_ForBlueprintOnly final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3730[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigNullElement                        ReturnValue;                                       // 0x0010(0x03D0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_FindNull_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindNull_ForBlueprintOnly");
+static_assert(sizeof(RigHierarchy_FindNull_ForBlueprintOnly) == 0x0003E0, "Wrong size on RigHierarchy_FindNull_ForBlueprintOnly");
+static_assert(offsetof(RigHierarchy_FindNull_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindNull_ForBlueprintOnly::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_FindNull_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindNull_ForBlueprintOnly::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetAllKeys_ForBlueprint
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetAllKeys_ForBlueprint final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3731[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetAllKeys_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchy_GetAllKeys_ForBlueprint");
+static_assert(sizeof(RigHierarchy_GetAllKeys_ForBlueprint) == 0x000018, "Wrong size on RigHierarchy_GetAllKeys_ForBlueprint");
+static_assert(offsetof(RigHierarchy_GetAllKeys_ForBlueprint, bTraverse) == 0x000000, "Member 'RigHierarchy_GetAllKeys_ForBlueprint::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetAllKeys_ForBlueprint, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetAllKeys_ForBlueprint::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetBoneKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetBoneKeys final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3732[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetBoneKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetBoneKeys");
+static_assert(sizeof(RigHierarchy_GetBoneKeys) == 0x000018, "Wrong size on RigHierarchy_GetBoneKeys");
+static_assert(offsetof(RigHierarchy_GetBoneKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetBoneKeys::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoneKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetBoneKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetBoolArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetBoolArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3733[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<bool>                                  ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetBoolArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetBoolArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetBoolArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetBoolArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetBoolArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetBoolArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetBoolArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetBoolMetadata
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetBoolMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          DefaultValue;                                      // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3734[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_GetBoolMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetBoolMetadata");
+static_assert(sizeof(RigHierarchy_GetBoolMetadata) == 0x000018, "Wrong size on RigHierarchy_GetBoolMetadata");
+static_assert(offsetof(RigHierarchy_GetBoolMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetBoolMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoolMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetBoolMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoolMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetBoolMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetBoolMetadata, ReturnValue) == 0x000015, "Member 'RigHierarchy_GetBoolMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetChildren
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetChildren final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecursive;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3735[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetChildren) == 0x000008, "Wrong alignment on RigHierarchy_GetChildren");
+static_assert(sizeof(RigHierarchy_GetChildren) == 0x000020, "Wrong size on RigHierarchy_GetChildren");
+static_assert(offsetof(RigHierarchy_GetChildren, InKey) == 0x000000, "Member 'RigHierarchy_GetChildren::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetChildren, bRecursive) == 0x00000C, "Member 'RigHierarchy_GetChildren::bRecursive' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetChildren, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetChildren::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetControlKeys final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3736[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetControlKeys");
+static_assert(sizeof(RigHierarchy_GetControlKeys) == 0x000018, "Wrong size on RigHierarchy_GetControlKeys");
+static_assert(offsetof(RigHierarchy_GetControlKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetControlKeys::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerAngles
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetControlPreferredEulerAngles final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3737[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredEulerAngles) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredEulerAngles");
+static_assert(sizeof(RigHierarchy_GetControlPreferredEulerAngles) == 0x000028, "Wrong size on RigHierarchy_GetControlPreferredEulerAngles");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAngles, InKey) == 0x000000, "Member 'RigHierarchy_GetControlPreferredEulerAngles::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAngles, InRotationOrder) == 0x00000C, "Member 'RigHierarchy_GetControlPreferredEulerAngles::InRotationOrder' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAngles, bInitial) == 0x00000D, "Member 'RigHierarchy_GetControlPreferredEulerAngles::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAngles, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlPreferredEulerAngles::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerAnglesByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetControlPreferredEulerAnglesByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           InRotationOrder;                                   // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0005(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3738[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredEulerAnglesByIndex) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredEulerAnglesByIndex");
+static_assert(sizeof(RigHierarchy_GetControlPreferredEulerAnglesByIndex) == 0x000020, "Wrong size on RigHierarchy_GetControlPreferredEulerAnglesByIndex");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAnglesByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlPreferredEulerAnglesByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAnglesByIndex, InRotationOrder) == 0x000004, "Member 'RigHierarchy_GetControlPreferredEulerAnglesByIndex::InRotationOrder' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAnglesByIndex, bInitial) == 0x000005, "Member 'RigHierarchy_GetControlPreferredEulerAnglesByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerAnglesByIndex, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlPreferredEulerAnglesByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrder
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetControlPreferredEulerRotationOrder final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFromSettings;                                     // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           ReturnValue;                                       // 0x000D(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3739[0x2];                                     // 0x000E(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredEulerRotationOrder) == 0x000004, "Wrong alignment on RigHierarchy_GetControlPreferredEulerRotationOrder");
+static_assert(sizeof(RigHierarchy_GetControlPreferredEulerRotationOrder) == 0x000010, "Wrong size on RigHierarchy_GetControlPreferredEulerRotationOrder");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrder, InKey) == 0x000000, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrder::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrder, bFromSettings) == 0x00000C, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrder::bFromSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrder, ReturnValue) == 0x00000D, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrder::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredEulerRotationOrderByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_GetControlPreferredEulerRotationOrderByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bFromSettings;                                     // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	EEulerRotationOrder                           ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373A[0x2];                                     // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredEulerRotationOrderByIndex) == 0x000004, "Wrong alignment on RigHierarchy_GetControlPreferredEulerRotationOrderByIndex");
+static_assert(sizeof(RigHierarchy_GetControlPreferredEulerRotationOrderByIndex) == 0x000008, "Wrong size on RigHierarchy_GetControlPreferredEulerRotationOrderByIndex");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrderByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrderByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrderByIndex, bFromSettings) == 0x000004, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrderByIndex::bFromSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredEulerRotationOrderByIndex, ReturnValue) == 0x000005, "Member 'RigHierarchy_GetControlPreferredEulerRotationOrderByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredRotator
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetControlPreferredRotator final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373B[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredRotator) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredRotator");
+static_assert(sizeof(RigHierarchy_GetControlPreferredRotator) == 0x000028, "Wrong size on RigHierarchy_GetControlPreferredRotator");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, InKey) == 0x000000, "Member 'RigHierarchy_GetControlPreferredRotator::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, bInitial) == 0x00000C, "Member 'RigHierarchy_GetControlPreferredRotator::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlPreferredRotator::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlPreferredRotatorByIndex
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetControlPreferredRotatorByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373C[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlPreferredRotatorByIndex) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredRotatorByIndex");
+static_assert(sizeof(RigHierarchy_GetControlPreferredRotatorByIndex) == 0x000020, "Wrong size on RigHierarchy_GetControlPreferredRotatorByIndex");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlValue
+// 0x0094 (0x0094 - 0x0000)
+struct RigHierarchy_GetControlValue final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERigControlValueType                          InValueType;                                       // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373D[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlValue) == 0x000004, "Wrong alignment on RigHierarchy_GetControlValue");
+static_assert(sizeof(RigHierarchy_GetControlValue) == 0x000094, "Wrong size on RigHierarchy_GetControlValue");
+static_assert(offsetof(RigHierarchy_GetControlValue, InKey) == 0x000000, "Member 'RigHierarchy_GetControlValue::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlValue, InValueType) == 0x00000C, "Member 'RigHierarchy_GetControlValue::InValueType' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlValue, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetControlValueByIndex
+// 0x008C (0x008C - 0x0000)
+struct RigHierarchy_GetControlValueByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ERigControlValueType                          InValueType;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373E[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlValue                       ReturnValue;                                       // 0x0008(0x0084)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetControlValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_GetControlValueByIndex");
+static_assert(sizeof(RigHierarchy_GetControlValueByIndex) == 0x00008C, "Wrong size on RigHierarchy_GetControlValueByIndex");
+static_assert(offsetof(RigHierarchy_GetControlValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlValueByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlValueByIndex, InValueType) == 0x000004, "Member 'RigHierarchy_GetControlValueByIndex::InValueType' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetControlValueByIndex, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlValueByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetCurveKeys
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetCurveKeys final 
+{
+public:
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetCurveKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetCurveKeys");
+static_assert(sizeof(RigHierarchy_GetCurveKeys) == 0x000010, "Wrong size on RigHierarchy_GetCurveKeys");
+static_assert(offsetof(RigHierarchy_GetCurveKeys, ReturnValue) == 0x000000, "Member 'RigHierarchy_GetCurveKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetCurveValue
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetCurveValue final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_GetCurveValue");
+static_assert(sizeof(RigHierarchy_GetCurveValue) == 0x000010, "Wrong size on RigHierarchy_GetCurveValue");
+static_assert(offsetof(RigHierarchy_GetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_GetCurveValue::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetCurveValue, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetCurveValue::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetCurveValueByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_GetCurveValueByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_GetCurveValueByIndex");
+static_assert(sizeof(RigHierarchy_GetCurveValueByIndex) == 0x000008, "Wrong size on RigHierarchy_GetCurveValueByIndex");
+static_assert(offsetof(RigHierarchy_GetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetCurveValueByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetCurveValueByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_GetCurveValueByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetDefaultParent
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetDefaultParent final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetDefaultParent) == 0x000004, "Wrong alignment on RigHierarchy_GetDefaultParent");
+static_assert(sizeof(RigHierarchy_GetDefaultParent) == 0x000018, "Wrong size on RigHierarchy_GetDefaultParent");
+static_assert(offsetof(RigHierarchy_GetDefaultParent, InKey) == 0x000000, "Member 'RigHierarchy_GetDefaultParent::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetDefaultParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetDefaultParent::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetFirstParent
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetFirstParent final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetFirstParent) == 0x000004, "Wrong alignment on RigHierarchy_GetFirstParent");
+static_assert(sizeof(RigHierarchy_GetFirstParent) == 0x000018, "Wrong size on RigHierarchy_GetFirstParent");
+static_assert(offsetof(RigHierarchy_GetFirstParent, InKey) == 0x000000, "Member 'RigHierarchy_GetFirstParent::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFirstParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetFirstParent::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetFloatArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetFloatArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_373F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<float>                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetFloatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetFloatArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetFloatArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetFloatArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetFloatArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetFloatArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetFloatArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetFloatMetadata
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_GetFloatMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         DefaultValue;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetFloatMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetFloatMetadata");
+static_assert(sizeof(RigHierarchy_GetFloatMetadata) == 0x00001C, "Wrong size on RigHierarchy_GetFloatMetadata");
+static_assert(offsetof(RigHierarchy_GetFloatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetFloatMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetFloatMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetFloatMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetFloatMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetFloatMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalControlOffsetTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalControlOffsetTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3740[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalControlOffsetTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlOffsetTransform");
+static_assert(sizeof(RigHierarchy_GetGlobalControlOffsetTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlOffsetTransform");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalControlOffsetTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalControlOffsetTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3741[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalControlOffsetTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlOffsetTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetGlobalControlOffsetTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlOffsetTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalControlShapeTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalControlShapeTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3742[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlShapeTransform");
+static_assert(sizeof(RigHierarchy_GetGlobalControlShapeTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlShapeTransform");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalControlShapeTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalControlShapeTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlShapeTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalControlShapeTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalControlShapeTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3743[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlShapeTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetGlobalControlShapeTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlShapeTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3744[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalTransform");
+static_assert(sizeof(RigHierarchy_GetGlobalTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalTransform");
+static_assert(offsetof(RigHierarchy_GetGlobalTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetGlobalTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetGlobalTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3745[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetGlobalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetGlobalTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetIndex_ForBlueprint
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetIndex_ForBlueprint final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetIndex_ForBlueprint) == 0x000004, "Wrong alignment on RigHierarchy_GetIndex_ForBlueprint");
+static_assert(sizeof(RigHierarchy_GetIndex_ForBlueprint) == 0x000010, "Wrong size on RigHierarchy_GetIndex_ForBlueprint");
+static_assert(offsetof(RigHierarchy_GetIndex_ForBlueprint, InKey) == 0x000000, "Member 'RigHierarchy_GetIndex_ForBlueprint::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetIndex_ForBlueprint, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetIndex_ForBlueprint::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetInt32ArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetInt32ArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3746[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<int32>                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetInt32ArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetInt32ArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetInt32ArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetInt32ArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetInt32ArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetInt32ArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetInt32ArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetInt32Metadata
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_GetInt32Metadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         DefaultValue;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetInt32Metadata) == 0x000004, "Wrong alignment on RigHierarchy_GetInt32Metadata");
+static_assert(sizeof(RigHierarchy_GetInt32Metadata) == 0x00001C, "Wrong size on RigHierarchy_GetInt32Metadata");
+static_assert(offsetof(RigHierarchy_GetInt32Metadata, InItem) == 0x000000, "Member 'RigHierarchy_GetInt32Metadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetInt32Metadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetInt32Metadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetInt32Metadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetInt32Metadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetInt32Metadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetInt32Metadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetKey
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetKey final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         ReturnValue;                                       // 0x0004(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetKey) == 0x000004, "Wrong alignment on RigHierarchy_GetKey");
+static_assert(sizeof(RigHierarchy_GetKey) == 0x000010, "Wrong size on RigHierarchy_GetKey");
+static_assert(offsetof(RigHierarchy_GetKey, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetKey::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetKey, ReturnValue) == 0x000004, "Member 'RigHierarchy_GetKey::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetKeys
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetKeys final 
+{
+public:
+	TArray<int32>                                 InElementIndices;                                  // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetKeys");
+static_assert(sizeof(RigHierarchy_GetKeys) == 0x000020, "Wrong size on RigHierarchy_GetKeys");
+static_assert(offsetof(RigHierarchy_GetKeys, InElementIndices) == 0x000000, "Member 'RigHierarchy_GetKeys::InElementIndices' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetKeys, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLinearColorArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetLinearColorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3747[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLinearColorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetLinearColorArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetLinearColorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetLinearColorArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetLinearColorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetLinearColorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetLinearColorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLinearColorMetadata
+// 0x0034 (0x0034 - 0x0000)
+struct RigHierarchy_GetLinearColorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           DefaultValue;                                      // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FLinearColor                           ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLinearColorMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetLinearColorMetadata");
+static_assert(sizeof(RigHierarchy_GetLinearColorMetadata) == 0x000034, "Wrong size on RigHierarchy_GetLinearColorMetadata");
+static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetLinearColorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetLinearColorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetLinearColorMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, ReturnValue) == 0x000024, "Member 'RigHierarchy_GetLinearColorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLocalControlShapeTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetLocalControlShapeTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3748[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLocalControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalControlShapeTransform");
+static_assert(sizeof(RigHierarchy_GetLocalControlShapeTransform) == 0x000070, "Wrong size on RigHierarchy_GetLocalControlShapeTransform");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetLocalControlShapeTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetLocalControlShapeTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalControlShapeTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLocalControlShapeTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetLocalControlShapeTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3749[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLocalControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalControlShapeTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetLocalControlShapeTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetLocalControlShapeTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLocalIndex_ForBlueprint
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetLocalIndex_ForBlueprint final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLocalIndex_ForBlueprint) == 0x000004, "Wrong alignment on RigHierarchy_GetLocalIndex_ForBlueprint");
+static_assert(sizeof(RigHierarchy_GetLocalIndex_ForBlueprint) == 0x000010, "Wrong size on RigHierarchy_GetLocalIndex_ForBlueprint");
+static_assert(offsetof(RigHierarchy_GetLocalIndex_ForBlueprint, InKey) == 0x000000, "Member 'RigHierarchy_GetLocalIndex_ForBlueprint::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalIndex_ForBlueprint, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetLocalIndex_ForBlueprint::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLocalTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetLocalTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374A[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLocalTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalTransform");
+static_assert(sizeof(RigHierarchy_GetLocalTransform) == 0x000070, "Wrong size on RigHierarchy_GetLocalTransform");
+static_assert(offsetof(RigHierarchy_GetLocalTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetLocalTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetLocalTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetLocalTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetLocalTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374B[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetLocalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetLocalTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetLocalTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetLocalTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetLocalTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetNameArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetNameArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374C[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetNameArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetNameArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetNameArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetNameArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetNameArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetNameArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetNameArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetNameMetadata
+// 0x0024 (0x0024 - 0x0000)
+struct RigHierarchy_GetNameMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   DefaultValue;                                      // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x001C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetNameMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetNameMetadata");
+static_assert(sizeof(RigHierarchy_GetNameMetadata) == 0x000024, "Wrong size on RigHierarchy_GetNameMetadata");
+static_assert(offsetof(RigHierarchy_GetNameMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetNameMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNameMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetNameMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNameMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetNameMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNameMetadata, ReturnValue) == 0x00001C, "Member 'RigHierarchy_GetNameMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetNullKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetNullKeys final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetNullKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetNullKeys");
+static_assert(sizeof(RigHierarchy_GetNullKeys) == 0x000018, "Wrong size on RigHierarchy_GetNullKeys");
+static_assert(offsetof(RigHierarchy_GetNullKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetNullKeys::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNullKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetNullKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetNumberOfParents
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetNumberOfParents final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetNumberOfParents) == 0x000004, "Wrong alignment on RigHierarchy_GetNumberOfParents");
+static_assert(sizeof(RigHierarchy_GetNumberOfParents) == 0x000010, "Wrong size on RigHierarchy_GetNumberOfParents");
+static_assert(offsetof(RigHierarchy_GetNumberOfParents, InKey) == 0x000000, "Member 'RigHierarchy_GetNumberOfParents::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetNumberOfParents, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetNumberOfParents::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetParents
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetParents final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRecursive;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374E[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetParents) == 0x000008, "Wrong alignment on RigHierarchy_GetParents");
+static_assert(sizeof(RigHierarchy_GetParents) == 0x000020, "Wrong size on RigHierarchy_GetParents");
+static_assert(offsetof(RigHierarchy_GetParents, InKey) == 0x000000, "Member 'RigHierarchy_GetParents::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParents, bRecursive) == 0x00000C, "Member 'RigHierarchy_GetParents::bRecursive' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParents, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParents::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetParentTransform
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetParentTransform final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_374F[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetParentTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetParentTransform");
+static_assert(sizeof(RigHierarchy_GetParentTransform) == 0x000070, "Wrong size on RigHierarchy_GetParentTransform");
+static_assert(offsetof(RigHierarchy_GetParentTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetParentTransform::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetParentTransform::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentTransform::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetParentTransformByIndex
+// 0x0070 (0x0070 - 0x0000)
+struct RigHierarchy_GetParentTransformByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3750[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetParentTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetParentTransformByIndex");
+static_assert(sizeof(RigHierarchy_GetParentTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetParentTransformByIndex");
+static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetParentTransformByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetParentTransformByIndex::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentTransformByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetParentWeight
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetParentWeight final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3751[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigElementWeight                      ReturnValue;                                       // 0x001C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetParentWeight) == 0x000004, "Wrong alignment on RigHierarchy_GetParentWeight");
+static_assert(sizeof(RigHierarchy_GetParentWeight) == 0x000028, "Wrong size on RigHierarchy_GetParentWeight");
+static_assert(offsetof(RigHierarchy_GetParentWeight, InChild) == 0x000000, "Member 'RigHierarchy_GetParentWeight::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentWeight, InParent) == 0x00000C, "Member 'RigHierarchy_GetParentWeight::InParent' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentWeight, bInitial) == 0x000018, "Member 'RigHierarchy_GetParentWeight::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentWeight, ReturnValue) == 0x00001C, "Member 'RigHierarchy_GetParentWeight::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetParentWeightArray
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetParentWeightArray final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3752[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementWeight>              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetParentWeightArray) == 0x000008, "Wrong alignment on RigHierarchy_GetParentWeightArray");
+static_assert(sizeof(RigHierarchy_GetParentWeightArray) == 0x000020, "Wrong size on RigHierarchy_GetParentWeightArray");
+static_assert(offsetof(RigHierarchy_GetParentWeightArray, InChild) == 0x000000, "Member 'RigHierarchy_GetParentWeightArray::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentWeightArray, bInitial) == 0x00000C, "Member 'RigHierarchy_GetParentWeightArray::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetParentWeightArray, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentWeightArray::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetPose
+// 0x0078 (0x0078 - 0x0000)
+struct RigHierarchy_GetPose final 
+{
+public:
+	bool                                          bInitial;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3753[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigPose                               ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetPose) == 0x000008, "Wrong alignment on RigHierarchy_GetPose");
+static_assert(sizeof(RigHierarchy_GetPose) == 0x000078, "Wrong size on RigHierarchy_GetPose");
+static_assert(offsetof(RigHierarchy_GetPose, bInitial) == 0x000000, "Member 'RigHierarchy_GetPose::bInitial' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetPose, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetPose::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetPreviousName
+// 0x0014 (0x0014 - 0x0000)
+struct RigHierarchy_GetPreviousName final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetPreviousName) == 0x000004, "Wrong alignment on RigHierarchy_GetPreviousName");
+static_assert(sizeof(RigHierarchy_GetPreviousName) == 0x000014, "Wrong size on RigHierarchy_GetPreviousName");
+static_assert(offsetof(RigHierarchy_GetPreviousName, InKey) == 0x000000, "Member 'RigHierarchy_GetPreviousName::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetPreviousName, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetPreviousName::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetPreviousParent
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetPreviousParent final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetPreviousParent) == 0x000004, "Wrong alignment on RigHierarchy_GetPreviousParent");
+static_assert(sizeof(RigHierarchy_GetPreviousParent) == 0x000018, "Wrong size on RigHierarchy_GetPreviousParent");
+static_assert(offsetof(RigHierarchy_GetPreviousParent, InKey) == 0x000000, "Member 'RigHierarchy_GetPreviousParent::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetPreviousParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetPreviousParent::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetQuatArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetQuatArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3754[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FQuat>                          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetQuatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetQuatArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetQuatArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetQuatArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetQuatArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetQuatArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetQuatArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetQuatMetadata
+// 0x0060 (0x0060 - 0x0000)
+struct RigHierarchy_GetQuatMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3755[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FQuat                                  DefaultValue;                                      // 0x0020(0x0020)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FQuat                                  ReturnValue;                                       // 0x0040(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetQuatMetadata) == 0x000010, "Wrong alignment on RigHierarchy_GetQuatMetadata");
+static_assert(sizeof(RigHierarchy_GetQuatMetadata) == 0x000060, "Wrong size on RigHierarchy_GetQuatMetadata");
+static_assert(offsetof(RigHierarchy_GetQuatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetQuatMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetQuatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetQuatMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetQuatMetadata, DefaultValue) == 0x000020, "Member 'RigHierarchy_GetQuatMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetQuatMetadata, ReturnValue) == 0x000040, "Member 'RigHierarchy_GetQuatMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetReferenceKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetReferenceKeys final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3756[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetReferenceKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetReferenceKeys");
+static_assert(sizeof(RigHierarchy_GetReferenceKeys) == 0x000018, "Wrong size on RigHierarchy_GetReferenceKeys");
+static_assert(offsetof(RigHierarchy_GetReferenceKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetReferenceKeys::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetReferenceKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetReferenceKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRigElementKeyArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetRigElementKeyArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3757[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRigElementKeyArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRigElementKeyArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetRigElementKeyArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetRigElementKeyArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRigElementKeyMetadata
+// 0x002C (0x002C - 0x0000)
+struct RigHierarchy_GetRigElementKeyMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         DefaultValue;                                      // 0x0014(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         ReturnValue;                                       // 0x0020(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRigElementKeyMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetRigElementKeyMetadata");
+static_assert(sizeof(RigHierarchy_GetRigElementKeyMetadata) == 0x00002C, "Wrong size on RigHierarchy_GetRigElementKeyMetadata");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRigElementKeyMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRigElementKeyMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetRigElementKeyMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, ReturnValue) == 0x000020, "Member 'RigHierarchy_GetRigElementKeyMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRigidBodyKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetRigidBodyKeys final 
+{
+public:
+	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3758[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRigidBodyKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetRigidBodyKeys");
+static_assert(sizeof(RigHierarchy_GetRigidBodyKeys) == 0x000018, "Wrong size on RigHierarchy_GetRigidBodyKeys");
+static_assert(offsetof(RigHierarchy_GetRigidBodyKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetRigidBodyKeys::bTraverse' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRigidBodyKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetRigidBodyKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRootElementKeys
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_GetRootElementKeys final 
+{
+public:
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRootElementKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetRootElementKeys");
+static_assert(sizeof(RigHierarchy_GetRootElementKeys) == 0x000010, "Wrong size on RigHierarchy_GetRootElementKeys");
+static_assert(offsetof(RigHierarchy_GetRootElementKeys, ReturnValue) == 0x000000, "Member 'RigHierarchy_GetRootElementKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRotatorArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetRotatorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3759[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRotator>                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRotatorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRotatorArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetRotatorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetRotatorArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRotatorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRotatorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetRotatorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetRotatorMetadata
+// 0x0048 (0x0048 - 0x0000)
+struct RigHierarchy_GetRotatorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               DefaultValue;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	struct FRotator                               ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetRotatorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRotatorMetadata");
+static_assert(sizeof(RigHierarchy_GetRotatorMetadata) == 0x000048, "Wrong size on RigHierarchy_GetRotatorMetadata");
+static_assert(offsetof(RigHierarchy_GetRotatorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRotatorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRotatorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorMetadata, DefaultValue) == 0x000018, "Member 'RigHierarchy_GetRotatorMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetRotatorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_GetRotatorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetSelectedKeys
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_GetSelectedKeys final 
+{
+public:
+	ERigElementType                               InTypeFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetSelectedKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetSelectedKeys");
+static_assert(sizeof(RigHierarchy_GetSelectedKeys) == 0x000018, "Wrong size on RigHierarchy_GetSelectedKeys");
+static_assert(offsetof(RigHierarchy_GetSelectedKeys, InTypeFilter) == 0x000000, "Member 'RigHierarchy_GetSelectedKeys::InTypeFilter' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetSelectedKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetSelectedKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetTags
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_GetTags final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetTags) == 0x000008, "Wrong alignment on RigHierarchy_GetTags");
+static_assert(sizeof(RigHierarchy_GetTags) == 0x000020, "Wrong size on RigHierarchy_GetTags");
+static_assert(offsetof(RigHierarchy_GetTags, InItem) == 0x000000, "Member 'RigHierarchy_GetTags::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTags, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetTags::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetTransformArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetTransformArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FTransform>                     ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetTransformArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetTransformArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetTransformArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetTransformArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetTransformArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetTransformArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetTransformArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetTransformMetadata
+// 0x00E0 (0x00E0 - 0x0000)
+struct RigHierarchy_GetTransformMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375E[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FTransform                             DefaultValue;                                      // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FTransform                             ReturnValue;                                       // 0x0080(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetTransformMetadata) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformMetadata");
+static_assert(sizeof(RigHierarchy_GetTransformMetadata) == 0x0000E0, "Wrong size on RigHierarchy_GetTransformMetadata");
+static_assert(offsetof(RigHierarchy_GetTransformMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetTransformMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetTransformMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformMetadata, DefaultValue) == 0x000020, "Member 'RigHierarchy_GetTransformMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetTransformMetadata, ReturnValue) == 0x000080, "Member 'RigHierarchy_GetTransformMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetVectorArrayMetadata
+// 0x0028 (0x0028 - 0x0000)
+struct RigHierarchy_GetVectorArrayMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_375F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<struct FVector>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetVectorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetVectorArrayMetadata");
+static_assert(sizeof(RigHierarchy_GetVectorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetVectorArrayMetadata");
+static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetVectorArrayMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetVectorArrayMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetVectorArrayMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.GetVectorMetadata
+// 0x0048 (0x0048 - 0x0000)
+struct RigHierarchy_GetVectorMetadata final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3760[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector                                DefaultValue;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_GetVectorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetVectorMetadata");
+static_assert(sizeof(RigHierarchy_GetVectorMetadata) == 0x000048, "Wrong size on RigHierarchy_GetVectorMetadata");
+static_assert(offsetof(RigHierarchy_GetVectorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetVectorMetadata::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetVectorMetadata::InMetadataName' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorMetadata, DefaultValue) == 0x000018, "Member 'RigHierarchy_GetVectorMetadata::DefaultValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_GetVectorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_GetVectorMetadata::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.HasTag
+// 0x0018 (0x0018 - 0x0000)
+struct RigHierarchy_HasTag final 
+{
+public:
+	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   InTag;                                             // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3761[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_HasTag) == 0x000004, "Wrong alignment on RigHierarchy_HasTag");
+static_assert(sizeof(RigHierarchy_HasTag) == 0x000018, "Wrong size on RigHierarchy_HasTag");
+static_assert(offsetof(RigHierarchy_HasTag, InItem) == 0x000000, "Member 'RigHierarchy_HasTag::InItem' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_HasTag, InTag) == 0x00000C, "Member 'RigHierarchy_HasTag::InTag' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_HasTag, ReturnValue) == 0x000014, "Member 'RigHierarchy_HasTag::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsControllerAvailable
+// 0x0001 (0x0001 - 0x0000)
+struct RigHierarchy_IsControllerAvailable final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_IsControllerAvailable) == 0x000001, "Wrong alignment on RigHierarchy_IsControllerAvailable");
+static_assert(sizeof(RigHierarchy_IsControllerAvailable) == 0x000001, "Wrong size on RigHierarchy_IsControllerAvailable");
+static_assert(offsetof(RigHierarchy_IsControllerAvailable, ReturnValue) == 0x000000, "Member 'RigHierarchy_IsControllerAvailable::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsCurveValueSet
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_IsCurveValueSet final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3762[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsCurveValueSet) == 0x000004, "Wrong alignment on RigHierarchy_IsCurveValueSet");
+static_assert(sizeof(RigHierarchy_IsCurveValueSet) == 0x000010, "Wrong size on RigHierarchy_IsCurveValueSet");
+static_assert(offsetof(RigHierarchy_IsCurveValueSet, InKey) == 0x000000, "Member 'RigHierarchy_IsCurveValueSet::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsCurveValueSet, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsCurveValueSet::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsCurveValueSetByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_IsCurveValueSetByIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3763[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsCurveValueSetByIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsCurveValueSetByIndex");
+static_assert(sizeof(RigHierarchy_IsCurveValueSetByIndex) == 0x000008, "Wrong size on RigHierarchy_IsCurveValueSetByIndex");
+static_assert(offsetof(RigHierarchy_IsCurveValueSetByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_IsCurveValueSetByIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsCurveValueSetByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsCurveValueSetByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsParentedTo
+// 0x001C (0x001C - 0x0000)
+struct RigHierarchy_IsParentedTo final 
+{
+public:
+	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3764[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsParentedTo) == 0x000004, "Wrong alignment on RigHierarchy_IsParentedTo");
+static_assert(sizeof(RigHierarchy_IsParentedTo) == 0x00001C, "Wrong size on RigHierarchy_IsParentedTo");
+static_assert(offsetof(RigHierarchy_IsParentedTo, InChild) == 0x000000, "Member 'RigHierarchy_IsParentedTo::InChild' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsParentedTo, InParent) == 0x00000C, "Member 'RigHierarchy_IsParentedTo::InParent' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsParentedTo, ReturnValue) == 0x000018, "Member 'RigHierarchy_IsParentedTo::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsProcedural
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_IsProcedural final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3765[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsProcedural) == 0x000004, "Wrong alignment on RigHierarchy_IsProcedural");
+static_assert(sizeof(RigHierarchy_IsProcedural) == 0x000010, "Wrong size on RigHierarchy_IsProcedural");
+static_assert(offsetof(RigHierarchy_IsProcedural, InKey) == 0x000000, "Member 'RigHierarchy_IsProcedural::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsProcedural, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsProcedural::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsSelected
+// 0x0010 (0x0010 - 0x0000)
+struct RigHierarchy_IsSelected final 
+{
+public:
+	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3766[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsSelected) == 0x000004, "Wrong alignment on RigHierarchy_IsSelected");
+static_assert(sizeof(RigHierarchy_IsSelected) == 0x000010, "Wrong size on RigHierarchy_IsSelected");
+static_assert(offsetof(RigHierarchy_IsSelected, InKey) == 0x000000, "Member 'RigHierarchy_IsSelected::InKey' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsSelected, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsSelected::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsSelectedByIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_IsSelectedByIndex final 
+{
+public:
+	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3767[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsSelectedByIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsSelectedByIndex");
+static_assert(sizeof(RigHierarchy_IsSelectedByIndex) == 0x000008, "Wrong size on RigHierarchy_IsSelectedByIndex");
+static_assert(offsetof(RigHierarchy_IsSelectedByIndex, InIndex) == 0x000000, "Member 'RigHierarchy_IsSelectedByIndex::InIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsSelectedByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsSelectedByIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.IsValidIndex
+// 0x0008 (0x0008 - 0x0000)
+struct RigHierarchy_IsValidIndex final 
+{
+public:
+	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3768[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchy_IsValidIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsValidIndex");
+static_assert(sizeof(RigHierarchy_IsValidIndex) == 0x000008, "Wrong size on RigHierarchy_IsValidIndex");
+static_assert(offsetof(RigHierarchy_IsValidIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_IsValidIndex::InElementIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_IsValidIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsValidIndex::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.Num
+// 0x0004 (0x0004 - 0x0000)
+struct RigHierarchy_Num final 
+{
+public:
+	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_Num) == 0x000004, "Wrong alignment on RigHierarchy_Num");
+static_assert(sizeof(RigHierarchy_Num) == 0x000004, "Wrong size on RigHierarchy_Num");
+static_assert(offsetof(RigHierarchy_Num, ReturnValue) == 0x000000, "Member 'RigHierarchy_Num::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.RigHierarchy.SortKeys
+// 0x0020 (0x0020 - 0x0000)
+struct RigHierarchy_SortKeys final 
+{
+public:
+	TArray<struct FRigElementKey>                 InKeys;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
+	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(RigHierarchy_SortKeys) == 0x000008, "Wrong alignment on RigHierarchy_SortKeys");
+static_assert(sizeof(RigHierarchy_SortKeys) == 0x000020, "Wrong size on RigHierarchy_SortKeys");
+static_assert(offsetof(RigHierarchy_SortKeys, InKeys) == 0x000000, "Member 'RigHierarchy_SortKeys::InKeys' has a wrong offset!");
+static_assert(offsetof(RigHierarchy_SortKeys, ReturnValue) == 0x000010, "Member 'RigHierarchy_SortKeys::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.FindControlRigs
+// 0x0020 (0x0020 - 0x0000)
+struct ControlRig_FindControlRigs final 
+{
+public:
+	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TSubclassOf<class UControlRig>                OptionalClass;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<class UControlRig*>                    ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_FindControlRigs) == 0x000008, "Wrong alignment on ControlRig_FindControlRigs");
+static_assert(sizeof(ControlRig_FindControlRigs) == 0x000020, "Wrong size on ControlRig_FindControlRigs");
+static_assert(offsetof(ControlRig_FindControlRigs, Param_Outer) == 0x000000, "Member 'ControlRig_FindControlRigs::Param_Outer' has a wrong offset!");
+static_assert(offsetof(ControlRig_FindControlRigs, OptionalClass) == 0x000008, "Member 'ControlRig_FindControlRigs::OptionalClass' has a wrong offset!");
+static_assert(offsetof(ControlRig_FindControlRigs, ReturnValue) == 0x000010, "Member 'ControlRig_FindControlRigs::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.ClearControlSelection
+// 0x0001 (0x0001 - 0x0000)
+struct ControlRig_ClearControlSelection final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_ClearControlSelection) == 0x000001, "Wrong alignment on ControlRig_ClearControlSelection");
+static_assert(sizeof(ControlRig_ClearControlSelection) == 0x000001, "Wrong size on ControlRig_ClearControlSelection");
+static_assert(offsetof(ControlRig_ClearControlSelection, ReturnValue) == 0x000000, "Member 'ControlRig_ClearControlSelection::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.GetHierarchy
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_GetHierarchy final 
+{
+public:
+	class URigHierarchy*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_GetHierarchy) == 0x000008, "Wrong alignment on ControlRig_GetHierarchy");
+static_assert(sizeof(ControlRig_GetHierarchy) == 0x000008, "Wrong size on ControlRig_GetHierarchy");
+static_assert(offsetof(ControlRig_GetHierarchy, ReturnValue) == 0x000000, "Member 'ControlRig_GetHierarchy::ReturnValue' has a wrong offset!");
+
+// SparseDelegateFunction ControlRig.ControlRig.OnControlSelectedBP__DelegateSignature
+// 0x0930 (0x0930 - 0x0000)
+struct ControlRig_OnControlSelectedBP__DelegateSignature final 
+{
+public:
+	class UControlRig*                            Rig;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_376F[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlElement                     Control;                                           // 0x0010(0x0910)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
+	bool                                          bSelected;                                         // 0x0920(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3770[0xF];                                     // 0x0921(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ControlRig_OnControlSelectedBP__DelegateSignature) == 0x000010, "Wrong alignment on ControlRig_OnControlSelectedBP__DelegateSignature");
+static_assert(sizeof(ControlRig_OnControlSelectedBP__DelegateSignature) == 0x000930, "Wrong size on ControlRig_OnControlSelectedBP__DelegateSignature");
+static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, Rig) == 0x000000, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::Rig' has a wrong offset!");
+static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, Control) == 0x000010, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::Control' has a wrong offset!");
+static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, bSelected) == 0x000920, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::bSelected' has a wrong offset!");
+
+// Function ControlRig.ControlRig.SelectControl
+// 0x000C (0x000C - 0x0000)
+struct ControlRig_SelectControl final 
+{
+public:
+	class FName                                   InControlName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSelect;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3771[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ControlRig_SelectControl) == 0x000004, "Wrong alignment on ControlRig_SelectControl");
+static_assert(sizeof(ControlRig_SelectControl) == 0x00000C, "Wrong size on ControlRig_SelectControl");
+static_assert(offsetof(ControlRig_SelectControl, InControlName) == 0x000000, "Member 'ControlRig_SelectControl::InControlName' has a wrong offset!");
+static_assert(offsetof(ControlRig_SelectControl, bSelect) == 0x000008, "Member 'ControlRig_SelectControl::bSelect' has a wrong offset!");
+
+// Function ControlRig.ControlRig.SetInteractionRig
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_SetInteractionRig final 
+{
+public:
+	class UControlRig*                            InInteractionRig;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_SetInteractionRig) == 0x000008, "Wrong alignment on ControlRig_SetInteractionRig");
+static_assert(sizeof(ControlRig_SetInteractionRig) == 0x000008, "Wrong size on ControlRig_SetInteractionRig");
+static_assert(offsetof(ControlRig_SetInteractionRig, InInteractionRig) == 0x000000, "Member 'ControlRig_SetInteractionRig::InInteractionRig' has a wrong offset!");
+
+// Function ControlRig.ControlRig.SetInteractionRigClass
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_SetInteractionRigClass final 
+{
+public:
+	TSubclassOf<class UControlRig>                InInteractionRigClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_SetInteractionRigClass) == 0x000008, "Wrong alignment on ControlRig_SetInteractionRigClass");
+static_assert(sizeof(ControlRig_SetInteractionRigClass) == 0x000008, "Wrong size on ControlRig_SetInteractionRigClass");
+static_assert(offsetof(ControlRig_SetInteractionRigClass, InInteractionRigClass) == 0x000000, "Member 'ControlRig_SetInteractionRigClass::InInteractionRigClass' has a wrong offset!");
+
+// Function ControlRig.ControlRig.CreateTransformableControlHandle
+// 0x0018 (0x0018 - 0x0000)
+struct ControlRig_CreateTransformableControlHandle final 
+{
+public:
+	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FName                                   ControlName;                                       // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UTransformableControlHandle*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_CreateTransformableControlHandle) == 0x000008, "Wrong alignment on ControlRig_CreateTransformableControlHandle");
+static_assert(sizeof(ControlRig_CreateTransformableControlHandle) == 0x000018, "Wrong size on ControlRig_CreateTransformableControlHandle");
+static_assert(offsetof(ControlRig_CreateTransformableControlHandle, Param_Outer) == 0x000000, "Member 'ControlRig_CreateTransformableControlHandle::Param_Outer' has a wrong offset!");
+static_assert(offsetof(ControlRig_CreateTransformableControlHandle, ControlName) == 0x000008, "Member 'ControlRig_CreateTransformableControlHandle::ControlName' has a wrong offset!");
+static_assert(offsetof(ControlRig_CreateTransformableControlHandle, ReturnValue) == 0x000010, "Member 'ControlRig_CreateTransformableControlHandle::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.CurrentControlSelection
+// 0x0010 (0x0010 - 0x0000)
+struct ControlRig_CurrentControlSelection final 
+{
+public:
+	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_CurrentControlSelection) == 0x000008, "Wrong alignment on ControlRig_CurrentControlSelection");
+static_assert(sizeof(ControlRig_CurrentControlSelection) == 0x000010, "Wrong size on ControlRig_CurrentControlSelection");
+static_assert(offsetof(ControlRig_CurrentControlSelection, ReturnValue) == 0x000000, "Member 'ControlRig_CurrentControlSelection::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.GetHostingActor
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_GetHostingActor final 
+{
+public:
+	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_GetHostingActor) == 0x000008, "Wrong alignment on ControlRig_GetHostingActor");
+static_assert(sizeof(ControlRig_GetHostingActor) == 0x000008, "Wrong size on ControlRig_GetHostingActor");
+static_assert(offsetof(ControlRig_GetHostingActor, ReturnValue) == 0x000000, "Member 'ControlRig_GetHostingActor::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.GetInteractionRig
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_GetInteractionRig final 
+{
+public:
+	class UControlRig*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_GetInteractionRig) == 0x000008, "Wrong alignment on ControlRig_GetInteractionRig");
+static_assert(sizeof(ControlRig_GetInteractionRig) == 0x000008, "Wrong size on ControlRig_GetInteractionRig");
+static_assert(offsetof(ControlRig_GetInteractionRig, ReturnValue) == 0x000000, "Member 'ControlRig_GetInteractionRig::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.GetInteractionRigClass
+// 0x0008 (0x0008 - 0x0000)
+struct ControlRig_GetInteractionRigClass final 
+{
+public:
+	TSubclassOf<class UControlRig>                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRig_GetInteractionRigClass) == 0x000008, "Wrong alignment on ControlRig_GetInteractionRigClass");
+static_assert(sizeof(ControlRig_GetInteractionRigClass) == 0x000008, "Wrong size on ControlRig_GetInteractionRigClass");
+static_assert(offsetof(ControlRig_GetInteractionRigClass, ReturnValue) == 0x000000, "Member 'ControlRig_GetInteractionRigClass::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRig.IsControlSelected
+// 0x000C (0x000C - 0x0000)
+struct ControlRig_IsControlSelected final 
+{
+public:
+	class FName                                   InControlName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3772[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ControlRig_IsControlSelected) == 0x000004, "Wrong alignment on ControlRig_IsControlSelected");
+static_assert(sizeof(ControlRig_IsControlSelected) == 0x00000C, "Wrong size on ControlRig_IsControlSelected");
+static_assert(offsetof(ControlRig_IsControlSelected, InControlName) == 0x000000, "Member 'ControlRig_IsControlSelected::InControlName' has a wrong offset!");
+static_assert(offsetof(ControlRig_IsControlSelected, ReturnValue) == 0x000008, "Member 'ControlRig_IsControlSelected::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.ControlRigComponent.AddMappedCompleteSkeletalMesh
 // 0x0008 (0x0008 - 0x0000)
@@ -86,7 +2814,7 @@ public:
 	class FName                                   Param_Name;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERigElementType                               ElementType;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CA[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3776[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_DoesElementExist) == 0x000004, "Wrong alignment on ControlRigComponent_DoesElementExist");
 static_assert(sizeof(ControlRigComponent_DoesElementExist) == 0x00000C, "Wrong size on ControlRigComponent_DoesElementExist");
@@ -101,7 +2829,7 @@ struct ControlRigComponent_GetBoneTransform final
 public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CB[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3777[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetBoneTransform) == 0x000010, "Wrong alignment on ControlRigComponent_GetBoneTransform");
@@ -117,7 +2845,7 @@ struct ControlRigComponent_GetControlBool final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CC[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3778[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_GetControlBool) == 0x000004, "Wrong alignment on ControlRigComponent_GetControlBool");
 static_assert(sizeof(ControlRigComponent_GetControlBool) == 0x00000C, "Wrong size on ControlRigComponent_GetControlBool");
@@ -157,7 +2885,7 @@ struct ControlRigComponent_GetControlOffset final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CD[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3779[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetControlOffset) == 0x000010, "Wrong alignment on ControlRigComponent_GetControlOffset");
@@ -173,7 +2901,7 @@ struct ControlRigComponent_GetControlPosition final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CE[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377A[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetControlPosition) == 0x000008, "Wrong alignment on ControlRigComponent_GetControlPosition");
@@ -200,7 +2928,7 @@ struct ControlRigComponent_GetControlRotator final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21CF[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377B[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRotator                               ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetControlRotator) == 0x000008, "Wrong alignment on ControlRigComponent_GetControlRotator");
@@ -216,7 +2944,7 @@ struct ControlRigComponent_GetControlScale final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D0[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377C[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetControlScale) == 0x000008, "Wrong alignment on ControlRigComponent_GetControlScale");
@@ -232,7 +2960,7 @@ struct ControlRigComponent_GetControlTransform final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D1[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetControlTransform) == 0x000010, "Wrong alignment on ControlRigComponent_GetControlTransform");
@@ -260,7 +2988,7 @@ struct ControlRigComponent_GetElementNames final
 {
 public:
 	ERigElementType                               ElementType;                                       // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetElementNames) == 0x000008, "Wrong alignment on ControlRigComponent_GetElementNames");
@@ -275,7 +3003,7 @@ struct ControlRigComponent_GetInitialBoneTransform final
 public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D3[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_377F[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetInitialBoneTransform) == 0x000010, "Wrong alignment on ControlRigComponent_GetInitialBoneTransform");
@@ -291,7 +3019,7 @@ struct ControlRigComponent_GetInitialSpaceTransform final
 public:
 	class FName                                   SpaceName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D4[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3780[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetInitialSpaceTransform) == 0x000010, "Wrong alignment on ControlRigComponent_GetInitialSpaceTransform");
@@ -307,7 +3035,7 @@ struct ControlRigComponent_GetSpaceTransform final
 public:
 	class FName                                   SpaceName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D5[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3781[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(ControlRigComponent_GetSpaceTransform) == 0x000010, "Wrong alignment on ControlRigComponent_GetSpaceTransform");
@@ -399,13 +3127,13 @@ struct ControlRigComponent_SetBoneTransform final
 {
 public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D6[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3782[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Transform;                                         // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D7[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3783[0x3];                                     // 0x0071(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         Weight;                                            // 0x0074(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPropagateToChildren;                              // 0x0078(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D8[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3784[0x7];                                     // 0x0079(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetBoneTransform) == 0x000010, "Wrong alignment on ControlRigComponent_SetBoneTransform");
 static_assert(sizeof(ControlRigComponent_SetBoneTransform) == 0x000080, "Wrong size on ControlRigComponent_SetBoneTransform");
@@ -422,7 +3150,7 @@ struct ControlRigComponent_SetControlBool final
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Value;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21D9[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3785[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlBool) == 0x000004, "Wrong alignment on ControlRigComponent_SetControlBool");
 static_assert(sizeof(ControlRigComponent_SetControlBool) == 0x00000C, "Wrong size on ControlRigComponent_SetControlBool");
@@ -461,10 +3189,10 @@ struct ControlRigComponent_SetControlOffset final
 {
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DA[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3786[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             OffsetTransform;                                   // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DB[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3787[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlOffset) == 0x000010, "Wrong alignment on ControlRigComponent_SetControlOffset");
 static_assert(sizeof(ControlRigComponent_SetControlOffset) == 0x000080, "Wrong size on ControlRigComponent_SetControlOffset");
@@ -480,7 +3208,7 @@ public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Value;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DC[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3788[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlPosition) == 0x000008, "Wrong alignment on ControlRigComponent_SetControlPosition");
 static_assert(sizeof(ControlRigComponent_SetControlPosition) == 0x000028, "Wrong size on ControlRigComponent_SetControlPosition");
@@ -507,7 +3235,7 @@ public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRotator                               Value;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DD[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3789[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlRotator) == 0x000008, "Wrong alignment on ControlRigComponent_SetControlRotator");
 static_assert(sizeof(ControlRigComponent_SetControlRotator) == 0x000028, "Wrong size on ControlRigComponent_SetControlRotator");
@@ -523,7 +3251,7 @@ public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector                                Value;                                             // 0x0008(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DE[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378A[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlScale) == 0x000008, "Wrong alignment on ControlRigComponent_SetControlScale");
 static_assert(sizeof(ControlRigComponent_SetControlScale) == 0x000028, "Wrong size on ControlRigComponent_SetControlScale");
@@ -537,10 +3265,10 @@ struct ControlRigComponent_SetControlTransform final
 {
 public:
 	class FName                                   ControlName;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21DF[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378B[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             Value;                                             // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21E0[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378C[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetControlTransform) == 0x000010, "Wrong alignment on ControlRigComponent_SetControlTransform");
 static_assert(sizeof(ControlRigComponent_SetControlTransform) == 0x000080, "Wrong size on ControlRigComponent_SetControlTransform");
@@ -567,11 +3295,11 @@ struct ControlRigComponent_SetInitialBoneTransform final
 {
 public:
 	class FName                                   BoneName;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21E1[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InitialTransform;                                  // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPropagateToChildren;                              // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21E2[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378E[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetInitialBoneTransform) == 0x000010, "Wrong alignment on ControlRigComponent_SetInitialBoneTransform");
 static_assert(sizeof(ControlRigComponent_SetInitialBoneTransform) == 0x000080, "Wrong size on ControlRigComponent_SetInitialBoneTransform");
@@ -586,10 +3314,10 @@ struct ControlRigComponent_SetInitialSpaceTransform final
 {
 public:
 	class FName                                   SpaceName;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21E3[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_378F[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InitialTransform;                                  // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EControlRigComponentSpace                     Space;                                             // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21E4[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3790[0xF];                                     // 0x0071(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigComponent_SetInitialSpaceTransform) == 0x000010, "Wrong alignment on ControlRigComponent_SetInitialSpaceTransform");
 static_assert(sizeof(ControlRigComponent_SetInitialSpaceTransform) == 0x000080, "Wrong size on ControlRigComponent_SetInitialSpaceTransform");
@@ -640,2777 +3368,6 @@ public:
 static_assert(alignof(ControlRigComponent_GetAbsoluteTime) == 0x000004, "Wrong alignment on ControlRigComponent_GetAbsoluteTime");
 static_assert(sizeof(ControlRigComponent_GetAbsoluteTime) == 0x000004, "Wrong size on ControlRigComponent_GetAbsoluteTime");
 static_assert(offsetof(ControlRigComponent_GetAbsoluteTime, ReturnValue) == 0x000000, "Member 'ControlRigComponent_GetAbsoluteTime::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetEulerTransformFromControlValue
-// 0x0140 (0x0140 - 0x0000)
-struct RigHierarchy_GetEulerTransformFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FEulerTransform                        ReturnValue;                                       // 0x00F0(0x0048)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21EB[0x8];                                     // 0x0138(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetEulerTransformFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetEulerTransformFromControlValue");
-static_assert(sizeof(RigHierarchy_GetEulerTransformFromControlValue) == 0x000140, "Wrong size on RigHierarchy_GetEulerTransformFromControlValue");
-static_assert(offsetof(RigHierarchy_GetEulerTransformFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetEulerTransformFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetEulerTransformFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetEulerTransformFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetFloatFromControlValue
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_GetFloatFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x00F0(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21EC[0xC];                                     // 0x00F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetFloatFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetFloatFromControlValue");
-static_assert(sizeof(RigHierarchy_GetFloatFromControlValue) == 0x000100, "Wrong size on RigHierarchy_GetFloatFromControlValue");
-static_assert(offsetof(RigHierarchy_GetFloatFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetFloatFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetFloatFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetIntFromControlValue
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_GetIntFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x00F0(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21ED[0xC];                                     // 0x00F4(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetIntFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetIntFromControlValue");
-static_assert(sizeof(RigHierarchy_GetIntFromControlValue) == 0x000100, "Wrong size on RigHierarchy_GetIntFromControlValue");
-static_assert(offsetof(RigHierarchy_GetIntFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetIntFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetIntFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetIntFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRotatorFromControlValue
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_GetRotatorFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               ReturnValue;                                       // 0x00F0(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21EE[0x8];                                     // 0x0108(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetRotatorFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetRotatorFromControlValue");
-static_assert(sizeof(RigHierarchy_GetRotatorFromControlValue) == 0x000110, "Wrong size on RigHierarchy_GetRotatorFromControlValue");
-static_assert(offsetof(RigHierarchy_GetRotatorFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetRotatorFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetRotatorFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetTransformFromControlValue
-// 0x0150 (0x0150 - 0x0000)
-struct RigHierarchy_GetTransformFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransform                             ReturnValue;                                       // 0x00F0(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetTransformFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformFromControlValue");
-static_assert(sizeof(RigHierarchy_GetTransformFromControlValue) == 0x000150, "Wrong size on RigHierarchy_GetTransformFromControlValue");
-static_assert(offsetof(RigHierarchy_GetTransformFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetTransformFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetTransformFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetTransformNoScaleFromControlValue
-// 0x0130 (0x0130 - 0x0000)
-struct RigHierarchy_GetTransformNoScaleFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FTransformNoScale                      ReturnValue;                                       // 0x00F0(0x0040)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetTransformNoScaleFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformNoScaleFromControlValue");
-static_assert(sizeof(RigHierarchy_GetTransformNoScaleFromControlValue) == 0x000130, "Wrong size on RigHierarchy_GetTransformNoScaleFromControlValue");
-static_assert(offsetof(RigHierarchy_GetTransformNoScaleFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetTransformNoScaleFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformNoScaleFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetTransformNoScaleFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetVector2DFromControlValue
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_GetVector2DFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector2D                              ReturnValue;                                       // 0x00F0(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetVector2DFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetVector2DFromControlValue");
-static_assert(sizeof(RigHierarchy_GetVector2DFromControlValue) == 0x000100, "Wrong size on RigHierarchy_GetVector2DFromControlValue");
-static_assert(offsetof(RigHierarchy_GetVector2DFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetVector2DFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVector2DFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetVector2DFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetVectorFromControlValue
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_GetVectorFromControlValue final 
-{
-public:
-	struct FRigControlValue                       InValue;                                           // 0x0000(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x00F0(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21EF[0x8];                                     // 0x0108(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetVectorFromControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetVectorFromControlValue");
-static_assert(sizeof(RigHierarchy_GetVectorFromControlValue) == 0x000110, "Wrong size on RigHierarchy_GetVectorFromControlValue");
-static_assert(offsetof(RigHierarchy_GetVectorFromControlValue, InValue) == 0x000000, "Member 'RigHierarchy_GetVectorFromControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorFromControlValue, ReturnValue) == 0x0000F0, "Member 'RigHierarchy_GetVectorFromControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromBool
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_MakeControlValueFromBool final 
-{
-public:
-	bool                                          InValue;                                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F0[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromBool) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromBool");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromBool) == 0x000100, "Wrong size on RigHierarchy_MakeControlValueFromBool");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromBool, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromBool::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromBool, ReturnValue) == 0x000010, "Member 'RigHierarchy_MakeControlValueFromBool::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromEulerTransform
-// 0x0140 (0x0140 - 0x0000)
-struct RigHierarchy_MakeControlValueFromEulerTransform final 
-{
-public:
-	struct FEulerTransform                        InValue;                                           // 0x0000(0x0048)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F1[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0050(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromEulerTransform) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromEulerTransform");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromEulerTransform) == 0x000140, "Wrong size on RigHierarchy_MakeControlValueFromEulerTransform");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromEulerTransform, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromEulerTransform::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromEulerTransform, ReturnValue) == 0x000050, "Member 'RigHierarchy_MakeControlValueFromEulerTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromFloat
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_MakeControlValueFromFloat final 
-{
-public:
-	float                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F2[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromFloat) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromFloat");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromFloat) == 0x000100, "Wrong size on RigHierarchy_MakeControlValueFromFloat");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromFloat, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromFloat::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromFloat, ReturnValue) == 0x000010, "Member 'RigHierarchy_MakeControlValueFromFloat::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromInt
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_MakeControlValueFromInt final 
-{
-public:
-	int32                                         InValue;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F3[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromInt) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromInt");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromInt) == 0x000100, "Wrong size on RigHierarchy_MakeControlValueFromInt");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromInt, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromInt::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromInt, ReturnValue) == 0x000010, "Member 'RigHierarchy_MakeControlValueFromInt::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromRotator
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_MakeControlValueFromRotator final 
-{
-public:
-	struct FRotator                               InValue;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F4[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0020(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromRotator) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromRotator");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromRotator) == 0x000110, "Wrong size on RigHierarchy_MakeControlValueFromRotator");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromRotator, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromRotator::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromRotator, ReturnValue) == 0x000020, "Member 'RigHierarchy_MakeControlValueFromRotator::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromTransform
-// 0x0150 (0x0150 - 0x0000)
-struct RigHierarchy_MakeControlValueFromTransform final 
-{
-public:
-	struct FTransform                             InValue;                                           // 0x0000(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigControlValue                       ReturnValue;                                       // 0x0060(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromTransform) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromTransform");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromTransform) == 0x000150, "Wrong size on RigHierarchy_MakeControlValueFromTransform");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromTransform, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromTransform::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromTransform, ReturnValue) == 0x000060, "Member 'RigHierarchy_MakeControlValueFromTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromTransformNoScale
-// 0x0130 (0x0130 - 0x0000)
-struct RigHierarchy_MakeControlValueFromTransformNoScale final 
-{
-public:
-	struct FTransformNoScale                      InValue;                                           // 0x0000(0x0040)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRigControlValue                       ReturnValue;                                       // 0x0040(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromTransformNoScale) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromTransformNoScale");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromTransformNoScale) == 0x000130, "Wrong size on RigHierarchy_MakeControlValueFromTransformNoScale");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromTransformNoScale, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromTransformNoScale::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromTransformNoScale, ReturnValue) == 0x000040, "Member 'RigHierarchy_MakeControlValueFromTransformNoScale::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromVector
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_MakeControlValueFromVector final 
-{
-public:
-	struct FVector                                InValue;                                           // 0x0000(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F5[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0020(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromVector) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromVector");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromVector) == 0x000110, "Wrong size on RigHierarchy_MakeControlValueFromVector");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromVector, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromVector::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromVector, ReturnValue) == 0x000020, "Member 'RigHierarchy_MakeControlValueFromVector::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.MakeControlValueFromVector2D
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_MakeControlValueFromVector2D final 
-{
-public:
-	struct FVector2D                              InValue;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_MakeControlValueFromVector2D) == 0x000010, "Wrong alignment on RigHierarchy_MakeControlValueFromVector2D");
-static_assert(sizeof(RigHierarchy_MakeControlValueFromVector2D) == 0x000100, "Wrong size on RigHierarchy_MakeControlValueFromVector2D");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromVector2D, InValue) == 0x000000, "Member 'RigHierarchy_MakeControlValueFromVector2D::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_MakeControlValueFromVector2D, ReturnValue) == 0x000010, "Member 'RigHierarchy_MakeControlValueFromVector2D::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.CopyHierarchy
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_CopyHierarchy final 
-{
-public:
-	class URigHierarchy*                          InHierarchy;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_CopyHierarchy) == 0x000008, "Wrong alignment on RigHierarchy_CopyHierarchy");
-static_assert(sizeof(RigHierarchy_CopyHierarchy) == 0x000008, "Wrong size on RigHierarchy_CopyHierarchy");
-static_assert(offsetof(RigHierarchy_CopyHierarchy, InHierarchy) == 0x000000, "Member 'RigHierarchy_CopyHierarchy::InHierarchy' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.CopyPose
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_CopyPose final 
-{
-public:
-	class URigHierarchy*                          InHierarchy;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bCurrent;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWeights;                                          // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bMatchPoseInGlobalIfNeeded;                        // 0x000B(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F6[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_CopyPose) == 0x000008, "Wrong alignment on RigHierarchy_CopyPose");
-static_assert(sizeof(RigHierarchy_CopyPose) == 0x000010, "Wrong size on RigHierarchy_CopyPose");
-static_assert(offsetof(RigHierarchy_CopyPose, InHierarchy) == 0x000000, "Member 'RigHierarchy_CopyPose::InHierarchy' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_CopyPose, bCurrent) == 0x000008, "Member 'RigHierarchy_CopyPose::bCurrent' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_CopyPose, bInitial) == 0x000009, "Member 'RigHierarchy_CopyPose::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_CopyPose, bWeights) == 0x00000A, "Member 'RigHierarchy_CopyPose::bWeights' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_CopyPose, bMatchPoseInGlobalIfNeeded) == 0x00000B, "Member 'RigHierarchy_CopyPose::bMatchPoseInGlobalIfNeeded' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetController
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetController final 
-{
-public:
-	bool                                          bCreateIfNeeded;                                   // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F7[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class URigHierarchyController*                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetController) == 0x000008, "Wrong alignment on RigHierarchy_GetController");
-static_assert(sizeof(RigHierarchy_GetController) == 0x000010, "Wrong size on RigHierarchy_GetController");
-static_assert(offsetof(RigHierarchy_GetController, bCreateIfNeeded) == 0x000000, "Member 'RigHierarchy_GetController::bCreateIfNeeded' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetController, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetController::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetMetadataNames
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetMetadataNames final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F8[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetMetadataNames) == 0x000008, "Wrong alignment on RigHierarchy_GetMetadataNames");
-static_assert(sizeof(RigHierarchy_GetMetadataNames) == 0x000020, "Wrong size on RigHierarchy_GetMetadataNames");
-static_assert(offsetof(RigHierarchy_GetMetadataNames, InItem) == 0x000000, "Member 'RigHierarchy_GetMetadataNames::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetMetadataNames, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetMetadataNames::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetMetadataType
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetMetadataType final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERigMetadataType                              ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21F9[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetMetadataType) == 0x000004, "Wrong alignment on RigHierarchy_GetMetadataType");
-static_assert(sizeof(RigHierarchy_GetMetadataType) == 0x000018, "Wrong size on RigHierarchy_GetMetadataType");
-static_assert(offsetof(RigHierarchy_GetMetadataType, InItem) == 0x000000, "Member 'RigHierarchy_GetMetadataType::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetMetadataType, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetMetadataType::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetMetadataType, ReturnValue) == 0x000014, "Member 'RigHierarchy_GetMetadataType::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.RemoveAllMetadata
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_RemoveAllMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FA[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_RemoveAllMetadata) == 0x000004, "Wrong alignment on RigHierarchy_RemoveAllMetadata");
-static_assert(sizeof(RigHierarchy_RemoveAllMetadata) == 0x000010, "Wrong size on RigHierarchy_RemoveAllMetadata");
-static_assert(offsetof(RigHierarchy_RemoveAllMetadata, InItem) == 0x000000, "Member 'RigHierarchy_RemoveAllMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_RemoveAllMetadata, ReturnValue) == 0x00000C, "Member 'RigHierarchy_RemoveAllMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.RemoveMetadata
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_RemoveMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FB[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_RemoveMetadata) == 0x000004, "Wrong alignment on RigHierarchy_RemoveMetadata");
-static_assert(sizeof(RigHierarchy_RemoveMetadata) == 0x000018, "Wrong size on RigHierarchy_RemoveMetadata");
-static_assert(offsetof(RigHierarchy_RemoveMetadata, InItem) == 0x000000, "Member 'RigHierarchy_RemoveMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_RemoveMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_RemoveMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_RemoveMetadata, ReturnValue) == 0x000014, "Member 'RigHierarchy_RemoveMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.ResetPoseToInitial
-// 0x0001 (0x0001 - 0x0000)
-struct RigHierarchy_ResetPoseToInitial final 
-{
-public:
-	ERigElementType                               InTypeFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_ResetPoseToInitial) == 0x000001, "Wrong alignment on RigHierarchy_ResetPoseToInitial");
-static_assert(sizeof(RigHierarchy_ResetPoseToInitial) == 0x000001, "Wrong size on RigHierarchy_ResetPoseToInitial");
-static_assert(offsetof(RigHierarchy_ResetPoseToInitial, InTypeFilter) == 0x000000, "Member 'RigHierarchy_ResetPoseToInitial::InTypeFilter' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SendAutoKeyEvent
-// 0x0014 (0x0014 - 0x0000)
-struct RigHierarchy_SendAutoKeyEvent final 
-{
-public:
-	struct FRigElementKey                         InElement;                                         // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InOffsetInSeconds;                                 // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAsynchronous;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FC[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SendAutoKeyEvent) == 0x000004, "Wrong alignment on RigHierarchy_SendAutoKeyEvent");
-static_assert(sizeof(RigHierarchy_SendAutoKeyEvent) == 0x000014, "Wrong size on RigHierarchy_SendAutoKeyEvent");
-static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, InElement) == 0x000000, "Member 'RigHierarchy_SendAutoKeyEvent::InElement' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, InOffsetInSeconds) == 0x00000C, "Member 'RigHierarchy_SendAutoKeyEvent::InOffsetInSeconds' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SendAutoKeyEvent, bAsynchronous) == 0x000010, "Member 'RigHierarchy_SendAutoKeyEvent::bAsynchronous' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetBoolArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetBoolArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FD[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FE[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetBoolArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetBoolArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetBoolArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetBoolArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetBoolArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetBoolArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetBoolArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetBoolArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetBoolMetadata
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_SetBoolMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InValue;                                           // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_21FF[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetBoolMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetBoolMetadata");
-static_assert(sizeof(RigHierarchy_SetBoolMetadata) == 0x000018, "Wrong size on RigHierarchy_SetBoolMetadata");
-static_assert(offsetof(RigHierarchy_SetBoolMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetBoolMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetBoolMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetBoolMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetBoolMetadata, ReturnValue) == 0x000015, "Member 'RigHierarchy_SetBoolMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlOffsetTransform
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetControlOffsetTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2200[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2201[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlOffsetTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetControlOffsetTransform");
-static_assert(sizeof(RigHierarchy_SetControlOffsetTransform) == 0x000080, "Wrong size on RigHierarchy_SetControlOffsetTransform");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetControlOffsetTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlOffsetTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlOffsetTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetControlOffsetTransform::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetControlOffsetTransform::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransform, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetControlOffsetTransform::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlOffsetTransformByIndex
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetControlOffsetTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2202[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2203[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlOffsetTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlOffsetTransformByIndex");
-static_assert(sizeof(RigHierarchy_SetControlOffsetTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetControlOffsetTransformByIndex");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlOffsetTransformByIndex, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetControlOffsetTransformByIndex::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlPreferredRotator
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetControlPreferredRotator final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2204[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               InValue;                                           // 0x0010(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0028(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFixEulerFlips;                                    // 0x0029(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2205[0x6];                                     // 0x002A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlPreferredRotator) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredRotator");
-static_assert(sizeof(RigHierarchy_SetControlPreferredRotator) == 0x000030, "Wrong size on RigHierarchy_SetControlPreferredRotator");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, InKey) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotator::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, InValue) == 0x000010, "Member 'RigHierarchy_SetControlPreferredRotator::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, bInitial) == 0x000028, "Member 'RigHierarchy_SetControlPreferredRotator::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotator, bFixEulerFlips) == 0x000029, "Member 'RigHierarchy_SetControlPreferredRotator::bFixEulerFlips' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlPreferredRotatorByIndex
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_SetControlPreferredRotatorByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2206[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               InValue;                                           // 0x0008(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bFixEulerFlips;                                    // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2207[0x6];                                     // 0x0022(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlPreferredRotatorByIndex) == 0x000008, "Wrong alignment on RigHierarchy_SetControlPreferredRotatorByIndex");
-static_assert(sizeof(RigHierarchy_SetControlPreferredRotatorByIndex) == 0x000028, "Wrong size on RigHierarchy_SetControlPreferredRotatorByIndex");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, InValue) == 0x000008, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, bInitial) == 0x000020, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlPreferredRotatorByIndex, bFixEulerFlips) == 0x000021, "Member 'RigHierarchy_SetControlPreferredRotatorByIndex::bFixEulerFlips' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlSettings
-// 0x02A0 (0x02A0 - 0x0000)
-struct RigHierarchy_SetControlSettings final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2208[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    InSettings;                                        // 0x0010(0x0280)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0290(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForce;                                            // 0x0291(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0292(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2209[0xD];                                     // 0x0293(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlSettings) == 0x000010, "Wrong alignment on RigHierarchy_SetControlSettings");
-static_assert(sizeof(RigHierarchy_SetControlSettings) == 0x0002A0, "Wrong size on RigHierarchy_SetControlSettings");
-static_assert(offsetof(RigHierarchy_SetControlSettings, InKey) == 0x000000, "Member 'RigHierarchy_SetControlSettings::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettings, InSettings) == 0x000010, "Member 'RigHierarchy_SetControlSettings::InSettings' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettings, bSetupUndo) == 0x000290, "Member 'RigHierarchy_SetControlSettings::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettings, bForce) == 0x000291, "Member 'RigHierarchy_SetControlSettings::bForce' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettings, bPrintPythonCommands) == 0x000292, "Member 'RigHierarchy_SetControlSettings::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlSettingsByIndex
-// 0x02A0 (0x02A0 - 0x0000)
-struct RigHierarchy_SetControlSettingsByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220A[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    InSettings;                                        // 0x0010(0x0280)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0290(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bForce;                                            // 0x0291(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0292(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220B[0xD];                                     // 0x0293(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlSettingsByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlSettingsByIndex");
-static_assert(sizeof(RigHierarchy_SetControlSettingsByIndex) == 0x0002A0, "Wrong size on RigHierarchy_SetControlSettingsByIndex");
-static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlSettingsByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, InSettings) == 0x000010, "Member 'RigHierarchy_SetControlSettingsByIndex::InSettings' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bSetupUndo) == 0x000290, "Member 'RigHierarchy_SetControlSettingsByIndex::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bForce) == 0x000291, "Member 'RigHierarchy_SetControlSettingsByIndex::bForce' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlSettingsByIndex, bPrintPythonCommands) == 0x000292, "Member 'RigHierarchy_SetControlSettingsByIndex::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlShapeTransform
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetControlShapeTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220D[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetControlShapeTransform");
-static_assert(sizeof(RigHierarchy_SetControlShapeTransform) == 0x000080, "Wrong size on RigHierarchy_SetControlShapeTransform");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetControlShapeTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlShapeTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlShapeTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransform, bSetupUndo) == 0x000071, "Member 'RigHierarchy_SetControlShapeTransform::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlShapeTransformByIndex
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetControlShapeTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220E[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_220F[0xE];                                     // 0x0072(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlShapeTransformByIndex");
-static_assert(sizeof(RigHierarchy_SetControlShapeTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetControlShapeTransformByIndex");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetControlShapeTransformByIndex::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetControlShapeTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlShapeTransformByIndex, bSetupUndo) == 0x000071, "Member 'RigHierarchy_SetControlShapeTransformByIndex::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlValue
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_SetControlValue final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2210[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       InValue;                                           // 0x0010(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	ERigControlValueType                          InValueType;                                       // 0x0100(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0101(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0102(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2211[0xD];                                     // 0x0103(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlValue) == 0x000010, "Wrong alignment on RigHierarchy_SetControlValue");
-static_assert(sizeof(RigHierarchy_SetControlValue) == 0x000110, "Wrong size on RigHierarchy_SetControlValue");
-static_assert(offsetof(RigHierarchy_SetControlValue, InKey) == 0x000000, "Member 'RigHierarchy_SetControlValue::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValue, InValue) == 0x000010, "Member 'RigHierarchy_SetControlValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValue, InValueType) == 0x000100, "Member 'RigHierarchy_SetControlValue::InValueType' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValue, bSetupUndo) == 0x000101, "Member 'RigHierarchy_SetControlValue::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValue, bPrintPythonCommands) == 0x000102, "Member 'RigHierarchy_SetControlValue::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlValueByIndex
-// 0x0110 (0x0110 - 0x0000)
-struct RigHierarchy_SetControlValueByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2212[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       InValue;                                           // 0x0010(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	ERigControlValueType                          InValueType;                                       // 0x0100(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0101(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0102(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2213[0xD];                                     // 0x0103(0x000D)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlValueByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetControlValueByIndex");
-static_assert(sizeof(RigHierarchy_SetControlValueByIndex) == 0x000110, "Wrong size on RigHierarchy_SetControlValueByIndex");
-static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlValueByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InValue) == 0x000010, "Member 'RigHierarchy_SetControlValueByIndex::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValueByIndex, InValueType) == 0x000100, "Member 'RigHierarchy_SetControlValueByIndex::InValueType' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValueByIndex, bSetupUndo) == 0x000101, "Member 'RigHierarchy_SetControlValueByIndex::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlValueByIndex, bPrintPythonCommands) == 0x000102, "Member 'RigHierarchy_SetControlValueByIndex::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlVisibility
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_SetControlVisibility final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisibility;                                       // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2214[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlVisibility) == 0x000004, "Wrong alignment on RigHierarchy_SetControlVisibility");
-static_assert(sizeof(RigHierarchy_SetControlVisibility) == 0x000010, "Wrong size on RigHierarchy_SetControlVisibility");
-static_assert(offsetof(RigHierarchy_SetControlVisibility, InKey) == 0x000000, "Member 'RigHierarchy_SetControlVisibility::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlVisibility, bVisibility) == 0x00000C, "Member 'RigHierarchy_SetControlVisibility::bVisibility' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetControlVisibilityByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_SetControlVisibilityByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bVisibility;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2215[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetControlVisibilityByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetControlVisibilityByIndex");
-static_assert(sizeof(RigHierarchy_SetControlVisibilityByIndex) == 0x000008, "Wrong size on RigHierarchy_SetControlVisibilityByIndex");
-static_assert(offsetof(RigHierarchy_SetControlVisibilityByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetControlVisibilityByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetControlVisibilityByIndex, bVisibility) == 0x000004, "Member 'RigHierarchy_SetControlVisibilityByIndex::bVisibility' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetCurveValue
-// 0x0014 (0x0014 - 0x0000)
-struct RigHierarchy_SetCurveValue final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2216[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_SetCurveValue");
-static_assert(sizeof(RigHierarchy_SetCurveValue) == 0x000014, "Wrong size on RigHierarchy_SetCurveValue");
-static_assert(offsetof(RigHierarchy_SetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_SetCurveValue::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetCurveValue, InValue) == 0x00000C, "Member 'RigHierarchy_SetCurveValue::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetCurveValue, bSetupUndo) == 0x000010, "Member 'RigHierarchy_SetCurveValue::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetCurveValueByIndex
-// 0x000C (0x000C - 0x0000)
-struct RigHierarchy_SetCurveValueByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2217[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_SetCurveValueByIndex");
-static_assert(sizeof(RigHierarchy_SetCurveValueByIndex) == 0x00000C, "Wrong size on RigHierarchy_SetCurveValueByIndex");
-static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetCurveValueByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, InValue) == 0x000004, "Member 'RigHierarchy_SetCurveValueByIndex::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetCurveValueByIndex, bSetupUndo) == 0x000008, "Member 'RigHierarchy_SetCurveValueByIndex::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetFloatArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetFloatArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2218[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2219[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetFloatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetFloatArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetFloatArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetFloatArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetFloatArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetFloatArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetFloatArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetFloatArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetFloatMetadata
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_SetFloatMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221A[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetFloatMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetFloatMetadata");
-static_assert(sizeof(RigHierarchy_SetFloatMetadata) == 0x00001C, "Wrong size on RigHierarchy_SetFloatMetadata");
-static_assert(offsetof(RigHierarchy_SetFloatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetFloatMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetFloatMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetFloatMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetFloatMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_SetFloatMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetGlobalTransform
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetGlobalTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommand;                               // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221C[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetGlobalTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetGlobalTransform");
-static_assert(sizeof(RigHierarchy_SetGlobalTransform) == 0x000080, "Wrong size on RigHierarchy_SetGlobalTransform");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetGlobalTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetGlobalTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetGlobalTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetGlobalTransform::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetGlobalTransform::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransform, bPrintPythonCommand) == 0x000073, "Member 'RigHierarchy_SetGlobalTransform::bPrintPythonCommand' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetGlobalTransformByIndex
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetGlobalTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221D[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommand;                               // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221E[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetGlobalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetGlobalTransformByIndex");
-static_assert(sizeof(RigHierarchy_SetGlobalTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetGlobalTransformByIndex");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetGlobalTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetGlobalTransformByIndex::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetGlobalTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetGlobalTransformByIndex::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetGlobalTransformByIndex::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetGlobalTransformByIndex, bPrintPythonCommand) == 0x000073, "Member 'RigHierarchy_SetGlobalTransformByIndex::bPrintPythonCommand' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetInt32ArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetInt32ArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_221F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2220[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetInt32ArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetInt32ArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetInt32ArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetInt32ArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetInt32ArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetInt32ArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetInt32ArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32ArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetInt32ArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetInt32Metadata
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_SetInt32Metadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         InValue;                                           // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2221[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetInt32Metadata) == 0x000004, "Wrong alignment on RigHierarchy_SetInt32Metadata");
-static_assert(sizeof(RigHierarchy_SetInt32Metadata) == 0x00001C, "Wrong size on RigHierarchy_SetInt32Metadata");
-static_assert(offsetof(RigHierarchy_SetInt32Metadata, InItem) == 0x000000, "Member 'RigHierarchy_SetInt32Metadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32Metadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetInt32Metadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32Metadata, InValue) == 0x000014, "Member 'RigHierarchy_SetInt32Metadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetInt32Metadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_SetInt32Metadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetLinearColorArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetLinearColorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2222[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLinearColor>                   InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2223[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetLinearColorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetLinearColorArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetLinearColorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetLinearColorArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetLinearColorArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetLinearColorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetLinearColorMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_SetLinearColorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           InValue;                                           // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0024(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2224[0x3];                                     // 0x0025(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetLinearColorMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetLinearColorMetadata");
-static_assert(sizeof(RigHierarchy_SetLinearColorMetadata) == 0x000028, "Wrong size on RigHierarchy_SetLinearColorMetadata");
-static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetLinearColorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetLinearColorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetLinearColorMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLinearColorMetadata, ReturnValue) == 0x000024, "Member 'RigHierarchy_SetLinearColorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetLocalTransform
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetLocalTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2225[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2226[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetLocalTransform) == 0x000010, "Wrong alignment on RigHierarchy_SetLocalTransform");
-static_assert(sizeof(RigHierarchy_SetLocalTransform) == 0x000080, "Wrong size on RigHierarchy_SetLocalTransform");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, InKey) == 0x000000, "Member 'RigHierarchy_SetLocalTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, InTransform) == 0x000010, "Member 'RigHierarchy_SetLocalTransform::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, bInitial) == 0x000070, "Member 'RigHierarchy_SetLocalTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetLocalTransform::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetLocalTransform::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransform, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetLocalTransform::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetLocalTransformByIndex
-// 0x0080 (0x0080 - 0x0000)
-struct RigHierarchy_SetLocalTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2227[0xC];                                     // 0x0004(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InTransform;                                       // 0x0010(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0070(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0071(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0072(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommands;                              // 0x0073(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2228[0xC];                                     // 0x0074(0x000C)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetLocalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_SetLocalTransformByIndex");
-static_assert(sizeof(RigHierarchy_SetLocalTransformByIndex) == 0x000080, "Wrong size on RigHierarchy_SetLocalTransformByIndex");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_SetLocalTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, InTransform) == 0x000010, "Member 'RigHierarchy_SetLocalTransformByIndex::InTransform' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bInitial) == 0x000070, "Member 'RigHierarchy_SetLocalTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bAffectChildren) == 0x000071, "Member 'RigHierarchy_SetLocalTransformByIndex::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bSetupUndo) == 0x000072, "Member 'RigHierarchy_SetLocalTransformByIndex::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetLocalTransformByIndex, bPrintPythonCommands) == 0x000073, "Member 'RigHierarchy_SetLocalTransformByIndex::bPrintPythonCommands' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetNameArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetNameArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2229[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222A[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetNameArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetNameArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetNameArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetNameArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetNameArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetNameArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetNameArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetNameArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetNameMetadata
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_SetNameMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InValue;                                           // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222B[0x3];                                     // 0x001D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetNameMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetNameMetadata");
-static_assert(sizeof(RigHierarchy_SetNameMetadata) == 0x000020, "Wrong size on RigHierarchy_SetNameMetadata");
-static_assert(offsetof(RigHierarchy_SetNameMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetNameMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetNameMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetNameMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetNameMetadata, ReturnValue) == 0x00001C, "Member 'RigHierarchy_SetNameMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetParentWeight
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_SetParentWeight final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementWeight                      InWeight;                                          // 0x0018(0x000C)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0024(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0025(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0026(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222C[0x1];                                     // 0x0027(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetParentWeight) == 0x000004, "Wrong alignment on RigHierarchy_SetParentWeight");
-static_assert(sizeof(RigHierarchy_SetParentWeight) == 0x000028, "Wrong size on RigHierarchy_SetParentWeight");
-static_assert(offsetof(RigHierarchy_SetParentWeight, InChild) == 0x000000, "Member 'RigHierarchy_SetParentWeight::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeight, InParent) == 0x00000C, "Member 'RigHierarchy_SetParentWeight::InParent' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeight, InWeight) == 0x000018, "Member 'RigHierarchy_SetParentWeight::InWeight' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeight, bInitial) == 0x000024, "Member 'RigHierarchy_SetParentWeight::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeight, bAffectChildren) == 0x000025, "Member 'RigHierarchy_SetParentWeight::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeight, ReturnValue) == 0x000026, "Member 'RigHierarchy_SetParentWeight::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetParentWeightArray
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_SetParentWeightArray final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222D[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementWeight>              InWeights;                                         // 0x0010(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0020(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0021(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0022(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222E[0x5];                                     // 0x0023(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetParentWeightArray) == 0x000008, "Wrong alignment on RigHierarchy_SetParentWeightArray");
-static_assert(sizeof(RigHierarchy_SetParentWeightArray) == 0x000028, "Wrong size on RigHierarchy_SetParentWeightArray");
-static_assert(offsetof(RigHierarchy_SetParentWeightArray, InChild) == 0x000000, "Member 'RigHierarchy_SetParentWeightArray::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeightArray, InWeights) == 0x000010, "Member 'RigHierarchy_SetParentWeightArray::InWeights' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeightArray, bInitial) == 0x000020, "Member 'RigHierarchy_SetParentWeightArray::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeightArray, bAffectChildren) == 0x000021, "Member 'RigHierarchy_SetParentWeightArray::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetParentWeightArray, ReturnValue) == 0x000022, "Member 'RigHierarchy_SetParentWeightArray::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetPose_ForBlueprint
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_SetPose_ForBlueprint final 
-{
-public:
-	struct FRigPose                               InPose;                                            // 0x0000(0x0070)(Parm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_SetPose_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchy_SetPose_ForBlueprint");
-static_assert(sizeof(RigHierarchy_SetPose_ForBlueprint) == 0x000070, "Wrong size on RigHierarchy_SetPose_ForBlueprint");
-static_assert(offsetof(RigHierarchy_SetPose_ForBlueprint, InPose) == 0x000000, "Member 'RigHierarchy_SetPose_ForBlueprint::InPose' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetQuatArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetQuatArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_222F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FQuat>                          InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2230[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetQuatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetQuatArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetQuatArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetQuatArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetQuatArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetQuatArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetQuatArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetQuatArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetQuatMetadata
-// 0x0050 (0x0050 - 0x0000)
-struct RigHierarchy_SetQuatMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2231[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  InValue;                                           // 0x0020(0x0020)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2232[0xF];                                     // 0x0041(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetQuatMetadata) == 0x000010, "Wrong alignment on RigHierarchy_SetQuatMetadata");
-static_assert(sizeof(RigHierarchy_SetQuatMetadata) == 0x000050, "Wrong size on RigHierarchy_SetQuatMetadata");
-static_assert(offsetof(RigHierarchy_SetQuatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetQuatMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetQuatMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatMetadata, InValue) == 0x000020, "Member 'RigHierarchy_SetQuatMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetQuatMetadata, ReturnValue) == 0x000040, "Member 'RigHierarchy_SetQuatMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetRigElementKeyArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetRigElementKeyArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2233[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2234[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetRigElementKeyArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRigElementKeyArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetRigElementKeyArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetRigElementKeyArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetRigElementKeyArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetRigElementKeyMetadata
-// 0x0024 (0x0024 - 0x0000)
-struct RigHierarchy_SetRigElementKeyMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         InValue;                                           // 0x0014(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2235[0x3];                                     // 0x0021(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetRigElementKeyMetadata) == 0x000004, "Wrong alignment on RigHierarchy_SetRigElementKeyMetadata");
-static_assert(sizeof(RigHierarchy_SetRigElementKeyMetadata) == 0x000024, "Wrong size on RigHierarchy_SetRigElementKeyMetadata");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRigElementKeyMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRigElementKeyMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, InValue) == 0x000014, "Member 'RigHierarchy_SetRigElementKeyMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRigElementKeyMetadata, ReturnValue) == 0x000020, "Member 'RigHierarchy_SetRigElementKeyMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetRotatorArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetRotatorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2236[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRotator>                       InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2237[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetRotatorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRotatorArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetRotatorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetRotatorArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRotatorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRotatorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRotatorArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetRotatorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetRotatorMetadata
-// 0x0038 (0x0038 - 0x0000)
-struct RigHierarchy_SetRotatorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2238[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               InValue;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2239[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetRotatorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetRotatorMetadata");
-static_assert(sizeof(RigHierarchy_SetRotatorMetadata) == 0x000038, "Wrong size on RigHierarchy_SetRotatorMetadata");
-static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetRotatorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetRotatorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetRotatorMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetRotatorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_SetRotatorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetTag
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_SetTag final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InTag;                                             // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223A[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetTag) == 0x000004, "Wrong alignment on RigHierarchy_SetTag");
-static_assert(sizeof(RigHierarchy_SetTag) == 0x000018, "Wrong size on RigHierarchy_SetTag");
-static_assert(offsetof(RigHierarchy_SetTag, InItem) == 0x000000, "Member 'RigHierarchy_SetTag::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTag, InTag) == 0x00000C, "Member 'RigHierarchy_SetTag::InTag' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTag, ReturnValue) == 0x000014, "Member 'RigHierarchy_SetTag::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetTransformArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetTransformArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTransform>                     InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetTransformArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetTransformArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetTransformArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetTransformArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetTransformArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetTransformArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetTransformArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetTransformArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetTransformMetadata
-// 0x0090 (0x0090 - 0x0000)
-struct RigHierarchy_SetTransformMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223D[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             InValue;                                           // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0080(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223E[0xF];                                     // 0x0081(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetTransformMetadata) == 0x000010, "Wrong alignment on RigHierarchy_SetTransformMetadata");
-static_assert(sizeof(RigHierarchy_SetTransformMetadata) == 0x000090, "Wrong size on RigHierarchy_SetTransformMetadata");
-static_assert(offsetof(RigHierarchy_SetTransformMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetTransformMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetTransformMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformMetadata, InValue) == 0x000020, "Member 'RigHierarchy_SetTransformMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetTransformMetadata, ReturnValue) == 0x000080, "Member 'RigHierarchy_SetTransformMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetVectorArrayMetadata
-// 0x0030 (0x0030 - 0x0000)
-struct RigHierarchy_SetVectorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_223F[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        InValue;                                           // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2240[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetVectorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetVectorArrayMetadata");
-static_assert(sizeof(RigHierarchy_SetVectorArrayMetadata) == 0x000030, "Wrong size on RigHierarchy_SetVectorArrayMetadata");
-static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetVectorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetVectorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetVectorArrayMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorArrayMetadata, ReturnValue) == 0x000028, "Member 'RigHierarchy_SetVectorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SetVectorMetadata
-// 0x0038 (0x0038 - 0x0000)
-struct RigHierarchy_SetVectorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2241[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                InValue;                                           // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2242[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SetVectorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_SetVectorMetadata");
-static_assert(sizeof(RigHierarchy_SetVectorMetadata) == 0x000038, "Wrong size on RigHierarchy_SetVectorMetadata");
-static_assert(offsetof(RigHierarchy_SetVectorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_SetVectorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_SetVectorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorMetadata, InValue) == 0x000018, "Member 'RigHierarchy_SetVectorMetadata::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SetVectorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_SetVectorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SwitchToDefaultParent
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_SwitchToDefaultParent final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2243[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SwitchToDefaultParent) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToDefaultParent");
-static_assert(sizeof(RigHierarchy_SwitchToDefaultParent) == 0x000010, "Wrong size on RigHierarchy_SwitchToDefaultParent");
-static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToDefaultParent::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, bInitial) == 0x00000C, "Member 'RigHierarchy_SwitchToDefaultParent::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, bAffectChildren) == 0x00000D, "Member 'RigHierarchy_SwitchToDefaultParent::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToDefaultParent, ReturnValue) == 0x00000E, "Member 'RigHierarchy_SwitchToDefaultParent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SwitchToParent
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_SwitchToParent final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x0019(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x001A(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2244[0x1];                                     // 0x001B(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SwitchToParent) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToParent");
-static_assert(sizeof(RigHierarchy_SwitchToParent) == 0x00001C, "Wrong size on RigHierarchy_SwitchToParent");
-static_assert(offsetof(RigHierarchy_SwitchToParent, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToParent::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToParent, InParent) == 0x00000C, "Member 'RigHierarchy_SwitchToParent::InParent' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToParent, bInitial) == 0x000018, "Member 'RigHierarchy_SwitchToParent::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToParent, bAffectChildren) == 0x000019, "Member 'RigHierarchy_SwitchToParent::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToParent, ReturnValue) == 0x00001A, "Member 'RigHierarchy_SwitchToParent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SwitchToWorldSpace
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_SwitchToWorldSpace final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bAffectChildren;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2245[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_SwitchToWorldSpace) == 0x000004, "Wrong alignment on RigHierarchy_SwitchToWorldSpace");
-static_assert(sizeof(RigHierarchy_SwitchToWorldSpace) == 0x000010, "Wrong size on RigHierarchy_SwitchToWorldSpace");
-static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, InChild) == 0x000000, "Member 'RigHierarchy_SwitchToWorldSpace::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, bInitial) == 0x00000C, "Member 'RigHierarchy_SwitchToWorldSpace::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, bAffectChildren) == 0x00000D, "Member 'RigHierarchy_SwitchToWorldSpace::bAffectChildren' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SwitchToWorldSpace, ReturnValue) == 0x00000E, "Member 'RigHierarchy_SwitchToWorldSpace::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.UnsetCurveValue
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_UnsetCurveValue final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2246[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_UnsetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_UnsetCurveValue");
-static_assert(sizeof(RigHierarchy_UnsetCurveValue) == 0x000010, "Wrong size on RigHierarchy_UnsetCurveValue");
-static_assert(offsetof(RigHierarchy_UnsetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_UnsetCurveValue::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_UnsetCurveValue, bSetupUndo) == 0x00000C, "Member 'RigHierarchy_UnsetCurveValue::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.UnsetCurveValueByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_UnsetCurveValueByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2247[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_UnsetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_UnsetCurveValueByIndex");
-static_assert(sizeof(RigHierarchy_UnsetCurveValueByIndex) == 0x000008, "Wrong size on RigHierarchy_UnsetCurveValueByIndex");
-static_assert(offsetof(RigHierarchy_UnsetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_UnsetCurveValueByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_UnsetCurveValueByIndex, bSetupUndo) == 0x000004, "Member 'RigHierarchy_UnsetCurveValueByIndex::bSetupUndo' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.Contains_ForBlueprint
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_Contains_ForBlueprint final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2248[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_Contains_ForBlueprint) == 0x000004, "Wrong alignment on RigHierarchy_Contains_ForBlueprint");
-static_assert(sizeof(RigHierarchy_Contains_ForBlueprint) == 0x000010, "Wrong size on RigHierarchy_Contains_ForBlueprint");
-static_assert(offsetof(RigHierarchy_Contains_ForBlueprint, InKey) == 0x000000, "Member 'RigHierarchy_Contains_ForBlueprint::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_Contains_ForBlueprint, ReturnValue) == 0x00000C, "Member 'RigHierarchy_Contains_ForBlueprint::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.FindBone_ForBlueprintOnly
-// 0x0310 (0x0310 - 0x0000)
-struct RigHierarchy_FindBone_ForBlueprintOnly final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2249[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigBoneElement                        ReturnValue;                                       // 0x0010(0x0300)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_FindBone_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindBone_ForBlueprintOnly");
-static_assert(sizeof(RigHierarchy_FindBone_ForBlueprintOnly) == 0x000310, "Wrong size on RigHierarchy_FindBone_ForBlueprintOnly");
-static_assert(offsetof(RigHierarchy_FindBone_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindBone_ForBlueprintOnly::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_FindBone_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindBone_ForBlueprintOnly::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.FindControl_ForBlueprintOnly
-// 0x0A40 (0x0A40 - 0x0000)
-struct RigHierarchy_FindControl_ForBlueprintOnly final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlElement                     ReturnValue;                                       // 0x0010(0x0A30)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_FindControl_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindControl_ForBlueprintOnly");
-static_assert(sizeof(RigHierarchy_FindControl_ForBlueprintOnly) == 0x000A40, "Wrong size on RigHierarchy_FindControl_ForBlueprintOnly");
-static_assert(offsetof(RigHierarchy_FindControl_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindControl_ForBlueprintOnly::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_FindControl_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindControl_ForBlueprintOnly::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.FindNull_ForBlueprintOnly
-// 0x0400 (0x0400 - 0x0000)
-struct RigHierarchy_FindNull_ForBlueprintOnly final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224B[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigNullElement                        ReturnValue;                                       // 0x0010(0x03F0)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_FindNull_ForBlueprintOnly) == 0x000010, "Wrong alignment on RigHierarchy_FindNull_ForBlueprintOnly");
-static_assert(sizeof(RigHierarchy_FindNull_ForBlueprintOnly) == 0x000400, "Wrong size on RigHierarchy_FindNull_ForBlueprintOnly");
-static_assert(offsetof(RigHierarchy_FindNull_ForBlueprintOnly, InKey) == 0x000000, "Member 'RigHierarchy_FindNull_ForBlueprintOnly::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_FindNull_ForBlueprintOnly, ReturnValue) == 0x000010, "Member 'RigHierarchy_FindNull_ForBlueprintOnly::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetAllKeys_ForBlueprint
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetAllKeys_ForBlueprint final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224C[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetAllKeys_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchy_GetAllKeys_ForBlueprint");
-static_assert(sizeof(RigHierarchy_GetAllKeys_ForBlueprint) == 0x000018, "Wrong size on RigHierarchy_GetAllKeys_ForBlueprint");
-static_assert(offsetof(RigHierarchy_GetAllKeys_ForBlueprint, bTraverse) == 0x000000, "Member 'RigHierarchy_GetAllKeys_ForBlueprint::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetAllKeys_ForBlueprint, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetAllKeys_ForBlueprint::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetBoneKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetBoneKeys final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetBoneKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetBoneKeys");
-static_assert(sizeof(RigHierarchy_GetBoneKeys) == 0x000018, "Wrong size on RigHierarchy_GetBoneKeys");
-static_assert(offsetof(RigHierarchy_GetBoneKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetBoneKeys::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoneKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetBoneKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetBoolArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetBoolArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<bool>                                  ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetBoolArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetBoolArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetBoolArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetBoolArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetBoolArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetBoolArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoolArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetBoolArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetBoolMetadata
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetBoolMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          DefaultValue;                                      // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0015(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_224F[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_GetBoolMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetBoolMetadata");
-static_assert(sizeof(RigHierarchy_GetBoolMetadata) == 0x000018, "Wrong size on RigHierarchy_GetBoolMetadata");
-static_assert(offsetof(RigHierarchy_GetBoolMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetBoolMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoolMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetBoolMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoolMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetBoolMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetBoolMetadata, ReturnValue) == 0x000015, "Member 'RigHierarchy_GetBoolMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetChildren
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetChildren final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecursive;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2250[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetChildren) == 0x000008, "Wrong alignment on RigHierarchy_GetChildren");
-static_assert(sizeof(RigHierarchy_GetChildren) == 0x000020, "Wrong size on RigHierarchy_GetChildren");
-static_assert(offsetof(RigHierarchy_GetChildren, InKey) == 0x000000, "Member 'RigHierarchy_GetChildren::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetChildren, bRecursive) == 0x00000C, "Member 'RigHierarchy_GetChildren::bRecursive' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetChildren, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetChildren::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetControlKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetControlKeys final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2251[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetControlKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetControlKeys");
-static_assert(sizeof(RigHierarchy_GetControlKeys) == 0x000018, "Wrong size on RigHierarchy_GetControlKeys");
-static_assert(offsetof(RigHierarchy_GetControlKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetControlKeys::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetControlPreferredRotator
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetControlPreferredRotator final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2252[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               ReturnValue;                                       // 0x0010(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetControlPreferredRotator) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredRotator");
-static_assert(sizeof(RigHierarchy_GetControlPreferredRotator) == 0x000028, "Wrong size on RigHierarchy_GetControlPreferredRotator");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, InKey) == 0x000000, "Member 'RigHierarchy_GetControlPreferredRotator::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, bInitial) == 0x00000C, "Member 'RigHierarchy_GetControlPreferredRotator::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotator, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlPreferredRotator::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetControlPreferredRotatorByIndex
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetControlPreferredRotatorByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2253[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetControlPreferredRotatorByIndex) == 0x000008, "Wrong alignment on RigHierarchy_GetControlPreferredRotatorByIndex");
-static_assert(sizeof(RigHierarchy_GetControlPreferredRotatorByIndex) == 0x000020, "Wrong size on RigHierarchy_GetControlPreferredRotatorByIndex");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlPreferredRotatorByIndex, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetControlPreferredRotatorByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetControlValue
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_GetControlValue final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERigControlValueType                          InValueType;                                       // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2254[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetControlValue) == 0x000010, "Wrong alignment on RigHierarchy_GetControlValue");
-static_assert(sizeof(RigHierarchy_GetControlValue) == 0x000100, "Wrong size on RigHierarchy_GetControlValue");
-static_assert(offsetof(RigHierarchy_GetControlValue, InKey) == 0x000000, "Member 'RigHierarchy_GetControlValue::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlValue, InValueType) == 0x00000C, "Member 'RigHierarchy_GetControlValue::InValueType' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlValue, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetControlValueByIndex
-// 0x0100 (0x0100 - 0x0000)
-struct RigHierarchy_GetControlValueByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ERigControlValueType                          InValueType;                                       // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2255[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlValue                       ReturnValue;                                       // 0x0010(0x00F0)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetControlValueByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetControlValueByIndex");
-static_assert(sizeof(RigHierarchy_GetControlValueByIndex) == 0x000100, "Wrong size on RigHierarchy_GetControlValueByIndex");
-static_assert(offsetof(RigHierarchy_GetControlValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetControlValueByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlValueByIndex, InValueType) == 0x000004, "Member 'RigHierarchy_GetControlValueByIndex::InValueType' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetControlValueByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetControlValueByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetCurveKeys
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetCurveKeys final 
-{
-public:
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetCurveKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetCurveKeys");
-static_assert(sizeof(RigHierarchy_GetCurveKeys) == 0x000010, "Wrong size on RigHierarchy_GetCurveKeys");
-static_assert(offsetof(RigHierarchy_GetCurveKeys, ReturnValue) == 0x000000, "Member 'RigHierarchy_GetCurveKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetCurveValue
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetCurveValue final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetCurveValue) == 0x000004, "Wrong alignment on RigHierarchy_GetCurveValue");
-static_assert(sizeof(RigHierarchy_GetCurveValue) == 0x000010, "Wrong size on RigHierarchy_GetCurveValue");
-static_assert(offsetof(RigHierarchy_GetCurveValue, InKey) == 0x000000, "Member 'RigHierarchy_GetCurveValue::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetCurveValue, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetCurveValue::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetCurveValueByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_GetCurveValueByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetCurveValueByIndex) == 0x000004, "Wrong alignment on RigHierarchy_GetCurveValueByIndex");
-static_assert(sizeof(RigHierarchy_GetCurveValueByIndex) == 0x000008, "Wrong size on RigHierarchy_GetCurveValueByIndex");
-static_assert(offsetof(RigHierarchy_GetCurveValueByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetCurveValueByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetCurveValueByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_GetCurveValueByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetDefaultParent
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetDefaultParent final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetDefaultParent) == 0x000004, "Wrong alignment on RigHierarchy_GetDefaultParent");
-static_assert(sizeof(RigHierarchy_GetDefaultParent) == 0x000018, "Wrong size on RigHierarchy_GetDefaultParent");
-static_assert(offsetof(RigHierarchy_GetDefaultParent, InKey) == 0x000000, "Member 'RigHierarchy_GetDefaultParent::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetDefaultParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetDefaultParent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetFirstParent
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetFirstParent final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetFirstParent) == 0x000004, "Wrong alignment on RigHierarchy_GetFirstParent");
-static_assert(sizeof(RigHierarchy_GetFirstParent) == 0x000018, "Wrong size on RigHierarchy_GetFirstParent");
-static_assert(offsetof(RigHierarchy_GetFirstParent, InKey) == 0x000000, "Member 'RigHierarchy_GetFirstParent::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFirstParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetFirstParent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetFloatArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetFloatArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2256[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<float>                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetFloatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetFloatArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetFloatArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetFloatArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetFloatArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetFloatArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetFloatArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetFloatMetadata
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_GetFloatMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         DefaultValue;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetFloatMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetFloatMetadata");
-static_assert(sizeof(RigHierarchy_GetFloatMetadata) == 0x00001C, "Wrong size on RigHierarchy_GetFloatMetadata");
-static_assert(offsetof(RigHierarchy_GetFloatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetFloatMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetFloatMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetFloatMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetFloatMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetFloatMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalControlOffsetTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalControlOffsetTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2257[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalControlOffsetTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlOffsetTransform");
-static_assert(sizeof(RigHierarchy_GetGlobalControlOffsetTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlOffsetTransform");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlOffsetTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalControlOffsetTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalControlOffsetTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2258[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalControlOffsetTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlOffsetTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetGlobalControlOffsetTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlOffsetTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlOffsetTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlOffsetTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalControlShapeTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalControlShapeTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2259[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlShapeTransform");
-static_assert(sizeof(RigHierarchy_GetGlobalControlShapeTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlShapeTransform");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalControlShapeTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalControlShapeTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlShapeTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalControlShapeTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalControlShapeTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225A[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalControlShapeTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetGlobalControlShapeTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalControlShapeTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalControlShapeTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalControlShapeTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225B[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalTransform");
-static_assert(sizeof(RigHierarchy_GetGlobalTransform) == 0x000070, "Wrong size on RigHierarchy_GetGlobalTransform");
-static_assert(offsetof(RigHierarchy_GetGlobalTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetGlobalTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetGlobalTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetGlobalTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetGlobalTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225C[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetGlobalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetGlobalTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetGlobalTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetGlobalTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetGlobalTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetGlobalTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetGlobalTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetGlobalTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetIndex_ForBlueprint
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetIndex_ForBlueprint final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetIndex_ForBlueprint) == 0x000004, "Wrong alignment on RigHierarchy_GetIndex_ForBlueprint");
-static_assert(sizeof(RigHierarchy_GetIndex_ForBlueprint) == 0x000010, "Wrong size on RigHierarchy_GetIndex_ForBlueprint");
-static_assert(offsetof(RigHierarchy_GetIndex_ForBlueprint, InKey) == 0x000000, "Member 'RigHierarchy_GetIndex_ForBlueprint::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetIndex_ForBlueprint, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetIndex_ForBlueprint::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetInt32ArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetInt32ArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<int32>                                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetInt32ArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetInt32ArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetInt32ArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetInt32ArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetInt32ArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetInt32ArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetInt32ArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetInt32ArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetInt32Metadata
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_GetInt32Metadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         DefaultValue;                                      // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x0018(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetInt32Metadata) == 0x000004, "Wrong alignment on RigHierarchy_GetInt32Metadata");
-static_assert(sizeof(RigHierarchy_GetInt32Metadata) == 0x00001C, "Wrong size on RigHierarchy_GetInt32Metadata");
-static_assert(offsetof(RigHierarchy_GetInt32Metadata, InItem) == 0x000000, "Member 'RigHierarchy_GetInt32Metadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetInt32Metadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetInt32Metadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetInt32Metadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetInt32Metadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetInt32Metadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetInt32Metadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetKey
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetKey final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         ReturnValue;                                       // 0x0004(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetKey) == 0x000004, "Wrong alignment on RigHierarchy_GetKey");
-static_assert(sizeof(RigHierarchy_GetKey) == 0x000010, "Wrong size on RigHierarchy_GetKey");
-static_assert(offsetof(RigHierarchy_GetKey, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetKey::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetKey, ReturnValue) == 0x000004, "Member 'RigHierarchy_GetKey::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetKeys
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetKeys final 
-{
-public:
-	TArray<int32>                                 InElementIndices;                                  // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetKeys");
-static_assert(sizeof(RigHierarchy_GetKeys) == 0x000020, "Wrong size on RigHierarchy_GetKeys");
-static_assert(offsetof(RigHierarchy_GetKeys, InElementIndices) == 0x000000, "Member 'RigHierarchy_GetKeys::InElementIndices' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetKeys, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLinearColorArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetLinearColorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FLinearColor>                   ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLinearColorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetLinearColorArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetLinearColorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetLinearColorArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetLinearColorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetLinearColorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLinearColorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetLinearColorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLinearColorMetadata
-// 0x0034 (0x0034 - 0x0000)
-struct RigHierarchy_GetLinearColorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           DefaultValue;                                      // 0x0014(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FLinearColor                           ReturnValue;                                       // 0x0024(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLinearColorMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetLinearColorMetadata");
-static_assert(sizeof(RigHierarchy_GetLinearColorMetadata) == 0x000034, "Wrong size on RigHierarchy_GetLinearColorMetadata");
-static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetLinearColorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetLinearColorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetLinearColorMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLinearColorMetadata, ReturnValue) == 0x000024, "Member 'RigHierarchy_GetLinearColorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLocalControlShapeTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetLocalControlShapeTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_225F[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLocalControlShapeTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalControlShapeTransform");
-static_assert(sizeof(RigHierarchy_GetLocalControlShapeTransform) == 0x000070, "Wrong size on RigHierarchy_GetLocalControlShapeTransform");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetLocalControlShapeTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetLocalControlShapeTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalControlShapeTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLocalControlShapeTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetLocalControlShapeTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2260[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLocalControlShapeTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalControlShapeTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetLocalControlShapeTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetLocalControlShapeTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalControlShapeTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalControlShapeTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLocalTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetLocalTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2261[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLocalTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalTransform");
-static_assert(sizeof(RigHierarchy_GetLocalTransform) == 0x000070, "Wrong size on RigHierarchy_GetLocalTransform");
-static_assert(offsetof(RigHierarchy_GetLocalTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetLocalTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetLocalTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetLocalTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetLocalTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2262[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetLocalTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetLocalTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetLocalTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetLocalTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetLocalTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetLocalTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetLocalTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetLocalTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetNameArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetNameArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2263[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetNameArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetNameArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetNameArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetNameArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetNameArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetNameArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNameArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetNameArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetNameMetadata
-// 0x0024 (0x0024 - 0x0000)
-struct RigHierarchy_GetNameMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   DefaultValue;                                      // 0x0014(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x001C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetNameMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetNameMetadata");
-static_assert(sizeof(RigHierarchy_GetNameMetadata) == 0x000024, "Wrong size on RigHierarchy_GetNameMetadata");
-static_assert(offsetof(RigHierarchy_GetNameMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetNameMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNameMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetNameMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNameMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetNameMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNameMetadata, ReturnValue) == 0x00001C, "Member 'RigHierarchy_GetNameMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetNullKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetNullKeys final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2264[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetNullKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetNullKeys");
-static_assert(sizeof(RigHierarchy_GetNullKeys) == 0x000018, "Wrong size on RigHierarchy_GetNullKeys");
-static_assert(offsetof(RigHierarchy_GetNullKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetNullKeys::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNullKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetNullKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetNumberOfParents
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_GetNumberOfParents final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetNumberOfParents) == 0x000004, "Wrong alignment on RigHierarchy_GetNumberOfParents");
-static_assert(sizeof(RigHierarchy_GetNumberOfParents) == 0x000010, "Wrong size on RigHierarchy_GetNumberOfParents");
-static_assert(offsetof(RigHierarchy_GetNumberOfParents, InKey) == 0x000000, "Member 'RigHierarchy_GetNumberOfParents::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetNumberOfParents, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetNumberOfParents::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetParents
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetParents final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRecursive;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2265[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetParents) == 0x000008, "Wrong alignment on RigHierarchy_GetParents");
-static_assert(sizeof(RigHierarchy_GetParents) == 0x000020, "Wrong size on RigHierarchy_GetParents");
-static_assert(offsetof(RigHierarchy_GetParents, InKey) == 0x000000, "Member 'RigHierarchy_GetParents::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParents, bRecursive) == 0x00000C, "Member 'RigHierarchy_GetParents::bRecursive' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParents, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParents::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetParentTransform
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetParentTransform final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2266[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetParentTransform) == 0x000010, "Wrong alignment on RigHierarchy_GetParentTransform");
-static_assert(sizeof(RigHierarchy_GetParentTransform) == 0x000070, "Wrong size on RigHierarchy_GetParentTransform");
-static_assert(offsetof(RigHierarchy_GetParentTransform, InKey) == 0x000000, "Member 'RigHierarchy_GetParentTransform::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentTransform, bInitial) == 0x00000C, "Member 'RigHierarchy_GetParentTransform::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentTransform, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentTransform::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetParentTransformByIndex
-// 0x0070 (0x0070 - 0x0000)
-struct RigHierarchy_GetParentTransformByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2267[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             ReturnValue;                                       // 0x0010(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetParentTransformByIndex) == 0x000010, "Wrong alignment on RigHierarchy_GetParentTransformByIndex");
-static_assert(sizeof(RigHierarchy_GetParentTransformByIndex) == 0x000070, "Wrong size on RigHierarchy_GetParentTransformByIndex");
-static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_GetParentTransformByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, bInitial) == 0x000004, "Member 'RigHierarchy_GetParentTransformByIndex::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentTransformByIndex, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentTransformByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetParentWeight
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetParentWeight final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2268[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigElementWeight                      ReturnValue;                                       // 0x001C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetParentWeight) == 0x000004, "Wrong alignment on RigHierarchy_GetParentWeight");
-static_assert(sizeof(RigHierarchy_GetParentWeight) == 0x000028, "Wrong size on RigHierarchy_GetParentWeight");
-static_assert(offsetof(RigHierarchy_GetParentWeight, InChild) == 0x000000, "Member 'RigHierarchy_GetParentWeight::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentWeight, InParent) == 0x00000C, "Member 'RigHierarchy_GetParentWeight::InParent' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentWeight, bInitial) == 0x000018, "Member 'RigHierarchy_GetParentWeight::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentWeight, ReturnValue) == 0x00001C, "Member 'RigHierarchy_GetParentWeight::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetParentWeightArray
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetParentWeightArray final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bInitial;                                          // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2269[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementWeight>              ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetParentWeightArray) == 0x000008, "Wrong alignment on RigHierarchy_GetParentWeightArray");
-static_assert(sizeof(RigHierarchy_GetParentWeightArray) == 0x000020, "Wrong size on RigHierarchy_GetParentWeightArray");
-static_assert(offsetof(RigHierarchy_GetParentWeightArray, InChild) == 0x000000, "Member 'RigHierarchy_GetParentWeightArray::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentWeightArray, bInitial) == 0x00000C, "Member 'RigHierarchy_GetParentWeightArray::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetParentWeightArray, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetParentWeightArray::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetPose
-// 0x0078 (0x0078 - 0x0000)
-struct RigHierarchy_GetPose final 
-{
-public:
-	bool                                          bInitial;                                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigPose                               ReturnValue;                                       // 0x0008(0x0070)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetPose) == 0x000008, "Wrong alignment on RigHierarchy_GetPose");
-static_assert(sizeof(RigHierarchy_GetPose) == 0x000078, "Wrong size on RigHierarchy_GetPose");
-static_assert(offsetof(RigHierarchy_GetPose, bInitial) == 0x000000, "Member 'RigHierarchy_GetPose::bInitial' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetPose, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetPose::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetPreviousName
-// 0x0014 (0x0014 - 0x0000)
-struct RigHierarchy_GetPreviousName final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x000C(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetPreviousName) == 0x000004, "Wrong alignment on RigHierarchy_GetPreviousName");
-static_assert(sizeof(RigHierarchy_GetPreviousName) == 0x000014, "Wrong size on RigHierarchy_GetPreviousName");
-static_assert(offsetof(RigHierarchy_GetPreviousName, InKey) == 0x000000, "Member 'RigHierarchy_GetPreviousName::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetPreviousName, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetPreviousName::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetPreviousParent
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetPreviousParent final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         ReturnValue;                                       // 0x000C(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetPreviousParent) == 0x000004, "Wrong alignment on RigHierarchy_GetPreviousParent");
-static_assert(sizeof(RigHierarchy_GetPreviousParent) == 0x000018, "Wrong size on RigHierarchy_GetPreviousParent");
-static_assert(offsetof(RigHierarchy_GetPreviousParent, InKey) == 0x000000, "Member 'RigHierarchy_GetPreviousParent::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetPreviousParent, ReturnValue) == 0x00000C, "Member 'RigHierarchy_GetPreviousParent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetQuatArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetQuatArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226B[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FQuat>                          ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetQuatArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetQuatArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetQuatArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetQuatArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetQuatArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetQuatArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetQuatArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetQuatArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetQuatMetadata
-// 0x0060 (0x0060 - 0x0000)
-struct RigHierarchy_GetQuatMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226C[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FQuat                                  DefaultValue;                                      // 0x0020(0x0020)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FQuat                                  ReturnValue;                                       // 0x0040(0x0020)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetQuatMetadata) == 0x000010, "Wrong alignment on RigHierarchy_GetQuatMetadata");
-static_assert(sizeof(RigHierarchy_GetQuatMetadata) == 0x000060, "Wrong size on RigHierarchy_GetQuatMetadata");
-static_assert(offsetof(RigHierarchy_GetQuatMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetQuatMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetQuatMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetQuatMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetQuatMetadata, DefaultValue) == 0x000020, "Member 'RigHierarchy_GetQuatMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetQuatMetadata, ReturnValue) == 0x000040, "Member 'RigHierarchy_GetQuatMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetReferenceKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetReferenceKeys final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetReferenceKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetReferenceKeys");
-static_assert(sizeof(RigHierarchy_GetReferenceKeys) == 0x000018, "Wrong size on RigHierarchy_GetReferenceKeys");
-static_assert(offsetof(RigHierarchy_GetReferenceKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetReferenceKeys::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetReferenceKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetReferenceKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRigElementKeyArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetRigElementKeyArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetRigElementKeyArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRigElementKeyArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetRigElementKeyArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetRigElementKeyArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetRigElementKeyArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRigElementKeyMetadata
-// 0x002C (0x002C - 0x0000)
-struct RigHierarchy_GetRigElementKeyMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         DefaultValue;                                      // 0x0014(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         ReturnValue;                                       // 0x0020(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetRigElementKeyMetadata) == 0x000004, "Wrong alignment on RigHierarchy_GetRigElementKeyMetadata");
-static_assert(sizeof(RigHierarchy_GetRigElementKeyMetadata) == 0x00002C, "Wrong size on RigHierarchy_GetRigElementKeyMetadata");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRigElementKeyMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRigElementKeyMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, DefaultValue) == 0x000014, "Member 'RigHierarchy_GetRigElementKeyMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigElementKeyMetadata, ReturnValue) == 0x000020, "Member 'RigHierarchy_GetRigElementKeyMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRigidBodyKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetRigidBodyKeys final 
-{
-public:
-	bool                                          bTraverse;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_226F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetRigidBodyKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetRigidBodyKeys");
-static_assert(sizeof(RigHierarchy_GetRigidBodyKeys) == 0x000018, "Wrong size on RigHierarchy_GetRigidBodyKeys");
-static_assert(offsetof(RigHierarchy_GetRigidBodyKeys, bTraverse) == 0x000000, "Member 'RigHierarchy_GetRigidBodyKeys::bTraverse' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRigidBodyKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetRigidBodyKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRotatorArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetRotatorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2270[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRotator>                       ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetRotatorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRotatorArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetRotatorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetRotatorArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRotatorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRotatorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetRotatorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetRotatorMetadata
-// 0x0048 (0x0048 - 0x0000)
-struct RigHierarchy_GetRotatorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2271[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               DefaultValue;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-	struct FRotator                               ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetRotatorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetRotatorMetadata");
-static_assert(sizeof(RigHierarchy_GetRotatorMetadata) == 0x000048, "Wrong size on RigHierarchy_GetRotatorMetadata");
-static_assert(offsetof(RigHierarchy_GetRotatorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetRotatorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetRotatorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorMetadata, DefaultValue) == 0x000018, "Member 'RigHierarchy_GetRotatorMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetRotatorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_GetRotatorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetSelectedKeys
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_GetSelectedKeys final 
-{
-public:
-	ERigElementType                               InTypeFilter;                                      // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2272[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetSelectedKeys) == 0x000008, "Wrong alignment on RigHierarchy_GetSelectedKeys");
-static_assert(sizeof(RigHierarchy_GetSelectedKeys) == 0x000018, "Wrong size on RigHierarchy_GetSelectedKeys");
-static_assert(offsetof(RigHierarchy_GetSelectedKeys, InTypeFilter) == 0x000000, "Member 'RigHierarchy_GetSelectedKeys::InTypeFilter' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetSelectedKeys, ReturnValue) == 0x000008, "Member 'RigHierarchy_GetSelectedKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetTags
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_GetTags final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2273[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class FName>                           ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetTags) == 0x000008, "Wrong alignment on RigHierarchy_GetTags");
-static_assert(sizeof(RigHierarchy_GetTags) == 0x000020, "Wrong size on RigHierarchy_GetTags");
-static_assert(offsetof(RigHierarchy_GetTags, InItem) == 0x000000, "Member 'RigHierarchy_GetTags::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTags, ReturnValue) == 0x000010, "Member 'RigHierarchy_GetTags::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetTransformArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetTransformArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2274[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FTransform>                     ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetTransformArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetTransformArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetTransformArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetTransformArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetTransformArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetTransformArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetTransformArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetTransformMetadata
-// 0x00E0 (0x00E0 - 0x0000)
-struct RigHierarchy_GetTransformMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2275[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FTransform                             DefaultValue;                                      // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FTransform                             ReturnValue;                                       // 0x0080(0x0060)(Parm, OutParm, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetTransformMetadata) == 0x000010, "Wrong alignment on RigHierarchy_GetTransformMetadata");
-static_assert(sizeof(RigHierarchy_GetTransformMetadata) == 0x0000E0, "Wrong size on RigHierarchy_GetTransformMetadata");
-static_assert(offsetof(RigHierarchy_GetTransformMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetTransformMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetTransformMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformMetadata, DefaultValue) == 0x000020, "Member 'RigHierarchy_GetTransformMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetTransformMetadata, ReturnValue) == 0x000080, "Member 'RigHierarchy_GetTransformMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetVectorArrayMetadata
-// 0x0028 (0x0028 - 0x0000)
-struct RigHierarchy_GetVectorArrayMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2276[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<struct FVector>                        ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetVectorArrayMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetVectorArrayMetadata");
-static_assert(sizeof(RigHierarchy_GetVectorArrayMetadata) == 0x000028, "Wrong size on RigHierarchy_GetVectorArrayMetadata");
-static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetVectorArrayMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetVectorArrayMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorArrayMetadata, ReturnValue) == 0x000018, "Member 'RigHierarchy_GetVectorArrayMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.GetVectorMetadata
-// 0x0048 (0x0048 - 0x0000)
-struct RigHierarchy_GetVectorMetadata final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InMetadataName;                                    // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2277[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVector                                DefaultValue;                                      // 0x0018(0x0018)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                ReturnValue;                                       // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_GetVectorMetadata) == 0x000008, "Wrong alignment on RigHierarchy_GetVectorMetadata");
-static_assert(sizeof(RigHierarchy_GetVectorMetadata) == 0x000048, "Wrong size on RigHierarchy_GetVectorMetadata");
-static_assert(offsetof(RigHierarchy_GetVectorMetadata, InItem) == 0x000000, "Member 'RigHierarchy_GetVectorMetadata::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorMetadata, InMetadataName) == 0x00000C, "Member 'RigHierarchy_GetVectorMetadata::InMetadataName' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorMetadata, DefaultValue) == 0x000018, "Member 'RigHierarchy_GetVectorMetadata::DefaultValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_GetVectorMetadata, ReturnValue) == 0x000030, "Member 'RigHierarchy_GetVectorMetadata::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.HasTag
-// 0x0018 (0x0018 - 0x0000)
-struct RigHierarchy_HasTag final 
-{
-public:
-	struct FRigElementKey                         InItem;                                            // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   InTag;                                             // 0x000C(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0014(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2278[0x3];                                     // 0x0015(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_HasTag) == 0x000004, "Wrong alignment on RigHierarchy_HasTag");
-static_assert(sizeof(RigHierarchy_HasTag) == 0x000018, "Wrong size on RigHierarchy_HasTag");
-static_assert(offsetof(RigHierarchy_HasTag, InItem) == 0x000000, "Member 'RigHierarchy_HasTag::InItem' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_HasTag, InTag) == 0x00000C, "Member 'RigHierarchy_HasTag::InTag' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_HasTag, ReturnValue) == 0x000014, "Member 'RigHierarchy_HasTag::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsControllerAvailable
-// 0x0001 (0x0001 - 0x0000)
-struct RigHierarchy_IsControllerAvailable final 
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_IsControllerAvailable) == 0x000001, "Wrong alignment on RigHierarchy_IsControllerAvailable");
-static_assert(sizeof(RigHierarchy_IsControllerAvailable) == 0x000001, "Wrong size on RigHierarchy_IsControllerAvailable");
-static_assert(offsetof(RigHierarchy_IsControllerAvailable, ReturnValue) == 0x000000, "Member 'RigHierarchy_IsControllerAvailable::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsCurveValueSet
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_IsCurveValueSet final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2279[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsCurveValueSet) == 0x000004, "Wrong alignment on RigHierarchy_IsCurveValueSet");
-static_assert(sizeof(RigHierarchy_IsCurveValueSet) == 0x000010, "Wrong size on RigHierarchy_IsCurveValueSet");
-static_assert(offsetof(RigHierarchy_IsCurveValueSet, InKey) == 0x000000, "Member 'RigHierarchy_IsCurveValueSet::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsCurveValueSet, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsCurveValueSet::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsCurveValueSetByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_IsCurveValueSetByIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227A[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsCurveValueSetByIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsCurveValueSetByIndex");
-static_assert(sizeof(RigHierarchy_IsCurveValueSetByIndex) == 0x000008, "Wrong size on RigHierarchy_IsCurveValueSetByIndex");
-static_assert(offsetof(RigHierarchy_IsCurveValueSetByIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_IsCurveValueSetByIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsCurveValueSetByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsCurveValueSetByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsParentedTo
-// 0x001C (0x001C - 0x0000)
-struct RigHierarchy_IsParentedTo final 
-{
-public:
-	struct FRigElementKey                         InChild;                                           // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigElementKey                         InParent;                                          // 0x000C(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227B[0x3];                                     // 0x0019(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsParentedTo) == 0x000004, "Wrong alignment on RigHierarchy_IsParentedTo");
-static_assert(sizeof(RigHierarchy_IsParentedTo) == 0x00001C, "Wrong size on RigHierarchy_IsParentedTo");
-static_assert(offsetof(RigHierarchy_IsParentedTo, InChild) == 0x000000, "Member 'RigHierarchy_IsParentedTo::InChild' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsParentedTo, InParent) == 0x00000C, "Member 'RigHierarchy_IsParentedTo::InParent' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsParentedTo, ReturnValue) == 0x000018, "Member 'RigHierarchy_IsParentedTo::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsProcedural
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_IsProcedural final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227C[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsProcedural) == 0x000004, "Wrong alignment on RigHierarchy_IsProcedural");
-static_assert(sizeof(RigHierarchy_IsProcedural) == 0x000010, "Wrong size on RigHierarchy_IsProcedural");
-static_assert(offsetof(RigHierarchy_IsProcedural, InKey) == 0x000000, "Member 'RigHierarchy_IsProcedural::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsProcedural, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsProcedural::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsSelected
-// 0x0010 (0x0010 - 0x0000)
-struct RigHierarchy_IsSelected final 
-{
-public:
-	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227D[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsSelected) == 0x000004, "Wrong alignment on RigHierarchy_IsSelected");
-static_assert(sizeof(RigHierarchy_IsSelected) == 0x000010, "Wrong size on RigHierarchy_IsSelected");
-static_assert(offsetof(RigHierarchy_IsSelected, InKey) == 0x000000, "Member 'RigHierarchy_IsSelected::InKey' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsSelected, ReturnValue) == 0x00000C, "Member 'RigHierarchy_IsSelected::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsSelectedByIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_IsSelectedByIndex final 
-{
-public:
-	int32                                         InIndex;                                           // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227E[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsSelectedByIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsSelectedByIndex");
-static_assert(sizeof(RigHierarchy_IsSelectedByIndex) == 0x000008, "Wrong size on RigHierarchy_IsSelectedByIndex");
-static_assert(offsetof(RigHierarchy_IsSelectedByIndex, InIndex) == 0x000000, "Member 'RigHierarchy_IsSelectedByIndex::InIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsSelectedByIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsSelectedByIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.IsValidIndex
-// 0x0008 (0x0008 - 0x0000)
-struct RigHierarchy_IsValidIndex final 
-{
-public:
-	int32                                         InElementIndex;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_227F[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(RigHierarchy_IsValidIndex) == 0x000004, "Wrong alignment on RigHierarchy_IsValidIndex");
-static_assert(sizeof(RigHierarchy_IsValidIndex) == 0x000008, "Wrong size on RigHierarchy_IsValidIndex");
-static_assert(offsetof(RigHierarchy_IsValidIndex, InElementIndex) == 0x000000, "Member 'RigHierarchy_IsValidIndex::InElementIndex' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_IsValidIndex, ReturnValue) == 0x000004, "Member 'RigHierarchy_IsValidIndex::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.Num
-// 0x0004 (0x0004 - 0x0000)
-struct RigHierarchy_Num final 
-{
-public:
-	int32                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_Num) == 0x000004, "Wrong alignment on RigHierarchy_Num");
-static_assert(sizeof(RigHierarchy_Num) == 0x000004, "Wrong size on RigHierarchy_Num");
-static_assert(offsetof(RigHierarchy_Num, ReturnValue) == 0x000000, "Member 'RigHierarchy_Num::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.RigHierarchy.SortKeys
-// 0x0020 (0x0020 - 0x0000)
-struct RigHierarchy_SortKeys final 
-{
-public:
-	TArray<struct FRigElementKey>                 InKeys;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
-	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(RigHierarchy_SortKeys) == 0x000008, "Wrong alignment on RigHierarchy_SortKeys");
-static_assert(sizeof(RigHierarchy_SortKeys) == 0x000020, "Wrong size on RigHierarchy_SortKeys");
-static_assert(offsetof(RigHierarchy_SortKeys, InKeys) == 0x000000, "Member 'RigHierarchy_SortKeys::InKeys' has a wrong offset!");
-static_assert(offsetof(RigHierarchy_SortKeys, ReturnValue) == 0x000010, "Member 'RigHierarchy_SortKeys::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.FindControlRigs
-// 0x0020 (0x0020 - 0x0000)
-struct ControlRig_FindControlRigs final 
-{
-public:
-	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TSubclassOf<class UControlRig>                OptionalClass;                                     // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	TArray<class UControlRig*>                    ReturnValue;                                       // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_FindControlRigs) == 0x000008, "Wrong alignment on ControlRig_FindControlRigs");
-static_assert(sizeof(ControlRig_FindControlRigs) == 0x000020, "Wrong size on ControlRig_FindControlRigs");
-static_assert(offsetof(ControlRig_FindControlRigs, Param_Outer) == 0x000000, "Member 'ControlRig_FindControlRigs::Param_Outer' has a wrong offset!");
-static_assert(offsetof(ControlRig_FindControlRigs, OptionalClass) == 0x000008, "Member 'ControlRig_FindControlRigs::OptionalClass' has a wrong offset!");
-static_assert(offsetof(ControlRig_FindControlRigs, ReturnValue) == 0x000010, "Member 'ControlRig_FindControlRigs::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.ClearControlSelection
-// 0x0001 (0x0001 - 0x0000)
-struct ControlRig_ClearControlSelection final 
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_ClearControlSelection) == 0x000001, "Wrong alignment on ControlRig_ClearControlSelection");
-static_assert(sizeof(ControlRig_ClearControlSelection) == 0x000001, "Wrong size on ControlRig_ClearControlSelection");
-static_assert(offsetof(ControlRig_ClearControlSelection, ReturnValue) == 0x000000, "Member 'ControlRig_ClearControlSelection::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.Execute
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_Execute final 
-{
-public:
-	EControlRigState                              State;                                             // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class FName                                   InEventName;                                       // 0x0004(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228B[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_Execute) == 0x000004, "Wrong alignment on ControlRig_Execute");
-static_assert(sizeof(ControlRig_Execute) == 0x000010, "Wrong size on ControlRig_Execute");
-static_assert(offsetof(ControlRig_Execute, State) == 0x000000, "Member 'ControlRig_Execute::State' has a wrong offset!");
-static_assert(offsetof(ControlRig_Execute, InEventName) == 0x000004, "Member 'ControlRig_Execute::InEventName' has a wrong offset!");
-static_assert(offsetof(ControlRig_Execute, ReturnValue) == 0x00000C, "Member 'ControlRig_Execute::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.ExecuteEvent
-// 0x000C (0x000C - 0x0000)
-struct ControlRig_ExecuteEvent final 
-{
-public:
-	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228C[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_ExecuteEvent) == 0x000004, "Wrong alignment on ControlRig_ExecuteEvent");
-static_assert(sizeof(ControlRig_ExecuteEvent) == 0x00000C, "Wrong size on ControlRig_ExecuteEvent");
-static_assert(offsetof(ControlRig_ExecuteEvent, InEventName) == 0x000000, "Member 'ControlRig_ExecuteEvent::InEventName' has a wrong offset!");
-static_assert(offsetof(ControlRig_ExecuteEvent, ReturnValue) == 0x000008, "Member 'ControlRig_ExecuteEvent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetHierarchy
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_GetHierarchy final 
-{
-public:
-	class URigHierarchy*                          ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetHierarchy) == 0x000008, "Wrong alignment on ControlRig_GetHierarchy");
-static_assert(sizeof(ControlRig_GetHierarchy) == 0x000008, "Wrong size on ControlRig_GetHierarchy");
-static_assert(offsetof(ControlRig_GetHierarchy, ReturnValue) == 0x000000, "Member 'ControlRig_GetHierarchy::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetVM
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_GetVM final 
-{
-public:
-	class URigVM*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetVM) == 0x000008, "Wrong alignment on ControlRig_GetVM");
-static_assert(sizeof(ControlRig_GetVM) == 0x000008, "Wrong size on ControlRig_GetVM");
-static_assert(offsetof(ControlRig_GetVM, ReturnValue) == 0x000000, "Member 'ControlRig_GetVM::ReturnValue' has a wrong offset!");
-
-// SparseDelegateFunction ControlRig.ControlRig.OnControlSelectedBP__DelegateSignature
-// 0x0A50 (0x0A50 - 0x0000)
-struct ControlRig_OnControlSelectedBP__DelegateSignature final 
-{
-public:
-	class UControlRig*                            Rig;                                               // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228D[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlElement                     Control;                                           // 0x0010(0x0A30)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
-	bool                                          bSelected;                                         // 0x0A40(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228E[0xF];                                     // 0x0A41(0x000F)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_OnControlSelectedBP__DelegateSignature) == 0x000010, "Wrong alignment on ControlRig_OnControlSelectedBP__DelegateSignature");
-static_assert(sizeof(ControlRig_OnControlSelectedBP__DelegateSignature) == 0x000A50, "Wrong size on ControlRig_OnControlSelectedBP__DelegateSignature");
-static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, Rig) == 0x000000, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::Rig' has a wrong offset!");
-static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, Control) == 0x000010, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::Control' has a wrong offset!");
-static_assert(offsetof(ControlRig_OnControlSelectedBP__DelegateSignature, bSelected) == 0x000A40, "Member 'ControlRig_OnControlSelectedBP__DelegateSignature::bSelected' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SelectControl
-// 0x000C (0x000C - 0x0000)
-struct ControlRig_SelectControl final 
-{
-public:
-	class FName                                   InControlName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSelect;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_228F[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_SelectControl) == 0x000004, "Wrong alignment on ControlRig_SelectControl");
-static_assert(sizeof(ControlRig_SelectControl) == 0x00000C, "Wrong size on ControlRig_SelectControl");
-static_assert(offsetof(ControlRig_SelectControl, InControlName) == 0x000000, "Member 'ControlRig_SelectControl::InControlName' has a wrong offset!");
-static_assert(offsetof(ControlRig_SelectControl, bSelect) == 0x000008, "Member 'ControlRig_SelectControl::bSelect' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetAbsoluteAndDeltaTime
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_SetAbsoluteAndDeltaTime final 
-{
-public:
-	float                                         InAbsoluteTime;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         InDeltaTime;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_SetAbsoluteAndDeltaTime) == 0x000004, "Wrong alignment on ControlRig_SetAbsoluteAndDeltaTime");
-static_assert(sizeof(ControlRig_SetAbsoluteAndDeltaTime) == 0x000008, "Wrong size on ControlRig_SetAbsoluteAndDeltaTime");
-static_assert(offsetof(ControlRig_SetAbsoluteAndDeltaTime, InAbsoluteTime) == 0x000000, "Member 'ControlRig_SetAbsoluteAndDeltaTime::InAbsoluteTime' has a wrong offset!");
-static_assert(offsetof(ControlRig_SetAbsoluteAndDeltaTime, InDeltaTime) == 0x000004, "Member 'ControlRig_SetAbsoluteAndDeltaTime::InDeltaTime' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetAbsoluteTime
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_SetAbsoluteTime final 
-{
-public:
-	float                                         InAbsoluteTime;                                    // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          InSetDeltaTimeZero;                                // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2290[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_SetAbsoluteTime) == 0x000004, "Wrong alignment on ControlRig_SetAbsoluteTime");
-static_assert(sizeof(ControlRig_SetAbsoluteTime) == 0x000008, "Wrong size on ControlRig_SetAbsoluteTime");
-static_assert(offsetof(ControlRig_SetAbsoluteTime, InAbsoluteTime) == 0x000000, "Member 'ControlRig_SetAbsoluteTime::InAbsoluteTime' has a wrong offset!");
-static_assert(offsetof(ControlRig_SetAbsoluteTime, InSetDeltaTimeZero) == 0x000004, "Member 'ControlRig_SetAbsoluteTime::InSetDeltaTimeZero' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetDeltaTime
-// 0x0004 (0x0004 - 0x0000)
-struct ControlRig_SetDeltaTime final 
-{
-public:
-	float                                         InDeltaTime;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_SetDeltaTime) == 0x000004, "Wrong alignment on ControlRig_SetDeltaTime");
-static_assert(sizeof(ControlRig_SetDeltaTime) == 0x000004, "Wrong size on ControlRig_SetDeltaTime");
-static_assert(offsetof(ControlRig_SetDeltaTime, InDeltaTime) == 0x000000, "Member 'ControlRig_SetDeltaTime::InDeltaTime' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetFramesPerSecond
-// 0x0004 (0x0004 - 0x0000)
-struct ControlRig_SetFramesPerSecond final 
-{
-public:
-	float                                         InFramesPerSecond;                                 // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_SetFramesPerSecond) == 0x000004, "Wrong alignment on ControlRig_SetFramesPerSecond");
-static_assert(sizeof(ControlRig_SetFramesPerSecond) == 0x000004, "Wrong size on ControlRig_SetFramesPerSecond");
-static_assert(offsetof(ControlRig_SetFramesPerSecond, InFramesPerSecond) == 0x000000, "Member 'ControlRig_SetFramesPerSecond::InFramesPerSecond' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetInteractionRig
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_SetInteractionRig final 
-{
-public:
-	class UControlRig*                            InInteractionRig;                                  // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_SetInteractionRig) == 0x000008, "Wrong alignment on ControlRig_SetInteractionRig");
-static_assert(sizeof(ControlRig_SetInteractionRig) == 0x000008, "Wrong size on ControlRig_SetInteractionRig");
-static_assert(offsetof(ControlRig_SetInteractionRig, InInteractionRig) == 0x000000, "Member 'ControlRig_SetInteractionRig::InInteractionRig' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetInteractionRigClass
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_SetInteractionRigClass final 
-{
-public:
-	TSubclassOf<class UControlRig>                InInteractionRigClass;                             // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_SetInteractionRigClass) == 0x000008, "Wrong alignment on ControlRig_SetInteractionRigClass");
-static_assert(sizeof(ControlRig_SetInteractionRigClass) == 0x000008, "Wrong size on ControlRig_SetInteractionRigClass");
-static_assert(offsetof(ControlRig_SetInteractionRigClass, InInteractionRigClass) == 0x000000, "Member 'ControlRig_SetInteractionRigClass::InInteractionRigClass' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SetVariableFromString
-// 0x0020 (0x0020 - 0x0000)
-struct ControlRig_SetVariableFromString final 
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 InValue;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2291[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_SetVariableFromString) == 0x000008, "Wrong alignment on ControlRig_SetVariableFromString");
-static_assert(sizeof(ControlRig_SetVariableFromString) == 0x000020, "Wrong size on ControlRig_SetVariableFromString");
-static_assert(offsetof(ControlRig_SetVariableFromString, InVariableName) == 0x000000, "Member 'ControlRig_SetVariableFromString::InVariableName' has a wrong offset!");
-static_assert(offsetof(ControlRig_SetVariableFromString, InValue) == 0x000008, "Member 'ControlRig_SetVariableFromString::InValue' has a wrong offset!");
-static_assert(offsetof(ControlRig_SetVariableFromString, ReturnValue) == 0x000018, "Member 'ControlRig_SetVariableFromString::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.CanExecute
-// 0x0001 (0x0001 - 0x0000)
-struct ControlRig_CanExecute final 
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_CanExecute) == 0x000001, "Wrong alignment on ControlRig_CanExecute");
-static_assert(sizeof(ControlRig_CanExecute) == 0x000001, "Wrong size on ControlRig_CanExecute");
-static_assert(offsetof(ControlRig_CanExecute, ReturnValue) == 0x000000, "Member 'ControlRig_CanExecute::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.ContainsEvent
-// 0x000C (0x000C - 0x0000)
-struct ControlRig_ContainsEvent final 
-{
-public:
-	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2292[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_ContainsEvent) == 0x000004, "Wrong alignment on ControlRig_ContainsEvent");
-static_assert(sizeof(ControlRig_ContainsEvent) == 0x00000C, "Wrong size on ControlRig_ContainsEvent");
-static_assert(offsetof(ControlRig_ContainsEvent, InEventName) == 0x000000, "Member 'ControlRig_ContainsEvent::InEventName' has a wrong offset!");
-static_assert(offsetof(ControlRig_ContainsEvent, ReturnValue) == 0x000008, "Member 'ControlRig_ContainsEvent::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.CreateTransformableControlHandle
-// 0x0018 (0x0018 - 0x0000)
-struct ControlRig_CreateTransformableControlHandle final 
-{
-public:
-	class UObject*                                Param_Outer;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ControlName;                                       // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UTransformableControlHandle*            ReturnValue;                                       // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_CreateTransformableControlHandle) == 0x000008, "Wrong alignment on ControlRig_CreateTransformableControlHandle");
-static_assert(sizeof(ControlRig_CreateTransformableControlHandle) == 0x000018, "Wrong size on ControlRig_CreateTransformableControlHandle");
-static_assert(offsetof(ControlRig_CreateTransformableControlHandle, Param_Outer) == 0x000000, "Member 'ControlRig_CreateTransformableControlHandle::Param_Outer' has a wrong offset!");
-static_assert(offsetof(ControlRig_CreateTransformableControlHandle, ControlName) == 0x000008, "Member 'ControlRig_CreateTransformableControlHandle::ControlName' has a wrong offset!");
-static_assert(offsetof(ControlRig_CreateTransformableControlHandle, ReturnValue) == 0x000010, "Member 'ControlRig_CreateTransformableControlHandle::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.CurrentControlSelection
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_CurrentControlSelection final 
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_CurrentControlSelection) == 0x000008, "Wrong alignment on ControlRig_CurrentControlSelection");
-static_assert(sizeof(ControlRig_CurrentControlSelection) == 0x000010, "Wrong size on ControlRig_CurrentControlSelection");
-static_assert(offsetof(ControlRig_CurrentControlSelection, ReturnValue) == 0x000000, "Member 'ControlRig_CurrentControlSelection::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetAbsoluteTime
-// 0x0004 (0x0004 - 0x0000)
-struct ControlRig_GetAbsoluteTime final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetAbsoluteTime) == 0x000004, "Wrong alignment on ControlRig_GetAbsoluteTime");
-static_assert(sizeof(ControlRig_GetAbsoluteTime) == 0x000004, "Wrong size on ControlRig_GetAbsoluteTime");
-static_assert(offsetof(ControlRig_GetAbsoluteTime, ReturnValue) == 0x000000, "Member 'ControlRig_GetAbsoluteTime::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetCurrentFramesPerSecond
-// 0x0004 (0x0004 - 0x0000)
-struct ControlRig_GetCurrentFramesPerSecond final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetCurrentFramesPerSecond) == 0x000004, "Wrong alignment on ControlRig_GetCurrentFramesPerSecond");
-static_assert(sizeof(ControlRig_GetCurrentFramesPerSecond) == 0x000004, "Wrong size on ControlRig_GetCurrentFramesPerSecond");
-static_assert(offsetof(ControlRig_GetCurrentFramesPerSecond, ReturnValue) == 0x000000, "Member 'ControlRig_GetCurrentFramesPerSecond::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetEvents
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_GetEvents final 
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetEvents) == 0x000008, "Wrong alignment on ControlRig_GetEvents");
-static_assert(sizeof(ControlRig_GetEvents) == 0x000010, "Wrong size on ControlRig_GetEvents");
-static_assert(offsetof(ControlRig_GetEvents, ReturnValue) == 0x000000, "Member 'ControlRig_GetEvents::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetHostingActor
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_GetHostingActor final 
-{
-public:
-	class AActor*                                 ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetHostingActor) == 0x000008, "Wrong alignment on ControlRig_GetHostingActor");
-static_assert(sizeof(ControlRig_GetHostingActor) == 0x000008, "Wrong size on ControlRig_GetHostingActor");
-static_assert(offsetof(ControlRig_GetHostingActor, ReturnValue) == 0x000000, "Member 'ControlRig_GetHostingActor::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetInteractionRig
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_GetInteractionRig final 
-{
-public:
-	class UControlRig*                            ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetInteractionRig) == 0x000008, "Wrong alignment on ControlRig_GetInteractionRig");
-static_assert(sizeof(ControlRig_GetInteractionRig) == 0x000008, "Wrong size on ControlRig_GetInteractionRig");
-static_assert(offsetof(ControlRig_GetInteractionRig, ReturnValue) == 0x000000, "Member 'ControlRig_GetInteractionRig::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetInteractionRigClass
-// 0x0008 (0x0008 - 0x0000)
-struct ControlRig_GetInteractionRigClass final 
-{
-public:
-	TSubclassOf<class UControlRig>                ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetInteractionRigClass) == 0x000008, "Wrong alignment on ControlRig_GetInteractionRigClass");
-static_assert(sizeof(ControlRig_GetInteractionRigClass) == 0x000008, "Wrong size on ControlRig_GetInteractionRigClass");
-static_assert(offsetof(ControlRig_GetInteractionRigClass, ReturnValue) == 0x000000, "Member 'ControlRig_GetInteractionRigClass::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetScriptAccessibleVariables
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_GetScriptAccessibleVariables final 
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetScriptAccessibleVariables) == 0x000008, "Wrong alignment on ControlRig_GetScriptAccessibleVariables");
-static_assert(sizeof(ControlRig_GetScriptAccessibleVariables) == 0x000010, "Wrong size on ControlRig_GetScriptAccessibleVariables");
-static_assert(offsetof(ControlRig_GetScriptAccessibleVariables, ReturnValue) == 0x000000, "Member 'ControlRig_GetScriptAccessibleVariables::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetSupportedEvents
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_GetSupportedEvents final 
-{
-public:
-	TArray<class FName>                           ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetSupportedEvents) == 0x000008, "Wrong alignment on ControlRig_GetSupportedEvents");
-static_assert(sizeof(ControlRig_GetSupportedEvents) == 0x000010, "Wrong size on ControlRig_GetSupportedEvents");
-static_assert(offsetof(ControlRig_GetSupportedEvents, ReturnValue) == 0x000000, "Member 'ControlRig_GetSupportedEvents::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetVariableAsString
-// 0x0018 (0x0018 - 0x0000)
-struct ControlRig_GetVariableAsString final 
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FString                                 ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetVariableAsString) == 0x000008, "Wrong alignment on ControlRig_GetVariableAsString");
-static_assert(sizeof(ControlRig_GetVariableAsString) == 0x000018, "Wrong size on ControlRig_GetVariableAsString");
-static_assert(offsetof(ControlRig_GetVariableAsString, InVariableName) == 0x000000, "Member 'ControlRig_GetVariableAsString::InVariableName' has a wrong offset!");
-static_assert(offsetof(ControlRig_GetVariableAsString, ReturnValue) == 0x000008, "Member 'ControlRig_GetVariableAsString::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.GetVariableType
-// 0x0010 (0x0010 - 0x0000)
-struct ControlRig_GetVariableType final 
-{
-public:
-	class FName                                   InVariableName;                                    // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class FName                                   ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(ControlRig_GetVariableType) == 0x000004, "Wrong alignment on ControlRig_GetVariableType");
-static_assert(sizeof(ControlRig_GetVariableType) == 0x000010, "Wrong size on ControlRig_GetVariableType");
-static_assert(offsetof(ControlRig_GetVariableType, InVariableName) == 0x000000, "Member 'ControlRig_GetVariableType::InVariableName' has a wrong offset!");
-static_assert(offsetof(ControlRig_GetVariableType, ReturnValue) == 0x000008, "Member 'ControlRig_GetVariableType::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.IsControlSelected
-// 0x000C (0x000C - 0x0000)
-struct ControlRig_IsControlSelected final 
-{
-public:
-	class FName                                   InControlName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2293[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_IsControlSelected) == 0x000004, "Wrong alignment on ControlRig_IsControlSelected");
-static_assert(sizeof(ControlRig_IsControlSelected) == 0x00000C, "Wrong size on ControlRig_IsControlSelected");
-static_assert(offsetof(ControlRig_IsControlSelected, InControlName) == 0x000000, "Member 'ControlRig_IsControlSelected::InControlName' has a wrong offset!");
-static_assert(offsetof(ControlRig_IsControlSelected, ReturnValue) == 0x000008, "Member 'ControlRig_IsControlSelected::ReturnValue' has a wrong offset!");
-
-// Function ControlRig.ControlRig.SupportsEvent
-// 0x000C (0x000C - 0x0000)
-struct ControlRig_SupportsEvent final 
-{
-public:
-	class FName                                   InEventName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2294[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(ControlRig_SupportsEvent) == 0x000004, "Wrong alignment on ControlRig_SupportsEvent");
-static_assert(sizeof(ControlRig_SupportsEvent) == 0x00000C, "Wrong size on ControlRig_SupportsEvent");
-static_assert(offsetof(ControlRig_SupportsEvent, InEventName) == 0x000000, "Member 'ControlRig_SupportsEvent::InEventName' has a wrong offset!");
-static_assert(offsetof(ControlRig_SupportsEvent, ReturnValue) == 0x000008, "Member 'ControlRig_SupportsEvent::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.ControlRigShapeActor.OnEnabledChanged
 // 0x0001 (0x0001 - 0x0000)
@@ -3566,28 +3523,138 @@ static_assert(alignof(ControlRigShapeActor_IsSelectedInEditor) == 0x000001, "Wro
 static_assert(sizeof(ControlRigShapeActor_IsSelectedInEditor) == 0x000001, "Wrong size on ControlRigShapeActor_IsSelectedInEditor");
 static_assert(offsetof(ControlRigShapeActor_IsSelectedInEditor, ReturnValue) == 0x000000, "Member 'ControlRigShapeActor_IsSelectedInEditor::ReturnValue' has a wrong offset!");
 
+// Function ControlRig.ControlRigTestData.CreateNewAsset
+// 0x0028 (0x0028 - 0x0000)
+struct ControlRigTestData_CreateNewAsset final 
+{
+public:
+	class FString                                 InDesiredPackagePath;                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class FString                                 InBlueprintPathName;                               // 0x0010(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UControlRigTestData*                    ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_CreateNewAsset) == 0x000008, "Wrong alignment on ControlRigTestData_CreateNewAsset");
+static_assert(sizeof(ControlRigTestData_CreateNewAsset) == 0x000028, "Wrong size on ControlRigTestData_CreateNewAsset");
+static_assert(offsetof(ControlRigTestData_CreateNewAsset, InDesiredPackagePath) == 0x000000, "Member 'ControlRigTestData_CreateNewAsset::InDesiredPackagePath' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_CreateNewAsset, InBlueprintPathName) == 0x000010, "Member 'ControlRigTestData_CreateNewAsset::InBlueprintPathName' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_CreateNewAsset, ReturnValue) == 0x000020, "Member 'ControlRigTestData_CreateNewAsset::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.Record
+// 0x0018 (0x0018 - 0x0000)
+struct ControlRigTestData_Record final 
+{
+public:
+	class UControlRig*                            InControlRig;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	double                                        InRecordingDuration;                               // 0x0008(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3798[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ControlRigTestData_Record) == 0x000008, "Wrong alignment on ControlRigTestData_Record");
+static_assert(sizeof(ControlRigTestData_Record) == 0x000018, "Wrong size on ControlRigTestData_Record");
+static_assert(offsetof(ControlRigTestData_Record, InControlRig) == 0x000000, "Member 'ControlRigTestData_Record::InControlRig' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_Record, InRecordingDuration) == 0x000008, "Member 'ControlRigTestData_Record::InRecordingDuration' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_Record, ReturnValue) == 0x000010, "Member 'ControlRigTestData_Record::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.SetupReplay
+// 0x0010 (0x0010 - 0x0000)
+struct ControlRigTestData_SetupReplay final 
+{
+public:
+	class UControlRig*                            InControlRig;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bGroundTruth;                                      // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3799[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(ControlRigTestData_SetupReplay) == 0x000008, "Wrong alignment on ControlRigTestData_SetupReplay");
+static_assert(sizeof(ControlRigTestData_SetupReplay) == 0x000010, "Wrong size on ControlRigTestData_SetupReplay");
+static_assert(offsetof(ControlRigTestData_SetupReplay, InControlRig) == 0x000000, "Member 'ControlRigTestData_SetupReplay::InControlRig' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_SetupReplay, bGroundTruth) == 0x000008, "Member 'ControlRigTestData_SetupReplay::bGroundTruth' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_SetupReplay, ReturnValue) == 0x000009, "Member 'ControlRigTestData_SetupReplay::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.GetFrameIndexForTime
+// 0x0010 (0x0010 - 0x0000)
+struct ControlRigTestData_GetFrameIndexForTime final 
+{
+public:
+	double                                        InSeconds;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bInput;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_379A[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         ReturnValue;                                       // 0x000C(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_GetFrameIndexForTime) == 0x000008, "Wrong alignment on ControlRigTestData_GetFrameIndexForTime");
+static_assert(sizeof(ControlRigTestData_GetFrameIndexForTime) == 0x000010, "Wrong size on ControlRigTestData_GetFrameIndexForTime");
+static_assert(offsetof(ControlRigTestData_GetFrameIndexForTime, InSeconds) == 0x000000, "Member 'ControlRigTestData_GetFrameIndexForTime::InSeconds' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_GetFrameIndexForTime, bInput) == 0x000008, "Member 'ControlRigTestData_GetFrameIndexForTime::bInput' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_GetFrameIndexForTime, ReturnValue) == 0x00000C, "Member 'ControlRigTestData_GetFrameIndexForTime::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.GetPlaybackMode
+// 0x0001 (0x0001 - 0x0000)
+struct ControlRigTestData_GetPlaybackMode final 
+{
+public:
+	EControlRigTestDataPlaybackMode               ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_GetPlaybackMode) == 0x000001, "Wrong alignment on ControlRigTestData_GetPlaybackMode");
+static_assert(sizeof(ControlRigTestData_GetPlaybackMode) == 0x000001, "Wrong size on ControlRigTestData_GetPlaybackMode");
+static_assert(offsetof(ControlRigTestData_GetPlaybackMode, ReturnValue) == 0x000000, "Member 'ControlRigTestData_GetPlaybackMode::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.GetTimeRange
+// 0x0018 (0x0018 - 0x0000)
+struct ControlRigTestData_GetTimeRange final 
+{
+public:
+	bool                                          bInput;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_379B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVector2D                              ReturnValue;                                       // 0x0008(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_GetTimeRange) == 0x000008, "Wrong alignment on ControlRigTestData_GetTimeRange");
+static_assert(sizeof(ControlRigTestData_GetTimeRange) == 0x000018, "Wrong size on ControlRigTestData_GetTimeRange");
+static_assert(offsetof(ControlRigTestData_GetTimeRange, bInput) == 0x000000, "Member 'ControlRigTestData_GetTimeRange::bInput' has a wrong offset!");
+static_assert(offsetof(ControlRigTestData_GetTimeRange, ReturnValue) == 0x000008, "Member 'ControlRigTestData_GetTimeRange::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.IsRecording
+// 0x0001 (0x0001 - 0x0000)
+struct ControlRigTestData_IsRecording final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_IsRecording) == 0x000001, "Wrong alignment on ControlRigTestData_IsRecording");
+static_assert(sizeof(ControlRigTestData_IsRecording) == 0x000001, "Wrong size on ControlRigTestData_IsRecording");
+static_assert(offsetof(ControlRigTestData_IsRecording, ReturnValue) == 0x000000, "Member 'ControlRigTestData_IsRecording::ReturnValue' has a wrong offset!");
+
+// Function ControlRig.ControlRigTestData.IsReplaying
+// 0x0001 (0x0001 - 0x0000)
+struct ControlRigTestData_IsReplaying final 
+{
+public:
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(ControlRigTestData_IsReplaying) == 0x000001, "Wrong alignment on ControlRigTestData_IsReplaying");
+static_assert(sizeof(ControlRigTestData_IsReplaying) == 0x000001, "Wrong size on ControlRigTestData_IsReplaying");
+static_assert(offsetof(ControlRigTestData_IsReplaying, ReturnValue) == 0x000000, "Member 'ControlRigTestData_IsReplaying::ReturnValue' has a wrong offset!");
+
 // Function ControlRig.RigHierarchyController.AddAnimationChannel_ForBlueprint
-// 0x02B0 (0x02B0 - 0x0000)
+// 0x01E0 (0x01E0 - 0x0000)
 struct RigHierarchyController_AddAnimationChannel_ForBlueprint final 
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigElementKey                         InParentControl;                                   // 0x0008(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A0[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    InSettings;                                        // 0x0020(0x0280)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x02A0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommand;                               // 0x02A1(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A1[0x2];                                     // 0x02A2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigElementKey                         ReturnValue;                                       // 0x02A4(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37A1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    InSettings;                                        // 0x0018(0x01B8)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x01D0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommand;                               // 0x01D1(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37A2[0x2];                                     // 0x01D2(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigElementKey                         ReturnValue;                                       // 0x01D4(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(RigHierarchyController_AddAnimationChannel_ForBlueprint) == 0x000010, "Wrong alignment on RigHierarchyController_AddAnimationChannel_ForBlueprint");
-static_assert(sizeof(RigHierarchyController_AddAnimationChannel_ForBlueprint) == 0x0002B0, "Wrong size on RigHierarchyController_AddAnimationChannel_ForBlueprint");
+static_assert(alignof(RigHierarchyController_AddAnimationChannel_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchyController_AddAnimationChannel_ForBlueprint");
+static_assert(sizeof(RigHierarchyController_AddAnimationChannel_ForBlueprint) == 0x0001E0, "Wrong size on RigHierarchyController_AddAnimationChannel_ForBlueprint");
 static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, InName) == 0x000000, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::InName' has a wrong offset!");
 static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, InParentControl) == 0x000008, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::InParentControl' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, InSettings) == 0x000020, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::InSettings' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, bSetupUndo) == 0x0002A0, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, bPrintPythonCommand) == 0x0002A1, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::bPrintPythonCommand' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, ReturnValue) == 0x0002A4, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::ReturnValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, InSettings) == 0x000018, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::InSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, bSetupUndo) == 0x0001D0, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, bPrintPythonCommand) == 0x0001D1, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::bPrintPythonCommand' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddAnimationChannel_ForBlueprint, ReturnValue) == 0x0001D4, "Member 'RigHierarchyController_AddAnimationChannel_ForBlueprint::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.RigHierarchyController.AddBone
 // 0x0090 (0x0090 - 0x0000)
@@ -3596,7 +3663,7 @@ struct RigHierarchyController_AddBone final
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigElementKey                         InParent;                                          // 0x0008(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A2[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37A3[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InTransform;                                       // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTransformInGlobal;                                // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERigBoneType                                  InBoneType;                                        // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -3616,29 +3683,30 @@ static_assert(offsetof(RigHierarchyController_AddBone, bPrintPythonCommand) == 0
 static_assert(offsetof(RigHierarchyController_AddBone, ReturnValue) == 0x000084, "Member 'RigHierarchyController_AddBone::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.RigHierarchyController.AddControl_ForBlueprint
-// 0x03A0 (0x03A0 - 0x0000)
+// 0x0268 (0x0268 - 0x0000)
 struct RigHierarchyController_AddControl_ForBlueprint final 
 {
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigElementKey                         InParent;                                          // 0x0008(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A3[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    InSettings;                                        // 0x0020(0x0280)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FRigControlValue                       InValue;                                           // 0x02A0(0x00F0)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0390(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bPrintPythonCommand;                               // 0x0391(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A4[0x2];                                     // 0x0392(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigElementKey                         ReturnValue;                                       // 0x0394(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37A4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    InSettings;                                        // 0x0018(0x01B8)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FRigControlValue                       InValue;                                           // 0x01D0(0x0084)(Parm, NoDestructor, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0254(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommand;                               // 0x0255(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37A5[0x2];                                     // 0x0256(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigElementKey                         ReturnValue;                                       // 0x0258(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37A6[0x4];                                     // 0x0264(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(RigHierarchyController_AddControl_ForBlueprint) == 0x000010, "Wrong alignment on RigHierarchyController_AddControl_ForBlueprint");
-static_assert(sizeof(RigHierarchyController_AddControl_ForBlueprint) == 0x0003A0, "Wrong size on RigHierarchyController_AddControl_ForBlueprint");
+static_assert(alignof(RigHierarchyController_AddControl_ForBlueprint) == 0x000008, "Wrong alignment on RigHierarchyController_AddControl_ForBlueprint");
+static_assert(sizeof(RigHierarchyController_AddControl_ForBlueprint) == 0x000268, "Wrong size on RigHierarchyController_AddControl_ForBlueprint");
 static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InName) == 0x000000, "Member 'RigHierarchyController_AddControl_ForBlueprint::InName' has a wrong offset!");
 static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InParent) == 0x000008, "Member 'RigHierarchyController_AddControl_ForBlueprint::InParent' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InSettings) == 0x000020, "Member 'RigHierarchyController_AddControl_ForBlueprint::InSettings' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InValue) == 0x0002A0, "Member 'RigHierarchyController_AddControl_ForBlueprint::InValue' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, bSetupUndo) == 0x000390, "Member 'RigHierarchyController_AddControl_ForBlueprint::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, bPrintPythonCommand) == 0x000391, "Member 'RigHierarchyController_AddControl_ForBlueprint::bPrintPythonCommand' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, ReturnValue) == 0x000394, "Member 'RigHierarchyController_AddControl_ForBlueprint::ReturnValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InSettings) == 0x000018, "Member 'RigHierarchyController_AddControl_ForBlueprint::InSettings' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, InValue) == 0x0001D0, "Member 'RigHierarchyController_AddControl_ForBlueprint::InValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, bSetupUndo) == 0x000254, "Member 'RigHierarchyController_AddControl_ForBlueprint::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, bPrintPythonCommand) == 0x000255, "Member 'RigHierarchyController_AddControl_ForBlueprint::bPrintPythonCommand' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_AddControl_ForBlueprint, ReturnValue) == 0x000258, "Member 'RigHierarchyController_AddControl_ForBlueprint::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.RigHierarchyController.AddCurve
 // 0x001C (0x001C - 0x0000)
@@ -3649,7 +3717,7 @@ public:
 	float                                         InValue;                                           // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A5[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37A7[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigElementKey                         ReturnValue;                                       // 0x0010(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_AddCurve) == 0x000004, "Wrong alignment on RigHierarchyController_AddCurve");
@@ -3667,12 +3735,12 @@ struct RigHierarchyController_AddNull final
 public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigElementKey                         InParent;                                          // 0x0008(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A6[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37A8[0xC];                                     // 0x0014(0x000C)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InTransform;                                       // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bTransformInGlobal;                                // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0082(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A7[0x1];                                     // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37A9[0x1];                                     // 0x0083(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigElementKey                         ReturnValue;                                       // 0x0084(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_AddNull) == 0x000010, "Wrong alignment on RigHierarchyController_AddNull");
@@ -3696,7 +3764,7 @@ public:
 	bool                                          bMaintainGlobalTransform;                          // 0x001C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x001D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x001E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A8[0x1];                                     // 0x001F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AA[0x1];                                     // 0x001F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigHierarchyController_AddParent) == 0x000004, "Wrong alignment on RigHierarchyController_AddParent");
 static_assert(sizeof(RigHierarchyController_AddParent) == 0x000020, "Wrong size on RigHierarchyController_AddParent");
@@ -3715,11 +3783,11 @@ public:
 	class FName                                   InName;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigElementKey                         InParent;                                          // 0x0008(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FRigRigidBodySettings                  InSettings;                                        // 0x0014(0x0004)(Parm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22A9[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AB[0x8];                                     // 0x0018(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTransform                             InLocalTransform;                                  // 0x0020(0x0060)(Parm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0080(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0081(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AA[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AC[0x2];                                     // 0x0082(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigElementKey                         ReturnValue;                                       // 0x0084(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_AddRigidBody) == 0x000010, "Wrong alignment on RigHierarchyController_AddRigidBody");
@@ -3750,7 +3818,7 @@ struct RigHierarchyController_DeselectElement final
 public:
 	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AB[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AD[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigHierarchyController_DeselectElement) == 0x000004, "Wrong alignment on RigHierarchyController_DeselectElement");
 static_assert(sizeof(RigHierarchyController_DeselectElement) == 0x000010, "Wrong size on RigHierarchyController_DeselectElement");
@@ -3766,7 +3834,7 @@ public:
 	bool                                          bSelectNewElements;                                // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommands;                              // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AC[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AE[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_DuplicateElements) == 0x000008, "Wrong alignment on RigHierarchyController_DuplicateElements");
@@ -3789,7 +3857,7 @@ public:
 	bool                                          bSelectBones;                                      // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0013(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AD[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37AF[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_ImportBones) == 0x000008, "Wrong alignment on RigHierarchyController_ImportBones");
@@ -3813,7 +3881,7 @@ public:
 	bool                                          bSelectCurves;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AE[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B0[0x5];                                     // 0x0013(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_ImportCurves) == 0x000008, "Wrong alignment on RigHierarchyController_ImportCurves");
@@ -3835,7 +3903,7 @@ public:
 	bool                                          bSelectNewElements;                                // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0012(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommands;                              // 0x0013(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22AF[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B1[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0018(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_ImportFromText) == 0x000008, "Wrong alignment on RigHierarchyController_ImportFromText");
@@ -3853,11 +3921,11 @@ struct RigHierarchyController_MirrorElements final
 {
 public:
 	TArray<struct FRigElementKey>                 InKeys;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
-	struct FRigMirrorSettings                     InSettings;                                        // 0x0010(0x0028)(Parm, NativeAccessSpecifierPublic)
+	struct FRigVMMirrorSettings                   InSettings;                                        // 0x0010(0x0028)(Parm, NativeAccessSpecifierPublic)
 	bool                                          bSelectNewElements;                                // 0x0038(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0039(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommands;                              // 0x003A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B0[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B2[0x5];                                     // 0x003B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FRigElementKey>                 ReturnValue;                                       // 0x0040(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_MirrorElements) == 0x000008, "Wrong alignment on RigHierarchyController_MirrorElements");
@@ -3897,7 +3965,7 @@ public:
 	bool                                          bSetupUndo;                                        // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B1[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B3[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigHierarchyController_RemoveElement) == 0x000004, "Wrong alignment on RigHierarchyController_RemoveElement");
 static_assert(sizeof(RigHierarchyController_RemoveElement) == 0x000010, "Wrong size on RigHierarchyController_RemoveElement");
@@ -3937,7 +4005,7 @@ public:
 	bool                                          bSetupUndo;                                        // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClearSelection;                                   // 0x0016(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B2[0x1];                                     // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B4[0x1];                                     // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FRigElementKey                         ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_RenameElement) == 0x000004, "Wrong alignment on RigHierarchyController_RenameElement");
@@ -3949,6 +4017,26 @@ static_assert(offsetof(RigHierarchyController_RenameElement, bPrintPythonCommand
 static_assert(offsetof(RigHierarchyController_RenameElement, bClearSelection) == 0x000016, "Member 'RigHierarchyController_RenameElement::bClearSelection' has a wrong offset!");
 static_assert(offsetof(RigHierarchyController_RenameElement, ReturnValue) == 0x000018, "Member 'RigHierarchyController_RenameElement::ReturnValue' has a wrong offset!");
 
+// Function ControlRig.RigHierarchyController.ReorderElement
+// 0x0014 (0x0014 - 0x0000)
+struct RigHierarchyController_ReorderElement final 
+{
+public:
+	struct FRigElementKey                         InElement;                                         // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	int32                                         InIndex;                                           // 0x000C(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bPrintPythonCommand;                               // 0x0011(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x0012(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37B5[0x1];                                     // 0x0013(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(RigHierarchyController_ReorderElement) == 0x000004, "Wrong alignment on RigHierarchyController_ReorderElement");
+static_assert(sizeof(RigHierarchyController_ReorderElement) == 0x000014, "Wrong size on RigHierarchyController_ReorderElement");
+static_assert(offsetof(RigHierarchyController_ReorderElement, InElement) == 0x000000, "Member 'RigHierarchyController_ReorderElement::InElement' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_ReorderElement, InIndex) == 0x00000C, "Member 'RigHierarchyController_ReorderElement::InIndex' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_ReorderElement, bSetupUndo) == 0x000010, "Member 'RigHierarchyController_ReorderElement::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_ReorderElement, bPrintPythonCommand) == 0x000011, "Member 'RigHierarchyController_ReorderElement::bPrintPythonCommand' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_ReorderElement, ReturnValue) == 0x000012, "Member 'RigHierarchyController_ReorderElement::ReturnValue' has a wrong offset!");
+
 // Function ControlRig.RigHierarchyController.SelectElement
 // 0x0010 (0x0010 - 0x0000)
 struct RigHierarchyController_SelectElement final 
@@ -3958,7 +4046,7 @@ public:
 	bool                                          bSelect;                                           // 0x000C(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClearSelection;                                   // 0x000D(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000E(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B3[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B6[0x1];                                     // 0x000F(0x0001)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigHierarchyController_SelectElement) == 0x000004, "Wrong alignment on RigHierarchyController_SelectElement");
 static_assert(sizeof(RigHierarchyController_SelectElement) == 0x000010, "Wrong size on RigHierarchyController_SelectElement");
@@ -3977,7 +4065,7 @@ public:
 	bool                                          bRenameElement;                                    // 0x0014(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSetupUndo;                                        // 0x0015(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0016(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B4[0x1];                                     // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B7[0x1];                                     // 0x0017(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   ReturnValue;                                       // 0x0018(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(RigHierarchyController_SetDisplayName) == 0x000004, "Wrong alignment on RigHierarchyController_SetDisplayName");
@@ -4029,7 +4117,7 @@ public:
 	TArray<struct FRigElementKey>                 InKeys;                                            // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bPrintPythonCommand;                               // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0011(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B5[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37B8[0x6];                                     // 0x0012(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(RigHierarchyController_SetSelection) == 0x000008, "Wrong alignment on RigHierarchyController_SetSelection");
 static_assert(sizeof(RigHierarchyController_SetSelection) == 0x000018, "Wrong size on RigHierarchyController_SetSelection");
@@ -4062,16 +4150,16 @@ static_assert(offsetof(RigHierarchyController_ExportToText, InKeys) == 0x000000,
 static_assert(offsetof(RigHierarchyController_ExportToText, ReturnValue) == 0x000010, "Member 'RigHierarchyController_ExportToText::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.RigHierarchyController.GetControlSettings
-// 0x0290 (0x0290 - 0x0000)
+// 0x01C8 (0x01C8 - 0x0000)
 struct RigHierarchyController_GetControlSettings final 
 {
 public:
 	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B6[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    ReturnValue;                                       // 0x0010(0x0280)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37B9[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    ReturnValue;                                       // 0x0010(0x01B8)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(RigHierarchyController_GetControlSettings) == 0x000010, "Wrong alignment on RigHierarchyController_GetControlSettings");
-static_assert(sizeof(RigHierarchyController_GetControlSettings) == 0x000290, "Wrong size on RigHierarchyController_GetControlSettings");
+static_assert(alignof(RigHierarchyController_GetControlSettings) == 0x000008, "Wrong alignment on RigHierarchyController_GetControlSettings");
+static_assert(sizeof(RigHierarchyController_GetControlSettings) == 0x0001C8, "Wrong size on RigHierarchyController_GetControlSettings");
 static_assert(offsetof(RigHierarchyController_GetControlSettings, InKey) == 0x000000, "Member 'RigHierarchyController_GetControlSettings::InKey' has a wrong offset!");
 static_assert(offsetof(RigHierarchyController_GetControlSettings, ReturnValue) == 0x000010, "Member 'RigHierarchyController_GetControlSettings::ReturnValue' has a wrong offset!");
 
@@ -4087,23 +4175,23 @@ static_assert(sizeof(RigHierarchyController_GetHierarchy) == 0x000008, "Wrong si
 static_assert(offsetof(RigHierarchyController_GetHierarchy, ReturnValue) == 0x000000, "Member 'RigHierarchyController_GetHierarchy::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.RigHierarchyController.SetControlSettings
-// 0x02A0 (0x02A0 - 0x0000)
+// 0x01D0 (0x01D0 - 0x0000)
 struct RigHierarchyController_SetControlSettings final 
 {
 public:
 	struct FRigElementKey                         InKey;                                             // 0x0000(0x000C)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B7[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRigControlSettings                    InSettings;                                        // 0x0010(0x0280)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bSetupUndo;                                        // 0x0290(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          ReturnValue;                                       // 0x0291(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22B8[0xE];                                     // 0x0292(0x000E)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37BA[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRigControlSettings                    InSettings;                                        // 0x0010(0x01B8)(Parm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bSetupUndo;                                        // 0x01C8(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          ReturnValue;                                       // 0x01C9(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_37BB[0x6];                                     // 0x01CA(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
-static_assert(alignof(RigHierarchyController_SetControlSettings) == 0x000010, "Wrong alignment on RigHierarchyController_SetControlSettings");
-static_assert(sizeof(RigHierarchyController_SetControlSettings) == 0x0002A0, "Wrong size on RigHierarchyController_SetControlSettings");
+static_assert(alignof(RigHierarchyController_SetControlSettings) == 0x000008, "Wrong alignment on RigHierarchyController_SetControlSettings");
+static_assert(sizeof(RigHierarchyController_SetControlSettings) == 0x0001D0, "Wrong size on RigHierarchyController_SetControlSettings");
 static_assert(offsetof(RigHierarchyController_SetControlSettings, InKey) == 0x000000, "Member 'RigHierarchyController_SetControlSettings::InKey' has a wrong offset!");
 static_assert(offsetof(RigHierarchyController_SetControlSettings, InSettings) == 0x000010, "Member 'RigHierarchyController_SetControlSettings::InSettings' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_SetControlSettings, bSetupUndo) == 0x000290, "Member 'RigHierarchyController_SetControlSettings::bSetupUndo' has a wrong offset!");
-static_assert(offsetof(RigHierarchyController_SetControlSettings, ReturnValue) == 0x000291, "Member 'RigHierarchyController_SetControlSettings::ReturnValue' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_SetControlSettings, bSetupUndo) == 0x0001C8, "Member 'RigHierarchyController_SetControlSettings::bSetupUndo' has a wrong offset!");
+static_assert(offsetof(RigHierarchyController_SetControlSettings, ReturnValue) == 0x0001C9, "Member 'RigHierarchyController_SetControlSettings::ReturnValue' has a wrong offset!");
 
 // Function ControlRig.ControlRigPoseAsset.GetCurrentPose
 // 0x0068 (0x0068 - 0x0000)
@@ -4126,7 +4214,7 @@ public:
 	class UControlRig*                            InControlRig;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDoKey;                                            // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDoMirror;                                         // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22BE[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C0[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigPoseAsset_PastePose) == 0x000008, "Wrong alignment on ControlRigPoseAsset_PastePose");
 static_assert(sizeof(ControlRigPoseAsset_PastePose) == 0x000010, "Wrong size on ControlRigPoseAsset_PastePose");
@@ -4154,7 +4242,7 @@ struct ControlRigPoseAsset_SavePose final
 public:
 	class UControlRig*                            InControlRig;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bUseAll;                                           // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22BF[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C1[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigPoseAsset_SavePose) == 0x000008, "Wrong alignment on ControlRigPoseAsset_SavePose");
 static_assert(sizeof(ControlRigPoseAsset_SavePose) == 0x000010, "Wrong size on ControlRigPoseAsset_SavePose");
@@ -4168,7 +4256,7 @@ struct ControlRigPoseAsset_SelectControls final
 public:
 	class UControlRig*                            InControlRig;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDoMirror;                                         // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22C0[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C2[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigPoseAsset_SelectControls) == 0x000008, "Wrong alignment on ControlRigPoseAsset_SelectControls");
 static_assert(sizeof(ControlRigPoseAsset_SelectControls) == 0x000010, "Wrong size on ControlRigPoseAsset_SelectControls");
@@ -4183,7 +4271,7 @@ public:
 	class UControlRig*                            ControlRig;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   ControlName;                                       // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_22C1[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_37C3[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(ControlRigPoseAsset_DoesMirrorMatch) == 0x000008, "Wrong alignment on ControlRigPoseAsset_DoesMirrorMatch");
 static_assert(sizeof(ControlRigPoseAsset_DoesMirrorMatch) == 0x000018, "Wrong size on ControlRigPoseAsset_DoesMirrorMatch");

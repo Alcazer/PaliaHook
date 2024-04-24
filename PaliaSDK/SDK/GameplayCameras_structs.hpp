@@ -77,7 +77,7 @@ public:
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInitialOscillatorOffset                      InitialOffset;                                     // 0x0008(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EOscillatorWaveform                           Waveform;                                          // 0x0009(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24C7[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_386F[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FFOscillator) == 0x000004, "Wrong alignment on FFOscillator");
 static_assert(sizeof(FFOscillator) == 0x00000C, "Wrong size on FFOscillator");
@@ -117,28 +117,30 @@ static_assert(offsetof(FVOscillator, Y) == 0x00000C, "Member 'FVOscillator::Y' h
 static_assert(offsetof(FVOscillator, Z) == 0x000018, "Member 'FVOscillator::Z' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.CameraAnimationParams
-// 0x0040 (0x0040 - 0x0000)
+// 0x0048 (0x0048 - 0x0000)
 struct FCameraAnimationParams final 
 {
 public:
-	float                                         PlayRate;                                          // 0x0000(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         Scale;                                             // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationEasingType                    EaseInType;                                        // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24C8[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EaseInDuration;                                    // 0x000C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationEasingType                    EaseOutType;                                       // 0x0010(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24C9[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         EaseOutDuration;                                   // 0x0014(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bLoop;                                             // 0x0018(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bRandomStartTime;                                  // 0x0019(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24CA[0x2];                                     // 0x001A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
-	float                                         DurationOverride;                                  // 0x001C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	ECameraAnimationPlaySpace                     PlaySpace;                                         // 0x0020(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24CB[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FRotator                               UserPlaySpaceRot;                                  // 0x0028(0x0018)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
+	float                                         PlayRate;                                          // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         Scale;                                             // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraAnimationEasingType                    EaseInType;                                        // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3870[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         EaseInDuration;                                    // 0x000C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraAnimationEasingType                    EaseOutType;                                       // 0x0010(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3871[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         EaseOutDuration;                                   // 0x0014(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bLoop;                                             // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3872[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         StartOffset;                                       // 0x001C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bRandomStartTime;                                  // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3873[0x3];                                     // 0x0021(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	float                                         DurationOverride;                                  // 0x0024(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	ECameraAnimationPlaySpace                     PlaySpace;                                         // 0x0028(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3874[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FRotator                               UserPlaySpaceRot;                                  // 0x0030(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FCameraAnimationParams) == 0x000008, "Wrong alignment on FCameraAnimationParams");
-static_assert(sizeof(FCameraAnimationParams) == 0x000040, "Wrong size on FCameraAnimationParams");
+static_assert(sizeof(FCameraAnimationParams) == 0x000048, "Wrong size on FCameraAnimationParams");
 static_assert(offsetof(FCameraAnimationParams, PlayRate) == 0x000000, "Member 'FCameraAnimationParams::PlayRate' has a wrong offset!");
 static_assert(offsetof(FCameraAnimationParams, Scale) == 0x000004, "Member 'FCameraAnimationParams::Scale' has a wrong offset!");
 static_assert(offsetof(FCameraAnimationParams, EaseInType) == 0x000008, "Member 'FCameraAnimationParams::EaseInType' has a wrong offset!");
@@ -146,49 +148,50 @@ static_assert(offsetof(FCameraAnimationParams, EaseInDuration) == 0x00000C, "Mem
 static_assert(offsetof(FCameraAnimationParams, EaseOutType) == 0x000010, "Member 'FCameraAnimationParams::EaseOutType' has a wrong offset!");
 static_assert(offsetof(FCameraAnimationParams, EaseOutDuration) == 0x000014, "Member 'FCameraAnimationParams::EaseOutDuration' has a wrong offset!");
 static_assert(offsetof(FCameraAnimationParams, bLoop) == 0x000018, "Member 'FCameraAnimationParams::bLoop' has a wrong offset!");
-static_assert(offsetof(FCameraAnimationParams, bRandomStartTime) == 0x000019, "Member 'FCameraAnimationParams::bRandomStartTime' has a wrong offset!");
-static_assert(offsetof(FCameraAnimationParams, DurationOverride) == 0x00001C, "Member 'FCameraAnimationParams::DurationOverride' has a wrong offset!");
-static_assert(offsetof(FCameraAnimationParams, PlaySpace) == 0x000020, "Member 'FCameraAnimationParams::PlaySpace' has a wrong offset!");
-static_assert(offsetof(FCameraAnimationParams, UserPlaySpaceRot) == 0x000028, "Member 'FCameraAnimationParams::UserPlaySpaceRot' has a wrong offset!");
+static_assert(offsetof(FCameraAnimationParams, StartOffset) == 0x00001C, "Member 'FCameraAnimationParams::StartOffset' has a wrong offset!");
+static_assert(offsetof(FCameraAnimationParams, bRandomStartTime) == 0x000020, "Member 'FCameraAnimationParams::bRandomStartTime' has a wrong offset!");
+static_assert(offsetof(FCameraAnimationParams, DurationOverride) == 0x000024, "Member 'FCameraAnimationParams::DurationOverride' has a wrong offset!");
+static_assert(offsetof(FCameraAnimationParams, PlaySpace) == 0x000028, "Member 'FCameraAnimationParams::PlaySpace' has a wrong offset!");
+static_assert(offsetof(FCameraAnimationParams, UserPlaySpaceRot) == 0x000030, "Member 'FCameraAnimationParams::UserPlaySpaceRot' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.CameraAnimationHandle
 // 0x0004 (0x0004 - 0x0000)
 struct alignas(0x02) FCameraAnimationHandle final 
 {
 public:
-	uint8                                         Pad_24CC[0x4];                                     // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3875[0x4];                                     // 0x0000(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FCameraAnimationHandle) == 0x000002, "Wrong alignment on FCameraAnimationHandle");
 static_assert(sizeof(FCameraAnimationHandle) == 0x000004, "Wrong size on FCameraAnimationHandle");
 
 // ScriptStruct GameplayCameras.ActiveCameraAnimationInfo
-// 0x0070 (0x0070 - 0x0000)
+// 0x0078 (0x0078 - 0x0000)
 struct FActiveCameraAnimationInfo final 
 {
 public:
 	class UCameraAnimationSequence*               Sequence;                                          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FCameraAnimationParams                 Params;                                            // 0x0008(0x0040)(NoDestructor, NativeAccessSpecifierPublic)
-	struct FCameraAnimationHandle                 Handle;                                            // 0x0048(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24CD[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UCameraAnimationSequencePlayer*         Player;                                            // 0x0050(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UCameraAnimationSequenceCameraStandIn*  CameraStandIn;                                     // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EaseInCurrentTime;                                 // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         EaseOutCurrentTime;                                // 0x0064(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEasingIn;                                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIsEasingOut;                                      // 0x0069(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24CE[0x6];                                     // 0x006A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	struct FCameraAnimationParams                 Params;                                            // 0x0008(0x0048)(NoDestructor, NativeAccessSpecifierPublic)
+	struct FCameraAnimationHandle                 Handle;                                            // 0x0050(0x0004)(NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3876[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UCameraAnimationSequencePlayer*         Player;                                            // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UCameraAnimationSequenceCameraStandIn*  CameraStandIn;                                     // 0x0060(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EaseInCurrentTime;                                 // 0x0068(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         EaseOutCurrentTime;                                // 0x006C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEasingIn;                                       // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIsEasingOut;                                      // 0x0071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_3877[0x6];                                     // 0x0072(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FActiveCameraAnimationInfo) == 0x000008, "Wrong alignment on FActiveCameraAnimationInfo");
-static_assert(sizeof(FActiveCameraAnimationInfo) == 0x000070, "Wrong size on FActiveCameraAnimationInfo");
+static_assert(sizeof(FActiveCameraAnimationInfo) == 0x000078, "Wrong size on FActiveCameraAnimationInfo");
 static_assert(offsetof(FActiveCameraAnimationInfo, Sequence) == 0x000000, "Member 'FActiveCameraAnimationInfo::Sequence' has a wrong offset!");
 static_assert(offsetof(FActiveCameraAnimationInfo, Params) == 0x000008, "Member 'FActiveCameraAnimationInfo::Params' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, Handle) == 0x000048, "Member 'FActiveCameraAnimationInfo::Handle' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, Player) == 0x000050, "Member 'FActiveCameraAnimationInfo::Player' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, CameraStandIn) == 0x000058, "Member 'FActiveCameraAnimationInfo::CameraStandIn' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, EaseInCurrentTime) == 0x000060, "Member 'FActiveCameraAnimationInfo::EaseInCurrentTime' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, EaseOutCurrentTime) == 0x000064, "Member 'FActiveCameraAnimationInfo::EaseOutCurrentTime' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingIn) == 0x000068, "Member 'FActiveCameraAnimationInfo::bIsEasingIn' has a wrong offset!");
-static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingOut) == 0x000069, "Member 'FActiveCameraAnimationInfo::bIsEasingOut' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, Handle) == 0x000050, "Member 'FActiveCameraAnimationInfo::Handle' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, Player) == 0x000058, "Member 'FActiveCameraAnimationInfo::Player' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, CameraStandIn) == 0x000060, "Member 'FActiveCameraAnimationInfo::CameraStandIn' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, EaseInCurrentTime) == 0x000068, "Member 'FActiveCameraAnimationInfo::EaseInCurrentTime' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, EaseOutCurrentTime) == 0x00006C, "Member 'FActiveCameraAnimationInfo::EaseOutCurrentTime' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingIn) == 0x000070, "Member 'FActiveCameraAnimationInfo::bIsEasingIn' has a wrong offset!");
+static_assert(offsetof(FActiveCameraAnimationInfo, bIsEasingOut) == 0x000071, "Member 'FActiveCameraAnimationInfo::bIsEasingOut' has a wrong offset!");
 
 // ScriptStruct GameplayCameras.PerlinNoiseShaker
 // 0x0008 (0x0008 - 0x0000)
@@ -211,7 +214,7 @@ public:
 	float                                         Amplitude;                                         // 0x0000(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         Frequency;                                         // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EInitialWaveOscillatorOffsetType              InitialOffsetType;                                 // 0x0008(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_24CF[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3878[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FWaveOscillator) == 0x000004, "Wrong alignment on FWaveOscillator");
 static_assert(sizeof(FWaveOscillator) == 0x00000C, "Wrong size on FWaveOscillator");

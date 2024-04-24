@@ -17,21 +17,21 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass MAP_PreGame.MAP_PreGame_C
-// 0x0020 (0x02C8 - 0x02A8)
+// 0x0020 (0x02D0 - 0x02B0)
 class AMAP_PreGame_C final  : public ALevelScriptActor
 {
 public:
-	class FString                                 CharacterSelectMap;                                // 0x02A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
-	class AVAL_CharacterPreviewer*                CharacterPreviewer;                                // 0x02B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
-	class ABP_CharacterRenderStudio_C*            BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty; // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class FString                                 CharacterSelectMap;                                // 0x02B0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
+	class AVAL_CharacterPreviewer*                CharacterPreviewer;                                // 0x02C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
+	class ABP_CharacterRenderStudio_C*            BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty; // 0x02C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
-	class AVAL_CharacterPreviewer* GetCharacterInventoryPreviewer();
-	class AVAL_CharacterPreviewer* GetCharacterPreviewer(bool CallFunc_IsValid_ReturnValue, const struct FTransform& CallFunc_MakeTransform_ReturnValue, class AActor* CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue, class ABP_CharacterPreview_C* CallFunc_FinishSpawningActor_ReturnValue);
-	class AVAL_CharacterRenderStudio* GetCharacterRenderStudio();
-	struct FVector GetItemPreviewerSpawnLocation();
-	class AValeriaCharacter* GetLobbyCharacter();
 	struct FVector GetRenderStudioSpawnLocation();
+	class AValeriaCharacter* GetLobbyCharacter();
+	struct FVector GetItemPreviewerSpawnLocation();
+	class AVAL_CharacterRenderStudio* GetCharacterRenderStudio();
+	class AVAL_CharacterPreviewer* GetCharacterPreviewer(bool CallFunc_IsValid_ReturnValue, const struct FTransform& CallFunc_MakeTransform_ReturnValue, class AActor* CallFunc_BeginDeferredActorSpawnFromClass_ReturnValue, class ABP_CharacterPreview_C* CallFunc_FinishSpawningActor_ReturnValue);
+	class AVAL_CharacterPreviewer* GetCharacterInventoryPreviewer();
 
 public:
 	static class UClass* StaticClass()
@@ -44,10 +44,10 @@ public:
 	}
 };
 static_assert(alignof(AMAP_PreGame_C) == 0x000008, "Wrong alignment on AMAP_PreGame_C");
-static_assert(sizeof(AMAP_PreGame_C) == 0x0002C8, "Wrong size on AMAP_PreGame_C");
-static_assert(offsetof(AMAP_PreGame_C, CharacterSelectMap) == 0x0002A8, "Member 'AMAP_PreGame_C::CharacterSelectMap' has a wrong offset!");
-static_assert(offsetof(AMAP_PreGame_C, CharacterPreviewer) == 0x0002B8, "Member 'AMAP_PreGame_C::CharacterPreviewer' has a wrong offset!");
-static_assert(offsetof(AMAP_PreGame_C, BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty) == 0x0002C0, "Member 'AMAP_PreGame_C::BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty' has a wrong offset!");
+static_assert(sizeof(AMAP_PreGame_C) == 0x0002D0, "Wrong size on AMAP_PreGame_C");
+static_assert(offsetof(AMAP_PreGame_C, CharacterSelectMap) == 0x0002B0, "Member 'AMAP_PreGame_C::CharacterSelectMap' has a wrong offset!");
+static_assert(offsetof(AMAP_PreGame_C, CharacterPreviewer) == 0x0002C0, "Member 'AMAP_PreGame_C::CharacterPreviewer' has a wrong offset!");
+static_assert(offsetof(AMAP_PreGame_C, BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty) == 0x0002C8, "Member 'AMAP_PreGame_C::BP_CharacterRenderStudio_0_GetCharacterRenderStudio_MERGED_RefProperty' has a wrong offset!");
 
 }
 

@@ -49,10 +49,10 @@ public:
 	TArray<class UAkRtpc*>                        CallFunc_Map_Keys_Keys;                            // 0x00D8(0x0010)(ReferenceParm)
 	class UAkRtpc*                                CallFunc_Array_Get_Item_1;                         // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC3[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4416[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x00F8(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1DC4[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4417[0x7];                                     // 0x0109(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_2;              // 0x0110(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue_3;              // 0x0120(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0130(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -109,23 +109,6 @@ static_assert(offsetof(Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker, K2N
 static_assert(offsetof(Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker, CallFunc_IsDedicatedServer_ReturnValue) == 0x000005, "Member 'Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker::CallFunc_IsDedicatedServer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker, CallFunc_BuildIsShipping_ReturnValue) == 0x000006, "Member 'Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker::CallFunc_BuildIsShipping_ReturnValue' has a wrong offset!");
 static_assert(offsetof(Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker, K2Node_CustomEvent_On) == 0x000007, "Member 'Comp_RtpcTracker_C_ExecuteUbergraph_Comp_RtpcTracker::K2Node_CustomEvent_On' has a wrong offset!");
-
-// Function Comp_RtpcTracker.Comp_RtpcTracker_C.OnRtpcChanged__DelegateSignature
-// 0x0020 (0x0020 - 0x0000)
-struct Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature final 
-{
-public:
-	class UComp_RtpcTracker_C*                    RtpcTrackerComp;                                   // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UAkRtpc*                                Rtpc;                                              // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	double                                        Value;                                             // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Interpolation_ms_;                                 // 0x0018(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature) == 0x000008, "Wrong alignment on Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature");
-static_assert(sizeof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature) == 0x000020, "Wrong size on Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature");
-static_assert(offsetof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature, RtpcTrackerComp) == 0x000000, "Member 'Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature::RtpcTrackerComp' has a wrong offset!");
-static_assert(offsetof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature, Rtpc) == 0x000008, "Member 'Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature::Rtpc' has a wrong offset!");
-static_assert(offsetof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature, Value) == 0x000010, "Member 'Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature::Value' has a wrong offset!");
-static_assert(offsetof(Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature, Interpolation_ms_) == 0x000018, "Member 'Comp_RtpcTracker_C_OnRtpcChanged__DelegateSignature::Interpolation_ms_' has a wrong offset!");
 
 // Function Comp_RtpcTracker.Comp_RtpcTracker_C.ReceiveEndPlay
 // 0x0001 (0x0001 - 0x0000)

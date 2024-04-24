@@ -18,7 +18,7 @@ namespace SDK
 {
 
 // Function GameplayTasks.GameplayTask.EndTask
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGameplayTask::EndTask()
 {
@@ -51,7 +51,7 @@ void UGameplayTask::GenericGameplayTaskDelegate__DelegateSignature()
 
 
 // Function GameplayTasks.GameplayTask.ReadyForActivation
-// (Final, Native, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Public, BlueprintCallable)
 
 void UGameplayTask::ReadyForActivation()
 {
@@ -69,76 +69,8 @@ void UGameplayTask::ReadyForActivation()
 }
 
 
-// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IGameplayTaskOwnerInterface>InTaskOwner                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TSubclassOf<class UGameplayTaskResource>ResourceClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// uint8                                   Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             TaskInstanceName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGameplayTask_ClaimResource*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, TSubclassOf<class UGameplayTaskResource> ResourceClass, uint8 Priority, class FName TaskInstanceName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameplayTask_ClaimResource", "ClaimResource");
-
-	Params::GameplayTask_ClaimResource_ClaimResource Parms{};
-
-	Parms.InTaskOwner = InTaskOwner;
-	Parms.ResourceClass = ResourceClass;
-	Parms.Priority = Priority;
-	Parms.TaskInstanceName = TaskInstanceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
-// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
-// (Final, Native, Static, Public, BlueprintCallable)
-// Parameters:
-// TScriptInterface<class IGameplayTaskOwnerInterface>InTaskOwner                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// TArray<TSubclassOf<class UGameplayTaskResource>>ResourceClasses                                        (Parm, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
-// uint8                                   Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class FName                             TaskInstanceName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-// class UGameplayTask_ClaimResource*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-
-class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, const TArray<TSubclassOf<class UGameplayTaskResource>>& ResourceClasses, uint8 Priority, class FName TaskInstanceName)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("GameplayTask_ClaimResource", "ClaimResources");
-
-	Params::GameplayTask_ClaimResource_ClaimResources Parms{};
-
-	Parms.InTaskOwner = InTaskOwner;
-	Parms.ResourceClasses = std::move(ResourceClasses);
-	Parms.Priority = Priority;
-	Parms.TaskInstanceName = TaskInstanceName;
-
-	auto Flgs = Func->FunctionFlags;
-	Func->FunctionFlags |= 0x400;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	Func->FunctionFlags = Flgs;
-
-	return Parms.ReturnValue;
-}
-
-
 // Function GameplayTasks.GameplayTasksComponent.K2_RunGameplayTask
-// (Final, Native, Static, Public, BlueprintCallable)
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
 // Parameters:
 // TScriptInterface<class IGameplayTaskOwnerInterface>TaskOwner                                              (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 // class UGameplayTask*                    Task                                                   (Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -174,7 +106,7 @@ EGameplayTaskRunResult UGameplayTasksComponent::K2_RunGameplayTask(TScriptInterf
 
 
 // Function GameplayTasks.GameplayTasksComponent.OnRep_SimulatedTasks
-// (Final, Native, Public, HasOutParams)
+// (Final, RequiredAPI, Native, Public, HasOutParams)
 // Parameters:
 // TArray<class UGameplayTask*>            PreviousSimulatedTasks                                 (ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 
@@ -195,6 +127,74 @@ void UGameplayTasksComponent::OnRep_SimulatedTasks(TArray<class UGameplayTask*>&
 	UObject::ProcessEvent(Func, &Parms);
 
 	Func->FunctionFlags = Flgs;
+}
+
+
+// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResource
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IGameplayTaskOwnerInterface>InTaskOwner                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TSubclassOf<class UGameplayTaskResource>ResourceClass                                          (Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// uint8                                   Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             TaskInstanceName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameplayTask_ClaimResource*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResource(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, TSubclassOf<class UGameplayTaskResource> ResourceClass, uint8 Priority, class FName TaskInstanceName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GameplayTask_ClaimResource", "ClaimResource");
+
+	Params::GameplayTask_ClaimResource_ClaimResource Parms{};
+
+	Parms.InTaskOwner = InTaskOwner;
+	Parms.ResourceClass = ResourceClass;
+	Parms.Priority = Priority;
+	Parms.TaskInstanceName = TaskInstanceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
+}
+
+
+// Function GameplayTasks.GameplayTask_ClaimResource.ClaimResources
+// (Final, RequiredAPI, Native, Static, Public, BlueprintCallable)
+// Parameters:
+// TScriptInterface<class IGameplayTaskOwnerInterface>InTaskOwner                                            (Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// TArray<TSubclassOf<class UGameplayTaskResource>>ResourceClasses                                        (Parm, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
+// uint8                                   Priority                                               (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class FName                             TaskInstanceName                                       (ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+// class UGameplayTask_ClaimResource*      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+
+class UGameplayTask_ClaimResource* UGameplayTask_ClaimResource::ClaimResources(TScriptInterface<class IGameplayTaskOwnerInterface> InTaskOwner, const TArray<TSubclassOf<class UGameplayTaskResource>>& ResourceClasses, uint8 Priority, class FName TaskInstanceName)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("GameplayTask_ClaimResource", "ClaimResources");
+
+	Params::GameplayTask_ClaimResource_ClaimResources Parms{};
+
+	Parms.InTaskOwner = InTaskOwner;
+	Parms.ResourceClasses = std::move(ResourceClasses);
+	Parms.Priority = Priority;
+	Parms.TaskInstanceName = TaskInstanceName;
+
+	auto Flgs = Func->FunctionFlags;
+	Func->FunctionFlags |= 0x400;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	Func->FunctionFlags = Flgs;
+
+	return Parms.ReturnValue;
 }
 
 

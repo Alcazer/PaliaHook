@@ -10,23 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "Water_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Water_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
-// 0x0010 (0x0010 - 0x0000)
-struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final 
-{
-public:
-	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves) == 0x000008, "Wrong alignment on GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves");
-static_assert(sizeof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves) == 0x000010, "Wrong size on GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves");
-static_assert(offsetof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves, OutWaves) == 0x000000, "Member 'GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves::OutWaves' has a wrong offset!");
 
 // Function Water.BuoyancyComponent.GetLastWaterSurfaceInfo
 // 0x0068 (0x0068 - 0x0000)
@@ -112,7 +101,7 @@ public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class ABuoyancyManager*                       Manager;                                           // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1692[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D18[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(BuoyancyManager_GetBuoyancyComponentManager) == 0x000008, "Wrong alignment on BuoyancyManager_GetBuoyancyComponentManager");
 static_assert(sizeof(BuoyancyManager_GetBuoyancyComponentManager) == 0x000018, "Wrong size on BuoyancyManager_GetBuoyancyComponentManager");
@@ -120,234 +109,16 @@ static_assert(offsetof(BuoyancyManager_GetBuoyancyComponentManager, WorldContext
 static_assert(offsetof(BuoyancyManager_GetBuoyancyComponentManager, Manager) == 0x000008, "Member 'BuoyancyManager_GetBuoyancyComponentManager::Manager' has a wrong offset!");
 static_assert(offsetof(BuoyancyManager_GetBuoyancyComponentManager, ReturnValue) == 0x000010, "Member 'BuoyancyManager_GetBuoyancyComponentManager::ReturnValue' has a wrong offset!");
 
-// Function Water.WaterBodyComponent.GetRiverToLakeTransitionMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetRiverToOceanTransitionMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetUnderwaterPostProcessMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterInfoMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterInfoMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterInfoMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterInfoMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetWaterInfoMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterInfoMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetWaterInfoMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterInfoMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterLODMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterLODMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterLODMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterLODMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetWaterLODMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterLODMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetWaterLODMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterLODMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterMaterialInstance
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterMaterialInstance final 
-{
-public:
-	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterMaterialInstance");
-static_assert(sizeof(WaterBodyComponent_GetWaterMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterMaterialInstance");
-static_assert(offsetof(WaterBodyComponent_GetWaterMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterMaterialInstance::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.OnWaterBodyChanged
-// 0x0002 (0x0002 - 0x0000)
-struct WaterBodyComponent_OnWaterBodyChanged final 
-{
-public:
-	bool                                          bShapeOrPositionChanged;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bWeightmapSettingsChanged;                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_OnWaterBodyChanged) == 0x000001, "Wrong alignment on WaterBodyComponent_OnWaterBodyChanged");
-static_assert(sizeof(WaterBodyComponent_OnWaterBodyChanged) == 0x000002, "Wrong size on WaterBodyComponent_OnWaterBodyChanged");
-static_assert(offsetof(WaterBodyComponent_OnWaterBodyChanged, bShapeOrPositionChanged) == 0x000000, "Member 'WaterBodyComponent_OnWaterBodyChanged::bShapeOrPositionChanged' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_OnWaterBodyChanged, bWeightmapSettingsChanged) == 0x000001, "Member 'WaterBodyComponent_OnWaterBodyChanged::bWeightmapSettingsChanged' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.SetWaterAndUnderWaterPostProcessMaterial
+// Function Water.GerstnerWaterWaveGeneratorBase.GenerateGerstnerWaves
 // 0x0010 (0x0010 - 0x0000)
-struct WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial final 
+struct GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves final 
 {
 public:
-	class UMaterialInterface*                     InWaterMaterial;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	class UMaterialInterface*                     InUnderWaterPostProcessMaterial;                   // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	TArray<struct FGerstnerWave>                  OutWaves;                                          // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 };
-static_assert(alignof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial) == 0x000008, "Wrong alignment on WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial");
-static_assert(sizeof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial) == 0x000010, "Wrong size on WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial");
-static_assert(offsetof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial, InWaterMaterial) == 0x000000, "Member 'WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial::InWaterMaterial' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial, InUnderWaterPostProcessMaterial) == 0x000008, "Member 'WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial::InUnderWaterPostProcessMaterial' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetCollisionComponents
-// 0x0018 (0x0018 - 0x0000)
-struct WaterBodyComponent_GetCollisionComponents final 
-{
-public:
-	bool                                          bInOnlyEnabledComponents;                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1698[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UPrimitiveComponent*>            ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetCollisionComponents) == 0x000008, "Wrong alignment on WaterBodyComponent_GetCollisionComponents");
-static_assert(sizeof(WaterBodyComponent_GetCollisionComponents) == 0x000018, "Wrong size on WaterBodyComponent_GetCollisionComponents");
-static_assert(offsetof(WaterBodyComponent_GetCollisionComponents, bInOnlyEnabledComponents) == 0x000000, "Member 'WaterBodyComponent_GetCollisionComponents::bInOnlyEnabledComponents' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetCollisionComponents, ReturnValue) == 0x000008, "Member 'WaterBodyComponent_GetCollisionComponents::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetExclusionVolumes
-// 0x0010 (0x0010 - 0x0000)
-struct WaterBodyComponent_GetExclusionVolumes final 
-{
-public:
-	TArray<class AWaterBodyExclusionVolume*>      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetExclusionVolumes) == 0x000008, "Wrong alignment on WaterBodyComponent_GetExclusionVolumes");
-static_assert(sizeof(WaterBodyComponent_GetExclusionVolumes) == 0x000010, "Wrong size on WaterBodyComponent_GetExclusionVolumes");
-static_assert(offsetof(WaterBodyComponent_GetExclusionVolumes, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetExclusionVolumes::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetIslands
-// 0x0010 (0x0010 - 0x0000)
-struct WaterBodyComponent_GetIslands final 
-{
-public:
-	TArray<class AWaterBodyIsland*>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetIslands) == 0x000008, "Wrong alignment on WaterBodyComponent_GetIslands");
-static_assert(sizeof(WaterBodyComponent_GetIslands) == 0x000010, "Wrong size on WaterBodyComponent_GetIslands");
-static_assert(offsetof(WaterBodyComponent_GetIslands, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetIslands::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetMaxWaveHeight
-// 0x0004 (0x0004 - 0x0000)
-struct WaterBodyComponent_GetMaxWaveHeight final 
-{
-public:
-	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetMaxWaveHeight) == 0x000004, "Wrong alignment on WaterBodyComponent_GetMaxWaveHeight");
-static_assert(sizeof(WaterBodyComponent_GetMaxWaveHeight) == 0x000004, "Wrong size on WaterBodyComponent_GetMaxWaveHeight");
-static_assert(offsetof(WaterBodyComponent_GetMaxWaveHeight, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetMaxWaveHeight::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetStandardRenderableComponents
-// 0x0010 (0x0010 - 0x0000)
-struct WaterBodyComponent_GetStandardRenderableComponents final 
-{
-public:
-	TArray<class UPrimitiveComponent*>            ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetStandardRenderableComponents) == 0x000008, "Wrong alignment on WaterBodyComponent_GetStandardRenderableComponents");
-static_assert(sizeof(WaterBodyComponent_GetStandardRenderableComponents) == 0x000010, "Wrong size on WaterBodyComponent_GetStandardRenderableComponents");
-static_assert(offsetof(WaterBodyComponent_GetStandardRenderableComponents, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetStandardRenderableComponents::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterBodyActor
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterBodyActor final 
-{
-public:
-	class AWaterBody*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterBodyActor) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterBodyActor");
-static_assert(sizeof(WaterBodyComponent_GetWaterBodyActor) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterBodyActor");
-static_assert(offsetof(WaterBodyComponent_GetWaterBodyActor, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterBodyActor::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterMaterial
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterMaterial final 
-{
-public:
-	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterMaterial) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterMaterial");
-static_assert(sizeof(WaterBodyComponent_GetWaterMaterial) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterMaterial");
-static_assert(offsetof(WaterBodyComponent_GetWaterMaterial, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterMaterial::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterSpline
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterSpline final 
-{
-public:
-	class UWaterSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterSpline) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterSpline");
-static_assert(sizeof(WaterBodyComponent_GetWaterSpline) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterSpline");
-static_assert(offsetof(WaterBodyComponent_GetWaterSpline, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterSpline::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterSurfaceInfoAtLocation
-// 0x0068 (0x0068 - 0x0000)
-struct WaterBodyComponent_GetWaterSurfaceInfoAtLocation final 
-{
-public:
-	struct FVector                                InLocation;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterSurfaceLocation;                           // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterSurfaceNormal;                             // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	struct FVector                                OutWaterVelocity;                                  // 0x0048(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         OutWaterDepth;                                     // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	bool                                          bIncludeDepth;                                     // 0x0064(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1699[0x3];                                     // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
-};
-static_assert(alignof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterSurfaceInfoAtLocation");
-static_assert(sizeof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation) == 0x000068, "Wrong size on WaterBodyComponent_GetWaterSurfaceInfoAtLocation");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, InLocation) == 0x000000, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::InLocation' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterSurfaceLocation) == 0x000018, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterSurfaceLocation' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterSurfaceNormal) == 0x000030, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterSurfaceNormal' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterVelocity) == 0x000048, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterVelocity' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterDepth) == 0x000060, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterDepth' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, bIncludeDepth) == 0x000064, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::bIncludeDepth' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterVelocityAtSplineInputKey
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterVelocityAtSplineInputKey final 
-{
-public:
-	float                                         InKey;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey) == 0x000004, "Wrong alignment on WaterBodyComponent_GetWaterVelocityAtSplineInputKey");
-static_assert(sizeof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterVelocityAtSplineInputKey");
-static_assert(offsetof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey, InKey) == 0x000000, "Member 'WaterBodyComponent_GetWaterVelocityAtSplineInputKey::InKey' has a wrong offset!");
-static_assert(offsetof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey, ReturnValue) == 0x000004, "Member 'WaterBodyComponent_GetWaterVelocityAtSplineInputKey::ReturnValue' has a wrong offset!");
-
-// Function Water.WaterBodyComponent.GetWaterWaves
-// 0x0008 (0x0008 - 0x0000)
-struct WaterBodyComponent_GetWaterWaves final 
-{
-public:
-	class UWaterWavesBase*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-};
-static_assert(alignof(WaterBodyComponent_GetWaterWaves) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterWaves");
-static_assert(sizeof(WaterBodyComponent_GetWaterWaves) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterWaves");
-static_assert(offsetof(WaterBodyComponent_GetWaterWaves, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterWaves::ReturnValue' has a wrong offset!");
+static_assert(alignof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves) == 0x000008, "Wrong alignment on GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves");
+static_assert(sizeof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves) == 0x000010, "Wrong size on GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves");
+static_assert(offsetof(GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves, OutWaves) == 0x000000, "Member 'GerstnerWaterWaveGeneratorBase_GenerateGerstnerWaves::OutWaves' has a wrong offset!");
 
 // Function Water.NiagaraWaterFunctionLibrary.SetWaterBody
 // 0x0020 (0x0020 - 0x0000)
@@ -534,13 +305,264 @@ struct WaterBody_GetWaterVelocityVectorAtSplineInputKey final
 {
 public:
 	float                                         InKey;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16A4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D20[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(WaterBody_GetWaterVelocityVectorAtSplineInputKey) == 0x000008, "Wrong alignment on WaterBody_GetWaterVelocityVectorAtSplineInputKey");
 static_assert(sizeof(WaterBody_GetWaterVelocityVectorAtSplineInputKey) == 0x000020, "Wrong size on WaterBody_GetWaterVelocityVectorAtSplineInputKey");
 static_assert(offsetof(WaterBody_GetWaterVelocityVectorAtSplineInputKey, InKey) == 0x000000, "Member 'WaterBody_GetWaterVelocityVectorAtSplineInputKey::InKey' has a wrong offset!");
 static_assert(offsetof(WaterBody_GetWaterVelocityVectorAtSplineInputKey, ReturnValue) == 0x000008, "Member 'WaterBody_GetWaterVelocityVectorAtSplineInputKey::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetRiverToLakeTransitionMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetRiverToLakeTransitionMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetRiverToOceanTransitionMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetRiverToOceanTransitionMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetUnderwaterPostProcessMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetUnderwaterPostProcessMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterInfoMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterInfoMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterInfoMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterInfoMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetWaterInfoMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterInfoMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetWaterInfoMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterInfoMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterLODMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterLODMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterLODMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterLODMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetWaterLODMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterLODMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetWaterLODMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterLODMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetWaterMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetWaterMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterStaticMeshMaterialInstance
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterStaticMeshMaterialInstance final 
+{
+public:
+	class UMaterialInstanceDynamic*               ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterStaticMeshMaterialInstance) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterStaticMeshMaterialInstance");
+static_assert(sizeof(WaterBodyComponent_GetWaterStaticMeshMaterialInstance) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterStaticMeshMaterialInstance");
+static_assert(offsetof(WaterBodyComponent_GetWaterStaticMeshMaterialInstance, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterStaticMeshMaterialInstance::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.OnWaterBodyChanged
+// 0x0002 (0x0002 - 0x0000)
+struct WaterBodyComponent_OnWaterBodyChanged final 
+{
+public:
+	bool                                          bShapeOrPositionChanged;                           // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bWeightmapSettingsChanged;                         // 0x0001(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_OnWaterBodyChanged) == 0x000001, "Wrong alignment on WaterBodyComponent_OnWaterBodyChanged");
+static_assert(sizeof(WaterBodyComponent_OnWaterBodyChanged) == 0x000002, "Wrong size on WaterBodyComponent_OnWaterBodyChanged");
+static_assert(offsetof(WaterBodyComponent_OnWaterBodyChanged, bShapeOrPositionChanged) == 0x000000, "Member 'WaterBodyComponent_OnWaterBodyChanged::bShapeOrPositionChanged' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_OnWaterBodyChanged, bWeightmapSettingsChanged) == 0x000001, "Member 'WaterBodyComponent_OnWaterBodyChanged::bWeightmapSettingsChanged' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.SetWaterAndUnderWaterPostProcessMaterial
+// 0x0010 (0x0010 - 0x0000)
+struct WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial final 
+{
+public:
+	class UMaterialInterface*                     InWaterMaterial;                                   // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	class UMaterialInterface*                     InUnderWaterPostProcessMaterial;                   // 0x0008(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial) == 0x000008, "Wrong alignment on WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial");
+static_assert(sizeof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial) == 0x000010, "Wrong size on WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial");
+static_assert(offsetof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial, InWaterMaterial) == 0x000000, "Member 'WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial::InWaterMaterial' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial, InUnderWaterPostProcessMaterial) == 0x000008, "Member 'WaterBodyComponent_SetWaterAndUnderWaterPostProcessMaterial::InUnderWaterPostProcessMaterial' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.SetWaterZoneOverride
+// 0x0028 (0x0028 - 0x0000)
+struct WaterBodyComponent_SetWaterZoneOverride final 
+{
+public:
+	TSoftObjectPtr<class AWaterZone>              InWaterZoneOverride;                               // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_SetWaterZoneOverride) == 0x000008, "Wrong alignment on WaterBodyComponent_SetWaterZoneOverride");
+static_assert(sizeof(WaterBodyComponent_SetWaterZoneOverride) == 0x000028, "Wrong size on WaterBodyComponent_SetWaterZoneOverride");
+static_assert(offsetof(WaterBodyComponent_SetWaterZoneOverride, InWaterZoneOverride) == 0x000000, "Member 'WaterBodyComponent_SetWaterZoneOverride::InWaterZoneOverride' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetCollisionComponents
+// 0x0018 (0x0018 - 0x0000)
+struct WaterBodyComponent_GetCollisionComponents final 
+{
+public:
+	bool                                          bInOnlyEnabledComponents;                          // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D24[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UPrimitiveComponent*>            ReturnValue;                                       // 0x0008(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetCollisionComponents) == 0x000008, "Wrong alignment on WaterBodyComponent_GetCollisionComponents");
+static_assert(sizeof(WaterBodyComponent_GetCollisionComponents) == 0x000018, "Wrong size on WaterBodyComponent_GetCollisionComponents");
+static_assert(offsetof(WaterBodyComponent_GetCollisionComponents, bInOnlyEnabledComponents) == 0x000000, "Member 'WaterBodyComponent_GetCollisionComponents::bInOnlyEnabledComponents' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetCollisionComponents, ReturnValue) == 0x000008, "Member 'WaterBodyComponent_GetCollisionComponents::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetExclusionVolumes
+// 0x0010 (0x0010 - 0x0000)
+struct WaterBodyComponent_GetExclusionVolumes final 
+{
+public:
+	TArray<class AWaterBodyExclusionVolume*>      ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetExclusionVolumes) == 0x000008, "Wrong alignment on WaterBodyComponent_GetExclusionVolumes");
+static_assert(sizeof(WaterBodyComponent_GetExclusionVolumes) == 0x000010, "Wrong size on WaterBodyComponent_GetExclusionVolumes");
+static_assert(offsetof(WaterBodyComponent_GetExclusionVolumes, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetExclusionVolumes::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetIslands
+// 0x0010 (0x0010 - 0x0000)
+struct WaterBodyComponent_GetIslands final 
+{
+public:
+	TArray<class AWaterBodyIsland*>               ReturnValue;                                       // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetIslands) == 0x000008, "Wrong alignment on WaterBodyComponent_GetIslands");
+static_assert(sizeof(WaterBodyComponent_GetIslands) == 0x000010, "Wrong size on WaterBodyComponent_GetIslands");
+static_assert(offsetof(WaterBodyComponent_GetIslands, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetIslands::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetMaxWaveHeight
+// 0x0004 (0x0004 - 0x0000)
+struct WaterBodyComponent_GetMaxWaveHeight final 
+{
+public:
+	float                                         ReturnValue;                                       // 0x0000(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetMaxWaveHeight) == 0x000004, "Wrong alignment on WaterBodyComponent_GetMaxWaveHeight");
+static_assert(sizeof(WaterBodyComponent_GetMaxWaveHeight) == 0x000004, "Wrong size on WaterBodyComponent_GetMaxWaveHeight");
+static_assert(offsetof(WaterBodyComponent_GetMaxWaveHeight, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetMaxWaveHeight::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetStandardRenderableComponents
+// 0x0010 (0x0010 - 0x0000)
+struct WaterBodyComponent_GetStandardRenderableComponents final 
+{
+public:
+	TArray<class UPrimitiveComponent*>            ReturnValue;                                       // 0x0000(0x0010)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetStandardRenderableComponents) == 0x000008, "Wrong alignment on WaterBodyComponent_GetStandardRenderableComponents");
+static_assert(sizeof(WaterBodyComponent_GetStandardRenderableComponents) == 0x000010, "Wrong size on WaterBodyComponent_GetStandardRenderableComponents");
+static_assert(offsetof(WaterBodyComponent_GetStandardRenderableComponents, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetStandardRenderableComponents::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterBodyActor
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterBodyActor final 
+{
+public:
+	class AWaterBody*                             ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterBodyActor) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterBodyActor");
+static_assert(sizeof(WaterBodyComponent_GetWaterBodyActor) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterBodyActor");
+static_assert(offsetof(WaterBodyComponent_GetWaterBodyActor, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterBodyActor::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterMaterial
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterMaterial final 
+{
+public:
+	class UMaterialInterface*                     ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterMaterial) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterMaterial");
+static_assert(sizeof(WaterBodyComponent_GetWaterMaterial) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterMaterial");
+static_assert(offsetof(WaterBodyComponent_GetWaterMaterial, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterMaterial::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterSpline
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterSpline final 
+{
+public:
+	class UWaterSplineComponent*                  ReturnValue;                                       // 0x0000(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterSpline) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterSpline");
+static_assert(sizeof(WaterBodyComponent_GetWaterSpline) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterSpline");
+static_assert(offsetof(WaterBodyComponent_GetWaterSpline, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterSpline::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterSurfaceInfoAtLocation
+// 0x0068 (0x0068 - 0x0000)
+struct WaterBodyComponent_GetWaterSurfaceInfoAtLocation final 
+{
+public:
+	struct FVector                                InLocation;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterSurfaceLocation;                           // 0x0018(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterSurfaceNormal;                             // 0x0030(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	struct FVector                                OutWaterVelocity;                                  // 0x0048(0x0018)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         OutWaterDepth;                                     // 0x0060(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	bool                                          bIncludeDepth;                                     // 0x0064(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2D25[0x3];                                     // 0x0065(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+};
+static_assert(alignof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterSurfaceInfoAtLocation");
+static_assert(sizeof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation) == 0x000068, "Wrong size on WaterBodyComponent_GetWaterSurfaceInfoAtLocation");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, InLocation) == 0x000000, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::InLocation' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterSurfaceLocation) == 0x000018, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterSurfaceLocation' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterSurfaceNormal) == 0x000030, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterSurfaceNormal' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterVelocity) == 0x000048, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterVelocity' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, OutWaterDepth) == 0x000060, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::OutWaterDepth' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterSurfaceInfoAtLocation, bIncludeDepth) == 0x000064, "Member 'WaterBodyComponent_GetWaterSurfaceInfoAtLocation::bIncludeDepth' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterVelocityAtSplineInputKey
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterVelocityAtSplineInputKey final 
+{
+public:
+	float                                         InKey;                                             // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	float                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey) == 0x000004, "Wrong alignment on WaterBodyComponent_GetWaterVelocityAtSplineInputKey");
+static_assert(sizeof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterVelocityAtSplineInputKey");
+static_assert(offsetof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey, InKey) == 0x000000, "Member 'WaterBodyComponent_GetWaterVelocityAtSplineInputKey::InKey' has a wrong offset!");
+static_assert(offsetof(WaterBodyComponent_GetWaterVelocityAtSplineInputKey, ReturnValue) == 0x000004, "Member 'WaterBodyComponent_GetWaterVelocityAtSplineInputKey::ReturnValue' has a wrong offset!");
+
+// Function Water.WaterBodyComponent.GetWaterWaves
+// 0x0008 (0x0008 - 0x0000)
+struct WaterBodyComponent_GetWaterWaves final 
+{
+public:
+	class UWaterWavesBase*                        ReturnValue;                                       // 0x0000(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+};
+static_assert(alignof(WaterBodyComponent_GetWaterWaves) == 0x000008, "Wrong alignment on WaterBodyComponent_GetWaterWaves");
+static_assert(sizeof(WaterBodyComponent_GetWaterWaves) == 0x000008, "Wrong size on WaterBodyComponent_GetWaterWaves");
+static_assert(offsetof(WaterBodyComponent_GetWaterWaves, ReturnValue) == 0x000000, "Member 'WaterBodyComponent_GetWaterWaves::ReturnValue' has a wrong offset!");
 
 // Function Water.WaterBodyIsland.GetWaterSpline
 // 0x0008 (0x0008 - 0x0000)
@@ -604,7 +626,7 @@ struct WaterSubsystem_PrintToWaterLog final
 public:
 	class FString                                 Message;                                           // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bWarning;                                          // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_16B2[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D34[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(WaterSubsystem_PrintToWaterLog) == 0x000008, "Wrong alignment on WaterSubsystem_PrintToWaterLog");
 static_assert(sizeof(WaterSubsystem_PrintToWaterLog) == 0x000018, "Wrong size on WaterSubsystem_PrintToWaterLog");

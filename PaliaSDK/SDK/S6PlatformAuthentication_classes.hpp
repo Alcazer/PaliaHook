@@ -50,7 +50,7 @@ class US6TokenProvider final  : public UGameInstanceSubsystem
 {
 public:
 	FMulticastInlineDelegateProperty_             OnTokenReady;                                      // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E4A[0x50];                                    // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C8D[0x50];                                    // 0x0040(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void FetchTokenWithRetries();

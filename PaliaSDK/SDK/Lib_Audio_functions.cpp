@@ -17,539 +17,127 @@
 namespace SDK
 {
 
-// Function Lib_Audio.Lib_Audio_C.Ak Music Switch
-// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.ReturnToAreaMusic
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UAkSwitchValue*                   SwitchValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    IgnoreTimeOfDay                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                CallFunc_GetPlayerController_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            CallFunc_K2_GetPawn_ReturnValue                        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UBP_MusicManager_C*               CallFunc_GetMusicManager_AsBP_Music_Manager            (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UComp_Listener_Padding_C*         CallFunc_GetComponentByClass_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaSpatialAudioVolume*       LHighestVolume                                         (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
+// float                                   LHighestPriority                                       (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_True_if_break_was_hit_Variable               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class UAkRoomComponent*>         CallFunc_GetAudioRoomComponents_ReturnValue            (ReferenceParm, ContainsInstancedReference)
+// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Array_Length_ReturnValue_1                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Not_PreBool_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Greater_IntInt_ReturnValue                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkRoomComponent*                 CallFunc_Array_Get_Item                                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UComp_CV_Local_Music_C*           CallFunc_GetComponentByClass_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::Ak_Music_Switch(class UAkSwitchValue* SwitchValue, bool IgnoreTimeOfDay, class UObject* __WorldContext, bool CallFunc_IsDedicatedServer_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue, class APawn* CallFunc_K2_GetPawn_ReturnValue, class UBP_MusicManager_C* CallFunc_GetMusicManager_AsBP_Music_Manager, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class UComp_Listener_Padding_C* CallFunc_GetComponentByClass_ReturnValue, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_Not_PreBool_ReturnValue)
+void ULib_Audio_C::ReturnToAreaMusic(class UObject* __WorldContext, class AValeriaSpatialAudioVolume* LHighestVolume, float LHighestPriority, bool Temp_bool_True_if_break_was_hit_Variable, TArray<class UAkRoomComponent*>& CallFunc_GetAudioRoomComponents_ReturnValue, int32 CallFunc_Array_Length_ReturnValue, int32 CallFunc_Array_Length_ReturnValue_1, bool CallFunc_Not_PreBool_ReturnValue, bool CallFunc_Greater_IntInt_ReturnValue, int32 Temp_int_Array_Index_Variable, class UAkRoomComponent* CallFunc_Array_Get_Item, class AActor* CallFunc_GetOwner_ReturnValue, class UComp_CV_Local_Music_C* CallFunc_GetComponentByClass_ReturnValue, int32 Temp_int_Loop_Counter_Variable, bool CallFunc_Less_IntInt_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_BooleanAND_ReturnValue, bool CallFunc_IsValid_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "Ak Music Switch");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "ReturnToAreaMusic");
 
-	Params::Lib_Audio_C_Ak_Music_Switch Parms{};
+	Params::Lib_Audio_C_ReturnToAreaMusic Parms{};
 
-	Parms.SwitchValue = SwitchValue;
-	Parms.IgnoreTimeOfDay = IgnoreTimeOfDay;
 	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.CallFunc_GetPlayerController_ReturnValue = CallFunc_GetPlayerController_ReturnValue;
-	Parms.CallFunc_K2_GetPawn_ReturnValue = CallFunc_K2_GetPawn_ReturnValue;
-	Parms.CallFunc_GetMusicManager_AsBP_Music_Manager = CallFunc_GetMusicManager_AsBP_Music_Manager;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
-	Parms.CallFunc_GetComponentByClass_ReturnValue = CallFunc_GetComponentByClass_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
+	Parms.LHighestVolume = LHighestVolume;
+	Parms.LHighestPriority = LHighestPriority;
+	Parms.Temp_bool_True_if_break_was_hit_Variable = Temp_bool_True_if_break_was_hit_Variable;
+	Parms.CallFunc_GetAudioRoomComponents_ReturnValue = std::move(CallFunc_GetAudioRoomComponents_ReturnValue);
+	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
+	Parms.CallFunc_Array_Length_ReturnValue_1 = CallFunc_Array_Length_ReturnValue_1;
 	Parms.CallFunc_Not_PreBool_ReturnValue = CallFunc_Not_PreBool_ReturnValue;
+	Parms.CallFunc_Greater_IntInt_ReturnValue = CallFunc_Greater_IntInt_ReturnValue;
+	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
+	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
+	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
+	Parms.CallFunc_GetComponentByClass_ReturnValue = CallFunc_GetComponentByClass_ReturnValue;
+	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
+	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
+	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
+	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	CallFunc_GetAudioRoomComponents_ReturnValue = std::move(Parms.CallFunc_GetAudioRoomComponents_ReturnValue);
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.Ak Object Velocity
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.GetMusicManager
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class UAkComponent*                     AK                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  VectorLengthMax                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Get_Previous_Location                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InterpTimeMs                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Set_Previous_Location                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  VectorLength                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  VectorLengthClamped                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  LengthClamped                                          (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Length                                                 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             Object_velocity                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  VectorMax                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue_1         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_Subtract_VectorVector_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_VSize_ReturnValue                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_MapRangeClamped_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UBP_MusicManager_C*               AsBP_Music_Manager                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UGameInstance*                    CallFunc_GetGameInstance_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UValeriaGameInstance*             K2Node_DynamicCast_AsValeria_Game_Instance             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UMusicManager*                    CallFunc_GetMusicManager_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UBP_MusicManager_C*               K2Node_DynamicCast_AsBP_Music_Manager                  (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess_1                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::Ak_Object_Velocity(class UAkComponent* AK, double VectorLengthMax, double Delta_Time, const struct FVector& Get_Previous_Location, int32 InterpTimeMs, class UObject* __WorldContext, struct FVector* Set_Previous_Location, double* VectorLength, double* VectorLengthClamped, double LengthClamped, double Length, class FName Object_velocity, double VectorMax, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue_1, const struct FVector& CallFunc_Subtract_VectorVector_ReturnValue, double CallFunc_VSize_ReturnValue, double CallFunc_MapRangeClamped_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
+void ULib_Audio_C::GetMusicManager(class UObject* __WorldContext, class UBP_MusicManager_C** AsBP_Music_Manager, class UGameInstance* CallFunc_GetGameInstance_ReturnValue, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance, bool K2Node_DynamicCast_bSuccess, class UMusicManager* CallFunc_GetMusicManager_ReturnValue, class UBP_MusicManager_C* K2Node_DynamicCast_AsBP_Music_Manager, bool K2Node_DynamicCast_bSuccess_1)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "Ak Object Velocity");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "GetMusicManager");
 
-	Params::Lib_Audio_C_Ak_Object_Velocity Parms{};
+	Params::Lib_Audio_C_GetMusicManager Parms{};
 
-	Parms.AK = AK;
-	Parms.VectorLengthMax = VectorLengthMax;
-	Parms.Delta_Time = Delta_Time;
-	Parms.Get_Previous_Location = std::move(Get_Previous_Location);
-	Parms.InterpTimeMs = InterpTimeMs;
 	Parms.__WorldContext = __WorldContext;
-	Parms.LengthClamped = LengthClamped;
-	Parms.Length = Length;
-	Parms.Object_velocity = Object_velocity;
-	Parms.VectorMax = VectorMax;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
-	Parms.CallFunc_K2_GetComponentLocation_ReturnValue_1 = std::move(CallFunc_K2_GetComponentLocation_ReturnValue_1);
-	Parms.CallFunc_Subtract_VectorVector_ReturnValue = std::move(CallFunc_Subtract_VectorVector_ReturnValue);
-	Parms.CallFunc_VSize_ReturnValue = CallFunc_VSize_ReturnValue;
-	Parms.CallFunc_MapRangeClamped_ReturnValue = CallFunc_MapRangeClamped_ReturnValue;
-	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
-	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
+	Parms.CallFunc_GetGameInstance_ReturnValue = CallFunc_GetGameInstance_ReturnValue;
+	Parms.K2Node_DynamicCast_AsValeria_Game_Instance = K2Node_DynamicCast_AsValeria_Game_Instance;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_GetMusicManager_ReturnValue = CallFunc_GetMusicManager_ReturnValue;
+	Parms.K2Node_DynamicCast_AsBP_Music_Manager = K2Node_DynamicCast_AsBP_Music_Manager;
+	Parms.K2Node_DynamicCast_bSuccess_1 = K2Node_DynamicCast_bSuccess_1;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Set_Previous_Location != nullptr)
-		*Set_Previous_Location = std::move(Parms.Set_Previous_Location);
-
-	if (VectorLength != nullptr)
-		*VectorLength = Parms.VectorLength;
-
-	if (VectorLengthClamped != nullptr)
-		*VectorLengthClamped = Parms.VectorLengthClamped;
+	if (AsBP_Music_Manager != nullptr)
+		*AsBP_Music_Manager = Parms.AsBP_Music_Manager;
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.AkEventActor
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.Try to Propagate Rtpcs
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class USceneComponent*                  CallFunc_K2_GetRootComponent_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_AkGetComponent_ComponentCreated               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     CallFunc_AkGetComponent_AkComponent                    (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
-// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-int32 ULib_Audio_C::AkEventActor(class UAkAudioEvent* AkEvent, class AActor* Actor, class UObject* __WorldContext, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, class USceneComponent* CallFunc_K2_GetRootComponent_ReturnValue, bool CallFunc_AkGetComponent_ComponentCreated, class UAkComponent* CallFunc_AkGetComponent_AkComponent, bool CallFunc_Try_to_Propagate_Rtpcs_Success, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_1, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, bool CallFunc_IsValid_ReturnValue_2)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventActor");
-
-	Params::Lib_Audio_C_AkEventActor Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.Actor = Actor;
-	Parms.__WorldContext = __WorldContext;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
-	Parms.CallFunc_K2_GetRootComponent_ReturnValue = CallFunc_K2_GetRootComponent_ReturnValue;
-	Parms.CallFunc_AkGetComponent_ComponentCreated = CallFunc_AkGetComponent_ComponentCreated;
-	Parms.CallFunc_AkGetComponent_AkComponent = CallFunc_AkGetComponent_AkComponent;
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
-	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
-	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
-	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
-	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
-	Parms.CallFunc_K2_GetActorLocation_ReturnValue = std::move(CallFunc_K2_GetActorLocation_ReturnValue);
-	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
-	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventComponent
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 // class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_VAkEventComponent_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UComp_RtpcTracker_C*              Tracker                                                (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_TryToPropagateRtpcs_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ULib_Audio_C::AkEventComponent(class UAkAudioEvent* AkEvent, class UAkComponent* AkComponent, bool GetRtpcFromOwner, class UObject* __WorldContext, double LocallyControlled, class AActor* CallFunc_GetOwner_ReturnValue, int32 CallFunc_VAkEventComponent_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success)
+void ULib_Audio_C::Try_to_Propagate_Rtpcs(class AActor* Actor, class UAkComponent* AkComponent, class UObject* __WorldContext, bool* Success, class UComp_RtpcTracker_C* Tracker, bool CallFunc_TryToPropagateRtpcs_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventComponent");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "Try to Propagate Rtpcs");
 
-	Params::Lib_Audio_C_AkEventComponent Parms{};
+	Params::Lib_Audio_C_Try_to_Propagate_Rtpcs Parms{};
 
-	Parms.AkEvent = AkEvent;
-	Parms.AkComponent = AkComponent;
-	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
-	Parms.__WorldContext = __WorldContext;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
-	Parms.CallFunc_VAkEventComponent_ReturnValue = CallFunc_VAkEventComponent_ReturnValue;
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventComponentCallback
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallbackMask                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>PostEventCallback                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
-// bool                                    CheckAttenuation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_GetAutoDestroy_ReturnValue                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_GetOwner_ReturnValue_1                        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_VIsWithinAttenuation_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
-// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-int32 ULib_Audio_C::AkEventComponentCallback(class UAkAudioEvent* AkEvent, class UAkComponent* AkComponent, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, bool CheckAttenuation, bool GetRtpcFromOwner, class UObject* __WorldContext, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success, bool CallFunc_GetAutoDestroy_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue_1, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_1, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, bool CallFunc_VIsWithinAttenuation_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, bool CallFunc_IsValid_ReturnValue_2, int32 CallFunc_PostAkEvent_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventComponentCallback");
-
-	Params::Lib_Audio_C_AkEventComponentCallback Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.AkComponent = AkComponent;
-	Parms.CallbackMask = CallbackMask;
-	Parms.PostEventCallback = PostEventCallback;
-	Parms.CheckAttenuation = CheckAttenuation;
-	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
-	Parms.__WorldContext = __WorldContext;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-	Parms.CallFunc_GetAutoDestroy_ReturnValue = CallFunc_GetAutoDestroy_ReturnValue;
-	Parms.CallFunc_GetOwner_ReturnValue_1 = CallFunc_GetOwner_ReturnValue_1;
-	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
-	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
-	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
-	Parms.CallFunc_VIsWithinAttenuation_ReturnValue = CallFunc_VIsWithinAttenuation_ReturnValue;
-	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
-	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
-	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
-	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventGlobal
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_PostGlobalEvent_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-int32 ULib_Audio_C::AkEventGlobal(class UAkAudioEvent* AkEvent, class UObject* __WorldContext, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, int32 CallFunc_PostGlobalEvent_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventGlobal");
-
-	Params::Lib_Audio_C_AkEventGlobal Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_PostGlobalEvent_ReturnValue = CallFunc_PostGlobalEvent_ReturnValue;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventLocation
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    GetRtpcsFromInstigator                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComponent                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Playing_ID                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   PlayingID                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComp                                                 (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     CallFunc_VAkEventLocation_OutComponent                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_VAkEventLocation_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::AkEventLocation(class UAkAudioEvent* AkEvent, const struct FVector& Location, class AActor* Instigator, bool GetRtpcsFromInstigator, class UObject* __WorldContext, class UAkComponent** AkComponent, int32* Playing_ID, int32 PlayingID, class UAkComponent* AkComp, double LocallyControlled, class UAkComponent* CallFunc_VAkEventLocation_OutComponent, int32 CallFunc_VAkEventLocation_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventLocation");
-
-	Params::Lib_Audio_C_AkEventLocation Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.Location = std::move(Location);
-	Parms.Instigator = Instigator;
-	Parms.GetRtpcsFromInstigator = GetRtpcsFromInstigator;
-	Parms.__WorldContext = __WorldContext;
-	Parms.PlayingID = PlayingID;
-	Parms.AkComp = AkComp;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_VAkEventLocation_OutComponent = CallFunc_VAkEventLocation_OutComponent;
-	Parms.CallFunc_VAkEventLocation_ReturnValue = CallFunc_VAkEventLocation_ReturnValue;
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (AkComponent != nullptr)
-		*AkComponent = Parms.AkComponent;
-
-	if (Playing_ID != nullptr)
-		*Playing_ID = Parms.Playing_ID;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventLocationWithActor
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    GetRtpcFromActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComponent                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   Playing_ID                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComp                                                 (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     CallFunc_AkSpawnAtLocation_ReturnValue                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
-// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::AkEventLocationWithActor(class UAkAudioEvent* AkEvent, const struct FVector& Location, class AActor* Actor, bool GetRtpcFromActor, class UObject* __WorldContext, class UAkComponent** AkComponent, int32* Playing_ID, class UAkComponent* AkComp, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, bool CallFunc_Try_to_Propagate_Rtpcs_Success, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, class UAkComponent* CallFunc_AkSpawnAtLocation_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, bool CallFunc_IsValid_ReturnValue_1, float CallFunc_SetRTPCValue_Value_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventLocationWithActor");
-
-	Params::Lib_Audio_C_AkEventLocationWithActor Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.Location = std::move(Location);
 	Parms.Actor = Actor;
-	Parms.GetRtpcFromActor = GetRtpcFromActor;
-	Parms.__WorldContext = __WorldContext;
-	Parms.AkComp = AkComp;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
-	Parms.CallFunc_AkSpawnAtLocation_ReturnValue = CallFunc_AkSpawnAtLocation_ReturnValue;
-	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
-	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
-	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
-	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
-	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (AkComponent != nullptr)
-		*AkComponent = Parms.AkComponent;
-
-	if (Playing_ID != nullptr)
-		*Playing_ID = Parms.Playing_ID;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkEventSpawnAttached
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class USceneComponent*                  Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class FName                             SocketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    AutoDestroy                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AK                                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   ID                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   PlayingID                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComponent                                            (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue_1         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_GetSocketLocation_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     CallFunc_SpawnAkComponentAtLocation_ReturnValue        (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_K2_AttachToComponent_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
-// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::AkEventSpawnAttached(class UAkAudioEvent* AkEvent, class AActor* Instigator, class USceneComponent* Owner, class FName SocketName, bool AutoDestroy, bool GetRtpcFromOwner, class UObject* __WorldContext, class UAkComponent** AK, int32* ID, int32 PlayingID, class UAkComponent* AkComponent, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue_1, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, const struct FVector& CallFunc_GetSocketLocation_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, class UAkComponent* CallFunc_SpawnAkComponentAtLocation_ReturnValue, bool CallFunc_K2_AttachToComponent_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventSpawnAttached");
-
-	Params::Lib_Audio_C_AkEventSpawnAttached Parms{};
-
-	Parms.AkEvent = AkEvent;
-	Parms.Instigator = Instigator;
-	Parms.Owner = Owner;
-	Parms.SocketName = SocketName;
-	Parms.AutoDestroy = AutoDestroy;
-	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
-	Parms.__WorldContext = __WorldContext;
-	Parms.PlayingID = PlayingID;
 	Parms.AkComponent = AkComponent;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
-	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
-	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
-	Parms.CallFunc_K2_GetComponentLocation_ReturnValue_1 = std::move(CallFunc_K2_GetComponentLocation_ReturnValue_1);
-	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
-	Parms.CallFunc_GetSocketLocation_ReturnValue = std::move(CallFunc_GetSocketLocation_ReturnValue);
-	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
-	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
-	Parms.CallFunc_SpawnAkComponentAtLocation_ReturnValue = CallFunc_SpawnAkComponentAtLocation_ReturnValue;
-	Parms.CallFunc_K2_AttachToComponent_ReturnValue = CallFunc_K2_AttachToComponent_ReturnValue;
-	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
-	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
-	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (AK != nullptr)
-		*AK = Parms.AK;
-
-	if (ID != nullptr)
-		*ID = Parms.ID;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.AkExecuteActionOnPlayingID
-// (Static, Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// EAkActionOnEventType                    ActionType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   PlayingID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   TransitionDuration                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EAkCurveInterpolation                   FadeCurve                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::AkExecuteActionOnPlayingID(EAkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, class UObject* __WorldContext)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkExecuteActionOnPlayingID");
-
-	Params::Lib_Audio_C_AkExecuteActionOnPlayingID Parms{};
-
-	Parms.ActionType = ActionType;
-	Parms.PlayingID = PlayingID;
-	Parms.TransitionDuration = TransitionDuration;
-	Parms.FadeCurve = FadeCurve;
 	Parms.__WorldContext = __WorldContext;
+	Parms.Tracker = Tracker;
+	Parms.CallFunc_TryToPropagateRtpcs_ReturnValue = CallFunc_TryToPropagateRtpcs_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Success != nullptr)
+		*Success = Parms.Success;
 }
 
 
@@ -595,135 +183,65 @@ void ULib_Audio_C::AkGetComponent(class USceneComponent* AttachToComponent, clas
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.AkSetRTPC
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UAkRtpc*                          RTPCValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   InterpolationTimeMs                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TArray<class UAkComponent*>             AkComponents                                           (Edit, BlueprintVisible, ContainsInstancedReference)
-// class UComp_RtpcTracker_C*              RtpcTracker                                            (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_K2_AkSetRTPC_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::AkSetRTPC(class UAkRtpc* RTPCValue, double Value, int32 InterpolationTimeMs, class AActor* Actor, class UObject* __WorldContext, const TArray<class UAkComponent*>& AkComponents, class UComp_RtpcTracker_C* RtpcTracker, float CallFunc_K2_AkSetRTPC_Value_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkSetRTPC");
-
-	Params::Lib_Audio_C_AkSetRTPC Parms{};
-
-	Parms.RTPCValue = RTPCValue;
-	Parms.Value = Value;
-	Parms.InterpolationTimeMs = InterpolationTimeMs;
-	Parms.Actor = Actor;
-	Parms.__WorldContext = __WorldContext;
-	Parms.AkComponents = std::move(AkComponents);
-	Parms.RtpcTracker = RtpcTracker;
-	Parms.CallFunc_K2_AkSetRTPC_Value_ImplicitCast = CallFunc_K2_AkSetRTPC_Value_ImplicitCast;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.Broadcast Ak Event Location
+// Function Lib_Audio.Lib_Audio_C.AkExecuteActionOnPlayingID
 // (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           ActorHit                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    WasDamaged                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   Search_Radius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                PCT_To_Exclude                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset>Held_ItemType                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// EAkActionOnEventType                    ActionType                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PlayingID                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   TransitionDuration                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EAkCurveInterpolation                   FadeCurve                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaPlayerController*         K2Node_DynamicCast_AsValeria_Player_Controller         (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::Broadcast_Ak_Event_Location(class AActor* ActorHit, bool WasDamaged, class AActor* Instigator, int32 Search_Radius, class APlayerController* PCT_To_Exclude, TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> Held_ItemType, class UObject* __WorldContext, double LocallyControlled, class AValeriaPlayerController* K2Node_DynamicCast_AsValeria_Player_Controller, bool K2Node_DynamicCast_bSuccess, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue)
+void ULib_Audio_C::AkExecuteActionOnPlayingID(EAkActionOnEventType ActionType, int32 PlayingID, int32 TransitionDuration, EAkCurveInterpolation FadeCurve, class UObject* __WorldContext)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "Broadcast Ak Event Location");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkExecuteActionOnPlayingID");
 
-	Params::Lib_Audio_C_Broadcast_Ak_Event_Location Parms{};
+	Params::Lib_Audio_C_AkExecuteActionOnPlayingID Parms{};
 
-	Parms.ActorHit = ActorHit;
-	Parms.WasDamaged = WasDamaged;
-	Parms.Instigator = Instigator;
-	Parms.Search_Radius = Search_Radius;
-	Parms.PCT_To_Exclude = PCT_To_Exclude;
-	Parms.Held_ItemType = Held_ItemType;
+	Parms.ActionType = ActionType;
+	Parms.PlayingID = PlayingID;
+	Parms.TransitionDuration = TransitionDuration;
+	Parms.FadeCurve = FadeCurve;
 	Parms.__WorldContext = __WorldContext;
-	Parms.LocallyControlled = LocallyControlled;
-	Parms.K2Node_DynamicCast_AsValeria_Player_Controller = K2Node_DynamicCast_AsValeria_Player_Controller;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_K2_GetActorLocation_ReturnValue = std::move(CallFunc_K2_GetActorLocation_ReturnValue);
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.FindClosestVector
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.IsWet
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// TArray<struct FVector>                  InVectors                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
-// struct FVector                          ReferencePoint                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Location                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ClosestVector                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  IterateDistance                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   ClosestInd                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ClosestVect                                            (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  Distance                                               (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_Array_Get_Item                                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_DoubleDouble_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Vector_Distance_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_IsWet                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UValeriaWeather*                  CallFunc_GetWorldSubsystem_ReturnValue                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsInside_IsInside                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FWeatherStateProperties          CallFunc_GetCurrentWorldWeatherState_ReturnValue       ()
+// bool                                    CallFunc_HasTag_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::FindClosestVector(TArray<struct FVector>& InVectors, const struct FVector& ReferencePoint, class UObject* __WorldContext, struct FVector* ClosestVector, int32* Param_Index, double IterateDistance, int32 ClosestInd, const struct FVector& ClosestVect, double Distance, int32 Temp_int_Array_Index_Variable, int32 CallFunc_Array_Length_ReturnValue, const struct FVector& CallFunc_Array_Get_Item, int32 Temp_int_Loop_Counter_Variable, bool CallFunc_Less_IntInt_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_Less_DoubleDouble_ReturnValue, double CallFunc_Vector_Distance_ReturnValue)
+void ULib_Audio_C::IsWet(struct FVector& Location, class UObject* __WorldContext, bool* Param_IsWet, class UValeriaWeather* CallFunc_GetWorldSubsystem_ReturnValue, bool CallFunc_IsInside_IsInside, const struct FWeatherStateProperties& CallFunc_GetCurrentWorldWeatherState_ReturnValue, bool CallFunc_HasTag_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "FindClosestVector");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "IsWet");
 
-	Params::Lib_Audio_C_FindClosestVector Parms{};
+	Params::Lib_Audio_C_IsWet Parms{};
 
-	Parms.InVectors = std::move(InVectors);
-	Parms.ReferencePoint = std::move(ReferencePoint);
+	Parms.Location = std::move(Location);
 	Parms.__WorldContext = __WorldContext;
-	Parms.IterateDistance = IterateDistance;
-	Parms.ClosestInd = ClosestInd;
-	Parms.ClosestVect = std::move(ClosestVect);
-	Parms.Distance = Distance;
-	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
-	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
-	Parms.CallFunc_Array_Get_Item = std::move(CallFunc_Array_Get_Item);
-	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
-	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
-	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
-	Parms.CallFunc_Less_DoubleDouble_ReturnValue = CallFunc_Less_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Vector_Distance_ReturnValue = CallFunc_Vector_Distance_ReturnValue;
+	Parms.CallFunc_GetWorldSubsystem_ReturnValue = CallFunc_GetWorldSubsystem_ReturnValue;
+	Parms.CallFunc_IsInside_IsInside = CallFunc_IsInside_IsInside;
+	Parms.CallFunc_GetCurrentWorldWeatherState_ReturnValue = std::move(CallFunc_GetCurrentWorldWeatherState_ReturnValue);
+	Parms.CallFunc_HasTag_ReturnValue = CallFunc_HasTag_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	InVectors = std::move(Parms.InVectors);
-
-	if (ClosestVector != nullptr)
-		*ClosestVector = std::move(Parms.ClosestVector);
-
-	if (Param_Index != nullptr)
-		*Param_Index = Parms.Param_Index;
+	if (Param_IsWet != nullptr)
+		*Param_IsWet = Parms.Param_IsWet;
 }
 
 
@@ -849,103 +367,38 @@ void ULib_Audio_C::GetAkAudioRoomAtLocation(struct FVector& Location, class UObj
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.GetMusicManager
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Function Lib_Audio.Lib_Audio_C.PlayTempBeep
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UBP_MusicManager_C*               AsBP_Music_Manager                                     (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UGameInstance*                    CallFunc_GetGameInstance_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UValeriaGameInstance*             K2Node_DynamicCast_AsValeria_Game_Instance             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UMusicManager*                    CallFunc_GetMusicManager_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UBP_MusicManager_C*               K2Node_DynamicCast_AsBP_Music_Manager                  (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess_1                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::GetMusicManager(class UObject* __WorldContext, class UBP_MusicManager_C** AsBP_Music_Manager, class UGameInstance* CallFunc_GetGameInstance_ReturnValue, class UValeriaGameInstance* K2Node_DynamicCast_AsValeria_Game_Instance, bool K2Node_DynamicCast_bSuccess, class UMusicManager* CallFunc_GetMusicManager_ReturnValue, class UBP_MusicManager_C* K2Node_DynamicCast_AsBP_Music_Manager, bool K2Node_DynamicCast_bSuccess_1)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "GetMusicManager");
-
-	Params::Lib_Audio_C_GetMusicManager Parms{};
-
-	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_GetGameInstance_ReturnValue = CallFunc_GetGameInstance_ReturnValue;
-	Parms.K2Node_DynamicCast_AsValeria_Game_Instance = K2Node_DynamicCast_AsValeria_Game_Instance;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.CallFunc_GetMusicManager_ReturnValue = CallFunc_GetMusicManager_ReturnValue;
-	Parms.K2Node_DynamicCast_AsBP_Music_Manager = K2Node_DynamicCast_AsBP_Music_Manager;
-	Parms.K2Node_DynamicCast_bSuccess_1 = K2Node_DynamicCast_bSuccess_1;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (AsBP_Music_Manager != nullptr)
-		*AsBP_Music_Manager = Parms.AsBP_Music_Manager;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.IsWet
-// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// struct FVector                          Location                                               (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsWet                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UValeriaWeather*                  CallFunc_GetWorldSubsystem_ReturnValue                 (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsInside_IsInside                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FWeatherStateProperties          CallFunc_GetCurrentWorldWeatherState_ReturnValue       ()
-// bool                                    CallFunc_HasTag_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void ULib_Audio_C::IsWet(struct FVector& Location, class UObject* __WorldContext, bool* Param_IsWet, class UValeriaWeather* CallFunc_GetWorldSubsystem_ReturnValue, bool CallFunc_IsInside_IsInside, const struct FWeatherStateProperties& CallFunc_GetCurrentWorldWeatherState_ReturnValue, bool CallFunc_HasTag_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "IsWet");
-
-	Params::Lib_Audio_C_IsWet Parms{};
-
-	Parms.Location = std::move(Location);
-	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_GetWorldSubsystem_ReturnValue = CallFunc_GetWorldSubsystem_ReturnValue;
-	Parms.CallFunc_IsInside_IsInside = CallFunc_IsInside_IsInside;
-	Parms.CallFunc_GetCurrentWorldWeatherState_ReturnValue = std::move(CallFunc_GetCurrentWorldWeatherState_ReturnValue);
-	Parms.CallFunc_HasTag_ReturnValue = CallFunc_HasTag_ReturnValue;
-
-	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	if (Param_IsWet != nullptr)
-		*Param_IsWet = Parms.Param_IsWet;
-}
-
-
-// Function Lib_Audio.Lib_Audio_C.IsWithinAttenuation
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    Global                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Within                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_VIsWithinAttenuation_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_BuildIsShipping_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     CallFunc_AkEventLocation_AkComponent                   (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_AkEventLocation_Playing_ID                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_AkEventGlobal_ReturnValue                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::IsWithinAttenuation(class UAkAudioEvent* Event, const struct FVector& Location, class UObject* __WorldContext, bool* Within, bool CallFunc_VIsWithinAttenuation_ReturnValue)
+int32 ULib_Audio_C::PlayTempBeep(bool Global, const struct FVector& Location, class UObject* __WorldContext, bool CallFunc_BuildIsShipping_ReturnValue, class UAkComponent* CallFunc_AkEventLocation_AkComponent, int32 CallFunc_AkEventLocation_Playing_ID, int32 CallFunc_AkEventGlobal_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "IsWithinAttenuation");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "PlayTempBeep");
 
-	Params::Lib_Audio_C_IsWithinAttenuation Parms{};
+	Params::Lib_Audio_C_PlayTempBeep Parms{};
 
-	Parms.Event = Event;
+	Parms.Global = Global;
 	Parms.Location = std::move(Location);
 	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_VIsWithinAttenuation_ReturnValue = CallFunc_VIsWithinAttenuation_ReturnValue;
+	Parms.CallFunc_BuildIsShipping_ReturnValue = CallFunc_BuildIsShipping_ReturnValue;
+	Parms.CallFunc_AkEventLocation_AkComponent = CallFunc_AkEventLocation_AkComponent;
+	Parms.CallFunc_AkEventLocation_Playing_ID = CallFunc_AkEventLocation_Playing_ID;
+	Parms.CallFunc_AkEventGlobal_ReturnValue = CallFunc_AkEventGlobal_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Within != nullptr)
-		*Within = Parms.Within;
+	return Parms.ReturnValue;
 }
 
 
@@ -995,94 +448,305 @@ void ULib_Audio_C::LoadAudioUserSettings(class UObject* __WorldContext, class UA
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.PlayTempBeep
-// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.Ak Music Switch
+// (Static, Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    Global                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkSwitchValue*                   SwitchValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    IgnoreTimeOfDay                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_BuildIsShipping_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     CallFunc_AkEventLocation_AkComponent                   (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_AkEventLocation_Playing_ID                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_AkEventGlobal_ReturnValue                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                CallFunc_GetPlayerController_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            CallFunc_K2_GetPawn_ReturnValue                        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UBP_MusicManager_C*               CallFunc_GetMusicManager_AsBP_Music_Manager            (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UComp_Listener_Padding_C*         CallFunc_GetComponentByClass_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Not_PreBool_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-int32 ULib_Audio_C::PlayTempBeep(bool Global, const struct FVector& Location, class UObject* __WorldContext, bool CallFunc_BuildIsShipping_ReturnValue, class UAkComponent* CallFunc_AkEventLocation_AkComponent, int32 CallFunc_AkEventLocation_Playing_ID, int32 CallFunc_AkEventGlobal_ReturnValue)
+void ULib_Audio_C::Ak_Music_Switch(class UAkSwitchValue* SwitchValue, bool IgnoreTimeOfDay, class UObject* __WorldContext, bool CallFunc_IsDedicatedServer_ReturnValue, class APlayerController* CallFunc_GetPlayerController_ReturnValue, class APawn* CallFunc_K2_GetPawn_ReturnValue, class UBP_MusicManager_C* CallFunc_GetMusicManager_AsBP_Music_Manager, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, class UComp_Listener_Padding_C* CallFunc_GetComponentByClass_ReturnValue, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_Not_PreBool_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "PlayTempBeep");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "Ak Music Switch");
 
-	Params::Lib_Audio_C_PlayTempBeep Parms{};
+	Params::Lib_Audio_C_Ak_Music_Switch Parms{};
 
-	Parms.Global = Global;
-	Parms.Location = std::move(Location);
+	Parms.SwitchValue = SwitchValue;
+	Parms.IgnoreTimeOfDay = IgnoreTimeOfDay;
 	Parms.__WorldContext = __WorldContext;
-	Parms.CallFunc_BuildIsShipping_ReturnValue = CallFunc_BuildIsShipping_ReturnValue;
-	Parms.CallFunc_AkEventLocation_AkComponent = CallFunc_AkEventLocation_AkComponent;
-	Parms.CallFunc_AkEventLocation_Playing_ID = CallFunc_AkEventLocation_Playing_ID;
-	Parms.CallFunc_AkEventGlobal_ReturnValue = CallFunc_AkEventGlobal_ReturnValue;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.CallFunc_GetPlayerController_ReturnValue = CallFunc_GetPlayerController_ReturnValue;
+	Parms.CallFunc_K2_GetPawn_ReturnValue = CallFunc_K2_GetPawn_ReturnValue;
+	Parms.CallFunc_GetMusicManager_AsBP_Music_Manager = CallFunc_GetMusicManager_AsBP_Music_Manager;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
+	Parms.CallFunc_GetComponentByClass_ReturnValue = CallFunc_GetComponentByClass_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
+	Parms.CallFunc_Not_PreBool_ReturnValue = CallFunc_Not_PreBool_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.ReturnToAreaMusic
-// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.FindClosestVector
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
+// TArray<struct FVector>                  InVectors                                              (BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm)
+// struct FVector                          ReferencePoint                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AValeriaSpatialAudioVolume*       LHighestVolume                                         (Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
-// float                                   LHighestPriority                                       (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_True_if_break_was_hit_Variable               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UAkRoomComponent*>         CallFunc_GetAudioRoomComponents_ReturnValue            (ReferenceParm, ContainsInstancedReference)
-// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Array_Length_ReturnValue_1                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Not_PreBool_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Greater_IntInt_ReturnValue                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ClosestVector                                          (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Param_Index                                            (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  IterateDistance                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ClosestInd                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ClosestVect                                            (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Distance                                               (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UAkRoomComponent*                 CallFunc_Array_Get_Item                                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UComp_CV_Local_Music_C*           CallFunc_GetComponentByClass_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_Array_Get_Item                                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_DoubleDouble_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Vector_Distance_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::ReturnToAreaMusic(class UObject* __WorldContext, class AValeriaSpatialAudioVolume* LHighestVolume, float LHighestPriority, bool Temp_bool_True_if_break_was_hit_Variable, TArray<class UAkRoomComponent*>& CallFunc_GetAudioRoomComponents_ReturnValue, int32 CallFunc_Array_Length_ReturnValue, int32 CallFunc_Array_Length_ReturnValue_1, bool CallFunc_Not_PreBool_ReturnValue, bool CallFunc_Greater_IntInt_ReturnValue, int32 Temp_int_Array_Index_Variable, class UAkRoomComponent* CallFunc_Array_Get_Item, class AActor* CallFunc_GetOwner_ReturnValue, class UComp_CV_Local_Music_C* CallFunc_GetComponentByClass_ReturnValue, int32 Temp_int_Loop_Counter_Variable, bool CallFunc_Less_IntInt_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_BooleanAND_ReturnValue, bool CallFunc_IsValid_ReturnValue)
+void ULib_Audio_C::FindClosestVector(TArray<struct FVector>& InVectors, const struct FVector& ReferencePoint, class UObject* __WorldContext, struct FVector* ClosestVector, int32* Param_Index, double IterateDistance, int32 ClosestInd, const struct FVector& ClosestVect, double Distance, int32 Temp_int_Array_Index_Variable, int32 CallFunc_Array_Length_ReturnValue, const struct FVector& CallFunc_Array_Get_Item, int32 Temp_int_Loop_Counter_Variable, bool CallFunc_Less_IntInt_ReturnValue, int32 CallFunc_Add_IntInt_ReturnValue, bool CallFunc_Less_DoubleDouble_ReturnValue, double CallFunc_Vector_Distance_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "ReturnToAreaMusic");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "FindClosestVector");
 
-	Params::Lib_Audio_C_ReturnToAreaMusic Parms{};
+	Params::Lib_Audio_C_FindClosestVector Parms{};
 
+	Parms.InVectors = std::move(InVectors);
+	Parms.ReferencePoint = std::move(ReferencePoint);
 	Parms.__WorldContext = __WorldContext;
-	Parms.LHighestVolume = LHighestVolume;
-	Parms.LHighestPriority = LHighestPriority;
-	Parms.Temp_bool_True_if_break_was_hit_Variable = Temp_bool_True_if_break_was_hit_Variable;
-	Parms.CallFunc_GetAudioRoomComponents_ReturnValue = std::move(CallFunc_GetAudioRoomComponents_ReturnValue);
-	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
-	Parms.CallFunc_Array_Length_ReturnValue_1 = CallFunc_Array_Length_ReturnValue_1;
-	Parms.CallFunc_Not_PreBool_ReturnValue = CallFunc_Not_PreBool_ReturnValue;
-	Parms.CallFunc_Greater_IntInt_ReturnValue = CallFunc_Greater_IntInt_ReturnValue;
+	Parms.IterateDistance = IterateDistance;
+	Parms.ClosestInd = ClosestInd;
+	Parms.ClosestVect = std::move(ClosestVect);
+	Parms.Distance = Distance;
 	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
-	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
-	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
-	Parms.CallFunc_GetComponentByClass_ReturnValue = CallFunc_GetComponentByClass_ReturnValue;
+	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
+	Parms.CallFunc_Array_Get_Item = std::move(CallFunc_Array_Get_Item);
 	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
 	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
 	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
-	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_Less_DoubleDouble_ReturnValue = CallFunc_Less_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Vector_Distance_ReturnValue = CallFunc_Vector_Distance_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	CallFunc_GetAudioRoomComponents_ReturnValue = std::move(Parms.CallFunc_GetAudioRoomComponents_ReturnValue);
+	InVectors = std::move(Parms.InVectors);
+
+	if (ClosestVector != nullptr)
+		*ClosestVector = std::move(Parms.ClosestVector);
+
+	if (Param_Index != nullptr)
+		*Param_Index = Parms.Param_Index;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkSetRTPC
+// (Static, Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkRtpc*                          RTPCValue                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  Value                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InterpolationTimeMs                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<class UAkComponent*>             AkComponents                                           (Edit, BlueprintVisible, ContainsInstancedReference)
+// class UComp_RtpcTracker_C*              RtpcTracker                                            (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_K2_AkSetRTPC_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::AkSetRTPC(class UAkRtpc* RTPCValue, double Value, int32 InterpolationTimeMs, class AActor* Actor, class UObject* __WorldContext, const TArray<class UAkComponent*>& AkComponents, class UComp_RtpcTracker_C* RtpcTracker, float CallFunc_K2_AkSetRTPC_Value_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkSetRTPC");
+
+	Params::Lib_Audio_C_AkSetRTPC Parms{};
+
+	Parms.RTPCValue = RTPCValue;
+	Parms.Value = Value;
+	Parms.InterpolationTimeMs = InterpolationTimeMs;
+	Parms.Actor = Actor;
+	Parms.__WorldContext = __WorldContext;
+	Parms.AkComponents = std::move(AkComponents);
+	Parms.RtpcTracker = RtpcTracker;
+	Parms.CallFunc_K2_AkSetRTPC_Value_ImplicitCast = CallFunc_K2_AkSetRTPC_Value_ImplicitCast;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.Broadcast Ak Event Location
+// (Static, Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           ActorHit                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    WasDamaged                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   Search_Radius                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                PCT_To_Exclude                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset>Held_ItemType                                          (BlueprintVisible, BlueprintReadOnly, Parm, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaPlayerController*         K2Node_DynamicCast_AsValeria_Player_Controller         (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::Broadcast_Ak_Event_Location(class AActor* ActorHit, bool WasDamaged, class AActor* Instigator, int32 Search_Radius, class APlayerController* PCT_To_Exclude, TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> Held_ItemType, class UObject* __WorldContext, double LocallyControlled, class AValeriaPlayerController* K2Node_DynamicCast_AsValeria_Player_Controller, bool K2Node_DynamicCast_bSuccess, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "Broadcast Ak Event Location");
+
+	Params::Lib_Audio_C_Broadcast_Ak_Event_Location Parms{};
+
+	Parms.ActorHit = ActorHit;
+	Parms.WasDamaged = WasDamaged;
+	Parms.Instigator = Instigator;
+	Parms.Search_Radius = Search_Radius;
+	Parms.PCT_To_Exclude = PCT_To_Exclude;
+	Parms.Held_ItemType = Held_ItemType;
+	Parms.__WorldContext = __WorldContext;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.K2Node_DynamicCast_AsValeria_Player_Controller = K2Node_DynamicCast_AsValeria_Player_Controller;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_K2_GetActorLocation_ReturnValue = std::move(CallFunc_K2_GetActorLocation_ReturnValue);
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkEventSpawnAttached
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class USceneComponent*                  Owner                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FName                             SocketName                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    AutoDestroy                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     Ak                                                     (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   ID                                                     (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PlayingID                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComponent                                            (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue_1         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_GetSocketLocation_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     CallFunc_SpawnAkComponentAtLocation_ReturnValue        (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_K2_AttachToComponent_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
+// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::AkEventSpawnAttached(class UAkAudioEvent* AkEvent, class AActor* Instigator, class USceneComponent* Owner, class FName SocketName, bool AutoDestroy, bool GetRtpcFromOwner, class UObject* __WorldContext, class UAkComponent** Ak, int32* ID, int32 PlayingID, class UAkComponent* AkComponent, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue_1, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, const struct FVector& CallFunc_GetSocketLocation_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, class UAkComponent* CallFunc_SpawnAkComponentAtLocation_ReturnValue, bool CallFunc_K2_AttachToComponent_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventSpawnAttached");
+
+	Params::Lib_Audio_C_AkEventSpawnAttached Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.Instigator = Instigator;
+	Parms.Owner = Owner;
+	Parms.SocketName = SocketName;
+	Parms.AutoDestroy = AutoDestroy;
+	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
+	Parms.__WorldContext = __WorldContext;
+	Parms.PlayingID = PlayingID;
+	Parms.AkComponent = AkComponent;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
+	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
+	Parms.CallFunc_K2_GetComponentLocation_ReturnValue_1 = std::move(CallFunc_K2_GetComponentLocation_ReturnValue_1);
+	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
+	Parms.CallFunc_GetSocketLocation_ReturnValue = std::move(CallFunc_GetSocketLocation_ReturnValue);
+	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
+	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
+	Parms.CallFunc_SpawnAkComponentAtLocation_ReturnValue = CallFunc_SpawnAkComponentAtLocation_ReturnValue;
+	Parms.CallFunc_K2_AttachToComponent_ReturnValue = CallFunc_K2_AttachToComponent_ReturnValue;
+	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
+	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
+	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Ak != nullptr)
+		*Ak = Parms.Ak;
+
+	if (ID != nullptr)
+		*ID = Parms.ID;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.SurfaceDTPM
+// (Static, Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPhysicalMaterial*                PhysMat                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    Sound                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                Decal_Left_Foot                                        (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UMaterialInstance*                Decal_Right_Foot                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UNiagaraSystem*                   Niagara_System                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FName                             DefaultInGamePhysmat                                   (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             RowNamePhysmat                                         (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EPhysicalSurface                        DefaultPhysmatEditorAudition                           (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::SurfaceDTPM(class AActor* Actor, class UDataTable* DataTable, class UPhysicalMaterial* PhysMat, class UObject* __WorldContext, class UAkAudioEvent** Sound, class UMaterialInstance** Decal_Left_Foot, class UMaterialInstance** Decal_Right_Foot, class UNiagaraSystem** Niagara_System, class FName DefaultInGamePhysmat, class FName RowNamePhysmat, EPhysicalSurface DefaultPhysmatEditorAudition)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "SurfaceDTPM");
+
+	Params::Lib_Audio_C_SurfaceDTPM Parms{};
+
+	Parms.Actor = Actor;
+	Parms.DataTable = DataTable;
+	Parms.PhysMat = PhysMat;
+	Parms.__WorldContext = __WorldContext;
+	Parms.DefaultInGamePhysmat = DefaultInGamePhysmat;
+	Parms.RowNamePhysmat = RowNamePhysmat;
+	Parms.DefaultPhysmatEditorAudition = DefaultPhysmatEditorAudition;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (Sound != nullptr)
+		*Sound = Parms.Sound;
+
+	if (Decal_Left_Foot != nullptr)
+		*Decal_Left_Foot = Parms.Decal_Left_Foot;
+
+	if (Decal_Right_Foot != nullptr)
+		*Decal_Right_Foot = Parms.Decal_Right_Foot;
+
+	if (Niagara_System != nullptr)
+		*Niagara_System = Parms.Niagara_System;
 }
 
 
@@ -1146,153 +810,419 @@ void ULib_Audio_C::Surface_DT(class AActor* Actor, class UDataTable* DataTable, 
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.SurfaceDTPM
-// (Static, Private, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.IsWithinAttenuation
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UDataTable*                       DataTable                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPhysicalMaterial*                PhysMat                                                (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    Event                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkAudioEvent*                    Sound                                                  (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UMaterialInstance*                Decal_Left_Foot                                        (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UMaterialInstance*                Decal_Right_Foot                                       (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UNiagaraSystem*                   Niagara_System                                         (Parm, OutParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FName                             DefaultInGamePhysmat                                   (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FName                             RowNamePhysmat                                         (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EPhysicalSurface                        DefaultPhysmatEditorAudition                           (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Within                                                 (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_VIsWithinAttenuation_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::SurfaceDTPM(class AActor* Actor, class UDataTable* DataTable, class UPhysicalMaterial* PhysMat, class UObject* __WorldContext, class UAkAudioEvent** Sound, class UMaterialInstance** Decal_Left_Foot, class UMaterialInstance** Decal_Right_Foot, class UNiagaraSystem** Niagara_System, class FName DefaultInGamePhysmat, class FName RowNamePhysmat, EPhysicalSurface DefaultPhysmatEditorAudition)
+void ULib_Audio_C::IsWithinAttenuation(class UAkAudioEvent* Event, const struct FVector& Location, class UObject* __WorldContext, bool* Within, bool CallFunc_VIsWithinAttenuation_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "SurfaceDTPM");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "IsWithinAttenuation");
 
-	Params::Lib_Audio_C_SurfaceDTPM Parms{};
+	Params::Lib_Audio_C_IsWithinAttenuation Parms{};
 
-	Parms.Actor = Actor;
-	Parms.DataTable = DataTable;
-	Parms.PhysMat = PhysMat;
+	Parms.Event = Event;
+	Parms.Location = std::move(Location);
 	Parms.__WorldContext = __WorldContext;
-	Parms.DefaultInGamePhysmat = DefaultInGamePhysmat;
-	Parms.RowNamePhysmat = RowNamePhysmat;
-	Parms.DefaultPhysmatEditorAudition = DefaultPhysmatEditorAudition;
+	Parms.CallFunc_VIsWithinAttenuation_ReturnValue = CallFunc_VIsWithinAttenuation_ReturnValue;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Sound != nullptr)
-		*Sound = Parms.Sound;
-
-	if (Decal_Left_Foot != nullptr)
-		*Decal_Left_Foot = Parms.Decal_Left_Foot;
-
-	if (Decal_Right_Foot != nullptr)
-		*Decal_Right_Foot = Parms.Decal_Right_Foot;
-
-	if (Niagara_System != nullptr)
-		*Niagara_System = Parms.Niagara_System;
+	if (Within != nullptr)
+		*Within = Parms.Within;
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.Try to Propagate Rtpcs
+// Function Lib_Audio.Lib_Audio_C.AkEventLocationWithActor
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    GetRtpcFromActor                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComponent                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Playing_ID                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComp                                                 (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     CallFunc_AkSpawnAtLocation_ReturnValue                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
+// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::AkEventLocationWithActor(class UAkAudioEvent* AkEvent, const struct FVector& Location, class AActor* Actor, bool GetRtpcFromActor, class UObject* __WorldContext, class UAkComponent** AkComponent, int32* Playing_ID, class UAkComponent* AkComp, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, bool CallFunc_Try_to_Propagate_Rtpcs_Success, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, class UAkComponent* CallFunc_AkSpawnAtLocation_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, bool CallFunc_IsValid_ReturnValue_1, float CallFunc_SetRTPCValue_Value_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventLocationWithActor");
+
+	Params::Lib_Audio_C_AkEventLocationWithActor Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.Location = std::move(Location);
+	Parms.Actor = Actor;
+	Parms.GetRtpcFromActor = GetRtpcFromActor;
+	Parms.__WorldContext = __WorldContext;
+	Parms.AkComp = AkComp;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
+	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
+	Parms.CallFunc_AkSpawnAtLocation_ReturnValue = CallFunc_AkSpawnAtLocation_ReturnValue;
+	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
+	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
+	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
+	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
+	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	if (AkComponent != nullptr)
+		*AkComponent = Parms.AkComponent;
+
+	if (Playing_ID != nullptr)
+		*Playing_ID = Parms.Playing_ID;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkEventLocation
 // (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Location                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Instigator                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    GetRtpcsFromInstigator                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    Success                                                (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UComp_RtpcTracker_C*              Tracker                                                (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_TryToPropagateRtpcs_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComponent                                            (Parm, OutParm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   Playing_ID                                             (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   PlayingID                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComp                                                 (Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     CallFunc_VAkEventLocation_OutComponent                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_VAkEventLocation_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::Try_to_Propagate_Rtpcs(class AActor* Actor, class UAkComponent* AkComponent, class UObject* __WorldContext, bool* Success, class UComp_RtpcTracker_C* Tracker, bool CallFunc_TryToPropagateRtpcs_ReturnValue)
+void ULib_Audio_C::AkEventLocation(class UAkAudioEvent* AkEvent, const struct FVector& Location, class AActor* Instigator, bool GetRtpcsFromInstigator, class UObject* __WorldContext, class UAkComponent** AkComponent, int32* Playing_ID, int32 PlayingID, class UAkComponent* AkComp, double LocallyControlled, class UAkComponent* CallFunc_VAkEventLocation_OutComponent, int32 CallFunc_VAkEventLocation_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = StaticClass()->GetFunction("Lib_Audio_C", "Try to Propagate Rtpcs");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventLocation");
 
-	Params::Lib_Audio_C_Try_to_Propagate_Rtpcs Parms{};
+	Params::Lib_Audio_C_AkEventLocation Parms{};
 
-	Parms.Actor = Actor;
-	Parms.AkComponent = AkComponent;
+	Parms.AkEvent = AkEvent;
+	Parms.Location = std::move(Location);
+	Parms.Instigator = Instigator;
+	Parms.GetRtpcsFromInstigator = GetRtpcsFromInstigator;
 	Parms.__WorldContext = __WorldContext;
-	Parms.Tracker = Tracker;
-	Parms.CallFunc_TryToPropagateRtpcs_ReturnValue = CallFunc_TryToPropagateRtpcs_ReturnValue;
+	Parms.PlayingID = PlayingID;
+	Parms.AkComp = AkComp;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_VAkEventLocation_OutComponent = CallFunc_VAkEventLocation_OutComponent;
+	Parms.CallFunc_VAkEventLocation_ReturnValue = CallFunc_VAkEventLocation_ReturnValue;
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
 
 	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (Success != nullptr)
-		*Success = Parms.Success;
+	if (AkComponent != nullptr)
+		*AkComponent = Parms.AkComponent;
+
+	if (Playing_ID != nullptr)
+		*Playing_ID = Parms.Playing_ID;
 }
 
 
-// Function Lib_Audio.Lib_Audio_C.GetDopplerPitchMultiplier
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function Lib_Audio.Lib_Audio_C.AkEventComponentCallback
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// class AActor*                           Listener                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  DopplerIntensity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallbackMask                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>PostEventCallback                                      (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash)
+// bool                                    CheckAttenuation                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// double                                  PitchMultiplier                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  FinalPitchScale                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  PitchScale                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DopplerPitchScale                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  ListenerVelocityMagnitude                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  SourceVelocityMagnitude                                (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue_1           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Multiply_DoubleDouble_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Divide_DoubleDouble_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Add_DoubleDouble_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue_2           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_GetVelocity_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_GetVelocity_ReturnValue_1                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_Subtract_VectorVector_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          CallFunc_Normal_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Dot_VectorVector_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Dot_VectorVector_ReturnValue_1                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_GetAutoDestroy_ReturnValue                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_GetOwner_ReturnValue_1                        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_VIsWithinAttenuation_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
+// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void ULib_Audio_C::GetDopplerPitchMultiplier(class AActor* Listener, class AActor* Object, double DopplerIntensity, class UObject* __WorldContext, double* PitchMultiplier, double FinalPitchScale, double PitchScale, double DopplerPitchScale, double ListenerVelocityMagnitude, double SourceVelocityMagnitude, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_1, double CallFunc_Multiply_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue_1, double CallFunc_Add_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_2, const struct FVector& CallFunc_GetVelocity_ReturnValue, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue, const struct FVector& CallFunc_GetVelocity_ReturnValue_1, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue_1, const struct FVector& CallFunc_Subtract_VectorVector_ReturnValue, const struct FVector& CallFunc_Normal_ReturnValue, double CallFunc_Dot_VectorVector_ReturnValue, double CallFunc_Dot_VectorVector_ReturnValue_1)
+int32 ULib_Audio_C::AkEventComponentCallback(class UAkAudioEvent* AkEvent, class UAkComponent* AkComponent, int32 CallbackMask, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>& PostEventCallback, bool CheckAttenuation, bool GetRtpcFromOwner, class UObject* __WorldContext, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success, bool CallFunc_GetAutoDestroy_ReturnValue, class AActor* CallFunc_GetOwner_ReturnValue_1, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_1, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, bool CallFunc_VIsWithinAttenuation_ReturnValue, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, bool CallFunc_IsValid_ReturnValue_2, int32 CallFunc_PostAkEvent_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("Lib_Audio_C", "GetDopplerPitchMultiplier");
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventComponentCallback");
 
-	Params::Lib_Audio_C_GetDopplerPitchMultiplier Parms{};
+	Params::Lib_Audio_C_AkEventComponentCallback Parms{};
 
-	Parms.Listener = Listener;
-	Parms.Object = Object;
-	Parms.DopplerIntensity = DopplerIntensity;
+	Parms.AkEvent = AkEvent;
+	Parms.AkComponent = AkComponent;
+	Parms.CallbackMask = CallbackMask;
+	Parms.PostEventCallback = PostEventCallback;
+	Parms.CheckAttenuation = CheckAttenuation;
+	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
 	Parms.__WorldContext = __WorldContext;
-	Parms.FinalPitchScale = FinalPitchScale;
-	Parms.PitchScale = PitchScale;
-	Parms.DopplerPitchScale = DopplerPitchScale;
-	Parms.ListenerVelocityMagnitude = ListenerVelocityMagnitude;
-	Parms.SourceVelocityMagnitude = SourceVelocityMagnitude;
-	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue = CallFunc_Subtract_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue_1 = CallFunc_Subtract_DoubleDouble_ReturnValue_1;
-	Parms.CallFunc_Multiply_DoubleDouble_ReturnValue = CallFunc_Multiply_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Divide_DoubleDouble_ReturnValue_1 = CallFunc_Divide_DoubleDouble_ReturnValue_1;
-	Parms.CallFunc_Add_DoubleDouble_ReturnValue = CallFunc_Add_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue_2 = CallFunc_Subtract_DoubleDouble_ReturnValue_2;
-	Parms.CallFunc_GetVelocity_ReturnValue = std::move(CallFunc_GetVelocity_ReturnValue);
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
+	Parms.CallFunc_GetAutoDestroy_ReturnValue = CallFunc_GetAutoDestroy_ReturnValue;
+	Parms.CallFunc_GetOwner_ReturnValue_1 = CallFunc_GetOwner_ReturnValue_1;
+	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
+	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
+	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
+	Parms.CallFunc_VIsWithinAttenuation_ReturnValue = CallFunc_VIsWithinAttenuation_ReturnValue;
+	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
+	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
+	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
+	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkEventComponent
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     AkComponent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    GetRtpcFromOwner                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_GetOwner_ReturnValue                          (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_VAkEventComponent_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 ULib_Audio_C::AkEventComponent(class UAkAudioEvent* AkEvent, class UAkComponent* AkComponent, bool GetRtpcFromOwner, class UObject* __WorldContext, double LocallyControlled, class AActor* CallFunc_GetOwner_ReturnValue, int32 CallFunc_VAkEventComponent_ReturnValue, bool CallFunc_Try_to_Propagate_Rtpcs_Success)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventComponent");
+
+	Params::Lib_Audio_C_AkEventComponent Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.AkComponent = AkComponent;
+	Parms.GetRtpcFromOwner = GetRtpcFromOwner;
+	Parms.__WorldContext = __WorldContext;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_GetOwner_ReturnValue = CallFunc_GetOwner_ReturnValue;
+	Parms.CallFunc_VAkEventComponent_ReturnValue = CallFunc_VAkEventComponent_ReturnValue;
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkEventActor
+// (Static, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Actor                                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  LocallyControlled                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class APawn*                            K2Node_DynamicCast_AsPawn                              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class USceneComponent*                  CallFunc_K2_GetRootComponent_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_AkGetComponent_ComponentCreated               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UAkComponent*                     CallFunc_AkGetComponent_AkComponent                    (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Try_to_Propagate_Rtpcs_Success                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsLocallyControlled_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)>Temp_delegate_Variable                                 (ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// TArray<struct FAkExternalSourceInfo>    Temp_struct_Variable                                   (ConstParm, ReferenceParm)
+// int32                                   CallFunc_PostAkEvent_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsWithinAttenuation_Within                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue_2                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 ULib_Audio_C::AkEventActor(class UAkAudioEvent* AkEvent, class AActor* Actor, class UObject* __WorldContext, double LocallyControlled, bool CallFunc_IsDedicatedServer_ReturnValue, class APawn* K2Node_DynamicCast_AsPawn, bool K2Node_DynamicCast_bSuccess, bool CallFunc_IsLocallyControlled_ReturnValue, class USceneComponent* CallFunc_K2_GetRootComponent_ReturnValue, bool CallFunc_AkGetComponent_ComponentCreated, class UAkComponent* CallFunc_AkGetComponent_AkComponent, bool CallFunc_Try_to_Propagate_Rtpcs_Success, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsLocallyControlled_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_1, TDelegate<void(EAkCallbackType CallbackType, class UAkCallbackInfo* CallbackInfo)> Temp_delegate_Variable, TArray<struct FAkExternalSourceInfo>& Temp_struct_Variable, int32 CallFunc_PostAkEvent_ReturnValue, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue, bool CallFunc_IsWithinAttenuation_Within, bool CallFunc_IsValid_ReturnValue_2)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventActor");
+
+	Params::Lib_Audio_C_AkEventActor Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.Actor = Actor;
+	Parms.__WorldContext = __WorldContext;
+	Parms.LocallyControlled = LocallyControlled;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.K2Node_DynamicCast_AsPawn = K2Node_DynamicCast_AsPawn;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue = CallFunc_IsLocallyControlled_ReturnValue;
+	Parms.CallFunc_K2_GetRootComponent_ReturnValue = CallFunc_K2_GetRootComponent_ReturnValue;
+	Parms.CallFunc_AkGetComponent_ComponentCreated = CallFunc_AkGetComponent_ComponentCreated;
+	Parms.CallFunc_AkGetComponent_AkComponent = CallFunc_AkGetComponent_AkComponent;
+	Parms.CallFunc_Try_to_Propagate_Rtpcs_Success = CallFunc_Try_to_Propagate_Rtpcs_Success;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_IsLocallyControlled_ReturnValue_1 = CallFunc_IsLocallyControlled_ReturnValue_1;
+	Parms.CallFunc_IsValid_ReturnValue_1 = CallFunc_IsValid_ReturnValue_1;
+	Parms.Temp_delegate_Variable = Temp_delegate_Variable;
+	Parms.Temp_struct_Variable = std::move(Temp_struct_Variable);
+	Parms.CallFunc_PostAkEvent_ReturnValue = CallFunc_PostAkEvent_ReturnValue;
 	Parms.CallFunc_K2_GetActorLocation_ReturnValue = std::move(CallFunc_K2_GetActorLocation_ReturnValue);
-	Parms.CallFunc_GetVelocity_ReturnValue_1 = std::move(CallFunc_GetVelocity_ReturnValue_1);
-	Parms.CallFunc_K2_GetActorLocation_ReturnValue_1 = std::move(CallFunc_K2_GetActorLocation_ReturnValue_1);
+	Parms.CallFunc_IsWithinAttenuation_Within = CallFunc_IsWithinAttenuation_Within;
+	Parms.CallFunc_IsValid_ReturnValue_2 = CallFunc_IsValid_ReturnValue_2;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.AkEventGlobal
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkAudioEvent*                    AkEvent                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// int32                                   ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_PostGlobalEvent_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+int32 ULib_Audio_C::AkEventGlobal(class UAkAudioEvent* AkEvent, class UObject* __WorldContext, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, int32 CallFunc_PostGlobalEvent_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "AkEventGlobal");
+
+	Params::Lib_Audio_C_AkEventGlobal Parms{};
+
+	Parms.AkEvent = AkEvent;
+	Parms.__WorldContext = __WorldContext;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_PostGlobalEvent_ReturnValue = CallFunc_PostGlobalEvent_ReturnValue;
+
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.Ak Object Velocity
+// (Static, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UAkComponent*                     Ak                                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// double                                  VectorLengthMax                                        (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Delta_Time                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Get_Previous_Location                                  (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   InterpTimeMs                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          Set_Previous_Location                                  (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  VectorLength                                           (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  VectorLengthClamped                                    (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  LengthClamped                                          (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  Length                                                 (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FName                             Object_velocity                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  VectorMax                                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsDedicatedServer_ReturnValue                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetComponentLocation_ReturnValue_1         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_Subtract_VectorVector_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_VSize_ReturnValue                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_MapRangeClamped_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_SetRTPCValue_Value_ImplicitCast               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::Ak_Object_Velocity(class UAkComponent* Ak, double VectorLengthMax, double Delta_Time, const struct FVector& Get_Previous_Location, int32 InterpTimeMs, class UObject* __WorldContext, struct FVector* Set_Previous_Location, double* VectorLength, double* VectorLengthClamped, double LengthClamped, double Length, class FName Object_velocity, double VectorMax, bool CallFunc_IsDedicatedServer_ReturnValue, bool CallFunc_IsValid_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue, const struct FVector& CallFunc_K2_GetComponentLocation_ReturnValue_1, const struct FVector& CallFunc_Subtract_VectorVector_ReturnValue, double CallFunc_VSize_ReturnValue, double CallFunc_MapRangeClamped_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, float CallFunc_SetRTPCValue_Value_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = StaticClass()->GetFunction("Lib_Audio_C", "Ak Object Velocity");
+
+	Params::Lib_Audio_C_Ak_Object_Velocity Parms{};
+
+	Parms.Ak = Ak;
+	Parms.VectorLengthMax = VectorLengthMax;
+	Parms.Delta_Time = Delta_Time;
+	Parms.Get_Previous_Location = std::move(Get_Previous_Location);
+	Parms.InterpTimeMs = InterpTimeMs;
+	Parms.__WorldContext = __WorldContext;
+	Parms.LengthClamped = LengthClamped;
+	Parms.Length = Length;
+	Parms.Object_velocity = Object_velocity;
+	Parms.VectorMax = VectorMax;
+	Parms.CallFunc_IsDedicatedServer_ReturnValue = CallFunc_IsDedicatedServer_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_K2_GetComponentLocation_ReturnValue = std::move(CallFunc_K2_GetComponentLocation_ReturnValue);
+	Parms.CallFunc_K2_GetComponentLocation_ReturnValue_1 = std::move(CallFunc_K2_GetComponentLocation_ReturnValue_1);
 	Parms.CallFunc_Subtract_VectorVector_ReturnValue = std::move(CallFunc_Subtract_VectorVector_ReturnValue);
-	Parms.CallFunc_Normal_ReturnValue = std::move(CallFunc_Normal_ReturnValue);
-	Parms.CallFunc_Dot_VectorVector_ReturnValue = CallFunc_Dot_VectorVector_ReturnValue;
-	Parms.CallFunc_Dot_VectorVector_ReturnValue_1 = CallFunc_Dot_VectorVector_ReturnValue_1;
+	Parms.CallFunc_VSize_ReturnValue = CallFunc_VSize_ReturnValue;
+	Parms.CallFunc_MapRangeClamped_ReturnValue = CallFunc_MapRangeClamped_ReturnValue;
+	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
+	Parms.CallFunc_SetRTPCValue_Value_ImplicitCast = CallFunc_SetRTPCValue_Value_ImplicitCast;
 
-	UObject::ProcessEvent(Func, &Parms);
+	GetDefaultObj()->ProcessEvent(Func, &Parms);
 
-	if (PitchMultiplier != nullptr)
-		*PitchMultiplier = Parms.PitchMultiplier;
+	if (Set_Previous_Location != nullptr)
+		*Set_Previous_Location = std::move(Parms.Set_Previous_Location);
+
+	if (VectorLength != nullptr)
+		*VectorLength = Parms.VectorLength;
+
+	if (VectorLengthClamped != nullptr)
+		*VectorLengthClamped = Parms.VectorLengthClamped;
 }
 
 
@@ -1364,6 +1294,76 @@ void ULib_Audio_C::IsInside(struct FVector& Location, class UObject* __WorldCont
 
 	if (Param_IsInside != nullptr)
 		*Param_IsInside = Parms.Param_IsInside;
+}
+
+
+// Function Lib_Audio.Lib_Audio_C.GetDopplerPitchMultiplier
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class AActor*                           Listener                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           Object                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  DopplerIntensity                                       (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          __WorldContext                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// double                                  PitchMultiplier                                        (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  FinalPitchScale                                        (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  PitchScale                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DopplerPitchScale                                      (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  ListenerVelocityMagnitude                              (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  SourceVelocityMagnitude                                (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue_1           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Multiply_DoubleDouble_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Divide_DoubleDouble_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Add_DoubleDouble_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Subtract_DoubleDouble_ReturnValue_2           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_GetVelocity_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_GetVelocity_ReturnValue_1                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_K2_GetActorLocation_ReturnValue_1             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_Subtract_VectorVector_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          CallFunc_Normal_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Dot_VectorVector_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Dot_VectorVector_ReturnValue_1                (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void ULib_Audio_C::GetDopplerPitchMultiplier(class AActor* Listener, class AActor* Object, double DopplerIntensity, class UObject* __WorldContext, double* PitchMultiplier, double FinalPitchScale, double PitchScale, double DopplerPitchScale, double ListenerVelocityMagnitude, double SourceVelocityMagnitude, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_1, double CallFunc_Multiply_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue_1, double CallFunc_Add_DoubleDouble_ReturnValue, double CallFunc_Subtract_DoubleDouble_ReturnValue_2, const struct FVector& CallFunc_GetVelocity_ReturnValue, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue, const struct FVector& CallFunc_GetVelocity_ReturnValue_1, const struct FVector& CallFunc_K2_GetActorLocation_ReturnValue_1, const struct FVector& CallFunc_Subtract_VectorVector_ReturnValue, const struct FVector& CallFunc_Normal_ReturnValue, double CallFunc_Dot_VectorVector_ReturnValue, double CallFunc_Dot_VectorVector_ReturnValue_1)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("Lib_Audio_C", "GetDopplerPitchMultiplier");
+
+	Params::Lib_Audio_C_GetDopplerPitchMultiplier Parms{};
+
+	Parms.Listener = Listener;
+	Parms.Object = Object;
+	Parms.DopplerIntensity = DopplerIntensity;
+	Parms.__WorldContext = __WorldContext;
+	Parms.FinalPitchScale = FinalPitchScale;
+	Parms.PitchScale = PitchScale;
+	Parms.DopplerPitchScale = DopplerPitchScale;
+	Parms.ListenerVelocityMagnitude = ListenerVelocityMagnitude;
+	Parms.SourceVelocityMagnitude = SourceVelocityMagnitude;
+	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue = CallFunc_Subtract_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue_1 = CallFunc_Subtract_DoubleDouble_ReturnValue_1;
+	Parms.CallFunc_Multiply_DoubleDouble_ReturnValue = CallFunc_Multiply_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Divide_DoubleDouble_ReturnValue_1 = CallFunc_Divide_DoubleDouble_ReturnValue_1;
+	Parms.CallFunc_Add_DoubleDouble_ReturnValue = CallFunc_Add_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Subtract_DoubleDouble_ReturnValue_2 = CallFunc_Subtract_DoubleDouble_ReturnValue_2;
+	Parms.CallFunc_GetVelocity_ReturnValue = std::move(CallFunc_GetVelocity_ReturnValue);
+	Parms.CallFunc_K2_GetActorLocation_ReturnValue = std::move(CallFunc_K2_GetActorLocation_ReturnValue);
+	Parms.CallFunc_GetVelocity_ReturnValue_1 = std::move(CallFunc_GetVelocity_ReturnValue_1);
+	Parms.CallFunc_K2_GetActorLocation_ReturnValue_1 = std::move(CallFunc_K2_GetActorLocation_ReturnValue_1);
+	Parms.CallFunc_Subtract_VectorVector_ReturnValue = std::move(CallFunc_Subtract_VectorVector_ReturnValue);
+	Parms.CallFunc_Normal_ReturnValue = std::move(CallFunc_Normal_ReturnValue);
+	Parms.CallFunc_Dot_VectorVector_ReturnValue = CallFunc_Dot_VectorVector_ReturnValue;
+	Parms.CallFunc_Dot_VectorVector_ReturnValue_1 = CallFunc_Dot_VectorVector_ReturnValue_1;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (PitchMultiplier != nullptr)
+		*PitchMultiplier = Parms.PitchMultiplier;
 }
 
 }

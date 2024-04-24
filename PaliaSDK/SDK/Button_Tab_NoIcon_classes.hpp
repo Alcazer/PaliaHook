@@ -19,17 +19,17 @@ namespace SDK
 {
 
 // BlueprintGeneratedClass Button_Tab_NoIcon.Button_Tab_NoIcon_C
-// 0x0050 (0x06A0 - 0x0650)
+// 0x0050 (0x06D0 - 0x0680)
 class UButton_Tab_NoIcon_C final  : public UVALUI_Button_Styled
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0650(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVALUI_ButtonStyle*                     ActiveTabStyle;                                    // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVALUI_ButtonStyle*                     InactiveTabStyle;                                  // 0x0660(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           GlyphColorAndOpacity_Inactive;                     // 0x0668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	struct FLinearColor                           GlyphColorAndOpacity_Active;                       // 0x0678(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UWBP_PMenuTabButton_Icon_C*             Content;                                           // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           Input_Action;                                      // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0680(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UVALUI_ButtonStyle*                     ActiveTabStyle;                                    // 0x0688(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVALUI_ButtonStyle*                     InactiveTabStyle;                                  // 0x0690(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           GlyphColorAndOpacity_Inactive;                     // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	struct FLinearColor                           GlyphColorAndOpacity_Active;                       // 0x06A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UWBP_PMenuTabButton_Icon_C*             Content;                                           // 0x06B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           Input_Action;                                      // 0x06C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
 public:
 	void ExecuteUbergraph_Button_Tab_NoIcon(int32 EntryPoint, bool K2Node_Event_bIsActive, bool K2Node_Event_IsDesignTime, bool Temp_bool_Variable, class UVALUI_ButtonStyle* K2Node_Select_Default);
@@ -47,14 +47,14 @@ public:
 	}
 };
 static_assert(alignof(UButton_Tab_NoIcon_C) == 0x000010, "Wrong alignment on UButton_Tab_NoIcon_C");
-static_assert(sizeof(UButton_Tab_NoIcon_C) == 0x0006A0, "Wrong size on UButton_Tab_NoIcon_C");
-static_assert(offsetof(UButton_Tab_NoIcon_C, UberGraphFrame) == 0x000650, "Member 'UButton_Tab_NoIcon_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, ActiveTabStyle) == 0x000658, "Member 'UButton_Tab_NoIcon_C::ActiveTabStyle' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, InactiveTabStyle) == 0x000660, "Member 'UButton_Tab_NoIcon_C::InactiveTabStyle' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, GlyphColorAndOpacity_Inactive) == 0x000668, "Member 'UButton_Tab_NoIcon_C::GlyphColorAndOpacity_Inactive' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, GlyphColorAndOpacity_Active) == 0x000678, "Member 'UButton_Tab_NoIcon_C::GlyphColorAndOpacity_Active' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, Content) == 0x000688, "Member 'UButton_Tab_NoIcon_C::Content' has a wrong offset!");
-static_assert(offsetof(UButton_Tab_NoIcon_C, Input_Action) == 0x000690, "Member 'UButton_Tab_NoIcon_C::Input_Action' has a wrong offset!");
+static_assert(sizeof(UButton_Tab_NoIcon_C) == 0x0006D0, "Wrong size on UButton_Tab_NoIcon_C");
+static_assert(offsetof(UButton_Tab_NoIcon_C, UberGraphFrame) == 0x000680, "Member 'UButton_Tab_NoIcon_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, ActiveTabStyle) == 0x000688, "Member 'UButton_Tab_NoIcon_C::ActiveTabStyle' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, InactiveTabStyle) == 0x000690, "Member 'UButton_Tab_NoIcon_C::InactiveTabStyle' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, GlyphColorAndOpacity_Inactive) == 0x000698, "Member 'UButton_Tab_NoIcon_C::GlyphColorAndOpacity_Inactive' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, GlyphColorAndOpacity_Active) == 0x0006A8, "Member 'UButton_Tab_NoIcon_C::GlyphColorAndOpacity_Active' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, Content) == 0x0006B8, "Member 'UButton_Tab_NoIcon_C::Content' has a wrong offset!");
+static_assert(offsetof(UButton_Tab_NoIcon_C, Input_Action) == 0x0006C0, "Member 'UButton_Tab_NoIcon_C::Input_Action' has a wrong offset!");
 
 }
 

@@ -22,7 +22,7 @@ namespace SDK
 class UAudioCapture final  : public UAudioGenerator
 {
 public:
-	uint8                                         Pad_26A5[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2E2A[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool GetAudioCaptureDeviceInfo(struct FAudioCaptureDeviceInfo* OutInfo);
@@ -85,12 +85,12 @@ static_assert(alignof(UAudioCaptureBlueprintLibrary) == 0x000008, "Wrong alignme
 static_assert(sizeof(UAudioCaptureBlueprintLibrary) == 0x000028, "Wrong size on UAudioCaptureBlueprintLibrary");
 
 // Class AudioCapture.AudioCaptureComponent
-// 0x00C0 (0x0850 - 0x0790)
+// 0x00C0 (0x09C0 - 0x0900)
 class UAudioCaptureComponent final  : public USynthComponent
 {
 public:
-	int32                                         JitterLatencyFrames;                               // 0x0790(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_26A7[0xBC];                                    // 0x0794(0x00BC)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	int32                                         JitterLatencyFrames;                               // 0x0900(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
+	uint8                                         Pad_2E2C[0xBC];                                    // 0x0904(0x00BC)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -103,8 +103,8 @@ public:
 	}
 };
 static_assert(alignof(UAudioCaptureComponent) == 0x000010, "Wrong alignment on UAudioCaptureComponent");
-static_assert(sizeof(UAudioCaptureComponent) == 0x000850, "Wrong size on UAudioCaptureComponent");
-static_assert(offsetof(UAudioCaptureComponent, JitterLatencyFrames) == 0x000790, "Member 'UAudioCaptureComponent::JitterLatencyFrames' has a wrong offset!");
+static_assert(sizeof(UAudioCaptureComponent) == 0x0009C0, "Wrong size on UAudioCaptureComponent");
+static_assert(offsetof(UAudioCaptureComponent, JitterLatencyFrames) == 0x000900, "Member 'UAudioCaptureComponent::JitterLatencyFrames' has a wrong offset!");
 
 }
 
