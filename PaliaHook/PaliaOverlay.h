@@ -775,6 +775,7 @@ public:
 
 	// Configuration:
 	bool bEnableESP = true;
+	bool bEnableGameSpeed = false;
 
 	bool bEnableESPCulling;
 	int CullDistance = 200;

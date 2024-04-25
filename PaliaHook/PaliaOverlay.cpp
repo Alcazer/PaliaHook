@@ -1816,10 +1816,23 @@ void PaliaOverlay::DrawOverlay()
 									if (ValeriaCharacter) {
 										UValeriaCharacterMoveComponent* MovementComponent = ValeriaCharacter->GetValeriaCharacterMovementComponent();
 										if (MovementComponent) {
-											const double d20 = 20., d5 = 5., d1 = 1.;
-											const float f20 = 20.f, f5 = 5.f, f1 = 1.f;
+											const double d20 = 20., d5 = 5., d1 = 1., dhalf = 0.5;
+											const float f20 = 20.f, f5 = 5.f, f1 = 1.f, fhalf = 0.5;
 
 											ImGui::Text("Character : %s - Map : %s", ValeriaCharacter->CharacterName.ToString().c_str(), CurrentMap.c_str());
+											if(ImGui::Checkbox("Global Game Speed", &bEnableGameSpeed)) {
+												if (!bEnableGameSpeed) {
+													static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, 1.);
+												}
+											}
+											static float GlobalGameSpeed = 1.;
+											ImGui::SameLine();
+											ImGui::SetNextItemWidth(150.0f);
+											if (ImGui::InputScalar("##GlobalGameSpeed", ImGuiDataType_Float, &GlobalGameSpeed, &fhalf)) {
+												if (bEnableGameSpeed) {
+													static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, GlobalGameSpeed);
+												}
+											}
 
 											// TODO : Load & Save Locations from config file
 											ImGui::ListBoxHeader("Teleport List", 7);
