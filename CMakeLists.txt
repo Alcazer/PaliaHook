@@ -49,6 +49,9 @@ target_include_directories(PaliaSDK PUBLIC PaliaSDK)
 target_precompile_headers(PaliaSDK PRIVATE PaliaSDK/SDK.hpp)
 
 # PaliaHook DLL
+if(EXISTS "${CMAKE_BINARY_DIR}/PaliaHook.pdb")
+   file(REMOVE ${CMAKE_BINARY_DIR}/PaliaHook.pdb)
+endif()
 file(GLOB_RECURSE PALIAHOOK_SOURCES PaliaHook/*.cpp)
 file(GLOB_RECURSE PALIAHOOK_HEADERS PaliaHook/*.h)
 file(GLOB GLEW_SOURCES glew/src/glew.c)

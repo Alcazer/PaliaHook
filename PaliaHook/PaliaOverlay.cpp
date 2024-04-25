@@ -416,6 +416,7 @@ static void DrawHUD(const AHUD* HUD) {
 		if (Overlay->CurrentLevel != World->PersistentLevel) {
 			Overlay->CachedActors.clear();
 			Overlay->CurrentLevel = World->PersistentLevel;
+			Overlay->CurrentMap = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetCurrentLevelName(World, false).ToString();
 		}
 
 		auto GameInstance = World->OwningGameInstance;
@@ -532,6 +533,10 @@ static void DrawHUD(const AHUD* HUD) {
 
 				if (Overlay->bVisualizeDefault && Entry.Type == 0) bShouldDraw = true;
 				if (!bShouldDraw) continue;
+				if (!Roboto) {
+					Roboto = reinterpret_cast<UFont*>(UObject::FindObject("Font Roboto.Roboto", EClassCastFlags::None));
+				}
+				if (!Roboto) continue;
 
 				/*StrPrinter*/
 				std::string text = std::format("{} [{:.2f}m]", Entry.DisplayName, Distance);
@@ -565,9 +570,16 @@ static void ProcessEvent(const UObject* Class, class UFunction* Function, void* 
 
 void PaliaOverlay::DrawHUD()
 {
-	ImGuiIO& io = ImGui::GetIO();
-
-	auto pDrawList = ImGui::GetBackgroundDrawList();
+	if (CurrentLevel) {
+		if (CurrentMap == "MAP_PreGame" || CurrentMap == "Unknown") {
+			ImGui::SetNextWindowBgAlpha(0.80f);
+			if (ImGui::Begin("Palia Hook")) {
+				ImGui::Text("Waiting for full loading : %s", CurrentMap.c_str());
+			}
+			ImGui::End();
+			return;
+		}
+	}
 
 	auto World = GetWorld();
 	if (!World) return;
@@ -582,11 +594,6 @@ void PaliaOverlay::DrawHUD()
 
 	APlayerController* PlayerController = LocalPlayer->PlayerController;
 	if (!PlayerController) return;
-
-
-	if (!Roboto) {
-		Roboto = reinterpret_cast<UFont*>(UObject::FindObject("Font Roboto.Roboto", EClassCastFlags::None));
-	}
 
 	// TODO: Move outside of the loop as this needs to be done only once
 	if (HookedClient != PlayerController->MyHUD && PlayerController->MyHUD != nullptr) {
@@ -628,7 +635,7 @@ void PaliaOverlay::DrawOverlay()
 		{
 			if (ImGui::TabItemButton("ESP"))
 				OpenTab = 0;
-			if (ImGui::TabItemButton("Test Tab"))
+			if (ImGui::TabItemButton("Others Tab"))
 				OpenTab = 1;
 		}
 		ImGui::EndTabBar();
@@ -1795,6 +1802,192 @@ void PaliaOverlay::DrawOverlay()
 			ImGui::EndGroupPanel();
 		}
 		else if (OpenTab == 1) {
+			UWorld* World = GetWorld();
+			if (World) {
+				UGameInstance* GameInstance = World->OwningGameInstance;
+				if (GameInstance) {
+					if (GameInstance->LocalPlayers.Num() != 0) {
+						ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
+						if (LocalPlayer) {
+							APlayerController* PlayerController = LocalPlayer->PlayerController;
+							if (PlayerController) {
+								if (PlayerController->Pawn) {
+									AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+									if (ValeriaCharacter) {
+										UValeriaCharacterMoveComponent* MovementComponent = ValeriaCharacter->GetValeriaCharacterMovementComponent();
+										if (MovementComponent) {
+											const double d20 = 20., d5 = 5., d1 = 1.;
+											const float f20 = 20.f, f5 = 5.f, f1 = 1.f;
+
+											ImGui::Text("Character : %s - Map : %s", ValeriaCharacter->CharacterName.ToString().c_str(), CurrentMap.c_str());
+
+											// TODO : Load & Save Locations from config file
+											ImGui::ListBoxHeader("Teleport List", 7);
+											for (FLocation& Entry : TeleportLocations) {
+												if (CurrentMap == Entry.MapName || Entry.MapName == "UserDefined") {
+													if (ImGui::Selectable(Entry.Name.c_str())) {
+														ValeriaCharacter->K2_TeleportTo(Entry.Location, Entry.Rotate);
+													}
+												}
+											}
+											ImGui::ListBoxFooter();
+
+											FVector MyLocation = ValeriaCharacter->K2_GetActorLocation();
+											FRotator MyRotation = ValeriaCharacter->K2_GetActorRotation();
+											static FVector TeleportLocation;
+											static FRotator TeleportRotate;
+
+											ImGui::Text("TP Loc X,Y,Z, Yaw : ");
+											ImGui::SameLine();
+											ImGui::SetNextItemWidth(150.0f);
+											ImGui::InputScalar("##TeleportLocationX", ImGuiDataType_Double, &TeleportLocation.X, &d5);
+											ImGui::SameLine();
+											ImGui::SetNextItemWidth(150.0f);
+											ImGui::InputScalar("##TeleportLocationY", ImGuiDataType_Double, &TeleportLocation.Y, &d5);
+											ImGui::SameLine();
+											ImGui::SetNextItemWidth(150.0f);
+											ImGui::InputScalar("##TeleportLocationZ", ImGuiDataType_Double, &TeleportLocation.Z, &d5);
+											ImGui::SameLine();
+											ImGui::SetNextItemWidth(150.0f);
+											ImGui::InputScalar("##TeleportRotateYaw", ImGuiDataType_Double, &TeleportRotate.Yaw, &d1);
+											ImGui::SameLine();
+											ImGui::Text("Current: %.3f %.3f %.3f %.3f", MyLocation.X, MyLocation.Y, MyLocation.Z, MyRotation.Yaw);
+
+											if (ImGui::Button("Load My Location")) {
+												TeleportLocation = ValeriaCharacter->K2_GetActorLocation();
+												TeleportRotate = ValeriaCharacter->K2_GetActorRotation();
+											}
+											ImGui::SameLine();
+											if (ImGui::Button("Teleport")) {
+												ValeriaCharacter->K2_TeleportTo(TeleportLocation, TeleportRotate);
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Go Home")) {
+												ValeriaCharacter->GetTeleportComponent()->RpcServerTeleport_Home();
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Sell Item 1-1")) {
+												FBagSlotLocation bag;
+												bag.BagIndex = 0;
+												bag.SlotIndex = 0;
+												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Sell Item 1-2")) {
+												FBagSlotLocation bag;
+												bag.BagIndex = 0;
+												bag.SlotIndex = 1;
+												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Sell Item 1-3")) {
+												FBagSlotLocation bag;
+												bag.BagIndex = 0;
+												bag.SlotIndex = 2;
+												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Primary Action Press")) {
+												ValeriaCharacter->ToolPrimaryActionPressed();
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Primary Action Release")) {
+												ValeriaCharacter->ToolPrimaryActionReleased();
+											}
+
+											ImGui::Text("Gliding Fall Speed: ");
+											ImGui::SameLine();
+											ImGui::InputScalar("##GlidingFallSpeed", ImGuiDataType_Float, &MovementComponent->GlidingFallSpeed, &f5);
+
+											ImGui::Text("Gliding Speed: ");
+											ImGui::SameLine();
+											ImGui::InputScalar("##GlidingMaxSpeed", ImGuiDataType_Float, &MovementComponent->GlidingMaxSpeed, &f5);
+
+											ImGui::Text("Climbing Speed: ");
+											ImGui::SameLine();
+											ImGui::InputScalar("##ClimbingSpeed", ImGuiDataType_Float, &MovementComponent->ClimbingSpeed, &f5);
+
+											ImGui::Text("JumpZVelocity: ");
+											ImGui::SameLine();
+											ImGui::InputScalar("##JumpZVelocity", ImGuiDataType_Float, &MovementComponent->JumpZVelocity, &f20);
+
+											ImGui::Text("Walk Speed: ");
+											ImGui::SameLine();
+											ImGui::InputScalar("##MaxWalkSpeed", ImGuiDataType_Float, &MovementComponent->MaxWalkSpeed, &f20);
+											// TODO : If you move too fast, sometimes you return back where you started running
+											// Maybe there is a movement speed control on the server side
+
+											// TODO : More hacks
+											FValeriaItem Equipped = ValeriaCharacter->GetEquippedItem();
+											ETools EquippedTool = ETools::None;
+											std::string EquippedName = Equipped.ItemType->Name.ToString();
+											if (EquippedName.find("Tool_Axe_") != std::string::npos) {
+												EquippedTool = ETools::Axe;
+											}
+											else if (EquippedName.find("Tool_InsectBallLauncher_") != std::string::npos) {
+												EquippedTool = ETools::Belt;
+											}
+											else if (EquippedName.find("Tool_Bow_") != std::string::npos) {
+												EquippedTool = ETools::Bow;
+											}
+											else if (EquippedName.find("Tool_Rod_") != std::string::npos) {
+												EquippedTool = ETools::FishingRod;
+											}
+											else if (EquippedName.find("Tool_Hoe_") != std::string::npos) {
+												EquippedTool = ETools::Hoe;
+											}
+											else if (EquippedName.find("Tool_Pick") != std::string::npos) {
+												EquippedTool = ETools::Pick;
+											}
+											else if (EquippedName.find("Tool_WateringCan_") != std::string::npos) {
+												EquippedTool = ETools::WateringCan;
+											}
+
+											ImGui::Text("Equipped Tool : %s", STools[(int)EquippedTool]);
+											// TODO : Auto fishing?
+											if (EquippedTool == ETools::FishingRod) {
+												UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
+												if (FishingComponent)
+												{
+													if (ImGui::Button("Fishing->AimingCast")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::AimingCast);
+													}
+													ImGui::SameLine();
+													if (ImGui::Button("Fishing->DeployingCast")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::DeployingCast);
+													}
+													ImGui::SameLine();
+													if (ImGui::Button("Fishing->EFishingState_MAX")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::EFishingState_MAX);
+													}
+													ImGui::SameLine();
+													if (ImGui::Button("Fishing->None")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::None);
+													}
+													ImGui::SameLine();
+													if (ImGui::Button("Fishing->PlayingMiniGame")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::PlayingMiniGame);
+													}
+													ImGui::SameLine();
+													if (ImGui::Button("Fishing->RotatingToCast")) {
+														FishingComponent->SetFishingState(EFishingState_OLD::RotatingToCast);
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
 		}
 	}
 	ImGui::End();

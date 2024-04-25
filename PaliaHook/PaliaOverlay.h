@@ -139,7 +139,8 @@ enum class EForageableType
 	MAX
 };
 
-enum class EOneOffs {
+enum class EOneOffs
+{
 	Player,
 	NPC,
 	Loot,
@@ -160,6 +161,73 @@ struct FEntry
 	int Variant;
 };
 
+enum class ETools
+{
+	None,
+	Axe,
+	Belt,
+	Bow,
+	FishingRod,
+	Hoe,
+	Pick,
+	WateringCan,
+	MAX
+};
+
+const char* const STools[] =
+{
+	"None",
+	"Axe",
+	"Belt",
+	"Bow",
+	"FishingRod",
+	"Hoe",
+	"Pick",
+	"WateringCan",
+	"Unknown"
+};
+
+enum class ELocation
+{
+	// Kilima Stables
+	Kilima_CentralStables,
+	Kilima_MirrorFields,
+	Kilima_LeafhopperHills,
+	Kilima_WhisperingBanks,
+
+	// Kilima Others
+	Kilima_HousingPlot,
+	Kilima_ToBahariBay,
+	Kilima_Fairgrounds_MajiMarket,
+	Kilima_GeneralStore,
+	Kilima_RepairStation,
+	Kilima_PhoenixFalls,
+	Kilima_DragonShrine,
+	Kilima_FishermansLagoon,
+
+	// Bahari Stables
+	Bahari_CentralStables,
+	Bahari_TheOutskirts,
+	Bahari_CoralShores,
+	Bahari_PulsewaterPlains,
+	Bahari_HideawayBluffs,
+	Bahari_BeachcomberCove,
+
+	// Bahari Others
+	Bahari_HousingPlot,
+	Bahari_ToKilimaValley,
+
+	UserDefined
+};
+
+struct FLocation
+{
+	std::string MapName;
+	ELocation Type;
+	std::string Name;
+	FVector Location;
+	FRotator Rotate;
+};
 
 class PaliaOverlay : public OverlayBase
 {
@@ -180,6 +248,34 @@ public:
 	std::vector<FEntry> CachedActors;
 
 	ULevel* CurrentLevel;
+	std::string CurrentMap = "Unknown";
+	std::vector<FLocation> TeleportLocations = {
+		// Kilima Stables
+		{ "Village_Root", ELocation::Kilima_CentralStables, "Kilima - Central Stables", FVector(9746.436f, 11380.740f, -139.406f), FRotator(0.000f, 145.62f,-0.000f)},
+		{ "Village_Root", ELocation::Kilima_MirrorFields, "Kilima - Mirror Fields", FVector(-6586.737f, -24412.872f, 1627.018f), FRotator(0.000f, 259.87f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_LeafhopperHills, "Kilima - Leafhopper Hills", FVector(-21589.245f, 3920.281f, 306.105f), FRotator(0.000f, 117.04f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_WhisperingBanks, "Kilima - Whispering Banks", FVector(38958.433f, 7574.109f, -677.983f), FRotator(0.000f, 214.71f, 0.000f)},
+		// Kilima Others
+		{ "Village_Root", ELocation::Kilima_HousingPlot, "Kilima - Housing Plot Entrance", FVector(20204.810f, -15375.620f, 2252.460f), FRotator(0.000f, -6.24f, 0.000f)},//
+		{ "Village_Root", ELocation::Kilima_ToBahariBay, "Kilima - Bahari Bay Entrance", FVector(50623.753f, -5403.530f, 1312.610f), FRotator(0.000f, -24.72f, 0.000f)},
+
+		{ "Village_Root", ELocation::Kilima_Fairgrounds_MajiMarket, "Kilima - Fairgrounds Entrance (Maji Market)", FVector(54696.812f, 21802.943f, -114.603f), FRotator(0.000f, -7.65f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_GeneralStore, "Kilima - General Store", FVector(156.193f, -1509.144f, 285.576f), FRotator(0.000f, -122.07f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_RepairStation, "Kilima - Repair Station", FVector(2465.246f, 6734.343f, 303.050f), FRotator(0.000f, 120.89f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_PhoenixFalls, "Kilima - Phoenix Falls", FVector(7596.145f, -51226.853f, 4006.341f), FRotator(0.000f, -68.64f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_DragonShrine, "Kilima - Dragon Shrine", FVector(33743.980f, -22253.369f, 1303.870f), FRotator(0.000f, -90.211f, 0.000f)},
+		{ "Village_Root", ELocation::Kilima_FishermansLagoon, "Kilima - Fisherman's Lagoon", FVector(25325.044f, 19246.651f, -459.559f), FRotator(0.000f, 25.76f, 0.000f)},
+		// Bahari Stables
+		{ "AZ1_01_Root", ELocation::Bahari_CentralStables, "Bahari - Central Stables", FVector(103331.330f, -63125.339f, -1948.051f), FRotator(0.000f, 148.09f,-0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_TheOutskirts, "Bahari - The Outskirts", FVector(55743.927f, -81821.534f, 902.205f), FRotator(0.000f, 226.06f, 0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_CoralShores, "Bahari - Coral Shores", FVector(143344.052f, -71851.374f, -4373.302f), FRotator(0.000f, 352.16f, 0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_PulsewaterPlains, "Bahari - Pulsewater Plains", FVector(101257.267f, -23873.064f, -1655.604f), FRotator(0.000f, 287.12f, 0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_HideawayBluffs, "Bahari - Hideaway Bluffs", FVector(82490.721f, 2994.478f, -714.785f), FRotator(0.000f, 14.61f, 0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_BeachcomberCove, "Bahari - Beachcomber Cove", FVector(128767.154f, 4163.842f, -4406.759f), FRotator(0.000f, 312.00f, 0.000f)},
+		// Bahari Others
+		{ "AZ1_01_Root", ELocation::Bahari_HousingPlot, "Bahari - Housing Plot Entrance", FVector(54451.778f, -81603.206f, 940.587f), FRotator(0.000f, 2.45f, 0.000f)},
+		{ "AZ1_01_Root", ELocation::Bahari_ToKilimaValley, "Bahari - Kilima Valley Entrance", FVector(59456.610f,-10932.216f, 897.642f), FRotator(0.000f, -157.46f, 0.000f)},
+	};
 
 	// Class name -> Display name map
 	std::map<std::string, std::string> CLASS_NAME_ALIAS = {
