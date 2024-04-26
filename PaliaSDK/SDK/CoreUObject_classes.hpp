@@ -30,7 +30,11 @@ public:
 	bool IsValidLowLevel() {
 		if (this == nullptr)
 			return false;
+		if (IsBadReadPtr(Class, 512))
+			return false;
 		if (!Class)
+			return false;
+		if (IsBadReadPtr(GObjects, sizeof(TUObjectArray)))
 			return false;
 		if (!GObjects)
 			return false;
