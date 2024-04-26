@@ -32,6 +32,8 @@ public:
 			return false;
 		if (!Class)
 			return false;
+		if (!GObjects)
+			return false;
 		return GObjects->GetByIndex(Index) == this;
 	}
 public:

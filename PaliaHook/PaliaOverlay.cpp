@@ -419,18 +419,6 @@ static void DrawHUD(const AHUD* HUD) {
 			Overlay->CurrentMap = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetCurrentLevelName(World, false).ToString();
 		}
 
-		auto GameInstance = World->OwningGameInstance;
-		if (!GameInstance) return;
-
-		if (GameInstance->LocalPlayers.Num() == 0) return;
-
-		ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
-		if (!LocalPlayer) return;
-
-		APlayerController* PlayerController = LocalPlayer->PlayerController;
-		if (!PlayerController) return;
-
-
 		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
 		if (abs(WorldTime - Overlay->LastCachedTime) > 0.1)
 		{
@@ -443,6 +431,17 @@ static void DrawHUD(const AHUD* HUD) {
 			}
 			Overlay->ProcessActors(Overlay->ActorStep);
 		}
+
+		auto GameInstance = World->OwningGameInstance;
+		if (!GameInstance) return;
+
+		if (GameInstance->LocalPlayers.Num() == 0) return;
+
+		ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
+		if (!LocalPlayer) return;
+
+		APlayerController* PlayerController = LocalPlayer->PlayerController;
+		if (!PlayerController) return;
 
 		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
 		if (!PlayerGetPawn) return;
@@ -1821,11 +1820,8 @@ void PaliaOverlay::DrawOverlay()
 
 											ImGui::Text("Character : %s - Map : %s", ValeriaCharacter->CharacterName.ToString().c_str(), CurrentMap.c_str());
 											if(ImGui::Checkbox("Global Game Speed", &bEnableGameSpeed)) {
-												if (!bEnableGameSpeed) {
-													static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, 1.);
-												}
+												static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, !bEnableGameSpeed ? 1.0f : GlobalGameSpeed);
 											}
-											static float GlobalGameSpeed = 1.;
 											ImGui::SameLine();
 											ImGui::SetNextItemWidth(150.0f);
 											if (ImGui::InputScalar("##GlobalGameSpeed", ImGuiDataType_Float, &GlobalGameSpeed, &fhalf)) {
@@ -1882,7 +1878,7 @@ void PaliaOverlay::DrawOverlay()
 
 											ImGui::SameLine();
 											if (ImGui::Button("Sell Item 1-1")) {
-												FBagSlotLocation bag;
+												FBagSlotLocation bag = {};
 												bag.BagIndex = 0;
 												bag.SlotIndex = 0;
 												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
@@ -1890,7 +1886,7 @@ void PaliaOverlay::DrawOverlay()
 
 											ImGui::SameLine();
 											if (ImGui::Button("Sell Item 1-2")) {
-												FBagSlotLocation bag;
+												FBagSlotLocation bag = {};
 												bag.BagIndex = 0;
 												bag.SlotIndex = 1;
 												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
@@ -1898,7 +1894,7 @@ void PaliaOverlay::DrawOverlay()
 
 											ImGui::SameLine();
 											if (ImGui::Button("Sell Item 1-3")) {
-												FBagSlotLocation bag;
+												FBagSlotLocation bag = {};
 												bag.BagIndex = 0;
 												bag.SlotIndex = 2;
 												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
