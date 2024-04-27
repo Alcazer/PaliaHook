@@ -458,6 +458,11 @@ static void DrawHUD(const AHUD* HUD) {
 		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
 
 		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
+
+		// Wait 30 seconds after  World changed
+		if (WorldTime < 30.f)
+			return;
+
 		if (abs(WorldTime - Overlay->LastCachedTime) > 0.1)
 		{
 			// TODO: Split to separate frames to avoid hitches
