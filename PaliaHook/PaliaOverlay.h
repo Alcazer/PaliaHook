@@ -23,6 +23,7 @@ enum class EType
 	NPCs,
 	Quest,
 	RummagePiles,
+	Stables,
 	MAX
 };
 
@@ -147,6 +148,7 @@ enum class EOneOffs
 	Loot,
 	Quest,
 	RummagePiles,
+	Stables,
 	FishPool,
 	FishHook,
 	MAX
@@ -303,6 +305,28 @@ public:
 		{"BP_TreeChoppable_Pine_Large_C", "Pine (L)"},
 		{"BP_TreeChoppable_Pine_Large2_C", "Pine (L)"},
 
+		// TREES (HOME)
+		{"BP_TreeGrowable_Birch_Sapling_C", "Birch (Sap)"},
+		{"BP_TreeGrowable_Birch_Small_C", "Birch (S)"},
+		{"BP_TreeGrowable_Birch_Medium_C", "Birch (M)"},
+		{"BP_TreeGrowable_Birch_Large_C", "Birch (L)"},
+
+		{"BP_TreeGrowable_Juniper_Sapling_C", "Juniper (Sap)"},
+		{"BP_TreeGrowable_Juniper_Small_C", "Juniper (S)"},
+		{"BP_TreeGrowable_Juniper_Medium_C", "Juniper (M)"},
+		{"BP_TreeGrowable_Juniper_Large_C", "Juniper (L)"},
+
+		{"BP_TreeGrowable_Oak_Sapling_C", "Oak (Sap)"},
+		{"BP_TreeGrowable_Oak_Small_C", "Oak (S)"},
+		{"BP_TreeGrowable_Oak_Medium_C", "Oak (M)"},
+		{"BP_TreeGrowable_Oak_Large_C", "Oak (L)"},
+
+		{"BP_TreeGrowable_Pine_Sapling_C", "Pine (Sap)"},
+		{"BP_TreeGrowable_Pine_Small_C", "Pine (S)"},
+		{"BP_TreeGrowable_Pine_Medium_C", "Pine (M)"},
+		{"BP_TreeGrowable_Pine_Large_C", "Pine (L)"},
+		{"BP_TreeGrowable_Pine_Large2_C", "Pine (L)"},
+
 		// CO-OP TREES
 		{"BP_TreeChoppable_Birch_Sapling_CoOp_C", "Flow-Infused Birch (Sap)"},
 		{"BP_TreeChoppable_Birch_Small_CoOp_C", "Flow-Infused Birch (S)"},
@@ -324,6 +348,28 @@ public:
 		{"BP_TreeChoppable_Pine_Medium_CoOp_C", "Flow-Infused Pine (M)"},
 		{"BP_TreeChoppable_Pine_Large_CoOp_C", "Flow-Infused Pine (L)"},
 		{"BP_TreeChoppable_Pine_Large2_CoOp_C", "Flow-Infused Pine (L)"},
+
+		// CO-OP TREES (HOME)
+		{"BP_TreeGrowable_Birch_Sapling_CoOp_C", "Flow-Infused Birch (Sap)"},
+		{"BP_TreeGrowable_Birch_Small_CoOp_C", "Flow-Infused Birch (S)"},
+		{"BP_TreeGrowable_Birch_Medium_CoOp_C", "Flow-Infused Birch (M)"},
+		{"BP_TreeGrowable_Birch_Large_CoOp_C", "Flow-Infused Birch (L)"},
+
+		{"BP_TreeGrowable_Juniper_Sapling_CoOp_C", "Flow-Infused Juniper (Sap)"},
+		{"BP_TreeGrowable_Juniper_Small_CoOp_C", "Flow-Infused Juniper (S)"},
+		{"BP_TreeGrowable_Juniper_Medium_CoOp_C", "Flow-Infused Juniper (M)"},
+		{"BP_TreeGrowable_Juniper_Large_CoOp_C", "Flow-Infused Juniper (L)"},
+
+		{"BP_TreeGrowable_Oak_Sapling_CoOp_C", "Flow-Infused Oak (Sap)"},
+		{"BP_TreeGrowable_Oak_Small_CoOp_C", "Flow-Infused Oak (S)"},
+		{"BP_TreeGrowable_Oak_Medium_CoOp_C", "Flow-Infused Oak (M)"},
+		{"BP_TreeGrowable_Oak_Large_CoOp_C", "Flow-Infused Oak (L)"},
+
+		{"BP_TreeGrowable_Pine_Sapling_CoOp_C", "Flow-Infused Pine (Sap)"},
+		{"BP_TreeGrowable_Pine_Small_CoOp_C", "Flow-Infused Pine (S)"},
+		{"BP_TreeGrowable_Pine_Medium_CoOp_C", "Flow-Infused Pine (M)"},
+		{"BP_TreeGrowable_Pine_Large_CoOp_C", "Flow-Infused Pine (L)"},
+		{"BP_TreeGrowable_Pine_Large2_CoOp_C", "Flow-Infused Pine (L)"},
 
 		// Shrubs
 		{"BP_ShrubChoppable_Bush_C", "Bush"},
@@ -680,6 +726,10 @@ public:
 
 		{ "BP_ChapaaPile_C", "Rummage Pile (Kilima)" },
 		{ "BP_BeachPile_C", "Rummage Pile (Bahari)" },
+
+		{ "BP_Stables_Sign_C", "Stables - Fast Travel" },
+		{ "BP_Stables_FrontGate_01_C", "Stables - Front Gate 1" },
+		{ "BP_Stables_FrontGate_02_C", "Stables - Front Gate 2" },
 		
 	};
 
@@ -796,6 +846,7 @@ public:
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 		IM_COL32(0x00, 0xFF, 0xFF, 0xFF),
+		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 	};
 
 	// Forageables[Type][Starred]

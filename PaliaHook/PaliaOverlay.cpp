@@ -249,6 +249,13 @@ void PaliaOverlay::ProcessActors(int step) {
 			STATIC_CLASS_MULT("BP_ChapaaPile_C");
 		}
 		break;
+	case EType::Stables:
+		if (Singles[(int)EOneOffs::Stables]) {
+			STATIC_CLASS_MULT("BP_Stables_Sign_C");
+			STATIC_CLASS_MULT("BP_Stables_FrontGate_01_C");
+			STATIC_CLASS_MULT("BP_Stables_FrontGate_02_C");
+		}
+		break;
 	case EType::Fish:
 		if (AnyTrue(Fish)) {
 			STATIC_CLASS_MULT("BP_WaterPlane_Fishing_Base_SQ_C");
@@ -257,7 +264,7 @@ void PaliaOverlay::ProcessActors(int step) {
 	};
 
 	if (SearchClass) {
-		if (ActorType == EType::RummagePiles) {
+		if (ActorType == EType::RummagePiles || ActorType == EType::Stables) {
 			Actors = FindAllActorsOfType(World, SearchClass);
 		}
 		else {
@@ -266,7 +273,7 @@ void PaliaOverlay::ProcessActors(int step) {
 	}
 
 	if (!SearchClasses.empty()) {
-		if (ActorType == EType::RummagePiles) {
+		if (ActorType == EType::RummagePiles || ActorType == EType::Stables) {
 			Actors = FindAllActorsOfTypes(World, SearchClasses);
 		}
 		else {
@@ -397,6 +404,10 @@ void PaliaOverlay::ProcessActors(int step) {
 			shouldAdd = true;
 			Type = 1;
 			break;
+		case EType::Stables:
+			shouldAdd = true;
+			Type = 1;
+			break;
 		case EType::Fish:
 		{
 			EFishType Fish = EFishType::Unknown;
@@ -439,6 +450,12 @@ static void DrawHUD(const AHUD* HUD) {
 			Overlay->CurrentMap = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetCurrentLevelName(World, false).ToString();
 		}
 
+		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
+
+		// Wait 30 seconds after  World changed
+		if (WorldTime < 30.f)
+			return;
+
 		auto GameInstance = World->OwningGameInstance;
 		if (!GameInstance) return;
 
@@ -450,18 +467,9 @@ static void DrawHUD(const AHUD* HUD) {
 		APlayerController* PlayerController = LocalPlayer->PlayerController;
 		if (!PlayerController) return;
 
-		AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
-		if (!ValeriaCharacter) return;
-
 		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
 		if (!PlayerGetPawn) return;
 		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
-
-		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
-
-		// Wait 30 seconds after  World changed
-		if (WorldTime < 30.f)
-			return;
 
 		if (abs(WorldTime - Overlay->LastCachedTime) > 0.1)
 		{
@@ -554,6 +562,9 @@ static void DrawHUD(const AHUD* HUD) {
 					if (Overlay->Singles[(int)EOneOffs::RummagePiles]) {
 						ATimedLootPile* Pile = static_cast<ATimedLootPile*>(Entry.Actor);
 						if (Pile) {
+							AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+							if (!ValeriaCharacter) return;
+
 							if (Pile->CanGather(ValeriaCharacter) && Pile->bActivated) {
 								bShouldDraw = true;
 								Color = Overlay->SingleColors[(int)EOneOffs::RummagePiles];
@@ -568,6 +579,12 @@ static void DrawHUD(const AHUD* HUD) {
 								}
 							}
 						}
+					}
+					break;
+				case EType::Stables:
+					if (Overlay->Singles[(int)EOneOffs::Stables]) {
+						bShouldDraw = true;
+						Color = Overlay->SingleColors[(int)EOneOffs::Stables];
 					}
 					break;
 				case EType::Fish:
@@ -765,6 +782,13 @@ void PaliaOverlay::DrawOverlay()
 					ImGui::Checkbox("##RummagePiles", &Singles[(int)EOneOffs::RummagePiles]);
 					ImGui::TableNextColumn();
 					ImGui::ColorPicker("##RummagePiles", &SingleColors[(int)EOneOffs::RummagePiles]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("Stables");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##Stables", &Singles[(int)EOneOffs::Stables]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##Stables", &SingleColors[(int)EOneOffs::Stables]);
 				}
 				ImGui::EndTable();
 			}
