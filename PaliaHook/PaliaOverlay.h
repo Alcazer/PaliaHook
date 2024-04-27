@@ -22,6 +22,7 @@ enum class EType
 	Players,
 	NPCs,
 	Quest,
+	RummagePiles,
 	MAX
 };
 
@@ -145,6 +146,7 @@ enum class EOneOffs
 	NPC,
 	Loot,
 	Quest,
+	RummagePiles,
 	FishPool,
 	FishHook,
 	MAX
@@ -674,7 +676,11 @@ public:
 		{ "BP_LootChestWoodBundle_Pine_C", "Loot - Heartwood" },
 		{ "BP_LootChestWoodBundle_Juniper_C", "Loot - Sapwood" },
 		{ "BP_LootChestWoodBundle_Oak_C", "Loot - Sapwood" },
-		{ "BP_LootChestWoodBundle_Birch_C", "Loot - Sapwood" }
+		{ "BP_LootChestWoodBundle_Birch_C", "Loot - Sapwood" },
+
+		{ "BP_ChapaaPile_C", "Rummage Pile (Kilima)" },
+		{ "BP_BeachPile_C", "Rummage Pile (Bahari)" },
+		
 	};
 
 	// Search map for assigning gatherable size
@@ -789,6 +795,7 @@ public:
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
+		IM_COL32(0x00, 0xFF, 0xFF, 0xFF),
 	};
 
 	// Forageables[Type][Starred]

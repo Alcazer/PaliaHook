@@ -243,6 +243,12 @@ void PaliaOverlay::ProcessActors(int step) {
 			STATIC_CLASS_MULT("BP_QuestItem_BASE_C");
 		}
 		break;
+	case EType::RummagePiles:
+		if (Singles[(int)EOneOffs::RummagePiles]) {
+			STATIC_CLASS_MULT("BP_BeachPile_C");
+			STATIC_CLASS_MULT("BP_ChapaaPile_C");
+		}
+		break;
 	case EType::Fish:
 		if (AnyTrue(Fish)) {
 			STATIC_CLASS_MULT("BP_WaterPlane_Fishing_Base_SQ_C");
@@ -251,11 +257,21 @@ void PaliaOverlay::ProcessActors(int step) {
 	};
 
 	if (SearchClass) {
-		Actors = FindActorsOfType(World, SearchClass);
+		if (ActorType == EType::RummagePiles) {
+			Actors = FindAllActorsOfType(World, SearchClass);
+		}
+		else {
+			Actors = FindActorsOfType(World, SearchClass);
+		}
 	}
 
 	if (!SearchClasses.empty()) {
-		Actors = FindActorsOfTypes(World, SearchClasses);
+		if (ActorType == EType::RummagePiles) {
+			Actors = FindAllActorsOfTypes(World, SearchClasses);
+		}
+		else {
+			Actors = FindActorsOfTypes(World, SearchClasses);
+		}
 	}
 
 	for (AActor* Actor : Actors)
@@ -377,6 +393,10 @@ void PaliaOverlay::ProcessActors(int step) {
 			shouldAdd = true;
 			Type = 1;
 			break;
+		case EType::RummagePiles:
+			shouldAdd = true;
+			Type = 1;
+			break;
 		case EType::Fish:
 		{
 			EFishType Fish = EFishType::Unknown;
@@ -446,6 +466,9 @@ static void DrawHUD(const AHUD* HUD) {
 		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
 		if (!PlayerGetPawn) return;
 		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
+
+		AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+		if (!ValeriaCharacter) return;
 
 		for (FEntry& Entry : Overlay->CachedActors) {
 			FVector ActorPosition = Entry.WorldPosition;
@@ -520,6 +543,26 @@ static void DrawHUD(const AHUD* HUD) {
 					if (Overlay->Singles[(int)EOneOffs::Quest]) {
 						bShouldDraw = true;
 						Color = Overlay->SingleColors[(int)EOneOffs::Quest];
+					}
+					break;
+				case EType::RummagePiles:
+					if (Overlay->Singles[(int)EOneOffs::RummagePiles]) {
+						ATimedLootPile* Pile = static_cast<ATimedLootPile*>(Entry.Actor);
+						if (Pile) {
+							if (Pile->CanGather(ValeriaCharacter) && Pile->bActivated) {
+								bShouldDraw = true;
+								Color = Overlay->SingleColors[(int)EOneOffs::RummagePiles];
+							}
+							else if (Overlay->bVisualizeDefault) {
+								bShouldDraw = true;
+								if (Pile->bActivated) {
+									Color = IM_COL32(0xFF, 0xFF, 0xFF, 0xFF);
+								}
+								else {
+									Color = IM_COL32(0xFF, 0x00, 0x00, 0xFF);
+								}
+							}
+						}
 					}
 					break;
 				case EType::Fish:
@@ -710,6 +753,13 @@ void PaliaOverlay::DrawOverlay()
 					ImGui::Checkbox("##Quest", &Singles[(int)EOneOffs::Quest]);
 					ImGui::TableNextColumn();
 					ImGui::ColorPicker("##Quest", &SingleColors[(int)EOneOffs::Quest]);
+					ImGui::TableNextRow();
+					ImGui::TableNextColumn();
+					ImGui::Text("RummagePiles");
+					ImGui::TableNextColumn();
+					ImGui::Checkbox("##RummagePiles", &Singles[(int)EOneOffs::RummagePiles]);
+					ImGui::TableNextColumn();
+					ImGui::ColorPicker("##RummagePiles", &SingleColors[(int)EOneOffs::RummagePiles]);
 				}
 				ImGui::EndTable();
 			}

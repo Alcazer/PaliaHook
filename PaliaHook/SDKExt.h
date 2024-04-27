@@ -113,6 +113,76 @@ namespace SDK
 
 		return Actors;
 	}
+	
+	template<typename UEType = AActor>
+	std::vector<UEType*> FindAllActorsOfType(UWorld* WorldContext)
+	{
+		std::vector<UEType*> Actors;
+
+		if (!WorldContext || !WorldContext->IsValidLowLevel()) return Actors;
+
+		UClass* Class = UEType::StaticClass();
+		TArray<AActor*> WorldActors;
+		static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetAllActorsOfClass(WorldContext, Class, &WorldActors);
+		for (int i = 0; i < WorldActors.Num(); ++i)
+		{
+			AActor* Actor = WorldActors[i];
+
+			if (!Actor || !Actor->IsValidLowLevel()) // TODO: Figure out why sometimes we get 0xffffffffffffffff
+				continue;
+
+			if (Actor->IsA(Class) && !Actor->IsDefaultObject())
+				Actors.push_back(static_cast<UEType*>(Actor));
+		}
+
+		return Actors;
+	}
+
+	std::vector<AActor*> FindAllActorsOfType(UWorld* WorldContext, UClass* Class)
+	{
+		std::vector<AActor*> Actors;
+
+		if (!WorldContext || !WorldContext->IsValidLowLevel()) return Actors;
+
+		TArray<AActor*> WorldActors;
+		static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetAllActorsOfClass(WorldContext, Class, &WorldActors);
+		for (int i = 0; i < WorldActors.Num(); ++i)
+		{
+			AActor* Actor = WorldActors[i];
+
+			if (!Actor || !Actor->IsValidLowLevel()) // TODO: Figure out why sometimes we get 0xffffffffffffffff
+				continue;
+
+			if (Actor->IsA(Class) && !Actor->IsDefaultObject())
+				Actors.push_back(Actor);
+		}
+
+		return Actors;
+	}
+
+	std::vector<AActor*> FindAllActorsOfTypes(UWorld* WorldContext, std::vector<UClass*> Classes)
+	{
+		std::vector<AActor*> Actors;
+
+		if (!WorldContext || !WorldContext->IsValidLowLevel()) return Actors;
+
+		TArray<AActor*> WorldActors;
+		for (UClass* Class : Classes) {
+			static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetAllActorsOfClass(WorldContext, Class, &WorldActors);
+			for (int i = 0; i < WorldActors.Num(); ++i)
+			{
+				AActor* Actor = WorldActors[i];
+
+				if (!Actor || !Actor->IsValidLowLevel()) // TODO: Figure out why sometimes we get 0xffffffffffffffff
+					continue;
+
+				if (Actor->IsA(Class) && !Actor->IsDefaultObject())
+					Actors.push_back(Actor);
+			}
+		}
+
+		return Actors;
+	}
 
 	UWorld* GetWorld() {
 		if (UEngine* Engine = GetEngine()) {
