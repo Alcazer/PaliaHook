@@ -439,6 +439,24 @@ static void DrawHUD(const AHUD* HUD) {
 			Overlay->CurrentMap = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetCurrentLevelName(World, false).ToString();
 		}
 
+		auto GameInstance = World->OwningGameInstance;
+		if (!GameInstance) return;
+
+		if (GameInstance->LocalPlayers.Num() == 0) return;
+
+		ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
+		if (!LocalPlayer) return;
+
+		APlayerController* PlayerController = LocalPlayer->PlayerController;
+		if (!PlayerController) return;
+
+		AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+		if (!ValeriaCharacter) return;
+
+		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
+		if (!PlayerGetPawn) return;
+		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
+
 		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
 		if (abs(WorldTime - Overlay->LastCachedTime) > 0.1)
 		{
@@ -451,24 +469,6 @@ static void DrawHUD(const AHUD* HUD) {
 			}
 			Overlay->ProcessActors(Overlay->ActorStep);
 		}
-
-		auto GameInstance = World->OwningGameInstance;
-		if (!GameInstance) return;
-
-		if (GameInstance->LocalPlayers.Num() == 0) return;
-
-		ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
-		if (!LocalPlayer) return;
-
-		APlayerController* PlayerController = LocalPlayer->PlayerController;
-		if (!PlayerController) return;
-
-		APawn* PlayerGetPawn = PlayerController->K2_GetPawn();
-		if (!PlayerGetPawn) return;
-		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
-
-		AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
-		if (!ValeriaCharacter) return;
 
 		for (FEntry& Entry : Overlay->CachedActors) {
 			FVector ActorPosition = Entry.WorldPosition;
