@@ -27,19 +27,6 @@ public:
 	class UClass*                                 Class;                                             // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FName                                   Name;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UObject*                                Outer;                                             // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
-	bool IsValidLowLevel() {
-		if (this == nullptr)
-			return false;
-		if (IsBadReadPtr(Class, 512))
-			return false;
-		if (!Class)
-			return false;
-		if (IsBadReadPtr(GObjects, sizeof(TUObjectArray)))
-			return false;
-		if (!GObjects)
-			return false;
-		return GObjects->GetByIndex(Index) == this;
-	}
 public:
 	static class UObject* FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType = EClassCastFlags::None);
 	static class UObject* FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType = EClassCastFlags::None);
@@ -86,6 +73,16 @@ public:
 	static class UObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UObject>();
+	}
+
+	bool IsValidLowLevel() {
+		if (this == nullptr)
+			return false;
+		if (!Class)
+			return false;
+		if (!GObjects)
+			return false;
+		return GObjects->GetByIndex(Index) == this;
 	}
 };
 static_assert(alignof(UObject) == 0x000008, "Wrong alignment on UObject");

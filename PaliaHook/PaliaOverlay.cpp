@@ -443,18 +443,23 @@ static void DrawHUD(const AHUD* HUD) {
 		auto World = GetWorld();
 		if (!World) return;
 
+		UGameplayStatics* GameplayStatics = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject);
+		if (!GameplayStatics) return;
+
+		double WorldTime = GameplayStatics->GetTimeSeconds(World);
+
 		// clear out cache on level change
 		if (Overlay->CurrentLevel != World->PersistentLevel) {
 			Overlay->CachedActors.clear();
 			Overlay->CurrentLevel = World->PersistentLevel;
-			Overlay->CurrentMap = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetCurrentLevelName(World, false).ToString();
+			Overlay->CurrentMap = GameplayStatics->GetCurrentLevelName(World, false).ToString();
 		}
 
-		double WorldTime = static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->GetTimeSeconds(World);
-
-		// Wait 30 seconds after  World changed
-		if (WorldTime < 30.f)
+		// Wait 30 seconds after World changed
+		if (WorldTime < 30.f) {
+			Overlay->CachedActors.clear();
 			return;
+		}
 
 		auto GameInstance = World->OwningGameInstance;
 		if (!GameInstance) return;
