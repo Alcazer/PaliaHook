@@ -78,9 +78,11 @@ public:
 	bool IsValidLowLevel() {
 		if (this == nullptr)
 			return false;
+		if (IsBadReadPtr(this, sizeof(UObject)))
+			return false;
 		if (!Class)
 			return false;
-		if (!GObjects)
+		if (Index % SDK::TUObjectArray::ElementsPerChunk < 0) // GObjects->GetByIndex->InChunkIdx < 0 giving crash
 			return false;
 		return GObjects->GetByIndex(Index) == this;
 	}

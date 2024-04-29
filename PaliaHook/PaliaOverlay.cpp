@@ -455,12 +455,6 @@ static void DrawHUD(const AHUD* HUD) {
 			Overlay->CurrentMap = GameplayStatics->GetCurrentLevelName(World, false).ToString();
 		}
 
-		// Wait 30 seconds after World changed
-		if (WorldTime < 30.f) {
-			Overlay->CachedActors.clear();
-			return;
-		}
-
 		auto GameInstance = World->OwningGameInstance;
 		if (!GameInstance) return;
 
