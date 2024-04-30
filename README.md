@@ -1,6 +1,6 @@
 # Palia Soft-Hack
 This repository contains a work-in-progress soft-hack for Palia, currently featuring functionalities such as ESP for Mineables and Creatures. 
-Currently compatible with Palia version 0.166.2.
+Currently compatible with Palia version 0.179.1.
 
 **Compatibility**: The hack is compatible with both DX11 and DX12 using the same DLL. To access configuration overlay, press F12.
 
