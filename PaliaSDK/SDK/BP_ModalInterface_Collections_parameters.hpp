@@ -33,7 +33,7 @@ struct BP_ModalInterface_Collections_C_InitPostOpenModalWidget final
 {
 public:
 	EVAL_CollectionsTabState                      Starting_Tab;                                      // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CDA[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_18DB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_CharacterCustomizationComponent*   TargetCharacterCustomizationComponent;             // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_ModalInterface_Collections_C_InitPostOpenModalWidget) == 0x000008, "Wrong alignment on BP_ModalInterface_Collections_C_InitPostOpenModalWidget");

@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Palia_structs.hpp"
 #include "WBP_MinigameQTE_Base_classes.hpp"
+#include "Palia_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -66,7 +66,7 @@ public:
 	double                                        IndicatorTravelTime;                               // 0x0488(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Text1Active;                                       // 0x0490(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StopIntroTempo;                                    // 0x0491(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E91[0x6];                                     // 0x0492(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4DD0[0x6];                                     // 0x0492(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        LastTimerKickTime;                                 // 0x0498(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         MetronomeID;                                       // 0x04A0(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

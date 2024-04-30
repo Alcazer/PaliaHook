@@ -57,7 +57,7 @@ public:
 	class USizeBox*                               UnmuteButtonContainer;                             // 0x05E0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 XSXIcon;                                           // 0x05E8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FVALUI_ChatMessageConfig               MessageConfig;                                     // 0x05F0(0x000C)(Edit, BlueprintVisible, NoDestructor)
-	uint8                                         Pad_5542[0x4];                                     // 0x05FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5537[0x4];                                     // 0x05FC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FValeriaChatMessage                    Message;                                           // 0x0600(0x0068)(Edit, BlueprintVisible)
 	FMulticastInlineDelegateProperty_             OnMenuButtonPressed;                               // 0x0668(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<struct FValeriaChatMessage>            SurroundingMessages;                               // 0x0678(0x0010)(Edit, BlueprintVisible)

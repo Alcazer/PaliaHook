@@ -23,16 +23,16 @@ struct FMenuHubListEntryStruct final
 {
 public:
 	bool                                          Hidden_22_FAA223B141E130D3DCAE949F4B6AC119;        // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4BF2[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              Icon_2_919401524512D58F2733A9B70F30FB02;           // 0x0008(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FText                                   Text_7_67045605440CDD584F4B30AAAE9375F7;           // 0x0030(0x0018)(Edit, BlueprintVisible)
 	EVAL_GameplayMenuMode                         PlayerMenuType_30_F823B8524121F48BAB2525AC1578D407; // 0x0048(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EVAL_OpenStoreContext                         PremiumStoreMenu_19_78391AB245CAEEEA28C1C091D4F80FB8; // 0x0049(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7B[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4BF3[0x2];                                     // 0x004A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   SocialTabName_26_2B6F01D54CAD02BF11352DA9C62931F5; // 0x004C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnterHousingMode_29_EB5129E54F4DEF0B13BFAD942BDEEE17; // 0x0054(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EMenuHubOtherMenuType                         OtherMenuType_33_70C18EFA4428E8900597F8803DCD48A6; // 0x0055(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7C[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4BF4[0x2];                                     // 0x0056(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           DirectBindInputAction_38_2A3997574F891601059628B15ECA2112; // 0x0058(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugOnly_40_FBCFF18245804C521758B288AA7690D0;     // 0x0060(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

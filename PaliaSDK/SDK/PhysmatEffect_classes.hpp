@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "Struct_Physmat_structs.hpp"
 #include "PhysicsCore_structs.hpp"
+#include "Struct_Physmat_structs.hpp"
 #include "Engine_classes.hpp"
 
 

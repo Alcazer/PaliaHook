@@ -21,7 +21,7 @@ struct BP_lanternC_PoleStableA_C_ExecuteUbergraph_BP_lanternC_PoleStableA final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DestroyIfServer_ReturnValue;              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4766[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49A9[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_Event_DeltaSeconds;                         // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_lanternC_PoleStableA_C_ExecuteUbergraph_BP_lanternC_PoleStableA) == 0x000004, "Wrong alignment on BP_lanternC_PoleStableA_C_ExecuteUbergraph_BP_lanternC_PoleStableA");

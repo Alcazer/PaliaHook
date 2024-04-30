@@ -10,10 +10,10 @@
 
 #include "Basic.hpp"
 
-#include "CommonInput_structs.hpp"
 #include "Struct_PlatformTutorialModal_CM_structs.hpp"
 #include "S6Core_structs.hpp"
 #include "UMG_classes.hpp"
+#include "CommonInput_structs.hpp"
 
 
 namespace SDK

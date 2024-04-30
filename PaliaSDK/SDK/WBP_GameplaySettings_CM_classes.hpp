@@ -49,7 +49,7 @@ public:
 	class UWBP_Settings_DescriptionBox_C*         WBP_Settings_DescriptionBox;                       // 0x05B8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class FString>                         LocaleComboBoxOptionsArray;                        // 0x05C0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bIsSynced;                                         // 0x05D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5431[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3EAE[0x7];                                     // 0x05D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ScrollMoveSpeed;                                   // 0x05D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWBP_SettingsItem_Parent_DoNotEdit_C*   CurrentFocusWidget;                                // 0x05E0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CVar_CookingCameraEnabled;                         // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)

@@ -24,7 +24,7 @@ public:
 	struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable A;                                                 // 0x0000(0x02B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Stable B;                                                 // 0x02B8(0x02B8)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0570(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C82[0x7];                                     // 0x0571(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C46[0x7];                                     // 0x0571(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCreationOptions_EqualEqual) == 0x000008, "Wrong alignment on VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCreationOptions_EqualEqual");
 static_assert(sizeof(VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCreationOptions_EqualEqual) == 0x000578, "Wrong size on VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCreationOptions_EqualEqual");
@@ -40,7 +40,7 @@ public:
 	struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile A;                                                 // 0x0000(0x0480)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALDTOS_CharacterCustomizationLoadout_PersistDTO_Volatile B;                                                 // 0x0480(0x0480)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0900(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C83[0x7];                                     // 0x0901(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C47[0x7];                                     // 0x0901(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCustomizationOptions_EqualEqual) == 0x000008, "Wrong alignment on VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCustomizationOptions_EqualEqual");
 static_assert(sizeof(VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCustomizationOptions_EqualEqual) == 0x000908, "Wrong size on VALDTOS_MetaCharacterCustomizationFuncLib_CharacterCustomizationOptions_EqualEqual");
@@ -56,7 +56,7 @@ public:
 	struct FVALDTOS_MetaCharacterFormat           A;                                                 // 0x0000(0x0778)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALDTOS_MetaCharacterFormat           B;                                                 // 0x0778(0x0778)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0EF0(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C84[0x7];                                     // 0x0EF1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C48[0x7];                                     // 0x0EF1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALDTOS_MetaCharacterCustomizationFuncLib_MetaCharacterFormat_EqualEqual) == 0x000008, "Wrong alignment on VALDTOS_MetaCharacterCustomizationFuncLib_MetaCharacterFormat_EqualEqual");
 static_assert(sizeof(VALDTOS_MetaCharacterCustomizationFuncLib_MetaCharacterFormat_EqualEqual) == 0x000EF8, "Wrong size on VALDTOS_MetaCharacterCustomizationFuncLib_MetaCharacterFormat_EqualEqual");

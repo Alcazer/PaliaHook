@@ -38,10 +38,10 @@ struct WBP_SavedLoadoutsWheelChoice_C_ExecuteUbergraph_WBP_SavedLoadoutsWheelCho
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1851[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4174[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AVAL_CharacterPreviewer*                CallFunc_GetCharacterPreviewer_ReturnValue;        // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1852[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4175[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AVAL_CharacterPreviewer*                CallFunc_GetCharacterPreviewer_ReturnValue_1;      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class AVAL_CharacterPreviewer* CharacterPreviewer, const struct FGuid& RequestID, class UTextureRenderTarget2D* PreviewTexture)> K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FPointerEvent                          K2Node_Event_PointerEvent_2;                       // 0x0030(0x0078)(ConstParm)
@@ -53,14 +53,14 @@ public:
 	struct FPointerEvent                          K2Node_Event_PointerEvent;                         // 0x0170(0x0078)()
 	class UDragDropOperation*                     K2Node_Event_Operation;                            // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x01F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1853[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4176[0x7];                                     // 0x01F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x01F8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0200(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1854[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4177[0x7];                                     // 0x0201(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0208(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVAL_CharacterCustomizationLoadout     CallFunc_Map_Find_Value;                           // 0x0210(0x0900)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x0B10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1855[0x7];                                     // 0x0B11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4178[0x7];                                     // 0x0B11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_RenderFullBodyPreviewParameters   K2Node_MakeStruct_VAL_RenderFullBodyPreviewParameters; // 0x0B18(0x0900)()
 };
 static_assert(alignof(WBP_SavedLoadoutsWheelChoice_C_ExecuteUbergraph_WBP_SavedLoadoutsWheelChoice) == 0x000008, "Wrong alignment on WBP_SavedLoadoutsWheelChoice_C_ExecuteUbergraph_WBP_SavedLoadoutsWheelChoice");
@@ -107,7 +107,7 @@ struct WBP_SavedLoadoutsWheelChoice_C_HandleHovered final
 {
 public:
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1856[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4179[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_SavedLoadoutsWheelChoice_C_HandleHovered) == 0x000008, "Wrong alignment on WBP_SavedLoadoutsWheelChoice_C_HandleHovered");
@@ -253,16 +253,16 @@ public:
 	struct FPointerEvent                          PointerEvent;                                      // 0x0038(0x0078)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class UDragDropOperation*                     Operation;                                         // 0x00B0(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnValue;                                       // 0x00B8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1857[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417A[0x3];                                     // 0x00B9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  OldLoadoutId;                                      // 0x00BC(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1858[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417B[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            SavedLoadoutWidgetReference;                       // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UBP_SavedLoadoutDrag_C*                 K2Node_DynamicCast_AsBP_Saved_Loadout_Drag;        // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1859[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417C[0x7];                                     // 0x00E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice; // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_185A[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417D[0x7];                                     // 0x00F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_TileEntry_SavedLoadout_C*          K2Node_DynamicCast_AsWBP_Tile_Entry_Saved_Loadout; // 0x00F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0100(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x0101(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -367,10 +367,10 @@ public:
 	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_AssignSavedLoadoutToWheel_ReturnValue;    // 0x001A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x001B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_185B[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417E[0x4];                                     // 0x001C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_185C[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_417F[0x7];                                     // 0x0029(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_SavedLoadoutsWheelChoice_C_Set_Assigned_Loadout) == 0x000008, "Wrong alignment on WBP_SavedLoadoutsWheelChoice_C_Set_Assigned_Loadout");
@@ -408,7 +408,7 @@ struct WBP_SavedLoadoutsWheelChoice_C_Update final
 {
 public:
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_185D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4180[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  CallFunc_GetLoadoutIdForAssignedSlot_ReturnValue;  // 0x0018(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

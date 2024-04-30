@@ -26,7 +26,7 @@ public:
 	class FString                                 CurrentChatRoomId;                                 // 0x0028(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         MaxChatRoomRetries;                                // 0x0038(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         NumChatRoomRetries;                                // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_3298[0x18];                                    // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32B8[0x18];                                    // 0x0040(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -49,10 +49,10 @@ static_assert(offsetof(UChatroom, NumChatRoomRetries) == 0x00003C, "Member 'UCha
 class USocialManager final  : public UObject
 {
 public:
-	uint8                                         Pad_3299[0x80];                                    // 0x0028(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32B9[0x80];                                    // 0x0028(0x0080)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class USocialToolkit*>                 SocialToolkits;                                    // 0x00A8(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	class USocialDebugTools*                      SocialDebugTools;                                  // 0x00B8(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_329A[0xF0];                                    // 0x00C0(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BA[0xF0];                                    // 0x00C0(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -74,16 +74,16 @@ static_assert(offsetof(USocialManager, SocialDebugTools) == 0x0000B8, "Member 'U
 class USocialToolkit final  : public UObject
 {
 public:
-	uint8                                         Pad_329B[0x40];                                    // 0x0028(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BB[0x40];                                    // 0x0028(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	class USocialUser*                            LocalUser;                                         // 0x0068(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<class USocialUser*>                    AllUsers;                                          // 0x0070(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_329C[0x50];                                    // 0x0080(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BC[0x50];                                    // 0x0080(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bRemoveInvalidatedUserFromMaps;                    // 0x00D0(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_329D[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BD[0x3];                                     // 0x00D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class ULocalPlayer>            LocalPlayerOwner;                                  // 0x00D4(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_329E[0x4];                                     // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BE[0x4];                                     // 0x00DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class USocialChatManager*                     SocialChatManager;                                 // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_329F[0x1C8];                                   // 0x00E8(0x01C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32BF[0x1C8];                                   // 0x00E8(0x01C8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -108,14 +108,14 @@ static_assert(offsetof(USocialToolkit, SocialChatManager) == 0x0000E0, "Member '
 class USocialChatManager final  : public UObject
 {
 public:
-	uint8                                         Pad_32A0[0x50];                                    // 0x0028(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C0[0x50];                                    // 0x0028(0x0050)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<TWeakObjectPtr<class USocialUser>, class USocialPrivateMessageChannel*> DirectChannelsByTargetUser;                        // 0x0078(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	TMap<class FString, class USocialChatRoom*>   ChatRoomsById;                                     // 0x00C8(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	TMap<class FString, class USocialReadOnlyChatChannel*> ReadOnlyChannelsByDisplayName;                     // 0x0118(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	bool                                          bEnableChatSlashCommands;                          // 0x0168(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32A1[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C1[0x7];                                     // 0x0169(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<struct FUniqueNetIdRepl, class USocialGroupChannel*> GroupChannels;                                     // 0x0170(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32A2[0x60];                                    // 0x01C0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C2[0x60];                                    // 0x01C0(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -140,7 +140,7 @@ static_assert(offsetof(USocialChatManager, GroupChannels) == 0x000170, "Member '
 class USocialChatChannel : public UObject
 {
 public:
-	uint8                                         Pad_32A3[0xC0];                                    // 0x0028(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C3[0xC0];                                    // 0x0028(0x00C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -160,7 +160,7 @@ static_assert(sizeof(USocialChatChannel) == 0x0000E8, "Wrong size on USocialChat
 class USocialChatRoom : public USocialChatChannel
 {
 public:
-	uint8                                         Pad_32A4[0x10];                                    // 0x00E8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C4[0x10];                                    // 0x00E8(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -184,7 +184,7 @@ public:
 	struct FUniqueNetIdRepl                       GroupID;                                           // 0x0030(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FText                                   DisplayName;                                       // 0x0060(0x0018)(NativeAccessSpecifierPrivate)
 	TArray<class USocialUser*>                    Members;                                           // 0x0078(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32A5[0x10];                                    // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C5[0x10];                                    // 0x0088(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -263,26 +263,26 @@ static_assert(sizeof(USocialReadOnlyChatChannel) == 0x0000E8, "Wrong size on USo
 class alignas(0x10) USocialParty final  : public UObject
 {
 public:
-	uint8                                         Pad_32A6[0x38];                                    // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C6[0x38];                                    // 0x0028(0x0038)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class APartyBeaconClient>         ReservationBeaconClientClass;                      // 0x0060(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TSubclassOf<class ASpectatorBeaconClient>     SpectatorBeaconClientClass;                        // 0x0068(0x0008)(ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_32A7[0x10];                                    // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C7[0x10];                                    // 0x0070(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FUniqueNetIdRepl                       OwningLocalUserId;                                 // 0x0080(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FUniqueNetIdRepl                       CurrentLeaderId;                                   // 0x00B0(0x0030)(HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TMap<struct FUniqueNetIdRepl, class UPartyMember*> PartyMembersById;                                  // 0x00E0(0x0050)(UObjectWrapper, NativeAccessSpecifierPrivate)
 	bool                                          bEnableAutomaticPartyRejoin;                       // 0x0130(0x0001)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32A8[0x57];                                    // 0x0131(0x0057)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C8[0x57];                                    // 0x0131(0x0057)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        PlatformUserInviteCooldown;                        // 0x0188(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	double                                        PrimaryUserInviteCooldown;                         // 0x0190(0x0008)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32A9[0x74];                                    // 0x0198(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32C9[0x74];                                    // 0x0198(0x0074)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class APartyBeaconClient>      ReservationBeaconClient;                           // 0x020C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32AA[0x8];                                     // 0x0214(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CA[0x8];                                     // 0x0214(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TWeakObjectPtr<class ASpectatorBeaconClient>  SpectatorBeaconClient;                             // 0x021C(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32AB[0x2C];                                    // 0x0224(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CB[0x2C];                                    // 0x0224(0x002C)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         JoinInProgressTimerRate;                           // 0x0250(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         JoinInProgressRequestTimeout;                      // 0x0254(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         JoinInProgressResponseTimeout;                     // 0x0258(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32AC[0x114];                                   // 0x025C(0x0114)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CC[0x114];                                   // 0x025C(0x0114)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -315,9 +315,9 @@ static_assert(offsetof(USocialParty, JoinInProgressResponseTimeout) == 0x000258,
 class UPartyMember final  : public UObject
 {
 public:
-	uint8                                         Pad_32AD[0x48];                                    // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CD[0x48];                                    // 0x0028(0x0048)(Fixing Size After Last Property [ Dumper-7 ])
 	class USocialUser*                            SocialUser;                                        // 0x0070(0x0008)(ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32AE[0x98];                                    // 0x0078(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CE[0x98];                                    // 0x0078(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -338,7 +338,7 @@ static_assert(offsetof(UPartyMember, SocialUser) == 0x000070, "Member 'UPartyMem
 class USocialDebugTools final  : public UObject
 {
 public:
-	uint8                                         Pad_32AF[0x60];                                    // 0x0028(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32CF[0x60];                                    // 0x0028(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -367,7 +367,7 @@ public:
 	float                                         UserListAutoUpdateRate;                            // 0x0040(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         MinNicknameLength;                                 // 0x0044(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	int32                                         MaxNicknameLength;                                 // 0x0048(0x0004)(ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32B0[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32D0[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FSocialPlatformDescription>     SocialPlatformDescriptions;                        // 0x0050(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 	TArray<class FName>                           SonyOSSNames;                                      // 0x0060(0x0010)(ZeroConstructor, Config, NativeAccessSpecifierPrivate)
 
@@ -400,7 +400,7 @@ static_assert(offsetof(USocialSettings, SonyOSSNames) == 0x000060, "Member 'USoc
 class USocialUser final  : public UObject
 {
 public:
-	uint8                                         Pad_32B1[0x1A8];                                   // 0x0028(0x01A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32D1[0x1A8];                                   // 0x0028(0x01A8)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

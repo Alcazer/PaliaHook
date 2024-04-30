@@ -17,397 +17,6 @@
 namespace SDK
 {
 
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.PlayOutfitChangeAnimation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FPlayEmoteOptionalParams         K2Node_MakeStruct_PlayEmoteOptionalParams              (NoDestructor)
-// EValeriaFuncResult                      CallFunc_GetValeriaCharacter_OutResult                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaCharacter*                CallFunc_GetValeriaCharacter_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UValeriaEmoteComponent*           CallFunc_GetEmoteComponent_ReturnValue                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_PlayEmoteByAsset_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::PlayOutfitChangeAnimation(const struct FPlayEmoteOptionalParams& K2Node_MakeStruct_PlayEmoteOptionalParams, EValeriaFuncResult CallFunc_GetValeriaCharacter_OutResult, class AValeriaCharacter* CallFunc_GetValeriaCharacter_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess, class UValeriaEmoteComponent* CallFunc_GetEmoteComponent_ReturnValue, bool CallFunc_PlayEmoteByAsset_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "PlayOutfitChangeAnimation");
-
-	Params::WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation Parms{};
-
-	Parms.K2Node_MakeStruct_PlayEmoteOptionalParams = std::move(K2Node_MakeStruct_PlayEmoteOptionalParams);
-	Parms.CallFunc_GetValeriaCharacter_OutResult = CallFunc_GetValeriaCharacter_OutResult;
-	Parms.CallFunc_GetValeriaCharacter_ReturnValue = CallFunc_GetValeriaCharacter_ReturnValue;
-	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
-	Parms.CallFunc_GetEmoteComponent_ReturnValue = CallFunc_GetEmoteComponent_ReturnValue;
-	Parms.CallFunc_PlayEmoteByAsset_ReturnValue = CallFunc_PlayEmoteByAsset_ReturnValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateAllWheelSlots
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TArray<class UWidget*>                  CallFunc_GetAllSlotWidgets_Widgets                     (ReferenceParm, ContainsInstancedReference)
-// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWidget*                          CallFunc_Array_Get_Item                                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWBP_SavedLoadoutsWheelChoice_C*  K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice   (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::UpdateAllWheelSlots(int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, TArray<class UWidget*>& CallFunc_GetAllSlotWidgets_Widgets, int32 CallFunc_Array_Length_ReturnValue, class UWidget* CallFunc_Array_Get_Item, bool CallFunc_Less_IntInt_ReturnValue, class UWBP_SavedLoadoutsWheelChoice_C* K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice, bool K2Node_DynamicCast_bSuccess)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UpdateAllWheelSlots");
-
-	Params::WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots Parms{};
-
-	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
-	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
-	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
-	Parms.CallFunc_GetAllSlotWidgets_Widgets = std::move(CallFunc_GetAllSlotWidgets_Widgets);
-	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
-	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
-	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
-	Parms.K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice = K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	CallFunc_GetAllSlotWidgets_Widgets = std::move(Parms.CallFunc_GetAllSlotWidgets_Widgets);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.ToggleCooldownVisibility
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bTryToShow                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_K2_IsTimerActiveHandle_ReturnValue            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::ToggleCooldownVisibility(bool bTryToShow, bool CallFunc_K2_IsTimerActiveHandle_ReturnValue, bool CallFunc_BooleanAND_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "ToggleCooldownVisibility");
-
-	Params::WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility Parms{};
-
-	Parms.bTryToShow = bTryToShow;
-	Parms.CallFunc_K2_IsTimerActiveHandle_ReturnValue = CallFunc_K2_IsTimerActiveHandle_ReturnValue;
-	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.DeadzoneCheck
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  DeadzoneAmount                                         (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ERedirectsPlatform                      CallFunc_GetPlatformType_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_EqualEqual_ByteByte_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Abs_ReturnValue                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Greater_DoubleDouble_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Abs_ReturnValue_1                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Greater_DoubleDouble_ReturnValue_1            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_BooleanOR_ReturnValue                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-bool UWBP_SavedLoadouts_Wheel_C::DeadzoneCheck(double DeadzoneAmount, ERedirectsPlatform CallFunc_GetPlatformType_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue, double CallFunc_Abs_ReturnValue, bool CallFunc_Greater_DoubleDouble_ReturnValue, double CallFunc_Abs_ReturnValue_1, bool CallFunc_Greater_DoubleDouble_ReturnValue_1, bool CallFunc_BooleanOR_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "DeadzoneCheck");
-
-	Params::WBP_SavedLoadouts_Wheel_C_DeadzoneCheck Parms{};
-
-	Parms.DeadzoneAmount = DeadzoneAmount;
-	Parms.CallFunc_GetPlatformType_ReturnValue = CallFunc_GetPlatformType_ReturnValue;
-	Parms.CallFunc_EqualEqual_ByteByte_ReturnValue = CallFunc_EqualEqual_ByteByte_ReturnValue;
-	Parms.CallFunc_Abs_ReturnValue = CallFunc_Abs_ReturnValue;
-	Parms.CallFunc_Greater_DoubleDouble_ReturnValue = CallFunc_Greater_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Abs_ReturnValue_1 = CallFunc_Abs_ReturnValue_1;
-	Parms.CallFunc_Greater_DoubleDouble_ReturnValue_1 = CallFunc_Greater_DoubleDouble_ReturnValue_1;
-	Parms.CallFunc_BooleanOR_ReturnValue = CallFunc_BooleanOR_ReturnValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateCooldown
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// float                                   CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// int32                                   CallFunc_FCeil_ReturnValue                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             CallFunc_Conv_IntToText_ReturnValue                    ()
-// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Divide_DoubleDouble_B_ImplicitCast            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_FCeil_A_ImplicitCast                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_Divide_DoubleDouble_A_ImplicitCast            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   CallFunc_SetScalarParameterValue_Value_ImplicitCast    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::UpdateCooldown(float CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue, int32 CallFunc_FCeil_ReturnValue, float CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1, class FText CallFunc_Conv_IntToText_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_B_ImplicitCast, double CallFunc_FCeil_A_ImplicitCast, double CallFunc_Divide_DoubleDouble_A_ImplicitCast, float CallFunc_SetScalarParameterValue_Value_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UpdateCooldown");
-
-	Params::WBP_SavedLoadouts_Wheel_C_UpdateCooldown Parms{};
-
-	Parms.CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue = CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue;
-	Parms.CallFunc_FCeil_ReturnValue = CallFunc_FCeil_ReturnValue;
-	Parms.CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1 = CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1;
-	Parms.CallFunc_Conv_IntToText_ReturnValue = CallFunc_Conv_IntToText_ReturnValue;
-	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
-	Parms.CallFunc_Divide_DoubleDouble_B_ImplicitCast = CallFunc_Divide_DoubleDouble_B_ImplicitCast;
-	Parms.CallFunc_FCeil_A_ImplicitCast = CallFunc_FCeil_A_ImplicitCast;
-	Parms.CallFunc_Divide_DoubleDouble_A_ImplicitCast = CallFunc_Divide_DoubleDouble_A_ImplicitCast;
-	Parms.CallFunc_SetScalarParameterValue_Value_ImplicitCast = CallFunc_SetScalarParameterValue_Value_ImplicitCast;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartCooldown
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// int32                                   CallFunc_FTrunc_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class FText                             CallFunc_Conv_IntToText_ReturnValue                    ()
-// TDelegate<void()>                       K2Node_CreateDelegate_OutputDelegate                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// struct FTimerHandle                     CallFunc_K2_SetTimerDelegate_ReturnValue               (NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_FTrunc_A_ImplicitCast                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::StartCooldown(int32 CallFunc_FTrunc_ReturnValue, class FText CallFunc_Conv_IntToText_ReturnValue, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate, const struct FTimerHandle& CallFunc_K2_SetTimerDelegate_ReturnValue, double CallFunc_FTrunc_A_ImplicitCast)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StartCooldown");
-
-	Params::WBP_SavedLoadouts_Wheel_C_StartCooldown Parms{};
-
-	Parms.CallFunc_FTrunc_ReturnValue = CallFunc_FTrunc_ReturnValue;
-	Parms.CallFunc_Conv_IntToText_ReturnValue = CallFunc_Conv_IntToText_ReturnValue;
-	Parms.K2Node_CreateDelegate_OutputDelegate = K2Node_CreateDelegate_OutputDelegate;
-	Parms.CallFunc_K2_SetTimerDelegate_ReturnValue = std::move(CallFunc_K2_SetTimerDelegate_ReturnValue);
-	Parms.CallFunc_FTrunc_A_ImplicitCast = CallFunc_FTrunc_A_ImplicitCast;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UnlockWheel
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::UnlockWheel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UnlockWheel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.LockWheel
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::LockWheel()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "LockWheel");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Stubbed_0EE233124A87DF9DDECF7A95E6D95681
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::Stubbed_0EE233124A87DF9DDECF7A95E6D95681()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Stubbed_0EE233124A87DF9DDECF7A95E6D95681");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Interrupted_0EE233124A87DF9DDECF7A95E6D95681
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::Interrupted_0EE233124A87DF9DDECF7A95E6D95681()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Interrupted_0EE233124A87DF9DDECF7A95E6D95681");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Failed_0EE233124A87DF9DDECF7A95E6D95681
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::Failed_0EE233124A87DF9DDECF7A95E6D95681()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Failed_0EE233124A87DF9DDECF7A95E6D95681");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Completed_0EE233124A87DF9DDECF7A95E6D95681
-// (BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::Completed_0EE233124A87DF9DDECF7A95E6D95681()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Completed_0EE233124A87DF9DDECF7A95E6D95681");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1
-// (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
-
-	Params::WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0
-// (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
-
-	Params::WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.FinishSelecting
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::FinishSelecting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "FinishSelecting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartSelecting
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UVALUI_MainHUDWidget*             MainWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_SavedLoadouts_Wheel_C::StartSelecting(class UVALUI_MainHUDWidget* MainWidget)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StartSelecting");
-
-	Params::WBP_SavedLoadouts_Wheel_C_StartSelecting Parms{};
-
-	Parms.MainWidget = MainWidget;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StopSelecting
-// (Public, BlueprintCallable, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::StopSelecting()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StopSelecting");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-
-void UWBP_SavedLoadouts_Wheel_C::Construct()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Construct");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
 // Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_0_OnChoiceHovered__DelegateSignature
 // (BlueprintEvent)
 // Parameters:
@@ -448,39 +57,68 @@ void UWBP_SavedLoadouts_Wheel_C::BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuW
 }
 
 
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Completed_0EE233124A87DF9DDECF7A95E6D95681
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_SavedLoadouts_Wheel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+void UWBP_SavedLoadouts_Wheel_C::Completed_0EE233124A87DF9DDECF7A95E6D95681()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Tick");
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Completed_0EE233124A87DF9DDECF7A95E6D95681");
 
-	Params::WBP_SavedLoadouts_Wheel_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.OnInitialized
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Construct
 // (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_SavedLoadouts_Wheel_C::OnInitialized()
+void UWBP_SavedLoadouts_Wheel_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "OnInitialized");
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Construct");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.DeadzoneCheck
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  DeadzoneAmount                                         (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ERedirectsPlatform                      CallFunc_GetPlatformType_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_EqualEqual_ByteByte_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Abs_ReturnValue                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Greater_DoubleDouble_ReturnValue              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Abs_ReturnValue_1                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Greater_DoubleDouble_ReturnValue_1            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_BooleanOR_ReturnValue                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+bool UWBP_SavedLoadouts_Wheel_C::DeadzoneCheck(double DeadzoneAmount, ERedirectsPlatform CallFunc_GetPlatformType_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue, double CallFunc_Abs_ReturnValue, bool CallFunc_Greater_DoubleDouble_ReturnValue, double CallFunc_Abs_ReturnValue_1, bool CallFunc_Greater_DoubleDouble_ReturnValue_1, bool CallFunc_BooleanOR_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "DeadzoneCheck");
+
+	Params::WBP_SavedLoadouts_Wheel_C_DeadzoneCheck Parms{};
+
+	Parms.DeadzoneAmount = DeadzoneAmount;
+	Parms.CallFunc_GetPlatformType_ReturnValue = CallFunc_GetPlatformType_ReturnValue;
+	Parms.CallFunc_EqualEqual_ByteByte_ReturnValue = CallFunc_EqualEqual_ByteByte_ReturnValue;
+	Parms.CallFunc_Abs_ReturnValue = CallFunc_Abs_ReturnValue;
+	Parms.CallFunc_Greater_DoubleDouble_ReturnValue = CallFunc_Greater_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Abs_ReturnValue_1 = CallFunc_Abs_ReturnValue_1;
+	Parms.CallFunc_Greater_DoubleDouble_ReturnValue_1 = CallFunc_Greater_DoubleDouble_ReturnValue_1;
+	Parms.CallFunc_BooleanOR_ReturnValue = CallFunc_BooleanOR_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -627,6 +265,368 @@ void UWBP_SavedLoadouts_Wheel_C::ExecuteUbergraph_WBP_SavedLoadouts_Wheel(int32 
 	UObject::ProcessEvent(Func, &Parms);
 
 	CallFunc_GetDifferencesBetweenLoadouts_ReturnValue = std::move(Parms.CallFunc_GetDifferencesBetweenLoadouts_ReturnValue);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Failed_0EE233124A87DF9DDECF7A95E6D95681
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::Failed_0EE233124A87DF9DDECF7A95E6D95681()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Failed_0EE233124A87DF9DDECF7A95E6D95681");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.FinishSelecting
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::FinishSelecting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "FinishSelecting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
+
+	Params::WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Interrupted_0EE233124A87DF9DDECF7A95E6D95681
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::Interrupted_0EE233124A87DF9DDECF7A95E6D95681()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Interrupted_0EE233124A87DF9DDECF7A95E6D95681");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.LockWheel
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::LockWheel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "LockWheel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::OnInitialized()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "OnInitialized");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.PlayOutfitChangeAnimation
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FPlayEmoteOptionalParams         K2Node_MakeStruct_PlayEmoteOptionalParams              (NoDestructor)
+// EValeriaFuncResult                      CallFunc_GetValeriaCharacter_OutResult                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaCharacter*                CallFunc_GetValeriaCharacter_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UValeriaEmoteComponent*           CallFunc_GetEmoteComponent_ReturnValue                 (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_PlayEmoteByAsset_ReturnValue                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::PlayOutfitChangeAnimation(const struct FPlayEmoteOptionalParams& K2Node_MakeStruct_PlayEmoteOptionalParams, EValeriaFuncResult CallFunc_GetValeriaCharacter_OutResult, class AValeriaCharacter* CallFunc_GetValeriaCharacter_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess, class UValeriaEmoteComponent* CallFunc_GetEmoteComponent_ReturnValue, bool CallFunc_PlayEmoteByAsset_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "PlayOutfitChangeAnimation");
+
+	Params::WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation Parms{};
+
+	Parms.K2Node_MakeStruct_PlayEmoteOptionalParams = std::move(K2Node_MakeStruct_PlayEmoteOptionalParams);
+	Parms.CallFunc_GetValeriaCharacter_OutResult = CallFunc_GetValeriaCharacter_OutResult;
+	Parms.CallFunc_GetValeriaCharacter_ReturnValue = CallFunc_GetValeriaCharacter_ReturnValue;
+	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
+	Parms.CallFunc_GetEmoteComponent_ReturnValue = CallFunc_GetEmoteComponent_ReturnValue;
+	Parms.CallFunc_PlayEmoteByAsset_ReturnValue = CallFunc_PlayEmoteByAsset_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartCooldown
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   CallFunc_FTrunc_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             CallFunc_Conv_IntToText_ReturnValue                    ()
+// TDelegate<void()>                       K2Node_CreateDelegate_OutputDelegate                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// struct FTimerHandle                     CallFunc_K2_SetTimerDelegate_ReturnValue               (NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_FTrunc_A_ImplicitCast                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::StartCooldown(int32 CallFunc_FTrunc_ReturnValue, class FText CallFunc_Conv_IntToText_ReturnValue, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate, const struct FTimerHandle& CallFunc_K2_SetTimerDelegate_ReturnValue, double CallFunc_FTrunc_A_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StartCooldown");
+
+	Params::WBP_SavedLoadouts_Wheel_C_StartCooldown Parms{};
+
+	Parms.CallFunc_FTrunc_ReturnValue = CallFunc_FTrunc_ReturnValue;
+	Parms.CallFunc_Conv_IntToText_ReturnValue = CallFunc_Conv_IntToText_ReturnValue;
+	Parms.K2Node_CreateDelegate_OutputDelegate = K2Node_CreateDelegate_OutputDelegate;
+	Parms.CallFunc_K2_SetTimerDelegate_ReturnValue = std::move(CallFunc_K2_SetTimerDelegate_ReturnValue);
+	Parms.CallFunc_FTrunc_A_ImplicitCast = CallFunc_FTrunc_A_ImplicitCast;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartSelecting
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UVALUI_MainHUDWidget*             MainWidget                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::StartSelecting(class UVALUI_MainHUDWidget* MainWidget)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StartSelecting");
+
+	Params::WBP_SavedLoadouts_Wheel_C_StartSelecting Parms{};
+
+	Parms.MainWidget = MainWidget;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StopSelecting
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::StopSelecting()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "StopSelecting");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Stubbed_0EE233124A87DF9DDECF7A95E6D95681
+// (BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::Stubbed_0EE233124A87DF9DDECF7A95E6D95681()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Stubbed_0EE233124A87DF9DDECF7A95E6D95681");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "Tick");
+
+	Params::WBP_SavedLoadouts_Wheel_C_Tick Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.ToggleCooldownVisibility
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bTryToShow                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_K2_IsTimerActiveHandle_ReturnValue            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_BooleanAND_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::ToggleCooldownVisibility(bool bTryToShow, bool CallFunc_K2_IsTimerActiveHandle_ReturnValue, bool CallFunc_BooleanAND_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "ToggleCooldownVisibility");
+
+	Params::WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility Parms{};
+
+	Parms.bTryToShow = bTryToShow;
+	Parms.CallFunc_K2_IsTimerActiveHandle_ReturnValue = CallFunc_K2_IsTimerActiveHandle_ReturnValue;
+	Parms.CallFunc_BooleanAND_ReturnValue = CallFunc_BooleanAND_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UnlockWheel
+// (Public, BlueprintCallable, BlueprintEvent)
+
+void UWBP_SavedLoadouts_Wheel_C::UnlockWheel()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UnlockWheel");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateAllWheelSlots
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// int32                                   Temp_int_Array_Index_Variable                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   Temp_int_Loop_Counter_Variable                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_Add_IntInt_ReturnValue                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TArray<class UWidget*>                  CallFunc_GetAllSlotWidgets_Widgets                     (ReferenceParm, ContainsInstancedReference)
+// int32                                   CallFunc_Array_Length_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWidget*                          CallFunc_Array_Get_Item                                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Less_IntInt_ReturnValue                       (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_SavedLoadoutsWheelChoice_C*  K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice   (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::UpdateAllWheelSlots(int32 Temp_int_Array_Index_Variable, int32 Temp_int_Loop_Counter_Variable, int32 CallFunc_Add_IntInt_ReturnValue, TArray<class UWidget*>& CallFunc_GetAllSlotWidgets_Widgets, int32 CallFunc_Array_Length_ReturnValue, class UWidget* CallFunc_Array_Get_Item, bool CallFunc_Less_IntInt_ReturnValue, class UWBP_SavedLoadoutsWheelChoice_C* K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice, bool K2Node_DynamicCast_bSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UpdateAllWheelSlots");
+
+	Params::WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots Parms{};
+
+	Parms.Temp_int_Array_Index_Variable = Temp_int_Array_Index_Variable;
+	Parms.Temp_int_Loop_Counter_Variable = Temp_int_Loop_Counter_Variable;
+	Parms.CallFunc_Add_IntInt_ReturnValue = CallFunc_Add_IntInt_ReturnValue;
+	Parms.CallFunc_GetAllSlotWidgets_Widgets = std::move(CallFunc_GetAllSlotWidgets_Widgets);
+	Parms.CallFunc_Array_Length_ReturnValue = CallFunc_Array_Length_ReturnValue;
+	Parms.CallFunc_Array_Get_Item = CallFunc_Array_Get_Item;
+	Parms.CallFunc_Less_IntInt_ReturnValue = CallFunc_Less_IntInt_ReturnValue;
+	Parms.K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice = K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	CallFunc_GetAllSlotWidgets_Widgets = std::move(Parms.CallFunc_GetAllSlotWidgets_Widgets);
+}
+
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateCooldown
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// float                                   CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// int32                                   CallFunc_FCeil_ReturnValue                             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class FText                             CallFunc_Conv_IntToText_ReturnValue                    ()
+// double                                  CallFunc_Divide_DoubleDouble_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Divide_DoubleDouble_B_ImplicitCast            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_FCeil_A_ImplicitCast                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_Divide_DoubleDouble_A_ImplicitCast            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   CallFunc_SetScalarParameterValue_Value_ImplicitCast    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_SavedLoadouts_Wheel_C::UpdateCooldown(float CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue, int32 CallFunc_FCeil_ReturnValue, float CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1, class FText CallFunc_Conv_IntToText_ReturnValue, double CallFunc_Divide_DoubleDouble_ReturnValue, double CallFunc_Divide_DoubleDouble_B_ImplicitCast, double CallFunc_FCeil_A_ImplicitCast, double CallFunc_Divide_DoubleDouble_A_ImplicitCast, float CallFunc_SetScalarParameterValue_Value_ImplicitCast)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_SavedLoadouts_Wheel_C", "UpdateCooldown");
+
+	Params::WBP_SavedLoadouts_Wheel_C_UpdateCooldown Parms{};
+
+	Parms.CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue = CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue;
+	Parms.CallFunc_FCeil_ReturnValue = CallFunc_FCeil_ReturnValue;
+	Parms.CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1 = CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1;
+	Parms.CallFunc_Conv_IntToText_ReturnValue = CallFunc_Conv_IntToText_ReturnValue;
+	Parms.CallFunc_Divide_DoubleDouble_ReturnValue = CallFunc_Divide_DoubleDouble_ReturnValue;
+	Parms.CallFunc_Divide_DoubleDouble_B_ImplicitCast = CallFunc_Divide_DoubleDouble_B_ImplicitCast;
+	Parms.CallFunc_FCeil_A_ImplicitCast = CallFunc_FCeil_A_ImplicitCast;
+	Parms.CallFunc_Divide_DoubleDouble_A_ImplicitCast = CallFunc_Divide_DoubleDouble_A_ImplicitCast;
+	Parms.CallFunc_SetScalarParameterValue_Value_ImplicitCast = CallFunc_SetScalarParameterValue_Value_ImplicitCast;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

@@ -42,7 +42,7 @@ static_assert(offsetof(ADataflowActor, DataflowComponent) == 0x0002A8, "Member '
 class UDataflowComponent final  : public UPrimitiveComponent
 {
 public:
-	uint8                                         Pad_38F9[0x140];                                   // 0x0570(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3914[0x140];                                   // 0x0570(0x0140)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

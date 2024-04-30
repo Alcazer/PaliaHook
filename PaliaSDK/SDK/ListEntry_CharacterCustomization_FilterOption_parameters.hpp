@@ -22,7 +22,7 @@ struct ListEntry_CharacterCustomization_FilterOption_C_OnOptionSelected__Delegat
 {
 public:
 	bool                                          IsSelected;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D7B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D8E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_CharacterCustomization_CosmeticTagFilterStruct SelectedCosmeticTag;                               // 0x0008(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(ListEntry_CharacterCustomization_FilterOption_C_OnOptionSelected__DelegateSignature) == 0x000008, "Wrong alignment on ListEntry_CharacterCustomization_FilterOption_C_OnOptionSelected__DelegateSignature");

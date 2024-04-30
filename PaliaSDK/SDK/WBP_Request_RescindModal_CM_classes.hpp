@@ -29,14 +29,14 @@ public:
 	FMulticastInlineDelegateProperty_             Confirm;                                           // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnInitialized();
-	void HandleOpened_BP();
-	void HandleClosed_BP();
-	void ExecuteUbergraph_WBP_Request_RescindModal_CM(int32 EntryPoint, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue_1, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue_1);
-	void Confirm__DelegateSignature();
-	void Cancel__DelegateSignature();
-	void BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
 	void BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature();
+	void BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
+	void Cancel__DelegateSignature();
+	void Confirm__DelegateSignature();
+	void ExecuteUbergraph_WBP_Request_RescindModal_CM(int32 EntryPoint, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue_1, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue_1);
+	void HandleClosed_BP();
+	void HandleOpened_BP();
+	void OnInitialized();
 
 public:
 	static class UClass* StaticClass()

@@ -35,7 +35,7 @@ struct VAL_SocialActivityFeedManager_TryPostPhoto final
 public:
 	struct FVAL_NewValeriagramPostInfo            NewPostInfo;                                       // 0x0000(0x0070)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C1[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32DF[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_SocialActivityFeedManager_TryPostPhoto) == 0x000008, "Wrong alignment on VAL_SocialActivityFeedManager_TryPostPhoto");
 static_assert(sizeof(VAL_SocialActivityFeedManager_TryPostPhoto) == 0x000078, "Wrong size on VAL_SocialActivityFeedManager_TryPostPhoto");

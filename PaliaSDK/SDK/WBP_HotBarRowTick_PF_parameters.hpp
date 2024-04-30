@@ -31,7 +31,7 @@ struct WBP_HotBarRowTick_PF_C_ExecuteUbergraph_WBP_HotBarRowTick_PF final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4712[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41E9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_HotBarRowTick_PF_C_ExecuteUbergraph_WBP_HotBarRowTick_PF) == 0x000008, "Wrong alignment on WBP_HotBarRowTick_PF_C_ExecuteUbergraph_WBP_HotBarRowTick_PF");
@@ -45,7 +45,7 @@ struct WBP_HotBarRowTick_PF_C_OnRowTickTouched__DelegateSignature final
 {
 public:
 	int32                                         Param_RowTickNumber;                               // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4713[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41EA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_HotBarRowTick_PF_C*                RowTick;                                           // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_HotBarRowTick_PF_C_OnRowTickTouched__DelegateSignature) == 0x000008, "Wrong alignment on WBP_HotBarRowTick_PF_C_OnRowTickTouched__DelegateSignature");

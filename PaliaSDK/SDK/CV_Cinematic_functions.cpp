@@ -17,6 +17,20 @@
 namespace SDK
 {
 
+// Function CV_Cinematic.CV_Cinematic_C.OnCinematicEnded__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UCV_Cinematic_C::OnCinematicEnded__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("CV_Cinematic_C", "OnCinematicEnded__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
 // Function CV_Cinematic.CV_Cinematic_C.BeginOverlap
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -513,20 +527,6 @@ void UCV_Cinematic_C::OnCinematicBegin__DelegateSignature()
 
 	if (Func == nullptr)
 		Func = Class->GetFunction("CV_Cinematic_C", "OnCinematicBegin__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function CV_Cinematic.CV_Cinematic_C.OnCinematicEnded__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UCV_Cinematic_C::OnCinematicEnded__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("CV_Cinematic_C", "OnCinematicEnded__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

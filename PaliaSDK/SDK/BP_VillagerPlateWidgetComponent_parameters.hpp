@@ -22,7 +22,7 @@ struct BP_VillagerPlateWidgetComponent_C_ExecuteUbergraph_BP_VillagerPlateWidget
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B79[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4BD8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CallFunc_GetUserWidgetObject_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVillagerActionInfo                    K2Node_CustomEvent_actionInfo;                     // 0x0010(0x0070)()
 	class UWBP_VillagerPlate_C*                   K2Node_DynamicCast_AsWBP_Villager_Plate;           // 0x0080(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)

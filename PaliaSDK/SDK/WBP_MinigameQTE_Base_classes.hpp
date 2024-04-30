@@ -30,7 +30,7 @@ public:
 	TSoftClassPtr<class UClass>                   TutorialWidget;                                    // 0x02F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          StartMinigameOnLink;                               // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          FTUE_IsOpen;                                       // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD8[0x2];                                     // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5018[0x2];                                     // 0x0322(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                StandardPadding;                                   // 0x0324(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FMargin                                CinematicCameraPadding;                            // 0x0334(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 

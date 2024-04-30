@@ -48,7 +48,7 @@ public:
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FTUEFlag_Review;                                   // 0x0660(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             GalleryOpened;                                     // 0x0688(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bBeganScreenClick;                                 // 0x0698(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_49C1[0x7];                                     // 0x0699(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_458B[0x7];                                     // 0x0699(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   StrBack;                                           // 0x06A0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   StrMoveCharacter;                                  // 0x06B8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   StrLookAround;                                     // 0x06D0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)

@@ -58,7 +58,7 @@ public:
 	float                                         Smooth_Snappy_Blend_Time;                          // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsZoomed;                                          // 0x066C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldMoveLeftToRight;                             // 0x066D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E05[0x2];                                     // 0x066E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E09[0x2];                                     // 0x066E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FOSSVAL_RegisterCharacterResponse      Response;                                          // 0x0670(0x0798)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnPanelSwitched;                                   // 0x0E08(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	double                                        Right_Stick_Rotation_Angle;                        // 0x0E18(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -66,7 +66,7 @@ public:
 	class UWBP_SingleGenericErrorModal_CM_C*      ErrorPopup;                                        // 0x0E28(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EVAL_CharacterNameType                        CurrentNameType;                                   // 0x0E30(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Flip;                                              // 0x0E31(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E06[0x2];                                     // 0x0E32(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E0A[0x2];                                     // 0x0E32(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         LastSelectedRandomLoadoutIndex;                    // 0x0E34(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EVAL_CharacterBodyType                        LastSelectedBodyType;                              // 0x0E38(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

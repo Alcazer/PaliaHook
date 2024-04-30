@@ -31,7 +31,7 @@ public:
 	bool                                          bUseActionDomainDesiredInputConfig;                // 0x0038(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonInputMode                              InputMode;                                         // 0x0039(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x003A(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3C[0x5];                                     // 0x003B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFA[0x5];                                     // 0x003B(0x0005)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -59,7 +59,7 @@ public:
 	TArray<class UCommonInputActionDomain*>       ActionDomains;                                     // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, UObjectWrapper, NativeAccessSpecifierPublic)
 	ECommonInputMode                              InputMode;                                         // 0x0040(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EMouseCaptureMode                             MouseCaptureMode;                                  // 0x0041(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3D[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFB[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -106,13 +106,13 @@ static_assert(offsetof(UCommonUIInputData, EnhancedInputBackAction) == 0x000050,
 
 // Class CommonInput.CommonInputBaseControllerData
 // 0x00D8 (0x0100 - 0x0028)
-class UCommonInputBaseControllerData final  : public UObject
+class UCommonInputBaseControllerData : public UObject
 {
 public:
 	ECommonInputType                              InputType;                                         // 0x0028(0x0001)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3E[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFC[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   GamepadName;                                       // 0x002C(0x0008)(Edit, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D3F[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFD[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   GamepadDisplayName;                                // 0x0038(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   GamepadCategory;                                   // 0x0050(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
 	class FText                                   GamepadPlatformName;                               // 0x0068(0x0018)(Edit, DisableEditOnInstance, NativeAccessSpecifierPublic)
@@ -159,7 +159,7 @@ public:
 	bool                                          bSupportsGamepad;                                  // 0x0043(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class FName                                   DefaultGamepadName;                                // 0x0044(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bCanChangeGamepadType;                             // 0x004C(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1D40[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFE[0x3];                                     // 0x004D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftClassPtr<class UClass>>           ControllerData;                                    // 0x0050(0x0010)(Edit, ZeroConstructor, Config, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 	TArray<TSubclassOf<class UCommonInputBaseControllerData>> ControllerDataClasses;                             // 0x0060(0x0010)(ZeroConstructor, Transient, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
@@ -193,16 +193,16 @@ public:
 	struct FPerPlatformSettings                   PlatformInput;                                     // 0x0060(0x0010)(Edit, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<class FName, struct FCommonInputPlatformBaseData> CommonInputPlatformData;                           // 0x0070(0x0050)(Config, Deprecated, NativeAccessSpecifierPrivate)
 	bool                                          bEnableInputMethodThrashingProtection;             // 0x00C0(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D41[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CFF[0x3];                                     // 0x00C1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InputMethodThrashingLimit;                         // 0x00C4(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	double                                        InputMethodThrashingWindowInSeconds;               // 0x00C8(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	double                                        InputMethodThrashingCooldownInSeconds;             // 0x00D0(0x0008)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bAllowOutOfFocusDeviceInput;                       // 0x00D8(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bEnableDefaultInputConfig;                         // 0x00D9(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bEnableEnhancedInputSupport;                       // 0x00DA(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D42[0x5];                                     // 0x00DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D00[0x5];                                     // 0x00DB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UCommonInputActionDomainTable> ActionDomainTable;                                 // 0x00E0(0x0028)(Edit, Config, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D43[0x8];                                     // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D01[0x8];                                     // 0x0108(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UCommonUIInputData>         InputDataClass;                                    // 0x0110(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class UCommonInputActionDomainTable*          ActionDomainTablePtr;                              // 0x0118(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -240,22 +240,22 @@ static_assert(offsetof(UCommonInputSettings, ActionDomainTablePtr) == 0x000118, 
 class UCommonInputSubsystem final  : public ULocalPlayerSubsystem
 {
 public:
-	uint8                                         Pad_1D44[0x40];                                    // 0x0030(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D02[0x40];                                    // 0x0030(0x0040)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnInputMethodChanged;                              // 0x0070(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPrivate)
 	int32                                         NumberOfInputMethodChangesRecently;                // 0x0080(0x0004)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D45[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D03[0x4];                                     // 0x0084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        LastInputMethodChangeTime;                         // 0x0088(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	double                                        LastTimeInputMethodThrashingBegan;                 // 0x0090(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	ECommonInputType                              LastInputType;                                     // 0x0098(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	ECommonInputType                              CurrentInputType;                                  // 0x0099(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D46[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D04[0x2];                                     // 0x009A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   GamepadInputType;                                  // 0x009C(0x0008)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D47[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D05[0x4];                                     // 0x00A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, ECommonInputType>           CurrentInputLocks;                                 // 0x00A8(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D48[0x18];                                    // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D06[0x18];                                    // 0x00F8(0x0018)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonInputActionDomainTable*          ActionDomainTable;                                 // 0x0110(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bIsGamepadSimulatedClick;                          // 0x0118(0x0001)(ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D49[0x17];                                    // 0x0119(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1D07[0x17];                                    // 0x0119(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void BroadcastInputMethodChanged();

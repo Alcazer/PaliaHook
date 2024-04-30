@@ -27,7 +27,7 @@ public:
 	class UImage*                                 Image_Backer;                                      // 0x02F8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Image_Icon;                                        // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          IsBeingHovered;                                    // 0x0308(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D3C[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D0B[0x7];                                     // 0x0309(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             IconOveride;                                       // 0x0310(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsCancelButton;                                    // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

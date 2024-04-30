@@ -92,7 +92,7 @@ struct S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignatur
 public:
 	class FText                                   Param_Text;                                        // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	ETextCommit                                   CommitMethod;                                      // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C20[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C91[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature");
 static_assert(sizeof(S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature) == 0x000020, "Wrong size on S6UI_EditableRichText_S6UI_OnEditableTextCommittedEvent__DelegateSignature");

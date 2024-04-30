@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "WBP_Compass_Tick_Base_classes.hpp"
 #include "Engine_structs.hpp"
 #include "Palia_structs.hpp"
-#include "WBP_Compass_Tick_Base_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
 
@@ -51,7 +51,7 @@ public:
 	double                                        VerticalIndicator_DownArrow_Alpha;                 // 0x04D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DegreesFromCenterAbs;                              // 0x04D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          ShouldShowDistance;                                // 0x04E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4E1F[0x7];                                     // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E95[0x7];                                     // 0x04E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                TargetPosition;                                    // 0x04E8(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        DotProductFromCenter;                              // 0x0500(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                TargetToActorVector;                               // 0x0508(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

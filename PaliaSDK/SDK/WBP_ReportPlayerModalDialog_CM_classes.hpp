@@ -37,7 +37,7 @@ public:
 	struct FUniqueNetIdRepl                       TargetPlayerNetId;                                 // 0x0598(0x0030)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	ES6PLAT_PlayerBehaviorReportSource            Report_Source;                                     // 0x05C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	ES6PLAT_PlayerBehaviorReportType              ReportType;                                        // 0x05C9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_54C5[0x6];                                     // 0x05CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5482[0x6];                                     // 0x05CA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<class FName, struct FS6PLAT_PlayerBehaviorReportCategoryInfo> CachedReportCategoryInfoMap;                       // 0x05D0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<class FText>                           DisplayNames;                                      // 0x0620(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FValeriaChatMessage                    ReportedMessage;                                   // 0x0630(0x0068)(Edit, BlueprintVisible, ExposeOnSpawn)

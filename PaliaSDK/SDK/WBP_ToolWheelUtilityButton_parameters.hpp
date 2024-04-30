@@ -23,7 +23,7 @@ struct WBP_ToolWheelUtilityButton_C_ExecuteUbergraph_WBP_ToolWheelUtilityButton 
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D3D[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D0C[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
 };
 static_assert(alignof(WBP_ToolWheelUtilityButton_C_ExecuteUbergraph_WBP_ToolWheelUtilityButton) == 0x000010, "Wrong alignment on WBP_ToolWheelUtilityButton_C_ExecuteUbergraph_WBP_ToolWheelUtilityButton");
@@ -38,10 +38,10 @@ struct WBP_ToolWheelUtilityButton_C_HandleHover final
 {
 public:
 	struct FSlateColor                            IconHoveredTintColor;                              // 0x0000(0x0014)(Edit, BlueprintVisible)
-	uint8                                         Pad_4D3E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D0D[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture*                               BackerHoveredImage;                                // 0x0018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D3F[0xF];                                     // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D0E[0xF];                                     // 0x0021(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0030(0x00D0)()
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -61,7 +61,7 @@ public:
 	class UTexture*                               BackerUnhoveredImage;                              // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            IconUnhoveredTintColor;                            // 0x0008(0x0014)(Edit, BlueprintVisible)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x001C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D40[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D0F[0x3];                                     // 0x001D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0020(0x00D0)()
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimationReverse_ReturnValue;         // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
@@ -79,7 +79,7 @@ struct WBP_ToolWheelUtilityButton_C_UpdateToCancel final
 {
 public:
 	class UTexture2D*                             CancelIcon;                                        // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D41[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D10[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
 };
 static_assert(alignof(WBP_ToolWheelUtilityButton_C_UpdateToCancel) == 0x000010, "Wrong alignment on WBP_ToolWheelUtilityButton_C_UpdateToCancel");
@@ -93,7 +93,7 @@ struct WBP_ToolWheelUtilityButton_C_UpdateToReequip final
 {
 public:
 	class UTexture2D*                             ReequipIcon;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D42[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D11[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
 };
 static_assert(alignof(WBP_ToolWheelUtilityButton_C_UpdateToReequip) == 0x000010, "Wrong alignment on WBP_ToolWheelUtilityButton_C_UpdateToReequip");
@@ -107,7 +107,7 @@ struct WBP_ToolWheelUtilityButton_C_UpdateToUnequip final
 {
 public:
 	class UTexture2D*                             UnequipIcon;                                       // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D43[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D12[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            K2Node_MakeStruct_SlateBrush;                      // 0x0010(0x00D0)()
 };
 static_assert(alignof(WBP_ToolWheelUtilityButton_C_UpdateToUnequip) == 0x000010, "Wrong alignment on WBP_ToolWheelUtilityButton_C_UpdateToUnequip");

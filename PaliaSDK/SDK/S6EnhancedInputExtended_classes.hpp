@@ -45,7 +45,7 @@ class US6EnhancedInputExtendedSubsystem : public UEnhancedInputLocalPlayerSubsys
 {
 public:
 	TMap<class UInputMappingContext*, class UInputMappingContext*> PlatformContextRedirects;                          // 0x01F0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1D34[0x8];                                     // 0x0240(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CF2[0x8];                                     // 0x0240(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AddMappingContextByType(struct FInputMappingPriorityData& InputMappingPriorityData, struct FModifyContextOptions& Options);
@@ -70,7 +70,7 @@ static_assert(offsetof(US6EnhancedInputExtendedSubsystem, PlatformContextRedirec
 class US6EnhancedPlayerInput final  : public UEnhancedPlayerInput
 {
 public:
-	uint8                                         Pad_1D37[0x28];                                    // 0x07F0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CF5[0x28];                                    // 0x07F0(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

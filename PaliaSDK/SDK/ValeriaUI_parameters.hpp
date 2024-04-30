@@ -99,7 +99,7 @@ struct BookViewerWidget_GetContentForPage final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C46[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ReturnValue;                                       // 0x0008(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(BookViewerWidget_GetContentForPage) == 0x000008, "Wrong alignment on BookViewerWidget_GetContentForPage");
@@ -147,7 +147,7 @@ struct DetailUserWidget_UpdateDetail final
 public:
 	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> ItemType;                                          // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C48[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CC7[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(DetailUserWidget_UpdateDetail) == 0x000008, "Wrong alignment on DetailUserWidget_UpdateDetail");
 static_assert(sizeof(DetailUserWidget_UpdateDetail) == 0x000030, "Wrong size on DetailUserWidget_UpdateDetail");
@@ -175,7 +175,7 @@ public:
 	class UObject*                                Item;                                              // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsSelected;                                       // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESelectInfo                                   SelectType;                                        // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C4C[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCB[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
 static_assert(sizeof(VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature) == 0x000010, "Wrong size on VALUI_ListView_Styled_OnListItemSelectionChangedWithInputTypeDynamic__DelegateSignature");
@@ -327,10 +327,10 @@ struct HeadlessSteamAccountFlowBase_IsErrorRetriable final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C4E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C4F[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCE[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_IsErrorRetriable) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_IsErrorRetriable");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_IsErrorRetriable) == 0x000020, "Wrong size on HeadlessSteamAccountFlowBase_IsErrorRetriable");
@@ -344,7 +344,7 @@ struct HeadlessSteamAccountFlowBase_LoginErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C50[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CCF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -361,7 +361,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C51[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD0[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure");
@@ -375,7 +375,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C52[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD1[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformLoggedInFailure2");
@@ -389,7 +389,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C53[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD2[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure");
@@ -403,7 +403,7 @@ struct HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C54[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2) == 0x000008, "Wrong alignment on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2");
 static_assert(sizeof(HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2) == 0x000018, "Wrong size on HeadlessSteamAccountFlowBase_OnPlatformRegisterFailure2");
@@ -416,7 +416,7 @@ struct HeadlessSteamAccountFlowBase_RegistrationErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C55[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -445,7 +445,7 @@ struct LinkSteamAccountFlowBase_LinkErrorMessage final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C56[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Message;                                           // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FText                                   ReturnValue;                                       // 0x0018(0x0018)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
@@ -462,7 +462,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLinkFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C57[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD6[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLinkFailure) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLinkFailure");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLinkFailure) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLinkFailure");
@@ -476,7 +476,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLinkFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C58[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD7[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLinkFailure2) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLinkFailure2");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLinkFailure2) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLinkFailure2");
@@ -490,7 +490,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLoggedInFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C59[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD8[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure");
@@ -504,7 +504,7 @@ struct LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2 final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C5A[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CD9[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000008, "Wrong alignment on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2");
 static_assert(sizeof(LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2) == 0x000018, "Wrong size on LinkSteamAccountFlowBase_OnPlatformLoggedInFailure2");
@@ -551,7 +551,7 @@ struct MailboxViewerUserWidget_CanAllRewardsBeCollected final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C5E[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDD[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_CanAllRewardsBeCollected) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_CanAllRewardsBeCollected");
 static_assert(sizeof(MailboxViewerUserWidget_CanAllRewardsBeCollected) == 0x000008, "Wrong size on MailboxViewerUserWidget_CanAllRewardsBeCollected");
@@ -643,7 +643,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EValeriaFuncResult                            OutResult;                                         // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0005(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C5F[0x2];                                     // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDE[0x2];                                     // 0x0006(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_TryCollectAllRewards) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_TryCollectAllRewards");
 static_assert(sizeof(MailboxViewerUserWidget_TryCollectAllRewards) == 0x000008, "Wrong size on MailboxViewerUserWidget_TryCollectAllRewards");
@@ -659,7 +659,7 @@ public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         RewardIndex;                                       // 0x0004(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C60[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CDF[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_TryCollectReward) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_TryCollectReward");
 static_assert(sizeof(MailboxViewerUserWidget_TryCollectReward) == 0x00000C, "Wrong size on MailboxViewerUserWidget_TryCollectReward");
@@ -685,7 +685,7 @@ struct MailboxViewerUserWidget_AreAllRewardsCollected final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0004(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C61[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE0[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_AreAllRewardsCollected) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_AreAllRewardsCollected");
 static_assert(sizeof(MailboxViewerUserWidget_AreAllRewardsCollected) == 0x000008, "Wrong size on MailboxViewerUserWidget_AreAllRewardsCollected");
@@ -710,7 +710,7 @@ struct MailboxViewerUserWidget_GetIndexOfMailMessage final
 public:
 	struct FMailMessageWidgetData                 Data;                                              // 0x0000(0x0130)(Parm, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0130(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C62[0x4];                                     // 0x0134(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE1[0x4];                                     // 0x0134(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MailboxViewerUserWidget_GetIndexOfMailMessage) == 0x000008, "Wrong alignment on MailboxViewerUserWidget_GetIndexOfMailMessage");
 static_assert(sizeof(MailboxViewerUserWidget_GetIndexOfMailMessage) == 0x000138, "Wrong size on MailboxViewerUserWidget_GetIndexOfMailMessage");
@@ -723,7 +723,7 @@ struct MailboxViewerUserWidget_GetMailMessage final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C63[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMailMessageWidgetData                 ReturnValue;                                       // 0x0008(0x0130)(Parm, OutParm, ReturnParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MailboxViewerUserWidget_GetMailMessage) == 0x000008, "Wrong alignment on MailboxViewerUserWidget_GetMailMessage");
@@ -761,7 +761,7 @@ struct MailboxViewerUserWidget_GetNumberOfMessagesForFilter final
 {
 public:
 	EMailboxViewerFilter                          Filter;                                            // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C64[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         ReturnValue;                                       // 0x0004(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MailboxViewerUserWidget_GetNumberOfMessagesForFilter) == 0x000004, "Wrong alignment on MailboxViewerUserWidget_GetNumberOfMessagesForFilter");
@@ -786,7 +786,7 @@ struct MainLobbyBase_HandleInitialSteamLoginFailure final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C65[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CE4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Msg;                                               // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(MainLobbyBase_HandleInitialSteamLoginFailure) == 0x000008, "Wrong alignment on MainLobbyBase_HandleInitialSteamLoginFailure");
@@ -963,10 +963,10 @@ struct VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation f
 public:
 	struct FKey                                   Key;                                               // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerEvent                                 LatestTriggerEvent;                                // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C71[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CF0[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         OngoingDuration;                                   // 0x001C(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         HoldTimeThreshold;                                 // 0x0020(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C72[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CF1[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation) == 0x000008, "Wrong alignment on VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation");
 static_assert(sizeof(VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation) == 0x000028, "Wrong size on VALUI_BoundInputActionStateWidget_UpdateInputActionState_Implementation");
@@ -1037,7 +1037,7 @@ struct VALUI_Button_Styled_ShowCursor final
 public:
 	class UWidget*                                InCursor;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C7A[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CF9[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_Button_Styled_ShowCursor) == 0x000008, "Wrong alignment on VALUI_Button_Styled_ShowCursor");
 static_assert(sizeof(VALUI_Button_Styled_ShowCursor) == 0x000010, "Wrong size on VALUI_Button_Styled_ShowCursor");
@@ -1051,7 +1051,7 @@ struct VALUI_NameValidator_IsNameValid final
 public:
 	class FString                                 InCharacterName;                                   // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C7F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFE[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NameValidator_IsNameValid) == 0x000008, "Wrong alignment on VALUI_NameValidator_IsNameValid");
 static_assert(sizeof(VALUI_NameValidator_IsNameValid) == 0x000018, "Wrong size on VALUI_NameValidator_IsNameValid");
@@ -1065,7 +1065,7 @@ struct VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged final
 public:
 	class FText                                   InCharacterName;                                   // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	EVAL_CharacterNameType                        InCharacterNameType;                               // 0x0018(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C80[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2CFF[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged) == 0x000008, "Wrong alignment on VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged");
 static_assert(sizeof(VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged) == 0x000020, "Wrong size on VALUI_CharacterCreationScreenBase_HandleCharacterNameChanged");
@@ -1156,7 +1156,7 @@ struct VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid final
 public:
 	struct FVALUI_CharacterNameValidityResponse   Response;                                          // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C81[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D00[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid) == 0x000008, "Wrong alignment on VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid");
 static_assert(sizeof(VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid) == 0x000020, "Wrong size on VALUI_CharacterCreationStatics_IsCharacterNameValidityResponseValid");
@@ -1233,7 +1233,7 @@ public:
 	class FName                                   LoadoutSlotName;                                   // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_CharCustomization_LoadoutSlotData LoadoutSlotData;                                   // 0x0010(0x0038)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bSuccess;                                          // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C83[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D02[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject) == 0x000008, "Wrong alignment on VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject");
 static_assert(sizeof(VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject) == 0x000050, "Wrong size on VALUI_CharacterCustomizationPanelBase_GetLoadoutSlotDataFromItemObject");
@@ -1251,7 +1251,7 @@ public:
 	float                                         ValidTouchRadius;                                  // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         MovementValidDistanceTemp;                         // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         WalkBoundaryDistanceTemp;                          // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C86[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D05[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack) == 0x000008, "Wrong alignment on VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack");
 static_assert(sizeof(VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack) == 0x000020, "Wrong size on VALUI_CharacterMovementStick_Mobile_InitMovementVirtualStack");
@@ -1266,7 +1266,7 @@ struct VALUI_CharacterMovementStick_Mobile_OnUpdateMovmentVirtualStick final
 {
 public:
 	bool                                          TouchControlFlag;                                  // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C87[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D06[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector2D                              Pos;                                               // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVector2D                              ControlVector;                                     // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -1329,7 +1329,7 @@ struct VALUI_ChatInputBar_ChangeMessageTarget final
 public:
 	struct FMessageTarget                         MessageTarget;                                     // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8C[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0B[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_ChangeMessageTarget) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_ChangeMessageTarget");
 static_assert(sizeof(VALUI_ChatInputBar_ChangeMessageTarget) == 0x000030, "Wrong size on VALUI_ChatInputBar_ChangeMessageTarget");
@@ -1343,7 +1343,7 @@ struct VALUI_ChatInputBar_DisplayActiveCommandHint final
 public:
 	class UVAL_ChatCommand_Base*                  Command;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDisplay;                                          // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8D[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0C[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_DisplayActiveCommandHint) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_DisplayActiveCommandHint");
 static_assert(sizeof(VALUI_ChatInputBar_DisplayActiveCommandHint) == 0x000010, "Wrong size on VALUI_ChatInputBar_DisplayActiveCommandHint");
@@ -1392,7 +1392,7 @@ struct VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions final
 public:
 	class FString                                 CharacterNameSubstr;                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxSuggestionsNum;                                 // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8E[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0D[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions");
 static_assert(sizeof(VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions) == 0x000018, "Wrong size on VALUI_ChatInputBar_HandleOnDisplayCharacterNameSuggestions");
@@ -1428,7 +1428,7 @@ struct VALUI_ChatInputBar_HandleOnTextCommitted final
 public:
 	class FText                                   InText;                                            // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	ETextCommit                                   InCommitMethod;                                    // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C8F[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0E[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatInputBar_HandleOnTextCommitted) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_HandleOnTextCommitted");
 static_assert(sizeof(VALUI_ChatInputBar_HandleOnTextCommitted) == 0x000020, "Wrong size on VALUI_ChatInputBar_HandleOnTextCommitted");
@@ -1452,7 +1452,7 @@ struct VALUI_ChatInputBar_SwitchToNextChannel final
 {
 public:
 	bool                                          bSwitchUp;                                         // 0x0000(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C90[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D0F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMessageTarget                         ReturnValue;                                       // 0x0008(0x0028)(Parm, OutParm, ReturnParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_ChatInputBar_SwitchToNextChannel) == 0x000008, "Wrong alignment on VALUI_ChatInputBar_SwitchToNextChannel");
@@ -1664,7 +1664,7 @@ public:
 	class UWidget*                                MessagePanel;                                      // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FValeriaChatMessage                    ChatMessage;                                       // 0x0008(0x0068)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatMessageConfig               MessageConfig;                                     // 0x0070(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C94[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D13[0x4];                                     // 0x007C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleAddMessageToPanel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleAddMessageToPanel");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleAddMessageToPanel) == 0x000080, "Wrong size on VALUI_ChatPanelBase_HandleAddMessageToPanel");
@@ -1715,7 +1715,7 @@ public:
 	class UWidget*                                SidePanel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatChannel                     Channel;                                           // 0x0008(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x00B8(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C95[0x4];                                     // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D14[0x4];                                     // 0x00BC(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleDisplayChannelGlow) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleDisplayChannelGlow");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleDisplayChannelGlow) == 0x0000C0, "Wrong size on VALUI_ChatPanelBase_HandleDisplayChannelGlow");
@@ -1796,7 +1796,7 @@ struct VALUI_ChatPanelBase_HandleRemoveSidePanelChannel final
 public:
 	class UWidget*                                SidePanel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0008(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C96[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D15[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleRemoveSidePanelChannel");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleRemoveSidePanelChannel) == 0x000010, "Wrong size on VALUI_ChatPanelBase_HandleRemoveSidePanelChannel");
@@ -1811,7 +1811,7 @@ public:
 	struct FVALUI_ChatTab                         Tab;                                               // 0x0000(0x0060)(ConstParm, Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatChannel                     Channel;                                           // 0x0060(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatMessageConfig               Config;                                            // 0x0110(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C97[0x4];                                     // 0x011C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D16[0x4];                                     // 0x011C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_HandleTabChannelEnabled) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_HandleTabChannelEnabled");
 static_assert(sizeof(VALUI_ChatPanelBase_HandleTabChannelEnabled) == 0x000120, "Wrong size on VALUI_ChatPanelBase_HandleTabChannelEnabled");
@@ -1838,7 +1838,7 @@ public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMessageTarget                         MessageTarget;                                     // 0x0008(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C98[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D17[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_IsTabChannelEnabled) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_IsTabChannelEnabled");
 static_assert(sizeof(VALUI_ChatPanelBase_IsTabChannelEnabled) == 0x000038, "Wrong size on VALUI_ChatPanelBase_IsTabChannelEnabled");
@@ -1864,7 +1864,7 @@ struct VALUI_ChatPanelBase_RemoveTabChannel final
 public:
 	struct FVALUI_ChatTab                         Tab;                                               // 0x0000(0x0060)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	int32                                         ChannelIndex;                                      // 0x0060(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C99[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D18[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_RemoveTabChannel) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_RemoveTabChannel");
 static_assert(sizeof(VALUI_ChatPanelBase_RemoveTabChannel) == 0x000068, "Wrong size on VALUI_ChatPanelBase_RemoveTabChannel");
@@ -1947,11 +1947,11 @@ struct VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig final
 {
 public:
 	struct FVALUI_ChatMessageConfig               Config;                                            // 0x0000(0x000C)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C9A[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D19[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVALUI_ChatTab                         OutTab;                                            // 0x0010(0x0060)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	struct FVALUI_ChatChannel                     OutChannel;                                        // 0x0070(0x00B0)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0120(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C9B[0x7];                                     // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D1A[0x7];                                     // 0x0121(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig) == 0x000008, "Wrong alignment on VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig");
 static_assert(sizeof(VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig) == 0x000128, "Wrong size on VALUI_ChatPanelBase_TryGetTabAndChannelFromMessageConfig");
@@ -1994,7 +1994,7 @@ public:
 	struct FVALUI_ChatChannel                     InChannel;                                         // 0x0000(0x00B0)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FMessageTarget                         InMessageTarget;                                   // 0x00B0(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C9C[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D1B[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ChatStatics_DoesChannelMatchMessageTarget) == 0x000008, "Wrong alignment on VALUI_ChatStatics_DoesChannelMatchMessageTarget");
 static_assert(sizeof(VALUI_ChatStatics_DoesChannelMatchMessageTarget) == 0x0000E0, "Wrong size on VALUI_ChatStatics_DoesChannelMatchMessageTarget");
@@ -2062,7 +2062,7 @@ public:
 	struct FCrafterConfig                         CrafterConfig;                                     // 0x0000(0x00E0)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_Crafter                         CrafterData;                                       // 0x00E0(0x0050)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0130(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C9D[0x7];                                     // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D1C[0x7];                                     // 0x0131(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_CrafterContentWidget_GetCrafterData) == 0x000008, "Wrong alignment on VALUI_CrafterContentWidget_GetCrafterData");
 static_assert(sizeof(VALUI_CrafterContentWidget_GetCrafterData) == 0x000138, "Wrong size on VALUI_CrafterContentWidget_GetCrafterData");
@@ -2255,7 +2255,7 @@ public:
 	class UWidget*                                InstigatingWidget;                                 // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_ErrorDisplayPayload             ErrorDisplayPayload;                               // 0x0008(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CA5[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D24[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay) == 0x000008, "Wrong alignment on VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay");
 static_assert(sizeof(VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay) == 0x000028, "Wrong size on VALUI_ErrorDisplayHandling_TryRaiseErrorForDisplay");
@@ -2358,7 +2358,7 @@ struct VALUI_HotPotTurnTimer_BP_StartTimer final
 public:
 	float                                         SecondsLeft;                                       // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EHotPotTurnState                              TurnState;                                         // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CAC[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D2B[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000004, "Wrong alignment on VALUI_HotPotTurnTimer_BP_StartTimer");
 static_assert(sizeof(VALUI_HotPotTurnTimer_BP_StartTimer) == 0x000008, "Wrong size on VALUI_HotPotTurnTimer_BP_StartTimer");
@@ -2419,7 +2419,7 @@ public:
 	class FString                                 UserNameInput;                                     // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<class FText>                           OutErrors;                                         // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CAF[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D2E[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_InputValidationFunctionLibrary_ValidateUserName) == 0x000008, "Wrong alignment on VALUI_InputValidationFunctionLibrary_ValidateUserName");
 static_assert(sizeof(VALUI_InputValidationFunctionLibrary_ValidateUserName) == 0x000028, "Wrong size on VALUI_InputValidationFunctionLibrary_ValidateUserName");
@@ -2656,7 +2656,7 @@ struct VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType final
 {
 public:
 	EVAL_NewsInboxMessageType                     EMessageType;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBB[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D3A[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_NewsInboxMessageDataAsset*       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType) == 0x000008, "Wrong alignment on VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionByType");
@@ -2671,7 +2671,7 @@ struct VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          Claimed;                                           // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBC[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D3B[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_NewsInboxMessageDataAsset*       ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex) == 0x000008, "Wrong alignment on VALUI_NewsInbox_Widget_GetNewsInboxMessageDefinitionFromRewardIndex");
@@ -2725,7 +2725,7 @@ public:
 	class FText                                   NotificationText;                                  // 0x0000(0x0018)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UTexture2D>              NotificationIcon;                                  // 0x0018(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBD[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D3C[0x7];                                     // 0x0041(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationWidgetInterface_MatchesNotification) == 0x000008, "Wrong alignment on VALUI_NotificationWidgetInterface_MatchesNotification");
 static_assert(sizeof(VALUI_NotificationWidgetInterface_MatchesNotification) == 0x000048, "Wrong size on VALUI_NotificationWidgetInterface_MatchesNotification");
@@ -2792,7 +2792,7 @@ struct VALUI_NotificationQueue_TryDismissNotification final
 public:
 	struct FGuid                                  NotificationId;                                    // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CBF[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D3E[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationQueue_TryDismissNotification) == 0x000004, "Wrong alignment on VALUI_NotificationQueue_TryDismissNotification");
 static_assert(sizeof(VALUI_NotificationQueue_TryDismissNotification) == 0x000014, "Wrong size on VALUI_NotificationQueue_TryDismissNotification");
@@ -2806,7 +2806,7 @@ struct VALUI_NotificationQueue_TryDismissPendingNotification final
 public:
 	struct FGuid                                  NotificationId;                                    // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC0[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D3F[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_NotificationQueue_TryDismissPendingNotification) == 0x000004, "Wrong alignment on VALUI_NotificationQueue_TryDismissPendingNotification");
 static_assert(sizeof(VALUI_NotificationQueue_TryDismissPendingNotification) == 0x000014, "Wrong size on VALUI_NotificationQueue_TryDismissPendingNotification");
@@ -2916,7 +2916,7 @@ public:
 	struct FVector2D                              ImageDimensions;                                   // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 QrData;                                            // 0x0018(0x0010)(Parm, ZeroConstructor, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0028(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC2[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D41[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PlayerSupport_DrawToCanvas) == 0x000008, "Wrong alignment on VALUI_PlayerSupport_DrawToCanvas");
 static_assert(sizeof(VALUI_PlayerSupport_DrawToCanvas) == 0x000030, "Wrong size on VALUI_PlayerSupport_DrawToCanvas");
@@ -2955,7 +2955,7 @@ public:
 	class FString                                 Link;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 QrData;                                            // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	int32                                         Size;                                              // 0x0020(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC3[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D42[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PlayerSupport_OnQrReceived) == 0x000008, "Wrong alignment on VALUI_PlayerSupport_OnQrReceived");
 static_assert(sizeof(VALUI_PlayerSupport_OnQrReceived) == 0x000028, "Wrong size on VALUI_PlayerSupport_OnQrReceived");
@@ -2971,7 +2971,7 @@ public:
 	class FName                                   CrafterName;                                       // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FCrafterUIState                        OutCrafterUIState;                                 // 0x0008(0x0008)(Parm, OutParm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC6[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D45[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_GetStoredCrafterUIState) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_GetStoredCrafterUIState");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_GetStoredCrafterUIState) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_GetStoredCrafterUIState");
@@ -2986,7 +2986,7 @@ struct VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOption
 public:
 	class AVAL_TeleporterBase*                    Teleporter;                                        // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC7[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D46[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions) == 0x000008, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions) == 0x000010, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_HasAnyHousingPlotsTeleportOptions");
@@ -3000,7 +3000,7 @@ struct VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC8[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D47[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_NavigateToOnlinePhotoAlbum");
@@ -3014,7 +3014,7 @@ struct VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CC9[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D48[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_NavigateToRecentPhotos");
@@ -3161,7 +3161,7 @@ public:
 	class AActor*                                 RepairStationActor;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowPurchases;                                   // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAllowRepairKitsFromStorage;                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCA[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D49[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation) == 0x000008, "Wrong alignment on VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation) == 0x000010, "Wrong size on VALUI_UIManagerWidgetBase_Implementation_OpenRepairStation");
@@ -3288,7 +3288,7 @@ struct VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCB[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D4A[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_NavigateToOnlinePhotoAlbum");
@@ -3302,7 +3302,7 @@ struct VALUI_UIManagerWidgetBase_NavigateToRecentPhotos final
 public:
 	struct FGuid                                  IdOfPhotoToNavigateTo;                             // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldSelectPhoto;                                // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCC[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D4B[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_UIManagerWidgetBase_NavigateToRecentPhotos) == 0x000004, "Wrong alignment on VALUI_UIManagerWidgetBase_NavigateToRecentPhotos");
 static_assert(sizeof(VALUI_UIManagerWidgetBase_NavigateToRecentPhotos) == 0x000014, "Wrong size on VALUI_UIManagerWidgetBase_NavigateToRecentPhotos");
@@ -3383,7 +3383,7 @@ struct VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CCF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D4E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVALDTOS_MetaCharacterFormat           OutCharacter;                                      // 0x0008(0x0778)(Parm, OutParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_GetCachedCharacterAtIndex_Checked");
@@ -3552,7 +3552,7 @@ struct VALUI_PregameUIManager_TryGetCachedCharacters final
 public:
 	TArray<struct FVALDTOS_MetaCharacterFormat>   OutOurCharacters;                                  // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD0[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D4F[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PregameUIManager_TryGetCachedCharacters) == 0x000008, "Wrong alignment on VALUI_PregameUIManager_TryGetCachedCharacters");
 static_assert(sizeof(VALUI_PregameUIManager_TryGetCachedCharacters) == 0x000018, "Wrong size on VALUI_PregameUIManager_TryGetCachedCharacters");
@@ -3635,10 +3635,10 @@ struct VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionComple
 {
 public:
 	uint32                                        AppID;                                             // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D52[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	uint64                                        OrderId;                                           // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bAuthorized;                                       // 0x0010(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D53[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted) == 0x000008, "Wrong alignment on VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted");
 static_assert(sizeof(VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted) == 0x000018, "Wrong size on VALUI_PremiumCurrencyPurchaseWidgetBase_HandleSteamMicrotransactionCompleted");
@@ -3766,7 +3766,7 @@ struct VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid final
 {
 public:
 	int32                                         WidgetsPerRow;                                     // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D55[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FVALUI_PremiumStorefrontWidgetModel> Models;                                            // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid) == 0x000008, "Wrong alignment on VALUI_PremiumStorefrontWidgetBase_CreateStorefrontGrid");
@@ -3873,7 +3873,7 @@ struct VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature fina
 public:
 	class UVALUI_PremiumStoreScreenWidgetBase*    StoreWidget;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVALUI_PremiumStoreState                      State;                                             // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CD8[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D57[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature");
 static_assert(sizeof(VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature) == 0x000010, "Wrong size on VALUI_PremiumStoreScreenWidgetBase_OnStateChanged__DelegateSignature");
@@ -3941,7 +3941,7 @@ struct VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile final
 public:
 	struct FVALUI_PremiumStorefrontVariant        Variant;                                           // 0x0000(0x00D8)(ConstParm, Parm, OutParm, ReferenceParm, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00D8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CDA[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D59[0x7];                                     // 0x00D9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile) == 0x000008, "Wrong alignment on VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile");
 static_assert(sizeof(VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile) == 0x0000E0, "Wrong size on VALUI_PremiumStoreFunctionLibrary_ShouldShowBuyButtonOnTile");
@@ -3999,7 +3999,7 @@ struct VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature final
 public:
 	class UUserWidget*                            ElementWidget;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ElementIndex;                                      // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CDE[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D5D[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature");
 static_assert(sizeof(VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature) == 0x000010, "Wrong size on VALUI_RadioSlider_OnElementWidgetCreated__DelegateSignature");
@@ -4026,10 +4026,10 @@ struct VALUI_RadioSlider_OnSliderChanged__DelegateSignature final
 public:
 	class UUserWidget*                            PreviousElementWidget;                             // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         PreviousElementIndex;                              // 0x0008(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CDF[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D5E[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            NewElementWidget;                                  // 0x0010(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewElementIndex;                                   // 0x0018(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE0[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D5F[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_OnSliderChanged__DelegateSignature) == 0x000008, "Wrong alignment on VALUI_RadioSlider_OnSliderChanged__DelegateSignature");
 static_assert(sizeof(VALUI_RadioSlider_OnSliderChanged__DelegateSignature) == 0x000020, "Wrong size on VALUI_RadioSlider_OnSliderChanged__DelegateSignature");
@@ -4056,7 +4056,7 @@ struct VALUI_RadioSlider_SetIndex final
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bSkipSliderAnimation;                              // 0x0004(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE1[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D60[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_SetIndex) == 0x000004, "Wrong alignment on VALUI_RadioSlider_SetIndex");
 static_assert(sizeof(VALUI_RadioSlider_SetIndex) == 0x000008, "Wrong size on VALUI_RadioSlider_SetIndex");
@@ -4115,7 +4115,7 @@ public:
 	class UUserWidget*                            Widget;                                            // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Param_Index;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x000C(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE2[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D61[0x3];                                     // 0x000D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_RadioSlider_GetIndexFromWidget) == 0x000008, "Wrong alignment on VALUI_RadioSlider_GetIndexFromWidget");
 static_assert(sizeof(VALUI_RadioSlider_GetIndexFromWidget) == 0x000010, "Wrong size on VALUI_RadioSlider_GetIndexFromWidget");
@@ -4140,7 +4140,7 @@ struct VALUI_RadioSlider_GetWidgetAtIndex final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D62[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            ReturnValue;                                       // 0x0008(0x0008)(ExportObject, Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(VALUI_RadioSlider_GetWidgetAtIndex) == 0x000008, "Wrong alignment on VALUI_RadioSlider_GetWidgetAtIndex");
@@ -4402,7 +4402,7 @@ struct VALUI_TabButtonHostBase_SetTabButtonVisibility final
 public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ESlateVisibility                              NewVisibility;                                     // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CE9[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D68[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_SetTabButtonVisibility) == 0x000004, "Wrong alignment on VALUI_TabButtonHostBase_SetTabButtonVisibility");
 static_assert(sizeof(VALUI_TabButtonHostBase_SetTabButtonVisibility) == 0x00000C, "Wrong size on VALUI_TabButtonHostBase_SetTabButtonVisibility");
@@ -4430,7 +4430,7 @@ public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bForceSet;                                         // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0009(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CEA[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D69[0x2];                                     // 0x000A(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_TrySetActiveTabName) == 0x000004, "Wrong alignment on VALUI_TabButtonHostBase_TrySetActiveTabName");
 static_assert(sizeof(VALUI_TabButtonHostBase_TrySetActiveTabName) == 0x00000C, "Wrong size on VALUI_TabButtonHostBase_TrySetActiveTabName");
@@ -4479,7 +4479,7 @@ public:
 	class FName                                   TabName;                                           // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FVALUI_InstantiatedTabButtonInfo       OutInfo;                                           // 0x0008(0x0068)(Parm, OutParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0070(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CEB[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D6A[0x7];                                     // 0x0071(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_TabButtonHostBase_TryGetTabInfo) == 0x000008, "Wrong alignment on VALUI_TabButtonHostBase_TryGetTabInfo");
 static_assert(sizeof(VALUI_TabButtonHostBase_TryGetTabInfo) == 0x000078, "Wrong size on VALUI_TabButtonHostBase_TryGetTabInfo");
@@ -4697,7 +4697,7 @@ struct VAL_PlatformInvitationManager_OnLoginFailure final
 public:
 	class FString                                 ErrorMessage;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ErrorCode;                                         // 0x0010(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2CF3[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D72[0x4];                                     // 0x0014(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_PlatformInvitationManager_OnLoginFailure) == 0x000008, "Wrong alignment on VAL_PlatformInvitationManager_OnLoginFailure");
 static_assert(sizeof(VAL_PlatformInvitationManager_OnLoginFailure) == 0x000018, "Wrong size on VAL_PlatformInvitationManager_OnLoginFailure");

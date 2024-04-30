@@ -39,7 +39,7 @@ public:
 	bool                                          IsLoading;                                         // 0x0478(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugUI;                                           // 0x0479(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsShowOptionMenu;                                  // 0x047A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BA5[0x5];                                     // 0x047B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4328[0x5];                                     // 0x047B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnSkipLink;                                        // 0x0480(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TMap<int32, class FText>                      ErrorCodeConfigMap;                                // 0x0490(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

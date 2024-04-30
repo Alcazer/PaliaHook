@@ -60,7 +60,7 @@ public:
 	class US6UI_ModalWidgetBase*                  EscapeMenuWidget;                                  // 0x0EE0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         SecCount;                                          // 0x0EE8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bLoadTestStarted;                                  // 0x0EEC(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5272[0x3];                                     // 0x0EED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52A3[0x3];                                     // 0x0EED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CrossplayPopupTimerHandle;                         // 0x0EF0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

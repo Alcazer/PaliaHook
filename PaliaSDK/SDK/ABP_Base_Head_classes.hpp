@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "CoreUObject_structs.hpp"
-#include "ABP_Base_Head_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
+#include "ABP_Base_Head_structs.hpp"
 #include "Palia_structs.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -26,10 +26,10 @@ namespace SDK
 class UABP_Base_Head_C : public UAnimInstance
 {
 public:
-	uint8                                         Pad_45D1[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_508A[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct ABP_Base_Head::FAnimBlueprintGeneratedMutableData __AnimBlueprintMutables;                           // 0x0358(0x0002)(HasGetValueTypeHash)
-	uint8                                         Pad_45D2[0x6];                                     // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_508B[0x6];                                     // 0x035A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0360(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0368(0x0008)()
 	struct FAnimNode_Root                         AnimGraphNode_Root;                                // 0x0370(0x0020)()
@@ -45,13 +45,13 @@ public:
 	struct FAnimNode_StateResult                  AnimGraphNode_StateResult;                         // 0x0998(0x0020)()
 	struct FAnimNode_StateMachine                 AnimGraphNode_StateMachine;                        // 0x09B8(0x00C8)()
 	bool                                          K2Node_PropertyAccess_3;                           // 0x0A80(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45D3[0x7];                                     // 0x0A81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_508C[0x7];                                     // 0x0A81(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_PropertyAccess_2;                           // 0x0A88(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_PropertyAccess_1;                           // 0x0AA0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45D4[0x7];                                     // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_508D[0x7];                                     // 0x0AA1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVector                                K2Node_PropertyAccess;                             // 0x0AA8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Last_Used_Anim_Was_Blend_Space;                    // 0x0AC0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_45D5[0x7];                                     // 0x0AC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_508E[0x7];                                     // 0x0AC1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      ValeriaCharacter;                                  // 0x0AC8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        Speed;                                             // 0x0AD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class AValeriaVillagerCharacter*              As_Valeria_Villager_Character;                     // 0x0AD8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)

@@ -29,7 +29,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         Timer;                                             // 0x0590(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509B[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5082[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CountDown_Timer;                                   // 0x0598(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

@@ -36,7 +36,7 @@ struct S6UXIntentSubsystem_CanStartUXActivity final
 public:
 	TSoftClassPtr<class UClass>                   UXIntentType;                                      // 0x0000(0x0028)(ConstParm, Parm, OutParm, ReferenceParm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D56[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD7[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UXIntentSubsystem_CanStartUXActivity) == 0x000008, "Wrong alignment on S6UXIntentSubsystem_CanStartUXActivity");
 static_assert(sizeof(S6UXIntentSubsystem_CanStartUXActivity) == 0x000030, "Wrong size on S6UXIntentSubsystem_CanStartUXActivity");
@@ -104,7 +104,7 @@ struct S6UXIntentSubsystem_TryStartUXActivity final
 public:
 	class US6UXIntent*                            UXIntent;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D57[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD8[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UXIntentSubsystem_TryStartUXActivity) == 0x000008, "Wrong alignment on S6UXIntentSubsystem_TryStartUXActivity");
 static_assert(sizeof(S6UXIntentSubsystem_TryStartUXActivity) == 0x000010, "Wrong size on S6UXIntentSubsystem_TryStartUXActivity");
@@ -118,7 +118,7 @@ struct S6UXIntentSubsystem_UnregisterUXActivity final
 public:
 	struct FGuid                                  UXActivityHandle;                                  // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D58[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD9[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UXIntentSubsystem_UnregisterUXActivity) == 0x000004, "Wrong alignment on S6UXIntentSubsystem_UnregisterUXActivity");
 static_assert(sizeof(S6UXIntentSubsystem_UnregisterUXActivity) == 0x000014, "Wrong size on S6UXIntentSubsystem_UnregisterUXActivity");

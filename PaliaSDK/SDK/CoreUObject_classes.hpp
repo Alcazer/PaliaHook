@@ -19,7 +19,7 @@ namespace SDK
 class UObject
 {
 public:
-	static inline class TUObjectArray*            GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
+	static inline class TUObjectArrayWrapper      GObjects;                                          // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 
 	void*                                         VTable;                                            // 0x0000(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	EObjectFlags                                  Flags;                                             // 0x0008(0x0004)(NOT AUTO-GENERATED PROPERTY)
@@ -27,6 +27,7 @@ public:
 	class UClass*                                 Class;                                             // 0x0010(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class FName                                   Name;                                              // 0x0018(0x0008)(NOT AUTO-GENERATED PROPERTY)
 	class UObject*                                Outer;                                             // 0x0020(0x0008)(NOT AUTO-GENERATED PROPERTY)
+
 public:
 	static class UObject* FindObjectFastImpl(const std::string& Name, EClassCastFlags RequiredType = EClassCastFlags::None);
 	static class UObject* FindObjectImpl(const std::string& FullName, EClassCastFlags RequiredType = EClassCastFlags::None);
@@ -73,18 +74,6 @@ public:
 	static class UObject* GetDefaultObj()
 	{
 		return GetDefaultObjImpl<UObject>();
-	}
-
-	bool IsValidLowLevel() {
-		if (this == nullptr)
-			return false;
-		if (IsBadReadPtr(this, sizeof(UObject)))
-			return false;
-		if (!Class)
-			return false;
-		if (Index % SDK::TUObjectArray::ElementsPerChunk < 0) // GObjects->GetByIndex->InChunkIdx < 0 giving crash
-			return false;
-		return GObjects->GetByIndex(Index) == this;
 	}
 };
 static_assert(alignof(UObject) == 0x000008, "Wrong alignment on UObject");

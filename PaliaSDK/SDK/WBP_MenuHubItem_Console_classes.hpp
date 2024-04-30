@@ -38,11 +38,11 @@ public:
 	FMulticastInlineDelegateProperty_             OnButtonPressed;                                   // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UBP_ListEntry_MenuHub_C*                ListEntryData;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FSlateColor                            CurrentColor;                                      // 0x0360(0x0014)(Edit, BlueprintVisible, DisableEditOnInstance)
-	uint8                                         Pad_5144[0x4];                                     // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E81[0x4];                                     // 0x0374(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_TextBlockStyle*                  DefaultStyle;                                      // 0x0378(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_TextBlockStyle*                  HoverStyle;                                        // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          PremiumStyle;                                      // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5145[0x3];                                     // 0x0389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3E82[0x3];                                     // 0x0389(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                HoverPadding;                                      // 0x038C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 	struct FMargin                                PremiumHoverPadding;                               // 0x039C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor)
 

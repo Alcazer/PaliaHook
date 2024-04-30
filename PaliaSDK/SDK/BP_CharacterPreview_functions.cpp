@@ -45,32 +45,6 @@ void ABP_CharacterPreview_C::Stubbed_ADFF367E48A6AD181DA7749345B5AC98()
 }
 
 
-// Function BP_CharacterPreview.BP_CharacterPreview_C.SetRotation
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FRotator                         DeltaRotation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         CallFunc_ComposeRotators_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FRotator                         CallFunc_ComposeRotators_ReturnValue_1                 (ZeroConstructor, IsPlainOldData, NoDestructor)
-// struct FHitResult                       CallFunc_K2_SetRelativeRotation_SweepHitResult         (IsPlainOldData, NoDestructor, ContainsInstancedReference)
-
-void ABP_CharacterPreview_C::SetRotation(const struct FRotator& DeltaRotation, const struct FRotator& CallFunc_ComposeRotators_ReturnValue, const struct FRotator& CallFunc_ComposeRotators_ReturnValue_1, const struct FHitResult& CallFunc_K2_SetRelativeRotation_SweepHitResult)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_CharacterPreview_C", "SetRotation");
-
-	Params::BP_CharacterPreview_C_SetRotation Parms{};
-
-	Parms.DeltaRotation = std::move(DeltaRotation);
-	Parms.CallFunc_ComposeRotators_ReturnValue = std::move(CallFunc_ComposeRotators_ReturnValue);
-	Parms.CallFunc_ComposeRotators_ReturnValue_1 = std::move(CallFunc_ComposeRotators_ReturnValue_1);
-	Parms.CallFunc_K2_SetRelativeRotation_SweepHitResult = std::move(CallFunc_K2_SetRelativeRotation_SweepHitResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_CharacterPreview.BP_CharacterPreview_C.SetCharacterMetadata
 // (BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -196,6 +170,32 @@ void ABP_CharacterPreview_C::Completed_ADFF367E48A6AD181DA7749345B5AC98()
 		Func = Class->GetFunction("BP_CharacterPreview_C", "Completed_ADFF367E48A6AD181DA7749345B5AC98");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_CharacterPreview.BP_CharacterPreview_C.SetRotation
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FRotator                         DeltaRotation                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator                         CallFunc_ComposeRotators_ReturnValue                   (ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FRotator                         CallFunc_ComposeRotators_ReturnValue_1                 (ZeroConstructor, IsPlainOldData, NoDestructor)
+// struct FHitResult                       CallFunc_K2_SetRelativeRotation_SweepHitResult         (IsPlainOldData, NoDestructor, ContainsInstancedReference)
+
+void ABP_CharacterPreview_C::SetRotation(const struct FRotator& DeltaRotation, const struct FRotator& CallFunc_ComposeRotators_ReturnValue, const struct FRotator& CallFunc_ComposeRotators_ReturnValue_1, const struct FHitResult& CallFunc_K2_SetRelativeRotation_SweepHitResult)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_CharacterPreview_C", "SetRotation");
+
+	Params::BP_CharacterPreview_C_SetRotation Parms{};
+
+	Parms.DeltaRotation = std::move(DeltaRotation);
+	Parms.CallFunc_ComposeRotators_ReturnValue = std::move(CallFunc_ComposeRotators_ReturnValue);
+	Parms.CallFunc_ComposeRotators_ReturnValue_1 = std::move(CallFunc_ComposeRotators_ReturnValue_1);
+	Parms.CallFunc_K2_SetRelativeRotation_SweepHitResult = std::move(CallFunc_K2_SetRelativeRotation_SweepHitResult);
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 

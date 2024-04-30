@@ -25,7 +25,7 @@ class UWBP_MainLobby_CM_C final  : public UMainLobbyBase
 {
 public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0510(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class WBP_TextButton_CM::UWBP_TextButton_CM_C* AccountButton;                                     // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class WBP_TextButton_CM_0::UWBP_TextButton_CM_C* AccountButton;                                     // 0x0518(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class USizeBox*                               Box_MainPanel;                                     // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVALUI_TextBlock_Styled*                BuildVersionNumber;                                // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Template_Button_CM_C*              Button_Exit;                                       // 0x0530(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
@@ -53,11 +53,11 @@ public:
 	class FString                                 CharacterSelectMap;                                // 0x05E0(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	class FString                                 LevelLaunchOptions;                                // 0x05F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          MenuWidgetState;                                   // 0x0600(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC3[0x7];                                     // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDE[0x7];                                     // 0x0601(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_EscapeMenu_CM_C*                   MenuWidget;                                        // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          HidenState;                                        // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          AnyKeyGuard;                                       // 0x0611(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AC4[0x6];                                     // 0x0612(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BDF[0x6];                                     // 0x0612(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_SteamAccountLanding_CM_C*          WBP_Link_Steam_CM;                                 // 0x0618(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:

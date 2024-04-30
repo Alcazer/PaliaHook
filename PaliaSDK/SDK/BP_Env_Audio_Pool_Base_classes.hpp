@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Struct_PoolAudio_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Struct_PoolAudio_structs.hpp"
 
 
 namespace SDK
@@ -30,13 +30,13 @@ public:
 	class UAkAudioEvent*                          OneShot;                                           // 0x02C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	class UAkAudioEvent*                          RandomLoop;                                        // 0x02D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	int32                                         RandomLoopChance;                                  // 0x02D8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_454E[0x4];                                     // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_444B[0x4];                                     // 0x02DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_PoolAudio                      AudioEvents;                                       // 0x02E0(0x0040)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          EditorToolManaged;                                 // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          ShowBillboard;                                     // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          CanPlayInsect;                                     // 0x0322(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsPlayingInsect;                                   // 0x0323(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_454F[0x4];                                     // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_444C[0x4];                                     // 0x0324(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_AudioPool_StaticLoop_C*             AudioEmitter;                                      // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "CoreUObject_structs.hpp"
-#include "E_WindStates_structs.hpp"
-#include "Palia_classes.hpp"
 #include "S6Core_structs.hpp"
+#include "E_WindStates_structs.hpp"
+#include "CoreUObject_structs.hpp"
+#include "Palia_classes.hpp"
 
 
 namespace SDK
@@ -52,19 +52,19 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x0768(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         WindUVTimeline_Value_A6D2F3D2493F11745B2075A107F6FC9B; // 0x0770(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            WindUVTimeline__Direction_A6D2F3D2493F11745B2075A107F6FC9B; // 0x0774(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E70[0x3];                                     // 0x0775(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E80[0x3];                                     // 0x0775(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     WindUVTimeline;                                    // 0x0778(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         WindIntensityTimeline_lerp_D50B532D43F87E18CB64BC80EEE1B332; // 0x0780(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            WindIntensityTimeline__Direction_D50B532D43F87E18CB64BC80EEE1B332; // 0x0784(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E71[0x3];                                     // 0x0785(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E81[0x3];                                     // 0x0785(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     WindIntensityTimeline;                             // 0x0788(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         Clear_Transition_Value_A61599534D0E6A5DD5A4A6A3E27AEFCA; // 0x0790(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Clear_Transition__Direction_A61599534D0E6A5DD5A4A6A3E27AEFCA; // 0x0794(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E72[0x3];                                     // 0x0795(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E82[0x3];                                     // 0x0795(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Clear_Transition;                                  // 0x0798(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         Overcast_Transition_Value_D69B036840F0862E72E639B8FEF71EEE; // 0x07A0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Overcast_Transition__Direction_D69B036840F0862E72E639B8FEF71EEE; // 0x07A4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E73[0x3];                                     // 0x07A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E83[0x3];                                     // 0x07A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Overcast_Transition;                               // 0x07A8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        SunRiseTime;                                       // 0x07B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        SunSetTime;                                        // 0x07B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -81,12 +81,12 @@ public:
 	double                                        WindIntensitySource;                               // 0x0870(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WindIntensityTarget;                               // 0x0878(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	E_WindStates                                  CurrentWindState;                                  // 0x0880(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E74[0x7];                                     // 0x0881(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E84[0x7];                                     // 0x0881(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WindElapsedTime;                                   // 0x0888(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WindUVLastUpdateTime;                              // 0x0890(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             WindTexture;                                       // 0x0898(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPauseWindIntensityUpdates;                        // 0x08A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, Deprecated, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E75[0x7];                                     // 0x08A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E85[0x7];                                     // 0x08A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 NewAssetName;                                      // 0x08A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 NewAssetSubfolder;                                 // 0x08B8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	TArray<uint8>                                 WindTextureValues;                                 // 0x08C8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -102,11 +102,11 @@ public:
 	double                                        WindPreviousX;                                     // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        WindPreviousY;                                     // 0x0928(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bAudioInitialized;                                 // 0x0930(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E76[0x7];                                     // 0x0931(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E86[0x7];                                     // 0x0931(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<double>                                WindRandWeights;                                   // 0x0938(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          WindOverrideActive;                                // 0x0948(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PreviewSkyPaths;                                   // 0x0949(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E77[0x6];                                     // 0x094A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5E87[0x6];                                     // 0x094A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        FreezeTime;                                        // 0x0950(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

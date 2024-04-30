@@ -17,43 +17,57 @@
 namespace SDK
 {
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.OnInitialized
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::OnInitialized()
+void UWBP_Request_RescindModal_CM_C::BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "OnInitialized");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.HandleOpened_BP
-// (Event, Protected, BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::HandleOpened_BP()
+void UWBP_Request_RescindModal_CM_C::BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "HandleOpened_BP");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.HandleClosed_BP
-// (Event, Protected, BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.Cancel__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::HandleClosed_BP()
+void UWBP_Request_RescindModal_CM_C::Cancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "HandleClosed_BP");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "Cancel__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.Confirm__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWBP_Request_RescindModal_CM_C::Confirm__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "Confirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -87,57 +101,43 @@ void UWBP_Request_RescindModal_CM_C::ExecuteUbergraph_WBP_Request_RescindModal_C
 }
 
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.Confirm__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.HandleClosed_BP
+// (Event, Protected, BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::Confirm__DelegateSignature()
+void UWBP_Request_RescindModal_CM_C::HandleClosed_BP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "Confirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "HandleClosed_BP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.Cancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.HandleOpened_BP
+// (Event, Protected, BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::Cancel__DelegateSignature()
+void UWBP_Request_RescindModal_CM_C::HandleOpened_BP()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "Cancel__DelegateSignature");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "HandleOpened_BP");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.OnInitialized
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-void UWBP_Request_RescindModal_CM_C::BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature()
+void UWBP_Request_RescindModal_CM_C::OnInitialized()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_Request_RescindModal_CM.WBP_Request_RescindModal_CM_C.BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_Request_RescindModal_CM_C::BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "BndEvt__WBP_Request_RescindModal_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_Request_RescindModal_CM_C", "OnInitialized");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

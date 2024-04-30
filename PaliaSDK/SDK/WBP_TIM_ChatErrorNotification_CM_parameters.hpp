@@ -21,7 +21,7 @@ struct WBP_TIM_ChatErrorNotification_CM_C_ExecuteUbergraph_WBP_TIM_ChatErrorNoti
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F37[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4ED3[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_TIM_ChatErrorNotification_CM_C_ExecuteUbergraph_WBP_TIM_ChatErrorNotification_CM) == 0x000008, "Wrong alignment on WBP_TIM_ChatErrorNotification_CM_C_ExecuteUbergraph_WBP_TIM_ChatErrorNotification_CM");

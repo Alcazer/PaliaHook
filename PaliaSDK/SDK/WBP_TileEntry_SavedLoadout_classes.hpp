@@ -47,10 +47,10 @@ public:
 	class UMaterialInstanceDynamic*               MID_RenderPreview;                                 // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          Owned;                                             // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Selected;                                          // 0x0361(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEB[0x6];                                     // 0x0362(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A71[0x6];                                     // 0x0362(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             NullItemImage;                                     // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          HoveredAnimationPlayed;                            // 0x0370(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AEC[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A72[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnItemFocused;                                     // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FVAL_CharacterCustomizationLoadout     Loadout;                                           // 0x0388(0x0900)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UWBP_SavedLoadoutsPanel_C*              Owning_Panel;                                      // 0x0C88(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ public:
 	class FText                                   Outfit_Name;                                       // 0x0CA0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	struct FGuid                                  LastRenderPreviewRequestId;                        // 0x0CB8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDraggable;                                        // 0x0CC8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4AED[0x7];                                     // 0x0CC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A73[0x7];                                     // 0x0CC9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_SavedLoadout_Drag_C*               DraggedWidget;                                     // 0x0CD0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:

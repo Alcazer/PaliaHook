@@ -23,7 +23,7 @@ namespace SDK
 class UInterchangeAnimationTrackSetNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_3993[0x30];                                    // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39AF[0x30];                                    // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddCustomAnimationTrackUid(const class FString& AnimationTrackUid);
@@ -53,7 +53,7 @@ static_assert(sizeof(UInterchangeAnimationTrackSetNode) == 0x000090, "Wrong size
 class UInterchangeAnimationTrackBaseNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_3999[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39B5[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomCompletionMode(int32& AttributeValue);
@@ -78,7 +78,7 @@ static_assert(sizeof(UInterchangeAnimationTrackBaseNode) == 0x000070, "Wrong siz
 class UInterchangeAnimationTrackSetInstanceNode final  : public UInterchangeAnimationTrackBaseNode
 {
 public:
-	uint8                                         Pad_399C[0x40];                                    // 0x0070(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39B8[0x40];                                    // 0x0070(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomDuration(int32& AttributeValue);
@@ -109,7 +109,7 @@ static_assert(sizeof(UInterchangeAnimationTrackSetInstanceNode) == 0x0000B0, "Wr
 class UInterchangeAnimationTrackNode : public UInterchangeAnimationTrackBaseNode
 {
 public:
-	uint8                                         Pad_39A5[0x50];                                    // 0x0070(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39C1[0x50];                                    // 0x0070(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomActorDependencyUid(const class FString& DependencyUid);
@@ -140,7 +140,7 @@ static_assert(sizeof(UInterchangeAnimationTrackNode) == 0x0000C0, "Wrong size on
 class UInterchangeTransformAnimationTrackNode final  : public UInterchangeAnimationTrackNode
 {
 public:
-	uint8                                         Pad_39AE[0x10];                                    // 0x00C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39CA[0x10];                                    // 0x00C0(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomUsedChannels(int32& AttributeValue);
@@ -165,7 +165,7 @@ static_assert(sizeof(UInterchangeTransformAnimationTrackNode) == 0x0000D0, "Wron
 class UInterchangeSkeletalAnimationTrackNode final  : public UInterchangeAnimationTrackBaseNode
 {
 public:
-	uint8                                         Pad_39B1[0x220];                                   // 0x0070(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39CD[0x220];                                   // 0x0070(0x0220)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetAnimationPayloadKeyForMorphTargetNodeUid(const class FString& MorphTargetNodeUid, const class FString& InUniqueId, EInterchangeAnimationPayLoadType& InType);
@@ -200,7 +200,7 @@ static_assert(sizeof(UInterchangeSkeletalAnimationTrackNode) == 0x000290, "Wrong
 class UInterchangePhysicalCameraNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39BC[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39D8[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomEnableDepthOfField(bool& AttributeValue);
@@ -231,7 +231,7 @@ static_assert(sizeof(UInterchangePhysicalCameraNode) == 0x0000A0, "Wrong size on
 class UInterchangeStandardCameraNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39C3[0x60];                                    // 0x0060(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39DF[0x60];                                    // 0x0060(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomAspectRatio(float& AttributeValue);
@@ -266,7 +266,7 @@ static_assert(sizeof(UInterchangeStandardCameraNode) == 0x0000C0, "Wrong size on
 class UInterchangeBaseLightNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39CE[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39EA[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomIntensity(float AttributeValue);
@@ -297,7 +297,7 @@ static_assert(sizeof(UInterchangeBaseLightNode) == 0x0000A0, "Wrong size on UInt
 class UInterchangeLightNode : public UInterchangeBaseLightNode
 {
 public:
-	uint8                                         Pad_39D5[0x30];                                    // 0x00A0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39F1[0x30];                                    // 0x00A0(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomAttenuationRadius(float AttributeValue);
@@ -326,7 +326,7 @@ static_assert(sizeof(UInterchangeLightNode) == 0x0000D0, "Wrong size on UInterch
 class UInterchangePointLightNode : public UInterchangeLightNode
 {
 public:
-	uint8                                         Pad_39DA[0x20];                                    // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39F6[0x20];                                    // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomLightFalloffExponent(float AttributeValue);
@@ -353,7 +353,7 @@ static_assert(sizeof(UInterchangePointLightNode) == 0x0000F0, "Wrong size on UIn
 class UInterchangeSpotLightNode final  : public UInterchangePointLightNode
 {
 public:
-	uint8                                         Pad_39DD[0x20];                                    // 0x00F0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39F9[0x20];                                    // 0x00F0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomInnerConeAngle(float AttributeValue);
@@ -380,7 +380,7 @@ static_assert(sizeof(UInterchangeSpotLightNode) == 0x000110, "Wrong size on UInt
 class UInterchangeRectLightNode final  : public UInterchangeLightNode
 {
 public:
-	uint8                                         Pad_39E2[0x20];                                    // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_39FE[0x20];                                    // 0x00D0(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomSourceHeight(float AttributeValue);
@@ -424,7 +424,7 @@ static_assert(sizeof(UInterchangeDirectionalLightNode) == 0x0000A0, "Wrong size 
 class UInterchangeTextureNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39E7[0x30];                                    // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A03[0x30];                                    // 0x0060(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustombFlipGreenChannel(bool& AttributeValue);
@@ -522,7 +522,7 @@ static_assert(sizeof(UInterchangeTextureLightProfileNode) == 0x000090, "Wrong si
 class UInterchangeVariantSetNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39E8[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A04[0x40];                                    // 0x0060(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddCustomDependencyUid(const class FString& DependencyUid);
@@ -554,7 +554,7 @@ static_assert(sizeof(UInterchangeVariantSetNode) == 0x0000A0, "Wrong size on UIn
 class UInterchangeSceneVariantSetsNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39F0[0x20];                                    // 0x0060(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A0C[0x20];                                    // 0x0060(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddCustomVariantSetUid(const class FString& VariantUid);
@@ -599,7 +599,7 @@ static_assert(sizeof(UInterchangeVolumeTextureNode) == 0x000090, "Wrong size on 
 class UInterchangeMaterialInstanceNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39F4[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A10[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddScalarParameterValue(const class FString& ParameterName, float AttributeValue);
@@ -632,7 +632,7 @@ static_assert(sizeof(UInterchangeMaterialInstanceNode) == 0x000070, "Wrong size 
 class UInterchangeMeshNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_39FF[0x188];                                   // 0x0060(0x0188)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A1B[0x188];                                   // 0x0060(0x0188)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool RemoveMorphTargetDependencyUid(const class FString& DependencyUid);
@@ -699,7 +699,7 @@ static_assert(sizeof(UInterchangeMeshNode) == 0x0001E8, "Wrong size on UIntercha
 class UInterchangeSceneNode final  : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_3A17[0x2C0];                                   // 0x0060(0x02C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A33[0x2C0];                                   // 0x0060(0x02C0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool AddSpecializedType(const class FString& SpecializedType);
@@ -778,7 +778,7 @@ static_assert(sizeof(UInterchangeShaderPortsAPI) == 0x000028, "Wrong size on UIn
 class UInterchangeShaderNode : public UInterchangeBaseNode
 {
 public:
-	uint8                                         Pad_3A3B[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A57[0x10];                                    // 0x0060(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomShaderType(const class FString& AttributeValue);
@@ -803,7 +803,7 @@ static_assert(sizeof(UInterchangeShaderNode) == 0x000070, "Wrong size on UInterc
 class UInterchangeFunctionCallShaderNode final  : public UInterchangeShaderNode
 {
 public:
-	uint8                                         Pad_3A3E[0x10];                                    // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A5A[0x10];                                    // 0x0070(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomMaterialFunction(const class FString& AttributeValue);
@@ -828,7 +828,7 @@ static_assert(sizeof(UInterchangeFunctionCallShaderNode) == 0x000080, "Wrong siz
 class UInterchangeShaderGraphNode final  : public UInterchangeShaderNode
 {
 public:
-	uint8                                         Pad_3A41[0x50];                                    // 0x0070(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A5D[0x50];                                    // 0x0070(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomIsAShaderFunction(bool& AttributeValue);
@@ -861,7 +861,7 @@ static_assert(sizeof(UInterchangeShaderGraphNode) == 0x0000C0, "Wrong size on UI
 class UInterchangeTexture2DNode : public UInterchangeTextureNode
 {
 public:
-	uint8                                         Pad_3A44[0x98];                                    // 0x0090(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3A60[0x98];                                    // 0x0090(0x0098)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool SetCustomWrapU(EInterchangeTextureWrapMode& AttributeValue);

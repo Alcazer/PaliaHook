@@ -34,7 +34,7 @@ public:
 	bool                                          bSkipLink;                                         // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDoOnceOnConfirmLinkSuccess;                       // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDoOnceOnConfirmEULA;                              // 0x0322(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4C1A[0x5];                                     // 0x0323(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59FE[0x5];                                     // 0x0323(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_PregameUIManager_C*                CachePregameUIManager;                             // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
 public:

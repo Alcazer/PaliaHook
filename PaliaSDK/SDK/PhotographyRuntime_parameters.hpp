@@ -27,7 +27,7 @@ public:
 	struct FGeometry                              InGeometry;                                        // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 	struct FPointerEvent                          InMouseEvent;                                      // 0x0038(0x0078)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          bInvertYAxis;                                      // 0x00B0(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C4[0x7];                                     // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E2[0x7];                                     // 0x00B1(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput) == 0x000008, "Wrong alignment on VALUI_PhotoCameraScreenBase_AccumulateLookModeInput");
 static_assert(sizeof(VALUI_PhotoCameraScreenBase_AccumulateLookModeInput) == 0x0000B8, "Wrong size on VALUI_PhotoCameraScreenBase_AccumulateLookModeInput");
@@ -53,7 +53,7 @@ struct VAL_OnlinePhotoAlbumSubsystem_DeleteOnlinePhoto final
 public:
 	struct FGuid                                  PhotoId;                                           // 0x0000(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C6[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E4[0x3];                                     // 0x0011(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_OnlinePhotoAlbumSubsystem_DeleteOnlinePhoto) == 0x000004, "Wrong alignment on VAL_OnlinePhotoAlbumSubsystem_DeleteOnlinePhoto");
 static_assert(sizeof(VAL_OnlinePhotoAlbumSubsystem_DeleteOnlinePhoto) == 0x000014, "Wrong size on VAL_OnlinePhotoAlbumSubsystem_DeleteOnlinePhoto");
@@ -70,7 +70,7 @@ public:
 	TDelegate<void(class UVAL_OnlinePhotoAlbumSubsystem* OnlinePhotoAlbumSubsystem, struct FGuid& AccountId, struct FGuid& PhotoId, class UVAL_OnlinePhotograph* Photo)> OnSucceeded;                                       // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UVAL_OnlinePhotoAlbumSubsystem* OnlinePhotoAlbumSubsystem, struct FGuid& AccountId, struct FGuid& PhotoId, class FText& Error)> OnFailed;                                          // 0x0030(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0040(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C7[0x3];                                     // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E5[0x3];                                     // 0x0041(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_OnlinePhotoAlbumSubsystem_GetOnlinePhoto) == 0x000004, "Wrong alignment on VAL_OnlinePhotoAlbumSubsystem_GetOnlinePhoto");
 static_assert(sizeof(VAL_OnlinePhotoAlbumSubsystem_GetOnlinePhoto) == 0x000044, "Wrong size on VAL_OnlinePhotoAlbumSubsystem_GetOnlinePhoto");
@@ -168,7 +168,7 @@ public:
 	TDelegate<void(class UVAL_OnlinePhotoAlbumSubsystem* OnlinePhotoAlbumSubsystem, class UVAL_CapturedPhotograph* OriginalPhotograph, struct FGuid& PhotoId)> OnSucceeded;                                       // 0x0008(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TDelegate<void(class UVAL_OnlinePhotoAlbumSubsystem* OnlinePhotoAlbumSubsystem, class UVAL_CapturedPhotograph* OriginalPhotograph, class FText& Error)> OnFailed;                                          // 0x0018(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0028(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C8[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E6[0x7];                                     // 0x0029(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(VAL_OnlinePhotoAlbumSubsystem_UploadPhoto) == 0x000008, "Wrong alignment on VAL_OnlinePhotoAlbumSubsystem_UploadPhoto");
 static_assert(sizeof(VAL_OnlinePhotoAlbumSubsystem_UploadPhoto) == 0x000030, "Wrong size on VAL_OnlinePhotoAlbumSubsystem_UploadPhoto");

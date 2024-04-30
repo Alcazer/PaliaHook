@@ -21,7 +21,7 @@ namespace SDK
 class US6OnlineHotfixManager final  : public UOnlineHotfixManager
 {
 public:
-	uint8                                         Pad_32D9[0x10];                                    // 0x0268(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EC[0x10];                                    // 0x0268(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

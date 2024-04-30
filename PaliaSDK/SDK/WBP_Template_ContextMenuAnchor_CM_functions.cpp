@@ -17,57 +17,229 @@
 namespace SDK
 {
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Tick
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 // Parameters:
-// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Template_ContextMenuAnchor_CM_C::BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
+void UWBP_Template_ContextMenuAnchor_CM_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Tick");
 
-	Params::WBP_Template_ContextMenuAnchor_CM_C_BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
+	Params::WBP_Template_ContextMenuAnchor_CM_C_Tick Parms{};
 
-	Parms.bIsOpen = bIsOpen;
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InDeltaTime = InDeltaTime;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Close
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Template_ContextMenuAnchor_CM_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "PreConstruct");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Open
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bCloseByLostFocus                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bFocusMenu                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Template_ContextMenuAnchor_CM_C::Close(bool bCloseByLostFocus)
+void UWBP_Template_ContextMenuAnchor_CM_C::Open(bool bFocusMenu)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Close");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Open");
 
-	Params::WBP_Template_ContextMenuAnchor_CM_C_Close Parms{};
+	Params::WBP_Template_ContextMenuAnchor_CM_C_Open Parms{};
 
-	Parms.bCloseByLostFocus = bCloseByLostFocus;
+	Parms.bFocusMenu = bFocusMenu;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Construct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuOpened__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      MenuContent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Template_ContextMenuAnchor_CM_C::Construct()
+void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuOpened__DelegateSignature(class UUserWidget* MenuContent)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Construct");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuOpened__DelegateSignature");
 
-	UObject::ProcessEvent(Func, nullptr);
+	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuOpened__DelegateSignature Parms{};
+
+	Parms.MenuContent = MenuContent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuContentCreated__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      MenuContent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuContentCreated__DelegateSignature(class UUserWidget* MenuContent)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuContentCreated__DelegateSignature");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuContentCreated__DelegateSignature Parms{};
+
+	Parms.MenuContent = MenuContent;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuClose__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bClosedByLostFocus                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuClose__DelegateSignature(bool bClosedByLostFocus)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuClose__DelegateSignature");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuClose__DelegateSignature Parms{};
+
+	Parms.bClosedByLostFocus = bClosedByLostFocus;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnInputMethodChanged
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Template_ContextMenuAnchor_CM_C::OnInputMethodChanged(ECommonInputType bNewInputType)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnInputMethodChanged");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_OnInputMethodChanged Parms{};
+
+	Parms.bNewInputType = bNewInputType;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnFocusReceived
+// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+// struct FFocusEvent                      InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
+// struct FEventReply                      CallFunc_Handled_ReturnValue                           ()
+
+struct FEventReply UWBP_Template_ContextMenuAnchor_CM_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent, const struct FEventReply& CallFunc_Handled_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnFocusReceived");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_OnFocusReceived Parms{};
+
+	Parms.MyGeometry = std::move(MyGeometry);
+	Parms.InFocusEvent = std::move(InFocusEvent);
+	Parms.CallFunc_Handled_ReturnValue = std::move(CallFunc_Handled_ReturnValue);
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_Template_ContextMenuAnchor_CM_C::InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.HandleMenuAnchorGetUserMenuContent
+// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UClass*                           CallFunc_GetObjectClass_ReturnValue                    (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class APlayerController*                CallFunc_GetOwningPlayer_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_EqualEqual_ClassClass_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      CallFunc_Create_ReturnValue                            (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+class UUserWidget* UWBP_Template_ContextMenuAnchor_CM_C::HandleMenuAnchorGetUserMenuContent(bool CallFunc_IsValid_ReturnValue, class UClass* CallFunc_GetObjectClass_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, bool CallFunc_EqualEqual_ClassClass_ReturnValue, class UUserWidget* CallFunc_Create_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "HandleMenuAnchorGetUserMenuContent");
+
+	Params::WBP_Template_ContextMenuAnchor_CM_C_HandleMenuAnchorGetUserMenuContent Parms{};
+
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_GetObjectClass_ReturnValue = CallFunc_GetObjectClass_ReturnValue;
+	Parms.CallFunc_GetOwningPlayer_ReturnValue = CallFunc_GetOwningPlayer_ReturnValue;
+	Parms.CallFunc_EqualEqual_ClassClass_ReturnValue = CallFunc_EqualEqual_ClassClass_ReturnValue;
+	Parms.CallFunc_Create_ReturnValue = CallFunc_Create_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
 }
 
 
@@ -145,227 +317,55 @@ void UWBP_Template_ContextMenuAnchor_CM_C::ExecuteUbergraph_WBP_Template_Context
 }
 
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.HandleMenuAnchorGetUserMenuContent
-// (Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UClass*                           CallFunc_GetObjectClass_ReturnValue                    (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class APlayerController*                CallFunc_GetOwningPlayer_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_EqualEqual_ClassClass_ReturnValue             (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      CallFunc_Create_ReturnValue                            (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Construct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-class UUserWidget* UWBP_Template_ContextMenuAnchor_CM_C::HandleMenuAnchorGetUserMenuContent(bool CallFunc_IsValid_ReturnValue, class UClass* CallFunc_GetObjectClass_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, bool CallFunc_EqualEqual_ClassClass_ReturnValue, class UUserWidget* CallFunc_Create_ReturnValue)
+void UWBP_Template_ContextMenuAnchor_CM_C::Construct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "HandleMenuAnchorGetUserMenuContent");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Construct");
 
-	Params::WBP_Template_ContextMenuAnchor_CM_C_HandleMenuAnchorGetUserMenuContent Parms{};
-
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_GetObjectClass_ReturnValue = CallFunc_GetObjectClass_ReturnValue;
-	Parms.CallFunc_GetOwningPlayer_ReturnValue = CallFunc_GetOwningPlayer_ReturnValue;
-	Parms.CallFunc_EqualEqual_ClassClass_ReturnValue = CallFunc_EqualEqual_ClassClass_ReturnValue;
-	Parms.CallFunc_Create_ReturnValue = CallFunc_Create_ReturnValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0
-// (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnFocusReceived
-// (BlueprintCosmetic, Event, Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// struct FFocusEvent                      InFocusEvent                                           (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// struct FEventReply                      ReturnValue                                            (Parm, OutParm, ReturnParm)
-// struct FEventReply                      CallFunc_Handled_ReturnValue                           ()
-
-struct FEventReply UWBP_Template_ContextMenuAnchor_CM_C::OnFocusReceived(const struct FGeometry& MyGeometry, const struct FFocusEvent& InFocusEvent, const struct FEventReply& CallFunc_Handled_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnFocusReceived");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_OnFocusReceived Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InFocusEvent = std::move(InFocusEvent);
-	Parms.CallFunc_Handled_ReturnValue = std::move(CallFunc_Handled_ReturnValue);
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnInputMethodChanged
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// ECommonInputType                        bNewInputType                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::OnInputMethodChanged(ECommonInputType bNewInputType)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnInputMethodChanged");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_OnInputMethodChanged Parms{};
-
-	Parms.bNewInputType = bNewInputType;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuClose__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bClosedByLostFocus                                     (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuClose__DelegateSignature(bool bClosedByLostFocus)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuClose__DelegateSignature");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuClose__DelegateSignature Parms{};
-
-	Parms.bClosedByLostFocus = bClosedByLostFocus;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuContentCreated__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      MenuContent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuContentCreated__DelegateSignature(class UUserWidget* MenuContent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuContentCreated__DelegateSignature");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuContentCreated__DelegateSignature Parms{};
-
-	Parms.MenuContent = MenuContent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.OnMenuOpened__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      MenuContent                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::OnMenuOpened__DelegateSignature(class UUserWidget* MenuContent)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "OnMenuOpened__DelegateSignature");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_OnMenuOpened__DelegateSignature Parms{};
-
-	Parms.MenuContent = MenuContent;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Open
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Close
 // (Public, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bFocusMenu                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bCloseByLostFocus                                      (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Template_ContextMenuAnchor_CM_C::Open(bool bFocusMenu)
+void UWBP_Template_ContextMenuAnchor_CM_C::Close(bool bCloseByLostFocus)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Open");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Close");
 
-	Params::WBP_Template_ContextMenuAnchor_CM_C_Open Parms{};
+	Params::WBP_Template_ContextMenuAnchor_CM_C_Close Parms{};
 
-	Parms.bFocusMenu = bFocusMenu;
+	Parms.bCloseByLostFocus = bCloseByLostFocus;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature
+// (BlueprintEvent)
 // Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bIsOpen                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_Template_ContextMenuAnchor_CM_C::PreConstruct(bool IsDesignTime)
+void UWBP_Template_ContextMenuAnchor_CM_C::BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature(bool bIsOpen)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "PreConstruct");
+		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature");
 
-	Params::WBP_Template_ContextMenuAnchor_CM_C_PreConstruct Parms{};
+	Params::WBP_Template_ContextMenuAnchor_CM_C_BndEvt__WBP_Template_ContextMenuAnchor_MenuAnchor_K2Node_ComponentBoundEvent_0_OnMenuOpenChangedEvent__DelegateSignature Parms{};
 
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_Template_ContextMenuAnchor_CM.WBP_Template_ContextMenuAnchor_CM_C.Tick
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// struct FGeometry                        MyGeometry                                             (BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-// float                                   InDeltaTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_Template_ContextMenuAnchor_CM_C::Tick(const struct FGeometry& MyGeometry, float InDeltaTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_Template_ContextMenuAnchor_CM_C", "Tick");
-
-	Params::WBP_Template_ContextMenuAnchor_CM_C_Tick Parms{};
-
-	Parms.MyGeometry = std::move(MyGeometry);
-	Parms.InDeltaTime = InDeltaTime;
+	Parms.bIsOpen = bIsOpen;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

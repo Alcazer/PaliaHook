@@ -35,7 +35,7 @@ public:
 	TSoftClassPtr<class UClass>                   ComponentClass;                                    // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bClientComponent : 1;                              // 0x0050(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bServerComponent : 1;                              // 0x0050(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2D42[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC3[0x7];                                     // 0x0051(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameFeatureComponentEntry) == 0x000008, "Wrong alignment on FGameFeatureComponentEntry");
 static_assert(sizeof(FGameFeatureComponentEntry) == 0x000058, "Wrong size on FGameFeatureComponentEntry");
@@ -51,7 +51,7 @@ public:
 	int32                                         AssetPriority;                                     // 0x0008(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint8                                         bClientSource : 1;                                 // 0x000C(0x0001)(BitIndex: 0x00, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
 	uint8                                         bServerSource : 1;                                 // 0x000C(0x0001)(BitIndex: 0x01, PropSize: 0x0001 (Edit, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic))
-	uint8                                         Pad_2D43[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC4[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UDataTable>              DataTableToAdd;                                    // 0x0010(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftObjectPtr<class UCurveTable>             CurveTableToAdd;                                   // 0x0038(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
@@ -67,9 +67,9 @@ static_assert(offsetof(FDataRegistrySourceToAdd, CurveTableToAdd) == 0x000038, "
 struct FGameFeaturePluginStateMachineProperties final 
 {
 public:
-	uint8                                         Pad_2D44[0x88];                                    // 0x0000(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC5[0x88];                                    // 0x0000(0x0088)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameFeatureData*                       GameFeatureData;                                   // 0x0088(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D45[0x38];                                    // 0x0090(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC6[0x38];                                    // 0x0090(0x0038)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameFeaturePluginStateMachineProperties) == 0x000008, "Wrong alignment on FGameFeaturePluginStateMachineProperties");
 static_assert(sizeof(FGameFeaturePluginStateMachineProperties) == 0x0000C8, "Wrong size on FGameFeaturePluginStateMachineProperties");
@@ -80,7 +80,7 @@ static_assert(offsetof(FGameFeaturePluginStateMachineProperties, GameFeatureData
 struct alignas(0x08) FGameFeaturePluginIdentifier final 
 {
 public:
-	uint8                                         Pad_2D46[0x28];                                    // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC7[0x28];                                    // 0x0000(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FGameFeaturePluginIdentifier) == 0x000008, "Wrong alignment on FGameFeaturePluginIdentifier");
 static_assert(sizeof(FGameFeaturePluginIdentifier) == 0x000028, "Wrong size on FGameFeaturePluginIdentifier");
@@ -90,7 +90,7 @@ static_assert(sizeof(FGameFeaturePluginIdentifier) == 0x000028, "Wrong size on F
 struct alignas(0x08) FInstallBundlePluginProtocolMetaData final 
 {
 public:
-	uint8                                         Pad_2D47[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC8[0x20];                                    // 0x0000(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FInstallBundlePluginProtocolMetaData) == 0x000008, "Wrong alignment on FInstallBundlePluginProtocolMetaData");
 static_assert(sizeof(FInstallBundlePluginProtocolMetaData) == 0x000020, "Wrong size on FInstallBundlePluginProtocolMetaData");

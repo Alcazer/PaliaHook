@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "GameplayTags_structs.hpp"
 #include "F_CommonUIButtonPrompt_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "GameplayTags_structs.hpp"
 
 
 namespace SDK::Params

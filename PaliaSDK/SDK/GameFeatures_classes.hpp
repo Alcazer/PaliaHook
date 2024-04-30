@@ -79,9 +79,9 @@ class UGameFeatureAction_AddCheats final  : public UGameFeatureAction
 public:
 	TArray<TSoftClassPtr<class UClass>>           CheatManagers;                                     // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bLoadCheatManagersAsync;                           // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D48[0xF];                                     // 0x0039(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DC9[0xF];                                     // 0x0039(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TWeakObjectPtr<class UCheatManagerExtension>> SpawnedCheatManagers;                              // 0x0048(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D49[0x8];                                     // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCA[0x8];                                     // 0x0058(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -122,7 +122,7 @@ class UGameFeatureAction_AddComponents final  : public UGameFeatureAction
 {
 public:
 	TArray<struct FGameFeatureComponentEntry>     ComponentList;                                     // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D4A[0x50];                                    // 0x0038(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCB[0x50];                                    // 0x0038(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -144,7 +144,7 @@ class UGameFeatureAction_AddWPContent final  : public UGameFeatureAction
 {
 public:
 	class UContentBundleDescriptor*               ContentBundleDescriptor;                           // 0x0028(0x0008)(Edit, ZeroConstructor, EditConst, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D4B[0x10];                                    // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCC[0x10];                                    // 0x0030(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -167,7 +167,7 @@ class UGameFeatureAction_DataRegistry final  : public UGameFeatureAction
 public:
 	TArray<TSoftObjectPtr<class UDataRegistry>>   RegistriesToAdd;                                   // 0x0028(0x0010)(Edit, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	bool                                          bPreloadInEditor;                                  // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D4C[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCD[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -191,7 +191,7 @@ class UGameFeatureAction_DataRegistrySource final  : public UGameFeatureAction
 public:
 	TArray<struct FDataRegistrySourceToAdd>       SourcesToAdd;                                      // 0x0028(0x0010)(Edit, ZeroConstructor, NativeAccessSpecifierPrivate)
 	bool                                          bPreloadInEditor;                                  // 0x0038(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D4D[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCE[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -239,9 +239,9 @@ static_assert(offsetof(UGameFeatureData, PrimaryAssetTypesToScan) == 0x000040, "
 class UGameFeaturePluginStateMachine final  : public UObject
 {
 public:
-	uint8                                         Pad_2D4E[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DCF[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGameFeaturePluginStateMachineProperties StateProperties;                                   // 0x0030(0x00C8)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D4F[0xF0];                                    // 0x00F8(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD0[0xF0];                                    // 0x00F8(0x00F0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -298,10 +298,10 @@ class UGameFeaturesSubsystem final  : public UEngineSubsystem
 public:
 	TMap<class FString, class UGameFeaturePluginStateMachine*> GameFeaturePluginStateMachines;                    // 0x0030(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
 	TArray<class UGameFeaturePluginStateMachine*> TerminalGameFeaturePluginStateMachines;            // 0x0080(0x0010)(ZeroConstructor, Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D50[0xA0];                                    // 0x0090(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD1[0xA0];                                    // 0x0090(0x00A0)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UObject*>                        Observers;                                         // 0x0130(0x0010)(ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPrivate)
 	class UGameFeaturesProjectPolicies*           GameSpecificPolicies;                              // 0x0140(0x0008)(ZeroConstructor, Transient, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D51[0x8];                                     // 0x0148(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD2[0x8];                                     // 0x0148(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -329,7 +329,7 @@ public:
 	TArray<class FString>                         EnabledPlugins;                                    // 0x0058(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         DisabledPlugins;                                   // 0x0068(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
 	TArray<class FString>                         AdditionalPluginMetadataKeys;                      // 0x0078(0x0010)(Edit, ZeroConstructor, Config, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2D52[0x20];                                    // 0x0088(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD3[0x20];                                    // 0x0088(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

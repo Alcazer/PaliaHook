@@ -12,8 +12,8 @@
 
 #include "Engine_structs.hpp"
 #include "Enum_vfx_toolQuality_structs.hpp"
-#include "CoreUObject_structs.hpp"
 #include "BP_EquipViewActor_classes.hpp"
+#include "CoreUObject_structs.hpp"
 
 
 namespace SDK
@@ -36,28 +36,28 @@ public:
 	class USkeletalMeshComponent*                 SK_FishingRod;                                     // 0x0300(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_lineCasting_castMe_123A52F04C61D8C7AC335BABF088569D; // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_lineCasting__Direction_123A52F04C61D8C7AC335BABF088569D; // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D1[0x3];                                     // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49FE[0x3];                                     // 0x030D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_lineCasting;                                    // 0x0310(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_fadeLine_NewTrack_0_C2F9F4484B466828D92D46ABB57D1E4E; // 0x0318(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_fadeLine__Direction_C2F9F4484B466828D92D46ABB57D1E4E; // 0x031C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D2[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49FF[0x3];                                     // 0x031D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_fadeLine;                                       // 0x0320(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	Enum_vfx_toolQuality                          Tool_quality;                                      // 0x0328(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_17D3[0x7];                                     // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A00[0x7];                                     // 0x0329(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CableLineEndAttach;                                // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                PrevLocation;                                      // 0x0338(0x0018)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bReelLoopAudioPlaying;                             // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D4[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A01[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        WhooshThreshold;                                   // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPlayWhoosh;                                       // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D5[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A02[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Dur_casting;                                       // 0x0368(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	class USkeletalMeshComponent*                 SK_bobber_miniGame;                                // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                Scale_bobberOnRod;                                 // 0x0378(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FVector                                Scale_bobberInWater;                               // 0x0390(0x0018)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	class UAkComponent*                           AkReel;                                            // 0x03A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          ReturnFromWater;                                   // 0x03B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_17D6[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A03[0x7];                                     // 0x03B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class USkeletalMesh*                          CurrentSkBobberFromGear;                           // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class USkeletalMesh*                          DefaultSkBobber;                                   // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         AkReelEventId;                                     // 0x03C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

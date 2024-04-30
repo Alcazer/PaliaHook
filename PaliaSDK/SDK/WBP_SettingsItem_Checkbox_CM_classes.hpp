@@ -28,7 +28,7 @@ public:
 	class UWBP_Checkmark_CM_C*                    WBP_Checkmark_CM;                                  // 0x0300(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnCheckedStateChanged;                             // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          Checked;                                           // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52A0[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52D1[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ItemName;                                          // 0x0320(0x0018)(Edit, BlueprintVisible)
 	FMulticastInlineDelegateProperty_             OnBackerButton_Hovered;                            // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnBackerButton_Clicked;                            // 0x0348(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

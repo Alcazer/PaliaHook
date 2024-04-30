@@ -23,7 +23,7 @@ struct WBP_SettingsItem_Dropdown_CM_C_BndEvt__WBP_SettingsItem_Dropdown_CM_WBP_C
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52BB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52D7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_SettingsItem_Dropdown_CM_C_BndEvt__WBP_SettingsItem_Dropdown_CM_WBP_ComboBox_02_CM_K2Node_ComponentBoundEvent_6_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_SettingsItem_Dropdown_CM_C_BndEvt__WBP_SettingsItem_Dropdown_CM_WBP_ComboBox_02_CM_K2Node_ComponentBoundEvent_6_OnOptionChanged__DelegateSignature");
@@ -73,7 +73,7 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_Index;                  // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0008(0x0018)()
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52BC[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52D8[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_2;               // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0030(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -126,7 +126,7 @@ struct WBP_SettingsItem_Dropdown_CM_C_OnOptionChanged__DelegateSignature final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52BD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_52D9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_SettingsItem_Dropdown_CM_C_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_SettingsItem_Dropdown_CM_C_OnOptionChanged__DelegateSignature");

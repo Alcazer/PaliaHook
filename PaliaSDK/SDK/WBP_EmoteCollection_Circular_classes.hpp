@@ -46,7 +46,7 @@ public:
 	class UWBP_EmoteEntry_CM_C*                   SelectedCollectionEntry;                           // 0x0600(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UUserWidget*                            Current_Focused_Valid_Widget;                      // 0x0608(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bUpdatingWheelChoice;                              // 0x0610(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D01[0x7];                                     // 0x0611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_413C[0x7];                                     // 0x0611(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS6UI_NavExplicitData>          EmoteWheeNavlExplictData;                          // 0x0618(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnEmoteCollectionClose;                            // 0x0628(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	double                                        Scroll_Offsset_Scale;                              // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

@@ -11,12 +11,12 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "Struct_TutorialModalName_CM_structs.hpp"
 #include "CommonInput_structs.hpp"
 #include "Palia_structs.hpp"
 #include "Enum_SpecificFTUEPopin_CM_structs.hpp"
-#include "Struct_TutorialModalName_CM_structs.hpp"
-#include "Struct_CrossPlatformFTUEPopin_CM_structs.hpp"
 #include "ValeriaUI_classes.hpp"
+#include "Struct_CrossPlatformFTUEPopin_CM_structs.hpp"
 #include "S6Core_structs.hpp"
 #include "S6UICore_structs.hpp"
 
@@ -45,32 +45,32 @@ public:
 	class US6UI_StateUserWidget*                  LoginStateWidget;                                  // 0x0708(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class US6UI_ModalWidgetBase*                  GameplayMenuWidget;                                // 0x0710(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         FullscreenFadeCount;                               // 0x0718(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40EC[0x4];                                     // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_464D[0x4];                                     // 0x071C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnFullscreenFadeOutCompleted;                      // 0x0720(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnFullscreenFadeInCompleted;                       // 0x0730(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          RenderStudioClosing;                               // 0x0740(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40ED[0x7];                                     // 0x0741(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_464E[0x7];                                     // 0x0741(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AVAL_CharacterRenderStudio*             CharacterRenderStudio;                             // 0x0748(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          EnteredLoginState;                                 // 0x0750(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40EE[0x7];                                     // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_464F[0x7];                                     // 0x0751(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBP_NotificationFactory_MainWidget_C*   NotificationFactory;                               // 0x0758(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FVAL_CharacterCustomizationModeConfig  Cached_Mode_Config_From_Wardrobe;                  // 0x0760(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	FMulticastInlineDelegateProperty_             OnFullscreenFadeInCompleted_Internal;              // 0x0770(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class US6UI_ModalWidgetBase*                  CollectionsMenu;                                   // 0x0780(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class US6UI_StateUserWidget*                  CurrentSubgameScreen;                              // 0x0788(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EVAL_CollectionsTabState                      CollectionsTabStartingState;                       // 0x0790(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40EF[0x7];                                     // 0x0791(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4650[0x7];                                     // 0x0791(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   MatchmakingQueueWidgetClass;                       // 0x0798(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UUserWidget*                            MatchmakingQueueWidget;                            // 0x07C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         MatchmakingQueueNumber;                            // 0x07C8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40F0[0x4];                                     // 0x07CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4651[0x4];                                     // 0x07CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            LoadingScreenWidget;                               // 0x07D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FStruct_TutorialModalName_CM>   Struct_TutorialModalName;                          // 0x07D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class US6UI_StateUserWidget*                  CharacterCustomizationScreenObject;                // 0x07E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TMap<class FName, struct FStruct_CrossPlatformFTUEPopin_CM> RedirectPlatformFTUEPopinTypes;                    // 0x07F0(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TMap<class FName, struct FStruct_CrossPlatformFTUEPopin_CM> RedirectSpecificPlatformFTUEPopinTypes;            // 0x0840(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	Enum_SpecificFTUEPopin_CM                     SpecificFTUEPopinName;                             // 0x0890(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40F1[0x7];                                     // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4652[0x7];                                     // 0x0891(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           InputKeyReminderFTUEPopin;                         // 0x0898(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnCharacterCustomizationConfirm;                   // 0x08A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class US6UI_StateUserWidget*                  InventoryHUD;                                      // 0x08B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)

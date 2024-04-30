@@ -12,9 +12,9 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "F_HairMorphAlphas_structs.hpp"
 #include "AnimGraphRuntime_structs.hpp"
 #include "E_HairMorphOptions_structs.hpp"
-#include "F_HairMorphAlphas_structs.hpp"
 
 
 namespace SDK
@@ -25,7 +25,7 @@ namespace SDK
 class UABP_Female_Hair_Medium_C : public UAnimInstance
 {
 public:
-	uint8                                         Pad_5EB1[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B87[0x8];                                     // 0x0348(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x0350(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_PropertyAccess;             // 0x0358(0x0008)()
 	struct FAnimSubsystemInstance                 AnimBlueprintExtension_Base;                       // 0x0360(0x0008)()
@@ -48,7 +48,7 @@ public:
 	TMap<E_HairMorphOptions, struct FF_HairMorphAlphas> Alpha_Mapping;                                     // 0x2928(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FString                                 HairDynamicsEnabledCvar;                           // 0x2978(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          HairDynamicsEnabled;                               // 0x2988(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EB2[0x7];                                     // 0x2989(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B88[0x7];                                     // 0x2989(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      WardrobeDoll;                                      // 0x2990(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

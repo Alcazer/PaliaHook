@@ -30,23 +30,23 @@ public:
 	class UVAL_DialogueAsset*                     CallFunc_GetCurrentDialogueAsset_ReturnValue;      // 0x0020(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_DialogueAsset*                     CallFunc_GetCurrentDialogueAsset_ReturnValue_1;    // 0x0028(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B31[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E4[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CallFunc_GetDisplayName_ReturnValue;               // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_IntToString_ReturnValue;             // 0x0048(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x0058(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	struct FDialogueLine                          CallFunc_GetCurrentDialogueLine_OutCurrentLine;    // 0x0068(0x0038)()
 	bool                                          CallFunc_GetCurrentDialogueLine_ReturnValue;       // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B32[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E5[0x3];                                     // 0x00A1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_GetCurrentLineNumber_ReturnValue;         // 0x00A4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x00A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B33[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E6[0x7];                                     // 0x00A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_GetDialogueDisplayString_ReturnValue;     // 0x00B0(0x0018)(ConstParm)
 	int32                                         CallFunc_GetConsoleVariableIntValue_ReturnValue;   // 0x00C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B34[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E7[0x4];                                     // 0x00CC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Perform_Text_Substitutions_OutText;       // 0x00D0(0x0018)()
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x00E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x00E9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B35[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E8[0x6];                                     // 0x00EA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x00F0(0x0018)()
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0108(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -254,7 +254,7 @@ struct WBP_Dialogue_CM_C_CleanupDialogue final
 public:
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B36[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58E9[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCharacterStateMachineComponent*        CallFunc_GetCSM_ReturnValue;                       // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -274,33 +274,33 @@ struct WBP_Dialogue_CM_C_CreateDialogueOptions final
 public:
 	struct FVAL_DialogueOptionList                InDialogueOptionList;                              // 0x0000(0x0048)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B37[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58EA[0x3];                                     // 0x0049(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x004C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B38[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58EB[0x4];                                     // 0x0054(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_DialogueSpeakerAsset*              CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue; // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue_1;            // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B39[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58EC[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable;                                // 0x0068(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0070(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3A[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58ED[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Variable;                                 // 0x007C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVAL_DialogueOption                    CallFunc_Array_Get_Item;                           // 0x0080(0x0028)()
 	class UInputAction*                           CallFunc_Array_Get_Item_1;                         // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x00B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3B[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58EE[0x7];                                     // 0x00B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x00B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM; // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3C[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58EF[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_Select_Default;                             // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x00D8(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	class UVerticalBoxSlot*                       CallFunc_SlotAsVerticalBoxSlot_ReturnValue;        // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UVerticalBoxSlot*                       CallFunc_SlotAsVerticalBoxSlot_ReturnValue_1;      // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Add_ReturnValue;                    // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x00FC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3D[0x3];                                     // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F0[0x3];                                     // 0x00FD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeStruct_Top_ImplicitCast;                // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -337,7 +337,7 @@ struct WBP_Dialogue_CM_C_DetermineGiveGiftState final
 {
 public:
 	bool                                          GiftingEnabled;                                    // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F1[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Param_ToolTipText;                                 // 0x0008(0x0018)(Parm, OutParm)
 	class FText                                   LocalTooltipText;                                  // 0x0020(0x0018)(Edit, BlueprintVisible)
 	bool                                          LocalGiftingEnabled;                               // 0x0038(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -346,11 +346,11 @@ public:
 	bool                                          CallFunc_HasPostDialogueAction_ReturnValue;        // 0x003B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x003C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x003D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B3F[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F2[0x2];                                     // 0x003E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVillagerGiftReceiverComponent*         CallFunc_GetVillagerGiftReceiverComponent_ReturnValue; // 0x0040(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVillagerInGiftableSpace_ReturnValue;    // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B40[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F3[0x6];                                     // 0x004A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanGiftVillager_ReturnValue;              // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0059(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -412,25 +412,25 @@ public:
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_6;    // 0x0030(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable;                              // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue;  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B41[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F4[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable;                                // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1;                              // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_0;                              // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_1_0;                            // 0x0060(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B42[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F5[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_5;     // 0x0070(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_5;     // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_5;   // 0x0094(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_5;    // 0x0098(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_1; // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B43[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F6[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Temp_object_Variable_1;                            // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_2;                              // 0x00B0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_2_0;                            // 0x00B8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_3;                              // 0x00C0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_1;                              // 0x00C8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B44[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F7[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_3_0;                            // 0x00D0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_4;     // 0x00D8(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_4;     // 0x00F8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -438,25 +438,25 @@ public:
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_4;    // 0x0100(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable_2;                            // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_2; // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B45[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F8[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_4;                              // 0x0118(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_5;                              // 0x0120(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_4_0;                            // 0x0128(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_5_0;                            // 0x0130(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_2;                              // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B46[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58F9[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_3;     // 0x0140(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_3;     // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_3;   // 0x0164(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_3;    // 0x0168(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_3; // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B47[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FA[0x7];                                     // 0x0171(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Temp_object_Variable_3;                            // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_6;                              // 0x0180(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_6_0;                            // 0x0188(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_7;                              // 0x0190(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_3;                              // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B48[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FB[0x7];                                     // 0x0199(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_7_0;                            // 0x01A0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_2;     // 0x01A8(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_2;     // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -464,25 +464,25 @@ public:
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_2;    // 0x01D0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable_4;                            // 0x01D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_4; // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B49[0x7];                                     // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FC[0x7];                                     // 0x01E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_8;                              // 0x01E8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_9;                              // 0x01F0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_8_0;                            // 0x01F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_9_0;                            // 0x0200(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_4;                              // 0x0208(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4A[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FD[0x7];                                     // 0x0209(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0210(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_1;     // 0x0230(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_1;   // 0x0234(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_1;    // 0x0238(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_5; // 0x0240(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4B[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FE[0x7];                                     // 0x0241(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Temp_object_Variable_5;                            // 0x0248(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_10;                             // 0x0250(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_10_0;                           // 0x0258(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_11;                             // 0x0260(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_5;                              // 0x0268(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4C[0x7];                                     // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_58FF[0x7];                                     // 0x0269(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_11_0;                           // 0x0270(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue;       // 0x0278(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime;       // 0x0298(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -490,7 +490,7 @@ public:
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction;      // 0x02A0(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVillagerStoreComponent*                CallFunc_GetComponentByClass_ReturnValue;          // 0x02A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_6; // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4D[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5900[0x7];                                     // 0x02B1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UDialogueManagerComponent*              CallFunc_GetDialogueManager_ReturnValue;           // 0x02B8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable_6;                            // 0x02C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_12;                             // 0x02C8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -498,7 +498,7 @@ public:
 	double                                        Temp_real_Variable_12_0;                           // 0x02D8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_13_0;                           // 0x02E0(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_6;                              // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4E[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5901[0x3];                                     // 0x02E9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x02EC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x02F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x02F4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -509,51 +509,51 @@ public:
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0308(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_7;                              // 0x030C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x030D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B4F[0x2];                                     // 0x030E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5902[0x2];                                     // 0x030E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCharacterStateMachineComponent*        CallFunc_GetCSM_ReturnValue;                       // 0x0318(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FCharacterStateChangeParams            K2Node_MakeStruct_CharacterStateChangeParams;      // 0x0320(0x0178)(ContainsInstancedReference)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0498(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult_1;          // 0x0499(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B50[0x6];                                     // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5903[0x6];                                     // 0x049A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue_1;        // 0x04A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x04A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x04A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B51[0x6];                                     // 0x04AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5904[0x6];                                     // 0x04AA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x04B0(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x04C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B52[0x4];                                     // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5905[0x4];                                     // 0x04C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue;              // 0x04C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x04D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B53[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5906[0x7];                                     // 0x04D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class US6UI_UIManagerWidgetBase*              CallFunc_GetUIManagerWidget_ReturnValue;           // 0x04D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_UIManagerWidgetBase*             K2Node_DynamicCast_AsVALUI_UIManager_Widget_Base;  // 0x04E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x04E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B54[0x7];                                     // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5907[0x7];                                     // 0x04E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaVillagerCharacter*              CallFunc_GetVillager_ReturnValue;                  // 0x04F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x04F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B55[0x7];                                     // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5908[0x7];                                     // 0x04F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class APlayerController*                      CallFunc_GetOwningPlayer_ReturnValue_1;            // 0x0500(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AValeriaPlayerController*               K2Node_DynamicCast_AsValeria_Player_Controller;    // 0x0508(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0510(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B56[0x7];                                     // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5909[0x7];                                     // 0x0511(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_14;                             // 0x0518(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_15;                             // 0x0520(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_1;              // 0x0528(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_2;              // 0x052C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_3;              // 0x0530(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B57[0x4];                                     // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590A[0x4];                                     // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Temp_object_Variable_7;                            // 0x0538(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_7;     // 0x0540(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_7;     // 0x0560(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_7;   // 0x0564(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           K2Node_EnhancedInputActionEvent_SourceAction_7;    // 0x0568(0x0008)(ConstParm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_4;              // 0x0570(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B58[0x4];                                     // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590B[0x4];                                     // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_15_0;                           // 0x0578(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        Temp_real_Variable_14_0;                           // 0x0580(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Conv_InputActionValueToBool_ReturnValue_7; // 0x0588(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B59[0x7];                                     // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590C[0x7];                                     // 0x0589(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_16;                             // 0x0590(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UVillagerRelationshipsComponent*        K2Node_CustomEvent_relationship;                   // 0x0598(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVillagerRelationshipChange            K2Node_CustomEvent_change;                         // 0x05A0(0x0010)(NoDestructor)
@@ -575,24 +575,24 @@ public:
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM; // 0x0628(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0630(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0631(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5A[0x6];                                     // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590D[0x6];                                     // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue_1;                 // 0x0638(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM_1; // 0x0640(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x0648(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0649(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_8;                              // 0x064A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5B[0x5];                                     // 0x064B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590E[0x5];                                     // 0x064B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue_2;                 // 0x0650(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM_2; // 0x0658(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x0660(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5C[0x7];                                     // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_590F[0x7];                                     // 0x0661(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue_3;                 // 0x0668(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_2;                  // 0x0670(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5D[0x7];                                     // 0x0671(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5910[0x7];                                     // 0x0671(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM_3; // 0x0678(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x0680(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_3;                  // 0x0681(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5E[0x6];                                     // 0x0682(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5911[0x6];                                     // 0x0682(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_DialogueOptionButton_CM_C*         CallFunc_Get_Focus_Dialogue_Option_ret;            // 0x0688(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue;                 // 0x0690(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0691(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -601,31 +601,31 @@ public:
 	bool                                          CallFunc_GetIsEnabled_ReturnValue_1;               // 0x0694(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_GetIsEnabled_ReturnValue_2;               // 0x0695(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_6;                  // 0x0696(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B5F[0x1];                                     // 0x0697(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5912[0x1];                                     // 0x0697(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDialogueListToShow                    K2Node_CustomEvent_DialoguesToShow;                // 0x0698(0x0138)()
 	class UDialogueComponent*                     K2Node_CustomEvent_DialogComp;                     // 0x07D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable_2;                   // 0x07D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B60[0x4];                                     // 0x07DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5913[0x4];                                     // 0x07DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x07E0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UVerticalBoxSlot*                       CallFunc_SlotAsVerticalBoxSlot_ReturnValue;        // 0x07E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x07F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B61[0x7];                                     // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5914[0x7];                                     // 0x07F1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        K2Node_Select_Default;                             // 0x07F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0800(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	ESlateVisibility                              CallFunc_GetVisibility_ReturnValue;                // 0x0810(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B62[0x7];                                     // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5915[0x7];                                     // 0x0811(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue_4;                 // 0x0818(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0820(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_7;                  // 0x0821(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0822(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_9;                              // 0x0823(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B63[0x4];                                     // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5916[0x4];                                     // 0x0824(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_18;                             // 0x0828(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWBP_StandaloneInventory_CM_C*>  CallFunc_GetAllWidgetsOfClass_FoundWidgets;        // 0x0830(0x0010)(ReferenceParm, ContainsInstancedReference)
 	class UWBP_StandaloneInventory_CM_C*          CallFunc_Array_Get_Item_1;                         // 0x0840(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x0848(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x084C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B64[0x3];                                     // 0x084D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5917[0x3];                                     // 0x084D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Temp_real_Variable_19;                             // 0x0850(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Temp_object_Variable_8;                            // 0x0858(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_8;     // 0x0860(0x0020)(NoDestructor)
@@ -645,14 +645,14 @@ public:
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x08A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsRequestingStartDialogue_ReturnValue_1;  // 0x08A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_2;                // 0x08AA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B65[0x1];                                     // 0x08AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5918[0x1];                                     // 0x08AB(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_5;              // 0x08AC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWBP_VillagerStore_CM_C*>        CallFunc_GetAllWidgetsOfClass_FoundWidgets_1;      // 0x08B0(0x0010)(ReferenceParm, ContainsInstancedReference)
 	TDelegate<void(class UWBP_VillagerStore_CM_C* VillagerStore)> K2Node_CreateDelegate_OutputDelegate;              // 0x08C0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWBP_VillagerStore_CM_C*                CallFunc_Array_Get_Item_2;                         // 0x08D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue_2;               // 0x08D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_2;                // 0x08DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B66[0x3];                                     // 0x08DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5919[0x3];                                     // 0x08DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_MakeStruct_Top_ImplicitCast;                // 0x08E0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_Delay_Duration_ImplicitCast;              // 0x08E4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -881,20 +881,20 @@ public:
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x000C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B67[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591A[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM; // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0029(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x002A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B68[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591B[0x5];                                     // 0x002B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0030(0x0010)(ReferenceParm, ContainsInstancedReference)
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B69[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591C[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0048(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM_1; // 0x0050(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0058(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6A[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591D[0x3];                                     // 0x0059(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasAnyUserFocus_ReturnValue;              // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0061(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -933,7 +933,7 @@ public:
 	class UDialogueComponent*                     DialogueSourceComponent;                           // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      Player;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DoesHaveAnyGiftHintDialogues_ReturnValue; // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6B[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0018(0x0018)()
 	bool                                          CallFunc_DoesAcceptGifts_ReturnValue;              // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_HasStore_ReturnValue;                     // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1024,10 +1024,10 @@ public:
 	int32                                         CallFunc_GetChildrenCount_ReturnValue;             // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Variable;                                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6C[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_591F[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_LessEqual_IntInt_ReturnValue;             // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6D[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5920[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x001C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_Hide_Previous_Dialogue_Options) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_Hide_Previous_Dialogue_Options");
@@ -1198,7 +1198,7 @@ struct WBP_Dialogue_CM_C_IsGiveGiftScreenOpen final
 {
 public:
 	bool                                          bOpen;                                             // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5921[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharacterStateMachineComponent*        CallFunc_GetCSM_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               CallFunc_GetCurrentStateType_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1231,7 +1231,7 @@ struct WBP_Dialogue_CM_C_On_Background_Button_CM_MoveDown final
 {
 public:
 	EUINavigation                                 Param_Navigation;                                  // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B6F[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5922[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                ReturnValue;                                       // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue;                    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVisible_ReturnValue_1;                  // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -1287,7 +1287,7 @@ public:
 	struct FVillagerRelationshipChange            Change;                                            // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue;                // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B70[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5923[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimation_ReturnValue_1;              // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_OnRelationshipUpdate) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_OnRelationshipUpdate");
@@ -1372,13 +1372,13 @@ public:
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B71[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5924[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B72[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5925[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B73[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5926[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_DialogueOptionButton_CM_C*         K2Node_DynamicCast_AsWBP_Dialogue_Option_Button_CM; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1400,13 +1400,13 @@ struct WBP_Dialogue_CM_C_ResetForNewDialogueAsset final
 {
 public:
 	ESlateVisibility                              GiftVisibility;                                    // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B74[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5927[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Param_VillagerCoreConfigId;                        // 0x0004(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   Param_VillagerName;                                // 0x0008(0x0018)(Edit, BlueprintVisible)
 	class FString                                 Param_NoRomanceYetTooltip;                         // 0x0020(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      Param_ValeriaCharacter;                            // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, NoDestructor, HasGetValueTypeHash)
 	int32                                         Param_VillagerConfigId;                            // 0x0038(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B75[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5928[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Param_RomanceLevelDescription;                     // 0x0040(0x0018)(Edit, BlueprintVisible)
 	class FText                                   Param_NonRomancableCharacter;                      // 0x0058(0x0018)(Edit, BlueprintVisible)
 	class FText                                   CallFunc_GetDialogueDisplayString_ReturnValue;     // 0x0070(0x0018)(ConstParm)
@@ -1430,7 +1430,7 @@ struct WBP_Dialogue_CM_C_SetBinds final
 public:
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B76[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5929[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UDialogueManagerComponent* DialogueManagerComponent, const struct FVAL_DialogueOptionList& NewDialogueOptionList)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1442,15 +1442,15 @@ public:
 	TDelegate<void(class UDialogueManagerComponent* DialogueManagerComponent)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0094(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x00A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UPersistentTagMapComponent* TagMap)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x00B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B77[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_592A[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVillagerRelationshipsComponent*        CallFunc_GetRelationships_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B78[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_592B[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPersistentTagMapComponent*             CallFunc_GetPersistentTags_ReturnValue;            // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x00E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B79[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_592C[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x00FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_SetBinds) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_SetBinds");
@@ -1486,7 +1486,7 @@ public:
 	class UWBP_DialogueOptionButton_CM_C*         DialogueOptionBtn;                                 // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue_1;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7A[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_592D[0x2];                                     // 0x0012(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Subtract_IntInt_ReturnValue;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_GetChildAt_ReturnValue;                   // 0x0018(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
@@ -1501,7 +1501,7 @@ static_assert(offsetof(WBP_Dialogue_CM_C_SetDialogueOptionNavigation, CallFunc_S
 static_assert(offsetof(WBP_Dialogue_CM_C_SetDialogueOptionNavigation, CallFunc_GetChildAt_ReturnValue) == 0x000018, "Member 'WBP_Dialogue_CM_C_SetDialogueOptionNavigation::CallFunc_GetChildAt_ReturnValue' has a wrong offset!");
 
 // Function WBP_Dialogue_CM.WBP_Dialogue_CM_C.SetSpeakerInfo
-// 0x0180 (0x0180 - 0x0000)
+// 0x01A8 (0x01A8 - 0x0000)
 struct WBP_Dialogue_CM_C_SetSpeakerInfo final 
 {
 public:
@@ -1509,28 +1509,28 @@ public:
 	class FText                                   OverriddenSpeakerName;                             // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	class FText                                   CurrentSpeakerDisplayName;                         // 0x0020(0x0018)(Edit, BlueprintVisible)
 	class UVAL_DialogueSpeakerAsset*              CurrentDialogueSpaker;                             // 0x0038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FVillagerConfig                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0040(0x0130)()
-	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0170(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0171(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0172(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x0173(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0174(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7B[0x3];                                     // 0x0175(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	class UVAL_DialogueSpeakerAsset*              CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue; // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FVillagerConfig                        CallFunc_GetDataTableRowFromName_OutRow;           // 0x0040(0x0158)()
+	bool                                          CallFunc_GetDataTableRowFromName_ReturnValue;      // 0x0198(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0199(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x019A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValidSoftObjectReference_ReturnValue;   // 0x019B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x019C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_592E[0x3];                                     // 0x019D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	class UVAL_DialogueSpeakerAsset*              CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue; // 0x01A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_SetSpeakerInfo) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_SetSpeakerInfo");
-static_assert(sizeof(WBP_Dialogue_CM_C_SetSpeakerInfo) == 0x000180, "Wrong size on WBP_Dialogue_CM_C_SetSpeakerInfo");
+static_assert(sizeof(WBP_Dialogue_CM_C_SetSpeakerInfo) == 0x0001A8, "Wrong size on WBP_Dialogue_CM_C_SetSpeakerInfo");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, InSpeaker) == 0x000000, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::InSpeaker' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, OverriddenSpeakerName) == 0x000008, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::OverriddenSpeakerName' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CurrentSpeakerDisplayName) == 0x000020, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CurrentSpeakerDisplayName' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CurrentDialogueSpaker) == 0x000038, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CurrentDialogueSpaker' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_GetDataTableRowFromName_OutRow) == 0x000040, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_GetDataTableRowFromName_OutRow' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000170, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x000171, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_Not_PreBool_ReturnValue) == 0x000172, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x000173, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_IsValid_ReturnValue) == 0x000174, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue) == 0x000178, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_GetDataTableRowFromName_ReturnValue) == 0x000198, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_GetDataTableRowFromName_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_TextIsEmpty_ReturnValue) == 0x000199, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_TextIsEmpty_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_Not_PreBool_ReturnValue) == 0x00019A, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_Not_PreBool_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_IsValidSoftObjectReference_ReturnValue) == 0x00019B, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_IsValidSoftObjectReference_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_IsValid_ReturnValue) == 0x00019C, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetSpeakerInfo, CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue) == 0x0001A0, "Member 'WBP_Dialogue_CM_C_SetSpeakerInfo::CallFunc_GetCurrentPrimaryDialogueSpeakerAsset_ReturnValue' has a wrong offset!");
 
 // Function WBP_Dialogue_CM.WBP_Dialogue_CM_C.SetStoreInfo
 // 0x0080 (0x0080 - 0x0000)
@@ -1540,11 +1540,11 @@ public:
 	class UDialogueComponent*                     InDialogueComponent;                               // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UVillagerStoreComponent*                VillagerStoreComp;                                 // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsVillager_ReturnValue;                   // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7C[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_592F[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaVillagerCharacter*              CallFunc_GetVillager_ReturnValue;                  // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0021(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7D[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5930[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FClientStoreInfo                       CallFunc_HasStore_clientStoreInfo;                 // 0x0028(0x0050)()
 	bool                                          CallFunc_HasStore_ReturnValue;                     // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1566,7 +1566,7 @@ struct WBP_Dialogue_CM_C_SetUnbinds final
 public:
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate;              // 0x0000(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7E[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5931[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueManagerComponent* DialogueManagerComponent, const struct FVAL_DialogueOptionList& NewDialogueOptionList)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0034(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -1578,15 +1578,15 @@ public:
 	TDelegate<void(class UVillagerRelationshipsComponent* Relationship, const struct FVillagerRelationshipChange& Change)> K2Node_CreateDelegate_OutputDelegate_9;            // 0x0094(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(ECommonInputType bNewInputType)> K2Node_CreateDelegate_OutputDelegate_10;           // 0x00A4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UPersistentTagMapComponent* TagMap)> K2Node_CreateDelegate_OutputDelegate_11;           // 0x00B4(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B7F[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5932[0x4];                                     // 0x00C4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVillagerRelationshipsComponent*        CallFunc_GetRelationships_ReturnValue;             // 0x00C8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x00D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B80[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5933[0x7];                                     // 0x00D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPersistentTagMapComponent*             CallFunc_GetPersistentTags_ReturnValue;            // 0x00D8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_12;           // 0x00E0(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCommonInputSubsystem*                  CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x00F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B81[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5934[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UDialogueComponent* Diag)> K2Node_CreateDelegate_OutputDelegate_13;           // 0x00FC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_SetUnbinds) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_SetUnbinds");
@@ -1626,7 +1626,7 @@ static_assert(offsetof(WBP_Dialogue_CM_C_Setup_New_Dialogues, DialoguesToShow) =
 static_assert(offsetof(WBP_Dialogue_CM_C_Setup_New_Dialogues, DialogComp) == 0x000138, "Member 'WBP_Dialogue_CM_C_Setup_New_Dialogues::DialogComp' has a wrong offset!");
 
 // Function WBP_Dialogue_CM.WBP_Dialogue_CM_C.SetupRelationshipDetails
-// 0x14D0 (0x14D0 - 0x0000)
+// 0x1500 (0x1500 - 0x0000)
 struct WBP_Dialogue_CM_C_SetupRelationshipDetails final 
 {
 public:
@@ -1634,51 +1634,51 @@ public:
 	bool                                          CallFunc_IsVillager_ReturnValue;                   // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_FindVillagerCoreConfigById_OutResult;     // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B82[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5935[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVillagerCoreConfig                    CallFunc_FindVillagerCoreConfigById_ReturnValue;   // 0x0008(0x0F08)()
 	EValeriaFuncResult                            CallFunc_FindVillagerConfigById_OutResult;         // 0x0F10(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B83[0x7];                                     // 0x0F11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVillagerConfig                        CallFunc_FindVillagerConfigById_ReturnValue;       // 0x0F18(0x0130)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x1048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x1049(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x104A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B84[0x5];                                     // 0x104B(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
-	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x1050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x1060(0x0010)(ZeroConstructor, HasGetValueTypeHash)
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x1070(0x0014)()
-	uint8                                         Pad_5B85[0x4];                                     // 0x1084(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x1088(0x0018)()
-	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x10A0(0x0014)()
-	uint8                                         Pad_5B86[0x4];                                     // 0x10B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class AValeriaVillagerCharacter*              CallFunc_GetVillager_ReturnValue;                  // 0x10B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x10C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B87[0x7];                                     // 0x10C1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x10C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x10D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B88[0x3];                                     // 0x10D1(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetRelationshipLevel_ReturnValue;         // 0x10D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_GetRelationshipLevel_ReturnValue_1;       // 0x10D8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EValeriaFuncResult                            CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult; // 0x10DC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B89[0x3];                                     // 0x10DD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVillagerRelationshipLevelConfig       CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue; // 0x10E0(0x01B0)()
-	EValeriaFuncResult                            CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1; // 0x1290(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8A[0xF];                                     // 0x1291(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FVillagerRelationshipLevelConfig       CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1; // 0x12A0(0x01B0)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x1450(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x1451(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8B[0x6];                                     // 0x1452(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x1458(0x0018)()
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x1470(0x0018)()
-	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x1488(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8C[0x7];                                     // 0x1489(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   K2Node_Select_Default;                             // 0x1490(0x0018)(ConstParm)
-	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x14A8(0x0014)()
-	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x14BC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8D[0x3];                                     // 0x14BD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	int32                                         CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue; // 0x14C0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5936[0x7];                                     // 0x0F11(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVillagerConfig                        CallFunc_FindVillagerConfigById_ReturnValue;       // 0x0F18(0x0158)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x1070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x1071(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x1072(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5937[0x5];                                     // 0x1073(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x1078(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	class FString                                 CallFunc_Concat_StrStr_ReturnValue;                // 0x1088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor;                      // 0x1098(0x0014)()
+	uint8                                         Pad_5938[0x4];                                     // 0x10AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_StringToText_ReturnValue;            // 0x10B0(0x0018)()
+	struct FSlateColor                            K2Node_MakeStruct_SlateColor_1;                    // 0x10C8(0x0014)()
+	uint8                                         Pad_5939[0x4];                                     // 0x10DC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class AValeriaVillagerCharacter*              CallFunc_GetVillager_ReturnValue;                  // 0x10E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x10E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593A[0x7];                                     // 0x10E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x10F0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x10F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593B[0x3];                                     // 0x10F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetRelationshipLevel_ReturnValue;         // 0x10FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_GetRelationshipLevel_ReturnValue_1;       // 0x1100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EValeriaFuncResult                            CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult; // 0x1104(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593C[0xB];                                     // 0x1105(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVillagerRelationshipLevelConfig       CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue; // 0x1110(0x01B0)()
+	EValeriaFuncResult                            CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1; // 0x12C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593D[0xF];                                     // 0x12C1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FVillagerRelationshipLevelConfig       CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1; // 0x12D0(0x01B0)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess_2;                    // 0x1480(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess_3;                    // 0x1481(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593E[0x6];                                     // 0x1482(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x1488(0x0018)()
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue_1;             // 0x14A0(0x0018)()
+	bool                                          CallFunc_GreaterEqual_IntInt_ReturnValue;          // 0x14B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_593F[0x7];                                     // 0x14B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   K2Node_Select_Default;                             // 0x14C0(0x0018)(ConstParm)
+	struct FSlateColor                            K2Node_Select_Default_1;                           // 0x14D8(0x0014)()
+	bool                                          K2Node_SwitchEnum_CmpSuccess_4;                    // 0x14EC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5940[0x3];                                     // 0x14ED(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	int32                                         CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue; // 0x14F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_SetupRelationshipDetails) == 0x000010, "Wrong alignment on WBP_Dialogue_CM_C_SetupRelationshipDetails");
-static_assert(sizeof(WBP_Dialogue_CM_C_SetupRelationshipDetails) == 0x0014D0, "Wrong size on WBP_Dialogue_CM_C_SetupRelationshipDetails");
+static_assert(sizeof(WBP_Dialogue_CM_C_SetupRelationshipDetails) == 0x001500, "Wrong size on WBP_Dialogue_CM_C_SetupRelationshipDetails");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_IsValid_ReturnValue) == 0x000000, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_IsValid_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_IsVillager_ReturnValue) == 0x000001, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_IsVillager_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, Temp_bool_Variable) == 0x000002, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::Temp_bool_Variable' has a wrong offset!");
@@ -1686,33 +1686,33 @@ static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Find
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerCoreConfigById_ReturnValue) == 0x000008, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerCoreConfigById_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerConfigById_OutResult) == 0x000F10, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerConfigById_OutResult' has a wrong offset!");
 static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerConfigById_ReturnValue) == 0x000F18, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerConfigById_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess) == 0x001048, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_1) == 0x001049, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, Temp_bool_Variable_1) == 0x00104A, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_TextToString_ReturnValue) == 0x001050, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Concat_StrStr_ReturnValue) == 0x001060, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_MakeStruct_SlateColor) == 0x001070, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_MakeStruct_SlateColor' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_StringToText_ReturnValue) == 0x001088, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_MakeStruct_SlateColor_1) == 0x0010A0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetVillager_ReturnValue) == 0x0010B8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetVillager_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetValeriaCharacter_OutResult) == 0x0010C0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetValeriaCharacter_OutResult' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetValeriaCharacter_ReturnValue) == 0x0010C8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetValeriaCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_IsValid_ReturnValue_1) == 0x0010D0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetRelationshipLevel_ReturnValue) == 0x0010D4, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetRelationshipLevel_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetRelationshipLevel_ReturnValue_1) == 0x0010D8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetRelationshipLevel_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult) == 0x0010DC, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue) == 0x0010E0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1) == 0x001290, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1) == 0x0012A0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_2) == 0x001450, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_3) == 0x001451, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_IntToText_ReturnValue) == 0x001458, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_IntToText_ReturnValue_1) == 0x001470, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x001488, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_Select_Default) == 0x001490, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_Select_Default' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_Select_Default_1) == 0x0014A8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_Select_Default_1' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_4) == 0x0014BC, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_4' has a wrong offset!");
-static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue) == 0x0014C0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess) == 0x001070, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_1) == 0x001071, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, Temp_bool_Variable_1) == 0x001072, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_TextToString_ReturnValue) == 0x001078, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_TextToString_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Concat_StrStr_ReturnValue) == 0x001088, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Concat_StrStr_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_MakeStruct_SlateColor) == 0x001098, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_MakeStruct_SlateColor' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_StringToText_ReturnValue) == 0x0010B0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_StringToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_MakeStruct_SlateColor_1) == 0x0010C8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_MakeStruct_SlateColor_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetVillager_ReturnValue) == 0x0010E0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetVillager_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetValeriaCharacter_OutResult) == 0x0010E8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetValeriaCharacter_OutResult' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetValeriaCharacter_ReturnValue) == 0x0010F0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetValeriaCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_IsValid_ReturnValue_1) == 0x0010F8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_IsValid_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetRelationshipLevel_ReturnValue) == 0x0010FC, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetRelationshipLevel_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetRelationshipLevel_ReturnValue_1) == 0x001100, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetRelationshipLevel_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult) == 0x001104, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue) == 0x001110, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1) == 0x0012C0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_OutResult_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1) == 0x0012D0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_FindVillagerRelationshipLevelByVillagerCoreId_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_2) == 0x001480, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_2' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_3) == 0x001481, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_3' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_IntToText_ReturnValue) == 0x001488, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_Conv_IntToText_ReturnValue_1) == 0x0014A0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_Conv_IntToText_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GreaterEqual_IntInt_ReturnValue) == 0x0014B8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GreaterEqual_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_Select_Default) == 0x0014C0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_Select_Default' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_Select_Default_1) == 0x0014D8, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_Select_Default_1' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, K2Node_SwitchEnum_CmpSuccess_4) == 0x0014EC, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::K2Node_SwitchEnum_CmpSuccess_4' has a wrong offset!");
+static_assert(offsetof(WBP_Dialogue_CM_C_SetupRelationshipDetails, CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue) == 0x0014F0, "Member 'WBP_Dialogue_CM_C_SetupRelationshipDetails::CallFunc_GetVillagerCoreIdByVillagerId_ReturnValue' has a wrong offset!");
 
 // Function WBP_Dialogue_CM.WBP_Dialogue_CM_C.TryAccelerateDialogueForUser
 // 0x0008 (0x0008 - 0x0000)
@@ -1815,7 +1815,7 @@ public:
 	class APlayerController*                      CallFunc_GetPlayerController_ReturnValue;          // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UWBP_BasicTooltip_C*                    CallFunc_Create_ReturnValue;                       // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DetermineGiveGiftState_GiftingEnabled;    // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8E[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5941[0x7];                                     // 0x0011(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_DetermineGiveGiftState_TooltipText;       // 0x0018(0x0018)()
 };
 static_assert(alignof(WBP_Dialogue_CM_C_UpdateGiveGiftButton) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_UpdateGiveGiftButton");
@@ -1841,7 +1841,7 @@ public:
 	class USizeBoxSlot*                           CallFunc_SlotAsSizeBoxSlot_ReturnValue;            // 0x00E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class USizeBoxSlot*                           CallFunc_SlotAsSizeBoxSlot_ReturnValue_1;          // 0x00F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B8F[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5942[0x3];                                     // 0x00F9(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         K2Node_MakeStruct_Size_ImplicitCast;               // 0x00FC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_MakeStruct_Size_ImplicitCast_1;             // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -1868,7 +1868,7 @@ struct WBP_Dialogue_CM_C_UpdateStoreButton final
 public:
 	bool                                          Temp_bool_Variable;                                // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsCurrentDialogueTerminal_ReturnValue;    // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B90[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5943[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x0008(0x0018)(ConstParm)
 };
 static_assert(alignof(WBP_Dialogue_CM_C_UpdateStoreButton) == 0x000008, "Wrong alignment on WBP_Dialogue_CM_C_UpdateStoreButton");

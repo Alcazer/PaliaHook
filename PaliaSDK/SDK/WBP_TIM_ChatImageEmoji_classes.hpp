@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UVALUI_Button_Styled*                   Emoji_Button;                                      // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UImage*                                 Emoji_ImageWidget;                                 // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	uint8                                         Pad_50B6[0x8];                                     // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5092[0x8];                                     // 0x02D8(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            EmojiImage;                                        // 0x02E0(0x00D0)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FName                                   EmojiImageName;                                    // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

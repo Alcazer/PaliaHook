@@ -26,7 +26,7 @@ class US6Auto_Suite final  : public UPrimaryDataAsset
 public:
 	class FString                                 SuiteId;                                           // 0x0030(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bIsEditorOnlyAutomation;                           // 0x0040(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AssetRegistrySearchable, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2EEE[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F3D[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class US6Auto_SuiteBlackboard>    BlackboardClass;                                   // 0x0048(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<struct FS6Auto_SuiteStep>              Steps;                                             // 0x0050(0x0010)(Edit, BlueprintVisible, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	class FString                                 Name_S6Auto_Suite;                                 // 0x0060(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -62,11 +62,11 @@ static_assert(offsetof(US6Auto_Suite, Tags) == 0x0000A0, "Member 'US6Auto_Suite:
 class US6Auto_SuiteSubsystem final  : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_2EEF[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F3E[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6Auto_SuiteCollection                SuiteCollection;                                   // 0x0038(0x0010)(NativeAccessSpecifierPrivate)
 	TArray<class US6Auto_SuiteStepScript*>        ScriptObjects;                                     // 0x0048(0x0010)(ZeroConstructor, Transient, NativeAccessSpecifierPrivate)
 	class US6Auto_SuiteBlackboard*                Blackboard;                                        // 0x0058(0x0008)(ZeroConstructor, Transient, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2EF0[0xD0];                                    // 0x0060(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F3F[0xD0];                                    // 0x0060(0x00D0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void RunSuites(TArray<class US6Auto_Suite*>& Suites);
@@ -128,7 +128,7 @@ class US6Auto_SuiteStepScript final  : public UObject
 public:
 	class US6Auto_SuiteStepPayload*               Payload;                                           // 0x0028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class US6Auto_SuiteBlackboard*                Blackboard;                                        // 0x0030(0x0008)(Edit, BlueprintVisible, ZeroConstructor, Transient, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2EF1[0x20];                                    // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2F40[0x20];                                    // 0x0038(0x0020)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void MarkStepCompleted();

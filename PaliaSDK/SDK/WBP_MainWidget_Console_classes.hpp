@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
+#include "ETutorialVolumeType_structs.hpp"
 #include "Palia_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "ValeriaUI_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "ETutorialVolumeType_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -56,7 +56,7 @@ public:
 	class AValeriaCharacter*                      ValeriaCharacter;                                  // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               PreviousCharacterState;                            // 0x0630(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               CurrentCharacterState;                             // 0x0631(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DD9[0x6];                                     // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D7F[0x6];                                     // 0x0632(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCharacterStateMachineComponent*        Csm;                                               // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FDialogueListToShow                    DialoguesToShow;                                   // 0x0640(0x0138)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UDialogueComponent*                     DialogueComponent;                                 // 0x0778(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -64,16 +64,16 @@ public:
 	struct FCharacterStateChangeParams            Params;                                            // 0x0788(0x0178)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<class UObject*>                        FocusablePanels;                                   // 0x0900(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bHasFocusablePanel;                                // 0x0910(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDA[0x7];                                     // 0x0911(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D80[0x7];                                     // 0x0911(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                CrafterWindow;                                     // 0x0918(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UInventoryComponent*                    Storage;                                           // 0x0920(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	uint8                                         SelectionDialogue;                                 // 0x0928(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDB[0x7];                                     // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D81[0x7];                                     // 0x0929(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_FishingSafeArea_C*                  FishingSafeArea;                                   // 0x0930(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  SelectIAByID;                                      // 0x0938(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  LockPawnInputGUID;                                 // 0x0948(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EFishingMiniGameState                         PreviousFishingState;                              // 0x0958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDC[0x7];                                     // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D82[0x7];                                     // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UPrivateSpaceConfig*                    CurrentPrivateSpaceConfig;                         // 0x0960(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UWBP_Cooking_Minigames_PF_C*            CurrentMiniGames;                                  // 0x0968(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_Cooking_Hud_Shelved_PF_C*          As_WBP_Cooking_Hud_Shelved_PF;                     // 0x0970(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
@@ -88,7 +88,7 @@ public:
 	TSoftObjectPtr<class UObject>                 PrepStationItemType;                               // 0x0A58(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FTUE_CompassFlag;                                  // 0x0A80(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsShowAccomplishmentNotification;                  // 0x0AA8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3DDD[0x7];                                     // 0x0AA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5D83[0x7];                                     // 0x0AA9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUserWidget*                            CurrentAccomplishmentNotification;                 // 0x0AB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TSet<class UClass*>                           PreloadedWidgetClasses;                            // 0x0AB8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<ECharacterState>                       DefaultReticleStates;                              // 0x0B08(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, DisableEditOnInstance)

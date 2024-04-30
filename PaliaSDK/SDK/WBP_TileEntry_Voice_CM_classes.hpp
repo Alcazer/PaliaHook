@@ -44,10 +44,10 @@ public:
 	class UMaterialInstanceDynamic*               MID_RenderPreview;                                 // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          Owned;                                             // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Selected;                                          // 0x0351(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DEF[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC8[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             NullItemImage;                                     // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          HoveredAnimationPlayed;                            // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5DF0[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5BC9[0x7];                                     // 0x0361(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAkAudioEvent*>                  StoredAkEvents;                                    // 0x0368(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

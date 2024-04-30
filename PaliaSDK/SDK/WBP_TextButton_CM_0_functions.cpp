@@ -17,29 +17,85 @@
 namespace SDK
 {
 
-// Function WBP_TextButton_CM.WBP_TextButton_CM_C.BP_OnHovered
-// (Event, Protected, BlueprintEvent)
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature
+// (BlueprintEvent)
 
-void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BP_OnHovered()
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextButton_CM_C", "BP_OnHovered");
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_TextButton_CM.WBP_TextButton_CM_C.BP_OnUnhovered
-// (Event, Protected, BlueprintEvent)
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
 
-void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BP_OnUnhovered()
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_TextButton_CM_C", "BP_OnUnhovered");
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature
+// (BlueprintEvent)
+
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.ButtonClicked__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ButtonClicked__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "ButtonClicked__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.ButtonHovered__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ButtonHovered__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "ButtonHovered__DelegateSignature");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_TextButton_CM.WBP_TextButton_CM_C.ButtonUnhovered__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ButtonUnhovered__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_TextButton_CM_C", "ButtonUnhovered__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
@@ -50,9 +106,8 @@ void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::BP_OnUnhovered()
 // Parameters:
 // int32                                   EntryPoint                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 // bool                                    K2Node_Event_IsDesignTime                              (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     CallFunc_GetEnhancedInputAction_ReturnValue            (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ExecuteUbergraph_WBP_TextButton_CM(int32 EntryPoint, bool K2Node_Event_IsDesignTime, class UInputAction* CallFunc_GetEnhancedInputAction_ReturnValue)
+void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ExecuteUbergraph_WBP_TextButton_CM(int32 EntryPoint, bool K2Node_Event_IsDesignTime)
 {
 	static class UFunction* Func = nullptr;
 
@@ -63,7 +118,6 @@ void WBP_TextButton_CM_0::UWBP_TextButton_CM_C::ExecuteUbergraph_WBP_TextButton_
 
 	Parms.EntryPoint = EntryPoint;
 	Parms.K2Node_Event_IsDesignTime = K2Node_Event_IsDesignTime;
-	Parms.CallFunc_GetEnhancedInputAction_ReturnValue = CallFunc_GetEnhancedInputAction_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

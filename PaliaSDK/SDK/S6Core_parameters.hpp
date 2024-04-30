@@ -25,7 +25,7 @@ struct CommandLineHelper_DoesCommandlineHaveSwitch final
 public:
 	class FString                                 SWITCH;                                            // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C61[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C25[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CommandLineHelper_DoesCommandlineHaveSwitch) == 0x000008, "Wrong alignment on CommandLineHelper_DoesCommandlineHaveSwitch");
 static_assert(sizeof(CommandLineHelper_DoesCommandlineHaveSwitch) == 0x000018, "Wrong size on CommandLineHelper_DoesCommandlineHaveSwitch");
@@ -40,7 +40,7 @@ public:
 	class FString                                 Key;                                               // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 Value;                                             // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C62[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C26[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(CommandLineHelper_TryGetCommandlineKeyValuePair) == 0x000008, "Wrong alignment on CommandLineHelper_TryGetCommandlineKeyValuePair");
 static_assert(sizeof(CommandLineHelper_TryGetCommandlineKeyValuePair) == 0x000028, "Wrong size on CommandLineHelper_TryGetCommandlineKeyValuePair");
@@ -101,7 +101,7 @@ struct S6VersioningFunctionLibrary_IsValidVersionString final
 public:
 	class FString                                 InVersion;                                         // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C66[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2A[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6VersioningFunctionLibrary_IsValidVersionString) == 0x000008, "Wrong alignment on S6VersioningFunctionLibrary_IsValidVersionString");
 static_assert(sizeof(S6VersioningFunctionLibrary_IsValidVersionString) == 0x000018, "Wrong size on S6VersioningFunctionLibrary_IsValidVersionString");
@@ -115,7 +115,7 @@ struct S6Core_General_BlueprintFunctionLibrary_DeleteFileAtPath final
 public:
 	class FString                                 FilePath;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C67[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2B[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_DeleteFileAtPath) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_DeleteFileAtPath");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_DeleteFileAtPath) == 0x000018, "Wrong size on S6Core_General_BlueprintFunctionLibrary_DeleteFileAtPath");
@@ -130,7 +130,7 @@ public:
 	class UObject*                                Instance;                                          // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FName                                   FunctionName;                                      // 0x0008(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C68[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2C[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_DoesFunctionExist) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_DoesFunctionExist");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_DoesFunctionExist) == 0x000018, "Wrong size on S6Core_General_BlueprintFunctionLibrary_DoesFunctionExist");
@@ -175,7 +175,7 @@ struct S6Core_General_BlueprintFunctionLibrary_GetActorBounds final
 public:
 	TSubclassOf<class AActor>                     InActorClass;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOnlyCollidingComponents;                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C69[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBox                                   OutBounds;                                         // 0x0010(0x0038)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_GetActorBounds) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_GetActorBounds");
@@ -192,7 +192,7 @@ public:
 	class ULocalPlayer*                           LocalPlayer;                                       // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<struct FUniqueNetIdRepl, class APawn*>   PlayerPawns;                                       // 0x0008(0x0050)(Parm, OutParm, NativeAccessSpecifierPublic)
 	bool                                          bIncludeLocalPawn;                                 // 0x0058(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6A[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2E[0x7];                                     // 0x0059(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_GetAllKnownPlayerPawns) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_GetAllKnownPlayerPawns");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_GetAllKnownPlayerPawns) == 0x000060, "Wrong size on S6Core_General_BlueprintFunctionLibrary_GetAllKnownPlayerPawns");
@@ -285,7 +285,7 @@ struct S6Core_General_BlueprintFunctionLibrary_HasBegunPlay final
 public:
 	class AActor*                                 InActor;                                           // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C2F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_HasBegunPlay) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_HasBegunPlay");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_HasBegunPlay) == 0x000010, "Wrong size on S6Core_General_BlueprintFunctionLibrary_HasBegunPlay");
@@ -299,7 +299,7 @@ struct S6Core_General_BlueprintFunctionLibrary_IsStatGroupToggled final
 public:
 	class FName                                   StatGroupName;                                     // 0x0000(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6C[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C30[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_IsStatGroupToggled) == 0x000004, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_IsStatGroupToggled");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_IsStatGroupToggled) == 0x00000C, "Wrong size on S6Core_General_BlueprintFunctionLibrary_IsStatGroupToggled");
@@ -324,7 +324,7 @@ struct S6Core_General_BlueprintFunctionLibrary_ShowSimpleNotification final
 public:
 	class FString                                 Text;                                              // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bErrorMessage;                                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6D[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C31[0x3];                                     // 0x0011(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         WidthOverride;                                     // 0x0014(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_ShowSimpleNotification) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_ShowSimpleNotification");
@@ -344,7 +344,7 @@ public:
 	float                                         ImageResolution;                                   // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          UseHDR;                                            // 0x0014(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaskBackground;                                    // 0x0015(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6E[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C32[0x2];                                     // 0x0016(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_TakeHighResScreenshotOfGameViewport) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_TakeHighResScreenshotOfGameViewport");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_TakeHighResScreenshotOfGameViewport) == 0x000018, "Wrong size on S6Core_General_BlueprintFunctionLibrary_TakeHighResScreenshotOfGameViewport");
@@ -362,7 +362,7 @@ struct S6Core_General_BlueprintFunctionLibrary_ToggleScreenshotMaskOnCurrentGame
 public:
 	class UGameInstance*                          GameInstance;                                      // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          MaskEnabled;                                       // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C6F[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C33[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6Core_General_BlueprintFunctionLibrary_ToggleScreenshotMaskOnCurrentGameViewport) == 0x000008, "Wrong alignment on S6Core_General_BlueprintFunctionLibrary_ToggleScreenshotMaskOnCurrentGameViewport");
 static_assert(sizeof(S6Core_General_BlueprintFunctionLibrary_ToggleScreenshotMaskOnCurrentGameViewport) == 0x000010, "Wrong size on S6Core_General_BlueprintFunctionLibrary_ToggleScreenshotMaskOnCurrentGameViewport");
@@ -405,7 +405,7 @@ public:
 	class FString                                 InLevelName;                                       // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UObject*                                InWorldContextObject;                              // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bInShouldBeVisible;                                // 0x0018(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C72[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C36[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class US6Core_AsyncAction_LoadSublevel*       ReturnValue;                                       // 0x0020(0x0008)(Parm, OutParm, ZeroConstructor, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6Core_AsyncAction_LoadSublevel_LoadSublevel) == 0x000008, "Wrong alignment on S6Core_AsyncAction_LoadSublevel_LoadSublevel");
@@ -455,7 +455,7 @@ struct S6PlatformUtils_GetPlatformTypeFromString final
 public:
 	class FString                                 PlatformName;                                      // 0x0000(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ERedirectsPlatform                            ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C77[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3B[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6PlatformUtils_GetPlatformTypeFromString) == 0x000008, "Wrong alignment on S6PlatformUtils_GetPlatformTypeFromString");
 static_assert(sizeof(S6PlatformUtils_GetPlatformTypeFromString) == 0x000018, "Wrong size on S6PlatformUtils_GetPlatformTypeFromString");
@@ -468,11 +468,11 @@ struct S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex final
 {
 public:
 	int32                                         LocalUserIndex;                                    // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C78[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	int64                                         OutAccountId;                                      // 0x0008(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int64                                         OutUserId;                                         // 0x0010(0x0008)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C79[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3D[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex) == 0x000008, "Wrong alignment on S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex");
 static_assert(sizeof(S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex) == 0x000020, "Wrong size on S6PlatformUtils_GetSonyPlayerIdsAtLocalUserIndex");
@@ -608,10 +608,10 @@ struct S6PlatformUtils_ShowPlatformProfileUI final
 {
 public:
 	int32                                         LocalUserNum;                                      // 0x0000(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C7A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 RequesteeId;                                       // 0x0008(0x0010)(Parm, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C7B[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C3F[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6PlatformUtils_ShowPlatformProfileUI) == 0x000008, "Wrong alignment on S6PlatformUtils_ShowPlatformProfileUI");
 static_assert(sizeof(S6PlatformUtils_ShowPlatformProfileUI) == 0x000020, "Wrong size on S6PlatformUtils_ShowPlatformProfileUI");

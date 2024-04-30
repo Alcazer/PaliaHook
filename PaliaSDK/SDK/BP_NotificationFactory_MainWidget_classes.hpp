@@ -35,7 +35,7 @@ public:
 	class FString                                 NotificationContent;                               // 0x0100(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	ECommonInputType                              CurrentInputType;                                  // 0x0110(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasShownControllerWarning;                         // 0x0111(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3FEF[0x6];                                     // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_51FA[0x6];                                     // 0x0112(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class US6UI_UIManagerCrossPlatformHelper*     Cross_Platform_Helper;                             // 0x0118(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:

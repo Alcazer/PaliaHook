@@ -34,7 +34,7 @@ struct WBP_FTUEPopin_CM_C_ExecuteUbergraph_WBP_FTUEPopin_CM final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4293[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41AE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_FTUEPopin_CM_C_ExecuteUbergraph_WBP_FTUEPopin_CM) == 0x000008, "Wrong alignment on WBP_FTUEPopin_CM_C_ExecuteUbergraph_WBP_FTUEPopin_CM");
@@ -116,7 +116,7 @@ public:
 	struct FMargin                                K2Node_MakeStruct_Margin;                          // 0x0020(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FMargin                                K2Node_MakeStruct_Margin_1;                        // 0x0030(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4294[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41AF[0x3];                                     // 0x0041(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                K2Node_MakeStruct_Margin_2;                        // 0x0044(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FMargin                                K2Node_MakeStruct_Margin_3;                        // 0x0054(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor)
 };

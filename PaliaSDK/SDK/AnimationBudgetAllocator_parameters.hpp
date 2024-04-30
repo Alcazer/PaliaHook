@@ -23,7 +23,7 @@ struct AnimationBudgetBlueprintLibrary_EnableAnimationBudget final
 public:
 	class UObject*                                WorldContextObject;                                // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bEnabled;                                          // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E69[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E94[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(AnimationBudgetBlueprintLibrary_EnableAnimationBudget) == 0x000008, "Wrong alignment on AnimationBudgetBlueprintLibrary_EnableAnimationBudget");
 static_assert(sizeof(AnimationBudgetBlueprintLibrary_EnableAnimationBudget) == 0x000010, "Wrong size on AnimationBudgetBlueprintLibrary_EnableAnimationBudget");

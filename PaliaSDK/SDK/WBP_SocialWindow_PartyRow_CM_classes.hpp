@@ -36,11 +36,11 @@ public:
 	FMulticastInlineDelegateProperty_             OnInspectPlayerCharacter;                          // 0x0550(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnPartyCreated;                                    // 0x0560(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          PartiesAllowed;                                    // 0x0570(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52A3[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E77[0x7];                                     // 0x0571(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           TimerHandle_UpdateMembers;                         // 0x0578(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FVAL_PartyMember>               PartyMemberCache;                                  // 0x0580(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         CurrentSelectSlotIndex;                            // 0x0590(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52A4[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E78[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnLostFocusFromParty;                              // 0x0598(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:

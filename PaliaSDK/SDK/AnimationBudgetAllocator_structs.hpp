@@ -40,7 +40,7 @@ public:
 	int32                                         ReducedWorkThrottleMaxPerFrame;                    // 0x0048(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BudgetPressureBeforeEmergencyReducedWork;          // 0x004C(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         AutoCalculatedSignificanceMaxDistance;             // 0x0050(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E68[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E93[0x4];                                     // 0x0054(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAnimationBudgetAllocatorParameters) == 0x000004, "Wrong alignment on FAnimationBudgetAllocatorParameters");
 static_assert(sizeof(FAnimationBudgetAllocatorParameters) == 0x000058, "Wrong size on FAnimationBudgetAllocatorParameters");

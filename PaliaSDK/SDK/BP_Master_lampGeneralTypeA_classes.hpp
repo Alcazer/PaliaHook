@@ -12,12 +12,12 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Enum_vfx_lightOptionsA_structs.hpp"
-#include "Enum_vfx_schedulerType_structs.hpp"
-#include "Struc_vfx_LampInfoA_structs.hpp"
 #include "S6Core_structs.hpp"
+#include "Enum_vfx_schedulerType_structs.hpp"
+#include "Enum_vfx_lightOptionsA_structs.hpp"
 #include "Enum_vfx_lightType_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "Struc_vfx_LampInfoA_structs.hpp"
 #include "Enum_core_Scalability_structs.hpp"
 #include "Palia_structs.hpp"
 
@@ -43,38 +43,38 @@ public:
 	class USceneComponent*                        DefaultSceneRoot;                                  // 0x02F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_turningOff_B_LightMe_9C25C822444466048603FFA374C156D4; // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_turningOff_B__Direction_9C25C822444466048603FFA374C156D4; // 0x0304(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4721[0x3];                                     // 0x0305(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4964[0x3];                                     // 0x0305(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_turningOff_B;                                   // 0x0308(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_turningOff_A_LightMe_DB6C98924F2DD6052A1CC39186744A95; // 0x0310(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_turningOff_A__Direction_DB6C98924F2DD6052A1CC39186744A95; // 0x0314(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4722[0x3];                                     // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4965[0x3];                                     // 0x0315(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_turningOff_A;                                   // 0x0318(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_turningOn_B_lightMe_48334FA74E8FD98C12954DB304A82C38; // 0x0320(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_turningOn_B__Direction_48334FA74E8FD98C12954DB304A82C38; // 0x0324(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4723[0x3];                                     // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4966[0x3];                                     // 0x0325(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_turningOn_B;                                    // 0x0328(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	float                                         TL_turningOn_A_LightMe_622BC5174CD1DACEB835B990B9385AB8; // 0x0330(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            TL_turningOn_A__Direction_622BC5174CD1DACEB835B990B9385AB8; // 0x0334(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4724[0x3];                                     // 0x0335(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4967[0x3];                                     // 0x0335(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     TL_turningOn_A;                                    // 0x0338(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	Enum_vfx_schedulerType                        Scheduler_type;                                    // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4725[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4968[0x7];                                     // 0x0341(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UStaticMesh*                            SM_Lamp;                                           // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	Enum_vfx_lightType                            Light_type;                                        // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	Enum_vfx_lightOptionsA                        Light_options;                                     // 0x0351(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4726[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4969[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        LampOn_emissive;                                   // 0x0358(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	double                                        LightOn_intensity;                                 // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Override_emissiveColor;                            // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4727[0x3];                                     // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_496A[0x3];                                     // 0x0369(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FLinearColor                           LampOn_emissiveColor;                              // 0x036C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          CanSpawnMoths;                                     // 0x037C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4728[0x3];                                     // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_496B[0x3];                                     // 0x037D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Moth_spawnChance;                                  // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FLinearColor                           Color_coldRedShift;                                // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FLinearColor                           Light_colorOn;                                     // 0x0398(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IAmOn;                                             // 0x03A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4729[0x7];                                     // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_496C[0x7];                                     // 0x03A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          Ak_Light_On;                                       // 0x03B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          Ak_Light_Off;                                      // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UAkAudioEvent*                          Ak_Light_Buzz;                                     // 0x03C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -84,7 +84,7 @@ public:
 	TArray<class UNiagaraComponent*>              NS_Fire_List;                                      // 0x03F0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	class UMaterialInstanceDynamic*               MI_fakeLight;                                      // 0x0400(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          OptimizeMe_4Switch;                                // 0x0408(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_472A[0x7];                                     // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_496D[0x7];                                     // 0x0409(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UMaterialInstanceDynamic*>       MI_LampList;                                       // 0x0410(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             NewEventDispatcher;                                // 0x0420(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          SpotLight_castShadow;                              // 0x0430(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)

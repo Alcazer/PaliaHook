@@ -26,7 +26,7 @@ public:
 	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
 	class UTileView*                              TileView_Buffs;                                    // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EBuffDisplayType                              BuffDisplayType;                                   // 0x02D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4DEE[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E87[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UBP_ListItem_Buff_C*>            BuffActivationListItems;                           // 0x02D8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FBuffActivation>                BuffActivations;                                   // 0x02E8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 

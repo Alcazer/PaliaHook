@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "Struct_PersistentSound_structs.hpp"
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
-#include "Struct_PersistentSound_structs.hpp"
 #include "Palia_structs.hpp"
 #include "AkAudio_structs.hpp"
 
@@ -31,7 +31,7 @@ public:
 	class UAkRoomComponent*                       AkRoom;                                            // 0x00B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAkLateReverbComponent*                 AkReverb;                                          // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          RoomAlwaysEnabled;                                 // 0x00C8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FBB[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4FEB[0x7];                                     // 0x00C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UAkPortalComponent*>             Portals;                                           // 0x00D0(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	FMulticastInlineDelegateProperty_             AudioHidden;                                       // 0x00E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             AudioShown;                                        // 0x00F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

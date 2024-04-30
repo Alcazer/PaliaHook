@@ -28,7 +28,7 @@ public:
 	class USizeBox*                               SizeBox_Icon;                                      // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVALUI_TextBlock_Styled*                Text_PlayerName;                                   // 0x02D8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	bool                                          bDebugIcon;                                        // 0x02E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_41A3[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_410E[0x7];                                     // 0x02E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   NameText;                                          // 0x02E8(0x0018)(Edit, BlueprintVisible)
 	TMap<ERedirectsPlatform, TSoftObjectPtr<class UVALUI_TextBlockStyle>> PlatformStyleMap;                                  // 0x0300(0x0050)(Edit, BlueprintVisible)
 	struct FUniqueNetIdRepl                       OwnerNetId;                                        // 0x0350(0x0030)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)

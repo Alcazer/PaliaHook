@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "BP_SocialPanelConfig_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -53,7 +53,7 @@ public:
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> SocialPanelFlag;                                   // 0x0628(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UCommonActivatableWidgetInputExtended*  PreviousActivatedWidget;                           // 0x0650(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          NewVar;                                            // 0x0658(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5757[0x7];                                     // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_433F[0x7];                                     // 0x0659(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   UXIntent_PhotographyMode;                          // 0x0660(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 	TSet<class FName>                             DynamicallyRegisteredSocialWindowTabNames;         // 0x0688(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

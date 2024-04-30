@@ -80,15 +80,15 @@ struct WBP_ListEntry_Social_Following_CM_C_ExecuteUbergraph_WBP_ListEntry_Social
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56BF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_561C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWidget*>                        K2Node_MakeArray_Array;                            // 0x0008(0x0010)(ConstParm, ReferenceParm, ContainsInstancedReference)
 	bool                                          K2Node_Event_bIsExpanded;                          // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_bIsSelected;                          // 0x0019(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56C0[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_561D[0x6];                                     // 0x001A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                K2Node_Event_ListItemObject;                       // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UListItem_SocialConnection_C*           K2Node_DynamicCast_AsList_Item_Social_Connection;  // 0x0028(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56C1[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_561E[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_PlayerCharacterProfileImage_CM_C*  K2Node_ComponentBoundEvent_CharacterProfileImageWidget; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FF_CommonUIButtonPrompt                K2Node_MakeStruct_F_CommonUIButtonPrompt;          // 0x0040(0x0040)(HasGetValueTypeHash)
 	struct FF_CommonUIButtonPrompt                K2Node_MakeStruct_F_CommonUIButtonPrompt_1;        // 0x0080(0x0040)(HasGetValueTypeHash)

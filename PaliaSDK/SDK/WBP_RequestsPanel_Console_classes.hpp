@@ -14,9 +14,9 @@
 #include "CommonWidgetInputExtended_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
-#include "BPEnum_ItemRequestBucketType_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Palia_structs.hpp"
+#include "BPEnum_ItemRequestBucketType_structs.hpp"
 
 
 namespace SDK

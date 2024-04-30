@@ -14,17 +14,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_Wardrobe_CancelModal.WBP_Wardrobe_CancelModal_C.ExecuteUbergraph_WBP_Wardrobe_CancelModal
-// 0x0004 (0x0004 - 0x0000)
-struct WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal final 
-{
-public:
-	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal) == 0x000004, "Wrong alignment on WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal");
-static_assert(sizeof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal) == 0x000004, "Wrong size on WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal");
-static_assert(offsetof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal, EntryPoint) == 0x000000, "Member 'WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal::EntryPoint' has a wrong offset!");
-
 // Function WBP_Wardrobe_CancelModal.WBP_Wardrobe_CancelModal_C.CloseSelf
 // 0x0010 (0x0010 - 0x0000)
 struct WBP_Wardrobe_CancelModal_C_CloseSelf final 
@@ -37,6 +26,17 @@ static_assert(alignof(WBP_Wardrobe_CancelModal_C_CloseSelf) == 0x000008, "Wrong 
 static_assert(sizeof(WBP_Wardrobe_CancelModal_C_CloseSelf) == 0x000010, "Wrong size on WBP_Wardrobe_CancelModal_C_CloseSelf");
 static_assert(offsetof(WBP_Wardrobe_CancelModal_C_CloseSelf, CallFunc_GetOwningPlayer_ReturnValue) == 0x000000, "Member 'WBP_Wardrobe_CancelModal_C_CloseSelf::CallFunc_GetOwningPlayer_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_Wardrobe_CancelModal_C_CloseSelf, CallFunc_GetUIManagerWidget_ReturnValue) == 0x000008, "Member 'WBP_Wardrobe_CancelModal_C_CloseSelf::CallFunc_GetUIManagerWidget_ReturnValue' has a wrong offset!");
+
+// Function WBP_Wardrobe_CancelModal.WBP_Wardrobe_CancelModal_C.ExecuteUbergraph_WBP_Wardrobe_CancelModal
+// 0x0004 (0x0004 - 0x0000)
+struct WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal final 
+{
+public:
+	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal) == 0x000004, "Wrong alignment on WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal");
+static_assert(sizeof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal) == 0x000004, "Wrong size on WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal");
+static_assert(offsetof(WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal, EntryPoint) == 0x000000, "Member 'WBP_Wardrobe_CancelModal_C_ExecuteUbergraph_WBP_Wardrobe_CancelModal::EntryPoint' has a wrong offset!");
 
 }
 

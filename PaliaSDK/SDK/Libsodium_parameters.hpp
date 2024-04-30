@@ -22,7 +22,7 @@ public:
 	TArray<uint8>                                 OutPublicKey;                                      // 0x0000(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 OutSecretKey;                                      // 0x0010(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0020(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C85[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C4F[0x7];                                     // 0x0021(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LibSd_CryptoLibrary_GenerateKeyPair) == 0x000008, "Wrong alignment on LibSd_CryptoLibrary_GenerateKeyPair");
 static_assert(sizeof(LibSd_CryptoLibrary_GenerateKeyPair) == 0x000028, "Wrong size on LibSd_CryptoLibrary_GenerateKeyPair");
@@ -50,7 +50,7 @@ public:
 	TArray<uint8>                                 SecretKey;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 SignedMessage;                                     // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C86[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C50[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LibSd_CryptoLibrary_SignMessageWithSecretKey) == 0x000008, "Wrong alignment on LibSd_CryptoLibrary_SignMessageWithSecretKey");
 static_assert(sizeof(LibSd_CryptoLibrary_SignMessageWithSecretKey) == 0x000038, "Wrong size on LibSd_CryptoLibrary_SignMessageWithSecretKey");
@@ -68,7 +68,7 @@ public:
 	TArray<uint8>                                 SecretKey;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 Signature;                                         // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C87[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C51[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LibSd_CryptoLibrary_SignMessageWithSecretKey_Detached) == 0x000008, "Wrong alignment on LibSd_CryptoLibrary_SignMessageWithSecretKey_Detached");
 static_assert(sizeof(LibSd_CryptoLibrary_SignMessageWithSecretKey_Detached) == 0x000038, "Wrong size on LibSd_CryptoLibrary_SignMessageWithSecretKey_Detached");
@@ -86,7 +86,7 @@ public:
 	TArray<uint8>                                 PublicKey;                                         // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 Message;                                           // 0x0020(0x0010)(Parm, OutParm, ZeroConstructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C88[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C52[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LibSd_CryptoLibrary_VerifyMessageWithPublicKey) == 0x000008, "Wrong alignment on LibSd_CryptoLibrary_VerifyMessageWithPublicKey");
 static_assert(sizeof(LibSd_CryptoLibrary_VerifyMessageWithPublicKey) == 0x000038, "Wrong size on LibSd_CryptoLibrary_VerifyMessageWithPublicKey");
@@ -104,7 +104,7 @@ public:
 	TArray<uint8>                                 Message;                                           // 0x0010(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 PublicKey;                                         // 0x0020(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0030(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C89[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C53[0x7];                                     // 0x0031(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(LibSd_CryptoLibrary_VerifyMessageWithPublicKey_Detached) == 0x000008, "Wrong alignment on LibSd_CryptoLibrary_VerifyMessageWithPublicKey_Detached");
 static_assert(sizeof(LibSd_CryptoLibrary_VerifyMessageWithPublicKey_Detached) == 0x000038, "Wrong size on LibSd_CryptoLibrary_VerifyMessageWithPublicKey_Detached");

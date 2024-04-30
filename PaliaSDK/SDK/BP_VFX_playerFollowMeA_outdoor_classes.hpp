@@ -13,8 +13,8 @@
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "Palia_structs.hpp"
 #include "Enum_core_Scalability_structs.hpp"
+#include "Palia_structs.hpp"
 
 
 namespace SDK
@@ -29,7 +29,7 @@ public:
 	double                                        Insect_spawnRadiusCloseMin;                        // 0x00A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	double                                        Insect_spawnRadiusCloseMax;                        // 0x00B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          DayWalker;                                         // 0x00B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_40B8[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40CE[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        Insect_spawnRadiusFarMin;                          // 0x00C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	double                                        Insect_spawnRadiusFarMax;                          // 0x00C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	double                                        Insect_spawnInterval_Close;                        // 0x00D0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

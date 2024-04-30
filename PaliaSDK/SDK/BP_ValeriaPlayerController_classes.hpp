@@ -12,11 +12,11 @@
 
 #include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "ETutorialVolumeType_structs.hpp"
 #include "Palia_structs.hpp"
 #include "Palia_classes.hpp"
 #include "CommonInput_structs.hpp"
 #include "S6Core_structs.hpp"
-#include "ETutorialVolumeType_structs.hpp"
 
 
 namespace SDK
@@ -37,11 +37,11 @@ public:
 	class UInteractableComponent*                 TmpInteractableComp;                               // 0x1018(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsAudioQuickMuteActive;                            // 0x1020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CanEmote;                                          // 0x1021(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_477D[0x6];                                     // 0x1022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B3[0x6];                                     // 0x1022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkAudioEvent*                          EmoteAK;                                           // 0x1028(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         SpamCheck;                                         // 0x1030(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SpamFree;                                          // 0x1034(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_477E[0x3];                                     // 0x1035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B4[0x3];                                     // 0x1035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        SpamPunish;                                        // 0x1038(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        SpamTimerCheck;                                    // 0x1040(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FTimerHandle                           SpamTimerHandle;                                   // 0x1048(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
@@ -52,29 +52,29 @@ public:
 	class AValEnvironmentManager*                 BP_Dynamic_Environment_Manager;                    // 0x1090(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnPlayerTrappedInsectHasEscaped;                   // 0x1098(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         InspirationZoomState;                              // 0x10A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_477F[0x4];                                     // 0x10AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B5[0x4];                                     // 0x10AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        InspirationTransitionDuration;                     // 0x10B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        InspirationTraditionProgress;                      // 0x10B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        OriginalCameraBoomLength;                          // 0x10C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TargetCameraBoomLength;                            // 0x10C8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bMustRevert;                                       // 0x10D0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4780[0x7];                                     // 0x10D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B6[0x7];                                     // 0x10D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CameraTransitionPctg;                              // 0x10D8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TArray<class ALevelStreamingVolume*>          StreamingVolumesToRestore;                         // 0x10E0(0x0010)(Edit, BlueprintVisible, DisableEditOnTemplate, DisableEditOnInstance)
 	struct FDirectoryPath                         TraceFolderPath;                                   // 0x10F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          IsWheelActive;                                     // 0x1100(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ECommonInputType                              CurrentInputType;                                  // 0x1101(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4781[0x6];                                     // 0x1102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B7[0x6];                                     // 0x1102(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             InputTriggerGamepadInputAction;                    // 0x1108(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          GamepadInputIs_Press;                              // 0x1118(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4782[0x7];                                     // 0x1119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B8[0x7];                                     // 0x1119(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Input_Action;                                      // 0x1120(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnPlayerEnteredTutorialVolume;                     // 0x1128(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          IsManuallyControlling;                             // 0x1138(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4783[0x7];                                     // 0x1139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47B9[0x7];                                     // 0x1139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CameraAssistRate;                                  // 0x1140(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsEnableCameraAssistFromSetting;                   // 0x1148(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4784[0x7];                                     // 0x1149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_47BA[0x7];                                     // 0x1149(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             On_Enter_Hotbar_Filter_Mode;                       // 0x1150(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnPlacementModeInputTrigger;                       // 0x1160(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UCinematicSequenceConfig*               CinLevelConfig;                                    // 0x1170(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)

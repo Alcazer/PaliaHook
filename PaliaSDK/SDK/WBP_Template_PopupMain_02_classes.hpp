@@ -35,7 +35,7 @@ public:
 	struct FMargin                                ContentPadding;                                    // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EVerticalAlignment                            VAlign_Content;                                    // 0x0320(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EHorizontalAlignment                          HAlign_Content;                                    // 0x0321(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD6[0x6];                                     // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5012[0x6];                                     // 0x0322(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   HeaderText;                                        // 0x0328(0x0018)(Edit, BlueprintVisible)
 	struct FMargin                                TabPadding;                                        // 0x0340(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 

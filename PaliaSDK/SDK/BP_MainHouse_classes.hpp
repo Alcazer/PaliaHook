@@ -100,7 +100,7 @@ public:
 	class UPlacementRegionComponent*              Placement_Floor;                                   // 0x04F8(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NonTransactional, NoDestructor, HasGetValueTypeHash)
 	float                                         Timeline_NewTrack_0_C3A9C3EC40CF905630FF14B1D778CCFF; // 0x0500(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ETimelineDirection                            Timeline__Direction_C3A9C3EC40CF905630FF14B1D778CCFF; // 0x0504(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B9B[0x3];                                     // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59F3[0x3];                                     // 0x0505(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTimelineComponent*                     Timeline;                                          // 0x0508(0x0008)(BlueprintVisible, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TArray<class UStaticMeshComponent*>           As_Static_Mesh_Component;                          // 0x0510(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	TArray<struct FVector>                        EndLoc;                                            // 0x0520(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
@@ -108,7 +108,7 @@ public:
 	TArray<struct FVector>                        StartLoc;                                          // 0x0540(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FRotator>                       StartRot;                                          // 0x0550(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          NotDone;                                           // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5B9C[0x3];                                     // 0x0561(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_59F4[0x3];                                     // 0x0561(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Counter;                                           // 0x0564(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:

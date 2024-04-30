@@ -24,7 +24,7 @@ public:
 	class UInputAction*                           InputAction_6_BEC99F374ADBD465CE906D872E6A7D9A;    // 0x0000(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FText                                   Description_7_CA83ADFD4C7F5C132B470D912C71A148;    // 0x0008(0x0018)(Edit, BlueprintVisible)
 	bool                                          IsHold_1_AF83AE4C44C0A517CBE02F94AA399B84;         // 0x0020(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4235[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4182[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 SpecialName_10_E7F5EF2C449A78C7A2977FB574BF9BD6;   // 0x0028(0x0010)(Edit, BlueprintVisible, ZeroConstructor, HasGetValueTypeHash)
 	struct FGameplayTag                           SpecialButtonTag_13_6258DB4F4E415C647F2FE5A035D1EDA7; // 0x0038(0x0008)(Edit, BlueprintVisible, NoDestructor, HasGetValueTypeHash)
 };

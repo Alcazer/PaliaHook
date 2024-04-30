@@ -38,7 +38,7 @@ public:
 	class AValeriaCharacter*                      ValeriaCharacter;                                  // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UCrafterComponent*                      InteractorCrafter;                                 // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          MinigameIsVisible;                                 // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_435E[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BA9[0x3];                                     // 0x0331(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         UIAppearDelay;                                     // 0x0334(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CVar_CookingCamera;                                // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 

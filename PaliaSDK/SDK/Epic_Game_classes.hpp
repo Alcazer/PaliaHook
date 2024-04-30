@@ -27,13 +27,13 @@ public:
 	FMulticastInlineDelegateProperty_             OnInterrupted;                                     // 0x00A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnCancelled;                                       // 0x00B0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             EventReceived;                                     // 0x00C0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C09[0x8];                                     // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BB3[0x8];                                     // 0x00D0(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAnimMontage*                           MontageToPlay;                                     // 0x00D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	struct FGameplayTagContainer                  EventTags;                                         // 0x00E0(0x0020)(NativeAccessSpecifierPrivate)
 	float                                         Rate;                                              // 0x0100(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	class FName                                   StartSection;                                      // 0x0104(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bStopWhenAbilityEnds;                              // 0x010C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C0A[0x33];                                    // 0x010D(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BB4[0x33];                                    // 0x010D(0x0033)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UAbilityTask_AnimInstancePlayMontageAndWait* AnimInstancePlayMontageAndWaitForEvent(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimInstance* InAnimInstance, class UAnimMontage* Param_MontageToPlay, const struct FGameplayTagContainer& Param_EventTags, float Param_Rate, class FName Param_StartSection, bool Param_bStopWhenAbilityEnds);
@@ -77,7 +77,7 @@ public:
 	class FName                                   StartSection;                                      // 0x00FC(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	float                                         AnimRootMotionTranslationScale;                    // 0x0104(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bStopWhenAbilityEnds;                              // 0x0108(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C0C[0x37];                                    // 0x0109(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BB6[0x37];                                    // 0x0109(0x0037)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class URPGAbilityTask_PlayMontageAndWaitForEvent* PlayMontageAndWaitForEvent(class UGameplayAbility* OwningAbility, class FName TaskInstanceName, class UAnimMontage* Param_MontageToPlay, const struct FGameplayTagContainer& Param_EventTags, float Param_Rate, class FName Param_StartSection, bool Param_bStopWhenAbilityEnds, float Param_AnimRootMotionTranslationScale);

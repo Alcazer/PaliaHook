@@ -40,7 +40,7 @@ public:
 	class UWidgetSwitcher*                        WidgetSwitcher_0;                                  // 0x0328(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EInventoryRequestStatus                       Status;                                            // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsOursToClaim;                                    // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4F47[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4F92[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimespan                              RemainingTime;                                     // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_TextBlockStyle*                  TimerTextStyle_Normal;                             // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_TextBlockStyle*                  TimerTextStyle_ExpiringSoon;                       // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)

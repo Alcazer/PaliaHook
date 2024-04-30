@@ -26,7 +26,7 @@ public:
 	TSoftObjectPtr<class US6GenericAssetRegistryDefinition> TargetRegistry;                                    // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSet<TSoftObjectPtr<class UObject>>           AssetsToRegister;                                  // 0x0050(0x0050)(Edit, UObjectWrapper, NativeAccessSpecifierPublic)
 	TSet<TWeakObjectPtr<class UGameInstance>>     GameInstancesRegisteredWith;                       // 0x00A0(0x0050)(Transient, UObjectWrapper, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32DF[0x8];                                     // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32FE[0x8];                                     // 0x00F0(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

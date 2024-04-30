@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "Palia_structs.hpp"
 #include "WBP_MinigameQTE_Base_classes.hpp"
+#include "Palia_structs.hpp"
 
 
 namespace SDK

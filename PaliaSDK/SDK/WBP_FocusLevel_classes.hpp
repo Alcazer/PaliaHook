@@ -48,7 +48,7 @@ public:
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FocusFlag;                                         // 0x0358(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UWBP_PopinCalloutWidget_C*              MenuContent;                                       // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          DepletedSFXPlayed;                                 // 0x0388(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_50D0[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_509D[0x7];                                     // 0x0389(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        PopinDisplayDuration;                              // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PreviousMaxFocusAmount;                            // 0x0398(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         PreviousMaxStaminaAmount;                          // 0x039C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

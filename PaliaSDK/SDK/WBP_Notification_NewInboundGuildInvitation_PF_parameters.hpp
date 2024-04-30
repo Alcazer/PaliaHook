@@ -30,7 +30,7 @@ public:
 	class UVAL_PlayerGuildSubsystem*              CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVAL_PlayerGuild                       CallFunc_TryGetPlayerGuild_OutPlayerGuildInfo;     // 0x0028(0x0118)()
 	bool                                          CallFunc_TryGetPlayerGuild_ReturnValue;            // 0x0140(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A22[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5003[0x7];                                     // 0x0141(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_NotificationQueue*               K2Node_Event_NotificationQueue;                    // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_Event_NotificationId;                       // 0x0150(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0160(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

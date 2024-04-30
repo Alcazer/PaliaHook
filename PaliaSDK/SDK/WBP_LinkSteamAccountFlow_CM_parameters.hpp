@@ -32,13 +32,13 @@ struct WBP_LinkSteamAccountFlow_CM_C_ExecuteUbergraph_WBP_LinkSteamAccountFlow_C
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E68[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3BD4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAuthManager*                           CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UAuthManager*                           CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0020(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 K2Node_Event_ErrorMessage_1;                       // 0x0038(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_ErrorCode_1;                          // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E69[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3BD5[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_Event_ErrorMessage;                         // 0x0050(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	int32                                         K2Node_Event_ErrorCode;                            // 0x0060(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -60,7 +60,7 @@ struct WBP_LinkSteamAccountFlow_CM_C_HandleLinkFailure final
 {
 public:
 	int32                                         Code;                                              // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5E6A[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3BD6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 Msg;                                               // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_GetErrorMessageFromResponse_ReturnValue;  // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_LinkErrorMessage_ReturnValue;             // 0x0028(0x0018)()

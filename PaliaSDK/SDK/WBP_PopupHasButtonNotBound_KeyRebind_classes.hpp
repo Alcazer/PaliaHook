@@ -29,15 +29,15 @@ public:
 	FMulticastInlineDelegateProperty_             OnClose;                                           // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnConfirm__DelegateSignature();
-	void OnClose__DelegateSignature();
-	void OnCancel__DelegateSignature();
-	class US6UI_InputActionHandlingWidgetComponent* GetInputActionHandlingComponent();
-	void ExecuteUbergraph_WBP_PopupHasButtonNotBound_KeyRebind(int32 EntryPoint, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
-	void Destruct();
-	void Close();
-	void BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature();
 	void BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature();
+	void BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature();
+	void Close();
+	void Destruct();
+	void ExecuteUbergraph_WBP_PopupHasButtonNotBound_KeyRebind(int32 EntryPoint, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
+	class US6UI_InputActionHandlingWidgetComponent* GetInputActionHandlingComponent();
+	void OnCancel__DelegateSignature();
+	void OnClose__DelegateSignature();
+	void OnConfirm__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

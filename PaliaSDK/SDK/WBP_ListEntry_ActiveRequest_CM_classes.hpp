@@ -48,7 +48,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnShowCreateRequestPanel;                          // 0x0360(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	class UListItem_Request_C*                    Request;                                           // 0x0370(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          HasRequest;                                        // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C27[0x7];                                     // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_55D0[0x7];                                     // 0x0379(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_RequestsPanel_CM_C*                Request_Panel;                                     // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_RequestsPanel_Console_C*           Request_Panel_Console;                             // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 

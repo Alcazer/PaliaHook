@@ -45,7 +45,7 @@ class US6PLAT_PlayerBehaviorSubsystem final  : public ULocalPlayerSubsystem
 {
 public:
 	FMulticastInlineDelegateProperty_             OnReportSubmited;                                  // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C2C[0x68];                                    // 0x0040(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C9D[0x68];                                    // 0x0040(0x0068)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	TMap<class FName, struct FS6PLAT_PlayerBehaviorReportCategoryInfo> GetValidReportCategoriesByType(ES6PLAT_PlayerBehaviorReportType ReportType);

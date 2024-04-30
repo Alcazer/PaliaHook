@@ -28,7 +28,7 @@ class UVALUI_PhotoCameraScreenBase : public US6UI_StateUserWidget
 {
 public:
 	EVALUI_PhotoCameraScreenLookMode              LookMode;                                          // 0x0558(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_32C3[0x2F];                                    // 0x0559(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E1[0x2F];                                    // 0x0559(0x002F)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void AccumulateLookModeInput(struct FGeometry& InGeometry, struct FPointerEvent& InMouseEvent, bool bInvertYAxis);
@@ -55,7 +55,7 @@ class UVAL_OnlinePhotoAlbumSubsystem final  : public ULocalPlayerSubsystem
 public:
 	FMulticastInlineDelegateProperty_             OnOurOnlinePhotosChanged;                          // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TMap<struct FGuid, class UVAL_OnlinePhotograph*> PhotoIdToCachedOnlinePhotoMap;                     // 0x0040(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32C5[0xB0];                                    // 0x0090(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E3[0xB0];                                    // 0x0090(0x00B0)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool DeleteOnlinePhoto(struct FGuid& PhotoId);
@@ -93,11 +93,11 @@ static_assert(offsetof(UVAL_OnlinePhotoAlbumSubsystem, PhotoIdToCachedOnlinePhot
 class UVAL_PhotographyManager final  : public ULocalPlayerSubsystem
 {
 public:
-	uint8                                         Pad_32C9[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E7[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnStartingCapture;                                 // 0x0038(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnCaptureTaken;                                    // 0x0048(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	TArray<class UVAL_CapturedPhotograph*>        PhotosFromThisSession;                             // 0x0058(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32CA[0x50];                                    // 0x0068(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E8[0x50];                                    // 0x0068(0x0050)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	struct FGuid CreateCapturedPhotograph();
@@ -127,7 +127,7 @@ static_assert(offsetof(UVAL_PhotographyManager, PhotosFromThisSession) == 0x0000
 class UVAL_CapturedPhotograph final  : public UObject
 {
 public:
-	uint8                                         Pad_32CB[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E9[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  UniqueID;                                          // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FDateTime                              DateTimeAtCapture;                                 // 0x0040(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UTexture2D*                             CapturedTexture;                                   // 0x0048(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
@@ -155,13 +155,13 @@ static_assert(offsetof(UVAL_CapturedPhotograph, PlayersInView) == 0x000050, "Mem
 class UVAL_OnlinePhotograph final  : public UObject
 {
 public:
-	uint8                                         Pad_32CC[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EA[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  PhotoId;                                           // 0x0030(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  AccountId;                                         // 0x0040(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ImageURL;                                          // 0x0050(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UObject>                 CachedImageResourceObject;                         // 0x0060(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	FMulticastInlineDelegateProperty_             OnImageResourceObjectChanged;                      // 0x0068(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32CD[0x10];                                    // 0x0078(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EB[0x10];                                    // 0x0078(0x0010)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void OnImageResourceObjectChanged__DelegateSignature(class UVAL_OnlinePhotograph* OnlinePhotograph);

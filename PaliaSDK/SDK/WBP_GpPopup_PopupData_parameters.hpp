@@ -24,7 +24,7 @@ struct WBP_GpPopup_PopupData_C_ExecuteUbergraph_WBP_GpPopup_PopupData final
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC8[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4EAB[0xB];                                     // 0x0005(0x000B)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0010(0x00D0)()
 };
 static_assert(alignof(WBP_GpPopup_PopupData_C_ExecuteUbergraph_WBP_GpPopup_PopupData) == 0x000010, "Wrong alignment on WBP_GpPopup_PopupData_C_ExecuteUbergraph_WBP_GpPopup_PopupData");
@@ -53,7 +53,7 @@ public:
 	class UObject*                                CallFunc_LoadAsset_Blocking_ReturnValue;           // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UTexture2D*                             K2Node_DynamicCast_AsTexture_2D;                   // 0x0060(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4EC9[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4EAC[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            CallFunc_MakeBrushFromTexture_ReturnValue;         // 0x0070(0x00D0)()
 };
 static_assert(alignof(WBP_GpPopup_PopupData_C_SetPopupData) == 0x000010, "Wrong alignment on WBP_GpPopup_PopupData_C_SetPopupData");

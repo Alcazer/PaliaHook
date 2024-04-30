@@ -32,11 +32,11 @@ struct WBP_LoginRetryPanel_PF_C_UpdateContentText final
 public:
 	class FText                                   New_Text;                                          // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	bool                                          bUseDefaultText;                                   // 0x0018(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F35[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4ED1[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   DefaultText;                                       // 0x0020(0x0018)(Edit, BlueprintVisible)
 	bool                                          Temp_bool_Variable;                                // 0x0038(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TextIsEmpty_ReturnValue;                  // 0x0039(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4F36[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4ED2[0x6];                                     // 0x003A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0018)()
 };
 static_assert(alignof(WBP_LoginRetryPanel_PF_C_UpdateContentText) == 0x000008, "Wrong alignment on WBP_LoginRetryPanel_PF_C_UpdateContentText");

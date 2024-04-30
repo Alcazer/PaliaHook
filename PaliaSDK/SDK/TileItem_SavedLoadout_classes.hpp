@@ -28,7 +28,7 @@ public:
 	struct FGuid                                  LoadoutId;                                         // 0x0930(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	class FText                                   LoadoutName;                                       // 0x0940(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 	bool                                          bDraggable;                                        // 0x0958(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4ED4[0x7];                                     // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A56[0x7];                                     // 0x0959(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             RequestSavedLoadoutDelete;                         // 0x0960(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:

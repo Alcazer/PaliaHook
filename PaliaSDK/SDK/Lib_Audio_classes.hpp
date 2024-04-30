@@ -12,10 +12,10 @@
 
 #include "Engine_structs.hpp"
 #include "Engine_classes.hpp"
+#include "E_Footwear_structs.hpp"
 #include "AkAudio_structs.hpp"
 #include "Palia_structs.hpp"
 #include "PhysicsCore_structs.hpp"
-#include "E_Footwear_structs.hpp"
 
 
 namespace SDK

@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "MenuHubListEntryStruct_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "MenuHubListEntryStruct_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Palia_structs.hpp"
 #include "MenuHubOtherMenuType_structs.hpp"
@@ -48,7 +48,7 @@ public:
 	TArray<struct FMenuHubListEntryStruct>        Data_OtherMenus;                                   // 0x0610(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	class UWidget*                                NavLeftFocus;                                      // 0x0620(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          bNewScreenOpening;                                 // 0x0628(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_2EBC[0x7];                                     // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4384[0x7];                                     // 0x0629(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   UXIntent_PhotographyMode;                          // 0x0630(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 
 public:

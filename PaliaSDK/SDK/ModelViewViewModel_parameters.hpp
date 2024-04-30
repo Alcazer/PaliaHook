@@ -69,7 +69,7 @@ public:
 	class UWidgetTree*                            WidgetTree;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UWidget*                                ViewWidget;                                        // 0x0008(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDE[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDA[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000008, "Wrong alignment on MVVMSubsystem_DoesWidgetTreeContainedWidget");
 static_assert(sizeof(MVVMSubsystem_DoesWidgetTreeContainedWidget) == 0x000018, "Wrong size on MVVMSubsystem_DoesWidgetTreeContainedWidget");
@@ -97,7 +97,7 @@ public:
 	struct FMVVMBindingName                       BindingName;                                       // 0x0008(0x0008)(Parm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UClass*                                 Accessor;                                          // 0x0010(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FMVVMAvailableBinding                  ReturnValue;                                       // 0x0018(0x000C)(Parm, OutParm, ReturnParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DDF[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDB[0x4];                                     // 0x0024(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMSubsystem_K2_GetAvailableBinding) == 0x000008, "Wrong alignment on MVVMSubsystem_K2_GetAvailableBinding");
 static_assert(sizeof(MVVMSubsystem_K2_GetAvailableBinding) == 0x000028, "Wrong size on MVVMSubsystem_K2_GetAvailableBinding");
@@ -179,7 +179,7 @@ public:
 	int32                                         OldValue;                                          // 0x0000(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         NewValue;                                          // 0x0004(0x0004)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE1[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDD[0x3];                                     // 0x0009(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelBase_K2_SetPropertyValue) == 0x000004, "Wrong alignment on MVVMViewModelBase_K2_SetPropertyValue");
 static_assert(sizeof(MVVMViewModelBase_K2_SetPropertyValue) == 0x00000C, "Wrong size on MVVMViewModelBase_K2_SetPropertyValue");
@@ -195,7 +195,7 @@ public:
 	struct FMVVMViewModelContext                  Context;                                           // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	class UMVVMViewModelBase*                     ViewModel;                                         // 0x0010(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE2[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDE[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_AddViewModelInstance) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_AddViewModelInstance");
 static_assert(sizeof(MVVMViewModelCollectionObject_AddViewModelInstance) == 0x000020, "Wrong size on MVVMViewModelCollectionObject_AddViewModelInstance");
@@ -210,7 +210,7 @@ struct MVVMViewModelCollectionObject_RemoveAllViewModelInstance final
 public:
 	class UMVVMViewModelBase*                     ViewModel;                                         // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         ReturnValue;                                       // 0x0008(0x0004)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE3[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDF[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_RemoveAllViewModelInstance) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_RemoveAllViewModelInstance");
 static_assert(sizeof(MVVMViewModelCollectionObject_RemoveAllViewModelInstance) == 0x000010, "Wrong size on MVVMViewModelCollectionObject_RemoveAllViewModelInstance");
@@ -224,7 +224,7 @@ struct MVVMViewModelCollectionObject_RemoveViewModel final
 public:
 	struct FMVVMViewModelContext                  Context;                                           // 0x0000(0x0010)(Parm, NoDestructor, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE4[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE0[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMViewModelCollectionObject_RemoveViewModel) == 0x000008, "Wrong alignment on MVVMViewModelCollectionObject_RemoveViewModel");
 static_assert(sizeof(MVVMViewModelCollectionObject_RemoveViewModel) == 0x000018, "Wrong size on MVVMViewModelCollectionObject_RemoveViewModel");
@@ -265,7 +265,7 @@ public:
 	class FName                                   ViewModelName;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TScriptInterface<class INotifyFieldValueChanged> ViewModel;                                         // 0x0008(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE8[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE4[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMView_SetViewModel) == 0x000008, "Wrong alignment on MVVMView_SetViewModel");
 static_assert(sizeof(MVVMView_SetViewModel) == 0x000020, "Wrong size on MVVMView_SetViewModel");
@@ -280,7 +280,7 @@ struct MVVMView_SetViewModelByClass final
 public:
 	TScriptInterface<class INotifyFieldValueChanged> NewValue;                                          // 0x0000(0x0010)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0010(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DE9[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE5[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(MVVMView_SetViewModelByClass) == 0x000008, "Wrong alignment on MVVMView_SetViewModelByClass");
 static_assert(sizeof(MVVMView_SetViewModelByClass) == 0x000018, "Wrong size on MVVMView_SetViewModelByClass");

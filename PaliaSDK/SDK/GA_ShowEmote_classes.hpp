@@ -28,7 +28,7 @@ public:
 	class UEmoteDataAsset*                        CurEmoteData;                                      // 0x0450(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHasBlockedMovement;                               // 0x0458(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHasEnforcedPosition;                              // 0x0459(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4098[0x6];                                     // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1BC2[0x6];                                     // 0x045A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 EmoteTarget;                                       // 0x0460(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          bIsWatchingForMovement;                            // 0x0468(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

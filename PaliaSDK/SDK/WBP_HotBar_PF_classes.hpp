@@ -11,8 +11,8 @@
 #include "Basic.hpp"
 
 #include "Palia_structs.hpp"
-#include "EHotBarState_PF_structs.hpp"
 #include "Engine_structs.hpp"
+#include "EHotBarState_PF_structs.hpp"
 #include "CommonWidgetInputExtended_classes.hpp"
 #include "CoreUObject_structs.hpp"
 #include "UMG_structs.hpp"
@@ -61,23 +61,23 @@ public:
 	class UWBP_CommonInputActionWidget_C*         WBP_CommonInputActionWidget_203;                   // 0x0610(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_InventoryFullError_C*              WBP_InventoryFullError;                            // 0x0618(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	int32                                         NumberOfColumns;                                   // 0x0620(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5902[0x4];                                     // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0E[0x4];                                     // 0x0624(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInventoryComponent*                    LinkedInventory;                                   // 0x0628(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         SelectedColumnIndex;                               // 0x0630(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5903[0x4];                                     // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D0F[0x4];                                     // 0x0634(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                WormFarmAttachedTo;                                // 0x0638(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> ToolWheelFlag;                                     // 0x0640(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	int32                                         SelectedRowIndex;                                  // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5904[0x4];                                     // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D10[0x4];                                     // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_PopinCalloutWidget_C*              MenuContent;                                       // 0x0670(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         TopTickBagIdx;                                     // 0x0678(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5905[0x4];                                     // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D11[0x4];                                     // 0x067C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FoundItemFlag;                                     // 0x0680(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	int32                                         CurrentRow;                                        // 0x06A8(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5906[0x4];                                     // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D12[0x4];                                     // 0x06AC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FTUEFlag_GardenPlot;                               // 0x06B0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	bool                                          bSkipActionBarUpdate;                              // 0x06D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5907[0x7];                                     // 0x06D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D13[0x7];                                     // 0x06D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 CVar_ActionBarSelectModeEnabled;                   // 0x06E0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, HasGetValueTypeHash)
 	struct FGuid                                  ConfirmBingingId;                                  // 0x06F0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  CancelBingingId;                                   // 0x0700(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -89,16 +89,16 @@ public:
 	int32                                         FilterItemsArrayindex;                             // 0x0798(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FBagSlotLocation                       FilterItemsActualLocation;                         // 0x079C(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor)
 	EHotBarState_PF                               CurrentHotbarState;                                // 0x07A4(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5908[0x3];                                     // 0x07A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D14[0x3];                                     // 0x07A5(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnHotbarStateChange;                               // 0x07A8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	EHotBarState_PF                               PreviousHotbarState;                               // 0x07B8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsScreeningMode;                                   // 0x07B9(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5909[0x6];                                     // 0x07BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D15[0x6];                                     // 0x07BA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   ScreeningModeFaceRightText;                        // 0x07C0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   HotbarEmptyFaceRifhtText;                          // 0x07D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UWBP_HotBarSlot_PF_C*                   SelectedHotbarslot;                                // 0x07F0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               CurrentCharacterState;                             // 0x07F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_590A[0x7];                                     // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_3D16[0x7];                                     // 0x07F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnEnterUseSeedFurnitureMode;                       // 0x0800(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	double                                        SlotSpacingPadding;                                // 0x0810(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        TickSpacingPadding;                                // 0x0818(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

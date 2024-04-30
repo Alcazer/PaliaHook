@@ -28,12 +28,12 @@ public:
 	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void OnConfirm__DelegateSignature();
-	void OnCancel__DelegateSignature();
-	void ExecuteUbergraph_WBP_Wardrobe_CancelModal(int32 EntryPoint);
-	void CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
-	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
 	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature();
+	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
+	void CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
+	void ExecuteUbergraph_WBP_Wardrobe_CancelModal(int32 EntryPoint);
+	void OnCancel__DelegateSignature();
+	void OnConfirm__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

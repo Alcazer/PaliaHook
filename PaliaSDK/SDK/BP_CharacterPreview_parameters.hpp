@@ -19,23 +19,6 @@
 namespace SDK::Params
 {
 
-// Function BP_CharacterPreview.BP_CharacterPreview_C.SetRotation
-// 0x0130 (0x0130 - 0x0000)
-struct BP_CharacterPreview_C_SetRotation final 
-{
-public:
-	struct FRotator                               DeltaRotation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FRotator                               CallFunc_ComposeRotators_ReturnValue_1;            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
-	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0048(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
-};
-static_assert(alignof(BP_CharacterPreview_C_SetRotation) == 0x000008, "Wrong alignment on BP_CharacterPreview_C_SetRotation");
-static_assert(sizeof(BP_CharacterPreview_C_SetRotation) == 0x000130, "Wrong size on BP_CharacterPreview_C_SetRotation");
-static_assert(offsetof(BP_CharacterPreview_C_SetRotation, DeltaRotation) == 0x000000, "Member 'BP_CharacterPreview_C_SetRotation::DeltaRotation' has a wrong offset!");
-static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_ComposeRotators_ReturnValue) == 0x000018, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_ComposeRotators_ReturnValue_1) == 0x000030, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_ComposeRotators_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000048, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
-
 // Function BP_CharacterPreview.BP_CharacterPreview_C.SetCharacterMetadata
 // 0x0778 (0x0778 - 0x0000)
 struct BP_CharacterPreview_C_SetCharacterMetadata final 
@@ -68,7 +51,7 @@ struct BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43F7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2D73[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_Character;            // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0010(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -93,6 +76,23 @@ static_assert(offsetof(BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPrevie
 static_assert(offsetof(BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview, CallFunc_ApplyCustomizationsToActor_ReturnValue) == 0x0010C0, "Member 'BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview::CallFunc_ApplyCustomizationsToActor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview, K2Node_CreateDelegate_OutputDelegate_3) == 0x0010C8, "Member 'BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview::K2Node_CreateDelegate_OutputDelegate_3' has a wrong offset!");
 static_assert(offsetof(BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview, CallFunc_IsValid_ReturnValue) == 0x0010D8, "Member 'BP_CharacterPreview_C_ExecuteUbergraph_BP_CharacterPreview::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function BP_CharacterPreview.BP_CharacterPreview_C.SetRotation
+// 0x0130 (0x0130 - 0x0000)
+struct BP_CharacterPreview_C_SetRotation final 
+{
+public:
+	struct FRotator                               DeltaRotation;                                     // 0x0000(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue;              // 0x0018(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FRotator                               CallFunc_ComposeRotators_ReturnValue_1;            // 0x0030(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor)
+	struct FHitResult                             CallFunc_K2_SetRelativeRotation_SweepHitResult;    // 0x0048(0x00E8)(IsPlainOldData, NoDestructor, ContainsInstancedReference)
+};
+static_assert(alignof(BP_CharacterPreview_C_SetRotation) == 0x000008, "Wrong alignment on BP_CharacterPreview_C_SetRotation");
+static_assert(sizeof(BP_CharacterPreview_C_SetRotation) == 0x000130, "Wrong size on BP_CharacterPreview_C_SetRotation");
+static_assert(offsetof(BP_CharacterPreview_C_SetRotation, DeltaRotation) == 0x000000, "Member 'BP_CharacterPreview_C_SetRotation::DeltaRotation' has a wrong offset!");
+static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_ComposeRotators_ReturnValue) == 0x000018, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_ComposeRotators_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_ComposeRotators_ReturnValue_1) == 0x000030, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_ComposeRotators_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(BP_CharacterPreview_C_SetRotation, CallFunc_K2_SetRelativeRotation_SweepHitResult) == 0x000048, "Member 'BP_CharacterPreview_C_SetRotation::CallFunc_K2_SetRelativeRotation_SweepHitResult' has a wrong offset!");
 
 // Function BP_CharacterPreview.BP_CharacterPreview_C.GetPreviewCharacter
 // 0x0008 (0x0008 - 0x0000)

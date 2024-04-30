@@ -13,9 +13,9 @@
 #include "UMG_structs.hpp"
 #include "SlateCore_structs.hpp"
 #include "Palia_structs.hpp"
+#include "F_CommonUIButtonPrompt_structs.hpp"
 #include "CoreUObject_structs.hpp"
 #include "Engine_structs.hpp"
-#include "F_CommonUIButtonPrompt_structs.hpp"
 
 
 namespace SDK::Params
@@ -39,7 +39,7 @@ struct WBP_PlayerCharacterRow_Button_Guild_CM_C_ExecuteUbergraph_WBP_PlayerChara
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E1[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4529[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UVAL_PlayerGuildSubsystem* PlayerGuildSubsystem, const struct FGuid& PlayerGuildId)> K2Node_CreateDelegate_OutputDelegate;              // 0x0008(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const class FString& ErrorMessage)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0018(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UVAL_PlayerGuildSubsystem* PlayerGuildSubsystem, const struct FGuid& PlayerGuildId)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0028(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -51,7 +51,7 @@ public:
 	TDelegate<void(class UVAL_PlayerGuildSubsystem* PlayerGuildSubsystem)> K2Node_CreateDelegate_OutputDelegate_5;            // 0x0070(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0081(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E2[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452A[0x6];                                     // 0x0082(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 K2Node_CustomEvent_ErrorMessage;                   // 0x0088(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0098(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x00A0(0x0008)(NoDestructor)
@@ -94,7 +94,7 @@ struct WBP_PlayerCharacterRow_Button_Guild_CM_C_Handle_On_Query_Player_Guild_Mem
 {
 public:
 	bool                                          bHasMembership;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E3[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452B[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_PlayerGuild                       PlayerGuild;                                       // 0x0008(0x0118)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_PlayerCharacterRow_Button_Guild_CM_C_Handle_On_Query_Player_Guild_Membership_Success) == 0x000008, "Wrong alignment on WBP_PlayerCharacterRow_Button_Guild_CM_C_Handle_On_Query_Player_Guild_Membership_Success");
@@ -175,7 +175,7 @@ public:
 	class UAuthManager*                           CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       CallFunc_GetNetId_ReturnValue;                     // 0x0040(0x0030)(HasGetValueTypeHash)
 	bool                                          CallFunc_TryGetUserMembership_bOutHasMembership;   // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E4[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452C[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_PlayerGuild                       CallFunc_TryGetUserMembership_PlayerGuild;         // 0x0078(0x0118)()
 	bool                                          CallFunc_TryGetUserMembership_ReturnValue;         // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -196,14 +196,14 @@ struct WBP_PlayerCharacterRow_Button_Guild_CM_C_UpdateState final
 public:
 	bool                                          IsInvitedAlready;                                  // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsMember;                                          // 0x0001(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E5[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452D[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable;          // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E6[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452E[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0014(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E7[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_452F[0x3];                                     // 0x0015(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FF_CommonUIButtonPrompt                K2Node_MakeStruct_F_CommonUIButtonPrompt;          // 0x0018(0x0040)(HasGetValueTypeHash)
 	TArray<struct FF_CommonUIButtonPrompt>        K2Node_MakeArray_Array;                            // 0x0058(0x0010)(ReferenceParm)
 	struct FF_CommonUIButtonPrompt                K2Node_MakeStruct_F_CommonUIButtonPrompt_1;        // 0x0068(0x0040)(HasGetValueTypeHash)
@@ -211,13 +211,13 @@ public:
 	TArray<struct FF_CommonUIButtonPrompt>        K2Node_MakeArray_Array_1;                          // 0x00E8(0x0010)(ReferenceParm)
 	bool                                          Temp_bool_True_if_break_was_hit_Variable_1;        // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue_1;                // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E8[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4530[0x6];                                     // 0x00FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue;              // 0x0100(0x0018)()
 	class FText                                   CallFunc_MakeLiteralText_ReturnValue_1;            // 0x0118(0x0018)()
 	int32                                         Temp_int_Array_Index_Variable_1;                   // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable_1;                  // 0x0134(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_Add_IntInt_ReturnValue_1;                 // 0x0138(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53E9[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4531[0x4];                                     // 0x013C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAuthManager*                           CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0140(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_PlayerGuildSubsystem*              CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       CallFunc_GetNetId_ReturnValue;                     // 0x0150(0x0030)(HasGetValueTypeHash)
@@ -225,11 +225,11 @@ public:
 	struct FUniqueNetIdRepl                       CallFunc_GetNetId_ReturnValue_1;                   // 0x0188(0x0030)(HasGetValueTypeHash)
 	struct FVAL_PlayerGuild                       CallFunc_TryGetPlayerGuild_OutPlayerGuildInfo;     // 0x01B8(0x0118)()
 	bool                                          CallFunc_TryGetPlayerGuild_ReturnValue;            // 0x02D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53EA[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4532[0x7];                                     // 0x02D1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_PlayerGuildSubsystem*              CallFunc_GetLocalPlayerSubsystem_ReturnValue_3;    // 0x02D8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	EVAL_PlayerGuildMemberRole                    CallFunc_TryGetRoleForUserId_OutRole;              // 0x02E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_TryGetRoleForUserId_ReturnValue;          // 0x02E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53EB[0x6];                                     // 0x02E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4533[0x6];                                     // 0x02E2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_PlayerGuildRosterEntry            CallFunc_Array_Get_Item;                           // 0x02E8(0x0040)(HasGetValueTypeHash)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0328(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x032C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -237,17 +237,17 @@ public:
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x032E(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_CanRoleSendInvites_ReturnValue;           // 0x032F(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_Guid_ReturnValue;                 // 0x0330(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53EC[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4534[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_PlayerGuildSubsystem*              CallFunc_GetLocalPlayerSubsystem_ReturnValue_4;    // 0x0338(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FVAL_PlayerGuildInvitationList         CallFunc_TryGetOutboundInvitations_OutInvitations; // 0x0340(0x0010)()
 	bool                                          CallFunc_TryGetOutboundInvitations_ReturnValue;    // 0x0350(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ReturnValue_1;                 // 0x0351(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53ED[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4535[0x6];                                     // 0x0352(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_PlayerGuildInvitation             CallFunc_Array_Get_Item_1;                         // 0x0358(0x0078)()
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x03D0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_1;                 // 0x03D1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ReturnValue_2;                 // 0x03D2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53EE[0x1];                                     // 0x03D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4536[0x1];                                     // 0x03D3(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue_1;               // 0x03D4(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue_1;                // 0x03D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue_2;                 // 0x03D9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

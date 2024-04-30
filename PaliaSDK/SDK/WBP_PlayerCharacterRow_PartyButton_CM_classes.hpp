@@ -40,7 +40,7 @@ public:
 	struct FVAL_PartyMember                       PartyMember;                                       // 0x0438(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	EVAL_PartyManagerState                        PartyState;                                        // 0x0488(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Parties_Allowed;                                   // 0x0489(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_53C5[0x6];                                     // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53D9[0x6];                                     // 0x048A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnMarkFocusUI;                                     // 0x0490(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bIsShowFocusTip;                                   // 0x04A0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

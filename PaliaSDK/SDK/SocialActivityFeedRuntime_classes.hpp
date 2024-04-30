@@ -27,7 +27,7 @@ class UVAL_SocialActivityFeedManager final  : public ULocalPlayerSubsystem
 public:
 	FMulticastInlineDelegateProperty_             OnPostsRefreshed;                                  // 0x0030(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class UVAL_EventBusViaChatSubsystem*          EventBusSubsystem;                                 // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_32C0[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32DE[0x8];                                     // 0x0048(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UVAL_ValeriagramPost*>           CachedPosts;                                       // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -92,7 +92,7 @@ class UVAL_SocialActivityFeedSettings final  : public UDeveloperSettings
 {
 public:
 	int32                                         MaxCachedPaliagramPostCount;                       // 0x0038(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_32C2[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32E0[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   NewPaliagramPostReceivedMessageFormat;             // 0x0040(0x0018)(Edit, BlueprintVisible, BlueprintReadOnly, Config, NativeAccessSpecifierPublic)
 
 public:

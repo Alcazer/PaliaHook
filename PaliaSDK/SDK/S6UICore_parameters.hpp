@@ -160,7 +160,7 @@ struct S6UI_CustomNavigationGroup_ActiveNavigationGroup final
 {
 public:
 	bool                                          bDelayActive;                                      // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DFF[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E05[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         InAutoSelectNavWidgetID;                           // 0x0004(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_ActiveNavigationGroup) == 0x000004, "Wrong alignment on S6UI_CustomNavigationGroup_ActiveNavigationGroup");
@@ -187,7 +187,7 @@ public:
 	struct FS6UI_NavigationGroupTranstionData     InTransitionData;                                  // 0x0000(0x0040)(Parm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bInBidirectional;                                  // 0x0040(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bClearMatchingGroupNavigations;                    // 0x0041(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E00[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E06[0x6];                                     // 0x0042(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData");
 static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData) == 0x000048, "Wrong size on S6UI_CustomNavigationGroup_AddNavigationGroupTransitionData");
@@ -202,7 +202,7 @@ struct S6UI_CustomNavigationGroup_AddNavWidgets final
 public:
 	TArray<class UWidget*>                        InWidgetArray;                                     // 0x0000(0x0010)(ConstParm, Parm, ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          bInBuildNavigationImmediately;                     // 0x0010(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E01[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E07[0x7];                                     // 0x0011(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_AddNavWidgets) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_AddNavWidgets");
 static_assert(sizeof(S6UI_CustomNavigationGroup_AddNavWidgets) == 0x000018, "Wrong size on S6UI_CustomNavigationGroup_AddNavWidgets");
@@ -260,7 +260,7 @@ struct S6UI_CustomNavigationGroup_NavigateToTargetWidget final
 public:
 	int32                                         InTargetWidgetIndex;                               // 0x0000(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bDelayActive;                                      // 0x0004(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E02[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E08[0x3];                                     // 0x0005(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_NavigateToTargetWidget) == 0x000004, "Wrong alignment on S6UI_CustomNavigationGroup_NavigateToTargetWidget");
 static_assert(sizeof(S6UI_CustomNavigationGroup_NavigateToTargetWidget) == 0x000008, "Wrong size on S6UI_CustomNavigationGroup_NavigateToTargetWidget");
@@ -284,12 +284,12 @@ struct S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__Delega
 {
 public:
 	EUINavigation                                 InNavigationType;                                  // 0x0000(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E03[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E09[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class US6UI_CustomNavigationGroup*            InOriginNavigationGroup;                           // 0x0008(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InOriginWidgetIndex;                               // 0x0010(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         InTargetWidgetIndex;                               // 0x0014(0x0004)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E04[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0A[0x7];                                     // 0x0019(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature) == 0x000020, "Wrong size on S6UI_CustomNavigationGroup_OnCustomNavigationGroupTransitionEvent__DelegateSignature");
@@ -306,7 +306,7 @@ struct S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature final
 public:
 	class US6UI_CustomNavigationGroup*            InNavGroup;                                        // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          InbIsEnabled;                                      // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E05[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0B[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature) == 0x000010, "Wrong size on S6UI_CustomNavigationGroup_OnGroupEnableChanged__DelegateSignature");
@@ -320,7 +320,7 @@ struct S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature 
 public:
 	class UObject*                                NavObject;                                         // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0008(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E06[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0C[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature) == 0x000008, "Wrong alignment on S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature");
 static_assert(sizeof(S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature) == 0x000010, "Wrong size on S6UI_CustomNavigationGroup_OnIsWidgetValiedToNavigate__DelegateSignature");
@@ -411,10 +411,10 @@ struct S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding final
 public:
 	class UInputAction*                           InputAction;                                       // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerEvent                                 TriggerEventType;                                  // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E08[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0E[0x3];                                     // 0x0009(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)> Delegate;                                          // 0x000C(0x0010)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FGuid                                  ReturnValue;                                       // 0x001C(0x0010)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E09[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E0F[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding) == 0x000008, "Wrong alignment on S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding");
 static_assert(sizeof(S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding) == 0x000030, "Wrong size on S6UI_InputActionHandlingWidgetComponent_RegisterInputActionBinding");
@@ -598,7 +598,7 @@ public:
 	class UWidget*                                Widget;                                            // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShouldForceClose;                                 // 0x0008(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bPermitLatentClosing;                              // 0x0009(0x0001)(ConstParm, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0C[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E12[0x6];                                     // 0x000A(0x0006)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_UIManagerWidgetBase_CloseModalWidget) == 0x000008, "Wrong alignment on S6UI_UIManagerWidgetBase_CloseModalWidget");
 static_assert(sizeof(S6UI_UIManagerWidgetBase_CloseModalWidget) == 0x000010, "Wrong size on S6UI_UIManagerWidgetBase_CloseModalWidget");
@@ -904,7 +904,7 @@ public:
 	TSubclassOf<class UUserWidget>                ContentWidgetClass;                                // 0x0080(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FS6UI_ContextMenu                      OutContextMenu;                                    // 0x0088(0x0020)(Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x00A8(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0D[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E13[0x7];                                     // 0x00A9(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_Utils_SummonContextMenu) == 0x000008, "Wrong alignment on S6UI_Utils_SummonContextMenu");
 static_assert(sizeof(S6UI_Utils_SummonContextMenu) == 0x0000B0, "Wrong size on S6UI_Utils_SummonContextMenu");
@@ -925,7 +925,7 @@ public:
 	TSubclassOf<class UUserWidget>                ContentWidgetClass;                                // 0x0020(0x0008)(ConstParm, Parm, OutParm, ZeroConstructor, ReferenceParm, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FS6UI_ContextMenu                      OutContextMenu;                                    // 0x0028(0x0020)(Parm, OutParm, ReferenceParm, ContainsInstancedReference, NativeAccessSpecifierPublic)
 	bool                                          ReturnValue;                                       // 0x0048(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0E[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E14[0x7];                                     // 0x0049(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_Utils_SummonContextMenuAtPosition) == 0x000008, "Wrong alignment on S6UI_Utils_SummonContextMenuAtPosition");
 static_assert(sizeof(S6UI_Utils_SummonContextMenuAtPosition) == 0x000050, "Wrong size on S6UI_Utils_SummonContextMenuAtPosition");
@@ -945,9 +945,9 @@ public:
 	ES6UI_MouseLockMode                           MouseLockMode;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bHideCursorDuringCapture;                          // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCursor;                                       // 0x000A(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E0F[0x1];                                     // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E15[0x1];                                     // 0x000B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6UI_InputMode                        ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E10[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E16[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_StateStatics_CreateInputMode_GameAndUI) == 0x000008, "Wrong alignment on S6UI_StateStatics_CreateInputMode_GameAndUI");
 static_assert(sizeof(S6UI_StateStatics_CreateInputMode_GameAndUI) == 0x000020, "Wrong size on S6UI_StateStatics_CreateInputMode_GameAndUI");
@@ -976,9 +976,9 @@ public:
 	class UWidget*                                WidgetToFocus;                                     // 0x0000(0x0008)(Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6UI_MouseLockMode                           MouseLockMode;                                     // 0x0008(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCursor;                                       // 0x0009(0x0001)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E11[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E17[0x2];                                     // 0x000A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6UI_InputMode                        ReturnValue;                                       // 0x000C(0x0010)(Parm, OutParm, ReturnParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E12[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E18[0x4];                                     // 0x001C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_StateStatics_CreateInputMode_UIOnly) == 0x000008, "Wrong alignment on S6UI_StateStatics_CreateInputMode_UIOnly");
 static_assert(sizeof(S6UI_StateStatics_CreateInputMode_UIOnly) == 0x000020, "Wrong size on S6UI_StateStatics_CreateInputMode_UIOnly");
@@ -1032,7 +1032,7 @@ public:
 	class UObject*                                Context;                                           // 0x0000(0x0008)(Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSoftClassPtr<class UClass>                   WidgetClass;                                       // 0x0008(0x0028)(Parm, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TotalSizeOfWidgetsProvisioned;                     // 0x0030(0x0004)(Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E13[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E19[0x4];                                     // 0x0034(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6UI_WidgetPoolManager_ProvisionPool) == 0x000008, "Wrong alignment on S6UI_WidgetPoolManager_ProvisionPool");
 static_assert(sizeof(S6UI_WidgetPoolManager_ProvisionPool) == 0x000038, "Wrong size on S6UI_WidgetPoolManager_ProvisionPool");

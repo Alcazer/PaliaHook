@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "UMG_structs.hpp"
 #include "BP_SocialPanelConfig_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -47,14 +47,14 @@ public:
 	FMulticastInlineDelegateProperty_             OnTotalRequestCountChanged;                        // 0x05D0(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FBP_SocialPanelConfig                  Config;                                            // 0x05E0(0x0006)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          DebugSimulationEnabled;                            // 0x05E6(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57ED[0x1];                                     // 0x05E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_56BD[0x1];                                     // 0x05E7(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnClose;                                           // 0x05E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> Requests_Flag;                                     // 0x05F8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnNumFriendsOnlineChanged;                         // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> SocialPanelFlag;                                   // 0x0630(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UCommonActivatableWidgetInputExtended*  PreviousActivatedWidget;                           // 0x0658(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         TempNum;                                           // 0x0660(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_57EE[0x4];                                     // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_56BE[0x4];                                     // 0x0664(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftClassPtr<class UClass>                   UXIntent_PhotographyMode;                          // 0x0668(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 	TSet<class FName>                             DynamicallyRegisteredSocialWindowTabNames;         // 0x0690(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

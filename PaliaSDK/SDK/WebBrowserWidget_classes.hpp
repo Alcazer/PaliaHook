@@ -27,7 +27,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnConsoleMessage;                                  // 0x01A0(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
 	class FString                                 InitialURL;                                        // 0x01B0(0x0010)(Edit, ZeroConstructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	bool                                          bSupportsTransparency;                             // 0x01C0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C26[0x17];                                    // 0x01C1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C97[0x17];                                    // 0x01C1(0x0017)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ExecuteJavascript(const class FString& ScriptText);
@@ -64,7 +64,7 @@ class UWebBrowserAssetManager final  : public UObject
 {
 public:
 	TSoftObjectPtr<class UMaterial>               DefaultMaterial;                                   // 0x0028(0x0028)(Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_2C28[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C99[0x28];                                    // 0x0050(0x0028)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

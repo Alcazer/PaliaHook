@@ -33,7 +33,7 @@ public:
 	class FText                                   SecondaryButtonText;                               // 0x0318(0x0018)(Edit, BlueprintVisible)
 	bool                                          OnlyConfirm;                                       // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NoButtons;                                         // 0x0331(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B7D[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C06[0x6];                                     // 0x0332(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           Confirm_Input_Action;                              // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Cancel_Input_Action;                               // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 

@@ -30,7 +30,7 @@ public:
 	class UWBP_ButtonTab_Secondary_02_CM_C*       Selected;                                          // 0x0330(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             On_Tab_Selection_Changed;                          // 0x0338(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          ShowGamePadIcon;                                   // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_511A[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_531F[0x7];                                     // 0x0349(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UWBP_ButtonTab_Secondary_02_CM_C*> AllTabs;                                           // 0x0350(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	bool                                          IconsOnly;                                         // 0x0360(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

@@ -37,7 +37,7 @@ public:
 	struct FLinearColor                           SelectedAmountTextColor;                           // 0x056C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHighlighted;                                      // 0x057C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bHovered;                                          // 0x057D(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5158[0x2];                                     // 0x057E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_511C[0x2];                                     // 0x057E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnActionBarIsActivated;                            // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:

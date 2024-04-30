@@ -22,7 +22,7 @@ struct BP_NotificationInterface_SkillLeveledUp_C_InitPrePushNotification final
 {
 public:
 	ESkillType                                    AffectedSkillType;                                 // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4B0F[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_125A[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         Level;                                             // 0x0004(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_NotificationInterface_SkillLeveledUp_C_InitPrePushNotification) == 0x000004, "Wrong alignment on BP_NotificationInterface_SkillLeveledUp_C_InitPrePushNotification");

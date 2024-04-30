@@ -33,7 +33,7 @@ public:
 	class FText                                   CategoryDisplayName;                               // 0x0328(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 	class FText                                   CategoryEmptyText;                                 // 0x0340(0x0018)(Edit, BlueprintVisible, ExposeOnSpawn)
 	bool                                          PreventSoundSpamOnStart;                           // 0x0358(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_56F8[0x7];                                     // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_565E[0x7];                                     // 0x0359(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSubclassOf<class UUserWidget>                ListViewEntryWidgetClass;                          // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, UObjectWrapper, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnMarkFocusUI;                                     // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          bIgnoreStartExpanded;                              // 0x0378(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

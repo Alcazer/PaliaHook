@@ -33,10 +33,10 @@ public:
 	bool                                          ShowDeleteButton;                                  // 0x0560(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DraggableTiles;                                    // 0x0561(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ESelectInfo                                   Select_Type;                                       // 0x0562(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BDB[0x5];                                     // 0x0563(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A57[0x5];                                     // 0x0563(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_TileEntry_SavedLoadout_C*          SelectedTile;                                      // 0x0568(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         LastSelectedItemIndex;                             // 0x0570(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5BDC[0x4];                                     // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5A58[0x4];                                     // 0x0574(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnTileEntryItemFocused;                            // 0x0578(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnTileNavigatedTo;                                 // 0x0588(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 

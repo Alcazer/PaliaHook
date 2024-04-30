@@ -11,9 +11,9 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
+#include "BP_TopBackerSettings_CloseButton_structs.hpp"
 #include "UMG_structs.hpp"
 #include "UMG_classes.hpp"
-#include "BP_TopBackerSettings_CloseButton_structs.hpp"
 
 
 namespace SDK

@@ -10,14 +10,14 @@
 
 #include "Basic.hpp"
 
+#include "ETutorialVolumeType_structs.hpp"
 #include "CommonInput_structs.hpp"
 #include "Palia_structs.hpp"
 #include "Engine_structs.hpp"
-#include "UMG_structs.hpp"
 #include "EMainHudState_structs.hpp"
 #include "ValeriaUI_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "ETutorialVolumeType_structs.hpp"
+#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -86,14 +86,14 @@ public:
 	class UWBP_TIM_ChatPanel_CM_C*                WBP_TIM_ChatPanel_CM;                              // 0x0710(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UWBP_Timer_C*                           WBP_Timer;                                         // 0x0718(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	EMainHudState                                 CurrentHudState;                                   // 0x0720(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D07[0x7];                                     // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C97[0x7];                                     // 0x0721(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UObject*                                WormFarmWidget;                                    // 0x0728(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      ValeriaCharacter;                                  // 0x0730(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class ABP_FishingSafeArea_C*                  FishingSafeArea;                                   // 0x0738(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnTemplate, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FishingGuidebookFlag;                              // 0x0740(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	class UWBP_PopinCalloutWidget_C*              MenuContent;                                       // 0x0768(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	ECharacterState                               PreviousCharacterState;                            // 0x0770(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D08[0x7];                                     // 0x0771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C98[0x7];                                     // 0x0771(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> WASDFlag;                                          // 0x0778(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	struct FTimerHandle                           HideHealthBarTimer;                                // 0x07A0(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	TArray<class UWidget*>                        Page_Widgets;                                      // 0x07A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
@@ -106,7 +106,7 @@ public:
 	TSoftObjectPtr<class UVAL_TutorialFlagDefinition> FTUE_CompassFlag;                                  // 0x08A8(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, HasGetValueTypeHash)
 	TSoftObjectPtr<class UVAL_ItemTypeDefinitionAsset> StoveItemType;                                     // 0x08D0(0x0028)(Edit, BlueprintVisible, DisableEditOnInstance, UObjectWrapper, HasGetValueTypeHash)
 	EFishingMiniGameState                         PreviousFishingState;                              // 0x08F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D09[0x7];                                     // 0x08F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C99[0x7];                                     // 0x08F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FCharacterStateChangeParams            HUDParams;                                         // 0x0900(0x0178)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 	struct FDialogueListToShow                    Dialogues_To_Show;                                 // 0x0A78(0x0138)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class UDialogueComponent*                     DialogueComponent;                                 // 0x0BB0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)

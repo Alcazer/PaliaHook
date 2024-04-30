@@ -37,7 +37,7 @@ public:
 	class UVALUI_TextBlock_Styled*                VALUI_TextBlock_Styled_Title_1;                    // 0x0318(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnTutorialClose;                                   // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	Enum_SpecificFTUEPopin_CM                     SpecificFTUEPopinName;                             // 0x0330(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4292[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41AD[0x7];                                     // 0x0331(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           InputKeyReminderFTUEPopin;                         // 0x0338(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

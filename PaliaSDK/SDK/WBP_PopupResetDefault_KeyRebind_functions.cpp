@@ -17,65 +17,59 @@
 namespace SDK
 {
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnConfirm__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_PopupResetDefault_KeyRebind_C::OnConfirm__DelegateSignature()
+void UWBP_PopupResetDefault_KeyRebind_C::BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnConfirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnClose__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_PopupResetDefault_KeyRebind_C::OnClose__DelegateSignature()
+void UWBP_PopupResetDefault_KeyRebind_C::BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnClose__DelegateSignature");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnCancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.Close
+// (BlueprintCallable, BlueprintEvent)
 
-void UWBP_PopupResetDefault_KeyRebind_C::OnCancel__DelegateSignature()
+void UWBP_PopupResetDefault_KeyRebind_C::Close()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnCancel__DelegateSignature");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "Close");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.GetInputActionHandlingComponent
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class US6UI_InputActionHandlingWidgetComponent*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.Destruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
 
-class US6UI_InputActionHandlingWidgetComponent* UWBP_PopupResetDefault_KeyRebind_C::GetInputActionHandlingComponent()
+void UWBP_PopupResetDefault_KeyRebind_C::Destruct()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "GetInputActionHandlingComponent");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "Destruct");
 
-	Params::WBP_PopupResetDefault_KeyRebind_C_GetInputActionHandlingComponent Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	return Parms.ReturnValue;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
@@ -103,57 +97,63 @@ void UWBP_PopupResetDefault_KeyRebind_C::ExecuteUbergraph_WBP_PopupResetDefault_
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.Destruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.GetInputActionHandlingComponent
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class US6UI_InputActionHandlingWidgetComponent*ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, InstancedReference, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_PopupResetDefault_KeyRebind_C::Destruct()
+class US6UI_InputActionHandlingWidgetComponent* UWBP_PopupResetDefault_KeyRebind_C::GetInputActionHandlingComponent()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "Destruct");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "GetInputActionHandlingComponent");
+
+	Params::WBP_PopupResetDefault_KeyRebind_C_GetInputActionHandlingComponent Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	return Parms.ReturnValue;
+}
+
+
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnCancel__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWBP_PopupResetDefault_KeyRebind_C::OnCancel__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnCancel__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.Close
-// (BlueprintCallable, BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnClose__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_PopupResetDefault_KeyRebind_C::Close()
+void UWBP_PopupResetDefault_KeyRebind_C::OnClose__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "Close");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnClose__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.OnConfirm__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_PopupResetDefault_KeyRebind_C::BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature()
+void UWBP_PopupResetDefault_KeyRebind_C::OnConfirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_3_Cancel__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_PopupResetDefault_KeyRebind.WBP_PopupResetDefault_KeyRebind_C.BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature
-// (BlueprintEvent)
-
-void UWBP_PopupResetDefault_KeyRebind_C::BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "BndEvt__WBP_PopupResetDefault_KeyRebind_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_2_Confirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_PopupResetDefault_KeyRebind_C", "OnConfirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

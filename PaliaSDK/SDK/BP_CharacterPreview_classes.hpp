@@ -30,13 +30,13 @@ public:
 public:
 	void UserConstructionScript();
 	void Stubbed_ADFF367E48A6AD181DA7749345B5AC98();
-	void SetRotation(const struct FRotator& DeltaRotation, const struct FRotator& CallFunc_ComposeRotators_ReturnValue, const struct FRotator& CallFunc_ComposeRotators_ReturnValue_1, const struct FHitResult& CallFunc_K2_SetRelativeRotation_SweepHitResult);
 	void SetCharacterMetadata(const struct FVALDTOS_MetaCharacterFormat& NewMetaCharacterData);
 	void Interrupted_ADFF367E48A6AD181DA7749345B5AC98();
 	void GetValeriaCharacter(class AValeriaCharacter** Character, class AValeriaCharacter* K2Node_DynamicCast_AsValeria_Character, bool K2Node_DynamicCast_bSuccess);
 	void Failed_ADFF367E48A6AD181DA7749345B5AC98();
 	void ExecuteUbergraph_BP_CharacterPreview(int32 EntryPoint, class AValeriaCharacter* CallFunc_GetValeriaCharacter_Character, class UVAL_CharacterCustomizationComponent* CallFunc_GetCharacterCustomizationComponent_ReturnValue, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate_1, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate_2, const struct FVALDTOS_MetaCharacterFormat& K2Node_CustomEvent_NewMetaCharacterData, const struct FVAL_CharacterCustomizationLoadout& CallFunc_PersistenceDTOsToLoadout_ReturnValue, class UVAL_ApplyCustomizationsToActorProxy* CallFunc_ApplyCustomizationsToActor_ReturnValue, TDelegate<void()> K2Node_CreateDelegate_OutputDelegate_3, bool CallFunc_IsValid_ReturnValue);
 	void Completed_ADFF367E48A6AD181DA7749345B5AC98();
+	void SetRotation(const struct FRotator& DeltaRotation, const struct FRotator& CallFunc_ComposeRotators_ReturnValue, const struct FRotator& CallFunc_ComposeRotators_ReturnValue_1, const struct FHitResult& CallFunc_K2_SetRelativeRotation_SweepHitResult);
 
 	class AActor* GetPreviewCharacter() const;
 

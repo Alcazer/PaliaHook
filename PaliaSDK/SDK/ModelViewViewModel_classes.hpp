@@ -113,7 +113,7 @@ static_assert(sizeof(UMVVMSubsystem) == 0x000030, "Wrong size on UMVVMSubsystem"
 class UMVVMViewModelBase : public UObject
 {
 public:
-	uint8                                         Pad_1DE0[0x40];                                    // 0x0028(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DDC[0x40];                                    // 0x0028(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void K2_AddFieldValueChangedDelegate(const struct FFieldNotificationId& FieldId, TDelegate<void(class UObject* Object, const struct FFieldNotificationId& Field)> Delegate);
@@ -185,7 +185,7 @@ static_assert(sizeof(UMVVMViewModelBlueprintGeneratedClass) == 0x000368, "Wrong 
 class UMVVMBindingSubsystem final  : public UEngineSubsystem
 {
 public:
-	uint8                                         Pad_1DE5[0x60];                                    // 0x0030(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE1[0x60];                                    // 0x0030(0x0060)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -207,13 +207,13 @@ class UMVVMView final  : public UUserWidgetExtension
 public:
 	class UMVVMViewClass*                         ClassExtension;                                    // 0x0028(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	TArray<struct FMVVMViewSource>                Sources;                                           // 0x0030(0x0010)(Edit, ZeroConstructor, Transient, EditConst, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DE6[0x10];                                    // 0x0040(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE2[0x10];                                    // 0x0040(0x0010)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bLogBinding;                                       // 0x0050(0x0001)(Edit, ZeroConstructor, Transient, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bConstructed;                                      // 0x0051(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bSourcesInitialized;                               // 0x0052(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bBindingsInitialized;                              // 0x0053(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bHasEveryTickBinding;                              // 0x0054(0x0001)(Edit, ZeroConstructor, Transient, EditConst, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DE7[0x3];                                     // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE3[0x3];                                     // 0x0055(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void InitializeBindings();
@@ -255,10 +255,10 @@ public:
 	TArray<struct FMVVMViewClass_SourceCreator>   SourceCreators;                                    // 0x0028(0x0010)(ZeroConstructor, ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TArray<struct FMVVMViewClass_CompiledBinding> CompiledBindings;                                  // 0x0038(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 	struct FMVVMCompiledBindingLibrary            BindingLibrary;                                    // 0x0048(0x0060)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEA[0x4];                                     // 0x00A8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE6[0x4];                                     // 0x00A8(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	bool                                          bInitializeSourcesOnConstruct;                     // 0x00AC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 	bool                                          bInitializeBindingsOnConstruct;                    // 0x00AD(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1DEB[0x2];                                     // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DE7[0x2];                                     // 0x00AE(0x0002)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

@@ -41,7 +41,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnSlotRightClicked;                                // 0x0350(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         MaxSlotsPerRow;                                    // 0x0360(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          bSlotsDraggable;                                   // 0x0364(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_58A3[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5773[0x3];                                     // 0x0365(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                Slot_Padding;                                      // 0x0368(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn)
 	FMulticastInlineDelegateProperty_             OnSlotGamepadSelect;                               // 0x0378(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnSlotGamepadCancel;                               // 0x0388(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -50,7 +50,7 @@ public:
 	class UWBP_InventorySlot_CM_C*                FirstInventorySlot;                                // 0x03B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EVALUI_UISize                                 UiSize;                                            // 0x03C0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          HideActionBarIndex;                                // 0x03C1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_58A4[0x6];                                     // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5774[0x6];                                     // 0x03C2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<EVALUI_UISize, double>                   InventorySlotSideMarginSizeMap;                    // 0x03C8(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TMap<EVALUI_UISize, struct FMargin>           GridOverlayBaseMarginSizeMap;                      // 0x0418(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 

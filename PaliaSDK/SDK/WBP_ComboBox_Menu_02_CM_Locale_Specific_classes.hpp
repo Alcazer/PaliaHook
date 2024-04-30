@@ -38,10 +38,10 @@ public:
 	class UVALUI_ButtonStyle*                     ButtonStyle;                                       // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_BorderStyle*                     BorderStyle;                                       // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	ETextJustify                                  TextJustification;                                 // 0x0348(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5209[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_517D[0x3];                                     // 0x0349(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         SelectedSlot;                                      // 0x034C(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          UseScrollbar;                                      // 0x0350(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_520A[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_517E[0x7];                                     // 0x0351(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<TSoftObjectPtr<class UWBP_ComboBox_Menu_Option_02_CM_C>> SoftOptionWidgets;                                 // 0x0358(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)
 
 public:

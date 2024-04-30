@@ -41,7 +41,7 @@ public:
 	double                                        RotThreshold;                                      // 0x0338(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          TriggerBell01;                                     // 0x0340(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          TriggerBell02;                                     // 0x0341(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4714[0x6];                                     // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_457E[0x6];                                     // 0x0342(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           GustTimer;                                         // 0x0348(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	double                                        LowEndMaxTickrate;                                 // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 

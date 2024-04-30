@@ -48,7 +48,7 @@ public:
 	TSoftClassPtr<class UClass>                   UXIntentType;                                      // 0x0028(0x0028)(Edit, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class US6RegisterUXActivityFunctor> UXIntentHandlerClass;                              // 0x0050(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TMap<TWeakObjectPtr<class UGameInstance>, struct FGuid> RegisteredUXActivityIdByGameInstance;              // 0x0058(0x0050)(Transient, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D53[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD4[0x8];                                     // 0x00A8(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -92,11 +92,11 @@ static_assert(offsetof(US6UXIntent, InstigatingPC) == 0x000028, "Member 'US6UXIn
 class US6UXIntentSubsystem final  : public UGameInstanceSubsystem
 {
 public:
-	uint8                                         Pad_2D54[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD5[0x8];                                     // 0x0030(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TMap<TSoftClassPtr<class UClass>, struct FGuid> IntentTypesToActivityIds;                          // 0x0038(0x0050)(NativeAccessSpecifierPrivate)
 	TMap<TSoftClassPtr<class UClass>, FMulticastInlineDelegateProperty_> IntentTypesToChangeDelegates;                      // 0x0088(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
 	TMap<struct FGuid, struct FS6RegisteredUXActivity> RegisteredActivitiesMap;                           // 0x00D8(0x0050)(ContainsInstancedReference, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_2D55[0x8];                                     // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2DD6[0x8];                                     // 0x0128(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	bool CanStartUXActivity(TSoftClassPtr<class UClass>& UXIntentType);

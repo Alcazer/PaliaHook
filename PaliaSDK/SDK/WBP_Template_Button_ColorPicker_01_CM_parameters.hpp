@@ -46,12 +46,12 @@ struct WBP_Template_Button_ColorPicker_01_CM_C_ExecuteUbergraph_WBP_Template_But
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_552E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5523[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0008(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventGlobal_ReturnValue_1;              // 0x0014(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_552F[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5524[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button_1;               // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Template_Button_ColorPicker_01_CM_C_ExecuteUbergraph_WBP_Template_Button_ColorPicker_01_CM) == 0x000008, "Wrong alignment on WBP_Template_Button_ColorPicker_01_CM_C_ExecuteUbergraph_WBP_Template_Button_ColorPicker_01_CM");
@@ -104,7 +104,7 @@ struct WBP_Template_Button_ColorPicker_01_CM_C_SetIsSelected final
 {
 public:
 	bool                                          Param_Selected;                                    // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5530[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5525[0xF];                                     // 0x0001(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FButtonStyle                           NewLocalVar_0;                                     // 0x0010(0x03F0)(Edit, BlueprintVisible)
 };
 static_assert(alignof(WBP_Template_Button_ColorPicker_01_CM_C_SetIsSelected) == 0x000010, "Wrong alignment on WBP_Template_Button_ColorPicker_01_CM_C_SetIsSelected");

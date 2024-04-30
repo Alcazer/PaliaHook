@@ -11,11 +11,11 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
+#include "UMG_structs.hpp"
 #include "BP_SocialPanelConfig_structs.hpp"
 #include "CommonWidgetInputExtended_classes.hpp"
+#include "SlateCore_structs.hpp"
 #include "Palia_structs.hpp"
-#include "UMG_structs.hpp"
 
 
 namespace SDK
@@ -59,11 +59,11 @@ public:
 	FMulticastInlineDelegateProperty_             OnCharacterCardBackButtonClicked;                  // 0x0608(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TSet<struct FUniqueNetIdRepl>                 DismissedFriendRequests;                           // 0x0618(0x0050)(Edit, BlueprintVisible, DisableEditOnInstance)
 	int32                                         TotalSocialRequestsCount;                          // 0x0668(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5787[0x4];                                     // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_428A[0x4];                                     // 0x066C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnSocialConnectionRequestsCountChanged;            // 0x0670(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FBP_SocialPanelConfig                  Config;                                            // 0x0680(0x0006)(Edit, BlueprintVisible, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          DebugSimulationEnabled;                            // 0x0686(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5788[0x1];                                     // 0x0687(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_428B[0x1];                                     // 0x0687(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UListItem_SocialConnection_C*>   FakeConnections;                                   // 0x0688(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	FMulticastInlineDelegateProperty_             OnSocialConnectionOnlineFriendsChange;             // 0x0698(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	TArray<class UWidget*>                        TempArray;                                         // 0x06A8(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance, ContainsInstancedReference)

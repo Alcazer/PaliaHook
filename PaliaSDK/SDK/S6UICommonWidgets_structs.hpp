@@ -28,10 +28,10 @@ public:
 	EHorizontalAlignment                          HorizontalAlignment;                               // 0x0020(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	EVerticalAlignment                            VerticalAlignment;                                 // 0x0021(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bApplyAlphaToBlur;                                 // 0x0022(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C10[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C81[0x1];                                     // 0x0023(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         BlurStrength;                                      // 0x0024(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bOverrideAutoRadiusCalculation;                    // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_2C11[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C82[0x3];                                     // 0x0029(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         BlurRadius;                                        // 0x002C(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FSlateBrush                            LowQualityFallbackBrush;                           // 0x0030(0x00D0)(Edit, BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 };
@@ -52,7 +52,7 @@ static_assert(offsetof(FS6UI_BackgroundBlurSettings, LowQualityFallbackBrush) ==
 struct FS6UI_FEditableRichTextStyleRow final  : public FTableRowBase
 {
 public:
-	uint8                                         Pad_2C12[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C83[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FEditableTextStyle                     TextStyle;                                         // 0x0010(0x02F0)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6UI_FEditableRichTextStyleRow) == 0x000010, "Wrong alignment on FS6UI_FEditableRichTextStyleRow");
@@ -79,7 +79,7 @@ static_assert(offsetof(FS6UI_FRichImageRow_Soft, TintColor) == 0x000040, "Member
 struct FS6UI_RichTextHyperlinkStyle final  : public FTableRowBase
 {
 public:
-	uint8                                         Pad_2C13[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_2C84[0x8];                                     // 0x0008(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FHyperlinkStyle                        Style;                                             // 0x0010(0x0750)(Edit, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6UI_RichTextHyperlinkStyle) == 0x000010, "Wrong alignment on FS6UI_RichTextHyperlinkStyle");

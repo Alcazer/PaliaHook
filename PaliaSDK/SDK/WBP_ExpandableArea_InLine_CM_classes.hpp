@@ -34,7 +34,7 @@ public:
 	class FText                                   HeaderText;                                        // 0x0300(0x0018)(Edit, BlueprintVisible)
 	bool                                          Expanded;                                          // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          StartExpanded;                                     // 0x0319(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3CCE[0x6];                                     // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4ADD[0x6];                                     // 0x031A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 ButtonStyle_Expanded;                              // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 ButtonStyle_Collapsed;                             // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnAreaExpanded;                                    // 0x0330(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

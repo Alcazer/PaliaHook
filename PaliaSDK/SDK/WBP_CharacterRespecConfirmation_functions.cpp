@@ -17,113 +17,53 @@
 namespace SDK
 {
 
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.PreConstruct
-// (BlueprintCosmetic, Event, Public, BlueprintEvent)
-// Parameters:
-// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UWBP_CharacterRespecConfirmation_C::PreConstruct(bool IsDesignTime)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "PreConstruct");
-
-	Params::WBP_CharacterRespecConfirmation_C_PreConstruct Parms{};
-
-	Parms.IsDesignTime = IsDesignTime;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.OnConfirm__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UWBP_CharacterRespecConfirmation_C::OnConfirm__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "OnConfirm__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.OnCancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UWBP_CharacterRespecConfirmation_C::OnCancel__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "OnCancel__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature
 // (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_CharacterRespecConfirmation_C::InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+void UWBP_CharacterRespecConfirmation_C::BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature");
 
-	Params::WBP_CharacterRespecConfirmation_C_InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.GetServerResetText
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// class FText                             Result                                                 (Parm, OutParm)
-// struct FDateTime                        CallFunc_GetS6WeeklyResetTime_ReturnValue              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class FText                             CallFunc_AsTimeZoneDate_DateTime_ReturnValue           ()
-// class FText                             CallFunc_GetText_ReturnValue                           ()
-// struct FFormatArgumentData              K2Node_MakeStruct_FormatArgumentData                   (HasGetValueTypeHash)
-// TArray<struct FFormatArgumentData>      K2Node_MakeArray_Array                                 (ReferenceParm)
-// class FText                             CallFunc_Format_ReturnValue                            ()
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_CharacterRespecConfirmation_C::GetServerResetText(class FText* Result, const struct FDateTime& CallFunc_GetS6WeeklyResetTime_ReturnValue, class FText CallFunc_AsTimeZoneDate_DateTime_ReturnValue, class FText CallFunc_GetText_ReturnValue, const struct FFormatArgumentData& K2Node_MakeStruct_FormatArgumentData, TArray<struct FFormatArgumentData>& K2Node_MakeArray_Array, class FText CallFunc_Format_ReturnValue)
+void UWBP_CharacterRespecConfirmation_C::BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "GetServerResetText");
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature");
 
-	Params::WBP_CharacterRespecConfirmation_C_GetServerResetText Parms{};
+	UObject::ProcessEvent(Func, nullptr);
+}
 
-	Parms.CallFunc_GetS6WeeklyResetTime_ReturnValue = std::move(CallFunc_GetS6WeeklyResetTime_ReturnValue);
-	Parms.CallFunc_AsTimeZoneDate_DateTime_ReturnValue = CallFunc_AsTimeZoneDate_DateTime_ReturnValue;
-	Parms.CallFunc_GetText_ReturnValue = CallFunc_GetText_ReturnValue;
-	Parms.K2Node_MakeStruct_FormatArgumentData = std::move(K2Node_MakeStruct_FormatArgumentData);
-	Parms.K2Node_MakeArray_Array = std::move(K2Node_MakeArray_Array);
-	Parms.CallFunc_Format_ReturnValue = CallFunc_Format_ReturnValue;
+
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.CloseSelf
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class APlayerController*                CallFunc_GetOwningPlayer_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class US6UI_UIManagerWidgetBase*        CallFunc_GetUIManagerWidget_ReturnValue                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CharacterRespecConfirmation_C::CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "CloseSelf");
+
+	Params::WBP_CharacterRespecConfirmation_C_CloseSelf Parms{};
+
+	Parms.CallFunc_GetOwningPlayer_ReturnValue = CallFunc_GetOwningPlayer_ReturnValue;
+	Parms.CallFunc_GetUIManagerWidget_ReturnValue = CallFunc_GetUIManagerWidget_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
-
-	K2Node_MakeArray_Array = std::move(Parms.K2Node_MakeArray_Array);
-
-	if (Result != nullptr)
-		*Result = Parms.Result;
 }
 
 
@@ -173,53 +113,113 @@ void UWBP_CharacterRespecConfirmation_C::ExecuteUbergraph_WBP_CharacterRespecCon
 }
 
 
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.CloseSelf
-// (Public, BlueprintCallable, BlueprintEvent)
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.GetServerResetText
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
 // Parameters:
-// class APlayerController*                CallFunc_GetOwningPlayer_ReturnValue                   (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class US6UI_UIManagerWidgetBase*        CallFunc_GetUIManagerWidget_ReturnValue                (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class FText                             Result                                                 (Parm, OutParm)
+// struct FDateTime                        CallFunc_GetS6WeeklyResetTime_ReturnValue              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class FText                             CallFunc_AsTimeZoneDate_DateTime_ReturnValue           ()
+// class FText                             CallFunc_GetText_ReturnValue                           ()
+// struct FFormatArgumentData              K2Node_MakeStruct_FormatArgumentData                   (HasGetValueTypeHash)
+// TArray<struct FFormatArgumentData>      K2Node_MakeArray_Array                                 (ReferenceParm)
+// class FText                             CallFunc_Format_ReturnValue                            ()
 
-void UWBP_CharacterRespecConfirmation_C::CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue)
+void UWBP_CharacterRespecConfirmation_C::GetServerResetText(class FText* Result, const struct FDateTime& CallFunc_GetS6WeeklyResetTime_ReturnValue, class FText CallFunc_AsTimeZoneDate_DateTime_ReturnValue, class FText CallFunc_GetText_ReturnValue, const struct FFormatArgumentData& K2Node_MakeStruct_FormatArgumentData, TArray<struct FFormatArgumentData>& K2Node_MakeArray_Array, class FText CallFunc_Format_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "CloseSelf");
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "GetServerResetText");
 
-	Params::WBP_CharacterRespecConfirmation_C_CloseSelf Parms{};
+	Params::WBP_CharacterRespecConfirmation_C_GetServerResetText Parms{};
 
-	Parms.CallFunc_GetOwningPlayer_ReturnValue = CallFunc_GetOwningPlayer_ReturnValue;
-	Parms.CallFunc_GetUIManagerWidget_ReturnValue = CallFunc_GetUIManagerWidget_ReturnValue;
+	Parms.CallFunc_GetS6WeeklyResetTime_ReturnValue = std::move(CallFunc_GetS6WeeklyResetTime_ReturnValue);
+	Parms.CallFunc_AsTimeZoneDate_DateTime_ReturnValue = CallFunc_AsTimeZoneDate_DateTime_ReturnValue;
+	Parms.CallFunc_GetText_ReturnValue = CallFunc_GetText_ReturnValue;
+	Parms.K2Node_MakeStruct_FormatArgumentData = std::move(K2Node_MakeStruct_FormatArgumentData);
+	Parms.K2Node_MakeArray_Array = std::move(K2Node_MakeArray_Array);
+	Parms.CallFunc_Format_ReturnValue = CallFunc_Format_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	K2Node_MakeArray_Array = std::move(Parms.K2Node_MakeArray_Array);
+
+	if (Result != nullptr)
+		*Result = Parms.Result;
+}
+
+
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CharacterRespecConfirmation_C::InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WBP_CharacterRespecConfirmation_C_InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
 
 
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.OnCancel__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_CharacterRespecConfirmation_C::BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature()
+void UWBP_CharacterRespecConfirmation_C::OnCancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature");
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "OnCancel__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.OnConfirm__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_CharacterRespecConfirmation_C::BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature()
+void UWBP_CharacterRespecConfirmation_C::OnConfirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "OnConfirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function WBP_CharacterRespecConfirmation.WBP_CharacterRespecConfirmation_C.PreConstruct
+// (BlueprintCosmetic, Event, Public, BlueprintEvent)
+// Parameters:
+// bool                                    IsDesignTime                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_CharacterRespecConfirmation_C::PreConstruct(bool IsDesignTime)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_CharacterRespecConfirmation_C", "PreConstruct");
+
+	Params::WBP_CharacterRespecConfirmation_C_PreConstruct Parms{};
+
+	Parms.IsDesignTime = IsDesignTime;
+
+	UObject::ProcessEvent(Func, &Parms);
 }
 
 }

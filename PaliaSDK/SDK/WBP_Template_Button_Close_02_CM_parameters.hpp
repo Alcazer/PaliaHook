@@ -21,7 +21,7 @@ struct WBP_Template_Button_Close_02_CM_C_ExecuteUbergraph_WBP_Template_Button_Cl
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Event_IsDesignTime;                         // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_54BF[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5481[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Template_Button_Close_02_CM_C_ExecuteUbergraph_WBP_Template_Button_Close_02_CM) == 0x000004, "Wrong alignment on WBP_Template_Button_Close_02_CM_C_ExecuteUbergraph_WBP_Template_Button_Close_02_CM");

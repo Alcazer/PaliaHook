@@ -10,12 +10,12 @@
 
 #include "Basic.hpp"
 
-#include "F_CommonUIButtonPrompt_structs.hpp"
 #include "UMG_structs.hpp"
 #include "OnlineSubsystemValeria_structs.hpp"
 #include "SlateCore_structs.hpp"
-#include "Engine_structs.hpp"
 #include "CoreUObject_structs.hpp"
+#include "F_CommonUIButtonPrompt_structs.hpp"
+#include "Engine_structs.hpp"
 
 
 namespace SDK::Params
@@ -40,16 +40,16 @@ public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_CustomEvent_AccountId_1;                    // 0x0004(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  K2Node_CustomEvent_AccountId;                      // 0x0014(0x0010)(ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508E[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53C6[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FOSSVAL_CharacterNameAndId>     K2Node_CustomEvent_Names;                          // 0x0028(0x0010)(ConstParm, ReferenceParm)
 	TDelegate<void(struct FGuid& AccountId, TArray<struct FOSSVAL_CharacterNameAndId>& Names)> K2Node_CreateDelegate_OutputDelegate;              // 0x0038(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TArray<struct FOSSVAL_CharacterNameAndId>     Temp_struct_Variable;                              // 0x0048(0x0010)(ReferenceParm)
 	struct FGuid                                  Temp_struct_Variable_1;                            // 0x0058(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(struct FGuid& AccountId)>      K2Node_CreateDelegate_OutputDelegate_1;            // 0x0068(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0078(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_508F[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53C7[0x3];                                     // 0x0079(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const TSet<struct FUniqueNetIdRepl>& PlayerCharacterIds)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x007C(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5090[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53C8[0x4];                                     // 0x008C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAuthManager*                           CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(const TSet<struct FUniqueNetIdRepl>& PlayerCharacterIds)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x0098(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FUniqueNetIdRepl                       CallFunc_GetNetId_ReturnValue;                     // 0x00A8(0x0030)(HasGetValueTypeHash)
@@ -58,7 +58,7 @@ public:
 	bool                                          CallFunc_WhoWantsFriendship_bHasResult;            // 0x00F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_WhoWantsFriendship_bDoWeWantFriendship;   // 0x00F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_WhoWantsFriendship_bDoTheyWantFriendship; // 0x00FA(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5091[0x5];                                     // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53C9[0x5];                                     // 0x00FB(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0100(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue_2;    // 0x0108(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -67,15 +67,15 @@ public:
 	bool                                          CallFunc_WhoWantsFriendship_bDoWeWantFriendship_1; // 0x0113(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_WhoWantsFriendship_bDoTheyWantFriendship_1; // 0x0114(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Not_PreBool_ReturnValue;                  // 0x0115(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5092[0x2];                                     // 0x0116(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CA[0x2];                                     // 0x0116(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue_3;    // 0x0118(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FGuid                                  CallFunc_GetAccountId_ReturnValue;                 // 0x0120(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_RequestFriendshipWithPlayer_ReturnValue;  // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5093[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CB[0x7];                                     // 0x0131(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UOSSVAL_GetCharacterNamesByAccountIdProxy* CallFunc_GetCharacterNamesByAccountId_ReturnValue; // 0x0138(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UCommonButtonBase*                      K2Node_ComponentBoundEvent_Button;                 // 0x0140(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0148(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5094[0x3];                                     // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CC[0x3];                                     // 0x0149(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFocusEvent                            K2Node_Event_InFocusEvent;                         // 0x014C(0x0008)(NoDestructor)
 };
 static_assert(alignof(WBP_PlayerCharacterRow_Button_Friend_CM_C_ExecuteUbergraph_WBP_PlayerCharacterRow_Button_Friend_CM) == 0x000008, "Wrong alignment on WBP_PlayerCharacterRow_Button_Friend_CM_C_ExecuteUbergraph_WBP_PlayerCharacterRow_Button_Friend_CM");
@@ -250,17 +250,17 @@ public:
 	bool                                          bDoTheyWantFriendship;                             // 0x0002(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDoTheyWantFriendship_Local;                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bDoWeWantFriendship_Local;                         // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5095[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CD[0x3];                                     // 0x0005(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue;      // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue_1;    // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSet<struct FUniqueNetIdRepl>                 CallFunc_TryGetOutgoingFriendRequests_OutFriendRequests; // 0x0018(0x0050)()
 	bool                                          CallFunc_TryGetOutgoingFriendRequests_ReturnValue; // 0x0068(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5096[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CE[0x7];                                     // 0x0069(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<struct FUniqueNetIdRepl>                 CallFunc_TryGetReciprocalFriendRequests_OutFriendRequests; // 0x0070(0x0050)()
 	bool                                          CallFunc_TryGetReciprocalFriendRequests_ReturnValue; // 0x00C0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue;                 // 0x00C1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Set_Contains_ReturnValue_1;               // 0x00C2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5097[0x5];                                     // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_53CF[0x5];                                     // 0x00C3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_FriendsManager*                    CallFunc_GetLocalPlayerSubsystem_ReturnValue_2;    // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TSet<struct FUniqueNetIdRepl>                 CallFunc_TryGetIncomingFriendRequests_OutFriendRequests; // 0x00D0(0x0050)()
 	bool                                          CallFunc_TryGetIncomingFriendRequests_ReturnValue; // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

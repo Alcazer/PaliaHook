@@ -10,8 +10,8 @@
 
 #include "Basic.hpp"
 
-#include "MenuHubListEntryStruct_structs.hpp"
 #include "CoreUObject_classes.hpp"
+#include "MenuHubListEntryStruct_structs.hpp"
 
 
 namespace SDK

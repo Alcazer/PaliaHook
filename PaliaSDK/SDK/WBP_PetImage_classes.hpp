@@ -31,7 +31,7 @@ public:
 	TSoftObjectPtr<class UVAL_CharacterCustomizationItem_Pet> PetItem;                                           // 0x02E0(0x0028)(Edit, BlueprintVisible, ExposeOnSpawn, HasGetValueTypeHash)
 	struct FVector2D                              Size;                                              // 0x0308(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 	bool                                          Show_Pet_Name;                                     // 0x0318(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
-	uint8                                         Pad_4286[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4199[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVAL_CharacterCustomizationItem_Pet*    Loaded_Pet;                                        // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_BorderStyle*                     PetBorderStyle;                                    // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, ExposeOnSpawn, HasGetValueTypeHash)
 

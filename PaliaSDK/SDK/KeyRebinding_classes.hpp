@@ -34,7 +34,7 @@ class UBindingKeyListenerWidget : public US6UI_ModalWidgetBase
 {
 public:
 	FMulticastInlineDelegateProperty_             OnAnyKeyTriggered;                                 // 0x0558(0x0010)(ZeroConstructor, InstancedReference, BlueprintAssignable, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E20[0x48];                                    // 0x0568(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E26[0x48];                                    // 0x0568(0x0048)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void DisableInput();
@@ -102,7 +102,7 @@ static_assert(offsetof(UCommonInputActionWidget, SpecialGameplayTag) == 0x0002E8
 class UEnhancedInputSubsystemWithKeyRebinding final  : public US6EnhancedInputExtendedSubsystem
 {
 public:
-	uint8                                         Pad_1E21[0x8];                                     // 0x0248(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E27[0x8];                                     // 0x0248(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UInputMappingContext*>           AppliedIMC;                                        // 0x0250(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
 
 public:
@@ -124,7 +124,7 @@ static_assert(offsetof(UEnhancedInputSubsystemWithKeyRebinding, AppliedIMC) == 0
 class UKeyRebindingRichTextBlockDecorator_KeyIcon : public URichTextBlockDecorator
 {
 public:
-	uint8                                         Pad_1E22[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E28[0x8];                                     // 0x0028(0x0008)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FSlateBrush                            MissingTexture;                                    // 0x0030(0x00D0)(Edit, Protected, NativeAccessSpecifierProtected)
 
 public:
@@ -167,7 +167,7 @@ public:
 	TArray<class UInputAction*>                   InputActions;                                      // 0x02C8(0x0010)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, UObjectWrapper, NativeAccessSpecifierPublic)
 	bool                                          bIsCoreActon;                                      // 0x02D8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonInputType                              CurrentInputType;                                  // 0x02D9(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E23[0x6];                                     // 0x02DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E29[0x6];                                     // 0x02DA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKey>                           UnBoundKeys;                                       // 0x02E0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	TArray<struct FKey>                           SpecialKeys;                                       // 0x02F0(0x0010)(BlueprintVisible, ZeroConstructor, NativeAccessSpecifierPublic)
 	class FText                                   ActionDescription;                                 // 0x0300(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
@@ -213,10 +213,10 @@ class UKeyRebindGroupWidget : public UUserWidget
 public:
 	TSubclassOf<class UKeyRebindGroupEntryWidget> KeyRebindGroupEntryWidgetType;                     // 0x02C0(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonInputType                              CurrentInputType;                                  // 0x02C8(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E27[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E2D[0x7];                                     // 0x02C9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   GroupHeaderText;                                   // 0x02D0(0x0018)(BlueprintVisible, BlueprintReadOnly, NativeAccessSpecifierPublic)
 	int32                                         GroupID;                                           // 0x02E8(0x0004)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E28[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E2E[0x4];                                     // 0x02EC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UKeyRebindGroupEntryWidget*>     KeyRebindGroupEntryWidgets;                        // 0x02F0(0x0010)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, ContainsInstancedReference, UObjectWrapper, NativeAccessSpecifierPublic)
 	TWeakObjectPtr<class UKeyRebindSettingsWidgetBase> OwnerMenu;                                         // 0x0300(0x0008)(ExportObject, ZeroConstructor, Transient, InstancedReference, IsPlainOldData, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPrivate)
 
@@ -250,12 +250,12 @@ class UKeyRebindingDataset final  : public UDataAsset
 public:
 	int32                                         Version;                                           // 0x0030(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ECommonInputType                              InputType;                                         // 0x0034(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1E2A[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E30[0x3];                                     // 0x0035(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FKeyRebind_KeyMappingEntry>     KeyRebindingMappings;                              // 0x0038(0x0010)(Edit, ZeroConstructor, ContainsInstancedReference, Protected, NativeAccessSpecifierProtected)
 	TArray<struct FKey>                           UnAvailableKeySet;                                 // 0x0048(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
 	class UInputMappingContext*                   IMCOfChordAction;                                  // 0x0058(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	int32                                         KeySlotNum;                                        // 0x0060(0x0004)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1E2B[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E31[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FKeyRebind_InvertControlStickSettings  InvertControlStickSettings;                        // 0x0068(0x0010)(Edit, Protected, NativeAccessSpecifierProtected)
 	class UStringTable*                           GroupTable;                                        // 0x0078(0x0008)(Edit, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	TArray<struct FKey>                           UnBoundKeys;                                       // 0x0080(0x0010)(Edit, ZeroConstructor, Protected, NativeAccessSpecifierProtected)
@@ -291,7 +291,7 @@ class UKeyRebindingDatasetSettings final  : public UDeveloperSettings
 public:
 	TSoftClassPtr<class UClass>                   CustomKeyMappingDataProviderClass;                 // 0x0038(0x0028)(Edit, Config, NoClear, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         TipDelayTime;                                      // 0x0060(0x0004)(Edit, ZeroConstructor, Config, NoClear, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E2C[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E32[0x4];                                     // 0x0064(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FPerPlatformSettings                   PlatformSettings;                                  // 0x0068(0x0010)(Edit, ContainsInstancedReference, NativeAccessSpecifierPublic)
 
 public:
@@ -437,13 +437,13 @@ public:
 	TSubclassOf<class UBindingKeyListenerWidget>  KeyRebindListenerWidgetClass;                      // 0x0510(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TSubclassOf<class UKeyRebindGroupWidget>      KeyRebindGroupWidgetType;                          // 0x0518(0x0008)(Edit, ZeroConstructor, NoDestructor, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ECommonInputType                              CurrentInputType;                                  // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1E45[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E4B[0x7];                                     // 0x0521(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UBindingKeyListenerWidget*              KeyRebindListenerWidget;                           // 0x0528(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, InstancedReference, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	class UInputAction*                           CurrentInputAction;                                // 0x0530(0x0008)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, Protected, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	EKeyRebind_KeySlot                            CurrentSlotNum;                                    // 0x0538(0x0001)(BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1E46[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E4C[0x7];                                     // 0x0539(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class UKeyRebindGroupWidget*>          KeyRebindGroupWidgets;                             // 0x0540(0x0010)(BlueprintVisible, ExportObject, ZeroConstructor, ContainsInstancedReference, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1E47[0x8];                                     // 0x0550(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1E4D[0x8];                                     // 0x0550(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void ApplyCustomConfig();

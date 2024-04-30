@@ -73,7 +73,7 @@ struct FAsyncReadPixelsRequest final
 {
 public:
 	class UTextureRenderTarget2D*                 RenderTarget;                                      // 0x0000(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C5C[0x30];                                    // 0x0008(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C20[0x30];                                    // 0x0008(0x0030)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FAsyncReadPixelsRequest) == 0x000008, "Wrong alignment on FAsyncReadPixelsRequest");
 static_assert(sizeof(FAsyncReadPixelsRequest) == 0x000038, "Wrong size on FAsyncReadPixelsRequest");
@@ -96,7 +96,7 @@ struct FSingleTagFilter final
 {
 public:
 	ESingleTagFilterType                          Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C5D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C21[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTagList                               GameplayTags;                                      // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FSingleTagFilter) == 0x000008, "Wrong alignment on FSingleTagFilter");
@@ -110,7 +110,7 @@ struct FTagFilter final
 {
 public:
 	ETagFilterType                                Type;                                              // 0x0000(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C5E[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C22[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTagList                               GameplayTags;                                      // 0x0008(0x0020)(Edit, BlueprintVisible, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FTagFilter) == 0x000008, "Wrong alignment on FTagFilter");
@@ -124,7 +124,7 @@ struct FS6AsyncReadPixels final
 {
 public:
 	TArray<struct FAsyncReadPixelsRequest>        Queued;                                            // 0x0000(0x0010)(ZeroConstructor, NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1C5F[0x40];                                    // 0x0010(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C23[0x40];                                    // 0x0010(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6AsyncReadPixels) == 0x000008, "Wrong alignment on FS6AsyncReadPixels");
 static_assert(sizeof(FS6AsyncReadPixels) == 0x000050, "Wrong size on FS6AsyncReadPixels");
@@ -205,7 +205,7 @@ struct FS6HAREntry final
 public:
 	class FString                                 StartedDateTime;                                   // 0x0000(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Time;                                              // 0x0010(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1C60[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C24[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FS6HARRequest                          Request;                                           // 0x0018(0x0088)(NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6HAREntry) == 0x000008, "Wrong alignment on FS6HAREntry");

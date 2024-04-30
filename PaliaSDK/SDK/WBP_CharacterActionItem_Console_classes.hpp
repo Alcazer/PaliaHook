@@ -35,7 +35,7 @@ public:
 	bool                                          bLeftSideTips;                                     // 0x0300(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bShowAmmo;                                         // 0x0301(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          bPressed;                                          // 0x0302(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA0[0x5];                                     // 0x0303(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E6B[0x5];                                     // 0x0303(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class UTexture2D*                             ActionIconTexure2D;                                // 0x0308(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	FMulticastInlineDelegateProperty_             OnPressedEvent;                                    // 0x0310(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnReleasedEvent;                                   // 0x0320(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
@@ -48,11 +48,11 @@ public:
 	class UVALUI_ImageStyle*                      ActionBGPreleasedStyle;                            // 0x0360(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsKeepState;                                       // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsRotationMirrorReversal;                          // 0x0369(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA1[0x6];                                     // 0x036A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E6C[0x6];                                     // 0x036A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputMappingContext*                   DefaultIMCFallback;                                // 0x0370(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	struct FValeriaItem                           LastAmmoItem;                                      // 0x0378(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          LastShowAmount;                                    // 0x03D8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FA2[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E6D[0x7];                                     // 0x03D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FValeriaItem                           LastToolItem;                                      // 0x03E0(0x0060)(Edit, BlueprintVisible, DisableEditOnInstance)
 
 public:

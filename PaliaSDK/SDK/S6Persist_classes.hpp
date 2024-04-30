@@ -26,15 +26,15 @@ class US6PersistConfiguration final  : public UDeveloperSettings
 public:
 	ES6PersistConfigurationSerializationFormat    Format;                                            // 0x0038(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6PersistConfigurationStorageLocation        Location;                                          // 0x0039(0x0001)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBA[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C84[0x2];                                     // 0x003A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	float                                         PersistInterval;                                   // 0x003C(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         BatchSizeLimitKB;                                  // 0x0040(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         MaxSyncRetries;                                    // 0x0044(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         OperationsPerBatchLimit;                           // 0x0048(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBB[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C85[0x4];                                     // 0x004C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FDirectoryPath                         DiskPersistDirectory;                              // 0x0050(0x0010)(Edit, ZeroConstructor, Config, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	float                                         FlushTimeHardLimitSeconds;                         // 0x0060(0x0004)(Edit, ZeroConstructor, Config, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CBC[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C86[0x4];                                     // 0x0064(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()
@@ -64,7 +64,7 @@ class US6PersistSubsystem final  : public UGameInstanceSubsystem
 public:
 	struct FS6PersistOperationSet                 QueuedOperationSet;                                // 0x0030(0x0078)(NativeAccessSpecifierPrivate)
 	struct FS6PersistOperationSet                 PendingOperationSet;                               // 0x00A8(0x0078)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CBD[0x90];                                    // 0x0120(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C87[0x90];                                    // 0x0120(0x0090)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	void HandlePendingOpSetComplete(bool bSuccess);

@@ -11,35 +11,29 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "UMG_classes.hpp"
+#include "CommonUI_classes.hpp"
 
 
 namespace SDK
 {
 
 // WidgetBlueprintGeneratedClass WBP_TextButton_CM.WBP_TextButton_CM_C
-// 0x0070 (0x0330 - 0x02C0)
-class WBP_TextButton_CM::UWBP_TextButton_CM_C final  : public UUserWidget
+// 0x0050 (0x1590 - 0x1540)
+class WBP_TextButton_CM::UWBP_TextButton_CM_C final  : public UCommonButtonBase
 {
 public:
-	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x02C0(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
-	class UVALUI_Button_Styled*                   Button;                                            // 0x02C8(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	class UVALUI_RichTextBlock_Styled*            RichTextStyled;                                    // 0x02D0(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
-	FMulticastInlineDelegateProperty_             ButtonClicked;                                     // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             ButtonHovered;                                     // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	FMulticastInlineDelegateProperty_             ButtonUnhovered;                                   // 0x02F8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
-	class FText                                   ButtonText;                                        // 0x0308(0x0018)(Edit, BlueprintVisible)
-	class UVALUI_RichTextBlockStyle*              NormalRichTextStyle;                               // 0x0320(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UVALUI_RichTextBlockStyle*              HoveredRichTextStyle;                              // 0x0328(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FPointerToUberGraphFrame               UberGraphFrame;                                    // 0x1540(0x0008)(ZeroConstructor, Transient, DuplicateTransient)
+	class UCommonActionWidget*                    CommonActionWidget;                                // 0x1548(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class UVALUI_RichTextBlock_Styled*            RichTextStyled;                                    // 0x1550(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
+	class FText                                   ButtonText;                                        // 0x1558(0x0018)(Edit, BlueprintVisible)
+	class UVALUI_RichTextBlockStyle*              NormalRichTextStyle;                               // 0x1570(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UVALUI_RichTextBlockStyle*              HoveredRichTextStyle;                              // 0x1578(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          bShowAction;                                       // 0x1580(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_0_OnButtonClickedEvent__DelegateSignature();
-	void BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_1_OnButtonHoverEvent__DelegateSignature();
-	void BndEvt__WBP_TextButton_VALUI_Button_Styled_46_K2Node_ComponentBoundEvent_2_OnButtonHoverEvent__DelegateSignature();
-	void ButtonClicked__DelegateSignature();
-	void ButtonHovered__DelegateSignature();
-	void ButtonUnhovered__DelegateSignature();
-	void ExecuteUbergraph_WBP_TextButton_CM(int32 EntryPoint, bool K2Node_Event_IsDesignTime);
+	void BP_OnHovered();
+	void BP_OnUnhovered();
+	void ExecuteUbergraph_WBP_TextButton_CM(int32 EntryPoint, bool K2Node_Event_IsDesignTime, class UInputAction* CallFunc_GetEnhancedInputAction_ReturnValue);
 	void PreConstruct(bool IsDesignTime);
 	void SetText(class FText New_Text);
 
@@ -53,17 +47,15 @@ public:
 		return GetDefaultObjImpl<WBP_TextButton_CM::UWBP_TextButton_CM_C>();
 	}
 };
-static_assert(alignof(WBP_TextButton_CM::UWBP_TextButton_CM_C) == 0x000008, "Wrong alignment on WBP_TextButton_CM::UWBP_TextButton_CM_C");
-static_assert(sizeof(WBP_TextButton_CM::UWBP_TextButton_CM_C) == 0x000330, "Wrong size on WBP_TextButton_CM::UWBP_TextButton_CM_C");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, UberGraphFrame) == 0x0002C0, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::UberGraphFrame' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, Button) == 0x0002C8, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::Button' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, RichTextStyled) == 0x0002D0, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::RichTextStyled' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, ButtonClicked) == 0x0002D8, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::ButtonClicked' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, ButtonHovered) == 0x0002E8, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::ButtonHovered' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, ButtonUnhovered) == 0x0002F8, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::ButtonUnhovered' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, ButtonText) == 0x000308, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::ButtonText' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, NormalRichTextStyle) == 0x000320, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::NormalRichTextStyle' has a wrong offset!");
-static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, HoveredRichTextStyle) == 0x000328, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::HoveredRichTextStyle' has a wrong offset!");
+static_assert(alignof(WBP_TextButton_CM::UWBP_TextButton_CM_C) == 0x000010, "Wrong alignment on WBP_TextButton_CM::UWBP_TextButton_CM_C");
+static_assert(sizeof(WBP_TextButton_CM::UWBP_TextButton_CM_C) == 0x001590, "Wrong size on WBP_TextButton_CM::UWBP_TextButton_CM_C");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, UberGraphFrame) == 0x001540, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::UberGraphFrame' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, CommonActionWidget) == 0x001548, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::CommonActionWidget' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, RichTextStyled) == 0x001550, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::RichTextStyled' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, ButtonText) == 0x001558, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::ButtonText' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, NormalRichTextStyle) == 0x001570, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::NormalRichTextStyle' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, HoveredRichTextStyle) == 0x001578, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::HoveredRichTextStyle' has a wrong offset!");
+static_assert(offsetof(WBP_TextButton_CM::UWBP_TextButton_CM_C, bShowAction) == 0x001580, "Member 'WBP_TextButton_CM::UWBP_TextButton_CM_C::bShowAction' has a wrong offset!");
 
 }
 

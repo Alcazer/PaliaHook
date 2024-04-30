@@ -29,15 +29,15 @@ public:
 	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 
 public:
-	void PreConstruct(bool IsDesignTime);
-	void OnConfirm__DelegateSignature();
-	void OnCancel__DelegateSignature();
-	void InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction);
-	void GetServerResetText(class FText* Result, const struct FDateTime& CallFunc_GetS6WeeklyResetTime_ReturnValue, class FText CallFunc_AsTimeZoneDate_DateTime_ReturnValue, class FText CallFunc_GetText_ReturnValue, const struct FFormatArgumentData& K2Node_MakeStruct_FormatArgumentData, TArray<struct FFormatArgumentData>& K2Node_MakeArray_Array, class FText CallFunc_Format_ReturnValue);
-	void ExecuteUbergraph_WBP_CharacterRespecConfirmation(int32 EntryPoint, const struct FInputActionValue& K2Node_EnhancedInputActionEvent_ActionValue, float K2Node_EnhancedInputActionEvent_ElapsedTime, float K2Node_EnhancedInputActionEvent_TriggeredTime, class UInputAction* K2Node_EnhancedInputActionEvent_SourceAction, class UInputAction* Temp_object_Variable, bool CallFunc_Conv_InputActionValueToBool_ReturnValue, double Temp_real_Variable, double Temp_real_Variable_1, double Temp_real_Variable_0, double Temp_real_Variable_1_0, bool Temp_bool_Variable, bool K2Node_Event_IsDesignTime, class FText CallFunc_GetServerResetText_Result);
-	void CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
-	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
 	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Confirm__DelegateSignature();
+	void BndEvt__WBP_CharacterRespecConfirmation_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Cancel__DelegateSignature();
+	void CloseSelf(class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue);
+	void ExecuteUbergraph_WBP_CharacterRespecConfirmation(int32 EntryPoint, const struct FInputActionValue& K2Node_EnhancedInputActionEvent_ActionValue, float K2Node_EnhancedInputActionEvent_ElapsedTime, float K2Node_EnhancedInputActionEvent_TriggeredTime, class UInputAction* K2Node_EnhancedInputActionEvent_SourceAction, class UInputAction* Temp_object_Variable, bool CallFunc_Conv_InputActionValueToBool_ReturnValue, double Temp_real_Variable, double Temp_real_Variable_1, double Temp_real_Variable_0, double Temp_real_Variable_1_0, bool Temp_bool_Variable, bool K2Node_Event_IsDesignTime, class FText CallFunc_GetServerResetText_Result);
+	void GetServerResetText(class FText* Result, const struct FDateTime& CallFunc_GetS6WeeklyResetTime_ReturnValue, class FText CallFunc_AsTimeZoneDate_DateTime_ReturnValue, class FText CallFunc_GetText_ReturnValue, const struct FFormatArgumentData& K2Node_MakeStruct_FormatArgumentData, TArray<struct FFormatArgumentData>& K2Node_MakeArray_Array, class FText CallFunc_Format_ReturnValue);
+	void InpActEvt_IA_UI_GenericAccept_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction);
+	void OnCancel__DelegateSignature();
+	void OnConfirm__DelegateSignature();
+	void PreConstruct(bool IsDesignTime);
 
 public:
 	static class UClass* StaticClass()

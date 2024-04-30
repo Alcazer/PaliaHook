@@ -102,14 +102,14 @@ struct FS6UI_NavigationGroupTranstionData final
 {
 public:
 	EUINavigation                                 Navigation;                                        // 0x0000(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DEC[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF2[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         OriginalWidgetID;                                  // 0x0004(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6UI_DynamicGridEdge                         OriginDynamicGridEdge;                             // 0x0008(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DED[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF3[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class US6UI_CustomNavigationGroup> TargetNavigationGroup;                             // 0x0010(0x0028)(BlueprintVisible, ExportObject, InstancedReference, UObjectWrapper, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         TargetWidgetID;                                    // 0x0038(0x0004)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ES6UI_DynamicGridEdge                         TargetDynamicGridEdge;                             // 0x003C(0x0001)(BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DEE[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF4[0x3];                                     // 0x003D(0x0003)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6UI_NavigationGroupTranstionData) == 0x000008, "Wrong alignment on FS6UI_NavigationGroupTranstionData");
 static_assert(sizeof(FS6UI_NavigationGroupTranstionData) == 0x000040, "Wrong size on FS6UI_NavigationGroupTranstionData");
@@ -126,7 +126,7 @@ struct FS6UI_ContextMenu final
 {
 public:
 	class UUserWidget*                            MenuContentWidget;                                 // 0x0000(0x0008)(Edit, BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, EditConst, InstancedReference, NoDestructor, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DEF[0x18];                                    // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF5[0x18];                                    // 0x0008(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6UI_ContextMenu) == 0x000008, "Wrong alignment on FS6UI_ContextMenu");
 static_assert(sizeof(FS6UI_ContextMenu) == 0x000020, "Wrong size on FS6UI_ContextMenu");
@@ -140,9 +140,9 @@ public:
 	struct FGuid                                  BindingId;                                         // 0x0000(0x0010)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class UInputAction*                           InputAction;                                       // 0x0010(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	ETriggerEvent                                 TriggerEventType;                                  // 0x0018(0x0001)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF0[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF6[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)> DynamicDelegate;                                   // 0x001C(0x0010)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF1[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF7[0x4];                                     // 0x002C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6UI_RegisteredInputActionBinding) == 0x000008, "Wrong alignment on FS6UI_RegisteredInputActionBinding");
 static_assert(sizeof(FS6UI_RegisteredInputActionBinding) == 0x000030, "Wrong size on FS6UI_RegisteredInputActionBinding");
@@ -158,7 +158,7 @@ struct FS6UI_RegisteredInputMappingContext final
 public:
 	class UInputMappingContext*                   InputMappingContext;                               // 0x0000(0x0008)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	int32                                         Priority;                                          // 0x0008(0x0004)(Edit, BlueprintVisible, BlueprintReadOnly, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF2[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF8[0x4];                                     // 0x000C(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6UI_RegisteredInputMappingContext) == 0x000008, "Wrong alignment on FS6UI_RegisteredInputMappingContext");
 static_assert(sizeof(FS6UI_RegisteredInputMappingContext) == 0x000010, "Wrong size on FS6UI_RegisteredInputMappingContext");
@@ -175,7 +175,7 @@ public:
 	bool                                          bHideCursorDuringCapture;                          // 0x0002(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bShowCursor;                                       // 0x0003(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	bool                                          bBlockHUDInput;                                    // 0x0004(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1DF3[0xB];                                     // 0x0005(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DF9[0xB];                                     // 0x0005(0x000B)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6UI_InputMode) == 0x000004, "Wrong alignment on FS6UI_InputMode");
 static_assert(sizeof(FS6UI_InputMode) == 0x000010, "Wrong size on FS6UI_InputMode");

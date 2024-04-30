@@ -53,7 +53,7 @@ struct Seq_CharSelect_010_DirectorBP_C_ExecuteUbergraph_Seq_CharSelect_010__Dire
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5EBC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5EC2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_2;   // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA_1;   // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_vfx_charCreate_EssenceA_C*          K2Node_CustomEvent_BP_vfx_charCreate_EssenceA;     // 0x0018(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)

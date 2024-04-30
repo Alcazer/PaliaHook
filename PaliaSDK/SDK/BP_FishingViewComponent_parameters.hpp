@@ -10,178 +10,13 @@
 
 #include "Basic.hpp"
 
+#include "Struct_Physmat_structs.hpp"
 #include "Palia_structs.hpp"
 #include "CoreUObject_structs.hpp"
-#include "Struct_Physmat_structs.hpp"
 
 
 namespace SDK::Params
 {
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.Is Bobber in Water?
-// 0x0140 (0x0140 - 0x0000)
-struct BP_FishingViewComponent_C_Is_Bobber_in_Water_ final 
-{
-public:
-	bool                                          IsInWater;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFishingMiniGameState                         Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_4;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_5;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_6;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_7;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_8;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_9;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          Temp_bool_Variable_10;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D0B[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
-	struct FFishingMiniGameViewState              CallFunc_GetViewState_ReturnValue;                 // 0x0010(0x0120)()
-	bool                                          K2Node_Select_Default;                             // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_Is_Bobber_in_Water_) == 0x000010, "Wrong alignment on BP_FishingViewComponent_C_Is_Bobber_in_Water_");
-static_assert(sizeof(BP_FishingViewComponent_C_Is_Bobber_in_Water_) == 0x000140, "Wrong size on BP_FishingViewComponent_C_Is_Bobber_in_Water_");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, IsInWater) == 0x000000, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::IsInWater' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_byte_Variable) == 0x000001, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_byte_Variable' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable) == 0x000002, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_1) == 0x000003, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_1' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_2) == 0x000004, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_2' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_3) == 0x000005, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_3' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_4) == 0x000006, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_4' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_5) == 0x000007, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_5' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_6) == 0x000008, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_6' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_7) == 0x000009, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_7' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_8) == 0x00000A, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_8' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_9) == 0x00000B, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_9' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_10) == 0x00000C, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_10' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, CallFunc_GetViewState_ReturnValue) == 0x000010, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::CallFunc_GetViewState_ReturnValue' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, K2Node_Select_Default) == 0x000130, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::K2Node_Select_Default' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobbleBeforeDestroyed
-// 0x0008 (0x0008 - 0x0000)
-struct BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed final 
-{
-public:
-	class AActor*                                 bobble;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed");
-static_assert(sizeof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed) == 0x000008, "Wrong size on BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed");
-static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed, bobble) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed::bobble' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnNibbled_Event_0
-// 0x0018 (0x0018 - 0x0000)
-struct BP_FishingViewComponent_C_OnNibbled_Event_0 final 
-{
-public:
-	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class UFishingComponent*                      Source;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	int32                                         FishNumber;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnNibbled_Event_0) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnNibbled_Event_0");
-static_assert(sizeof(BP_FishingViewComponent_C_OnNibbled_Event_0) == 0x000018, "Wrong size on BP_FishingViewComponent_C_OnNibbled_Event_0");
-static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::FishingView' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, Source) == 0x000008, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::Source' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, FishNumber) == 0x000010, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::FishNumber' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobberWasCreated_Event_0
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0 final 
-{
-public:
-	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AActor*                                 bobble;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0");
-static_assert(sizeof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0");
-static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0::FishingView' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0, bobble) == 0x000008, "Member 'BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0::bobble' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishIsBitingChanged_Event
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FishingViewComponent_C_OnFishIsBitingChanged_Event final 
-{
-public:
-	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          IsBiting;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishIsBitingChanged_Event");
-static_assert(sizeof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnFishIsBitingChanged_Event");
-static_assert(offsetof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishIsBitingChanged_Event::FishingView' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event, IsBiting) == 0x000008, "Member 'BP_FishingViewComponent_C_OnFishIsBitingChanged_Event::IsBiting' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnViewWasUpdatedEvent
-// 0x0130 (0x0130 - 0x0000)
-struct BP_FishingViewComponent_C_OnViewWasUpdatedEvent final 
-{
-public:
-	struct FFishingMiniGameViewState              ViewState;                                         // 0x0000(0x0120)(BlueprintVisible, BlueprintReadOnly, Parm)
-	class UFishingComponent*                      Source;                                            // 0x0120(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent) == 0x000010, "Wrong alignment on BP_FishingViewComponent_C_OnViewWasUpdatedEvent");
-static_assert(sizeof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent) == 0x000130, "Wrong size on BP_FishingViewComponent_C_OnViewWasUpdatedEvent");
-static_assert(offsetof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent, ViewState) == 0x000000, "Member 'BP_FishingViewComponent_C_OnViewWasUpdatedEvent::ViewState' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent, Source) == 0x000120, "Member 'BP_FishingViewComponent_C_OnViewWasUpdatedEvent::Source' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnMiniGameStateChanged
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FishingViewComponent_C_OnMiniGameStateChanged final 
-{
-public:
-	EFishingMiniGameState                         PreviousState;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	EFishingMiniGameState                         NewState;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D0C[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	class UFishingComponent*                      Source;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnMiniGameStateChanged) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnMiniGameStateChanged");
-static_assert(sizeof(BP_FishingViewComponent_C_OnMiniGameStateChanged) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnMiniGameStateChanged");
-static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, PreviousState) == 0x000000, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::PreviousState' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, NewState) == 0x000001, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::NewState' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, Source) == 0x000008, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::Source' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnBobberHitSomething
-// 0x0038 (0x0038 - 0x0000)
-struct BP_FishingViewComponent_C_OnBobberHitSomething final 
-{
-public:
-	EFishingBobberHitSomethingResult              Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D0D[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	struct FVector                                ImpactPoint;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UPhysicalMaterial*                      PhysMat;                                           // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnBobberHitSomething) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnBobberHitSomething");
-static_assert(sizeof(BP_FishingViewComponent_C_OnBobberHitSomething) == 0x000038, "Wrong size on BP_FishingViewComponent_C_OnBobberHitSomething");
-static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, Result) == 0x000000, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::Result' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, OtherActor) == 0x000008, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::OtherActor' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, OtherComp) == 0x000010, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::OtherComp' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, ImpactPoint) == 0x000018, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::ImpactPoint' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, PhysMat) == 0x000030, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::PhysMat' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnReceivedFishingEncouragement
-// 0x0010 (0x0010 - 0x0000)
-struct BP_FishingViewComponent_C_OnReceivedFishingEncouragement final 
-{
-public:
-	class UFishingComponent*                      Source;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	class AValeriaCharacter*                      FromVc;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnReceivedFishingEncouragement");
-static_assert(sizeof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnReceivedFishingEncouragement");
-static_assert(offsetof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement, Source) == 0x000000, "Member 'BP_FishingViewComponent_C_OnReceivedFishingEncouragement::Source' has a wrong offset!");
-static_assert(offsetof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement, FromVc) == 0x000008, "Member 'BP_FishingViewComponent_C_OnReceivedFishingEncouragement::FromVc' has a wrong offset!");
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReelingChanged__DelegateSignature
-// 0x0001 (0x0001 - 0x0000)
-struct BP_FishingViewComponent_C_ReelingChanged__DelegateSignature final 
-{
-public:
-	bool                                          IsReeling;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature) == 0x000001, "Wrong alignment on BP_FishingViewComponent_C_ReelingChanged__DelegateSignature");
-static_assert(sizeof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature) == 0x000001, "Wrong size on BP_FishingViewComponent_C_ReelingChanged__DelegateSignature");
-static_assert(offsetof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature, IsReeling) == 0x000000, "Member 'BP_FishingViewComponent_C_ReelingChanged__DelegateSignature::IsReeling' has a wrong offset!");
 
 // Function BP_FishingViewComponent.BP_FishingViewComponent_C.ExecuteUbergraph_BP_FishingViewComponent
 // 0x0400 (0x0400 - 0x0000)
@@ -189,50 +24,50 @@ struct BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent final
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D0E[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue;               // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UFishingViewComponent* FishingView, class AActor* bobble)> K2Node_CreateDelegate_OutputDelegate;              // 0x0010(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UFishingViewComponent*                  K2Node_CustomEvent_FishingView_2;                  // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UFishingComponent*                      K2Node_CustomEvent_Source_1;                       // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         K2Node_CustomEvent_fishNumber;                     // 0x0030(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D0F[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E2[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_1;             // 0x0038(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber;                    // 0x0040(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0048(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D10[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E3[0x7];                                     // 0x0049(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_2;             // 0x0050(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_1;                  // 0x0058(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0060(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D11[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E4[0x7];                                     // 0x0061(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_3;             // 0x0068(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x0070(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D12[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E5[0x7];                                     // 0x0071(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_2;                  // 0x0078(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0080(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D13[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E6[0x7];                                     // 0x0081(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_4;             // 0x0088(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetActorFish_ReturnValue;                 // 0x0090(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_3;                  // 0x0098(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_3;                     // 0x00A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D14[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E7[0x7];                                     // 0x00A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_5;             // 0x00A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_4;                  // 0x00B0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_4;                     // 0x00B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D15[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E8[0x7];                                     // 0x00B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFishingViewComponent*                  K2Node_CustomEvent_FishingView_1;                  // 0x00C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 K2Node_CustomEvent_bobble;                         // 0x00C8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UFishingViewComponent*                  K2Node_CustomEvent_FishingView;                    // 0x00D0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_CustomEvent_isBiting;                       // 0x00D8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D16[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49E9[0x7];                                     // 0x00D9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_6;             // 0x00E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_5;                  // 0x00E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_5;                     // 0x00F0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D17[0xF];                                     // 0x00F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49EA[0xF];                                     // 0x00F1(0x000F)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FFishingMiniGameViewState              K2Node_Event_viewState;                            // 0x0100(0x0120)()
 	class UFishingComponent*                      K2Node_Event_source_1;                             // 0x0220(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	EFishingMiniGameState                         K2Node_Event_PreviousState;                        // 0x0228(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EFishingMiniGameState                         K2Node_Event_NewState;                             // 0x0229(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D18[0x6];                                     // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49EB[0x6];                                     // 0x022A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFishingComponent*                      K2Node_Event_source;                               // 0x0230(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0238(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue_1;        // 0x0239(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -245,40 +80,40 @@ public:
 	class AActor*                                 K2Node_Event_bobble;                               // 0x0240(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_IntInt_ReturnValue;            // 0x0248(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_NotEqual_IntInt_ReturnValue;              // 0x0249(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D19[0x6];                                     // 0x024A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49EC[0x6];                                     // 0x024A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue;                     // 0x0250(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventActor_ReturnValue;                 // 0x0258(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1A[0x4];                                     // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49ED[0x4];                                     // 0x025C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorRod_ReturnValue;                  // 0x0260(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_1;                   // 0x0268(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class ABP_Rod_EquipView_C*                    K2Node_DynamicCast_AsBP_Rod_Equip_View;            // 0x0270(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_6;                     // 0x0278(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1B[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49EE[0x7];                                     // 0x0279(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetOwner_ReturnValue_2;                   // 0x0280(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetActorRod_ReturnValue_1;                // 0x0288(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventActor_ReturnValue_1;               // 0x0290(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1C[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49EF[0x4];                                     // 0x0294(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Rod_EquipView_C*                    K2Node_DynamicCast_AsBP_Rod_Equip_View_1;          // 0x0298(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_7;                     // 0x02A0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1D[0x7];                                     // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F0[0x7];                                     // 0x02A1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_7;             // 0x02A8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_1;                    // 0x02B0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EFishingBobberHitSomethingResult              K2Node_Event_Result;                               // 0x02B1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1E[0x6];                                     // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F1[0x6];                                     // 0x02B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AActor*                                 K2Node_Event_OtherActor;                           // 0x02B8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UPrimitiveComponent*                    K2Node_Event_OtherComp;                            // 0x02C0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	struct FVector                                K2Node_Event_ImpactPoint;                          // 0x02C8(0x0018)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UPhysicalMaterial*                      K2Node_Event_PhysMat;                              // 0x02E0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_EqualEqual_ObjectObject_ReturnValue;      // 0x02E8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D1F[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F2[0x7];                                     // 0x02E9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAtLocation_ReturnValue;        // 0x02F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent;              // 0x02F8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventLocation_Playing_ID;               // 0x0300(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D20[0x4];                                     // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F3[0x4];                                     // 0x0304(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UValeriaWaterBodyComponent*             CallFunc_GetComponentByClass_ReturnValue;          // 0x0308(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_8;             // 0x0310(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_2;                    // 0x0318(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D21[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F4[0x7];                                     // 0x0319(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFishingComponent*                      K2Node_CustomEvent_Source;                         // 0x0320(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class AValeriaCharacter*                      K2Node_CustomEvent_fromVc;                         // 0x0328(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UFishingComponent* Source, class AValeriaCharacter* FromVc)> K2Node_CreateDelegate_OutputDelegate_1;            // 0x0330(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -288,24 +123,24 @@ public:
 	class UNiagaraComponent*                      CallFunc_SpawnSystemAttached_ReturnValue;          // 0x0360(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class ABP_ValeriaCharacter_C*                 K2Node_DynamicCast_AsBP_Valeria_Character;         // 0x0368(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_8;                     // 0x0370(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D22[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F5[0x7];                                     // 0x0371(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UFishingComponent*                      CallFunc_GetFishing_ReturnValue;                   // 0x0378(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UFishingViewComponent* FishingView, class UFishingComponent* Source, int32 FishNumber)> K2Node_CreateDelegate_OutputDelegate_2;            // 0x0380(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class AActor*                                 CallFunc_GetActorBobber_ReturnValue_9;             // 0x0390(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_3;                    // 0x0398(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D23[0x7];                                     // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F6[0x7];                                     // 0x0399(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class ABP_Bobber_C*                           K2Node_DynamicCast_AsBP_Bobber_6;                  // 0x03A0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_9;                     // 0x03A8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue_4;                    // 0x03A9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D24[0x2];                                     // 0x03AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F7[0x2];                                     // 0x03AA(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void(class UFishingViewComponent* FishingView, bool IsBiting)> K2Node_CreateDelegate_OutputDelegate_3;            // 0x03AC(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D25[0x4];                                     // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F8[0x4];                                     // 0x03BC(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FStruct_Physmat                        CallFunc_GetSurfaceEffect_Value;                   // 0x03C0(0x0020)(ZeroConstructor, NoDestructor, ContainsInstancedReference, HasGetValueTypeHash)
 	bool                                          CallFunc_GetSurfaceEffect_ReturnValue;             // 0x03E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D26[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49F9[0x7];                                     // 0x03E1(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UAkComponent*                           CallFunc_AkEventLocation_AkComponent_1;            // 0x03E8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_AkEventLocation_Playing_ID_1;             // 0x03F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3D27[0x4];                                     // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_49FA[0x4];                                     // 0x03F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_AkSetRTPC_Value_ImplicitCast;             // 0x03F8(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent) == 0x000010, "Wrong alignment on BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent");
@@ -403,6 +238,171 @@ static_assert(offsetof(BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingView
 static_assert(offsetof(BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent, CallFunc_AkEventLocation_AkComponent_1) == 0x0003E8, "Member 'BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent::CallFunc_AkEventLocation_AkComponent_1' has a wrong offset!");
 static_assert(offsetof(BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent, CallFunc_AkEventLocation_Playing_ID_1) == 0x0003F0, "Member 'BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent::CallFunc_AkEventLocation_Playing_ID_1' has a wrong offset!");
 static_assert(offsetof(BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent, CallFunc_AkSetRTPC_Value_ImplicitCast) == 0x0003F8, "Member 'BP_FishingViewComponent_C_ExecuteUbergraph_BP_FishingViewComponent::CallFunc_AkSetRTPC_Value_ImplicitCast' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.Is Bobber in Water?
+// 0x0140 (0x0140 - 0x0000)
+struct BP_FishingViewComponent_C_Is_Bobber_in_Water_ final 
+{
+public:
+	bool                                          IsInWater;                                         // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFishingMiniGameState                         Temp_byte_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable;                                // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_1;                              // 0x0003(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_2;                              // 0x0004(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_3;                              // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_4;                              // 0x0006(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_5;                              // 0x0007(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_6;                              // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_7;                              // 0x0009(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_8;                              // 0x000A(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_9;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          Temp_bool_Variable_10;                             // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49FB[0x3];                                     // 0x000D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	struct FFishingMiniGameViewState              CallFunc_GetViewState_ReturnValue;                 // 0x0010(0x0120)()
+	bool                                          K2Node_Select_Default;                             // 0x0130(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_Is_Bobber_in_Water_) == 0x000010, "Wrong alignment on BP_FishingViewComponent_C_Is_Bobber_in_Water_");
+static_assert(sizeof(BP_FishingViewComponent_C_Is_Bobber_in_Water_) == 0x000140, "Wrong size on BP_FishingViewComponent_C_Is_Bobber_in_Water_");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, IsInWater) == 0x000000, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::IsInWater' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_byte_Variable) == 0x000001, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_byte_Variable' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable) == 0x000002, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_1) == 0x000003, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_1' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_2) == 0x000004, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_2' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_3) == 0x000005, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_3' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_4) == 0x000006, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_4' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_5) == 0x000007, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_5' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_6) == 0x000008, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_6' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_7) == 0x000009, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_7' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_8) == 0x00000A, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_8' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_9) == 0x00000B, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_9' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, Temp_bool_Variable_10) == 0x00000C, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::Temp_bool_Variable_10' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, CallFunc_GetViewState_ReturnValue) == 0x000010, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::CallFunc_GetViewState_ReturnValue' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_Is_Bobber_in_Water_, K2Node_Select_Default) == 0x000130, "Member 'BP_FishingViewComponent_C_Is_Bobber_in_Water_::K2Node_Select_Default' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnBobberHitSomething
+// 0x0038 (0x0038 - 0x0000)
+struct BP_FishingViewComponent_C_OnBobberHitSomething final 
+{
+public:
+	EFishingBobberHitSomethingResult              Result;                                            // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49FC[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AActor*                                 OtherActor;                                        // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	class UPrimitiveComponent*                    OtherComp;                                         // 0x0010(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	struct FVector                                ImpactPoint;                                       // 0x0018(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UPhysicalMaterial*                      PhysMat;                                           // 0x0030(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnBobberHitSomething) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnBobberHitSomething");
+static_assert(sizeof(BP_FishingViewComponent_C_OnBobberHitSomething) == 0x000038, "Wrong size on BP_FishingViewComponent_C_OnBobberHitSomething");
+static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, Result) == 0x000000, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::Result' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, OtherActor) == 0x000008, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::OtherActor' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, OtherComp) == 0x000010, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::OtherComp' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, ImpactPoint) == 0x000018, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::ImpactPoint' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnBobberHitSomething, PhysMat) == 0x000030, "Member 'BP_FishingViewComponent_C_OnBobberHitSomething::PhysMat' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobberWasCreated_Event_0
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0 final 
+{
+public:
+	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AActor*                                 bobble;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0");
+static_assert(sizeof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0");
+static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0::FishingView' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0, bobble) == 0x000008, "Member 'BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0::bobble' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobbleBeforeDestroyed
+// 0x0008 (0x0008 - 0x0000)
+struct BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed final 
+{
+public:
+	class AActor*                                 bobble;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed");
+static_assert(sizeof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed) == 0x000008, "Wrong size on BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed");
+static_assert(offsetof(BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed, bobble) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed::bobble' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishIsBitingChanged_Event
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FishingViewComponent_C_OnFishIsBitingChanged_Event final 
+{
+public:
+	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          IsBiting;                                          // 0x0008(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnFishIsBitingChanged_Event");
+static_assert(sizeof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnFishIsBitingChanged_Event");
+static_assert(offsetof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnFishIsBitingChanged_Event::FishingView' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnFishIsBitingChanged_Event, IsBiting) == 0x000008, "Member 'BP_FishingViewComponent_C_OnFishIsBitingChanged_Event::IsBiting' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnMiniGameStateChanged
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FishingViewComponent_C_OnMiniGameStateChanged final 
+{
+public:
+	EFishingMiniGameState                         PreviousState;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	EFishingMiniGameState                         NewState;                                          // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_49FD[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	class UFishingComponent*                      Source;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnMiniGameStateChanged) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnMiniGameStateChanged");
+static_assert(sizeof(BP_FishingViewComponent_C_OnMiniGameStateChanged) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnMiniGameStateChanged");
+static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, PreviousState) == 0x000000, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::PreviousState' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, NewState) == 0x000001, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::NewState' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnMiniGameStateChanged, Source) == 0x000008, "Member 'BP_FishingViewComponent_C_OnMiniGameStateChanged::Source' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnNibbled_Event_0
+// 0x0018 (0x0018 - 0x0000)
+struct BP_FishingViewComponent_C_OnNibbled_Event_0 final 
+{
+public:
+	class UFishingViewComponent*                  FishingView;                                       // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class UFishingComponent*                      Source;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	int32                                         FishNumber;                                        // 0x0010(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnNibbled_Event_0) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnNibbled_Event_0");
+static_assert(sizeof(BP_FishingViewComponent_C_OnNibbled_Event_0) == 0x000018, "Wrong size on BP_FishingViewComponent_C_OnNibbled_Event_0");
+static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, FishingView) == 0x000000, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::FishingView' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, Source) == 0x000008, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::Source' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnNibbled_Event_0, FishNumber) == 0x000010, "Member 'BP_FishingViewComponent_C_OnNibbled_Event_0::FishNumber' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnReceivedFishingEncouragement
+// 0x0010 (0x0010 - 0x0000)
+struct BP_FishingViewComponent_C_OnReceivedFishingEncouragement final 
+{
+public:
+	class UFishingComponent*                      Source;                                            // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	class AValeriaCharacter*                      FromVc;                                            // 0x0008(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement) == 0x000008, "Wrong alignment on BP_FishingViewComponent_C_OnReceivedFishingEncouragement");
+static_assert(sizeof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement) == 0x000010, "Wrong size on BP_FishingViewComponent_C_OnReceivedFishingEncouragement");
+static_assert(offsetof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement, Source) == 0x000000, "Member 'BP_FishingViewComponent_C_OnReceivedFishingEncouragement::Source' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnReceivedFishingEncouragement, FromVc) == 0x000008, "Member 'BP_FishingViewComponent_C_OnReceivedFishingEncouragement::FromVc' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnViewWasUpdatedEvent
+// 0x0130 (0x0130 - 0x0000)
+struct BP_FishingViewComponent_C_OnViewWasUpdatedEvent final 
+{
+public:
+	struct FFishingMiniGameViewState              ViewState;                                         // 0x0000(0x0120)(BlueprintVisible, BlueprintReadOnly, Parm)
+	class UFishingComponent*                      Source;                                            // 0x0120(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent) == 0x000010, "Wrong alignment on BP_FishingViewComponent_C_OnViewWasUpdatedEvent");
+static_assert(sizeof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent) == 0x000130, "Wrong size on BP_FishingViewComponent_C_OnViewWasUpdatedEvent");
+static_assert(offsetof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent, ViewState) == 0x000000, "Member 'BP_FishingViewComponent_C_OnViewWasUpdatedEvent::ViewState' has a wrong offset!");
+static_assert(offsetof(BP_FishingViewComponent_C_OnViewWasUpdatedEvent, Source) == 0x000120, "Member 'BP_FishingViewComponent_C_OnViewWasUpdatedEvent::Source' has a wrong offset!");
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReelingChanged__DelegateSignature
+// 0x0001 (0x0001 - 0x0000)
+struct BP_FishingViewComponent_C_ReelingChanged__DelegateSignature final 
+{
+public:
+	bool                                          IsReeling;                                         // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature) == 0x000001, "Wrong alignment on BP_FishingViewComponent_C_ReelingChanged__DelegateSignature");
+static_assert(sizeof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature) == 0x000001, "Wrong size on BP_FishingViewComponent_C_ReelingChanged__DelegateSignature");
+static_assert(offsetof(BP_FishingViewComponent_C_ReelingChanged__DelegateSignature, IsReeling) == 0x000000, "Member 'BP_FishingViewComponent_C_ReelingChanged__DelegateSignature::IsReeling' has a wrong offset!");
 
 }
 

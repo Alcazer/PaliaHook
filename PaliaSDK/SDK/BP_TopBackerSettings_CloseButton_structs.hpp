@@ -24,14 +24,14 @@ struct FBP_TopBackerSettings_CloseButton final
 public:
 	class FText                                   HeaderText_2_EA373CCE4930FCB77210B394319320C0;     // 0x0000(0x0018)(Edit, BlueprintVisible)
 	bool                                          HasIcon_5_CD589218490309AA3D068EB349BB9170;        // 0x0018(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E76[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D16[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TSoftObjectPtr<class UTexture2D>              Icon_9_1F893CA94C1E7DA96C1CA79528953044;           // 0x0020(0x0028)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FVector2D                              IconDesiredSize_12_7089676E460A29815F8F83BC80BABCA0; // 0x0048(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              IconRenderScale_14_D8AE2AF1418CB588B396A6B18DA91CCA; // 0x0058(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FMargin                                ContainerPadding_17_C45CA54740CDFDB090E5889918A7060F; // 0x0068(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	struct FMargin                                TextPadding_19_003446FD4AFD75B2F74B25A2797C6E6E;   // 0x0078(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	EHorizontalAlignment                          TextHAlignment_24_E8CE26FC40E0B6C8564655BB01406C58; // 0x0088(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_1E77[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D17[0x3];                                     // 0x0089(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                CloseButtonPadding_21_D4FE4BD94DFE4034CD4014822969DF6A; // 0x008C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          ShowCloseButton_26_BCF7196548616FC8B20B9DBF9B75FEFF; // 0x009C(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

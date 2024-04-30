@@ -21,197 +21,6 @@
 namespace SDK::Params
 {
 
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.PlayOutfitChangeAnimation
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation final 
-{
-public:
-	struct FPlayEmoteOptionalParams               K2Node_MakeStruct_PlayEmoteOptionalParams;         // 0x0000(0x0008)(NoDestructor)
-	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF3[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF4[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UValeriaEmoteComponent*                 CallFunc_GetEmoteComponent_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_PlayEmoteByAsset_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, K2Node_MakeStruct_PlayEmoteOptionalParams) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::K2Node_MakeStruct_PlayEmoteOptionalParams' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetValeriaCharacter_OutResult) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetValeriaCharacter_OutResult' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetValeriaCharacter_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetValeriaCharacter_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetEmoteComponent_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetEmoteComponent_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_PlayEmoteByAsset_ReturnValue) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_PlayEmoteByAsset_ReturnValue' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateAllWheelSlots
-// 0x0048 (0x0048 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots final 
-{
-public:
-	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF5[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	TArray<class UWidget*>                        CallFunc_GetAllSlotWidgets_Widgets;                // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
-	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF6[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF7[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots) == 0x000048, "Wrong size on WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::Temp_int_Array_Index_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::Temp_int_Loop_Counter_Variable' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_GetAllSlotWidgets_Widgets) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_GetAllSlotWidgets_Widgets' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Array_Get_Item' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::K2Node_DynamicCast_bSuccess' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.ToggleCooldownVisibility
-// 0x0003 (0x0003 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility final 
-{
-public:
-	bool                                          bTryToShow;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_K2_IsTimerActiveHandle_ReturnValue;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility) == 0x000001, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility) == 0x000003, "Wrong size on WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, bTryToShow) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::bTryToShow' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, CallFunc_K2_IsTimerActiveHandle_ReturnValue) == 0x000001, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::CallFunc_K2_IsTimerActiveHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.DeadzoneCheck
-// 0x0038 (0x0038 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_DeadzoneCheck final 
-{
-public:
-	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF8[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        DeadzoneAmount;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	ERedirectsPlatform                            CallFunc_GetPlatformType_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CF9[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFA[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
-	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_DeadzoneCheck");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck) == 0x000038, "Wrong size on WBP_SavedLoadouts_Wheel_C_DeadzoneCheck");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, DeadzoneAmount) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::DeadzoneAmount' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_GetPlatformType_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_GetPlatformType_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Abs_ReturnValue) == 0x000018, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Abs_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Abs_ReturnValue_1) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_BooleanOR_ReturnValue) == 0x000031, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateCooldown
-// 0x0050 (0x0050 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_UpdateCooldown final 
-{
-public:
-	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFB[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
-	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FCeil_A_ImplicitCast;                     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_UpdateCooldown");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown) == 0x000050, "Wrong size on WBP_SavedLoadouts_Wheel_C_UpdateCooldown");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_FCeil_ReturnValue) == 0x000004, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_FCeil_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_FCeil_A_ImplicitCast) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_FCeil_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000048, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartCooldown
-// 0x0040 (0x0040 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_StartCooldown final 
-{
-public:
-	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
-	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0018)()
-	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
-	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_StartCooldown) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_StartCooldown");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_StartCooldown) == 0x000040, "Wrong size on WBP_SavedLoadouts_Wheel_C_StartCooldown");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_FTrunc_ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_FTrunc_A_ImplicitCast) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1 final 
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0
-// 0x0030 (0x0030 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0 final 
-{
-public:
-	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	class UInputAction*                           SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
-
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartSelecting
-// 0x0008 (0x0008 - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_StartSelecting final 
-{
-public:
-	class UVALUI_MainHUDWidget*                   MainWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-};
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_StartSelecting) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_StartSelecting");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_StartSelecting) == 0x000008, "Wrong size on WBP_SavedLoadouts_Wheel_C_StartSelecting");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartSelecting, MainWidget) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_StartSelecting::MainWidget' has a wrong offset!");
-
 // Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_0_OnChoiceHovered__DelegateSignature
 // 0x0008 (0x0008 - 0x0000)
 struct WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_0_OnChoiceHovered__DelegateSignature final 
@@ -234,18 +43,35 @@ static_assert(alignof(WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_
 static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_1_OnChoiceUnhovered__DelegateSignature) == 0x000008, "Wrong size on WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_1_OnChoiceUnhovered__DelegateSignature");
 static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_1_OnChoiceUnhovered__DelegateSignature, Widget) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_BndEvt__WBP_SavedLoadouts_Wheel_WBP_RadialMenuWheel_Circular_K2Node_ComponentBoundEvent_1_OnChoiceUnhovered__DelegateSignature::Widget' has a wrong offset!");
 
-// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Tick
-// 0x003C (0x003C - 0x0000)
-struct WBP_SavedLoadouts_Wheel_C_Tick final 
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.DeadzoneCheck
+// 0x0038 (0x0038 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_DeadzoneCheck final 
 {
 public:
-	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
-	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          ReturnValue;                                       // 0x0000(0x0001)(Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C50[0x7];                                     // 0x0001(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        DeadzoneAmount;                                    // 0x0008(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	ERedirectsPlatform                            CallFunc_GetPlatformType_ReturnValue;              // 0x0010(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_EqualEqual_ByteByte_ReturnValue;          // 0x0011(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C51[0x6];                                     // 0x0012(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue;                          // 0x0018(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue;         // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C52[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	double                                        CallFunc_Abs_ReturnValue_1;                        // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Greater_DoubleDouble_ReturnValue_1;       // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanOR_ReturnValue;                    // 0x0031(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
-static_assert(alignof(WBP_SavedLoadouts_Wheel_C_Tick) == 0x000004, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_Tick");
-static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_Tick) == 0x00003C, "Wrong size on WBP_SavedLoadouts_Wheel_C_Tick");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_Tick::MyGeometry' has a wrong offset!");
-static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_Tick::InDeltaTime' has a wrong offset!");
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_DeadzoneCheck");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck) == 0x000038, "Wrong size on WBP_SavedLoadouts_Wheel_C_DeadzoneCheck");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, DeadzoneAmount) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::DeadzoneAmount' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_GetPlatformType_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_GetPlatformType_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_EqualEqual_ByteByte_ReturnValue) == 0x000011, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_EqualEqual_ByteByte_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Abs_ReturnValue) == 0x000018, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Abs_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Greater_DoubleDouble_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Greater_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Abs_ReturnValue_1) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Abs_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_Greater_DoubleDouble_ReturnValue_1) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_Greater_DoubleDouble_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_DeadzoneCheck, CallFunc_BooleanOR_ReturnValue) == 0x000031, "Member 'WBP_SavedLoadouts_Wheel_C_DeadzoneCheck::CallFunc_BooleanOR_ReturnValue' has a wrong offset!");
 
 // Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.ExecuteUbergraph_WBP_SavedLoadouts_Wheel
 // 0x1440 (0x1440 - 0x0000)
@@ -256,7 +82,7 @@ public:
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0004(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0014(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_2;            // 0x0024(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFD[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C53[0x4];                                     // 0x0034(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputActionValue                      K2Node_EnhancedInputActionEvent_ActionValue_1;     // 0x0038(0x0020)(NoDestructor)
 	float                                         K2Node_EnhancedInputActionEvent_ElapsedTime_1;     // 0x0058(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         K2Node_EnhancedInputActionEvent_TriggeredTime_1;   // 0x005C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -281,15 +107,15 @@ public:
 	double                                        Temp_real_Variable_4_0;                            // 0x0100(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWidget*                                CallFunc_FinishSelecting_SelectedWidget;           // 0x0108(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_FinishSelecting_SelectionCancelled;       // 0x0110(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFE[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C54[0x7];                                     // 0x0111(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice; // 0x0118(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0120(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0121(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5CFF[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C55[0x6];                                     // 0x0122(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0128(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue; // 0x0130(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0138(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D00[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C56[0x7];                                     // 0x0139(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UVALUI_MainHUDWidget*                   K2Node_Event_MainWidget;                           // 0x0140(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UMaterialInstanceDynamic*               CallFunc_GetDynamicMaterial_ReturnValue;           // 0x0148(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_3;            // 0x0150(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -297,31 +123,31 @@ public:
 	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0168(0x0008)(NoDestructor, HasGetValueTypeHash)
 	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice_1; // 0x0170(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_1;                     // 0x0178(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D01[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C57[0x7];                                     // 0x0179(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                K2Node_ComponentBoundEvent_Widget;                 // 0x0180(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice_2; // 0x0188(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess_2;                     // 0x0190(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D02[0x3];                                     // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C58[0x3];                                     // 0x0191(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGeometry                              K2Node_Event_MyGeometry;                           // 0x0194(0x0038)(IsPlainOldData, NoDestructor)
 	float                                         K2Node_Event_InDeltaTime;                          // 0x01CC(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FVector2D                              CallFunc_MakeVector2D_ReturnValue;                 // 0x01D0(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x01E0(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_DeadzoneCheck_ReturnValue;                // 0x01E1(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult_1;          // 0x01E2(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D03[0x5];                                     // 0x01E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C59[0x5];                                     // 0x01E3(0x0005)(Fixing Size After Last Property [ Dumper-7 ])
 	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue_1;        // 0x01E8(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_CharacterCustomizationComponent*   CallFunc_GetCharacterCustomizationComponent_ReturnValue_1; // 0x01F0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess_1;                    // 0x01F8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_ClearAllAssignedSavedLoadouts_ReturnValue; // 0x01F9(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D04[0x6];                                     // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C5A[0x6];                                     // 0x01FA(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FVAL_CharacterCustomizationLoadout     CallFunc_GetLoadout_ReturnValue;                   // 0x0200(0x0900)(ConstParm)
 	struct FVAL_CharacterCustomizationLoadout     CallFunc_Map_Find_Value;                           // 0x0B00(0x0900)()
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x1400(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D05[0x7];                                     // 0x1401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C5B[0x7];                                     // 0x1401(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<class FName>                           CallFunc_GetDifferencesBetweenLoadouts_ReturnValue; // 0x1408(0x0010)(ReferenceParm)
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x1418(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x141C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5D06[0x3];                                     // 0x141D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5C5C[0x3];                                     // 0x141D(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_4;            // 0x1420(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVAL_ApplyCustomizationsToActorProxy*   CallFunc_ApplyCustomizationsToActor_ReturnValue;   // 0x1430(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_IsValid_ReturnValue;                      // 0x1438(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -391,6 +217,180 @@ static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoado
 static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel, K2Node_CreateDelegate_OutputDelegate_4) == 0x001420, "Member 'WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel::K2Node_CreateDelegate_OutputDelegate_4' has a wrong offset!");
 static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel, CallFunc_ApplyCustomizationsToActor_ReturnValue) == 0x001430, "Member 'WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel::CallFunc_ApplyCustomizationsToActor_ReturnValue' has a wrong offset!");
 static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel, CallFunc_IsValid_ReturnValue) == 0x001438, "Member 'WBP_SavedLoadouts_Wheel_C_ExecuteUbergraph_WBP_SavedLoadouts_Wheel::CallFunc_IsValid_ReturnValue' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1 final 
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, ActionValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::ActionValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, ElapsedTime) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, TriggeredTime) == 0x000024, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1, SourceAction) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_X_K2Node_EnhancedInputActionEvent_1::SourceAction' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0 final 
+{
+public:
+	struct FInputActionValue                      ActionValue;                                       // 0x0000(0x0020)(BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+	float                                         ElapsedTime;                                       // 0x0020(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         TriggeredTime;                                     // 0x0024(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	class UInputAction*                           SourceAction;                                      // 0x0028(0x0008)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, ActionValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::ActionValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, ElapsedTime) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::ElapsedTime' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, TriggeredTime) == 0x000024, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::TriggeredTime' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0, SourceAction) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_InpActEvt_IA_RadialMenuNavigate_Y_K2Node_EnhancedInputActionEvent_0::SourceAction' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.PlayOutfitChangeAnimation
+// 0x0030 (0x0030 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation final 
+{
+public:
+	struct FPlayEmoteOptionalParams               K2Node_MakeStruct_PlayEmoteOptionalParams;         // 0x0000(0x0008)(NoDestructor)
+	EValeriaFuncResult                            CallFunc_GetValeriaCharacter_OutResult;            // 0x0008(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C5D[0x7];                                     // 0x0009(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class AValeriaCharacter*                      CallFunc_GetValeriaCharacter_ReturnValue;          // 0x0010(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0018(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C5E[0x7];                                     // 0x0019(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UValeriaEmoteComponent*                 CallFunc_GetEmoteComponent_ReturnValue;            // 0x0020(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_PlayEmoteByAsset_ReturnValue;             // 0x0028(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation) == 0x000030, "Wrong size on WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, K2Node_MakeStruct_PlayEmoteOptionalParams) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::K2Node_MakeStruct_PlayEmoteOptionalParams' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetValeriaCharacter_OutResult) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetValeriaCharacter_OutResult' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetValeriaCharacter_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetValeriaCharacter_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, K2Node_SwitchEnum_CmpSuccess) == 0x000018, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::K2Node_SwitchEnum_CmpSuccess' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_GetEmoteComponent_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_GetEmoteComponent_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation, CallFunc_PlayEmoteByAsset_ReturnValue) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_PlayOutfitChangeAnimation::CallFunc_PlayEmoteByAsset_ReturnValue' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartCooldown
+// 0x0040 (0x0040 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_StartCooldown final 
+{
+public:
+	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C5F[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0008(0x0018)()
+	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate;              // 0x0020(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+	struct FTimerHandle                           CallFunc_K2_SetTimerDelegate_ReturnValue;          // 0x0030(0x0008)(NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_StartCooldown) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_StartCooldown");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_StartCooldown) == 0x000040, "Wrong size on WBP_SavedLoadouts_Wheel_C_StartCooldown");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_FTrunc_ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_FTrunc_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_Conv_IntToText_ReturnValue) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, K2Node_CreateDelegate_OutputDelegate) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::K2Node_CreateDelegate_OutputDelegate' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_K2_SetTimerDelegate_ReturnValue) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_K2_SetTimerDelegate_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartCooldown, CallFunc_FTrunc_A_ImplicitCast) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_StartCooldown::CallFunc_FTrunc_A_ImplicitCast' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.StartSelecting
+// 0x0008 (0x0008 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_StartSelecting final 
+{
+public:
+	class UVALUI_MainHUDWidget*                   MainWidget;                                        // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_StartSelecting) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_StartSelecting");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_StartSelecting) == 0x000008, "Wrong size on WBP_SavedLoadouts_Wheel_C_StartSelecting");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_StartSelecting, MainWidget) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_StartSelecting::MainWidget' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.Tick
+// 0x003C (0x003C - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_Tick final 
+{
+public:
+	struct FGeometry                              MyGeometry;                                        // 0x0000(0x0038)(BlueprintVisible, BlueprintReadOnly, Parm, IsPlainOldData, NoDestructor)
+	float                                         InDeltaTime;                                       // 0x0038(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_Tick) == 0x000004, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_Tick");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_Tick) == 0x00003C, "Wrong size on WBP_SavedLoadouts_Wheel_C_Tick");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_Tick, MyGeometry) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_Tick::MyGeometry' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_Tick, InDeltaTime) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_Tick::InDeltaTime' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.ToggleCooldownVisibility
+// 0x0003 (0x0003 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility final 
+{
+public:
+	bool                                          bTryToShow;                                        // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_K2_IsTimerActiveHandle_ReturnValue;       // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x0002(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility) == 0x000001, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility) == 0x000003, "Wrong size on WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, bTryToShow) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::bTryToShow' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, CallFunc_K2_IsTimerActiveHandle_ReturnValue) == 0x000001, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::CallFunc_K2_IsTimerActiveHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility, CallFunc_BooleanAND_ReturnValue) == 0x000002, "Member 'WBP_SavedLoadouts_Wheel_C_ToggleCooldownVisibility::CallFunc_BooleanAND_ReturnValue' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateAllWheelSlots
+// 0x0048 (0x0048 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots final 
+{
+public:
+	int32                                         Temp_int_Array_Index_Variable;                     // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C60[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	TArray<class UWidget*>                        CallFunc_GetAllSlotWidgets_Widgets;                // 0x0010(0x0010)(ReferenceParm, ContainsInstancedReference)
+	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0020(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C61[0x4];                                     // 0x0024(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x0028(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x0030(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C62[0x7];                                     // 0x0031(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	class UWBP_SavedLoadoutsWheelChoice_C*        K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice; // 0x0038(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots) == 0x000048, "Wrong size on WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, Temp_int_Array_Index_Variable) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::Temp_int_Array_Index_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, Temp_int_Loop_Counter_Variable) == 0x000004, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::Temp_int_Loop_Counter_Variable' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Add_IntInt_ReturnValue) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Add_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_GetAllSlotWidgets_Widgets) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_GetAllSlotWidgets_Widgets' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Array_Length_ReturnValue) == 0x000020, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Array_Length_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Array_Get_Item) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Array_Get_Item' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, CallFunc_Less_IntInt_ReturnValue) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::CallFunc_Less_IntInt_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::K2Node_DynamicCast_AsWBP_Saved_Loadouts_Wheel_Choice' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots, K2Node_DynamicCast_bSuccess) == 0x000040, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateAllWheelSlots::K2Node_DynamicCast_bSuccess' has a wrong offset!");
+
+// Function WBP_SavedLoadouts_Wheel.WBP_SavedLoadouts_Wheel_C.UpdateCooldown
+// 0x0050 (0x0050 - 0x0000)
+struct WBP_SavedLoadouts_Wheel_C_UpdateCooldown final 
+{
+public:
+	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue; // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	int32                                         CallFunc_FCeil_ReturnValue;                        // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1; // 0x0008(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	uint8                                         Pad_5C63[0x4];                                     // 0x000C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	class FText                                   CallFunc_Conv_IntToText_ReturnValue;               // 0x0010(0x0018)()
+	double                                        CallFunc_Divide_DoubleDouble_ReturnValue;          // 0x0028(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_B_ImplicitCast;       // 0x0030(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_FCeil_A_ImplicitCast;                     // 0x0038(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	double                                        CallFunc_Divide_DoubleDouble_A_ImplicitCast;       // 0x0040(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+	float                                         CallFunc_SetScalarParameterValue_Value_ImplicitCast; // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+};
+static_assert(alignof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown) == 0x000008, "Wrong alignment on WBP_SavedLoadouts_Wheel_C_UpdateCooldown");
+static_assert(sizeof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown) == 0x000050, "Wrong size on WBP_SavedLoadouts_Wheel_C_UpdateCooldown");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue) == 0x000000, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_FCeil_ReturnValue) == 0x000004, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_FCeil_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1) == 0x000008, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_K2_GetTimerRemainingTimeHandle_ReturnValue_1' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Conv_IntToText_ReturnValue) == 0x000010, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Conv_IntToText_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_ReturnValue) == 0x000028, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_ReturnValue' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_B_ImplicitCast) == 0x000030, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_B_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_FCeil_A_ImplicitCast) == 0x000038, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_FCeil_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_Divide_DoubleDouble_A_ImplicitCast) == 0x000040, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_Divide_DoubleDouble_A_ImplicitCast' has a wrong offset!");
+static_assert(offsetof(WBP_SavedLoadouts_Wheel_C_UpdateCooldown, CallFunc_SetScalarParameterValue_Value_ImplicitCast) == 0x000048, "Member 'WBP_SavedLoadouts_Wheel_C_UpdateCooldown::CallFunc_SetScalarParameterValue_Value_ImplicitCast' has a wrong offset!");
 
 }
 

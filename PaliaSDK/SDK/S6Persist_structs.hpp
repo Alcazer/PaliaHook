@@ -49,7 +49,7 @@ enum class ES6MutateOpType : uint8
 struct alignas(0x08) FS6PersistBlock
 {
 public:
-	uint8                                         Pad_1CAF[0x40];                                    // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C79[0x40];                                    // 0x0000(0x0040)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6PersistBlock) == 0x000008, "Wrong alignment on FS6PersistBlock");
 static_assert(sizeof(FS6PersistBlock) == 0x000040, "Wrong size on FS6PersistBlock");
@@ -60,7 +60,7 @@ struct FS6PersistOperationSetTestBlock final  : public FS6PersistBlock
 {
 public:
 	float                                         Test;                                              // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB0[0x4];                                     // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7A[0x4];                                     // 0x0044(0x0004)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6PersistOperationSetTestBlock) == 0x000008, "Wrong alignment on FS6PersistOperationSetTestBlock");
 static_assert(sizeof(FS6PersistOperationSetTestBlock) == 0x000048, "Wrong size on FS6PersistOperationSetTestBlock");
@@ -71,7 +71,7 @@ static_assert(offsetof(FS6PersistOperationSetTestBlock, Test) == 0x000040, "Memb
 struct alignas(0x08) FS6PersistContainer
 {
 public:
-	uint8                                         Pad_1CB1[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7B[0x18];                                    // 0x0000(0x0018)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6PersistContainer) == 0x000008, "Wrong alignment on FS6PersistContainer");
 static_assert(sizeof(FS6PersistContainer) == 0x000018, "Wrong size on FS6PersistContainer");
@@ -99,7 +99,7 @@ public:
 	struct FGuid                                  ContainerID;                                       // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ContainerKind;                                     // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        Version;                                           // 0x0020(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB2[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7C[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS6PersistBlockData>            Blocks;                                            // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6GameDataServiceEnvelope) == 0x000008, "Wrong alignment on FS6GameDataServiceEnvelope");
@@ -115,14 +115,14 @@ struct FS6PersistOperation final
 {
 public:
 	ES6MutateOpType                               Mutation;                                          // 0x0000(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB3[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7D[0x3];                                     // 0x0001(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  ContainerID;                                       // 0x0004(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB4[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7E[0x4];                                     // 0x0014(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 ContainerKind;                                     // 0x0018(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        Version;                                           // 0x0028(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB5[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C7F[0x2];                                     // 0x002A(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FGuid                                  BlockId;                                           // 0x002C(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB6[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C80[0x4];                                     // 0x003C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FString                                 BlockKind;                                         // 0x0040(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	TArray<uint8>                                 Data;                                              // 0x0050(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
@@ -144,7 +144,7 @@ public:
 	struct FGuid                                  ContainerID;                                       // 0x0000(0x0010)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	class FString                                 ContainerKind;                                     // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	uint16                                        Version;                                           // 0x0020(0x0002)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1CB7[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C81[0x6];                                     // 0x0022(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FS6PersistOperation>            Operations;                                        // 0x0028(0x0010)(ZeroConstructor, NativeAccessSpecifierPublic)
 };
 static_assert(alignof(FS6PersistMigration) == 0x000008, "Wrong alignment on FS6PersistMigration");
@@ -159,9 +159,9 @@ static_assert(offsetof(FS6PersistMigration, Operations) == 0x000028, "Member 'FS
 struct FS6PersistOperationSet final 
 {
 public:
-	uint8                                         Pad_1CB8[0x20];                                    // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C82[0x20];                                    // 0x0000(0x0020)(Fixing Size After Last Property [ Dumper-7 ])
 	TSet<struct FS6PersistOperation>              Operations;                                        // 0x0020(0x0050)(NativeAccessSpecifierPrivate)
-	uint8                                         Pad_1CB9[0x8];                                     // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1C83[0x8];                                     // 0x0070(0x0008)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(FS6PersistOperationSet) == 0x000008, "Wrong alignment on FS6PersistOperationSet");
 static_assert(sizeof(FS6PersistOperationSet) == 0x000078, "Wrong size on FS6PersistOperationSet");

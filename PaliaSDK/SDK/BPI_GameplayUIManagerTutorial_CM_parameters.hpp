@@ -37,7 +37,7 @@ public:
 	class FName                                   DefaultTutorialModalName;                          // 0x0000(0x0008)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class UUserWidget* ModalWidget, TArray<class UUserWidget*>& TutorialWidgets)> OpenModalDelegate;                                 // 0x0008(0x0010)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          bSuccess;                                          // 0x0018(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9A[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41B4[0x3];                                     // 0x0019(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   TutorialModalName;                                 // 0x001C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_GameplayUIManagerTutorial_CM_C_RedirectTutorialModalType) == 0x000004, "Wrong alignment on BPI_GameplayUIManagerTutorial_CM_C_RedirectTutorialModalType");
@@ -56,7 +56,7 @@ public:
 	class FText                                   Title;                                             // 0x0008(0x0018)(Parm, OutParm)
 	class FText                                   Content;                                           // 0x0020(0x0018)(Parm, OutParm)
 	bool                                          EnableFound;                                       // 0x0038(0x0001)(Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3B9B[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_41B5[0x3];                                     // 0x0039(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	class FName                                   TutorialModalName;                                 // 0x003C(0x0008)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(BPI_GameplayUIManagerTutorial_CM_C_RedirectType) == 0x000008, "Wrong alignment on BPI_GameplayUIManagerTutorial_CM_C_RedirectType");

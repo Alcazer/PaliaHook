@@ -55,7 +55,7 @@ struct WBP_ComboBox_02_CM_Menu_Interface_C_HandleOnOptionSelected final
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D3B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_517C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_ComboBox_02_CM_Menu_Interface_C_HandleOnOptionSelected) == 0x000008, "Wrong alignment on WBP_ComboBox_02_CM_Menu_Interface_C_HandleOnOptionSelected");

@@ -10,11 +10,11 @@
 
 #include "Basic.hpp"
 
-#include "F_PopupSimple_Content_Settings_structs.hpp"
 #include "Engine_structs.hpp"
-#include "F_Button_Primary_Settings_CM_structs.hpp"
-#include "CommonUI_classes.hpp"
 #include "F_PopupSimple_Buttons_Settings_structs.hpp"
+#include "CommonUI_classes.hpp"
+#include "F_Button_Primary_Settings_CM_structs.hpp"
+#include "F_PopupSimple_Content_Settings_structs.hpp"
 #include "UMG_structs.hpp"
 
 
@@ -36,7 +36,7 @@ public:
 	class USpacer*                                Spacer_Buttons;                                    // 0x0320(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	struct FF_PopupSimple_Buttons_Settings        ButtonsLayoutSettings;                             // 0x0328(0x0020)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	struct FF_PopupSimple_Content_Settings        ContentLayoutSettings;                             // 0x0348(0x0014)(Edit, BlueprintVisible, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_43F0[0x4];                                     // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4C02[0x4];                                     // 0x035C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FF_Button_Primary_Settings_CM          PrimaryButtonSettings;                             // 0x0360(0x0050)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	class FText                                   SecondaryButtonText;                               // 0x03B0(0x0018)(Edit, BlueprintVisible)
 	FMulticastInlineDelegateProperty_             PrimaryButtonClicked;                              // 0x03C8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)

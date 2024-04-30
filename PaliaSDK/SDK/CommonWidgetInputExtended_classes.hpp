@@ -27,7 +27,7 @@ public:
 	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x0460(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
 	bool                                          bIsPersistentBinding;                              // 0x04B0(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ECommonInputMode                              InputModeOverride;                                 // 0x04B1(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DD1[0x16];                                    // 0x04B2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DCD[0x16];                                    // 0x04B2(0x0016)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FInputMappingPriorityData              InputMappingData;                                  // 0x04C8(0x0038)(Edit, Protected, NativeAccessSpecifierProtected)
 	TArray<class UInputMappingContext*>           AdditionInputMappings;                             // 0x0500(0x0010)(Edit, ZeroConstructor, Protected, UObjectWrapper, NativeAccessSpecifierProtected)
 
@@ -76,7 +76,7 @@ public:
 	TSet<class UInputAction*>                     StartFlagMap;                                      // 0x0338(0x0050)(Transient, Protected, NativeAccessSpecifierProtected)
 	bool                                          bIsPersistentBinding;                              // 0x0388(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
 	ECommonInputMode                              InputModeOverride;                                 // 0x0389(0x0001)(Edit, ZeroConstructor, IsPlainOldData, NoDestructor, AdvancedDisplay, Protected, HasGetValueTypeHash, NativeAccessSpecifierProtected)
-	uint8                                         Pad_1DD2[0x16];                                    // 0x038A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1DCE[0x16];                                    // 0x038A(0x0016)(Fixing Struct Size After Last Property [ Dumper-7 ])
 
 public:
 	static class UClass* StaticClass()

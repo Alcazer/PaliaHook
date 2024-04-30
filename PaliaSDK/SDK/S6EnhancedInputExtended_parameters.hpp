@@ -24,7 +24,7 @@ struct S6EnhancedInputExtendedSubsystem_AddMappingContextByType final
 public:
 	struct FInputMappingPriorityData              InputMappingPriorityData;                          // 0x0000(0x0038)(ConstParm, Parm, OutParm, ReferenceParm, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0038(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D35[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CF3[0x7];                                     // 0x0039(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType) == 0x000008, "Wrong alignment on S6EnhancedInputExtendedSubsystem_AddMappingContextByType");
 static_assert(sizeof(S6EnhancedInputExtendedSubsystem_AddMappingContextByType) == 0x000040, "Wrong size on S6EnhancedInputExtendedSubsystem_AddMappingContextByType");
@@ -38,7 +38,7 @@ struct S6EnhancedInputExtendedSubsystem_RemoveMappingContext final
 public:
 	class UInputMappingContext*                   MappingContext;                                    // 0x0000(0x0008)(ConstParm, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash, NativeAccessSpecifierPublic)
 	struct FModifyContextOptions                  Options;                                           // 0x0008(0x0001)(ConstParm, Parm, OutParm, ReferenceParm, NoDestructor, NativeAccessSpecifierPublic)
-	uint8                                         Pad_1D36[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_1CF4[0x7];                                     // 0x0009(0x0007)(Fixing Struct Size After Last Property [ Dumper-7 ])
 };
 static_assert(alignof(S6EnhancedInputExtendedSubsystem_RemoveMappingContext) == 0x000008, "Wrong alignment on S6EnhancedInputExtendedSubsystem_RemoveMappingContext");
 static_assert(sizeof(S6EnhancedInputExtendedSubsystem_RemoveMappingContext) == 0x000010, "Wrong size on S6EnhancedInputExtendedSubsystem_RemoveMappingContext");

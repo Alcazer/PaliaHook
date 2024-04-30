@@ -42,7 +42,7 @@ struct WBP_Cooking_Minigame_RollingPin_GoalPost_C_Play_Success_Animation final
 {
 public:
 	int32                                         CallFunc_AkEventGlobal_ReturnValue;                // 0x0000(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_5A48[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_582B[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UUMGSequencePlayer*                     CallFunc_PlayAnimationForward_ReturnValue;         // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 };
 static_assert(alignof(WBP_Cooking_Minigame_RollingPin_GoalPost_C_Play_Success_Animation) == 0x000008, "Wrong alignment on WBP_Cooking_Minigame_RollingPin_GoalPost_C_Play_Success_Animation");

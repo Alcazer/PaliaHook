@@ -40,9 +40,9 @@ public:
 	bool                                          OnlyConfirm;                                       // 0x0368(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          OnlyCancel;                                        // 0x0369(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NoButtons;                                         // 0x036A(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_427E[0x1];                                     // 0x036B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4312[0x1];                                     // 0x036B(0x0001)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FMargin                                ContentPadding;                                    // 0x036C(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-	uint8                                         Pad_427F[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4313[0x4];                                     // 0x037C(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 ButtonConfirmStyleOverride;                        // 0x0380(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 ButtonCancelStyleOverride;                         // 0x0388(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UVALUI_TextBlockStyle*                  TextStyle_ButtonPrimary;                           // 0x0390(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -58,7 +58,7 @@ public:
 	class UInputAction*                           CancelInputAction;                                 // 0x04A8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsShowPrimaryActionButton;                         // 0x04B0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          IsShowSecondaryActionButton;                       // 0x04B1(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4280[0x6];                                     // 0x04B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4314[0x6];                                     // 0x04B2(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   PrimaryActionButtonText;                           // 0x04B8(0x0018)(Edit, BlueprintVisible)
 	class FText                                   SecondaryActionButtonText;                         // 0x04D0(0x0018)(Edit, BlueprintVisible)
 	class UInputAction*                           PrimaryAction_InputAction;                         // 0x04E8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
@@ -66,7 +66,7 @@ public:
 	FMulticastInlineDelegateProperty_             SecondaryAction;                                   // 0x0500(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	bool                                          PrimaryAction_ShowImage;                           // 0x0510(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          PrimaryAction_BoundButton;                         // 0x0511(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4281[0x6];                                     // 0x0512(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4315[0x6];                                     // 0x0512(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UInputAction*                           SecondaryAction_InputAction;                       // 0x0518(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	bool                                          SecondaryAction_ShowImage;                         // 0x0520(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          SecondaryAction_BoundButton;                       // 0x0521(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -77,6 +77,16 @@ public:
 	bool                                          IsHeaderToLeft;                                    // 0x0526(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
 public:
+	void UpdateButtonsState(bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable_1, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, bool Temp_bool_Variable_2, ESlateVisibility Temp_byte_Variable_4, ESlateVisibility Temp_byte_Variable_5, bool Temp_bool_Variable_3, ESlateVisibility Temp_byte_Variable_6, ESlateVisibility Temp_byte_Variable_7, bool Temp_bool_Variable_4, ESlateVisibility Temp_byte_Variable_8, ESlateVisibility Temp_byte_Variable_9, ESlateVisibility K2Node_Select_Default, ESlateVisibility K2Node_Select_Default_1, ESlateVisibility K2Node_Select_Default_2, ESlateVisibility K2Node_Select_Default_3, ESlateVisibility K2Node_Select_Default_4);
+	void SetupInputAction(class UOverlaySlot* CallFunc_SlotAsOverlaySlot_ReturnValue, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsValid_ReturnValue_3);
+	void SetHeaderText(class FText Param_HeaderText);
+	void SetConfirmEnabled(bool bEnable);
+	void SetActionButtonsState(bool NewLocalVar, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, ESlateVisibility K2Node_Select_Default, bool Temp_bool_Variable_1, ESlateVisibility K2Node_Select_Default_1);
+	void SecondaryAction__DelegateSignature();
+	void PrimaryAction__DelegateSignature();
+	void PreConstruct(bool IsDesignTime);
+	void OnInitialized();
+	void ExecuteUbergraph_WBP_Template_PopupSecondary_02_PF(int32 EntryPoint, bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable_1, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, bool K2Node_Event_IsDesignTime, class USizeBoxSlot* CallFunc_SlotAsSizeBoxSlot_ReturnValue, ESlateVisibility K2Node_Select_Default, bool CallFunc_IsValid_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue_1, ESlateVisibility Temp_byte_Variable_4, ESlateVisibility K2Node_Select_Default_1, class UOverlaySlot* CallFunc_SlotAsOverlaySlot_ReturnValue, ESlateVisibility Temp_byte_Variable_5, bool Temp_bool_Variable_2, int32 CallFunc_AkEventGlobal_ReturnValue_2, ESlateVisibility K2Node_Select_Default_2);
 	void Confirm__DelegateSignature();
 	void Cancel__DelegateSignature();
 	void BndEvt__WBP_Template_PopupSecondary_02_PF_Confirm_Button_K2Node_ComponentBoundEvent_7_ButtonHovered__DelegateSignature();
@@ -85,16 +95,6 @@ public:
 	void BndEvt__WBP_Template_PopupSecondary_02_PF_Button_Secondary_PrimaryAction_CM_K2Node_ComponentBoundEvent_1_OnButtonClicked__DelegateSignature();
 	void BndEvt__WBP_Template_PopupSecondary_02_PF_Back_Button_K2Node_ComponentBoundEvent_6_OnButtonHovered__DelegateSignature();
 	void BndEvt__WBP_Template_PopupSecondary_02_PF_Back_Button_K2Node_ComponentBoundEvent_4_OnButtonClicked__DelegateSignature();
-	void ExecuteUbergraph_WBP_Template_PopupSecondary_02_PF(int32 EntryPoint, bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable_1, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, bool K2Node_Event_IsDesignTime, class USizeBoxSlot* CallFunc_SlotAsSizeBoxSlot_ReturnValue, ESlateVisibility K2Node_Select_Default, bool CallFunc_IsValid_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue, int32 CallFunc_AkEventGlobal_ReturnValue_1, ESlateVisibility Temp_byte_Variable_4, ESlateVisibility K2Node_Select_Default_1, class UOverlaySlot* CallFunc_SlotAsOverlaySlot_ReturnValue, ESlateVisibility Temp_byte_Variable_5, bool Temp_bool_Variable_2, int32 CallFunc_AkEventGlobal_ReturnValue_2, ESlateVisibility K2Node_Select_Default_2);
-	void OnInitialized();
-	void PreConstruct(bool IsDesignTime);
-	void PrimaryAction__DelegateSignature();
-	void SecondaryAction__DelegateSignature();
-	void SetActionButtonsState(bool NewLocalVar, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, ESlateVisibility K2Node_Select_Default, bool Temp_bool_Variable_1, ESlateVisibility K2Node_Select_Default_1);
-	void SetConfirmEnabled(bool bEnable);
-	void SetHeaderText(class FText Param_HeaderText);
-	void SetupInputAction(class UOverlaySlot* CallFunc_SlotAsOverlaySlot_ReturnValue, bool CallFunc_IsValid_ReturnValue, bool CallFunc_IsValid_ReturnValue_1, bool CallFunc_IsValid_ReturnValue_2, bool CallFunc_IsValid_ReturnValue_3);
-	void UpdateButtonsState(bool Temp_bool_Variable, ESlateVisibility Temp_byte_Variable, ESlateVisibility Temp_byte_Variable_1, bool Temp_bool_Variable_1, ESlateVisibility Temp_byte_Variable_2, ESlateVisibility Temp_byte_Variable_3, bool Temp_bool_Variable_2, ESlateVisibility Temp_byte_Variable_4, ESlateVisibility Temp_byte_Variable_5, bool Temp_bool_Variable_3, ESlateVisibility Temp_byte_Variable_6, ESlateVisibility Temp_byte_Variable_7, bool Temp_bool_Variable_4, ESlateVisibility Temp_byte_Variable_8, ESlateVisibility Temp_byte_Variable_9, ESlateVisibility K2Node_Select_Default, ESlateVisibility K2Node_Select_Default_1, ESlateVisibility K2Node_Select_Default_2, ESlateVisibility K2Node_Select_Default_3, ESlateVisibility K2Node_Select_Default_4);
 
 public:
 	static class UClass* StaticClass()

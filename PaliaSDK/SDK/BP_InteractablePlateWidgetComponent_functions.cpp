@@ -17,38 +17,6 @@
 namespace SDK
 {
 
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.RemoveRefillWaterCanIMC
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FModifyContextOptions            K2Node_MakeStruct_ModifyContextOptions                 (NoDestructor)
-// EValeriaFuncResult                      CallFunc_GetValeriaPlayerController_OutResult          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaPlayerController*         CallFunc_GetValeriaPlayerController_ReturnValue        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UEnhancedInputLocalPlayerSubsystem*CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// TScriptInterface<class IEnhancedInputSubsystemInterface>CallFunc_RemoveMappingContext_self_CastInput           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::RemoveRefillWaterCanIMC(const struct FModifyContextOptions& K2Node_MakeStruct_ModifyContextOptions, EValeriaFuncResult CallFunc_GetValeriaPlayerController_OutResult, class AValeriaPlayerController* CallFunc_GetValeriaPlayerController_ReturnValue, class UEnhancedInputLocalPlayerSubsystem* CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue, bool CallFunc_IsValid_ReturnValue, TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput, bool K2Node_SwitchEnum_CmpSuccess)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "RemoveRefillWaterCanIMC");
-
-	Params::BP_InteractablePlateWidgetComponent_C_RemoveRefillWaterCanIMC Parms{};
-
-	Parms.K2Node_MakeStruct_ModifyContextOptions = std::move(K2Node_MakeStruct_ModifyContextOptions);
-	Parms.CallFunc_GetValeriaPlayerController_OutResult = CallFunc_GetValeriaPlayerController_OutResult;
-	Parms.CallFunc_GetValeriaPlayerController_ReturnValue = CallFunc_GetValeriaPlayerController_ReturnValue;
-	Parms.CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue = CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue;
-	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
-	Parms.CallFunc_RemoveMappingContext_self_CastInput = CallFunc_RemoveMappingContext_self_CastInput;
-	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.AddRefillWaterCanIMC
 // (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
 // Parameters:
@@ -78,106 +46,6 @@ void UBP_InteractablePlateWidgetComponent_C::AddRefillWaterCanIMC(class UInputMa
 	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
 	Parms.CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue = CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue;
 	Parms.CallFunc_AddMappingContext_self_CastInput = CallFunc_AddMappingContext_self_CastInput;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.Refill Water Can Tick
-// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UUserWidget*                      CallFunc_GetUserWidgetObject_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// EValeriaFuncResult                      CallFunc_GetValeriaPlayerController_OutResult          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaPlayerController*         CallFunc_GetValeriaPlayerController_ReturnValue        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UUserWidget*                      CallFunc_GetUserWidgetObject_ReturnValue_1             (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class ABP_ValeriaPlayerController_C*    K2Node_DynamicCast_AsBP_Valeria_Player_Controller      (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UWBP_InteractPlate_Prompt_C*      K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt         (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess_1                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_GetInteractState_bInteractState               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ECharacterState                         CallFunc_GetInteractState_State                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EValeriaFuncResult                      CallFunc_GetValeriaCharacter_OutResult                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaCharacter*                CallFunc_GetValeriaCharacter_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_SwitchEnum_CmpSuccess_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FValeriaItem                     CallFunc_GetEquippedItem_ReturnValue                   ()
-// class ABP_ValeriaCharacter_C*           K2Node_DynamicCast_AsBP_Valeria_Character              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess_2                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_Find_Water_For_Refill_Was_Found               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           CallFunc_Find_Water_For_Refill_Water_Actor             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UObject*                          CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue  (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UVAL_ItemTypeDefinitionAsset*     K2Node_DynamicCast_AsItem_Type_Definition              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// bool                                    K2Node_DynamicCast_bSuccess_3                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_IsValidSoftObjectReference_ReturnValue        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_HasTag_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::Refill_Water_Can_Tick(class UUserWidget* CallFunc_GetUserWidgetObject_ReturnValue, EValeriaFuncResult CallFunc_GetValeriaPlayerController_OutResult, class AValeriaPlayerController* CallFunc_GetValeriaPlayerController_ReturnValue, class UUserWidget* CallFunc_GetUserWidgetObject_ReturnValue_1, class ABP_ValeriaPlayerController_C* K2Node_DynamicCast_AsBP_Valeria_Player_Controller, bool K2Node_DynamicCast_bSuccess, class UWBP_InteractPlate_Prompt_C* K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt, bool K2Node_DynamicCast_bSuccess_1, bool CallFunc_GetInteractState_bInteractState, ECharacterState CallFunc_GetInteractState_State, bool K2Node_SwitchEnum_CmpSuccess, EValeriaFuncResult CallFunc_GetValeriaCharacter_OutResult, class AValeriaCharacter* CallFunc_GetValeriaCharacter_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess_1, const struct FValeriaItem& CallFunc_GetEquippedItem_ReturnValue, class ABP_ValeriaCharacter_C* K2Node_DynamicCast_AsBP_Valeria_Character, bool K2Node_DynamicCast_bSuccess_2, bool CallFunc_Find_Water_For_Refill_Was_Found, class AActor* CallFunc_Find_Water_For_Refill_Water_Actor, class UObject* CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue, class UVAL_ItemTypeDefinitionAsset* K2Node_DynamicCast_AsItem_Type_Definition, bool K2Node_DynamicCast_bSuccess_3, bool CallFunc_IsValidSoftObjectReference_ReturnValue, bool CallFunc_HasTag_ReturnValue)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "Refill Water Can Tick");
-
-	Params::BP_InteractablePlateWidgetComponent_C_Refill_Water_Can_Tick Parms{};
-
-	Parms.CallFunc_GetUserWidgetObject_ReturnValue = CallFunc_GetUserWidgetObject_ReturnValue;
-	Parms.CallFunc_GetValeriaPlayerController_OutResult = CallFunc_GetValeriaPlayerController_OutResult;
-	Parms.CallFunc_GetValeriaPlayerController_ReturnValue = CallFunc_GetValeriaPlayerController_ReturnValue;
-	Parms.CallFunc_GetUserWidgetObject_ReturnValue_1 = CallFunc_GetUserWidgetObject_ReturnValue_1;
-	Parms.K2Node_DynamicCast_AsBP_Valeria_Player_Controller = K2Node_DynamicCast_AsBP_Valeria_Player_Controller;
-	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
-	Parms.K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt = K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt;
-	Parms.K2Node_DynamicCast_bSuccess_1 = K2Node_DynamicCast_bSuccess_1;
-	Parms.CallFunc_GetInteractState_bInteractState = CallFunc_GetInteractState_bInteractState;
-	Parms.CallFunc_GetInteractState_State = CallFunc_GetInteractState_State;
-	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
-	Parms.CallFunc_GetValeriaCharacter_OutResult = CallFunc_GetValeriaCharacter_OutResult;
-	Parms.CallFunc_GetValeriaCharacter_ReturnValue = CallFunc_GetValeriaCharacter_ReturnValue;
-	Parms.K2Node_SwitchEnum_CmpSuccess_1 = K2Node_SwitchEnum_CmpSuccess_1;
-	Parms.CallFunc_GetEquippedItem_ReturnValue = std::move(CallFunc_GetEquippedItem_ReturnValue);
-	Parms.K2Node_DynamicCast_AsBP_Valeria_Character = K2Node_DynamicCast_AsBP_Valeria_Character;
-	Parms.K2Node_DynamicCast_bSuccess_2 = K2Node_DynamicCast_bSuccess_2;
-	Parms.CallFunc_Find_Water_For_Refill_Was_Found = CallFunc_Find_Water_For_Refill_Was_Found;
-	Parms.CallFunc_Find_Water_For_Refill_Water_Actor = CallFunc_Find_Water_For_Refill_Water_Actor;
-	Parms.CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue = CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue;
-	Parms.K2Node_DynamicCast_AsItem_Type_Definition = K2Node_DynamicCast_AsItem_Type_Definition;
-	Parms.K2Node_DynamicCast_bSuccess_3 = K2Node_DynamicCast_bSuccess_3;
-	Parms.CallFunc_IsValidSoftObjectReference_ReturnValue = CallFunc_IsValidSoftObjectReference_ReturnValue;
-	Parms.CallFunc_HasTag_ReturnValue = CallFunc_HasTag_ReturnValue;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.TryUpdateAlignment
-// (Public, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// struct FBoxSphereBounds                 MeshBounds                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
-// EInteractablePlateVerticalOffsetDirectionTemp_byte_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        CallFunc_GetPivot_ReturnValue                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_BreakVector2D_X                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// double                                  CallFunc_BreakVector2D_Y                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        CallFunc_MakeVector2D_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        CallFunc_MakeVector2D_ReturnValue_1                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FVector2D                        K2Node_Select_Default                                  (ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::TryUpdateAlignment(const struct FBoxSphereBounds& MeshBounds, EInteractablePlateVerticalOffsetDirection Temp_byte_Variable, const struct FVector2D& CallFunc_GetPivot_ReturnValue, double CallFunc_BreakVector2D_X, double CallFunc_BreakVector2D_Y, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_1, struct FVector2D& K2Node_Select_Default)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "TryUpdateAlignment");
-
-	Params::BP_InteractablePlateWidgetComponent_C_TryUpdateAlignment Parms{};
-
-	Parms.MeshBounds = std::move(MeshBounds);
-	Parms.Temp_byte_Variable = Temp_byte_Variable;
-	Parms.CallFunc_GetPivot_ReturnValue = std::move(CallFunc_GetPivot_ReturnValue);
-	Parms.CallFunc_BreakVector2D_X = CallFunc_BreakVector2D_X;
-	Parms.CallFunc_BreakVector2D_Y = CallFunc_BreakVector2D_Y;
-	Parms.CallFunc_MakeVector2D_ReturnValue = std::move(CallFunc_MakeVector2D_ReturnValue);
-	Parms.CallFunc_MakeVector2D_ReturnValue_1 = std::move(CallFunc_MakeVector2D_ReturnValue_1);
-	Parms.K2Node_Select_Default = std::move(K2Node_Select_Default);
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -220,118 +88,6 @@ void UBP_InteractablePlateWidgetComponent_C::AutomaticallyPosition(const struct 
 	Parms.CallFunc_Multiply_DoubleDouble_ReturnValue = CallFunc_Multiply_DoubleDouble_ReturnValue;
 	Parms.CallFunc_MakeVector_ReturnValue = std::move(CallFunc_MakeVector_ReturnValue);
 	Parms.CallFunc_K2_SetRelativeLocation_SweepHitResult = std::move(CallFunc_K2_SetRelativeLocation_SweepHitResult);
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.HandleHighlightToggled
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UInteractableComponent*           Interactable                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    Param_IsHighlighted                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AValeriaPlayerController*         Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::HandleHighlightToggled(class UInteractableComponent* Interactable, bool Param_IsHighlighted, class AValeriaPlayerController* Player)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "HandleHighlightToggled");
-
-	Params::BP_InteractablePlateWidgetComponent_C_HandleHighlightToggled Parms{};
-
-	Parms.Interactable = Interactable;
-	Parms.Param_IsHighlighted = Param_IsHighlighted;
-	Parms.Player = Player;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveEndPlay
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveEndPlay");
-
-	Params::BP_InteractablePlateWidgetComponent_C_ReceiveEndPlay Parms{};
-
-	Parms.EndPlayReason = EndPlayReason;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.On Widget Created
-// (BlueprintCallable, BlueprintEvent)
-
-void UBP_InteractablePlateWidgetComponent_C::On_Widget_Created()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "On Widget Created");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_InteractablePlateWidgetComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveTick
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::ReceiveTick(float DeltaSeconds)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveTick");
-
-	Params::BP_InteractablePlateWidgetComponent_C_ReceiveTick Parms{};
-
-	Parms.DeltaSeconds = DeltaSeconds;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.UpdateRefillWaterCanIMC
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bPlateVisibile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_InteractablePlateWidgetComponent_C::UpdateRefillWaterCanIMC(bool bPlateVisibile)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "UpdateRefillWaterCanIMC");
-
-	Params::BP_InteractablePlateWidgetComponent_C_UpdateRefillWaterCanIMC Parms{};
-
-	Parms.bPlateVisibile = bPlateVisibile;
 
 	UObject::ProcessEvent(Func, &Parms);
 }
@@ -414,6 +170,250 @@ void UBP_InteractablePlateWidgetComponent_C::ExecuteUbergraph_BP_InteractablePla
 	Parms.CallFunc_IsDesktop_ReturnValue = CallFunc_IsDesktop_ReturnValue;
 	Parms.K2Node_CustomEvent_bPlateVisibile = K2Node_CustomEvent_bPlateVisibile;
 	Parms.CallFunc_NotEqual_ObjectObject_ReturnValue = CallFunc_NotEqual_ObjectObject_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.HandleHighlightToggled
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UInteractableComponent*           Interactable                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    Param_IsHighlighted                                    (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaPlayerController*         Player                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::HandleHighlightToggled(class UInteractableComponent* Interactable, bool Param_IsHighlighted, class AValeriaPlayerController* Player)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "HandleHighlightToggled");
+
+	Params::BP_InteractablePlateWidgetComponent_C_HandleHighlightToggled Parms{};
+
+	Parms.Interactable = Interactable;
+	Parms.Param_IsHighlighted = Param_IsHighlighted;
+	Parms.Player = Player;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.On Widget Created
+// (BlueprintCallable, BlueprintEvent)
+
+void UBP_InteractablePlateWidgetComponent_C::On_Widget_Created()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "On Widget Created");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_InteractablePlateWidgetComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveEndPlay
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EEndPlayReason                          EndPlayReason                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::ReceiveEndPlay(EEndPlayReason EndPlayReason)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveEndPlay");
+
+	Params::BP_InteractablePlateWidgetComponent_C_ReceiveEndPlay Parms{};
+
+	Parms.EndPlayReason = EndPlayReason;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.ReceiveTick
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// float                                   DeltaSeconds                                           (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::ReceiveTick(float DeltaSeconds)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "ReceiveTick");
+
+	Params::BP_InteractablePlateWidgetComponent_C_ReceiveTick Parms{};
+
+	Parms.DeltaSeconds = DeltaSeconds;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.Refill Water Can Tick
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UUserWidget*                      CallFunc_GetUserWidgetObject_ReturnValue               (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// EValeriaFuncResult                      CallFunc_GetValeriaPlayerController_OutResult          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaPlayerController*         CallFunc_GetValeriaPlayerController_ReturnValue        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UUserWidget*                      CallFunc_GetUserWidgetObject_ReturnValue_1             (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class ABP_ValeriaPlayerController_C*    K2Node_DynamicCast_AsBP_Valeria_Player_Controller      (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UWBP_InteractPlate_Prompt_C*      K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt         (ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess_1                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_GetInteractState_bInteractState               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ECharacterState                         CallFunc_GetInteractState_State                        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EValeriaFuncResult                      CallFunc_GetValeriaCharacter_OutResult                 (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaCharacter*                CallFunc_GetValeriaCharacter_ReturnValue               (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_SwitchEnum_CmpSuccess_1                         (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FValeriaItem                     CallFunc_GetEquippedItem_ReturnValue                   ()
+// class ABP_ValeriaCharacter_C*           K2Node_DynamicCast_AsBP_Valeria_Character              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess_2                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_Find_Water_For_Refill_Was_Found               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           CallFunc_Find_Water_For_Refill_Water_Actor             (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UObject*                          CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue  (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UVAL_ItemTypeDefinitionAsset*     K2Node_DynamicCast_AsItem_Type_Definition              (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_DynamicCast_bSuccess_3                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValidSoftObjectReference_ReturnValue        (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_HasTag_ReturnValue                            (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::Refill_Water_Can_Tick(class UUserWidget* CallFunc_GetUserWidgetObject_ReturnValue, EValeriaFuncResult CallFunc_GetValeriaPlayerController_OutResult, class AValeriaPlayerController* CallFunc_GetValeriaPlayerController_ReturnValue, class UUserWidget* CallFunc_GetUserWidgetObject_ReturnValue_1, class ABP_ValeriaPlayerController_C* K2Node_DynamicCast_AsBP_Valeria_Player_Controller, bool K2Node_DynamicCast_bSuccess, class UWBP_InteractPlate_Prompt_C* K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt, bool K2Node_DynamicCast_bSuccess_1, bool CallFunc_GetInteractState_bInteractState, ECharacterState CallFunc_GetInteractState_State, bool K2Node_SwitchEnum_CmpSuccess, EValeriaFuncResult CallFunc_GetValeriaCharacter_OutResult, class AValeriaCharacter* CallFunc_GetValeriaCharacter_ReturnValue, bool K2Node_SwitchEnum_CmpSuccess_1, const struct FValeriaItem& CallFunc_GetEquippedItem_ReturnValue, class ABP_ValeriaCharacter_C* K2Node_DynamicCast_AsBP_Valeria_Character, bool K2Node_DynamicCast_bSuccess_2, bool CallFunc_Find_Water_For_Refill_Was_Found, class AActor* CallFunc_Find_Water_For_Refill_Water_Actor, class UObject* CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue, class UVAL_ItemTypeDefinitionAsset* K2Node_DynamicCast_AsItem_Type_Definition, bool K2Node_DynamicCast_bSuccess_3, bool CallFunc_IsValidSoftObjectReference_ReturnValue, bool CallFunc_HasTag_ReturnValue)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "Refill Water Can Tick");
+
+	Params::BP_InteractablePlateWidgetComponent_C_Refill_Water_Can_Tick Parms{};
+
+	Parms.CallFunc_GetUserWidgetObject_ReturnValue = CallFunc_GetUserWidgetObject_ReturnValue;
+	Parms.CallFunc_GetValeriaPlayerController_OutResult = CallFunc_GetValeriaPlayerController_OutResult;
+	Parms.CallFunc_GetValeriaPlayerController_ReturnValue = CallFunc_GetValeriaPlayerController_ReturnValue;
+	Parms.CallFunc_GetUserWidgetObject_ReturnValue_1 = CallFunc_GetUserWidgetObject_ReturnValue_1;
+	Parms.K2Node_DynamicCast_AsBP_Valeria_Player_Controller = K2Node_DynamicCast_AsBP_Valeria_Player_Controller;
+	Parms.K2Node_DynamicCast_bSuccess = K2Node_DynamicCast_bSuccess;
+	Parms.K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt = K2Node_DynamicCast_AsWBP_Interact_Plate_Prompt;
+	Parms.K2Node_DynamicCast_bSuccess_1 = K2Node_DynamicCast_bSuccess_1;
+	Parms.CallFunc_GetInteractState_bInteractState = CallFunc_GetInteractState_bInteractState;
+	Parms.CallFunc_GetInteractState_State = CallFunc_GetInteractState_State;
+	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
+	Parms.CallFunc_GetValeriaCharacter_OutResult = CallFunc_GetValeriaCharacter_OutResult;
+	Parms.CallFunc_GetValeriaCharacter_ReturnValue = CallFunc_GetValeriaCharacter_ReturnValue;
+	Parms.K2Node_SwitchEnum_CmpSuccess_1 = K2Node_SwitchEnum_CmpSuccess_1;
+	Parms.CallFunc_GetEquippedItem_ReturnValue = std::move(CallFunc_GetEquippedItem_ReturnValue);
+	Parms.K2Node_DynamicCast_AsBP_Valeria_Character = K2Node_DynamicCast_AsBP_Valeria_Character;
+	Parms.K2Node_DynamicCast_bSuccess_2 = K2Node_DynamicCast_bSuccess_2;
+	Parms.CallFunc_Find_Water_For_Refill_Was_Found = CallFunc_Find_Water_For_Refill_Was_Found;
+	Parms.CallFunc_Find_Water_For_Refill_Water_Actor = CallFunc_Find_Water_For_Refill_Water_Actor;
+	Parms.CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue = CallFunc_Conv_SoftObjectReferenceToObject_ReturnValue;
+	Parms.K2Node_DynamicCast_AsItem_Type_Definition = K2Node_DynamicCast_AsItem_Type_Definition;
+	Parms.K2Node_DynamicCast_bSuccess_3 = K2Node_DynamicCast_bSuccess_3;
+	Parms.CallFunc_IsValidSoftObjectReference_ReturnValue = CallFunc_IsValidSoftObjectReference_ReturnValue;
+	Parms.CallFunc_HasTag_ReturnValue = CallFunc_HasTag_ReturnValue;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.RemoveRefillWaterCanIMC
+// (Public, HasDefaults, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FModifyContextOptions            K2Node_MakeStruct_ModifyContextOptions                 (NoDestructor)
+// EValeriaFuncResult                      CallFunc_GetValeriaPlayerController_OutResult          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AValeriaPlayerController*         CallFunc_GetValeriaPlayerController_ReturnValue        (ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UEnhancedInputLocalPlayerSubsystem*CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_IsValid_ReturnValue                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// TScriptInterface<class IEnhancedInputSubsystemInterface>CallFunc_RemoveMappingContext_self_CastInput           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    K2Node_SwitchEnum_CmpSuccess                           (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::RemoveRefillWaterCanIMC(const struct FModifyContextOptions& K2Node_MakeStruct_ModifyContextOptions, EValeriaFuncResult CallFunc_GetValeriaPlayerController_OutResult, class AValeriaPlayerController* CallFunc_GetValeriaPlayerController_ReturnValue, class UEnhancedInputLocalPlayerSubsystem* CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue, bool CallFunc_IsValid_ReturnValue, TScriptInterface<class IEnhancedInputSubsystemInterface> CallFunc_RemoveMappingContext_self_CastInput, bool K2Node_SwitchEnum_CmpSuccess)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "RemoveRefillWaterCanIMC");
+
+	Params::BP_InteractablePlateWidgetComponent_C_RemoveRefillWaterCanIMC Parms{};
+
+	Parms.K2Node_MakeStruct_ModifyContextOptions = std::move(K2Node_MakeStruct_ModifyContextOptions);
+	Parms.CallFunc_GetValeriaPlayerController_OutResult = CallFunc_GetValeriaPlayerController_OutResult;
+	Parms.CallFunc_GetValeriaPlayerController_ReturnValue = CallFunc_GetValeriaPlayerController_ReturnValue;
+	Parms.CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue = CallFunc_GetLocalPlayerSubSystemFromPlayerController_ReturnValue;
+	Parms.CallFunc_IsValid_ReturnValue = CallFunc_IsValid_ReturnValue;
+	Parms.CallFunc_RemoveMappingContext_self_CastInput = CallFunc_RemoveMappingContext_self_CastInput;
+	Parms.K2Node_SwitchEnum_CmpSuccess = K2Node_SwitchEnum_CmpSuccess;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.TryUpdateAlignment
+// (Public, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// struct FBoxSphereBounds                 MeshBounds                                             (Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
+// EInteractablePlateVerticalOffsetDirectionTemp_byte_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        CallFunc_GetPivot_ReturnValue                          (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_BreakVector2D_X                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// double                                  CallFunc_BreakVector2D_Y                               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        CallFunc_MakeVector2D_ReturnValue                      (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        CallFunc_MakeVector2D_ReturnValue_1                    (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FVector2D                        K2Node_Select_Default                                  (ConstParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::TryUpdateAlignment(const struct FBoxSphereBounds& MeshBounds, EInteractablePlateVerticalOffsetDirection Temp_byte_Variable, const struct FVector2D& CallFunc_GetPivot_ReturnValue, double CallFunc_BreakVector2D_X, double CallFunc_BreakVector2D_Y, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue, const struct FVector2D& CallFunc_MakeVector2D_ReturnValue_1, struct FVector2D& K2Node_Select_Default)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "TryUpdateAlignment");
+
+	Params::BP_InteractablePlateWidgetComponent_C_TryUpdateAlignment Parms{};
+
+	Parms.MeshBounds = std::move(MeshBounds);
+	Parms.Temp_byte_Variable = Temp_byte_Variable;
+	Parms.CallFunc_GetPivot_ReturnValue = std::move(CallFunc_GetPivot_ReturnValue);
+	Parms.CallFunc_BreakVector2D_X = CallFunc_BreakVector2D_X;
+	Parms.CallFunc_BreakVector2D_Y = CallFunc_BreakVector2D_Y;
+	Parms.CallFunc_MakeVector2D_ReturnValue = std::move(CallFunc_MakeVector2D_ReturnValue);
+	Parms.CallFunc_MakeVector2D_ReturnValue_1 = std::move(CallFunc_MakeVector2D_ReturnValue_1);
+	Parms.K2Node_Select_Default = std::move(K2Node_Select_Default);
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_InteractablePlateWidgetComponent.BP_InteractablePlateWidgetComponent_C.UpdateRefillWaterCanIMC
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bPlateVisibile                                         (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_InteractablePlateWidgetComponent_C::UpdateRefillWaterCanIMC(bool bPlateVisibile)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_InteractablePlateWidgetComponent_C", "UpdateRefillWaterCanIMC");
+
+	Params::BP_InteractablePlateWidgetComponent_C_UpdateRefillWaterCanIMC Parms{};
+
+	Parms.bPlateVisibile = bPlateVisibile;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

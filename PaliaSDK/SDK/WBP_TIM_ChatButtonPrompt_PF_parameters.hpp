@@ -20,7 +20,7 @@ struct WBP_TIM_ChatButtonPrompt_PF_C_ExecuteUbergraph_WBP_TIM_ChatButtonPrompt_P
 {
 public:
 	int32                                         EntryPoint;                                        // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B2C[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Array_Get_Item;                           // 0x0008(0x0018)()
 };
 static_assert(alignof(WBP_TIM_ChatButtonPrompt_PF_C_ExecuteUbergraph_WBP_TIM_ChatButtonPrompt_PF) == 0x000008, "Wrong alignment on WBP_TIM_ChatButtonPrompt_PF_C_ExecuteUbergraph_WBP_TIM_ChatButtonPrompt_PF");
@@ -35,11 +35,11 @@ struct WBP_TIM_ChatButtonPrompt_PF_C_SetSelectText final
 public:
 	bool                                          Param_Index;                                       // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable;                                // 0x0001(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE5[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B2D[0x2];                                     // 0x0002(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Array_Length_ReturnValue;                 // 0x0004(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   CallFunc_Array_Get_Item;                           // 0x0008(0x0018)()
 	bool                                          CallFunc_Greater_IntInt_ReturnValue;               // 0x0020(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4AE6[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4B2E[0x7];                                     // 0x0021(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   CallFunc_Array_Get_Item_1;                         // 0x0028(0x0018)()
 	class FText                                   K2Node_Select_Default;                             // 0x0040(0x0018)()
 };

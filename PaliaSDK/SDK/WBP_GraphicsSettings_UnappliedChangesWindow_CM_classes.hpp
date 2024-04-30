@@ -29,19 +29,19 @@ public:
 	FMulticastInlineDelegateProperty_             OnConfirm;                                         // 0x0570(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnCancel;                                          // 0x0580(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	int32                                         Timer;                                             // 0x0590(0x0004)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_42A4[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_32EE[0x4];                                     // 0x0594(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FTimerHandle                           CountDown_Timer;                                   // 0x0598(0x0008)(Edit, BlueprintVisible, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 
 public:
-	void OnConfirm__DelegateSignature();
-	void OnCancel__DelegateSignature();
-	void InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction);
-	void HandleStartOpening_BP(bool* bOutHasLatentOpeningLogic);
-	void HandleStartClosing_BP(bool bPermitLatentClosing, bool* bOutHasLatentClosingLogic);
-	void ExecuteUbergraph_WBP_GraphicsSettings_UnappliedChangesWindow_CM(int32 EntryPoint, const struct FInputActionValue& K2Node_EnhancedInputActionEvent_ActionValue, float K2Node_EnhancedInputActionEvent_ElapsedTime, float K2Node_EnhancedInputActionEvent_TriggeredTime, class UInputAction* K2Node_EnhancedInputActionEvent_SourceAction, class UInputAction* Temp_object_Variable, bool CallFunc_Conv_InputActionValueToBool_ReturnValue, double Temp_real_Variable, double Temp_real_Variable_1, double Temp_real_Variable_0, double Temp_real_Variable_1_0, bool Temp_bool_Variable, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue_1, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue_1);
-	bool CanClose(ES6UI_ModalWidgetState CallFunc_GetModalWidgetState_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue);
-	void BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature();
 	void BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature();
+	void BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature();
+	bool CanClose(ES6UI_ModalWidgetState CallFunc_GetModalWidgetState_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue);
+	void ExecuteUbergraph_WBP_GraphicsSettings_UnappliedChangesWindow_CM(int32 EntryPoint, const struct FInputActionValue& K2Node_EnhancedInputActionEvent_ActionValue, float K2Node_EnhancedInputActionEvent_ElapsedTime, float K2Node_EnhancedInputActionEvent_TriggeredTime, class UInputAction* K2Node_EnhancedInputActionEvent_SourceAction, class UInputAction* Temp_object_Variable, bool CallFunc_Conv_InputActionValueToBool_ReturnValue, double Temp_real_Variable, double Temp_real_Variable_1, double Temp_real_Variable_0, double Temp_real_Variable_1_0, bool Temp_bool_Variable, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue, class APlayerController* CallFunc_GetOwningPlayer_ReturnValue_1, class US6UI_UIManagerWidgetBase* CallFunc_GetUIManagerWidget_ReturnValue_1);
+	void HandleStartClosing_BP(bool bPermitLatentClosing, bool* bOutHasLatentClosingLogic);
+	void HandleStartOpening_BP(bool* bOutHasLatentOpeningLogic);
+	void InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction);
+	void OnCancel__DelegateSignature();
+	void OnConfirm__DelegateSignature();
 
 public:
 	static class UClass* StaticClass()

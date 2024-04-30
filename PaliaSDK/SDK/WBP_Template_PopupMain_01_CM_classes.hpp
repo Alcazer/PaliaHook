@@ -11,10 +11,10 @@
 #include "Basic.hpp"
 
 #include "Engine_structs.hpp"
-#include "SlateCore_structs.hpp"
-#include "UMG_classes.hpp"
-#include "BP_TopBackerSettings_CloseButton_structs.hpp"
 #include "BP_TopBackerSettings_Popup_structs.hpp"
+#include "SlateCore_structs.hpp"
+#include "BP_TopBackerSettings_CloseButton_structs.hpp"
+#include "UMG_classes.hpp"
 
 
 namespace SDK
@@ -31,7 +31,7 @@ public:
 	FMulticastInlineDelegateProperty_             OnExitButtonClicked;                               // 0x02D8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	struct FMargin                                ContentPadding;                                    // 0x02E8(0x0010)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor)
 	bool                                          UseTopHeaderWithCloseButton;                       // 0x02F8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4FD4[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5010[0x7];                                     // 0x02F9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	struct FBP_TopBackerSettings_Popup            Settings_Popup;                                    // 0x0300(0x0040)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	struct FBP_TopBackerSettings_CloseButton      Settings_CloseButton;                              // 0x0340(0x00A0)(Edit, BlueprintVisible, HasGetValueTypeHash)
 	EHorizontalAlignment                          HAlign_Content;                                    // 0x03E0(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

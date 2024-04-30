@@ -25,7 +25,7 @@ public:
 	class UVerticalBox*                           VBox_Stack;                                        // 0x0520(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	class UVALUI_NotificationQueue*               NotificationQueue;                                 // 0x0528(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, NoDestructor, HasGetValueTypeHash)
 	int32                                         MaxNotificationsToShowAtOnce;                      // 0x0530(0x0004)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4D48[0x4];                                     // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4D24[0x4];                                     // 0x0534(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	TArray<struct FGuid>                          ShownNotificationIds;                              // 0x0538(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	TArray<struct FGuid>                          PendingNotificationIds;                            // 0x0548(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 

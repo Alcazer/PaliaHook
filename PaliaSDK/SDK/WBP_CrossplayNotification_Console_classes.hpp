@@ -33,7 +33,7 @@ public:
 	class FText                                   Body_Notification_XSX;                             // 0x05D8(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	class FText                                   Body_Notification_PS5;                             // 0x05F0(0x0018)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bEnabledCrossplay;                                 // 0x0608(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_509E[0x7];                                     // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_507C[0x7];                                     // 0x0609(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	FMulticastInlineDelegateProperty_             OnCrossplayRequired;                               // 0x0610(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 	FMulticastInlineDelegateProperty_             OnCrossplayNotification;                           // 0x0620(0x0010)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, BlueprintAssignable, BlueprintCallable)
 

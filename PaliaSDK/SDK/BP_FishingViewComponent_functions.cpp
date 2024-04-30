@@ -17,274 +17,6 @@
 namespace SDK
 {
 
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.Is Bobber in Water?
-// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
-// Parameters:
-// bool                                    IsInWater                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFishingMiniGameState                   Temp_byte_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_1                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_2                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_3                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_4                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_5                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_6                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_7                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_8                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_9                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    Temp_bool_Variable_10                                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// struct FFishingMiniGameViewState        CallFunc_GetViewState_ReturnValue                      ()
-// bool                                    K2Node_Select_Default                                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::Is_Bobber_in_Water_(bool* IsInWater, EFishingMiniGameState Temp_byte_Variable, bool Temp_bool_Variable, bool Temp_bool_Variable_1, bool Temp_bool_Variable_2, bool Temp_bool_Variable_3, bool Temp_bool_Variable_4, bool Temp_bool_Variable_5, bool Temp_bool_Variable_6, bool Temp_bool_Variable_7, bool Temp_bool_Variable_8, bool Temp_bool_Variable_9, bool Temp_bool_Variable_10, const struct FFishingMiniGameViewState& CallFunc_GetViewState_ReturnValue, bool K2Node_Select_Default)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "Is Bobber in Water?");
-
-	Params::BP_FishingViewComponent_C_Is_Bobber_in_Water_ Parms{};
-
-	Parms.Temp_byte_Variable = Temp_byte_Variable;
-	Parms.Temp_bool_Variable = Temp_bool_Variable;
-	Parms.Temp_bool_Variable_1 = Temp_bool_Variable_1;
-	Parms.Temp_bool_Variable_2 = Temp_bool_Variable_2;
-	Parms.Temp_bool_Variable_3 = Temp_bool_Variable_3;
-	Parms.Temp_bool_Variable_4 = Temp_bool_Variable_4;
-	Parms.Temp_bool_Variable_5 = Temp_bool_Variable_5;
-	Parms.Temp_bool_Variable_6 = Temp_bool_Variable_6;
-	Parms.Temp_bool_Variable_7 = Temp_bool_Variable_7;
-	Parms.Temp_bool_Variable_8 = Temp_bool_Variable_8;
-	Parms.Temp_bool_Variable_9 = Temp_bool_Variable_9;
-	Parms.Temp_bool_Variable_10 = Temp_bool_Variable_10;
-	Parms.CallFunc_GetViewState_ReturnValue = std::move(CallFunc_GetViewState_ReturnValue);
-	Parms.K2Node_Select_Default = K2Node_Select_Default;
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (IsInWater != nullptr)
-		*IsInWater = Parms.IsInWater;
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobbleBeforeDestroyed
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// class AActor*                           bobble                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnFishingBobbleBeforeDestroyed(class AActor* bobble)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishingBobbleBeforeDestroyed");
-
-	Params::BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed Parms{};
-
-	Parms.bobble = bobble;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnNibbled_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// int32                                   FishNumber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnNibbled_Event_0(class UFishingViewComponent* FishingView, class UFishingComponent* Source, int32 FishNumber)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnNibbled_Event_0");
-
-	Params::BP_FishingViewComponent_C_OnNibbled_Event_0 Parms{};
-
-	Parms.FishingView = FishingView;
-	Parms.Source = Source;
-	Parms.FishNumber = FishNumber;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReceiveBeginPlay
-// (Event, Public, BlueprintEvent)
-
-void UBP_FishingViewComponent_C::ReceiveBeginPlay()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "ReceiveBeginPlay");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobberWasCreated_Event_0
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           bobble                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnFishingBobberWasCreated_Event_0(class UFishingViewComponent* FishingView, class AActor* bobble)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishingBobberWasCreated_Event_0");
-
-	Params::BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0 Parms{};
-
-	Parms.FishingView = FishingView;
-	Parms.bobble = bobble;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishIsBitingChanged_Event
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// bool                                    IsBiting                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnFishIsBitingChanged_Event(class UFishingViewComponent* FishingView, bool IsBiting)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishIsBitingChanged_Event");
-
-	Params::BP_FishingViewComponent_C_OnFishIsBitingChanged_Event Parms{};
-
-	Parms.FishingView = FishingView;
-	Parms.IsBiting = IsBiting;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnViewWasUpdatedEvent
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// struct FFishingMiniGameViewState        ViewState                                              (BlueprintVisible, BlueprintReadOnly, Parm)
-// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnViewWasUpdatedEvent(const struct FFishingMiniGameViewState& ViewState, class UFishingComponent* Source)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnViewWasUpdatedEvent");
-
-	Params::BP_FishingViewComponent_C_OnViewWasUpdatedEvent Parms{};
-
-	Parms.ViewState = std::move(ViewState);
-	Parms.Source = Source;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnMiniGameStateChanged
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EFishingMiniGameState                   PreviousState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// EFishingMiniGameState                   NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnMiniGameStateChanged(EFishingMiniGameState PreviousState, EFishingMiniGameState NewState, class UFishingComponent* Source)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnMiniGameStateChanged");
-
-	Params::BP_FishingViewComponent_C_OnMiniGameStateChanged Parms{};
-
-	Parms.PreviousState = PreviousState;
-	Parms.NewState = NewState;
-	Parms.Source = Source;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnBobberHitSomething
-// (Event, Public, BlueprintEvent)
-// Parameters:
-// EFishingBobberHitSomethingResult        Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// struct FVector                          ImpactPoint                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UPhysicalMaterial*                PhysMat                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnBobberHitSomething(EFishingBobberHitSomethingResult Result, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& ImpactPoint, class UPhysicalMaterial* PhysMat)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnBobberHitSomething");
-
-	Params::BP_FishingViewComponent_C_OnBobberHitSomething Parms{};
-
-	Parms.Result = Result;
-	Parms.OtherActor = OtherActor;
-	Parms.OtherComp = OtherComp;
-	Parms.ImpactPoint = std::move(ImpactPoint);
-	Parms.PhysMat = PhysMat;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnReceivedFishingEncouragement
-// (BlueprintCallable, BlueprintEvent)
-// Parameters:
-// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
-// class AValeriaCharacter*                FromVc                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::OnReceivedFishingEncouragement(class UFishingComponent* Source, class AValeriaCharacter* FromVc)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnReceivedFishingEncouragement");
-
-	Params::BP_FishingViewComponent_C_OnReceivedFishingEncouragement Parms{};
-
-	Parms.Source = Source;
-	Parms.FromVc = FromVc;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
-// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReelingChanged__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    IsReeling                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-
-void UBP_FishingViewComponent_C::ReelingChanged__DelegateSignature(bool IsReeling)
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("BP_FishingViewComponent_C", "ReelingChanged__DelegateSignature");
-
-	Params::BP_FishingViewComponent_C_ReelingChanged__DelegateSignature Parms{};
-
-	Parms.IsReeling = IsReeling;
-
-	UObject::ProcessEvent(Func, &Parms);
-}
-
-
 // Function BP_FishingViewComponent.BP_FishingViewComponent_C.ExecuteUbergraph_BP_FishingViewComponent
 // (Final, UbergraphFunction, HasDefaults)
 // Parameters:
@@ -484,6 +216,274 @@ void UBP_FishingViewComponent_C::ExecuteUbergraph_BP_FishingViewComponent(int32 
 	Parms.CallFunc_AkEventLocation_AkComponent_1 = CallFunc_AkEventLocation_AkComponent_1;
 	Parms.CallFunc_AkEventLocation_Playing_ID_1 = CallFunc_AkEventLocation_Playing_ID_1;
 	Parms.CallFunc_AkSetRTPC_Value_ImplicitCast = CallFunc_AkSetRTPC_Value_ImplicitCast;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.Is Bobber in Water?
+// (Public, HasOutParams, HasDefaults, BlueprintCallable, BlueprintEvent, BlueprintPure)
+// Parameters:
+// bool                                    IsInWater                                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFishingMiniGameState                   Temp_byte_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable                                     (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_1                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_2                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_3                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_4                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_5                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_6                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_7                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_8                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_9                                   (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    Temp_bool_Variable_10                                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// struct FFishingMiniGameViewState        CallFunc_GetViewState_ReturnValue                      ()
+// bool                                    K2Node_Select_Default                                  (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::Is_Bobber_in_Water_(bool* IsInWater, EFishingMiniGameState Temp_byte_Variable, bool Temp_bool_Variable, bool Temp_bool_Variable_1, bool Temp_bool_Variable_2, bool Temp_bool_Variable_3, bool Temp_bool_Variable_4, bool Temp_bool_Variable_5, bool Temp_bool_Variable_6, bool Temp_bool_Variable_7, bool Temp_bool_Variable_8, bool Temp_bool_Variable_9, bool Temp_bool_Variable_10, const struct FFishingMiniGameViewState& CallFunc_GetViewState_ReturnValue, bool K2Node_Select_Default)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "Is Bobber in Water?");
+
+	Params::BP_FishingViewComponent_C_Is_Bobber_in_Water_ Parms{};
+
+	Parms.Temp_byte_Variable = Temp_byte_Variable;
+	Parms.Temp_bool_Variable = Temp_bool_Variable;
+	Parms.Temp_bool_Variable_1 = Temp_bool_Variable_1;
+	Parms.Temp_bool_Variable_2 = Temp_bool_Variable_2;
+	Parms.Temp_bool_Variable_3 = Temp_bool_Variable_3;
+	Parms.Temp_bool_Variable_4 = Temp_bool_Variable_4;
+	Parms.Temp_bool_Variable_5 = Temp_bool_Variable_5;
+	Parms.Temp_bool_Variable_6 = Temp_bool_Variable_6;
+	Parms.Temp_bool_Variable_7 = Temp_bool_Variable_7;
+	Parms.Temp_bool_Variable_8 = Temp_bool_Variable_8;
+	Parms.Temp_bool_Variable_9 = Temp_bool_Variable_9;
+	Parms.Temp_bool_Variable_10 = Temp_bool_Variable_10;
+	Parms.CallFunc_GetViewState_ReturnValue = std::move(CallFunc_GetViewState_ReturnValue);
+	Parms.K2Node_Select_Default = K2Node_Select_Default;
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (IsInWater != nullptr)
+		*IsInWater = Parms.IsInWater;
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnBobberHitSomething
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EFishingBobberHitSomethingResult        Result                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           OtherActor                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+// class UPrimitiveComponent*              OtherComp                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// struct FVector                          ImpactPoint                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UPhysicalMaterial*                PhysMat                                                (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnBobberHitSomething(EFishingBobberHitSomethingResult Result, class AActor* OtherActor, class UPrimitiveComponent* OtherComp, const struct FVector& ImpactPoint, class UPhysicalMaterial* PhysMat)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnBobberHitSomething");
+
+	Params::BP_FishingViewComponent_C_OnBobberHitSomething Parms{};
+
+	Parms.Result = Result;
+	Parms.OtherActor = OtherActor;
+	Parms.OtherComp = OtherComp;
+	Parms.ImpactPoint = std::move(ImpactPoint);
+	Parms.PhysMat = PhysMat;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobberWasCreated_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AActor*                           bobble                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnFishingBobberWasCreated_Event_0(class UFishingViewComponent* FishingView, class AActor* bobble)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishingBobberWasCreated_Event_0");
+
+	Params::BP_FishingViewComponent_C_OnFishingBobberWasCreated_Event_0 Parms{};
+
+	Parms.FishingView = FishingView;
+	Parms.bobble = bobble;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishingBobbleBeforeDestroyed
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// class AActor*                           bobble                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnFishingBobbleBeforeDestroyed(class AActor* bobble)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishingBobbleBeforeDestroyed");
+
+	Params::BP_FishingViewComponent_C_OnFishingBobbleBeforeDestroyed Parms{};
+
+	Parms.bobble = bobble;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnFishIsBitingChanged_Event
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// bool                                    IsBiting                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnFishIsBitingChanged_Event(class UFishingViewComponent* FishingView, bool IsBiting)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnFishIsBitingChanged_Event");
+
+	Params::BP_FishingViewComponent_C_OnFishIsBitingChanged_Event Parms{};
+
+	Parms.FishingView = FishingView;
+	Parms.IsBiting = IsBiting;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnMiniGameStateChanged
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// EFishingMiniGameState                   PreviousState                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// EFishingMiniGameState                   NewState                                               (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnMiniGameStateChanged(EFishingMiniGameState PreviousState, EFishingMiniGameState NewState, class UFishingComponent* Source)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnMiniGameStateChanged");
+
+	Params::BP_FishingViewComponent_C_OnMiniGameStateChanged Parms{};
+
+	Parms.PreviousState = PreviousState;
+	Parms.NewState = NewState;
+	Parms.Source = Source;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnNibbled_Event_0
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFishingViewComponent*            FishingView                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// int32                                   FishNumber                                             (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnNibbled_Event_0(class UFishingViewComponent* FishingView, class UFishingComponent* Source, int32 FishNumber)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnNibbled_Event_0");
+
+	Params::BP_FishingViewComponent_C_OnNibbled_Event_0 Parms{};
+
+	Parms.FishingView = FishingView;
+	Parms.Source = Source;
+	Parms.FishNumber = FishNumber;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnReceivedFishingEncouragement
+// (BlueprintCallable, BlueprintEvent)
+// Parameters:
+// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+// class AValeriaCharacter*                FromVc                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnReceivedFishingEncouragement(class UFishingComponent* Source, class AValeriaCharacter* FromVc)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnReceivedFishingEncouragement");
+
+	Params::BP_FishingViewComponent_C_OnReceivedFishingEncouragement Parms{};
+
+	Parms.Source = Source;
+	Parms.FromVc = FromVc;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.OnViewWasUpdatedEvent
+// (Event, Public, BlueprintEvent)
+// Parameters:
+// struct FFishingMiniGameViewState        ViewState                                              (BlueprintVisible, BlueprintReadOnly, Parm)
+// class UFishingComponent*                Source                                                 (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::OnViewWasUpdatedEvent(const struct FFishingMiniGameViewState& ViewState, class UFishingComponent* Source)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "OnViewWasUpdatedEvent");
+
+	Params::BP_FishingViewComponent_C_OnViewWasUpdatedEvent Parms{};
+
+	Parms.ViewState = std::move(ViewState);
+	Parms.Source = Source;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReceiveBeginPlay
+// (Event, Public, BlueprintEvent)
+
+void UBP_FishingViewComponent_C::ReceiveBeginPlay()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "ReceiveBeginPlay");
+
+	UObject::ProcessEvent(Func, nullptr);
+}
+
+
+// Function BP_FishingViewComponent.BP_FishingViewComponent_C.ReelingChanged__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    IsReeling                                              (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+
+void UBP_FishingViewComponent_C::ReelingChanged__DelegateSignature(bool IsReeling)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("BP_FishingViewComponent_C", "ReelingChanged__DelegateSignature");
+
+	Params::BP_FishingViewComponent_C_ReelingChanged__DelegateSignature Parms{};
+
+	Parms.IsReeling = IsReeling;
 
 	UObject::ProcessEvent(Func, &Parms);
 }

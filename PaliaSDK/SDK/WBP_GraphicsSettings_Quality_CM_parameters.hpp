@@ -23,7 +23,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_AntiAliasing_CM_K2Node_ComponentBoundEvent_14_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_AntiAliasing_CM_K2Node_ComponentBoundEvent_14_OnOptionChanged__DelegateSignature");
@@ -37,7 +37,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52D9[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A1[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Effects_CM_K2Node_ComponentBoundEvent_16_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Effects_CM_K2Node_ComponentBoundEvent_16_OnOptionChanged__DelegateSignature");
@@ -51,7 +51,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DA[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A2[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Foliage_CM_K2Node_ComponentBoundEvent_18_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Foliage_CM_K2Node_ComponentBoundEvent_18_OnOptionChanged__DelegateSignature");
@@ -65,7 +65,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DB[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A3[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Postprocessing_CM_K2Node_ComponentBoundEvent_17_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Postprocessing_CM_K2Node_ComponentBoundEvent_17_OnOptionChanged__DelegateSignature");
@@ -79,7 +79,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DC[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A4[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_QualityPresets_CM_K2Node_ComponentBoundEvent_10_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_QualityPresets_CM_K2Node_ComponentBoundEvent_10_OnOptionChanged__DelegateSignature");
@@ -93,7 +93,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DD[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A5[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_ResolutionScale_CM_K2Node_ComponentBoundEvent_11_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_ResolutionScale_CM_K2Node_ComponentBoundEvent_11_OnOptionChanged__DelegateSignature");
@@ -107,7 +107,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DE[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A6[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Shadows_CM_K2Node_ComponentBoundEvent_13_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Shadows_CM_K2Node_ComponentBoundEvent_13_OnOptionChanged__DelegateSignature");
@@ -121,7 +121,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52DF[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A7[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Textures_CM_K2Node_ComponentBoundEvent_15_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_Textures_CM_K2Node_ComponentBoundEvent_15_OnOptionChanged__DelegateSignature");
@@ -135,7 +135,7 @@ struct WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM
 {
 public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E0[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A8[0x4];                                     // 0x0004(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   Text;                                              // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 };
 static_assert(alignof(WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_ViewDistance_CM_K2Node_ComponentBoundEvent_12_OnOptionChanged__DelegateSignature) == 0x000008, "Wrong alignment on WBP_GraphicsSettings_Quality_CM_C_BndEvt__WBP_GraphicsSettings_Quality_CM_Combobox_ViewDistance_CM_K2Node_ComponentBoundEvent_12_OnOptionChanged__DelegateSignature");
@@ -151,13 +151,13 @@ public:
 	int32                                         Param_Index;                                       // 0x0000(0x0004)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EScalabilitySetting                           ScalabilityType;                                   // 0x0004(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_SwitchEnum_CmpSuccess;                      // 0x0005(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E1[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40A9[0x2];                                     // 0x0006(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0008(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Conv_TextToString_ReturnValue;            // 0x0010(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_LeftS;                              // 0x0020(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	class FString                                 CallFunc_Split_RightS;                             // 0x0030(0x0010)(ZeroConstructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Split_ReturnValue;                        // 0x0040(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E2[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AA[0x7];                                     // 0x0041(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_Conv_StringToDouble_ReturnValue;          // 0x0048(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	float                                         CallFunc_SetResolutionScaleValueEx_NewScaleValue_ImplicitCast; // 0x0050(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };
@@ -190,7 +190,7 @@ public:
 	bool                                          Temp_bool_Variable_7;                              // 0x000B(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          Temp_bool_Variable_8;                              // 0x000C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERedirectsPlatform                            Temp_byte_Variable;                                // 0x000D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E3[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AB[0x2];                                     // 0x000E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_CustomEvent_Name;                           // 0x0010(0x0018)()
 	class FText                                   K2Node_CustomEvent_Description;                    // 0x0028(0x0018)()
 	TArray<class UWidget*>                        CallFunc_GetAllChildren_ReturnValue;               // 0x0040(0x0010)(ReferenceParm, ContainsInstancedReference)
@@ -198,43 +198,43 @@ public:
 	int32                                         K2Node_ComponentBoundEvent_Index_8;                // 0x0054(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class FText                                   K2Node_ComponentBoundEvent_Text_8;                 // 0x0058(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_7;                // 0x0070(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E4[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AC[0x4];                                     // 0x0074(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_7;                 // 0x0078(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_6;                // 0x0090(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E5[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AD[0x4];                                     // 0x0094(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_6;                 // 0x0098(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_5;                // 0x00B0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E6[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AE[0x4];                                     // 0x00B4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_5;                 // 0x00B8(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_4;                // 0x00D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E7[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40AF[0x4];                                     // 0x00D4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_4;                 // 0x00D8(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_3;                // 0x00F0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E8[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B0[0x4];                                     // 0x00F4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_3;                 // 0x00F8(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_2;                // 0x0110(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52E9[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B1[0x4];                                     // 0x0114(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_2;                 // 0x0118(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index_1;                // 0x0130(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EA[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B2[0x4];                                     // 0x0134(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text_1;                 // 0x0138(0x0018)()
 	int32                                         K2Node_ComponentBoundEvent_Index;                  // 0x0150(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EB[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B3[0x4];                                     // 0x0154(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   K2Node_ComponentBoundEvent_Text;                   // 0x0158(0x0018)()
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue;          // 0x0170(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue_1;        // 0x0178(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void(class FText Name, class FText Description)> K2Node_CreateDelegate_OutputDelegate;              // 0x0180(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Array_Index_Variable;                     // 0x0190(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	TDelegate<void()>                             K2Node_CreateDelegate_OutputDelegate_1;            // 0x0194(0x0010)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EC[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B4[0x4];                                     // 0x01A4(0x0004)(Fixing Size After Last Property [ Dumper-7 ])
 	class UWidget*                                CallFunc_Array_Get_Item;                           // 0x01A8(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	class UWBP_SettingsItem_Parent_DoNotEdit_C*   K2Node_DynamicCast_AsWBP_Settings_Item_Parent_Do_Not_Edit; // 0x01B0(0x0008)(ZeroConstructor, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_DynamicCast_bSuccess;                       // 0x01B8(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52ED[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B5[0x7];                                     // 0x01B9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	class UGameUserSettings*                      CallFunc_GetGameUserSettings_ReturnValue_2;        // 0x01C0(0x0008)(ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	int32                                         Temp_int_Loop_Counter_Variable;                    // 0x01C8(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Less_IntInt_ReturnValue;                  // 0x01CC(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EE[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B6[0x3];                                     // 0x01CD(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Add_IntInt_ReturnValue;                   // 0x01D0(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	ERedirectsPlatform                            CallFunc_GetPlatformType_ReturnValue;              // 0x01D4(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          K2Node_Select_Default;                             // 0x01D5(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
@@ -351,11 +351,11 @@ public:
 	float                                         CallFunc_GetResolutionScaleInformationEx_MaxScaleValue; // 0x003C(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	int32                                         CallFunc_FTrunc_ReturnValue;                       // 0x0040(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_InRange_FloatFloat_ReturnValue;           // 0x0044(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52EF[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B7[0x3];                                     // 0x0045(0x0003)(Fixing Size After Last Property [ Dumper-7 ])
 	int32                                         CallFunc_Map_Find_Value;                           // 0x0048(0x0004)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_Map_Find_ReturnValue;                     // 0x004C(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          CallFunc_BooleanAND_ReturnValue;                   // 0x004D(0x0001)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_52F0[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_40B8[0x2];                                     // 0x004E(0x0002)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        CallFunc_FTrunc_A_ImplicitCast;                    // 0x0050(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	double                                        CallFunc_InRange_FloatFloat_Value_ImplicitCast;    // 0x0058(0x0008)(ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 };

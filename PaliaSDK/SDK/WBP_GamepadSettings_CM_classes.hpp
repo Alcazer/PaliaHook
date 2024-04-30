@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_CloseKeyRebindMenuType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "CommonWidgetInputExtended_classes.hpp"
-#include "E_CloseKeyRebindMenuType_structs.hpp"
 #include "S6Core_structs.hpp"
 #include "CommonInput_structs.hpp"
 
@@ -44,7 +44,7 @@ public:
 	class UCommonActivatableWidgetSwitcher*       WidgetSwitcher;                                    // 0x0590(0x0008)(BlueprintVisible, ExportObject, BlueprintReadOnly, ZeroConstructor, DisableEditOnInstance, InstancedReference, RepSkip, NoDestructor, PersistentInstance, HasGetValueTypeHash)
 	TArray<class FString>                         LocaleComboBoxOptionsArray;                        // 0x0598(0x0010)(Edit, BlueprintVisible, DisableEditOnInstance)
 	bool                                          bIsSynced;                                         // 0x05A8(0x0001)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4A27[0x7];                                     // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4A8A[0x7];                                     // 0x05A9(0x0007)(Fixing Size After Last Property [ Dumper-7 ])
 	double                                        ScrollMoveSpeed;                                   // 0x05B0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	class UWBP_SettingsItem_Parent_DoNotEdit_C*   CurrentFocusWidget;                                // 0x05B8(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, InstancedReference, NoDestructor, HasGetValueTypeHash)
 	double                                        ControllerAxisSensitivityModifier;                 // 0x05C0(0x0008)(Edit, BlueprintVisible, ZeroConstructor, DisableEditOnInstance, IsPlainOldData, NoDestructor, HasGetValueTypeHash)

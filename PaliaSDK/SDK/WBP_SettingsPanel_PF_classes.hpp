@@ -10,9 +10,9 @@
 
 #include "Basic.hpp"
 
+#include "E_CloseKeyRebindMenuType_structs.hpp"
 #include "Engine_structs.hpp"
 #include "ValeriaUI_classes.hpp"
-#include "E_CloseKeyRebindMenuType_structs.hpp"
 
 
 namespace SDK

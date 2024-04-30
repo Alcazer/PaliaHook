@@ -34,7 +34,7 @@ public:
 	class FText                                   SecondaryButtonText;                               // 0x0320(0x0018)(Edit, BlueprintVisible)
 	bool                                          OnlyConfirm;                                       // 0x0338(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	bool                                          NoButtons;                                         // 0x0339(0x0001)(Edit, BlueprintVisible, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_4243[0x6];                                     // 0x033A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_5004[0x6];                                     // 0x033A(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class UClass*                                 Button_Cancel_Style_Override;                      // 0x0340(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UClass*                                 Button_Confirm_Style_Override;                     // 0x0348(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 	class UInputAction*                           Confirm_Input_Action;                              // 0x0350(0x0008)(Edit, BlueprintVisible, ZeroConstructor, NoDestructor, HasGetValueTypeHash)

@@ -17,102 +17,56 @@
 namespace SDK
 {
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.OnConfirm__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::OnConfirm__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "OnConfirm__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.OnCancel__DelegateSignature
-// (Public, Delegate, BlueprintCallable, BlueprintEvent)
-
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::OnCancel__DelegateSignature()
-{
-	static class UFunction* Func = nullptr;
-
-	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "OnCancel__DelegateSignature");
-
-	UObject::ProcessEvent(Func, nullptr);
-}
-
-
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature
 // (BlueprintEvent)
-// Parameters:
-// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
-// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature");
 
-	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
-
-	Parms.ActionValue = std::move(ActionValue);
-	Parms.ElapsedTime = ElapsedTime;
-	Parms.TriggeredTime = TriggeredTime;
-	Parms.SourceAction = SourceAction;
-
-	UObject::ProcessEvent(Func, &Parms);
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.HandleStartOpening_BP
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
-// Parameters:
-// bool                                    bOutHasLatentOpeningLogic                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature
+// (BlueprintEvent)
 
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::HandleStartOpening_BP(bool* bOutHasLatentOpeningLogic)
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "HandleStartOpening_BP");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature");
 
-	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_HandleStartOpening_BP Parms{};
-
-	UObject::ProcessEvent(Func, &Parms);
-
-	if (bOutHasLatentOpeningLogic != nullptr)
-		*bOutHasLatentOpeningLogic = Parms.bOutHasLatentOpeningLogic;
+	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.HandleStartClosing_BP
-// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.CanClose
+// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    bPermitLatentClosing                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    bOutHasLatentClosingLogic                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// ES6UI_ModalWidgetState                  CallFunc_GetModalWidgetState_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    CallFunc_EqualEqual_ByteByte_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::HandleStartClosing_BP(bool bPermitLatentClosing, bool* bOutHasLatentClosingLogic)
+bool UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::CanClose(ES6UI_ModalWidgetState CallFunc_GetModalWidgetState_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "HandleStartClosing_BP");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "CanClose");
 
-	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_HandleStartClosing_BP Parms{};
+	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_CanClose Parms{};
 
-	Parms.bPermitLatentClosing = bPermitLatentClosing;
+	Parms.CallFunc_GetModalWidgetState_ReturnValue = CallFunc_GetModalWidgetState_ReturnValue;
+	Parms.CallFunc_EqualEqual_ByteByte_ReturnValue = CallFunc_EqualEqual_ByteByte_ReturnValue;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	if (bOutHasLatentClosingLogic != nullptr)
-		*bOutHasLatentClosingLogic = Parms.bOutHasLatentClosingLogic;
+	return Parms.ReturnValue;
 }
 
 
@@ -166,54 +120,100 @@ void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::ExecuteUbergraph_WBP_Gra
 }
 
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.CanClose
-// (Event, Public, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.HandleStartClosing_BP
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
 // Parameters:
-// bool                                    ReturnValue                                            (Parm, OutParm, ZeroConstructor, ReturnParm, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// ES6UI_ModalWidgetState                  CallFunc_GetModalWidgetState_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-// bool                                    CallFunc_EqualEqual_ByteByte_ReturnValue               (ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bPermitLatentClosing                                   (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// bool                                    bOutHasLatentClosingLogic                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-bool UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::CanClose(ES6UI_ModalWidgetState CallFunc_GetModalWidgetState_ReturnValue, bool CallFunc_EqualEqual_ByteByte_ReturnValue)
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::HandleStartClosing_BP(bool bPermitLatentClosing, bool* bOutHasLatentClosingLogic)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "CanClose");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "HandleStartClosing_BP");
 
-	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_CanClose Parms{};
+	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_HandleStartClosing_BP Parms{};
 
-	Parms.CallFunc_GetModalWidgetState_ReturnValue = CallFunc_GetModalWidgetState_ReturnValue;
-	Parms.CallFunc_EqualEqual_ByteByte_ReturnValue = CallFunc_EqualEqual_ByteByte_ReturnValue;
+	Parms.bPermitLatentClosing = bPermitLatentClosing;
 
 	UObject::ProcessEvent(Func, &Parms);
 
-	return Parms.ReturnValue;
+	if (bOutHasLatentClosingLogic != nullptr)
+		*bOutHasLatentClosingLogic = Parms.bOutHasLatentClosingLogic;
 }
 
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.HandleStartOpening_BP
+// (Event, Protected, HasOutParams, BlueprintCallable, BlueprintEvent)
+// Parameters:
+// bool                                    bOutHasLatentOpeningLogic                              (Parm, OutParm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature()
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::HandleStartOpening_BP(bool* bOutHasLatentOpeningLogic)
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_1_Confirm__DelegateSignature");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "HandleStartOpening_BP");
+
+	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_HandleStartOpening_BP Parms{};
+
+	UObject::ProcessEvent(Func, &Parms);
+
+	if (bOutHasLatentOpeningLogic != nullptr)
+		*bOutHasLatentOpeningLogic = Parms.bOutHasLatentOpeningLogic;
+}
+
+
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0
+// (BlueprintEvent)
+// Parameters:
+// struct FInputActionValue                ActionValue                                            (BlueprintVisible, BlueprintReadOnly, Parm, NoDestructor)
+// float                                   ElapsedTime                                            (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// float                                   TriggeredTime                                          (BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
+// class UInputAction*                     SourceAction                                           (ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, NoDestructor, HasGetValueTypeHash)
+
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0(const struct FInputActionValue& ActionValue, float ElapsedTime, float TriggeredTime, class UInputAction* SourceAction)
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0");
+
+	Params::WBP_GraphicsSettings_UnappliedChangesWindow_CM_C_InpActEvt_IA_UI_Back_Cancel_K2Node_EnhancedInputActionEvent_0 Parms{};
+
+	Parms.ActionValue = std::move(ActionValue);
+	Parms.ElapsedTime = ElapsedTime;
+	Parms.TriggeredTime = TriggeredTime;
+	Parms.SourceAction = SourceAction;
+
+	UObject::ProcessEvent(Func, &Parms);
+}
+
+
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.OnCancel__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
+
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::OnCancel__DelegateSignature()
+{
+	static class UFunction* Func = nullptr;
+
+	if (Func == nullptr)
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "OnCancel__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }
 
 
-// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature
-// (BlueprintEvent)
+// Function WBP_GraphicsSettings_UnappliedChangesWindow_CM.WBP_GraphicsSettings_UnappliedChangesWindow_CM_C.OnConfirm__DelegateSignature
+// (Public, Delegate, BlueprintCallable, BlueprintEvent)
 
-void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature()
+void UWBP_GraphicsSettings_UnappliedChangesWindow_CM_C::OnConfirm__DelegateSignature()
 {
 	static class UFunction* Func = nullptr;
 
 	if (Func == nullptr)
-		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "BndEvt__WBP_GraphicsSettings_UnappliedChangesWindow_CM_WBP_Template_PopupSecondary_02_CM_K2Node_ComponentBoundEvent_0_Cancel__DelegateSignature");
+		Func = Class->GetFunction("WBP_GraphicsSettings_UnappliedChangesWindow_CM_C", "OnConfirm__DelegateSignature");
 
 	UObject::ProcessEvent(Func, nullptr);
 }

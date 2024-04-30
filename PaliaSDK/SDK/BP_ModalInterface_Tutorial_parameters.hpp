@@ -23,7 +23,7 @@ struct BP_ModalInterface_Tutorial_C_InitPreOpenModalWidget final
 public:
 	EHorizontalAlignment                          ContentHAlign;                                     // 0x0000(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
 	EVerticalAlignment                            ContentVAlign;                                     // 0x0001(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
-	uint8                                         Pad_3C1B[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
+	uint8                                         Pad_4E50[0x6];                                     // 0x0002(0x0006)(Fixing Size After Last Property [ Dumper-7 ])
 	class FText                                   HeaderText;                                        // 0x0008(0x0018)(BlueprintVisible, BlueprintReadOnly, Parm)
 	TArray<class UWidget*>                        PageWidgets;                                       // 0x0020(0x0010)(ConstParm, BlueprintVisible, BlueprintReadOnly, Parm, OutParm, ReferenceParm, ContainsInstancedReference)
 	bool                                          HideTutorialOptOut;                                // 0x0030(0x0001)(BlueprintVisible, BlueprintReadOnly, Parm, ZeroConstructor, IsPlainOldData, NoDestructor, HasGetValueTypeHash)
