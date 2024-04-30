@@ -20,6 +20,7 @@
 namespace SDK
 {
 
+void InitGObjects();
 using namespace UC;
 
 #include "../NameCollisions.inl"
