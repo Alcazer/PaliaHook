@@ -489,6 +489,7 @@ static void DrawHUD(const AHUD* HUD) {
 				if (!Entry.Actor->IsValidLowLevel() || Entry.Actor->IsDefaultObject()) continue;
 				ActorPosition = Entry.Actor->K2_GetActorLocation();
 			}
+			// HACK: Skip actors that return [0,0,0] due to the hack I had to add to K2_GetActorLocation
 			if (ActorPosition.X == 0 && ActorPosition.Y == 0 && ActorPosition.Z == 0) continue;
 
 			double Distance = sqrt(pow(PawnLocation.X - ActorPosition.X, 2) + pow(PawnLocation.Y - ActorPosition.Y, 2) + pow(PawnLocation.Z - ActorPosition.Z, 2)) * 0.01;
