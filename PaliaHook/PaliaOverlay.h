@@ -921,5 +921,17 @@ public:
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 	};
+
+	// Fishing
+	bool bAutoFishing = false;
+	bool bInstantFishing = false;
+	bool bPerfectCatch = false;
+	bool bNoRodDurabilityLoss = false;
+	bool bSellFish = false;
+	bool bDestroyOthers = false;
+	bool bCaptureFishingSpot = false;
+	bool bOverrideFishingSpot = false;
+	FName sOverrideFishingSpot;
+	UValeriaWaterBodyComponent* fWaterBody = (UValeriaWaterBodyComponent*)malloc(sizeof(UValeriaWaterBodyComponent));
 };
 

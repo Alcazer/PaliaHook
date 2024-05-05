@@ -8,6 +8,7 @@
 #include "ImGuiExt.h"
 #include "SDKExt.h"
 #include "Utils.h"
+#include <SDK/Palia_parameters.hpp>
 
 using namespace SDK;
 
@@ -470,6 +471,14 @@ static void DrawHUD(const AHUD* HUD) {
 		if (!PlayerGetPawn) return;
 		FVector PawnLocation = PlayerGetPawn->K2_GetActorLocation();
 
+		if (Overlay->bAutoFishing) {
+			AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+			if (ValeriaCharacter) {
+				ValeriaCharacter->ToolPrimaryActionPressed();
+				ValeriaCharacter->ToolPrimaryActionReleased();
+			}
+		}
+
 		if (abs(WorldTime - Overlay->LastCachedTime) > 0.1)
 		{
 			// TODO: Split to separate frames to avoid hitches
@@ -618,6 +627,7 @@ static void DrawHUD(const AHUD* HUD) {
 
 static void ProcessEvent(const UObject* Class, class UFunction* Function, void* Params)
 {
+	PaliaOverlay* Overlay = static_cast<PaliaOverlay*>(OverlayBase::Instance);
 	auto fn = Function->GetFullName();
 	invocations.insert(fn);
 
@@ -627,9 +637,125 @@ static void ProcessEvent(const UObject* Class, class UFunction* Function, void* 
 	else if (fn == "Function Engine.HUD.ReceiveDrawHUD") {
 		DrawHUD(reinterpret_cast<const AHUD*>(Class));
 	}
+	else if (fn == "Function Palia.FishingComponent.RpcServer_SelectLoot") {
+		auto SelectLoot = reinterpret_cast<SDK::Params::FishingComponent_RpcServer_SelectLoot*>(Params);
+		if (Overlay->bCaptureFishingSpot) {
+			memcpy(&Overlay->sOverrideFishingSpot, &SelectLoot->RPCLootParams.WaterType_Deprecated, sizeof(FName));
+			Overlay->bCaptureFishingSpot = false;
+		}
+		if (Overlay->bOverrideFishingSpot) {
+			memcpy(&SelectLoot->RPCLootParams.WaterType_Deprecated, &Overlay->sOverrideFishingSpot, sizeof(FName));
+		}
+	}
+	else if (fn == "Function Palia.FishingComponent.RpcServer_EndFishing") {
+		auto EndFishing = reinterpret_cast<SDK::Params::FishingComponent_RpcServer_EndFishing*>(Params);
+		if (EndFishing->Context.Result == EFishingMiniGameResult::Success) {
+			if (Overlay->bPerfectCatch) {
+				EndFishing->Context.Perfect = true;
+			}
+		}
+		if (EndFishing->Context.Result == EFishingMiniGameResult::Failure) {
+			if (Overlay->bPerfectCatch) {
+				EndFishing->Context.Result = EFishingMiniGameResult::Success;
+				EndFishing->Context.Perfect = true;
+			}
+		}
+		if (Overlay->bNoRodDurabilityLoss) {
+			EndFishing->Context.DurabilityReduction = 0;
+			EndFishing->Context.StartRodHealth = 100;
+			EndFishing->Context.StartFishHealth = 100;
+			EndFishing->Context.EndRodHealth = 100;
+			EndFishing->Context.EndFishHealth = 100;
+		}
+	}
 
 	//GetVFunction<void(*)(const UObject*, class UFunction*, void*)>(this, Offsets::ProcessEventIdx)(this, Function, Parms);
 	OriginalProcEvent(Class, Function, Params);
+
+	if (fn == "Function Palia.FishingComponent.RpcClient_StartFishingAt_Deprecated") {
+		auto World = GetWorld();
+		if (World) {
+			auto GameInstance = World->OwningGameInstance;
+			if (GameInstance) {
+				if (GameInstance->LocalPlayers.Num() > 0) {
+					ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
+					if (LocalPlayer) {
+						APlayerController* PlayerController = LocalPlayer->PlayerController;
+						if (PlayerController) {
+							if (PlayerController->Pawn) {
+								AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+								if (ValeriaCharacter) {
+									UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
+									if (FishingComponent) {
+										if (Overlay->bAutoFishing || Overlay->bInstantFishing) {
+											FFishingEndContext FishingEnd;
+											FishingEnd.Result = EFishingMiniGameResult::Success;
+											if (Overlay->bPerfectCatch) {
+												FishingEnd.Perfect = true;
+											}
+											else {
+												FishingEnd.Perfect = false;
+											}
+											FishingEnd.bUsedMultiplayerHelp = false;
+											FishingEnd.SourceWaterBody = Overlay->fWaterBody;
+											FishingEnd.DurabilityReduction = 0;
+											FishingEnd.StartRodHealth = 100;
+											FishingEnd.StartFishHealth = 100;
+											FishingEnd.EndFishHealth = 100;
+											FishingEnd.EndRodHealth = 100;
+											FishingComponent->RpcServer_EndFishing(FishingEnd);
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	else if (fn == "Function Palia.FishingComponent.RpcClient_FishCaught") {
+		auto FishCaught = reinterpret_cast<SDK::Params::FishingComponent_RpcClient_FishCaught*>(Params);
+		if (Overlay->bAutoFishing || Overlay->bInstantFishing || Overlay->bSellFish || Overlay->bDestroyOthers) {
+			auto World = GetWorld();
+			if (World) {
+				auto GameInstance = World->OwningGameInstance;
+				if (GameInstance) {
+					if (GameInstance->LocalPlayers.Num() > 0) {
+						ULocalPlayer* LocalPlayer = GameInstance->LocalPlayers[0];
+						if (LocalPlayer) {
+							APlayerController* PlayerController = LocalPlayer->PlayerController;
+							if (PlayerController) {
+								if (PlayerController->Pawn) {
+									AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+									if (ValeriaCharacter) {
+										AValeriaPlayerController* ValeriaPlayerController = ValeriaCharacter->GetValeriaPlayerController();
+										if (ValeriaPlayerController) {
+											if (FishCaught->Result.FishCategory == EItemCategory::Fish) {
+												if (Overlay->bSellFish) {
+													ValeriaCharacter->StoreComponent->RpcServer_SellItem(FBagSlotLocation{ .BagIndex = 0, .SlotIndex = 0 }, 1);
+												}
+											}
+											else if (Overlay->bDestroyOthers) {
+												ValeriaPlayerController->DiscardItem(FBagSlotLocation{ .BagIndex = 0, .SlotIndex = 0 }, 1);
+											}
+										}
+										if (Overlay->bAutoFishing || Overlay->bInstantFishing) {
+											
+											UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
+											if (FishingComponent) {
+												FishingComponent->SetFishingState(EFishingState_OLD::None);
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }
 
 void PaliaOverlay::DrawHUD()
@@ -658,6 +784,27 @@ void PaliaOverlay::DrawHUD()
 
 	APlayerController* PlayerController = LocalPlayer->PlayerController;
 	if (!PlayerController) return;
+
+	if (PlayerController->Pawn) {
+		AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
+		if (ValeriaCharacter) {
+			if (bAutoFishing || bInstantFishing ||  bPerfectCatch || bNoRodDurabilityLoss || bSellFish || bDestroyOthers || bCaptureFishingSpot || bOverrideFishingSpot) {
+				UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
+				if (FishingComponent) {
+					void* Instance = FishingComponent;
+					const void** Vtable = *reinterpret_cast<const void***>(const_cast<void*>(Instance));
+					DWORD OldProtection;
+					VirtualProtect(Vtable, sizeof(DWORD) * 1024, PAGE_EXECUTE_READWRITE, &OldProtection);
+					int32 Idx = Offsets::ProcessEventIdx;
+					OriginalProcEvent = reinterpret_cast<void(*)(const UObject*, class UFunction*, void*)>(uintptr_t(GetModuleHandle(0)) + Offsets::ProcessEvent);
+					const void* NewProcEvt = ProcessEvent;
+					Vtable[Idx] = NewProcEvt;
+					HookedClient = FishingComponent;
+					VirtualProtect(Vtable, sizeof(DWORD) * 1024, OldProtection, &OldProtection);
+				}
+			}
+		}
+	}
 
 	// TODO: Move outside of the loop as this needs to be done only once
 	if (HookedClient != PlayerController->MyHUD && PlayerController->MyHUD != nullptr) {
@@ -1955,40 +2102,6 @@ void PaliaOverlay::DrawOverlay()
 												ValeriaCharacter->GetTeleportComponent()->RpcServerTeleport_Home();
 											}
 
-											ImGui::SameLine();
-											if (ImGui::Button("Sell Item 1-1")) {
-												FBagSlotLocation bag = {};
-												bag.BagIndex = 0;
-												bag.SlotIndex = 0;
-												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
-											}
-
-											ImGui::SameLine();
-											if (ImGui::Button("Sell Item 1-2")) {
-												FBagSlotLocation bag = {};
-												bag.BagIndex = 0;
-												bag.SlotIndex = 1;
-												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
-											}
-
-											ImGui::SameLine();
-											if (ImGui::Button("Sell Item 1-3")) {
-												FBagSlotLocation bag = {};
-												bag.BagIndex = 0;
-												bag.SlotIndex = 2;
-												ValeriaCharacter->StoreComponent->RpcServer_SellItem(bag, 1);
-											}
-
-											ImGui::SameLine();
-											if (ImGui::Button("Primary Action Press")) {
-												ValeriaCharacter->ToolPrimaryActionPressed();
-											}
-
-											ImGui::SameLine();
-											if (ImGui::Button("Primary Action Release")) {
-												ValeriaCharacter->ToolPrimaryActionReleased();
-											}
-
 											ImGui::Text("Gliding Fall Speed: ");
 											ImGui::SameLine();
 											ImGui::InputScalar("##GlidingFallSpeed", ImGuiDataType_Float, &MovementComponent->GlidingFallSpeed, &f5);
@@ -2038,7 +2151,16 @@ void PaliaOverlay::DrawOverlay()
 											}
 
 											ImGui::Text("Equipped Tool : %s", STools[(int)EquippedTool]);
-											// TODO : Auto fishing?
+											ImGui::SameLine();
+											if (ImGui::Button("Primary Action Press")) {
+												ValeriaCharacter->ToolPrimaryActionPressed();
+											}
+
+											ImGui::SameLine();
+											if (ImGui::Button("Primary Action Release")) {
+												ValeriaCharacter->ToolPrimaryActionReleased();
+											}
+
 											if (EquippedTool == ETools::FishingRod) {
 												UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
 												if (FishingComponent)
@@ -2067,6 +2189,17 @@ void PaliaOverlay::DrawOverlay()
 														FishingComponent->SetFishingState(EFishingState_OLD::RotatingToCast);
 													}
 												}
+
+												ImGui::Checkbox("Auto fishing", &bAutoFishing);
+												ImGui::Checkbox("Instant fishing", &bInstantFishing);
+												ImGui::Checkbox("Perfect Catch", &bPerfectCatch);
+												ImGui::Checkbox("No Rod Durability Loss", &bNoRodDurabilityLoss);
+												ImGui::Checkbox("Sell fish", &bSellFish);
+												ImGui::Checkbox("Destroy Others", &bDestroyOthers);
+												ImGui::Checkbox("Capture fishing spot", &bCaptureFishingSpot);
+												ImGui::Checkbox("Override fishing spot", &bOverrideFishingSpot);
+												ImGui::SameLine();
+												ImGui::Text("%s", sOverrideFishingSpot.ToString().c_str());
 											}
 										}
 									}
