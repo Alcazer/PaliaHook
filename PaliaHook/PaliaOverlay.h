@@ -922,6 +922,16 @@ public:
 		IM_COL32(0xFF, 0xFF, 0xFF, 0xFF),
 	};
 
+	const int32 i20 = 20, i5 = 5, i1 = 1;
+	const double d20 = 20., d5 = 5., d1 = 1., dhalf = 0.5;
+	const float f20 = 20.f, f5 = 5.f, f1 = 1.f, fhalf = 0.5;
+
+	// Teleport
+	FVector TeleportLocation = {};
+	FRotator TeleportRotate = {};
+	char SellSlot[50];
+	char DestroySlot[50];
+
 	// Fishing
 	bool bAutoFishing = false;
 	bool bInstantFishing = false;

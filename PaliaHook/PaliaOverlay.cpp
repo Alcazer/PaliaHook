@@ -126,7 +126,7 @@ void PaliaOverlay::SetupColors() {
 	}
 }
 
-std::vector<std::string> debugger;
+#define DBG(str, ...) do { static char dbgstr[5120]; sprintf(dbgstr, "[PaliaHook] " str, __VA_ARGS__); OutputDebugString(dbgstr); } while (0)
 
 #define STATIC_CLASS(CName)						\
 {												\
@@ -474,8 +474,11 @@ static void DrawHUD(const AHUD* HUD) {
 		if (Overlay->bAutoFishing) {
 			AValeriaCharacter* ValeriaCharacter = (static_cast<AValeriaPlayerController*>(PlayerController))->GetValeriaCharacter();
 			if (ValeriaCharacter) {
-				ValeriaCharacter->ToolPrimaryActionPressed();
-				ValeriaCharacter->ToolPrimaryActionReleased();
+				FValeriaItem Equipped = ValeriaCharacter->GetEquippedItem();
+				if (Equipped.ItemType->IsFishingRod()) {
+					ValeriaCharacter->ToolPrimaryActionPressed();
+					ValeriaCharacter->ToolPrimaryActionReleased();
+				}
 			}
 		}
 
@@ -2041,10 +2044,12 @@ void PaliaOverlay::DrawOverlay()
 									if (ValeriaCharacter) {
 										UValeriaCharacterMoveComponent* MovementComponent = ValeriaCharacter->GetValeriaCharacterMovementComponent();
 										if (MovementComponent) {
-											const double d20 = 20., d5 = 5., d1 = 1., dhalf = 0.5;
-											const float f20 = 20.f, f5 = 5.f, f1 = 1.f, fhalf = 0.5;
+											FVector CurrentLocation = ValeriaCharacter->K2_GetActorLocation();
+											FRotator CurrentRotation = ValeriaCharacter->K2_GetActorRotation();
 
-											ImGui::Text("Character : %s - Map : %s", ValeriaCharacter->CharacterName.ToString().c_str(), CurrentMap.c_str());
+											ImGui::Text("Character : %s - Map : %s - Location X:%.3f Y:%.3f Z:%.3f Yaw:%.3f", ValeriaCharacter->CharacterName.ToString().c_str(), CurrentMap.c_str(), CurrentLocation.X, CurrentLocation.Y, CurrentLocation.Z, CurrentRotation.Yaw);
+											ImGui::Separator();
+
 											if(ImGui::Checkbox("Global Game Speed", &bEnableGameSpeed)) {
 												static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, !bEnableGameSpeed ? 1.0f : GlobalGameSpeed);
 											}
@@ -2054,6 +2059,10 @@ void PaliaOverlay::DrawOverlay()
 												if (bEnableGameSpeed) {
 													static_cast<UGameplayStatics*>(UGameplayStatics::StaticClass()->DefaultObject)->SetGlobalTimeDilation(World, GlobalGameSpeed);
 												}
+											}
+											ImGui::SameLine();
+											if (ImGui::Button("Return to Housing Plot")) {
+												ValeriaCharacter->GetTeleportComponent()->RpcServerTeleport_Home();
 											}
 
 											// TODO : Load & Save Locations from config file
@@ -2067,40 +2076,36 @@ void PaliaOverlay::DrawOverlay()
 											}
 											ImGui::ListBoxFooter();
 
-											FVector MyLocation = ValeriaCharacter->K2_GetActorLocation();
-											FRotator MyRotation = ValeriaCharacter->K2_GetActorRotation();
-											static FVector TeleportLocation;
-											static FRotator TeleportRotate;
-
-											ImGui::Text("TP Loc X,Y,Z, Yaw : ");
+											ImGui::Text("Teleport Location X: ");
 											ImGui::SameLine();
 											ImGui::SetNextItemWidth(150.0f);
 											ImGui::InputScalar("##TeleportLocationX", ImGuiDataType_Double, &TeleportLocation.X, &d5);
 											ImGui::SameLine();
+											ImGui::Text("Y: ");
+											ImGui::SameLine();
 											ImGui::SetNextItemWidth(150.0f);
 											ImGui::InputScalar("##TeleportLocationY", ImGuiDataType_Double, &TeleportLocation.Y, &d5);
+											ImGui::SameLine();
+											ImGui::Text("Z: ");
 											ImGui::SameLine();
 											ImGui::SetNextItemWidth(150.0f);
 											ImGui::InputScalar("##TeleportLocationZ", ImGuiDataType_Double, &TeleportLocation.Z, &d5);
 											ImGui::SameLine();
+											ImGui::Text("Yaw: ");
+											ImGui::SameLine();
 											ImGui::SetNextItemWidth(150.0f);
 											ImGui::InputScalar("##TeleportRotateYaw", ImGuiDataType_Double, &TeleportRotate.Yaw, &d1);
-											ImGui::SameLine();
-											ImGui::Text("Current: %.3f %.3f %.3f %.3f", MyLocation.X, MyLocation.Y, MyLocation.Z, MyRotation.Yaw);
-
-											if (ImGui::Button("Load My Location")) {
-												TeleportLocation = ValeriaCharacter->K2_GetActorLocation();
-												TeleportRotate = ValeriaCharacter->K2_GetActorRotation();
-											}
 											ImGui::SameLine();
 											if (ImGui::Button("Teleport")) {
 												ValeriaCharacter->K2_TeleportTo(TeleportLocation, TeleportRotate);
 											}
-
 											ImGui::SameLine();
-											if (ImGui::Button("Go Home")) {
-												ValeriaCharacter->GetTeleportComponent()->RpcServerTeleport_Home();
+											if (ImGui::Button("Fill Current Location")) {
+												TeleportLocation = ValeriaCharacter->K2_GetActorLocation();
+												TeleportRotate = ValeriaCharacter->K2_GetActorRotation();
 											}
+
+											ImGui::Separator();
 
 											ImGui::Text("Gliding Fall Speed: ");
 											ImGui::SameLine();
@@ -2114,7 +2119,7 @@ void PaliaOverlay::DrawOverlay()
 											ImGui::SameLine();
 											ImGui::InputScalar("##ClimbingSpeed", ImGuiDataType_Float, &MovementComponent->ClimbingSpeed, &f5);
 
-											ImGui::Text("JumpZVelocity: ");
+											ImGui::Text("Jump Velocity: ");
 											ImGui::SameLine();
 											ImGui::InputScalar("##JumpZVelocity", ImGuiDataType_Float, &MovementComponent->JumpZVelocity, &f20);
 
@@ -2123,6 +2128,36 @@ void PaliaOverlay::DrawOverlay()
 											ImGui::InputScalar("##MaxWalkSpeed", ImGuiDataType_Float, &MovementComponent->MaxWalkSpeed, &f20);
 											// TODO : If you move too fast, sometimes you return back where you started running
 											// Maybe there is a movement speed control on the server side
+
+											ImGui::Separator();
+
+											AValeriaPlayerController* ValeriaPlayerController = ValeriaCharacter->GetValeriaPlayerController();
+											if (ValeriaPlayerController) {
+
+												for (int i = 0; i < 8; i++)
+												{
+													if (i > 0) {
+														ImGui::SameLine();
+													}
+													sprintf(SellSlot, "Sell    Item 1-%d##sell%d", i + 1, i);
+													if (ImGui::Button(SellSlot)) {
+														ValeriaCharacter->StoreComponent->RpcServer_SellItem(FBagSlotLocation{ .BagIndex = 0, .SlotIndex = i }, 1);
+													}
+												}
+
+												for (int i = 0; i < 8; i++)
+												{
+													if (i > 0) {
+														ImGui::SameLine();
+													}
+													sprintf(DestroySlot, "Destroy Item 1-%d##destroy%d", i + 1, i);
+													if (ImGui::Button(DestroySlot)) {
+														ValeriaPlayerController->DiscardItem(FBagSlotLocation{ .BagIndex = 0, .SlotIndex = i }, 1);
+													}
+												}
+
+												ImGui::Separator();
+											}
 
 											// TODO : More hacks
 											FValeriaItem Equipped = ValeriaCharacter->GetEquippedItem();
@@ -2162,34 +2197,7 @@ void PaliaOverlay::DrawOverlay()
 											}
 
 											if (EquippedTool == ETools::FishingRod) {
-												UFishingComponent* FishingComponent = ValeriaCharacter->GetFishing();
-												if (FishingComponent)
-												{
-													if (ImGui::Button("Fishing->AimingCast")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::AimingCast);
-													}
-													ImGui::SameLine();
-													if (ImGui::Button("Fishing->DeployingCast")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::DeployingCast);
-													}
-													ImGui::SameLine();
-													if (ImGui::Button("Fishing->EFishingState_MAX")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::EFishingState_MAX);
-													}
-													ImGui::SameLine();
-													if (ImGui::Button("Fishing->None")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::None);
-													}
-													ImGui::SameLine();
-													if (ImGui::Button("Fishing->PlayingMiniGame")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::PlayingMiniGame);
-													}
-													ImGui::SameLine();
-													if (ImGui::Button("Fishing->RotatingToCast")) {
-														FishingComponent->SetFishingState(EFishingState_OLD::RotatingToCast);
-													}
-												}
-
+												ImGui::Separator();
 												ImGui::Checkbox("Auto fishing", &bAutoFishing);
 												ImGui::Checkbox("Instant fishing", &bInstantFishing);
 												ImGui::Checkbox("Perfect Catch", &bPerfectCatch);
